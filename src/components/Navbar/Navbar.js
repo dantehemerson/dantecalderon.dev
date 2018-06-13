@@ -12,8 +12,6 @@ class Navbar extends Component {
 		activePage: '',
 	}
 
-
-
 	render() {		
 		return (
 			<nav className="navbar">				

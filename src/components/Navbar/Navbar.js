@@ -16,7 +16,7 @@ class Navbar extends Component {
 		return (
 			<nav className="navbar">				
 				<div className="app-name">
-					<Link to="/">Lotcod</Link>
+					<Link to="/">Dante Calderon</Link>
 				</div>
 				<div className="links">
 					<ul>

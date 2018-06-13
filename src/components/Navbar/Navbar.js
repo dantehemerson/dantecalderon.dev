@@ -23,7 +23,7 @@ class Navbar extends Component {
 						<li className={(this.props.activePage === '' ? 'active' : '')}><Link to="/">Inicio</Link></li>
 						<li className={(this.props.activePage === 'Nosotros·' ? 'active' : '')}><Link to="/nosotros">Blog</Link></li>
 						<li className={(this.props.activePage === 'Contacto·' ? 'active' : '')}><Link to="/contacto">Contacto</Link></li>						
-						
+						<li className={(this.props.activePage === 'Contacto·' ? 'active' : '')}><Link to="/contacto">Portafolio</Link></li>						
 					</ul>					
 				</div>
 			</nav>

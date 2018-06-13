@@ -13,6 +13,10 @@ $navbar-link-color: #2e2e2e;
 /** Rotational **/
 $rotation-sec: 10s;
 
+/** Footer **/
+$footer-height: 100px;
+
+
 /** Mixin for responsive design **/
 @mixin breakpoint($class) {  
    /** Breakpoints based on Bootstrap4 **/
@@ -219,9 +223,40 @@ input, textarea {
 }
 
 
+/** Footer **/
+.Footer {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   height: $footer-height;
+
+   * {
+      margin: 0;
+      padding: 0;
+   }
+
+   &__social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+      &__icon { // tag a
+         margin: 0 15px;         
+         &__img {
+            width: 27px;   
+         }
+      }
+   &__copy {
+
+   }
+      &__copytext {
+
+      }
+}
 
 
-
+/** Keyframes =================  **/
 @keyframes float {
    0% {
       box-shadow: 0 5px 15px 0px rgba(0,0,0,0.5);

@@ -117,22 +117,18 @@ input, textarea {
 .Page {
    padding-top: 100px;
    padding-bottom: remcalc(30px);       
+   
+   font-size: remcalc(14px);
+   font-weight: 500;
+   
+   &__title {
+      font-size: remcalc(40px);
+      font-weight: 800;   
+   }
 
-      &__title {
-         font-size: remcalc(40px);
-         font-weight: 800;   
-      }
-
-      &__description {
-         font-size: remcalc(14px);
-         font-weight: 500;
-      }      
+   &__description {
+   }      
 }
-
-
-
-
-
 
 /** Navbar Component Styles **/
 .Navbar {

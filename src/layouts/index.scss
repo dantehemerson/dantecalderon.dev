@@ -1,41 +1,56 @@
 $primary-color: #e24f54;
 
-
+/** Mixin for responsive design **/
+@mixin breakpoint($class) {  
+   /** Breakpoints based on Bootstrap4 **/
+   @if $class == xs {
+      @media (max-width: 575px) { @content; }
+   }
+   @else if $class == sm {
+      @media (min-width: 576px) { @content; }
+   }
+   @else if $class == md {
+      @media (min-width: 768px) { @content; }
+   }
+   @else if $class == lg {
+      @media (min-width: 992px) { @content; }
+   }
+   @else if $class == xl {
+      @media (min-width: 1140px) { @content; }
+   }
+   @else {
+      @warn "Breakpoint mixin supports: xs, sm, md, lg and xl";
+   }
+}
 
 /* General Modifiers */
 .text-center {
   text-align: center;
 }
 
-body {
-
+.hide {
+  display: none;
 }
-@mixin breakpoint($class) {
-  @if $class == xxs {
-    @media (max-width: 475px) { @content; }
-  }
-  @else if $class == xs {
-    @media (max-width: 575px) { @content; }
-  }
-  @else if $class == sm {
-    @media (min-width: 576px) { @content; }
-  }
- 
-  @else if $class == md {
-    @media (min-width: 768px) { @content; }
-  }
- 
-  @else if $class == lg {
-    @media (min-width: 992px) { @content; }
-  }
+
+/** Styles ----------------------- **/
+* {
   
-  @else if $class == xl {
-    @media (min-width: 1140px) { @content; }
-  }
-  @else {
-    @warn "Breakpoint mixin supports: xxs, xs, sm, md, lg and xl";
-  }
 }
 
+body {
+   margin: 0;
+   padding: 0;
+   text-rendering: geometricPrecision;
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+   -webkit-font-smoothing: antialiased;
+}
+
+input, textarea {
+
+   &:focus {
+
+   }
+}
 
 

@@ -11,6 +11,8 @@ $primary-color: #e24f54;
 $navbar-height: 70px;
 $navbar-link-color: #2e2e2e;
 
+/** Rotational **/
+$rotation-sec: 10s;
 
 
 
@@ -135,22 +137,39 @@ input, textarea {
 /** Rotational Component **/
 .Rotational {
    width: 100%;
-   height: 100%;
-   background: red;
+   height: 100%;  
    display: flex;
    align-items: center;
    justify-content: center;
 
    &__orbit {
-      background: yellow;
+     
       width: 300px;
       height: 300px;
-      border-radius: 50%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
    }
+
    &__item {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;      
+      position: absolute;   
+      animation: orb $rotation-sec linear infinite;
 
-      &.computer {
+      &.computer {         
+         &:before {
+            content: '';
+            position: absolute;
+            background-image: url(https://vignette.wikia.nocookie.net/fictionalcharacters/images/a/a4/Mickey_mouse.png/revision/latest?cb=20130312004950);
+            background-size: cover;
+            width: 50px;
+            height: 50px;                  
+            animation: orbr $rotation-sec linear infinite;
 
+         }
       }
    }
 
@@ -171,4 +190,13 @@ input, textarea {
   to{
     transform:rotate(-360deg)
   }
+}
+
+@keyframes orbr {
+   from {
+      transform:rotate(0deg)
+   }
+   to{
+      transform:rotate(360deg)
+   }
 }

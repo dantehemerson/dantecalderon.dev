@@ -20,10 +20,10 @@ class Navbar extends Component {
 				</div>
 				<div className="Navbar__nav-container">
 					<ul>
-						<li className={(this.props.activePage === '' ? 'Navbar__link active' : '')}><Link to="/">Inicio</Link></li>
-						<li className={(this.props.activePage === 'Blog' ? 'Navbar__link active' : '')}><Link to="/blog">Blog</Link></li>
-						<li className={(this.props.activePage === 'Contact' ? 'Navbar__link active' : '')}><Link to="/contact">Contacto</Link></li>						
-						<li className={(this.props.activePage === 'Portfolio' ? 'Navbar__link active' : '')}><Link to="/portfolio">Portafolio</Link></li>						
+						<li className={(this.props.activePage === '' ? 'Navbar__link--active' : '')}><Link to="/">Inicio</Link></li>
+						<li className={(this.props.activePage === 'Blog' ? 'Navbar__link--active' : '')}><Link to="/blog">Blog</Link></li>
+						<li className={(this.props.activePage === 'Contact' ? 'Navbar__link--active' : '')}><Link to="/contact">Contacto</Link></li>						
+						<li className={(this.props.activePage === 'Portfolio' ? 'Navbar__link--active' : '')}><Link to="/portfolio">Portafolio</Link></li>						
 					</ul>					
 				</div>
 			</nav>

@@ -15,6 +15,7 @@ $rotation-sec: 10s;
 
 /** Footer **/
 $footer-height: 200px;
+$footer-link-color: #282a2d;
 
 
 /** Mixin for responsive design **/
@@ -73,6 +74,12 @@ $footer-height: 200px;
 /** Functions **/
 @function baseurl($file-path) {
    @return url('../assets/images/' + $file-path);
+}
+
+/* Deveuelve pixeles en rems */
+@function remcalc($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
 }
 
 
@@ -236,23 +243,27 @@ input, textarea {
       padding: 0;
    }
 
+   a {
+      color: $footer-link-color;
+   }
+
    &__social {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 35px;
+      margin-bottom: remcalc(35px);
    }
       &__icon { // tag a
-         margin: 0 15px;         
+         margin: 0 remcalc(15px);         
          &__img {
-            width: 27px;   
+            width: remcalc(27px);   
          }
       }
    &__copy {
 
    }
       &__copytext {
-         font-size: 11px;
+         font-size: remcalc(12px);
          font-weight: 600;
          color: #848687;
       }

@@ -1,0 +1,41 @@
+$primary-color: #e24f54;
+
+
+
+/* General Modifiers */
+.text-center {
+  text-align: center;
+}
+
+body {
+
+}
+@mixin breakpoint($class) {
+  @if $class == xxs {
+    @media (max-width: 475px) { @content; }
+  }
+  @else if $class == xs {
+    @media (max-width: 575px) { @content; }
+  }
+  @else if $class == sm {
+    @media (min-width: 576px) { @content; }
+  }
+ 
+  @else if $class == md {
+    @media (min-width: 768px) { @content; }
+  }
+ 
+  @else if $class == lg {
+    @media (min-width: 992px) { @content; }
+  }
+  
+  @else if $class == xl {
+    @media (min-width: 1140px) { @content; }
+  }
+  @else {
+    @warn "Breakpoint mixin supports: xxs, xs, sm, md, lg and xl";
+  }
+}
+
+
+

@@ -1,9 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
-
-
-class Navbar extends Component {	
+class Navbar extends React.Component {	
 	static propTypes = {
 		activePage: PropTypes.string,
 	}
@@ -13,7 +12,7 @@ class Navbar extends Component {
 	}
 
 	render() {		
-		return (
+		return (					
 			<nav className="Navbar">				
 				<div className="Navbar__titlewrap">
 					<Link className="Navbar__title" to="/">Dante Calderon</Link>

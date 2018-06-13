@@ -39,6 +39,15 @@ $rotation-sec: 10s;
    }
 }
 
+
+@mixin rotationalItem($classname, $img) {
+   &.#{$classname} {         
+      &:before {
+         background-image: baseurl($img);        
+      }
+   }
+}
+
 /** Functions **/
 @function baseurl($file-path) {
    @return url('../assets/images/' + $file-path);
@@ -164,16 +173,25 @@ input, textarea {
       height: 100%;      
       position: absolute;   
       animation: orb $rotation-sec linear infinite;
+      
+      &:before {
+         content: '';
+         position: absolute;
+         background-size: cover;
+         width: 50px;
+         height: 50px;                  
+         animation: orbr $rotation-sec linear infinite;
+      }
+      
+      @include rotationalItem(hacker, 'rotational/hacker.svg');
+      @include rotationalItem(computer, 'rotational/coding-gray.svg');
+      @include rotationalItem(server, 'rotational/server-sky.svg');
+      @include rotationalItem(www, 'rotational/world-wide-web.svg');      
 
-      &.computer {         
+      &.computer {
+
          &:before {
-            content: '';
-            position: absolute;
-            background-image: baseurl('rotational/hacker.svg');
-            background-size: cover;
-            width: 50px;
-            height: 50px;                  
-            animation: orbr $rotation-sec linear infinite;
+            
          }
       }
    }

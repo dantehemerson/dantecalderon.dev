@@ -1,3 +1,5 @@
+@import '../assets/styles/flex-box-grid';
+
 /** VARIABLES **/
 
 /** Colors **/
@@ -91,6 +93,10 @@ $container-padding-lg: 25px;
   text-align: center;
 }
 
+.text-left {
+   text-align: left;
+}
+
 .hide {
   display: none;
 }
@@ -99,7 +105,7 @@ $container-padding-lg: 25px;
 .container {
    padding-left: $container-padding-lg;
    padding-right: $container-padding-lg;
-   max-width: rem-calc(1130px);
+   max-width: remcalc(1130px);
    margin-left: auto;
    margin-right: auto;
 

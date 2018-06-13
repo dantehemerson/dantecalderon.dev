@@ -14,8 +14,8 @@ class Navbar extends Component {
 
 	render() {		
 		return (
-			<nav className="navbar">				
-				<div className="app-name">
+			<nav className="Navbar">				
+				<div className="Navbar__title">
 					<Link to="/">Dante Calderon</Link>
 				</div>
 				<div className="links">

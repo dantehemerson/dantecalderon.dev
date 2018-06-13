@@ -1,7 +1,11 @@
 import React from 'react'
+import Img from 'gatsby-image'
 
 const Rotational = (props) => (
 	<div className="Rotational">
+	{
+		console.log(props.avatar)
+	}
 		<div className="Rotational__orbit">
 			<div className="Rotational__item computer"></div>
 			<div className="Rotational__item hacker"></div>

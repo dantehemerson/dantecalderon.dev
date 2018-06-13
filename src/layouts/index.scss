@@ -2,10 +2,14 @@
 
 /** Colors **/
 $primary-color: #e24f54;
+   
+   // Header Home
+   $header_home-bg: #7fc5bc;
 
 
 /** Navbar **/
 $navbar-height: 70px;
+$navbar-link-color: #2e2e2e;
 
 
 
@@ -69,6 +73,7 @@ input, textarea {
    align-items: center;
    justify-content: space-between;
    height: $navbar-height;
+   background: $header_home-bg;
 
    * {
       margin: 0;
@@ -76,12 +81,13 @@ input, textarea {
    }
 
    a {
-      text-decoration: none;
+      text-decoration: none; 
+      color: $navbar-link-color;     
    }
 
    /** Link to home **/
-   &__title {      
-      font-weight: bold;            
+   &__title {            
+      font-weight: 900;         
    }
 
    &__nav {
@@ -92,7 +98,35 @@ input, textarea {
          margin-left: 2rem;
       }
          &__link {
-            display: block;            
+            display: block; 
+            font-size: 0.9rem;  
+            font-weight: 600;
          }
 }
 
+
+/** Header Home **/
+.Header-Home {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: $header_home-bg;
+   height: calc(100vh - #{$navbar-height});
+   color: white;
+
+   * {
+      margin: 0;
+      padding: 0;
+   }
+
+   &__title {
+      font-size: 3rem;
+      font-weight: 900;
+   }
+
+   &__subtitle {
+      font-size: 1.3rem;
+      font-weight: 500;
+   }
+}

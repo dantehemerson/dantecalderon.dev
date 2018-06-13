@@ -140,15 +140,16 @@ input, textarea {
 .Page {
    padding-top: 100px;
    padding-bottom: remcalc(30px);       
-   font-size: remcalc(14px);
-   font-weight: 500;
+   font-size: remcalc(15px);
+   font-weight: 600;
    
    &__title {
-      font-size: remcalc(40px);
+      font-size: remcalc(45px);
       font-weight: 800;   
    }
 
    &__description {
+      font-weight: 600;
    }      
 }
 

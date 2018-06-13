@@ -2,10 +2,7 @@ import React from 'react'
 import Img from 'gatsby-image'
 
 const Rotational = (props) => (
-	<div className="Rotational">
-	{
-		console.log(props.avatar)
-	}
+	<div className="Rotational">	
 		<div className="Rotational__orbit">
 			<div className="Rotational__item computer"></div>
 			<div className="Rotational__item hacker"></div>
@@ -15,6 +12,9 @@ const Rotational = (props) => (
 			<div className="Rotational__item protection"></div>
 			<div className="Rotational__item laptop"></div>
 			<div className="Rotational__item headphones"></div>
+			<div className="Rotational__avatar-container">
+				<Img sizes={ props.avatar.sizes }/>
+			</div>
 		</div>
 	</div>
 )

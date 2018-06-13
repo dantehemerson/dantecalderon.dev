@@ -207,6 +207,12 @@ input, textarea {
       @include rotationalItem(laptop, 315deg, 'rotational/laptop.svg');      
       @include rotationalItem(headphones, 360deg, 'rotational/headphones.svg');          
    }
+
+   &__avatar-container {
+      width: 140px;
+      border-radius: 50%;
+      overflow: hidden;      
+   }
 }
 
 

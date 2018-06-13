@@ -6,15 +6,12 @@ $primary-color: #e24f54;
    // Header Home
    $header_home-bg: #7fc5bc;
 
-
 /** Navbar **/
 $navbar-height: 70px;
 $navbar-link-color: #2e2e2e;
 
 /** Rotational **/
 $rotation-sec: 10s;
-
-
 
 /** Mixin for responsive design **/
 @mixin breakpoint($class) {  
@@ -39,7 +36,6 @@ $rotation-sec: 10s;
    }
 }
 
-
 @mixin rotationalItem($classname, $deg, $img) {
    &.#{$classname} {         
       transform: rotate($deg);
@@ -58,7 +54,6 @@ $rotation-sec: 10s;
          transform: rotate(-$deg);
          background-image: baseurl($img);        
          animation: orbef-#{$classname} $rotation-sec linear infinite;
-
          @keyframes orbef-#{$classname} {
             from {
                transform: rotate(-$deg);
@@ -144,7 +139,6 @@ input, textarea {
          }
 }
 
-
 /** Header Home **/
 .Header-Home {
    display: flex;
@@ -204,12 +198,14 @@ input, textarea {
          height: 50px;                           
       }
       
-      @include rotationalItem(hacker, 0deg, 'rotational/hacker.svg');
+      @include rotationalItem(hacker, 45deg, 'rotational/hacker.svg');
       @include rotationalItem(computer, 90deg, 'rotational/coding-gray.svg');
-      @include rotationalItem(server, 180deg, 'rotational/server-sky.svg');
-      @include rotationalItem(www, 270deg, 'rotational/world-wide-web.svg');      
-
-    
+      @include rotationalItem(server, 135deg, 'rotational/server-sky.svg');
+      @include rotationalItem(www, 180deg, 'rotational/world-wide-web.svg');      
+      @include rotationalItem(browser, 225deg, 'rotational/browser.svg');      
+      @include rotationalItem(protection, 270deg, 'rotational/data-protection.svg');      
+      @include rotationalItem(laptop, 315deg, 'rotational/laptop.svg');      
+      @include rotationalItem(headphones, 360deg, 'rotational/headphones.svg');          
    }
 }
 

@@ -40,10 +40,33 @@ $rotation-sec: 10s;
 }
 
 
-@mixin rotationalItem($classname, $img) {
+@mixin rotationalItem($classname, $deg, $img) {
    &.#{$classname} {         
+      transform: rotate($deg);
+      animation: orb-#{$classname} $rotation-sec linear infinite;
+
+      @keyframes orb-#{$classname} {
+         from {
+            transform: rotate($deg);
+         }
+         to {
+            transform: rotate($deg - 360deg);
+         }
+      }
+
       &:before {
+         transform: rotate(-$deg);
          background-image: baseurl($img);        
+         animation: orbef-#{$classname} $rotation-sec linear infinite;
+
+         @keyframes orbef-#{$classname} {
+            from {
+               transform: rotate(-$deg);
+            }
+            to {
+               transform: rotate(-$deg + 360deg);
+            }
+         }
       }
    }
 }
@@ -171,50 +194,23 @@ input, textarea {
       border-radius: 50%;
       width: 100%;
       height: 100%;      
-      position: absolute;   
-      animation: orb $rotation-sec linear infinite;
+      position: absolute;         
       
       &:before {
          content: '';
          position: absolute;
          background-size: cover;
          width: 50px;
-         height: 50px;                  
-         animation: orbr $rotation-sec linear infinite;
+         height: 50px;                           
       }
       
-      @include rotationalItem(hacker, 'rotational/hacker.svg');
-      @include rotationalItem(computer, 'rotational/coding-gray.svg');
-      @include rotationalItem(server, 'rotational/server-sky.svg');
-      @include rotationalItem(www, 'rotational/world-wide-web.svg');      
+      @include rotationalItem(hacker, 0deg, 'rotational/hacker.svg');
+      @include rotationalItem(computer, 90deg, 'rotational/coding-gray.svg');
+      @include rotationalItem(server, 180deg, 'rotational/server-sky.svg');
+      @include rotationalItem(www, 270deg, 'rotational/world-wide-web.svg');      
 
-      &.computer {
-
-         &:before {
-            
-         }
-      }
+    
    }
 }
 
 
-
-/** KEYFRAMES */
-
-@keyframes orb{
-  from {
-    transform:rotate(0deg)
-  }
-  to{
-    transform:rotate(-360deg)
-  }
-}
-
-@keyframes orbr {
-   from {
-      transform:rotate(0deg)
-   }
-   to{
-      transform:rotate(360deg)
-   }
-}

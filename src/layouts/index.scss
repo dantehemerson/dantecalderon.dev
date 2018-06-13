@@ -65,29 +65,34 @@ input, textarea {
 
 /** Navbar Component Styles **/
 .Navbar {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: $navbar-height;
 
-   &__titlewrap {
-      background: red;
+   * {
+      margin: 0;
+      padding: 0;
    }
 
-      /** Link to home **/
-      &__title {
-         background: yellow;
-      }
+   a {
+      text-decoration: none;
+   }
 
-   &__navwrap {
-
+   /** Link to home **/
+   &__title {      
+      font-weight: bold;            
    }
 
    &__nav {
-
+      display: flex;
+      list-style: none;      
    }
       &__item {
-
+         margin-left: 2rem;
       }
          &__link {
-
+            display: block;            
          }
-
 }
 

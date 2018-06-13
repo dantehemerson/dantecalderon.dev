@@ -99,7 +99,7 @@ $container-padding-lg: 25px;
 .container {
    padding-left: $container-padding-lg;
    padding-right: $container-padding-lg;
-   max-width: 1160px;
+   max-width: rem-calc(1130px);
    margin-left: auto;
    margin-right: auto;
 
@@ -107,7 +107,6 @@ $container-padding-lg: 25px;
       @extend .container;
       max-width: 100%;
    }
-
 }
 
 /** Styles ----------------------- **/

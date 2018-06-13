@@ -18,7 +18,7 @@ class Navbar extends Component {
 				<div className="Navbar__title-container">
 					<Link className="Navbar__title" to="/">Dante Calderon</Link>
 				</div>
-				<div className="links">
+				<div className="Navbar__nav-container">
 					<ul>
 						<li className={(this.props.activePage === '' ? 'active' : '')}><Link to="/">Inicio</Link></li>
 						<li className={(this.props.activePage === 'Blog' ? 'active' : '')}><Link to="/blog">Blog</Link></li>

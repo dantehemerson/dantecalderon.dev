@@ -14,7 +14,7 @@ $navbar-link-color: #2e2e2e;
 $rotation-sec: 10s;
 
 /** Footer **/
-$footer-height: 100px;
+$footer-height: 200px;
 
 
 /** Mixin for responsive design **/
@@ -240,6 +240,7 @@ input, textarea {
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-bottom: 35px;
    }
       &__icon { // tag a
          margin: 0 15px;         
@@ -251,7 +252,9 @@ input, textarea {
 
    }
       &__copytext {
-
+         font-size: 11px;
+         font-weight: 600;
+         color: #848687;
       }
 }
 

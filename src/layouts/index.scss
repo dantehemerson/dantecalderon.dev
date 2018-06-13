@@ -39,6 +39,12 @@ $rotation-sec: 10s;
    }
 }
 
+/** Functions **/
+@function baseurl($file-path) {
+   @return url('../assets/images/' + $file-path);
+}
+
+
 /* General Modifiers */
 .text-center {
   text-align: center;
@@ -163,21 +169,15 @@ input, textarea {
          &:before {
             content: '';
             position: absolute;
-            background-image: url(https://vignette.wikia.nocookie.net/fictionalcharacters/images/a/a4/Mickey_mouse.png/revision/latest?cb=20130312004950);
+            background-image: baseurl('rotational/hacker.svg');
             background-size: cover;
             width: 50px;
             height: 50px;                  
             animation: orbr $rotation-sec linear infinite;
-
          }
       }
    }
-
-
 }
-
-
-
 
 
 

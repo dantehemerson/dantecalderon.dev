@@ -17,6 +17,9 @@ $rotation-sec: 10s;
 $footer-height: 200px;
 $footer-link-color: #282a2d;
 
+/** Containers */
+$container-padding-lg: 25px;
+
 
 /** Mixin for responsive design **/
 @mixin breakpoint($class) {  
@@ -92,6 +95,21 @@ $footer-link-color: #282a2d;
   display: none;
 }
 
+   // containers
+.container {
+   padding-left: $container-padding-lg;
+   padding-right: $container-padding-lg;
+   max-width: 1160px;
+   margin-left: auto;
+   margin-right: auto;
+
+   &--full {
+      @extend .container;
+      max-width: 100%;
+   }
+
+}
+
 /** Styles ----------------------- **/
 * {
   
@@ -117,7 +135,6 @@ input, textarea {
 .Page {
    padding-top: 100px;
    padding-bottom: remcalc(30px);       
-   
    font-size: remcalc(14px);
    font-weight: 500;
    

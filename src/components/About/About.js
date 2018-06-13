@@ -8,7 +8,7 @@ class About extends React.Component {
 		return (
 			<section className="About Page">
 				<div className="About__titlewrap Page__titlewrap text-center">
-					<h2 className="About__title Page__title">Sobre mi</h2>
+					<h2 className="About__title Page__title">Sobre mí</h2>
 					<p className="About__description Page__description">¡Hola! :smiley: Soy Dante Calderon. Soy Programador en Javascript, Go & Python</p>
 				</div>
 

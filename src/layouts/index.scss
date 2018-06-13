@@ -257,6 +257,15 @@ input, textarea {
 /** About Section **/
 .About {
    background: #fdf0d2;
+   background-image: baseurl('textures/escheresque.png');
+   background-image: baseurl('textures/groovepaper.png');
+   background-image: baseurl('textures/old-map.png');
+   background-image: baseurl('textures/fake-luxury.png');
+   background-image: baseurl('textures/brilliant.png');
+   background-image: baseurl('textures/clean-textile.png');
+   background-image: baseurl('textures/inspiration-geometry.png');
+
+
 
    &__titlewrap {
       

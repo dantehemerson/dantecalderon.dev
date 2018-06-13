@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-
+import Img from 'gatsby-image'
 import Navbar from '../components/Navbar'
 
 import './index.scss'
@@ -13,6 +13,7 @@ class Layout extends React.Component {
 
   render() {
     const { children, data } = this.props
+    console.log(data)
     return (
       <div>
         <Helmet>
@@ -29,12 +30,18 @@ class Layout extends React.Component {
 
 export default Layout
 
-export const query = graphql`
-  query SiteTitleQuery {
+
+export const contactQuery = graphql`
+  query ContactQuery {
+    backgroundImage: imageSharp(id: {regex: "/avatar/"}) {
+      sizes(maxWidth: 720) {
+        ...GatsbyImageSharpSizes_tracedSVG
+      }
+    }
     site {
       siteMetadata {
-        title
-      }
+            title
+      }     
     }
   }
 `

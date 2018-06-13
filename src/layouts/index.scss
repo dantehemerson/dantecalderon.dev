@@ -172,8 +172,11 @@ input, textarea {
    }
 
    &__subtitle {
-      font-size: 1.3rem;
-      font-weight: 500;
+      font-size: remcalc(15px);
+      margin-top: remcalc(10px);
+      color: #595959;
+      font-weight: 400;
+      text-transform: uppercase;
    }
 }
 
@@ -188,8 +191,9 @@ input, textarea {
 
    &__orbit {
      
-      width: 300px;
-      height: 300px;
+      width: 100%;      
+      max-width: 450px;
+      max-height: 400px;
       position: relative;
       display: flex;
       align-items: center;
@@ -245,6 +249,7 @@ input, textarea {
 
    a {
       color: $footer-link-color;
+      text-decoration: none;
    }
 
    &__social {
@@ -254,7 +259,11 @@ input, textarea {
       margin-bottom: remcalc(35px);
    }
       &__icon { // tag a
-         margin: 0 remcalc(15px);         
+         margin: 0 remcalc(15px);   
+         @include breakpoint(xs) {
+            margin: 0 remcalc(10px);
+         }  
+
          &__img {
             width: remcalc(27px);   
          }
@@ -266,6 +275,7 @@ input, textarea {
          font-size: remcalc(12px);
          font-weight: 600;
          color: #848687;
+         text-align: center;
       }
 }
 

@@ -104,6 +104,7 @@ body {
    -moz-osx-font-smoothing: grayscale;
    -webkit-font-smoothing: antialiased;
    -webkit-font-smoothing: antialiased;
+   color: #282a2d;
 }
 
 input, textarea {
@@ -233,6 +234,35 @@ input, textarea {
    }
 }
 
+/** About Section **/
+.About {
+   background: #fdf0d2;
+
+   &__titlewrap {
+      text-align: center;
+   }
+
+      &__title {
+
+      }
+
+      &__description {
+
+      }
+   &__interests {
+
+      &__title {
+
+      }
+
+      &__list {
+
+      }
+         &__item {
+
+         }
+   }
+}
 
 /** Footer **/
 .Footer {

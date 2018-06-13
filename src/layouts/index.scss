@@ -1,4 +1,14 @@
+/** VARIABLES **/
+
+/** Colors **/
 $primary-color: #e24f54;
+
+
+/** Navbar **/
+$navbar-height: 70px;
+
+
+
 
 /** Mixin for responsive design **/
 @mixin breakpoint($class) {  
@@ -53,4 +63,31 @@ input, textarea {
    }
 }
 
+/** Navbar Component Styles **/
+.Navbar {
+
+   &__titlewrap {
+      background: red;
+   }
+
+      /** Link to home **/
+      &__title {
+         background: yellow;
+      }
+
+   &__navwrap {
+
+   }
+
+   &__nav {
+
+   }
+      &__item {
+
+      }
+         &__link {
+
+         }
+
+}
 

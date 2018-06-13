@@ -8,6 +8,9 @@ class Navbar extends Component {
 		activePage: PropTypes.string,
 	}
 
+	static defaultProps = {
+		activePage: '',
+	}
 
 
 

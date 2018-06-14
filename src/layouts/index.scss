@@ -6,7 +6,7 @@
 $primary-color: #e24f54;
    
    // Header Home
-   $header_home-bg: #7fc5bc;
+   $header_home-bg: #ca99d7;
 
 /** Navbar **/
 $navbar-height: 70px;
@@ -138,7 +138,7 @@ input, textarea {
 }
 
 .Page {
-   padding-top: 100px;
+   padding-top: 30px;
    padding-bottom: remcalc(30px);       
    font-size: remcalc(15px);
    font-weight: 600;
@@ -200,6 +200,35 @@ input, textarea {
    flex-direction: column;
    justify-content: flex-start;
    align-items: center;
+   background-color: $header_home-bg;
+   height: calc(100vh - #{$navbar-height});
+   color: white;
+
+   * {
+      margin: 0;
+      padding: 0;
+   }
+
+   &__title {
+      font-size: 3rem;
+      padding-top: 25px;
+      font-weight: 900;
+   }
+
+   &__subtitle {
+      font-size: remcalc(15px);
+      margin-top: remcalc(10px);
+      color: #595959;
+      font-weight: 400;
+      text-transform: uppercase;
+   }
+}
+
+.HeaderContact {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;   
    background-color: $header_home-bg;
    height: calc(100vh - #{$navbar-height});
    color: white;

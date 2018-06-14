@@ -25,14 +25,14 @@ class About extends React.Component {
 						<div className="About__interests col-xs-12 col-md-6 text-left first-md">
 							<h3 className="About__interests__title">Intereses</h3>
 							<ul className="About__interests__list">
-								<li className="About__interests__item" >Inteligencia Artificial</li>
-								<li className="About__interests__item" >Machine Learning</li>
-								<li className="About__interests__item" >Data Science</li>
-								<li className="About__interests__item" >El fascinante mundo de Javascript y Nodejs</li>
-								<li className="About__interests__item" >Desarrollo Web</li>
-								<li className="About__interests__item" >Backend Development</li>
-								<li className="About__interests__item" >Competitive Programming</li>
-								<li className="About__interests__item" >y todo lo que tenga que ver con programación en </li>general.
+								<li className="About__interests__item" ><i className="ai"></i>Inteligencia Artificial</li>
+								<li className="About__interests__item" ><i className="ai"></i>Machine Learning</li>
+								<li className="About__interests__item" ><i className="ai"></i>Data Science</li>
+								<li className="About__interests__item" ><i className="ai"></i>El fascinante mundo de Javascript y Nodejs</li>
+								<li className="About__interests__item" ><i className="ai"></i>Desarrollo Web</li>
+								<li className="About__interests__item" ><i className="ai"></i>Backend Development</li>
+								<li className="About__interests__item" ><i className="ai"></i>Competitive Programming</li>
+								<li className="About__interests__item" ><i className="ai"></i>y todo lo que tenga que ver con programación en </li>general.
 							</ul>
 
 						</div>

@@ -309,11 +309,23 @@ input, textarea {
 
       }
 
-      &__list {
-
+      &__list {         
+         list-style: none;
       }
          &__item {
-
+            display: flex;
+            align-items: center;
+            i {
+               width: 27px;
+               height: 27px;
+               display: inline-block;
+               position: relative;               
+               margin-right: 10px;
+            }
+            i.ai {
+               background-image: baseurl('icons/artificial-intelligence (4).svg');
+               background-size: cover;
+            }
          }
    }
 

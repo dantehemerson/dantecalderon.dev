@@ -312,15 +312,14 @@ input, textarea {
       &__list {         
          list-style: none;
       }
-         &__item {
-            display: flex;
-            align-items: center;
+         &__item {                     
             i {
                width: 27px;
                height: 27px;
                display: inline-block;
                position: relative;               
                margin-right: 10px;
+               top: 6px;
                background-size: cover;
             }
             i.ai {
@@ -343,6 +342,9 @@ input, textarea {
             }
             i.back {
                background-image: baseurl('icons/server.svg');
+            }
+            i.more {
+               background-image: baseurl('icons/web-development.svg');
             }
          }
    }

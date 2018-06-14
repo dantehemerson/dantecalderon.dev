@@ -32,7 +32,7 @@ class About extends React.Component {
 								<li className="About__interests__item" ><i className="web"></i>Desarrollo Web</li>
 								<li className="About__interests__item" ><i className="back"></i>Backend Development</li>
 								<li className="About__interests__item" ><i className="cp"></i>Competitive Programming</li>
-								<li className="About__interests__item" ><i className=""></i>y todo lo que tenga que ver con programación en </li>general.
+								<li className="About__interests__item" ><i className="more"></i>y todo lo que tenga que ver con programación en </li>general.
 							</ul>
 
 						</div>

@@ -258,14 +258,14 @@ input, textarea {
          height: 50px;                           
       }
       
-      @include rotationalItem(hacker, 45deg, 'rotational/hacker.svg');
-      @include rotationalItem(computer, 90deg, 'rotational/coding-gray.svg');
-      @include rotationalItem(server, 135deg, 'rotational/server-sky.svg');
-      @include rotationalItem(www, 180deg, 'rotational/world-wide-web.svg');      
-      @include rotationalItem(browser, 225deg, 'rotational/browser.svg');      
-      @include rotationalItem(protection, 270deg, 'rotational/data-protection.svg');      
-      @include rotationalItem(laptop, 315deg, 'rotational/laptop.svg');      
-      @include rotationalItem(headphones, 360deg, 'rotational/headphones.svg');          
+      @include rotationalItem(hacker, 45deg, 'icons/hacker.svg');
+      @include rotationalItem(computer, 90deg, 'icons/coding-gray.svg');
+      @include rotationalItem(server, 135deg, 'icons/server-sky.svg');
+      @include rotationalItem(www, 180deg, 'icons/world-wide-web.svg');      
+      @include rotationalItem(browser, 225deg, 'icons/browser.svg');      
+      @include rotationalItem(protection, 270deg, 'icons/data-protection.svg');      
+      @include rotationalItem(laptop, 315deg, 'icons/laptop.svg');      
+      @include rotationalItem(headphones, 360deg, 'icons/headphones.svg');          
    }
 
    &__avatar-container {
@@ -333,10 +333,16 @@ input, textarea {
                background-image: baseurl('icons/data.svg');
             }
             i.js {
-               background-image: baseurl('icons/password.svg');
+               background-image: baseurl('icons/javascript.svg');
             }
             i.cp {
                background-image: baseurl('icons/algorithm.svg');
+            }
+            i.web {
+               background-image: baseurl('icons/html-5.svg');
+            }
+            i.back {
+               background-image: baseurl('icons/server.svg');
             }
          }
    }

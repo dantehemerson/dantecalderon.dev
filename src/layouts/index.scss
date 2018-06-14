@@ -224,13 +224,16 @@ input, textarea {
    }
 }
 
+.Contact {
+   background: #e3e8eb;
+}
 .HeaderContact {
    display: flex;
    flex-direction: column;
    justify-content: flex-start;
    align-items: center;   
    background-color: $header_home-bg;
-   height: calc(100vh - #{$navbar-height});
+   height: calc(450px);
    color: white;
 
    * {

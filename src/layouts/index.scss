@@ -321,10 +321,22 @@ input, textarea {
                display: inline-block;
                position: relative;               
                margin-right: 10px;
+               background-size: cover;
             }
             i.ai {
                background-image: baseurl('icons/artificial-intelligence (4).svg');
-               background-size: cover;
+            }
+            i.ml {
+               background-image: baseurl('icons/machine-learning.svg');
+            }
+            i.ds {
+               background-image: baseurl('icons/data.svg');
+            }
+            i.js {
+               background-image: baseurl('icons/password.svg');
+            }
+            i.cp {
+               background-image: baseurl('icons/algorithm.svg');
             }
          }
    }

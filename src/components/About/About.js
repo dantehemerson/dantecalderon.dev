@@ -26,13 +26,13 @@ class About extends React.Component {
 							<h3 className="About__interests__title">Intereses</h3>
 							<ul className="About__interests__list">
 								<li className="About__interests__item" ><i className="ai"></i>Inteligencia Artificial</li>
-								<li className="About__interests__item" ><i className="ai"></i>Machine Learning</li>
-								<li className="About__interests__item" ><i className="ai"></i>Data Science</li>
-								<li className="About__interests__item" ><i className="ai"></i>El fascinante mundo de Javascript y Nodejs</li>
-								<li className="About__interests__item" ><i className="ai"></i>Desarrollo Web</li>
-								<li className="About__interests__item" ><i className="ai"></i>Backend Development</li>
-								<li className="About__interests__item" ><i className="ai"></i>Competitive Programming</li>
-								<li className="About__interests__item" ><i className="ai"></i>y todo lo que tenga que ver con programación en </li>general.
+								<li className="About__interests__item" ><i className="ml"></i>Machine Learning</li>
+								<li className="About__interests__item" ><i className="ds"></i>Data Science</li>
+								<li className="About__interests__item" ><i className="js"></i>El fascinante mundo de Javascript y Nodejs</li>
+								<li className="About__interests__item" ><i className="web"></i>Desarrollo Web</li>
+								<li className="About__interests__item" ><i className="back"></i>Backend Development</li>
+								<li className="About__interests__item" ><i className="cp"></i>Competitive Programming</li>
+								<li className="About__interests__item" ><i className=""></i>y todo lo que tenga que ver con programación en </li>general.
 							</ul>
 
 						</div>

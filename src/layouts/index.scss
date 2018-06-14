@@ -155,11 +155,15 @@ input, textarea {
 
 /** Navbar Component Styles **/
 .Navbar {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
    height: $navbar-height;
    background: $header_home-bg;
+   display: flex;
+   justify-content: center;   
+   .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;      
+   }
 
    * {
       margin: 0;

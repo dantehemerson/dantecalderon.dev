@@ -13,7 +13,7 @@ class Index extends React.Component {
   				<h2 className="Header-Home__subtitle">Javascript Developer</h2>
   				<Rotational avatar={ data.avatar }/>
         </main>
-        <About/>      
+        <About image={ data.aboutImage } />      
       </div>
 		)
 	}
@@ -25,7 +25,12 @@ export const queryHome = graphql`
       sizes(maxWidth: 720) {
         ...GatsbyImageSharpSizes_tracedSVG
       }
-    }
+    } 
+    aboutImage: imageSharp(id: {regex: "/about-image/"}) {
+      sizes(maxWidth: 960) {
+        ...GatsbyImageSharpSizes_tracedSVG
+      }
+    } 
     site {
       siteMetadata {
             title
@@ -33,6 +38,5 @@ export const queryHome = graphql`
     }
   }
 `
-
 
 export default Index

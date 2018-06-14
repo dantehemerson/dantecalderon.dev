@@ -1,8 +1,8 @@
 import React from 'react'
+import Img from 'gatsby-image'
 
 
 class About extends React.Component {
-
 	
 	render() {
 		return (
@@ -13,9 +13,12 @@ class About extends React.Component {
 							<h2 className="About__title Page__title">Sobre mí</h2>
 							<p className="About__description Page__description">¡Hola! :smiley: Soy Dante Calderon. Soy Programador en Javascript, Go & Python</p>
 						</div>
+					</div>
 
-						
-						<div className="About__interests col-xs-12 col-md-10 text-left">
+
+					<div className="row">
+
+						<div className="About__interests col-xs-12 col-md-6 text-left">
 							<h3 className="About__interests__title">Intereses</h3>
 							<ul className="About__interests__list">
 								<li className="About__interests__item" >Inteligencia Artificial</li>
@@ -28,6 +31,12 @@ class About extends React.Component {
 								<li className="About__interests__item" >y todo lo que tenga que ver con programación en </li>general.
 							</ul>
 
+						</div>
+
+						<div className="About__img-container col-xs-12 col-md-6">
+							<div className="About__img">
+								<Img sizes={ this.props.image.sizes } />
+							</div>
 						</div>
 					</div>
 				</div>				

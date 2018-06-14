@@ -17,8 +17,12 @@ class About extends React.Component {
 
 
 					<div className="row">
-
-						<div className="About__interests col-xs-12 col-md-6 text-left">
+						<div className="About__img-container col-xs-12 col-md-6">
+							<div className="About__img">
+								<Img sizes={ this.props.image.sizes } />
+							</div>
+						</div>
+						<div className="About__interests col-xs-12 col-md-6 text-left first-md">
 							<h3 className="About__interests__title">Intereses</h3>
 							<ul className="About__interests__list">
 								<li className="About__interests__item" >Inteligencia Artificial</li>
@@ -31,12 +35,6 @@ class About extends React.Component {
 								<li className="About__interests__item" >y todo lo que tenga que ver con programación en </li>general.
 							</ul>
 
-						</div>
-
-						<div className="About__img-container col-xs-12 col-md-6">
-							<div className="About__img">
-								<Img sizes={ this.props.image.sizes } />
-							</div>
 						</div>
 					</div>
 				</div>				

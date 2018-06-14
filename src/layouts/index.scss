@@ -138,18 +138,22 @@ input, textarea {
 }
 
 .Page {
-   padding-top: 30px;
+   padding-top: remcalc(30px);
    padding-bottom: remcalc(30px);       
    font-size: remcalc(15px);
    font-weight: 600;
-   
+    * {
+      margin: 0;
+      padding: 0;
+   } 
    &__title {
       font-size: remcalc(45px);
       font-weight: 800;   
    }
 
-   &__description {
+   &__description {      
       font-weight: 600;
+      padding-top: remcalc(20px);
    }      
 }
 
@@ -216,8 +220,7 @@ input, textarea {
    }
 
    &__subtitle {
-      font-size: remcalc(15px);
-      margin-top: remcalc(10px);
+      font-size: remcalc(15px);      
       color: #595959;
       font-weight: 400;
       text-transform: uppercase;
@@ -226,33 +229,14 @@ input, textarea {
 
 .Contact {
    background: #e3e8eb;
-}
-.HeaderContact {
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
-   align-items: center;   
-   background-color: $header_home-bg;
-   height: calc(450px);
-   color: white;
-
-   * {
-      margin: 0;
-      padding: 0;
-   }
-
-   &__title {
-      font-size: 3rem;
-      padding-top: 25px;
-      font-weight: 900;
-   }
-
-   &__subtitle {
-      font-size: remcalc(15px);
-      margin-top: remcalc(10px);
-      color: #595959;
-      font-weight: 400;
-      text-transform: uppercase;
+   .HeaderContact {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;   
+      background-color: $header_home-bg;
+      height: calc(450px);
+      color: white;
    }
 }
 

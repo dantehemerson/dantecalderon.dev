@@ -10,9 +10,9 @@ class Contact extends React.Component {
 				<section className="HeaderContact Page">
 					<div className="container">
 						<div className="row center-xs">
-							<div className="About__titlewrap Page__titlewrap text-center col-xs-12 col-md-10">
-								<h2 className="About__title Page__title">Contacto</h2>
-								<p className="About__description Page__description">Si tienes una pregunta, quieres que trabajemos juntos o quieres dejarme unas palabras. Me encantaría escucharte</p>
+							<div className="HeaderContact__titlewrap Page__titlewrap text-center col-xs-12 col-md-10">
+								<h2 className="HeaderContact__title Page__title">Contacto</h2>
+								<p className="HeaderContact__description Page__description">Si tienes una pregunta, quieres que trabajemos juntos o quieres dejarme unas palabras. Me encantaría escucharte</p>
 							</div>							
 						</div>
 					</div>

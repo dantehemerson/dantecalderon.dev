@@ -319,7 +319,7 @@ textarea{
       font-size: remcalc(15px);
       font-weight: 600;
       .contain {
-         padding: 30px 20px;
+         padding: 30px 20px 0 20px;
       }
       &__title {
          
@@ -346,6 +346,20 @@ textarea{
                      text-decoration: none;
                   }
                }
+            }
+         }
+      }      
+      &__social {
+         display: flex;
+         justify-content: center;   
+         &__icon {
+            transition: all .4s;
+            img {
+               width: 25px;
+               margin: 0 10px;
+            }
+            &:hover {
+               //transform: scale(1.1);
             }
          }
       }

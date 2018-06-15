@@ -263,14 +263,14 @@ textarea{
       justify-content: flex-start;
       align-items: center;   
       background-color: $contact_home-bg;
-      height: calc(450px);
+      height: calc(350px);
       background-image: baseurl('textures/fake-luxury.png');
 
    }
 
    &__form {
       position: relative;
-      top: -260px;
+      top: -150px;
 
       .row {
          border-radius: 5px;

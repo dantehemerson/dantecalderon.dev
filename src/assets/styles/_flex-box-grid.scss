@@ -414,9 +414,10 @@ $flexboxgrid-outer-margin: 2rem !default;
 // Syntax:
 // name SIZErem,
 $flexboxgrid-breakpoints:
-  sm 48em 46rem,
-  md 62em 61rem,
-  lg 75em 71rem !default;
+  sm 576px,
+  md 768px,
+  lg 992px,
+  xl 1140px !default;
 $flexboxgrid-max-width: 1200px !default;
 
 //
@@ -545,11 +546,10 @@ $name: xs;
 
 @each $breakpoint in $flexboxgrid-breakpoints {
   $name: nth($breakpoint, 1);
-  $size: nth($breakpoint, 2);
-  $container: nth($breakpoint, 3);
+  $size: nth($breakpoint, 2); 
   @media only screen and (min-width: $size) {
     .container {
-      width: $container;
+      width: 100%;
     }
 
     .col-#{$name} {

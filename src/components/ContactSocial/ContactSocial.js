@@ -8,7 +8,7 @@ class ContactSocial extends React.Component {
 				<div className="contain">
 					<h3 className="ContactSocial__title col-xs-12 text-center">Mis Datos</h3>
 					<div className="ContactSocial__info row">
-						<div className="ContactSocial__info__item col-xs-12 col-lg-6">
+						<div className="ContactSocial__info__item col-xs-12 col-lg-7">
 							<p><img src="https://icongr.am/feather/mail.svg?color=FFFFFF"  title="{{ item.title }}" />Email</p>
 							<ul>
 								<li>
@@ -16,7 +16,7 @@ class ContactSocial extends React.Component {
 								</li>									
 							</ul>
 						</div>
-						<div className="ContactSocial__info__item col-xs-12 col-lg-6">
+						<div className="ContactSocial__info__item col-xs-12 col-lg-5">
 							<p><img src="https://icongr.am/feather/phone.svg?color=FFFFFF"  title="{{ item.title }}" />Celular</p>
 							<ul>
 								<li>

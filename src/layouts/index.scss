@@ -135,15 +135,16 @@ body {
    border: 0;
    border-radius: 2.4rem;
    color: #fff;
-   cursor: pointer;
-   font-weight: 500;      
+   cursor: pointer;   
    outline: 0;
-   padding: 10px 50px;
+   padding: 14px 50px;
    position: relative;
    text-align: center;
-   text-decoration: none;
+   text-decoration: none; // for tag a
    text-transform: uppercase;
    width: auto;
+   font-size: 0.9rem;
+   font-weight: 600;
 }
 
 input[type="text"], input[type="email"], textarea {
@@ -274,14 +275,14 @@ textarea{
       padding: 100px 40px;
 
       &__item {
-
+         padding: 15px 0;
       }
          &__labelwrap {
 
          }
          &__label {
             display: block;
-            font-size: 1.1rem;
+            font-size: .75rem;
             font-weight: 700;
             letter-spacing: .05em;
             line-height: 1.45;

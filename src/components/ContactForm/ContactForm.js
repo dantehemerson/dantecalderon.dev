@@ -32,10 +32,10 @@ class ContactForm extends React.Component {
 					</div>
 					<div className="ContactForm__item">
 						<div className="ContactForm__labelwrap">
-							<p className="ContactForm__label">Describenos lo que tu necesitas, mientras mas conoscamos, mejor.</p>
+							<p className="ContactForm__label">Tu mensaje</p>
 						</div>
 						<div className="ContactForm__inputwrap">
-							<textarea className="ContactForm__input" placeholder="Describe" rows="6"></textarea>
+							<textarea className="ContactForm__input" placeholder="Tu mensaje aqui" rows="6"></textarea>
 						</div>
 					</div>
 

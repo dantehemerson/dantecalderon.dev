@@ -38,7 +38,6 @@ class ContactForm extends React.Component {
 							<textarea className="ContactForm__input" placeholder="Tu mensaje aqui" rows="6"></textarea>
 						</div>
 					</div>
-
 					<div className="ContactForm__item">
 						<div className="ContactForm__submitwrap">
 							<input className="ContactForm__submit btn" placeholder="E-mail" type="submit"/>

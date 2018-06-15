@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 import ContactForm from '../components/ContactForm'
+import ContactSocial from '../components/ContactSocial'
 
 class Contact extends React.Component {
 	render() {
@@ -17,10 +18,11 @@ class Contact extends React.Component {
 						</div>
 					</div>
 				</section>
-				<div className="container">
+				<div className="Contact__form container">
 
 					<div className="row">
 						<div className="col-xs-6">
+							<ContactSocial />
 						</div>
 						<div className="col-xs-6">
 							<ContactForm/>

@@ -7,6 +7,7 @@ $primary-color: #e24f54;
    
    // Header Home
    $header_home-bg: #ca99d7;
+   $contact_home-bg: #feeede;
 
 /** Navbar **/
 $navbar-height: 70px;
@@ -172,11 +173,7 @@ textarea{
    padding-top: remcalc(30px);
    padding-bottom: remcalc(30px);       
    font-size: remcalc(15px);
-   font-weight: 600;
-    * {
-      margin: 0;
-      padding: 0;
-   } 
+   font-weight: 600;  
    &__title {
       font-size: remcalc(45px);
       font-weight: 800;   
@@ -265,17 +262,26 @@ textarea{
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;   
-      background-color: $header_home-bg;
+      background-color: $contact_home-bg;
       height: calc(450px);
-      color: white;
+      background-image: baseurl('textures/fake-luxury.png');
+
+   }
+
+   &__form {
+      position: relative;
+      top: -260px;
+
+      [class^="col"] {
+         padding: 0;
+      }
    }
 }
    .ContactForm {
       background: white;
       padding: 100px 40px;
-      border-radius: 0 6px 6px 0;
-      position: relative;
-      top: -260px;
+      border-radius: 0 6px 6px 0;      
+
       &__item {
          padding: 15px 0;
       }
@@ -300,7 +306,12 @@ textarea{
 
          }
    }
-
+   
+   .ContactSocial {
+      background: #f4a3bb;
+      width: 100%;
+      height: 100%;
+   }
 
 /** Rotational Component **/
 .Rotational {

@@ -272,6 +272,11 @@ textarea{
       position: relative;
       top: -260px;
 
+      .row {
+         border-radius: 5px;
+         overflow: hidden;         
+      }
+
       [class^="col"] {
          padding: 0;
       }
@@ -280,7 +285,6 @@ textarea{
    .ContactForm {
       background: white;
       padding: 100px 40px;
-      border-radius: 0 6px 6px 0;      
 
       &__item {
          padding: 15px 0;

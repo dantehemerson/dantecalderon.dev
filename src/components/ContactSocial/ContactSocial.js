@@ -4,7 +4,7 @@ class ContactSocial extends React.Component {
 	render() {
 		return (
 			<div className="ContactSocial">
-				falsjdlfk
+				ad
 			</div>
 		)
 	}

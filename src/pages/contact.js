@@ -21,11 +21,11 @@ class Contact extends React.Component {
 				<div className="Contact__form container">
 
 					<div className="row">
-						<div className="col-xs-6">
-							<ContactSocial />
-						</div>
-						<div className="col-xs-6">
+						<div className="col-xs-12 col-md-6 last-md">
 							<ContactForm/>
+						</div>
+						<div className="col-xs-12 col-md-6">
+							<ContactSocial />
 						</div>
 
 					</div>

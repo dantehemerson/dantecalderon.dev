@@ -19,7 +19,6 @@ class Contact extends React.Component {
 					</div>
 				</section>
 				<div className="Contact__form container">
-
 					<div className="row">
 						<div className="col-xs-12 col-md-6 last-md">
 							<ContactForm/>
@@ -30,7 +29,6 @@ class Contact extends React.Component {
 
 					</div>
 				</div>
-				
 			</div>
 		)
 	}

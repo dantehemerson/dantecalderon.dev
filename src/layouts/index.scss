@@ -130,10 +130,20 @@ body {
    color: #282a2d;
 }
 
-input, textarea {
-
+input[type="text"], input[type="email"], textarea {
+   background: #e3e8eb;
+   border: remcalc(2px) solid #e3e8eb;
+   border-radius: .2rem;   
+   box-shadow: none;
+   color: #282a2d;
+   outline: 0;   
+   width: 100%;   
+   padding: remcalc(15px) 1.6rem;   
+   padding-right: 4.7rem;
+   font-weight: 500;   
+   transition: border-color .3s;   
    &:focus {
-
+      border-color: #88cf8f;
    }
 }
 
@@ -239,6 +249,28 @@ input, textarea {
       color: white;
    }
 }
+   .ContactForm {
+      background: white;
+      padding: 100px 40px;
+
+      &__item {
+
+      }
+         &__labelwrap {
+
+         }
+         &__label {
+
+         }
+
+         &__inputwrap {
+
+         }
+
+         &__input {
+
+         }
+   }
 
 
 /** Rotational Component **/

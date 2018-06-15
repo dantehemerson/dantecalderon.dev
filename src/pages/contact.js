@@ -19,7 +19,7 @@ class Contact extends React.Component {
 						</div>
 					</div>					
 				</section>
-				<div className="Contact__form container">
+				<div className="Contact__form container--full">
 					<div className="row">
 						<div className="col-xs-12 col-md-6 last-md">
 							<ContactForm/>

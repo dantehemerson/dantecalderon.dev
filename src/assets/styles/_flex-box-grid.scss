@@ -414,6 +414,7 @@ $flexboxgrid-outer-margin: 2rem !default;
 // Syntax:
 // name SIZErem,
 $flexboxgrid-breakpoints:
+  xs 0px,
   sm 576px,
   md 768px,
   lg 992px,

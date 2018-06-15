@@ -112,7 +112,7 @@ $container-padding-lg: 25px;
 
    &--full {
       @extend .container;
-      max-width: 100%;
+      max-width: 1200px;
    }
 }
 
@@ -332,6 +332,7 @@ textarea{
                align-items: center;
                justify-content: center;
                margin-bottom: .4rem;
+
             }
             img {
                width: remcalc(20px);
@@ -341,6 +342,7 @@ textarea{
             ul {
                list-style: none;
                li {
+                  text-align: center;
                   a {
                      color: white;
                      text-decoration: none;

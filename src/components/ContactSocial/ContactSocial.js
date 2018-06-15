@@ -25,6 +25,28 @@ class ContactSocial extends React.Component {
 							</ul>
 						</div>
 					</div>
+
+					<div class="row ">
+						<div class="col-12 social-network">				
+							<h3 class="title-section">Sigueme</h3>
+							<div class="container-social">
+								<div>
+									<a class="link-no-border icon icon-github" href="https://www.github.com/dantehemerson" title="Github - Dante Calderón" target="_blank">
+										<img src="https://icongr.am/feather/github.svg?color=FFFFFF" title="Github - Dante Calderón"/>
+									</a>		
+									<a class="link-no-border icon icon-twitter" href="https://twitter.com/dantehemerson" title="Twitter - Dante Calderón" target="_blank">
+										<img src="https://icongr.am/feather/twitter.svg?color=FFFFFF" title="Twitter - Dante Calderón"/>
+									</a>		
+									<a class="link-no-border icon icon-instagram" href="https://www.instagram.com/dantehemerson/" title="Instagram - Dante Calderón" target="_blank">
+										<img src="https://icongr.am/feather/instagram.svg?color=FFFFFF" title="Instagram - Dante Calderón"/>
+									</a>		
+									<a class="link-no-border icon icon-linkedin" href="https://www.linkedin.com/in/dantehemerson/" title="Linkedin - Dante Calderón" target="_blank">
+										<img src="https://icongr.am/feather/linkedin.svg?color=FFFFFF" title="Linkedin - Dante Calderón"/>
+									</a>		
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>				
 				<Img sizes={this.props.imageLeft.sizes} />
 			</div>

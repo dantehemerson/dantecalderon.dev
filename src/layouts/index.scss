@@ -331,10 +331,21 @@ textarea{
                display: flex;
                align-items: center;
                justify-content: center;
+               margin-bottom: .4rem;
             }
             img {
-               width: 20px;
-               margin-right: 10px;
+               width: remcalc(20px);
+               margin-right: remcalc(10px);
+            }
+
+            ul {
+               list-style: none;
+               li {
+                  a {
+                     color: white;
+                     text-decoration: none;
+                  }
+               }
             }
          }
       }

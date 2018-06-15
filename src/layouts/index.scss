@@ -315,6 +315,30 @@ textarea{
       background: #491e70;
       width: 100%;
       height: 100%;
+      color: white;
+      font-size: remcalc(15px);
+      font-weight: 600;
+      .contain {
+         padding: 30px 20px;
+      }
+      &__title {
+         
+      }
+
+      &__info {
+         &__item {
+            p {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+            }
+            img {
+               width: 20px;
+               margin-right: 10px;
+            }
+         }
+      }
+
    }
 
 /** Rotational Component **/

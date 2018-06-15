@@ -6,6 +6,7 @@ import ContactSocial from '../components/ContactSocial'
 
 class Contact extends React.Component {
 	render() {
+		const { data } = this.props  	
 		return (
 			<div className="Contact">
 				<section className="HeaderContact Page">
@@ -16,7 +17,7 @@ class Contact extends React.Component {
 								<p className="HeaderContact__description Page__description">Si tienes una pregunta, quieres que trabajemos juntos o quieres dejarme unas palabras. Me encantaría escucharte</p>
 							</div>							
 						</div>
-					</div>
+					</div>					
 				</section>
 				<div className="Contact__form container">
 					<div className="row">
@@ -24,7 +25,9 @@ class Contact extends React.Component {
 							<ContactForm/>
 						</div>
 						<div className="col-xs-12 col-md-6">
-							<ContactSocial />
+
+							<ContactSocial imageLeft={data.contactImage} />
+
 						</div>
 
 					</div>
@@ -33,5 +36,20 @@ class Contact extends React.Component {
 		)
 	}
 }
+
+export const queryContact = graphql`
+  query QueryContact {
+    contactImage: imageSharp(id: {regex: "/contact/"}) {
+      sizes(maxWidth: 4000) {
+        ...GatsbyImageSharpSizes_tracedSVG
+      }
+    }     
+    site {
+      siteMetadata {
+            title
+      }     
+    }
+  }
+`
 
 export default Contact	

@@ -41,7 +41,7 @@ class ContactForm extends React.Component {
 
 					<div className="ContactForm__item">
 						<div className="ContactForm__submitwrap">
-							<input className="ContactForm__submit" placeholder="E-mail" type="submit"/>
+							<input className="ContactForm__submit btn" placeholder="E-mail" type="submit"/>
 						</div>
 					</div>
 				</form>

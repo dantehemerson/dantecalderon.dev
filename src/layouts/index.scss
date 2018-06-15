@@ -130,6 +130,22 @@ body {
    color: #282a2d;
 }
 
+.btn {
+   background: #e24f54;
+   border: 0;
+   border-radius: 2.4rem;
+   color: #fff;
+   cursor: pointer;
+   font-weight: 500;      
+   outline: 0;
+   padding: 10px 50px;
+   position: relative;
+   text-align: center;
+   text-decoration: none;
+   text-transform: uppercase;
+   width: auto;
+}
+
 input[type="text"], input[type="email"], textarea {
    background: #e3e8eb;
    border: remcalc(2px) solid #e3e8eb;
@@ -145,6 +161,10 @@ input[type="text"], input[type="email"], textarea {
    &:focus {
       border-color: #88cf8f;
    }
+}
+
+textarea{
+   resize: vertical;
 }
 
 .Page {
@@ -260,7 +280,13 @@ input[type="text"], input[type="email"], textarea {
 
          }
          &__label {
-
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: .05em;
+            line-height: 1.45;
+            text-transform: uppercase;
+            margin-bottom: .3rem;
          }
 
          &__inputwrap {

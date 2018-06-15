@@ -259,7 +259,7 @@ textarea{
 }
 
 .Contact {
-   background: #e3e8eb;
+   background: #e3e8eb;   
    .HeaderContact {
       display: flex;
       flex-direction: column;
@@ -273,7 +273,9 @@ textarea{
    .ContactForm {
       background: white;
       padding: 100px 40px;
-
+      border-radius: 0 6px 6px 0;
+      position: relative;
+      top: -260px;
       &__item {
          padding: 15px 0;
       }

@@ -9,7 +9,7 @@ class Card extends React.Component {
 				<div className="Card__body">
 					<h3 className="Card__title"><h3>
 					<p className="Card__content"></p>
-					<time></time>
+					<p><time datetime="2008-02-14 20:00">24 Junio</time></p>
 				</div>
 			</div>
 		)

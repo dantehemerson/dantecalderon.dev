@@ -386,7 +386,7 @@ textarea{
 /** Card **/
 .Card {
    background: white;
-   margin: 5px 10px;
+   margin: 10px 10px;
    border-radius: 4px;  
    overflow: hidden;
 
@@ -401,7 +401,7 @@ textarea{
 
    }
    &__content {
-
+      font-weight: 500;
    }
    &__date {
 

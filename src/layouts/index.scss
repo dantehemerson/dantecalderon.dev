@@ -368,6 +368,58 @@ textarea{
 
    }
 
+.Blog {
+   background: #e3e8eb;   
+   .HeaderBlog {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;   
+      background-color: $contact_home-bg;
+      height: calc(350px);
+      background-image: baseurl('textures/fake-luxury.png');
+
+   }
+
+   &__form {
+      position: relative;
+      top: -150px;
+
+      .row {
+         border-radius: 5px;
+         overflow: hidden;         
+      }
+
+      [class^="col"] {
+         padding: 0;
+      }
+   }
+}
+     
+
+/** Card **/
+.Card {
+   background: white;
+
+   &__header {
+      
+   }
+
+   &__body {
+
+   }
+   &__title {
+
+   }
+   &__content {
+
+   }
+   &__date {
+
+   }
+}
+
+
 /** Rotational Component **/
 .Rotational {
    width: 100%;

@@ -36,6 +36,9 @@ class Blog extends React.Component {
 						<div className="col-xs-4">
 							<Card data={post} />
 						</div>
+						<div className="col-xs-4">
+							<Card data={post} />
+						</div>
 					</div>
 				</div>
 			</div>

@@ -380,26 +380,13 @@ textarea{
       background-image: baseurl('textures/fake-luxury.png');
 
    }
-
-   &__form {
-      position: relative;
-      top: -150px;
-
-      .row {
-         border-radius: 5px;
-         overflow: hidden;         
-      }
-
-      [class^="col"] {
-         padding: 0;
-      }
-   }
 }
      
 
 /** Card **/
 .Card {
    background: white;
+   margin: 5px 10px;
 
    &__header {
       

@@ -387,6 +387,8 @@ textarea{
 .Card {
    background: white;
    margin: 5px 10px;
+   border-radius: 4px;  
+   overflow: hidden;
 
    &__header {
       

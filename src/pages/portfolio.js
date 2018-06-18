@@ -28,16 +28,16 @@ class Portfolio extends React.Component {
 				<div className="Contact__form container--full">
 					<div className="row">
 						<div className="col-xs-4">
-							<Card data={post} />
+							<Card data={post} mode="portfolio"/>
 						</div>
 						<div className="col-xs-4">
-							<Card data={post} />
+							<Card data={post} mode="portfolio"/>
 						</div>
 						<div className="col-xs-4">
-							<Card data={post} />
+							<Card data={post} mode="portfolio"/>
 						</div>
 						<div className="col-xs-4">
-							<Card data={post} />
+							<Card data={post} mode="portfolio"/>
 						</div>
 					</div>
 				</div>

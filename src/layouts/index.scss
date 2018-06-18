@@ -405,12 +405,9 @@ textarea{
    border-radius: 4px;  
    overflow: hidden;
    transition: all .2s ease-in-out;
-   a {
+   a { // El Link contenedor
       text-decoration: none;
-      color: #282a2d;
-      display: flex;
-      flex-direction: column;
-   
+      color: #282a2d;      
    }
 
    &:hover {
@@ -432,6 +429,28 @@ textarea{
    }
    &__date {
 
+   }
+
+   &.blogMode {
+      a {
+         display: flex;
+      }
+      .Card__header {
+         width: 400px;
+         background: red;  
+
+         /** Imagen**/
+         .gatsby-image-outer-wrapper {
+            height: 100%;
+            .gatsby-image-wrapper {
+               height: 100%;
+            }
+         }
+      }
+
+      .Card__title {
+         text-align: left;
+      }   
    }
 }
 

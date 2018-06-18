@@ -405,17 +405,25 @@ textarea{
    border-radius: 4px;  
    overflow: hidden;
    transition: all .2s ease-in-out;
+   box-shadow: rgba(0, 0, 0, 0.01) 0px 0px 0px 1px, rgba(0, 0, 0, 0.09) 0px 1px 4px;
    a { // El Link contenedor
       text-decoration: none;
       color: #282a2d;      
    }
 
    &:hover {
-      transform: translateY(-1px);
+      box-shadow: rgba(0, 0, 0, 0.02) 0px 0px 1px 1px, rgba(0, 0, 0, 0.043) 0px 3px 9px;
+      transform: translate3d(0px, -3px, 0px);
    }
 
    &__header {
-      
+      /** Imagen**/
+      .gatsby-image-outer-wrapper {
+         height: 100%;
+         .gatsby-image-wrapper {
+            height: 100%;
+         }
+      }
    }
 
    &__body {
@@ -439,13 +447,7 @@ textarea{
          width: 400px;
          background: red;  
 
-         /** Imagen**/
-         .gatsby-image-outer-wrapper {
-            height: 100%;
-            .gatsby-image-wrapper {
-               height: 100%;
-            }
-         }
+         
       }
 
       .Card__title {

@@ -11,6 +11,7 @@ class Index extends React.Component {
   			<main className="Header-Home">			
   				<h1 className="Header-Home__title">Dante Calderón</h1>
   				<h2 className="Header-Home__subtitle">Javascript Developer</h2>
+          <a className="btn Header-Home__btn-about" href="#about">Sobre mi</a>
   				<Rotational avatar={ data.avatar }/>
         </main>
         <About image={ data.aboutImage } />      

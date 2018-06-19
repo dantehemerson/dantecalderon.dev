@@ -260,14 +260,14 @@ textarea{
 
 
    * {
-      margin: 0;
-      padding: 0;
+      margin: 0;      
    }
 
    &__title {
       font-size: 3rem;
-      padding-top: 25px;
+      padding-top: 100px;
       font-weight: 900;
+      text-transform: uppercase;
    }
 
    &__subtitle {
@@ -275,6 +275,15 @@ textarea{
       color: #595959;
       font-weight: 400;
       text-transform: uppercase;
+   }
+
+   &__btn-about {
+      background: white;
+          border: 2px solid;
+          border-color: #f1f4f6;
+          padding: 10px 45px;
+          margin-top: 35px;
+          color: #282a2d;
    }
 }
 

@@ -6,7 +6,7 @@ class About extends React.Component {
 	
 	render() {
 		return (
-			<section className="About Page">
+			<section className="About Page" id="about">
 				<div className="container">
 					<div className="row center-xs">
 						<div className="About__titlewrap Page__titlewrap text-center col-xs-12 col-md-10">

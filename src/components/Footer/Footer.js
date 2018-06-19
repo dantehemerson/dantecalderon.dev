@@ -12,13 +12,13 @@ const Footer = () => (
 			<a className="Footer__icon" target="_blank" href="https://www.instagram.com/dantehemerson">
 				<img className="Footer__icon__img" src="https://icongr.am/fontawesome/instagram.svg?size=20&color=282a2d"/>	
 			</a>
-			<a className="Footer__icon" target="_blank" href="https://www.instagram.com/dantehemerson">
+			<a className="Footer__icon" target="_blank" href="https://www.youtube.com/channel/UCCbtGSRgh1RFYysgaZkoE0A">
 				<img className="Footer__icon__img" src="https://icongr.am/fontawesome/youtube-play.svg?size=20&color=282a2d"/>	
 			</a>
-			<a className="Footer__icon" target="_blank" href="https://www.instagram.com/dantehemerson">
+			<a className="Footer__icon" target="_blank" href="https://www.linkedin.com/in/dantehemerson">
 				<img className="Footer__icon__img" src="https://icongr.am/fontawesome/linkedin.svg?size=20&color=282a2d"/>	
 			</a>
-			<a className="Footer__icon" target="_blank" href="https://www.instagram.com/dantehemerson">
+			<a className="Footer__icon" target="_blank" href="https://www.github.com/dantehemerson">
 				<img className="Footer__icon__img" src="https://icongr.am/fontawesome/github.svg?size=20&color=282a2d"/>	
 			</a>
 		</div>

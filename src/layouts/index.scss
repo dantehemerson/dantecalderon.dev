@@ -251,7 +251,7 @@ textarea{
    justify-content: flex-start;
    align-items: center;
    background-color: -bg;
-   height: calc(100vh + 130px);
+   height: calc(100vh + 100px);
    color: white;
 
    background: -webkit-linear-gradient(rgba(#F9774C, .75), rgba(#802A0C, .85)), url('https://thumbs.dreamstime.com/b/line-coding-white-seamless-pattern-vector-illustration-outline-tile-background-programming-skills-82669720.jpg');
@@ -280,7 +280,7 @@ textarea{
    &__btn-about {
       background: white;
           border: 2px solid;
-          border-color: #f1f4f6;
+          border-color: #e2e0e0;
           padding: 10px 50px;
           margin-top: 35px;
           color: #282a2d;
@@ -658,8 +658,8 @@ textarea{
    &__orbit {
      
       width: 100%;      
-      max-width: 450px;
-      max-height: 400px;
+      max-width: 415px;
+      max-height: 415px;
       position: relative;
       display: flex;
       align-items: center;
@@ -702,7 +702,7 @@ textarea{
    }
 
    &__avatar-container {
-      width: 140px;
+      width: 200px;
       border-radius: 50%;
       overflow: hidden;    
       opacity: .9;

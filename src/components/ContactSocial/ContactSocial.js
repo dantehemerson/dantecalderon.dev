@@ -30,16 +30,16 @@ class ContactSocial extends React.Component {
 						<div className="col-xs-12">											
 							<div className="ContactSocial__social">
 								<a className="link-no-border ContactSocial__social__icon icon-github" href="https://www.github.com/dantehemerson" title="Github - Dante Calderón" target="_blank">
-									<img src="https://icongr.am/feather/github.svg?color=FFFFFF" title="Github - Dante Calderón"/>
+									<img src="https://icongr.am/fontawesome/github.svg?color=FFFFFF" title="Github - Dante Calderón"/>
 								</a>		
 								<a className="link-no-border ContactSocial__social__icon icon-twitter" href="https://twitter.com/dantehemerson" title="Twitter - Dante Calderón" target="_blank">
-									<img src="https://icongr.am/feather/twitter.svg?color=FFFFFF" title="Twitter - Dante Calderón"/>
+									<img src="https://icongr.am/fontawesome/twitter.svg?color=FFFFFF" title="Twitter - Dante Calderón"/>
 								</a>		
 								<a className="link-no-border ContactSocial__social__icon icon-instagram" href="https://www.instagram.com/dantehemerson/" title="Instagram - Dante Calderón" target="_blank">
-									<img src="https://icongr.am/feather/instagram.svg?color=FFFFFF" title="Instagram - Dante Calderón"/>
+									<img src="https://icongr.am/fontawesome/instagram.svg?color=FFFFFF" title="Instagram - Dante Calderón"/>
 								</a>		
 								<a className="link-no-border ContactSocial__social__icon icon-linkedin" href="https://www.linkedin.com/in/dantehemerson/" title="Linkedin - Dante Calderón" target="_blank">
-									<img src="https://icongr.am/feather/linkedin.svg?color=FFFFFF" title="Linkedin - Dante Calderón"/>
+									<img src="https://icongr.am/fontawesome/linkedin.svg?color=FFFFFF" title="Linkedin - Dante Calderón"/>
 								</a>										
 							</div>
 						</div>

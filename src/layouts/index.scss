@@ -685,12 +685,18 @@ textarea{
             height: 65px;
          }
       }
-      @include rotationalItem(hacker, 45deg, 'icons/hacker.svg');
-      @include rotationalItem(computer, 90deg, 'icons/laptop-2.png');
+      &.hacker {
+         &:before {
+            width: 65px;
+            height: 65px;
+         }
+      }
+      @include rotationalItem(hacker, 45deg, 'icons/linux-original.svg');
+      @include rotationalItem(protection, 90deg, 'icons/algorithm.svg');      
       @include rotationalItem(server, 135deg, 'icons/spotify.svg');
       @include rotationalItem(www, 180deg, 'icons/coffee.svg');      
       @include rotationalItem(browser, 225deg, 'icons/idea.svg');      
-      @include rotationalItem(protection, 270deg, 'icons/algorithm.svg');      
+      @include rotationalItem(computer, 270deg, 'icons/laptop-2.png');
       @include rotationalItem(laptop, 315deg, 'icons/books.svg');      
       @include rotationalItem(headphones, 360deg, 'icons/machine-learning.svg');          
    }

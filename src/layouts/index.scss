@@ -441,6 +441,9 @@ textarea{
 
    &__body {
       padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
    }
    &__title {
       text-align: center;  

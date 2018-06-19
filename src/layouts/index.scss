@@ -449,9 +449,10 @@ textarea{
    &.blogMode {
       a {
          display: flex;
+         flex-wrap: wrap;
       }
       .Card__header {
-         width: 400px;
+         width: 300px;
          height: auto;
          background: red;  
          
@@ -459,6 +460,11 @@ textarea{
             height: auto;
          }
          
+      }
+
+      .Card__body {
+         flex-grow: 1;
+         width: min-content;
       }
 
       .Card__title {

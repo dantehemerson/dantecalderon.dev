@@ -250,9 +250,14 @@ textarea{
    flex-direction: column;
    justify-content: flex-start;
    align-items: center;
-   background-color: $header_home-bg;
-   height: calc(100vh - #{$navbar-height});
+   background-color: -bg;
+   height: calc(100vh + 130px);
    color: white;
+
+   background: -webkit-linear-gradient(rgba(#F9774C, .75), rgba(#802A0C, .85)), url('https://thumbs.dreamstime.com/b/line-coding-white-seamless-pattern-vector-illustration-outline-tile-background-programming-skills-82669720.jpg');
+   background: -o-linear-gradient(rgba(#F9774C, .75), rgba(#802A0C, .85)), url('https://thumbs.dreamstime.com/b/line-coding-white-seamless-pattern-vector-illustration-outline-tile-background-programming-skills-82669720.jpg');
+   background: linear-gradient(rgba(#F9774C, .75), rgba(#802A0C, .85)), url('https://thumbs.dreamstime.com/b/line-coding-white-seamless-pattern-vector-illustration-outline-tile-background-programming-skills-82669720.jpg');
+
 
    * {
       margin: 0;
@@ -662,18 +667,18 @@ textarea{
          content: '';
          position: absolute;
          background-size: cover;
-         width: 50px;
-         height: 50px;                           
+         width: 55px;
+         height: 55px;                           
       }
       
       @include rotationalItem(hacker, 45deg, 'icons/hacker.svg');
       @include rotationalItem(computer, 90deg, 'icons/coding-gray.svg');
-      @include rotationalItem(server, 135deg, 'icons/server-sky.svg');
-      @include rotationalItem(www, 180deg, 'icons/world-wide-web.svg');      
+      @include rotationalItem(server, 135deg, 'icons/spotify.svg');
+      @include rotationalItem(www, 180deg, 'icons/cup-coffee.svg');      
       @include rotationalItem(browser, 225deg, 'icons/browser.svg');      
-      @include rotationalItem(protection, 270deg, 'icons/data-protection.svg');      
+      @include rotationalItem(protection, 270deg, 'icons/algorithm.svg');      
       @include rotationalItem(laptop, 315deg, 'icons/laptop.svg');      
-      @include rotationalItem(headphones, 360deg, 'icons/headphones.svg');          
+      @include rotationalItem(headphones, 360deg, 'icons/machine-learning.svg');          
    }
 
    &__avatar-container {

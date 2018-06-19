@@ -389,7 +389,9 @@ textarea{
       align-items: center;   
       background-color: $contact_home-bg;
       height: calc(350px);
+      color: white;
       background-image: baseurl('textures/fake-luxury.png');
+      background: linear-gradient(rgba(#F9774C, .75), rgba(#802A0C, .85)), url(https://www.colourbox.com/preview/18549725-hand-drawn-doodle-books-reading-seamless-pattern.jpg);
 
    }
 }

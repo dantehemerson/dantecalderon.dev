@@ -188,7 +188,7 @@ textarea{
 /** Navbar Component Styles **/
 .Navbar {
    height: $navbar-height;
-   background: $header_home-bg;
+  // background: $header_home-bg;
    display: flex;
    justify-content: center;   
    .container {
@@ -389,7 +389,7 @@ textarea{
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;   
-      background-color: $contact_home-bg;
+      background-color: #c9e3ea;
       height: calc(350px);
       background-image: baseurl('textures/fake-luxury.png');
 
@@ -435,9 +435,10 @@ textarea{
    }
    &__content {
       font-weight: 500;
+      text-align: left;
    }
    &__date {
-
+      text-align: right;
    }
 
    &.blogMode {

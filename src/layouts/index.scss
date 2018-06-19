@@ -275,6 +275,7 @@ textarea{
       justify-content: flex-start;
       align-items: center;   
       background-color: $contact_home-bg;
+      color: white;
       height: calc(350px);
       background-image: baseurl('textures/fake-luxury.png');
 
@@ -406,6 +407,7 @@ textarea{
       justify-content: flex-start;
       align-items: center;   
       background-color: #c9e3ea;
+      color: white;
       height: calc(350px);
       background-image: baseurl('textures/fake-luxury.png');
        background: linear-gradient(rgba(#F9774C, .75), rgba(#802A0C, .85)), baseurl('portfolio-background.jpg');

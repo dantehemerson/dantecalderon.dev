@@ -27,16 +27,16 @@ class Blog extends React.Component {
 				</section>
 				<div className="Contact__form container--full">
 					<div className="row center-xs">
-						<div className="col-xs-9">
+						<div className="col-xs-12">
 							<Card data={post} mode="blog" />
 						</div>
-						<div className="col-xs-9">
+						<div className="col-xs-12">
 							<Card data={post} mode="blog" />
 						</div>
-						<div className="col-xs-9">
+						<div className="col-xs-12">
 							<Card data={post} mode="blog" />
 						</div>
-						<div className="col-xs-9">
+						<div className="col-xs-12">
 							<Card data={post} mode="blog" />
 						</div>
 					</div>

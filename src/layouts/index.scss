@@ -102,6 +102,18 @@ $container-padding-lg: 25px;
   display: none;
 }
 
+
+
+.wavey {
+   background-image: baseurl('wavey.svg');
+   background-repeat: no-repeat;
+   background-size: 16rem;   
+   background-position: center;
+   height: .8rem;   
+   max-width: 47rem;
+
+}
+
    // containers
 .container {
    padding-left: $container-padding-lg;

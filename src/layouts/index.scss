@@ -425,7 +425,8 @@ textarea{
 
    &:hover {
       box-shadow: rgba(0, 0, 0, 0.02) 0px 0px 1px 1px, rgba(0, 0, 0, 0.043) 0px 3px 9px;
-      transform: translate3d(0px, -3px, 0px);
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px 1px, rgba(0, 0, 0, 0.08) 0px 0px 18px;
+      //transform: translate3d(0px, -3px, 0px);
    }
 
    &__header {
@@ -452,6 +453,7 @@ textarea{
    &__content {
       font-weight: 500;
       text-align: left;
+      color: #687177;
    }
    &__date {
       text-align: right;

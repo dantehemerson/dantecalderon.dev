@@ -8,7 +8,7 @@ class Blog extends React.Component {
 		const { data } = this.props  	
 		const post = {
 			image: data.contactImage,
-			title: 'Mi nueva vida',
+			title: 'Announcing Our freeCodeCamp 2018 Top Contributor Award Winners',
 			content: 'Este es mi nuev pagina web, ya que la anterior estaba muy antigua. Pero como vamos a empezar a desarrollar un nuevo tipo de publiciones',
 			date: '20 Junio 2018'
 

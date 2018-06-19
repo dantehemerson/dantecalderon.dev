@@ -16,6 +16,7 @@ class Card extends React.Component {
 						<p className="Card__date"><time datetime="2008-02-14 20:00">{ this.props.data.date}</time></p>
 						<p className="Card__content">{ this.props.data.content }</p>
 						<div className="wavey"></div>
+						<Link className="btn Card__btn" to="/blog"><span>Read it</span></Link>
 					</div>		
 				</Link>		
 			</div>

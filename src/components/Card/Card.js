@@ -18,7 +18,7 @@ class Card extends React.Component {
 						<Link className="btn Card__btn" to="/blog"><span>Read it</span></Link>
 						<div className="Card__wavey"></div>
 						<div className="Card__tags">
-							<p className="Card__tag"></p>
+							<p className="Card__tag">Tag</p>
 						</div>						
 					</div>		
 				</Link>		

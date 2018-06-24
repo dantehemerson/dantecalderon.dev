@@ -497,6 +497,14 @@ textarea{
       height: 1px;
       margin-bottom: 10px;
    }
+
+   &__tags {
+      
+   }
+      &__tag {
+         margin: 0;
+
+      }
    &__btn.btn {
       color: white;
       width: fit-content;

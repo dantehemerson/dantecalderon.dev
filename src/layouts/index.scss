@@ -470,7 +470,7 @@ textarea{
    }
 
    &__body {
-      padding: 30px 20px;
+      padding: 15px 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -491,7 +491,12 @@ textarea{
       color: #798a94;
       text-transform: uppercase;
    }
-
+   &__wavey {
+      background: #ebeaea;
+      width: 100%;
+      height: 1px;
+      margin-bottom: 10px;
+   }
    &__btn.btn {
       color: white;
       width: fit-content;
@@ -637,8 +642,14 @@ textarea{
          
       }
 
+      .Card__wavey {
+         display: none;
+      }
+
       .Card__body {
          flex-grow: 1;
+         padding: 30px 20px;
+
          width: min-content;
       }
 

@@ -9,7 +9,7 @@ class Portfolio extends React.Component {
 		const post = {
 			image: data.contactImage,
 			title: 'Mi nueva vida',
-			content: 'Este es mi nuev pagina web, ya que la anterior estaba muy antigua. Pero como vamos a empezar a desarrollar un nuevo tipo de publiciones',
+			content: 'Apps simples',
 			date: '20 Junio 2018'
 
 		}

@@ -430,7 +430,7 @@ textarea{
       align-items: center;   
       background-color: #c9e3ea;
       color: white;
-      height: calc(350px);
+      height: calc(340px);
       background-image: baseurl('textures/fake-luxury.png');
        background: linear-gradient(rgba(#F9774C, .75), rgba(#802A0C, .85)), baseurl('portfolio-background.jpg');
 
@@ -459,7 +459,7 @@ textarea{
    }
 
    &__header {
-      height: 160px;
+      height: 200px;
       /** Imagen**/
       .gatsby-image-outer-wrapper {
          height: 100%;
@@ -497,7 +497,7 @@ textarea{
       width: fit-content;
       padding: remcalc(12px) remcalc(40px);      
       transition: all 0.2s linear 0s;
-        
+      display: none;
       &:before {
          background-position: center center;
          background-repeat: no-repeat;
@@ -644,7 +644,11 @@ textarea{
 
       .Card__title {
          text-align: left;
-      }   
+      } 
+
+      .Card__btn {
+         display: inherit;
+      }  
    }
 }
 

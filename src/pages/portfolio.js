@@ -7,7 +7,7 @@ class Portfolio extends React.Component {
 	render() {
 		const { data } = this.props  	
 		const post = {
-			image: data.contactImage,
+			image: data.image,
 			title: 'Mi nueva vida',
 			content: 'Apps simples',
 			date: '20 Junio 2018'
@@ -27,16 +27,16 @@ class Portfolio extends React.Component {
 				</section>
 				<div className="Contact__form container--full">
 					<div className="row center-xs start-md">
-						<div className="col-sm-10 col-md-6 col-lg-4">
+						<div className="col-xs-12 col-sm-10 col-md-6 col-lg-4">
 							<Card data={post} mode="portfolio"/>
 						</div>
-						<div className="col-sm-10 col-md-6 col-lg-4">
+						<div className="col-xs-12 col-sm-10 col-md-6 col-lg-4">
 							<Card data={post} mode="portfolio"/>
 						</div>
-						<div className="col-sm-10 col-md-6 col-lg-4">
+						<div className="col-xs-12 col-sm-10 col-md-6 col-lg-4">
 							<Card data={post} mode="portfolio"/>
 						</div>
-						<div className="col-sm-10 col-md-6 col-lg-4">
+						<div className="col-xs-12 col-sm-10 col-md-6 col-lg-4">
 							<Card data={post} mode="portfolio"/>
 						</div>
 					</div>
@@ -48,11 +48,11 @@ class Portfolio extends React.Component {
 
 export const queryPortfolio = graphql`
   query QueryPortfolio {
-    contactImage: imageSharp(id: {regex: "/contact/"}) {
-      sizes(maxWidth: 4000) {
+    image: imageSharp(id: {regex: "/about-image/"}) {
+      sizes(maxWidth: 960) {
         ...GatsbyImageSharpSizes_tracedSVG
       }
-    }     
+    }   
     site {
       siteMetadata {
             title

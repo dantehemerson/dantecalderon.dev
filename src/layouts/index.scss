@@ -6,8 +6,9 @@
 $primary-color: #e24f54;
    
    // Header Home
-   $header_home-bg: #ca99d7;
+   $header_home-bg: #ffd3d3;
    $contact_home-bg: #a0e2b4b5;
+   $hover-link-color: #DFBD83;
 
 /** Navbar **/
 $navbar-height: 70px;
@@ -24,6 +25,11 @@ $footer-link-color: #282a2d;
 $container-padding-lg: 25px;
 
 $font-color: rgba(0,0,0,.88);
+
+$sans-serif-font: 'Open Sans';
+
+
+$transition-hover-s: .4s;
 
 /** Mixin for responsive design **/
 @mixin breakpoint($class) {  
@@ -243,7 +249,7 @@ textarea{
    display: flex;   
    justify-content: center;
    align-items: center;
-   background-color: -bg;
+   background-color: $header_home-bg;
    height: calc(100vh - 70px);
    color: $font-color;
 
@@ -276,8 +282,7 @@ textarea{
    }
 }
 
-.Contact {
-   background: #e3e8eb;   
+.Contact {   
    .HeaderContact {
       display: flex;
       flex-direction: column;
@@ -292,11 +297,6 @@ textarea{
       position: relative;
       top: -150px;
 
-      .row {
-         border-radius: 5px;
-         overflow: hidden;         
-      }
-
       [class^="col"] {
          padding: 0;
       }
@@ -305,6 +305,7 @@ textarea{
    .ContactForm {
       background: white;
       padding: 100px 40px;
+      border: 1px solid black;
 
       &__item {
          padding: 15px 0;
@@ -388,8 +389,7 @@ textarea{
 
    }
 
-.Blog {
-   background: #e3e8eb;   
+.Blog {  
    .HeaderBlog {
       display: flex;
       flex-direction: column;
@@ -401,8 +401,7 @@ textarea{
    }
 }
 
-.Portfolio {
-   background: #e3e8eb;   
+.Portfolio {   
    .HeaderPortfolio {
       display: flex;
       flex-direction: column;
@@ -420,19 +419,12 @@ textarea{
 .Card {
    background: white;
    margin: 10px 10px;
-   border-radius: 4px;  
-   overflow: hidden;
+   border-radius: 2px;     
    transition: all .2s ease-in-out;
-   box-shadow: rgba(0, 0, 0, 0.01) 0px 0px 0px 1px, rgba(0, 0, 0, 0.09) 0px 1px 4px;
+   border: 1px solid rgba(0,0,0,.1) !important;
    a { // El Link contenedor
       text-decoration: none;
-      color: #282a2d;      
-   }
-
-   &:hover {
-      box-shadow: rgba(0, 0, 0, 0.02) 0px 0px 1px 1px, rgba(0, 0, 0, 0.043) 0px 3px 9px;
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px 1px, rgba(0, 0, 0, 0.08) 0px 0px 18px;
-      //transform: translate3d(0px, -3px, 0px);
+      color: #282a2d;                
    }
 
    &__header {
@@ -454,18 +446,24 @@ textarea{
    }
    &__title {
       text-align: center;  
+      font-family: $sans-serif-font;
+      font-weight: 700;
       margin-bottom: remcalc(10px);
+      transition: all $transition-hover-s;
+      &:hover {
+        color:  $hover-link-color;
+      }
    }
    &__content {
       font-weight: 500;
       text-align: left;
-      color: #687177;
+      color: #757575;
    }
    &__date {
       text-align: right;
       font-size: remcalc(12px);
       font-weight: 600;
-      color: #798a94;
+      color: #757575;
       text-transform: uppercase;
    }
    &__wavey {
@@ -474,14 +472,6 @@ textarea{
       height: 1px;
       margin-bottom: 10px;
    }
-
-   &__tags {
-      
-   }
-      &__tag {
-         margin: 0;
-         font-weight: 500;
-      }
     
    &.blogMode {
       a {
@@ -489,13 +479,18 @@ textarea{
          flex-wrap: wrap;
       }
       .Card__header {
-         width: 300px;
+         width: 400px;
          height: auto;         
          
          @include breakpoint(xs) {
             height: auto;
          }
-         
+         @include breakpoint(md) {
+            width: 320px;
+         }
+         @include breakpoint(lg) {
+            width: 400px;
+         }
       }
 
       .Card__wavey {
@@ -514,7 +509,11 @@ textarea{
       } 
 
       .Card__btn {
-         display: inherit;
+        display: inherit;
+        transition: all $transition-hover-s;
+        &:hover {
+          color:  $hover-link-color;
+        }
       }  
    }
 }
@@ -585,7 +584,7 @@ textarea{
 
 /** About Section **/
 .About {
-   background: #F6F1E4;   
+  background: white;   
   color: rgba(0,0,0,.88);  
    &__interests {
       margin-top: 50px;
@@ -636,7 +635,13 @@ textarea{
    }
 
   &__interests__title {
-    font-family: 'Open Sans';
+    font-family: $sans-serif-font;
+    text-transform: uppercase;
+    background: white;
+    
+    font-size: 18px;
+    padding: 10px 85px;
+    display: inline-block;
   }
    &__img-container {
       align-self: center;

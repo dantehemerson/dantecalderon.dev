@@ -7,9 +7,9 @@ class Blog extends React.Component {
 	render() {
 		const { data } = this.props  	
 		const post = {
-			image: data.contactImage,
+			image: data.image,
 			title: 'Announcing Our freeCodeCamp 2018 Top Contributor Award Winners',
-			content: 'Este es mi nuev pagina web, ya que la anterior estaba muy antigua. Pero como vamos a empezar a desarrollar un nuevo tipo de publiciones',
+			content: 'Este es mi nuev pagina web, ya que la anterior estaba muy antigua. Pero como vamos a empezar a desarrollar un nuevo tipo de publiciones ahora como siempre esto es muy simple para desarrollar ya que el proceso es bastante simple...',
 			date: '20 Junio 2018'
 		}
 		return (
@@ -38,6 +38,30 @@ class Blog extends React.Component {
 						<div className="col-xs-12">
 							<Card data={post} mode="blog" />
 						</div>
+						<div className="col-xs-12">
+							<Card data={post} mode="blog" />
+						</div>
+						<div className="col-xs-12">
+							<Card data={post} mode="blog" />
+						</div>
+						<div className="col-xs-12">
+							<Card data={post} mode="blog" />
+						</div>
+						<div className="col-xs-12">
+							<Card data={post} mode="blog" />
+						</div>
+						<div className="col-xs-12">
+							<Card data={post} mode="blog" />
+						</div>
+						<div className="col-xs-12">
+							<Card data={post} mode="blog" />
+						</div>
+						<div className="col-xs-12">
+							<Card data={post} mode="blog" />
+						</div>
+						<div className="col-xs-12">
+							<Card data={post} mode="blog" />
+						</div>
 					</div>
 				</div>
 			</div>
@@ -47,6 +71,11 @@ class Blog extends React.Component {
 
 export const queryBlog = graphql`
   query QueryBlog {      
+  	image: imageSharp(id: {regex: "/about-image/"}) {
+      sizes(maxWidth: 960) {
+        ...GatsbyImageSharpSizes_tracedSVG
+      }
+    } 
     site {
       siteMetadata {
             title

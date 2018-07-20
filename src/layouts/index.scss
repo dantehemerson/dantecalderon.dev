@@ -212,7 +212,8 @@ textarea{
 
    a {
       text-decoration: none; 
-      color: $navbar-link-color;     
+      color: $navbar-link-color;   
+      text-transform: uppercase;  
    }
 
    /** Link to home **/

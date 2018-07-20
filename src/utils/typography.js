@@ -1,8 +1,10 @@
 import Typography from 'typography'
 
 const typography = new Typography({
-	headerFontFamily: ['Montserrat', 'sans-serif'],
-	bodyFontFamily: ['Montserrat', 'sans-serif'],
+	headerFontFamily: ['Playfair Display', 'sans-serif'],
+	bodyFontFamily: ['Open Sans', 'sans-serif'],
+	//PT Serif
+	// Open Sans
 })
 
 export default typography

@@ -180,15 +180,13 @@ textarea{
 .Page {
    padding-top: remcalc(30px);
    padding-bottom: remcalc(30px);       
-   font-size: remcalc(15px);
-   font-weight: 600;  
+   
    &__title {
       font-size: remcalc(45px);
       font-weight: 800;   
    }
 
    &__description {      
-      font-weight: 600;
       padding-top: remcalc(20px);
    }      
 }
@@ -591,18 +589,7 @@ textarea{
 /** About Section **/
 .About {
    background: #F6F1E4;   
-
-   &__titlewrap {
-      
-   }
-
-      &__title {
-
-      }
-
-      &__description {
-
-      }
+  color: rgba(0,0,0,.88);  
    &__interests {
       margin-top: 50px;
       margin-bottom: 50px;

@@ -179,11 +179,9 @@ textarea{
 
 .Page {
    padding-top: remcalc(30px);
-   padding-bottom: remcalc(30px);       
-   
+   padding-bottom: remcalc(30px);          
    &__title {
-      font-size: remcalc(45px);
-      font-weight: 800;   
+      font-size: remcalc(45px);      
    }
 
    &__description {      
@@ -638,6 +636,9 @@ textarea{
          }
    }
 
+  &__interests__title {
+    font-family: 'Open Sans';
+  }
    &__img-container {
       align-self: center;
    }

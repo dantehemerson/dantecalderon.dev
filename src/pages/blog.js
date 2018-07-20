@@ -11,7 +11,6 @@ class Blog extends React.Component {
 			title: 'Announcing Our freeCodeCamp 2018 Top Contributor Award Winners',
 			content: 'Este es mi nuev pagina web, ya que la anterior estaba muy antigua. Pero como vamos a empezar a desarrollar un nuevo tipo de publiciones',
 			date: '20 Junio 2018'
-
 		}
 		return (
 			<div className="Blog">
@@ -47,12 +46,7 @@ class Blog extends React.Component {
 }
 
 export const queryBlog = graphql`
-  query QueryBlog {
-    contactImage: imageSharp(id: {regex: "/contact/"}) {
-      sizes(maxWidth: 4000) {
-        ...GatsbyImageSharpSizes_tracedSVG
-      }
-    }     
+  query QueryBlog {      
     site {
       siteMetadata {
             title

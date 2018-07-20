@@ -9,7 +9,7 @@ class Card extends React.Component {
 			<div  className={`Card ${(blogMode ? 'blogMode' : '')}`}>
 				<Link to="/">
 					<div className="Card__header">
-						<Img sizes={this.props.data.image.sizes}/>
+						{/* <Img sizes={this.props.data.image.sizes}/> */}
 					</div>
 					<div className="Card__body">
 						<h3 className="Card__title">{ this.props.data.title }</h3>

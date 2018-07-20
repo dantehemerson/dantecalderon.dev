@@ -20,16 +20,10 @@ class Contact extends React.Component {
 					</div>					
 				</section>
 				<div className="Contact__form container--full">
-					<div className="row">
-						<div className="col-xs-12 col-md-6 last-md">
+					<div className="row center-xs">
+						<div className="col-xs-12 col-md-7 start-xs">
 							<ContactForm/>
-						</div>
-						<div className="col-xs-12 col-md-6">
-
-							<ContactSocial imageLeft={data.contactImage} />
-
-						</div>
-
+						</div>						
 					</div>
 				</div>
 			</div>

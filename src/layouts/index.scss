@@ -7,7 +7,7 @@ $primary-color: #e24f54;
    
    // Header Home
    $header_home-bg: #ca99d7;
-   $contact_home-bg: #c0a0e2;
+   $contact_home-bg: #a0e2b4b5;
 
 /** Navbar **/
 $navbar-height: 70px;
@@ -23,6 +23,7 @@ $footer-link-color: #282a2d;
 /** Containers */
 $container-padding-lg: 25px;
 
+$font-color: rgba(0,0,0,.88);
 
 /** Mixin for responsive design **/
 @mixin breakpoint($class) {  
@@ -244,8 +245,8 @@ textarea{
    justify-content: flex-start;
    align-items: center;
    background-color: -bg;
-   height: calc(100vh + 100px);
-   color: white;
+   height: calc(100vh);
+   color: $font-color;
 
    * {
       margin: 0;      

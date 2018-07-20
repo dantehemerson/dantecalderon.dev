@@ -9,10 +9,18 @@ class Index extends React.Component {
 		return (
       <div>
   			<main className="Header-Home">			
-  				<h1 className="Header-Home__title">Dante Calderón</h1>
-  				<h2 className="Header-Home__subtitle">Javascript Developer</h2>
-          <a className="btn Header-Home__btn-about" href="#about">Sobre mi</a>          
-  				<Rotational avatar={ data.avatar }/>
+          <div className="container">
+            <div className="row">
+              <div className="col-xs-12 col-lg-4" >
+        				<h1 className="Header-Home__title">Dante Calderón</h1>
+        				<h2 className="Header-Home__subtitle">Javascript Developer</h2>
+                <a className="btn Header-Home__btn-about" href="#about">Sobre mi</a>
+              </div>
+              <div className="col-xs-12 col-lg-8">
+    				    <Rotational avatar={ data.avatar }/>
+              </div>
+            </div>
+          </div>
         </main>
         <About image={ data.aboutImage } />      
       </div>

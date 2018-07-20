@@ -5,6 +5,8 @@ const typography = new Typography({
 	bodyFontFamily: ['Open Sans', 'sans-serif'],
 	//PT Serif
 	// Open Sans
+	// Merriweather
+	// Playfair Display
 })
 
 export default typography

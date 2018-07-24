@@ -25,7 +25,7 @@ class Portfolio extends React.Component {
 						</div>
 					</div>					
 				</section>
-				<div className="Contact__form container--full">
+				<div className="Page__content container--full">
 					<div className="row center-xs start-md">
 						<div className="col-xs-12 col-sm-10 col-md-6 col-lg-4">
 							<Card data={post} mode="portfolio"/>

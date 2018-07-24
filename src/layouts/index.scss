@@ -31,6 +31,8 @@ $sans-serif-font: 'Open Sans';
 
 $transition-hover-s: .4s;
 
+$height-header-title: 300px;
+
 /** Mixin for responsive design **/
 @mixin breakpoint($class) {  
 	 /** Breakpoints based on Bootstrap4 **/
@@ -185,29 +187,38 @@ textarea{
 }
 
 .Page {
-	 padding-top: remcalc(30px);
+	 padding-top: remcalc(90px);
 	 padding-bottom: remcalc(30px);          
 	 &__title {
 			font-size: remcalc(45px);      
 			color: $font-color;
 	 }
 
-	 &__description {      
-			padding-top: remcalc(20px);
-	 }      
+	 &__description {      			
+		color: $font-color;
+
+	 } 
+
+	&__content {	
+		position: relative;
+		top: -80px;
+
+		[class^="col"] {
+			 padding: 0;
+		}	 
+	}
 }
 
 /** Navbar Component Styles **/
 .Navbar {
-	 height: $navbar-height;
-	// background: $header_home-bg;
+	 height: $navbar-height;	
 	 display: flex;
 	 justify-content: center;   
 	 position: fixed;
 	 width: 100%;
 	 z-index: 100;
-	 border-bottom: 1px solid #ebebeb;
-    //background: rgba(255,255,255,0.984);
+	// border-bottom: 1px solid #ebebeb;
+   // background: rgba(255,255,255,0.984);
 	 .container {
 			display: flex;
 			align-items: center;
@@ -293,16 +304,14 @@ textarea{
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-start;
-			align-items: center;   
-			background-color: $contact_home-bg;
+			align-items: center;   			
 			color: white;
-			height: calc(350px);
+			height: 250px;
+			background: #ffefefee;
 	 }
 
 	 &__form {
 			position: relative;
-			top: -150px;
-
 			[class^="col"] {
 				 padding: 0;
 			}
@@ -310,8 +319,8 @@ textarea{
 }
 	 .ContactForm {
 			background: white;
-			padding: 100px 40px;
-			border: 1px solid black;
+			padding: 50px 20px;
+			
 
 			&__item {
 				 padding: 15px 0;
@@ -402,7 +411,7 @@ textarea{
 			justify-content: flex-start;
 			align-items: center;   
 			background-color: $contact_home-bg;
-			height: calc(350px);
+			height: $height-header-title;
 			color: white;            
 	 }
 }
@@ -415,7 +424,7 @@ textarea{
 			align-items: center;   
 			background-color: #c9e3ea;
 			color: white;
-			height: calc(340px);       
+			height: $height-header-title;       
 	 }
 }
 

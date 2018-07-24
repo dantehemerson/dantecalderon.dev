@@ -24,7 +24,7 @@ class Blog extends React.Component {
 						</div>
 					</div>					
 				</section>
-				<div className="Contact__form container--full">
+				<div className="Page__content container--full">
 					<div className="row center-xs">
 						<div className="col-xs-12">
 							<Card data={post} mode="blog" />

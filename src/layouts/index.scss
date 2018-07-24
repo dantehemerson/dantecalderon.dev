@@ -217,10 +217,14 @@ textarea{
 	 justify-content: center;   
 	 position: fixed;
 	 width: 100%;
-	 z-index: 100;	 
-    background: rgba(255,255,255,0.984);
-    -webkit-box-shadow: 0 2px 2px -2px rgba(0,0,0,.15);
-    box-shadow: 0 2px 2px -2px rgba(0,0,0,.15);
+	 z-index: 100;
+	 transition: .4s;	 
+
+	 &.noTop {
+	    background: rgba(255,255,255,0.984);
+	    -webkit-box-shadow: 0 2px 2px -2px rgba(0,0,0,.15);
+	    	box-shadow: 0 2px 2px -2px rgba(0,0,0,.15);	 	
+	 }
 	 .container {
 			display: flex;
 			align-items: center;

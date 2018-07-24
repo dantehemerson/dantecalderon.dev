@@ -3,17 +3,34 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
 class Navbar extends React.Component {	
+	state = {
+		navbarIsTop: true,
+	}
+
 	static propTypes = {
 		activePage: PropTypes.string,
 	}
 
 	static defaultProps = {
 		activePage: '',
+		navbarIsTop: true,		
+	}
+
+	componentDidMount() {
+
+		const scrollListener = () => {
+			this.setState({ navbarIsTop: document.body.scrollTop <= 50 && 
+												document.documentElement.scrollTop <= 50 })	
+		}
+		window.addEventListener('scroll', scrollListener)
 	}
 
 	render() {		
 		return (					
-			<nav className="Navbar">				
+			<nav className={
+				"Navbar " + 
+				(this.state.navbarIsTop ? '' : 'noTop') 
+			}>				
 				<div className="container">
 					<div className="Navbar__titlewrap">
 						<Link className="Navbar__title" to="/">dantehemerson</Link>

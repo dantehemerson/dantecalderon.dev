@@ -16,7 +16,7 @@ class Navbar extends React.Component {
 			<nav className="Navbar">				
 				<div className="container">
 					<div className="Navbar__titlewrap">
-						<Link className="Navbar__title" to="/">Dante Calderon</Link>
+						<Link className="Navbar__title" to="/">dantehemerson</Link>
 					</div>
 					<div className="Navbar__navwrap">
 						<ul className="Navbar__nav">

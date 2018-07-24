@@ -6,7 +6,7 @@
 $primary-color: #e24f54;
 	 
 	 // Header Home
-	 $header_home-bg: #ffd3d3;
+	 $header_home-bg: #FCE7DD;
 	 $contact_home-bg: #a0e2b4b5;
 	 $hover-link-color: #DFBD83;
 
@@ -166,19 +166,20 @@ body {
 }
 
 input[type="text"], input[type="email"], textarea {
-	 background: #e3e8eb;
+//	 background: #e3e8eb;
 	 border: remcalc(2px) solid #e3e8eb;
 	 border-radius: .2rem;   
 	 box-shadow: none;
-	 color: #282a2d;
+	 color: #55595c;
 	 outline: 0;   
 	 width: 100%;   
 	 padding: remcalc(15px) 1.6rem;   
 	 padding-right: 4.7rem;
-	 font-weight: 500;   
 	 transition: border-color .3s;   
+	 font-weight: 400;
 	 &:focus {
-			border-color: #88cf8f;
+			border-color: #9ed5e7; // Medium color
+			border-color: $hover-link-color;
 	 }
 }
 
@@ -306,7 +307,7 @@ textarea{
 			align-items: center;   			
 			color: white;
 			height: 250px;
-			background: #ffefefee;
+			background: #E8F3EC;
 	 }
 
 	 &__form {
@@ -333,6 +334,7 @@ textarea{
 						font-weight: 700;
 						letter-spacing: .05em;
 						line-height: 1.45;
+						color: #4e4e4e;
 						text-transform: uppercase;
 						margin-bottom: .3rem;
 				 }
@@ -409,7 +411,7 @@ textarea{
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: center;   
-			background-color: $contact_home-bg;
+			background-color: #f0f0ee;
 			height: $height-header-title;
 			color: white;            
 	 }
@@ -421,7 +423,7 @@ textarea{
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: center;   
-			background-color: #c9e3ea;
+			background-color: #f6f1e4;
 			color: white;
 			height: $height-header-title;       
 	 }
@@ -655,8 +657,8 @@ textarea{
 	&__interests__title {
 		font-family: $sans-serif-font;
 		text-transform: uppercase;
-		background: white;
-		
+		background: #dcbb72;
+		color: white;
 		font-size: 18px;
 		padding: 10px 85px;
 		display: inline-block;
@@ -665,7 +667,7 @@ textarea{
 			align-self: center;
 	 }
 			&__img {
-				 border: 10px solid white;
+				 border: 10px solid #dcbb72;
 			}
 }
 

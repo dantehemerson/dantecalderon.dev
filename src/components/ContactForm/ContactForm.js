@@ -16,10 +16,10 @@ class ContactForm extends React.Component {
 					</div>		
 					<div className="ContactForm__item">
 						<div className="ContactForm__labelwrap">
-							<p className="ContactForm__label">Tu correo</p>
+							<p className="ContactForm__label">E-mail</p>
 						</div>
 						<div className="ContactForm__inputwrap">
-							<input className="ContactForm__input" placeholder="E-mail" type="text"/>
+							<input className="ContactForm__input" placeholder="tu@correo.com" type="text"/>
 						</div>
 					</div>
 					<div className="ContactForm__item">
@@ -35,7 +35,7 @@ class ContactForm extends React.Component {
 							<p className="ContactForm__label">Tu mensaje</p>
 						</div>
 						<div className="ContactForm__inputwrap">
-							<textarea className="ContactForm__input" placeholder="Tu mensaje aqui" rows="6"></textarea>
+							<textarea className="ContactForm__input" placeholder="Ingresa tu mensaje aquí" rows="6"></textarea>
 						</div>
 					</div>
 					<div className="ContactForm__item">

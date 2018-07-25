@@ -273,8 +273,13 @@ textarea{
 	 align-items: center;
 	 background-color: $header_home-bg;
 	 height: 100vh;
-	 min-height: 500px;
+	 min-height: 600px;
 	 color: $font-color;
+
+	 @include breakpoint(lg) {
+	 	min-height: 500px;
+
+	 }
 	
 	& > .container {
 		padding-top: 38px;
@@ -566,12 +571,13 @@ textarea{
 	 display: flex;
 	 align-items: center;
 	 justify-content: center;
+	
 
 	 &__orbit {
 		 
 			width: 100%;      
-			max-width: 415px;
-			max-height: 415px;
+			max-width: 400px;
+			max-height: 400px;
 			position: relative;
 			display: flex;
 			align-items: center;

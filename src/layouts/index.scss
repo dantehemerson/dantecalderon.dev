@@ -515,6 +515,7 @@ textarea{
 			cursor: pointer;
 			&:hover {
 				color:  $hover-link-color;
+				text-decoration: underline;
 			}
 	 }
 	 &__content {
@@ -539,6 +540,9 @@ textarea{
 	&__header__wrapper {
 		 display: flex;
 		 flex-wrap: wrap;
+	}
+	&__btn {
+		display: none;
 	}
 	 &.blogMode {
 	 		display: flex;

@@ -188,8 +188,7 @@ input[type="text"], input[type="email"], textarea {
 	 outline: 0;   
 	 width: 100%;   
 	 padding: remcalc(15px) 1.6rem;   
-	 padding-right: 4.7rem;
-	 transition: border-color .3s;   
+	 padding-right: 4.7rem;	 
 	 font-weight: 400;
 	 &:focus {			
 			border-color: $hover-link-color;
@@ -231,7 +230,6 @@ textarea{
 	 position: fixed;
 	 width: 100%;
 	 z-index: 100;
-	 transition: .4s;	 
 
 	 &.noTop {
 	    background: rgba(255,255,255,0.984);
@@ -388,7 +386,6 @@ textarea{
 				font-weight: bold;
 				border-radius: 4px;
 				background: #28282e;
-				transition: $transition-hover-s;
 				&:hover {
 					background: $hover-link-color;
 				}
@@ -440,7 +437,6 @@ textarea{
 				 display: flex;
 				 justify-content: center;   
 				 &__icon {
-						transition: all .4s;
 						img {
 							 width: 25px;
 							 margin: 0 10px;
@@ -484,7 +480,6 @@ textarea{
 	 background: white;
 	 margin: 10px 10px;
 	 border-radius: 2px;     
-	 transition: all .2s ease-in-out;
 	 border: 1px solid rgba(0,0,0,.1) !important;
 	 a { // El Link contenedor
 			text-decoration: none;
@@ -513,7 +508,6 @@ textarea{
 			font-family: $sans-serif-font;
 			font-weight: 700;
 			margin-bottom: remcalc(10px);
-			transition: all $transition-hover-s;
 			cursor: pointer;
 			&:hover {
 				color:  $hover-link-color;
@@ -578,7 +572,6 @@ textarea{
 
 			.Card__btn {
 				display: inherit;
-				transition: all $transition-hover-s;
 				&:hover {
 					color:  $hover-link-color;
 				}

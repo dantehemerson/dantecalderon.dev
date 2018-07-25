@@ -11,7 +11,7 @@ class ContactForm extends React.Component {
 							<p className="ContactForm__label">Tu nombre</p>
 						</div>
 						<div className="ContactForm__inputwrap">
-							<input className="ContactForm__input" placeholder="Nombre" type="text"/>
+							<input className="ContactForm__input" name="name" placeholder="Nombre" type="text"/>
 						</div>
 					</div>		
 					<div className="ContactForm__item">

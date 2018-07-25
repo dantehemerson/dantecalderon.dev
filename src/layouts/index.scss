@@ -177,8 +177,7 @@ input[type="text"], input[type="email"], textarea {
 	 padding-right: 4.7rem;
 	 transition: border-color .3s;   
 	 font-weight: 400;
-	 &:focus {
-			border-color: #9ed5e7; // Medium color
+	 &:focus {			
 			border-color: $hover-link-color;
 	 }
 }
@@ -325,7 +324,7 @@ textarea{
 }
 	 .ContactForm {
 			background: white;
-			padding: 50px 20px;
+			padding: 50px 0;
 			
 
 			&__item {
@@ -340,7 +339,7 @@ textarea{
 						font-weight: 700;
 						letter-spacing: .05em;
 						line-height: 1.45;
-						color: #4e4e4e;
+						color: #28282e;
 						text-transform: uppercase;
 						margin-bottom: .3rem;
 				 }
@@ -352,6 +351,17 @@ textarea{
 				 &__input {
 
 				 }
+			&__submit{
+				padding: 15px 40px;
+				font-weight: bold;
+				border-radius: 4px;
+				background: #28282e;
+				transition: $transition-hover-s;
+				&:hover {
+					background: $hover-link-color;
+				}
+
+			}
 	 }
 	 
 	 .ContactSocial {
@@ -715,7 +725,7 @@ textarea{
 
 	 }
 			&__copytext {
-				 font-size: remcalc(12px);
+				 font-size: remcalc(13px);
 				 font-weight: 600;
 				 color: #848687;
 				 text-align: center;

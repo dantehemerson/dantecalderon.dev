@@ -99,6 +99,17 @@ $height-header-title: 300px;
 
 
 /* General Modifiers */
+
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: $hover-link-color;
+}
+
+::selection {
+    color: white; 
+    background: $hover-link-color;
+}
+
 .text-center {
 	text-align: center;
 }

@@ -20,6 +20,7 @@
     "gatsby-source-filesystem": "^1.5.38",
     "gatsby-transformer-remark": "^1.7.44",
     "gatsby-transformer-sharp": "^1.6.26",
+    "lodash": "^4.17.10",
     "netlify-cms": "^1.9.3",
     "prismjs": "^1.15.0",
     "react-helmet": "^5.2.0"

@@ -23,7 +23,7 @@ const Footer = () => (
 			</a>
 		</div>
 		<div className="Footer__copy">
-			<p className="Footer__copytext"> {"</>  with <3 by "}<a href="https://twitter.com/dantehemerson" target="_blank">Dante Calderón</a></p>
+			<p className="Footer__copytext"> {"Coded with ❤ by "}<a href="https://twitter.com/dantehemerson" target="_blank">Dante Calderón</a></p>
 		</div>
 	</footer>	
 )

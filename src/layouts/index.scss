@@ -101,7 +101,7 @@ $height-header-title: 300px;
 /* General Modifiers */
 
 * {
-	transition: $transition-hover-s; // transiciones para todos. Animensen!!!
+	transition: all $transition-hover-s; // transiciones para todos. Animensen!!!
 }
 ::-moz-selection { /* Code for Firefox */
     color: white;
@@ -594,15 +594,17 @@ textarea{
 			width: 100%;      
 			position: relative;
 			display: flex;
-			max-width: 300px;
-			max-height: 300px;
+			max-width: 270px;
+			max-height: 270px;
 			align-items: center;
 			justify-content: center;
-			margin-top: 120px;
-    		margin-bottom: 130px;
+			margin-top: 110px;
+    		margin-bottom: 100px;
 			@include breakpoint(sm) {
 				max-width: 350px;
 				max-height: 350px;
+				margin-top: 120px;
+    		margin-bottom: 130px;
 			}
 			@include breakpoint(lg) {				
 				max-width: 400px;
@@ -622,19 +624,33 @@ textarea{
 				 content: '';
 				 position: absolute;
 				 background-size: cover;
-				 width: 55px;
-				 height: 55px;                           
+				 width: 38px;
+				 height: 38px;                           
+
+				 @include breakpoint(sm) {
+					width: 55px;
+				 	height: 55px;                           				 	
+				 }
 			}
 			
 			&.computer {         
 				 &:before {
-						height: 65px;
+						height: 55px;
+						width: 45px;
+						@include breakpoint(sm) {
+							height: 65px;
+							//width: 65px;	
+						}
 				 }
 			}
 			&.hacker {
 				 &:before {
-						width: 65px;
-						height: 65px;
+						width: 48px;
+						height: 48px;
+						@include breakpoint(sm) {
+							width: 65px;
+							height: 65px;
+						}
 				 }
 			}
 			@include rotationalItem(hacker, 45deg, 'icons/linux-original.svg');

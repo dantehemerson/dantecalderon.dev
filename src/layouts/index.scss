@@ -345,7 +345,7 @@ textarea{
 			justify-content: flex-start;
 			align-items: center;   			
 			color: white;
-			height: 250px;
+			height: auto;
 			background: #E8F3EC;
 	 }
 
@@ -698,6 +698,12 @@ textarea{
 				 list-style: none;
 			}
 				 &__item {                     
+						&:hover {
+							i {
+
+							}
+						}
+
 						i {
 							 width: 27px;
 							 height: 27px;

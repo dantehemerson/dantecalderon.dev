@@ -100,6 +100,9 @@ $height-header-title: 300px;
 
 /* General Modifiers */
 
+* {
+	transition: $transition-hover-s; // transiciones para todos. Animensen!!!
+}
 ::-moz-selection { /* Code for Firefox */
     color: white;
     background: $hover-link-color;
@@ -299,21 +302,27 @@ textarea{
 		}
 	}
 	 * {
-			margin: 0;      
+			margin: 0;   			  
 	 }
 
 	 &__title {
-			font-size: 3rem;      
+			font-size: 2.6rem;      
 			font-weight: 900;
 			text-transform: uppercase; 
 			text-align: center;
+			@include breakpoint(sm) {
+				font-size: 3rem;      
+			}
 	 }
 
 	 &__subtitle {
-			font-size: 1.2rem;      
+			font-size: 1rem;      
 			font-weight: 500;
 			text-transform: uppercase;
 			text-align: center;
+			@include breakpoint(sm) {
+				font-size: 1.2rem;      
+			}
 	 }
 
 	 &__btn-about {
@@ -592,13 +601,16 @@ textarea{
 			width: 100%;      
 			position: relative;
 			display: flex;
-			max-width: 350px;
-			max-height: 350px;
+			max-width: 300px;
+			max-height: 300px;
 			align-items: center;
 			justify-content: center;
 			margin-top: 120px;
     		margin-bottom: 130px;
-
+			@include breakpoint(sm) {
+				max-width: 350px;
+				max-height: 350px;
+			}
 			@include breakpoint(lg) {				
 				max-width: 400px;
 				max-height: 400px;
@@ -633,7 +645,7 @@ textarea{
 				 }
 			}
 			@include rotationalItem(hacker, 45deg, 'icons/linux-original.svg');
-			@include rotationalItem(protection, 90deg, 'icons/algorithm.svg');      
+			@include rotationalItem(protection, 90deg, 'icons/algorithm.svg');
 			@include rotationalItem(server, 135deg, 'icons/spotify.svg');
 			@include rotationalItem(www, 180deg, 'icons/coffee.svg');      
 			@include rotationalItem(browser, 225deg, 'icons/idea.svg');      
@@ -643,11 +655,14 @@ textarea{
 	 }
 
 	 &__avatar-container {
-			width: 175px;
+			width: 115px;
 			border-radius: 50%;
 			overflow: hidden;    
 			opacity: .9;
-			animation: float 3s ease-in-out infinite;  
+			animation: float 3s ease-in-out infinite; 
+			@include breakpoint(sm) {
+				width: 175px;
+			}
 			@include breakpoint(lg) {
 				width: 200px;
 			}

@@ -1,5 +1,5 @@
 backend:
-  name: test-repo
+  name: github
   repo: dantehemerson/dcweb 
 
 media_folder: static/assets

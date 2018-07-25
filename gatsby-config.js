@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Dante Calderón',
+    author: 'Dante Calderón',
+    description: 'Dante Hemerson Calderón Vasquez, Programmer',
+    siteUrl: 'https://dantecalderon.com'
   },
   plugins: [
   	'gatsby-plugin-react-helmet',

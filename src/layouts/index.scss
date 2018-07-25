@@ -323,14 +323,18 @@ textarea{
 			}
 	 }
 
-	 &__btn-about {
-			background: white;
-			border: 2px solid;
-			border-color: #e2e0e0;
-			padding: 10px 50px;
-			margin-top: 35px;
-			color: #282a2d;
-			display: inline-block;
+	 &__btn-about {		 
+	    border: 2px solid #1f1c1b;
+	    padding: 10px 50px;
+	    margin-top: 28px;
+	    border-radius: 4px;
+	    color: #1f1c1b;
+	    display: inline-block;
+	    &:hover {
+			background: #1f1c1b;
+			color: white;
+	    }
+
 	 }
 }
 
@@ -639,7 +643,7 @@ textarea{
 						width: 45px;
 						@include breakpoint(sm) {
 							height: 65px;
-							//width: 65px;	
+							width: 55px;	
 						}
 				 }
 			}

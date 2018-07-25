@@ -272,17 +272,20 @@ textarea{
 	 justify-content: center;
 	 align-items: center;
 	 background-color: $header_home-bg;
-	 height: 100vh;
 	 min-height: 600px;
 	 color: $font-color;
 
 	 @include breakpoint(lg) {
+	 	height: 100vh;
 	 	min-height: 500px;
 
 	 }
 	
 	& > .container {
-		padding-top: 38px;
+		padding-top: 100px;
+		@include breakpoint(lg) {			
+			padding-top: 38px;
+		}
 	}
 	 * {
 			margin: 0;      
@@ -571,17 +574,26 @@ textarea{
 	 display: flex;
 	 align-items: center;
 	 justify-content: center;
-	
+
 
 	 &__orbit {
 		 
 			width: 100%;      
-			max-width: 400px;
-			max-height: 400px;
 			position: relative;
 			display: flex;
+			max-width: 350px;
+			max-height: 350px;
 			align-items: center;
 			justify-content: center;
+			margin-top: 120px;
+    		margin-bottom: 130px;
+
+			@include breakpoint(lg) {				
+				max-width: 400px;
+				max-height: 400px;
+				margin-top: 0px;
+    			margin-bottom: 0px;
+			}
 	 }
 
 	 &__item {
@@ -620,11 +632,14 @@ textarea{
 	 }
 
 	 &__avatar-container {
-			width: 200px;
+			width: 175px;
 			border-radius: 50%;
 			overflow: hidden;    
 			opacity: .9;
 			animation: float 3s ease-in-out infinite;  
+			@include breakpoint(lg) {
+				width: 200px;
+			}
 	 }
 }
 

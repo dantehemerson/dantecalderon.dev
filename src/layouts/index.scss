@@ -272,9 +272,13 @@ textarea{
 	 justify-content: center;
 	 align-items: center;
 	 background-color: $header_home-bg;
-	 height: calc(100vh);
+	 height: 100vh;
+	 min-height: 500px;
 	 color: $font-color;
-
+	
+	& > .container {
+		padding-top: 38px;
+	}
 	 * {
 			margin: 0;      
 	 }

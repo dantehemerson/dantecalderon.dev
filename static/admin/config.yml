@@ -2,13 +2,13 @@ backend:
   name: github
   repo: dantehemerson/dcweb 
 
-media_folder: static/assets
-public_folder: assets
+media_folder: src/pages/posts/img/
+public_folder: /img
 
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: src/pages/posts
     create: true
     fields:
       - { name: path, label: Path }

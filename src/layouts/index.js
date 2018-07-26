@@ -2,8 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
+
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+
+// Syntax scheme
+import 'prismjs/themes/prism-solarizedlight.css'
 
 import './index.scss'
 

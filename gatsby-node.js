@@ -20,7 +20,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 node {
                   frontmatter {
                     title
-                    path                    
+                    path
+                    date(formatString: "MMMM DD, YYYY")
+                    description                    
                   }
                 }
               }
@@ -33,7 +35,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           reject(result.errors)
         }
 
-        // Create blog posts pages.
         const posts = result.data.allMarkdownRemark.edges
 
         _.each(posts, (post, index) => {

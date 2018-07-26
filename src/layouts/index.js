@@ -21,7 +21,7 @@ class Layout extends React.Component {
     return (
       <div>
         <Helmet>
-          <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|PT+Serif:400,400i,700,700i|Playfair+Display:400,700|Open+Sans:300,400,400i,600,700|Roboto:300,400,500,700|Lora:400,400i,700,700i|Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet"/>
+          <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|PT+Serif:400,400i,700,700i|Playfair+Display:400,700|Open+Sans:300,400,400i,600,700" rel="stylesheet"/>
         </Helmet>
         <Navbar/>
         <div>

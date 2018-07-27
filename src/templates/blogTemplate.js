@@ -4,6 +4,7 @@ import head from 'lodash/head'
 import last from 'lodash/last'
 import split from 'lodash/split'
 import getObj from 'ast-get-object'
+import ReactDisqusComments from 'react-disqus-comments'
 
 import Content, { HTMLContent } from '../components/Content'
 
@@ -13,7 +14,7 @@ export const Post = ({ content, frontmatter, previous, next, siteTitle, image, s
 		<div className="container Post">
 			<h1 className="Post__title">{ frontmatter.title }</h1>
 			<p className="Post__date">{ frontmatter.date }</p>			
-			<PostContent content={content} className="post"/>
+			<PostContent content={content} className="post"/>						
 		</div>
 	)
 }
@@ -28,6 +29,10 @@ export default class BlogPostTemplate extends React.Component {
 			}
 		}
 	}
+
+	handleNewComment = (comment) => {
+		console.log(comment.text);
+	}
 	render() {
 		const post = this.props.data.markdownRemark
 		const siteMetadata = get(this.props, 'data.site.siteMetadata')
@@ -36,15 +41,35 @@ export default class BlogPostTemplate extends React.Component {
 		const images = getObj(ast, { type: 'element', tagName: 'img' })
 		const image = head(split(last(get(head(images), 'properties.srcSet')), ' '))
 		return (
-			<Post 
-				{ ...post }
-				{ ...siteMetadata}
-				previous={previous}
-				next={next}
-				content={post.html}
-				contentComponent={HTMLContent}
-				image={image}
-				/>
+			<div>
+				<Post 
+					{ ...post }
+					{ ...siteMetadata}
+					previous={previous}
+					next={next}
+					content={post.html}
+					contentComponent={HTMLContent}
+					image={image}
+					/>
+				{/* <ReactDisqusThread
+				// 	shortname="dantecalderon"
+				// 	identifier={ post.frontmatter.path }
+				// 	title={ post.frontmatter.title }					
+				// 	category_id="123456"
+				// 	onNewComment={ this.handleNewComment }
+				// 	/>
+				// 	{
+				// 		//console.log(`https://dantecalderon.com/${post.frontmatter.path}`)
+				// 		console.log(siteMetadata)
+				// 	**/}
+				<ReactDisqusComments
+				        shortname="dantecalderontest"
+				        identifier={ post.frontmatter.path }
+				        title={ post.frontmatter.title }
+				        url={ `https://brave-euclid-f2fc17.netlify.com/siteMetadata.siteUrl${post.frontmatter.path}` }
+				        category_id="123456"
+				        onNewComment={ this.handleNewComment }/>
+			</div>
 		)
 	}
 }

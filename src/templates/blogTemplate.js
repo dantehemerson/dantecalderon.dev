@@ -20,6 +20,9 @@ export const Post = ({ content, frontmatter, previous, next, siteTitle, image, s
 }
 
 export default class BlogPostTemplate extends React.Component {
+	state = {
+		location: '',
+	}
 	componentDidMount() {
 		/* Remueve los underlines de los links que contienen imagen */
 		let links = document.getElementsByTagName('a')
@@ -28,6 +31,7 @@ export default class BlogPostTemplate extends React.Component {
 				link.style.backgroundImage = 'inherit'
 			}
 		}
+		this.setState({ location: window.location.href })
 	}
 
 	handleNewComment = (comment) => {
@@ -57,7 +61,7 @@ export default class BlogPostTemplate extends React.Component {
 							        shortname="dantecalderontest"
 							        identifier={ post.frontmatter.path }
 							        title={ post.frontmatter.title }
-							        url={ window.location.href }        
+							        url={ this.state.location }        
 							        onNewComment={ this.handleNewComment }/>
 						</div>
 					</div>

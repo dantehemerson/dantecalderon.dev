@@ -11,6 +11,7 @@ description: >
 ## Dos de las partes más importantes de JavaScript, Objetos y Promesas tienen nuevas funcionalidades en ES2018, veamos cómo funcionan.
 
 ![Photo by Emily Marie](/img/0_tfjfeucebech_w5h.jpeg)
+![Photo by Emily Marie](https://crearpaginaweb.org/wp-content/uploads/2013/09/imagenweb.jpg)
 
 Photo by [Emily Marie](https://unsplash.com/@sahuaromedia?utm_source=medium&utm_medium=referral)
 on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)

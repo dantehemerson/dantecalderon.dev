@@ -769,10 +769,12 @@ $post-titles-font: 'Open Sans';
 	padding-bottom: 50px;
 	max-width: 760px;
 	font-family: $post-body-font;
-	font-size: 21px;	
+	font-size: 19px;	
 	
 	// === CONFIGURACIÓN DE ESTILOS POST ===
-
+	@include breakpoint(md) {
+		font-size: 21px;			
+	}
 
 
 	h1, h2, h3, h4, h5, h6 {
@@ -782,6 +784,7 @@ $post-titles-font: 'Open Sans';
 	}
 	a {
 		color: $font-color;
+		// Copiado de Medium
 		text-decoration: none;
 	   background-image: linear-gradient(to bottom,rgba(0,0,0,.68) 50%,rgba(0,0,0,0) 50%);
 	   background-repeat: repeat-x;

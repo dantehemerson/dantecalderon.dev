@@ -107,8 +107,7 @@ Como vemos, `createStore` recibe 2 parámetros:
    - **reducers**: El reducer(s) que se llamará cuando se quiera actualizar el estado.
    - **initialState** *(opcional)*: El estado inicial para el estado.
 
----
-
+### Conclusión
 Es muy simple empezar a utilizar Redux en nuestra aplicación, acá te dejo algunos links utiles que te servirán a entrar mas en profundidad al mundo de Redux.
 - https://es.redux.js.org/ (Documentación Oficial en Español)
 - [Curso de Redux Avanzado](https://www.youtube.com/watch?v=RZNNu2pO49g&list=PLxyfMWnjW2kuyePV1Gzn5W_gr3BGIZq8G)

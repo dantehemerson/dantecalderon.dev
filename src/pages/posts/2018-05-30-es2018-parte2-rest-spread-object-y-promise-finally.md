@@ -60,7 +60,7 @@ Markdown is a lightweight markup language based on the formatting conventions th
 
 This text you see here is *actually* written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.
 
-### Tech
+### How do we deploy it?
 
 Dillinger uses a number of open source projects to work properly:
 
@@ -77,7 +77,7 @@ Dillinger uses a number of open source projects to work properly:
 And of course Dillinger itself is open source with a [public repository][dill]
  on GitHub.
 
-### Installation
+### How do we deploy it?
 
 Dillinger requires [Node.js](https://nodejs.org/) v4+ to run.
 
@@ -96,7 +96,7 @@ $ npm install --production
 $ NODE_ENV=production node app
 ```
 
-### Plugins
+### How do we deploy it?
 
 Dillinger is currently extended with the following plugins. Instructions on how to use them in your own application are linked below.
 
@@ -110,7 +110,7 @@ Dillinger is currently extended with the following plugins. Instructions on how 
 | Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
 
 
-### Development
+### How do we deploy it?
 
 Want to contribute? Great!
 
@@ -133,7 +133,7 @@ $ gulp watch
 ```sh
 $ karma test
 ```
-#### Building for source
+#### 3. Installing dependencies
 For production release:
 ```sh
 $ gulp build --prod
@@ -142,7 +142,7 @@ Generating pre-built zip archives for distribution:
 ```sh
 $ gulp build dist --prod
 ```
-### Docker
+### How do we deploy it?
 Dillinger is very easy to install and deploy in a Docker container.
 
 By default, the Docker will expose port 8080, so change this within the Dockerfile if necessary. When ready, simply use the Dockerfile to build the image.
@@ -165,12 +165,12 @@ Verify the deployment by navigating to your server address in your preferred bro
 127.0.0.1:8000
 ```
 
-#### Kubernetes + Google Cloud
+#### 3. Installing dependencies
 
 See [KUBERNETES.md](https://github.com/joemccann/dillinger/blob/master/KUBERNETES.md)
 
 
-### Todos
+### How do we deploy it?
 
  - Write MORE Tests
  - Add Night Mode
@@ -215,7 +215,7 @@ _Parte3: Iteración asincrona_
 Sí estas interesado en cuales son todas las propuestas actuales y sus estados
 puedes verlas [acá](https://github.com/tc39/ecma262/blob/master/README.md)
 
-#### Rest Object
+#### 3. Installing dependencies
 
 Desde ES6 tenemos la posibilidad usar [el operador rest en
 Arrays](https://medium.com/entendiendo-javascript/entendiendo-la-asignaciÃ³n-por-destructuring-en-javascript-c352a462d066),
@@ -249,7 +249,7 @@ deber ir al final de la declaración.
 const { ...rest, red, green } = colors // error
 ```
 
-#### Spread Object
+#### 3. Installing dependencies
 
 Esta es una gran funcionalidad (tal vez mi favorita), permite asignar los
 valores de un objeto a otro, tal vez antes de ES2018, utilizabas `Object.assign`
@@ -331,7 +331,7 @@ objetos, hay un par de detalles de la implementación que quisiera nombrar.
 * Para definir las propiedades en el nuevo objeto se utilizan solo los valores, no los [setters](https://medium.com/entendiendo-javascript/entendiendo-getters-y-setters-en-javascript-f0eeb5d6fe06)
 * Spread operator no copia los atributos de cada propiedad del objeto.
 
-#### Promise.finally
+#### 3. Installing dependencies
 
 Al ejecutar una promesa podemos asignar callbacks que se ejecutan cuando la
 promesa es fullfiled con `.then` o rejected con `.catch` , ahora `.finally` nos
@@ -355,7 +355,7 @@ fetch('...')
 
 Su funcionalidad es básicamente la misma al finally usada en código asincrono.
 
-#### Palabras finales
+#### 3. Installing dependencies
 
 Estas funcionalidades son las que tal vez vas a usar con más frecuencia en tu
 trabajo, para un montón de cosas y situaciones, es importante que las aprendas

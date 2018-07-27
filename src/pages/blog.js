@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import get from 'lodash/get'
 
 import Card from '../components/Card'
 
@@ -7,11 +8,9 @@ class Blog extends React.Component {
 	render() {
 		const { data } = this.props  	
 		const post = {
-			image: data.image,
-			title: 'Announcing Our freeCodeCamp 2018 Top Contributor Award Winners',
-			content: 'Este es mi nuev pagina web, ya que la anterior estaba muy antigua. Pero como vamos a empezar a desarrollar un nuevo tipo de publiciones ahora como siempre esto es muy simple para desarrollar ya que el proceso es bastante simple...',
-			date: '20 Junio 2018'
+			image: data.image			
 		}
+		const posts = get(this, 'props.data.allMarkdownRemark.edges') || []
 		return (
 			<div className="Blog">
 				<section className="HeaderBlog Page">
@@ -27,41 +26,24 @@ class Blog extends React.Component {
 				<div className="Page__content container--full">
 					<div className="row center-xs">
 						<div className="col-xs-12">
-							<Card data={post} mode="blog" />
-						</div>
-						<div className="col-xs-12">
-							<Card data={post} mode="blog" />
-						</div>
-						<div className="col-xs-12">
-							<Card data={post} mode="blog" />
-						</div>
-						<div className="col-xs-12">
-							<Card data={post} mode="blog" />
-						</div>
-						<div className="col-xs-12">
-							<Card data={post} mode="blog" />
-						</div>
-						<div className="col-xs-12">
-							<Card data={post} mode="blog" />
-						</div>
-						<div className="col-xs-12">
-							<Card data={post} mode="blog" />
-						</div>
-						<div className="col-xs-12">
-							<Card data={post} mode="blog" />
-						</div>
-						<div className="col-xs-12">
-							<Card data={post} mode="blog" />
-						</div>
-						<div className="col-xs-12">
-							<Card data={post} mode="blog" />
-						</div>
-						<div className="col-xs-12">
-							<Card data={post} mode="blog" />
-						</div>
-						<div className="col-xs-12">
-							<Card data={post} mode="blog" />
-						</div>
+							{
+								posts.map(({ node }) => {									
+									return <Card 
+									data={
+										{
+											image: post.image,
+											title: node.frontmatter.title,
+											excerpt: node.excerpt,
+											date: node.frontmatter.date,
+											path: `/${node.frontmatter.path}`,
+											timeToRead: node.timeToRead
+										}
+									} 
+									mode="blog" 
+									key={ node.frontmatter.path }/>									
+								})
+							}
+						</div>						
 					</div>
 				</div>
 			</div>
@@ -80,6 +62,20 @@ export const queryBlog = graphql`
       siteMetadata {
             title
       }     
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    	edges {
+    		node {
+    			excerpt
+    			timeToRead
+    			
+    			frontmatter {
+    				date(formatString: "DD MMMM, YYYY")
+    				title
+    				path    			
+    			}
+    		}
+    	}
     }
   }
 `

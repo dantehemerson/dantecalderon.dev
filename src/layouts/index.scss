@@ -762,10 +762,39 @@ textarea{
 }
 
 
+$post-body-font: serif;
+$post-titles-font: 'Open Sans';
 .Post {	
 	padding-top: 61px;
 	padding-bottom: 50px;
 	max-width: 760px;
+	font-family: $post-body-font;
+	font-size: 21px;	
+	
+	// === CONFIGURACIÓN DE ESTILOS POST ===
+
+
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $post-titles-font;
+	}
+	p {
+	}
+	a {
+		color: $font-color;
+		text-decoration: none;
+	   background-image: linear-gradient(to bottom,rgba(0,0,0,.68) 50%,rgba(0,0,0,0) 50%);
+	   background-repeat: repeat-x;
+	   background-size: 2px .1em;
+	   background-position: 0 1.02em;
+	}
+
+	blockquote {
+    	font-style: italic;
+    	padding-left: 23px;
+   	margin-left: -23px;
+    	border-left: 3px solid $font-color;
+	}
 }
 
 /** Footer **/

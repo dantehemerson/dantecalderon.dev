@@ -531,10 +531,11 @@ textarea{
 	 }
 	 &__date {
 			text-align: right;
-			font-size: remcalc(12px);
-			font-weight: 600;
+			font-size: remcalc(13px);			
 			color: #757575;
-			text-transform: uppercase;
+			time {
+				//text-transform: uppercase;
+			}
 	 }
 	 &__wavey {
 			background: #ebeaea;

@@ -29,18 +29,19 @@ class Blog extends React.Component {
 							{
 								posts.map(({ node }) => {									
 									return <Card 
-									data={
-										{
-											image: post.image,
-											title: node.frontmatter.title,
-											excerpt: node.excerpt,
-											date: node.frontmatter.date,
-											path: `/${node.frontmatter.path}`,
-											timeToRead: node.timeToRead
-										}
-									} 
-									mode="blog" 
-									key={ node.frontmatter.path }/>									
+												data={
+													{
+														title: node.frontmatter.title,
+														image: post.image,
+														thumbnail: node.fields.thumbnail.childImageSharp.resolutions,
+														excerpt: node.excerpt,
+														date: node.frontmatter.date,
+														path: `/${node.frontmatter.path}`,
+														timeToRead: node.timeToRead
+													}
+												} 
+												mode="blog" 
+												key={ node.frontmatter.path }/>									
 								})
 							}
 						</div>						
@@ -68,11 +69,20 @@ export const queryBlog = graphql`
     		node {
     			excerpt
     			timeToRead
-    			
+    			fields {
+    				thumbnail {
+    					childImageSharp {
+    						resolutions(width: 360, height: 230) {
+    							...GatsbyImageSharpResolutions_withWebp
+    						}
+    					}
+    				}
+    			}
     			frontmatter {
     				date(formatString: "DD MMMM, YYYY")
     				title
-    				path    			
+    				path 
+    				thumbnail   			
     			}
     		}
     	}

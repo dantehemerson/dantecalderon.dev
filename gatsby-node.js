@@ -22,7 +22,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                     title
                     path
                     date(formatString: "MMMM DD, YYYY")
-                    description                    
+                    description
+                    thumbnail  
                   }
                 }
               }
@@ -62,13 +63,13 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { frontmatter } = node
 
   if (frontmatter) {
-    const { imagen } = frontmatter
-    if (imagen) {
-      if (imagen.indexOf('/img') === 0) {
+    const { thumbnail } = frontmatter
+    if (thumbnail) {
+      if (thumbnail.indexOf('/img') === 0) {
         createNodeField({
           name: `thumbnail`,
           node,
-          value: `.${imagen}`,
+          value: `.${thumbnail}`,
         })
       }
     }

@@ -1,7 +1,7 @@
 ---
 templateKey: blog
 path: novedades-y-configuración-de-webpack-4
-thumbail: /img/0_733pce3vafdi88jv.jpeg
+thumbnail: /img/0_733pce3vafdi88jv.jpeg
 title: Novedades y configuración de Webpack 4
 date: '2018-02-27T21:27:53-05:00'
 description: >-

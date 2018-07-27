@@ -8,7 +8,8 @@ class Card extends React.Component {
 		return (
 			<div  className={`Card ${(blogMode ? 'blogMode' : '')}`}>				
 				<div className="Card__header">
-					<Img sizes={this.props.data.image.sizes}/>
+					<Img resolutions={this.props.data.thumbnail} />
+					{/** sizes={this.props.data.image.sizes} */}
 				</div>				
 				<div className="Card__body">
 					<Link to={ this.props.data.path }><h3 className="Card__title">{ this.props.data.title }</h3></Link>

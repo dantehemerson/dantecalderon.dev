@@ -9,7 +9,10 @@ model: project
 repository: 'asd  '
 client: Personal
 tags:
-  - news tag2 tag3 tag4
+  - ladskfj
+  - alksdjf as
+  - aslkdfjas
+  - laskjdf
 style: doble-column
 ---
 asdfasdfasdf

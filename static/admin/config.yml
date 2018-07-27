@@ -12,10 +12,34 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { label: "Template Key", name: templateKey, widget: hidden, default: blog  }            
-      - { label: Title, name: title,  }
+      - { label: Title, name: title }
       - { label: Description, name: description, widget: text}
       - { label: Path, name: path }
       - { label: "Featured Image", name: thumbnail, widget: image }
       - { label: Date, name: date,  widget: datetime }
       - { label: Body, name: body, widget: markdown }
+      - { label: "Template Key", name: templateKey, widget: hidden, default: blog  }        
+      - { label: Model, name: 'model', widget: hidden, default: post }
+  - name: portfolio
+    label: Portfolio
+    folder: src/pages/projects
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    fields:
+      - { label: Title, name: title }
+      - { label: Description, name: description, widget: text}
+      - { label: Path, name: path }
+      - { label: "Featured Image", name: thumbnail, widget: image }
+      - { label: Date, name: date,  widget: datetime }
+      - { label: Body, name: body, widget: markdown }
+      - { label: "Template Key", name: templateKey, widget: hidden, default: blog  }   
+      - { label: Model, name: 'model', widget: hidden, default: project }   
+
+      - { label: Repository, name: 'repository', widget: string }         
+      - { label: Client, name: 'client', widget: string, default: Personal }         
+      - { label: Tags (Separar con comas), name: tags, widget: list }
+      - { label: Stack (Separar con comas), name: stack, widget: list }
+      - { label: Roles (Separar con comas), name: roles, widget: list }
+      - { label: "Header Style", name: style, widget: select, options: ["default", "complete-img", "medium-img", "doble-column"], default: default}
+
+

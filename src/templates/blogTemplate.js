@@ -50,27 +50,15 @@ export default class BlogPostTemplate extends React.Component {
 					content={post.html}
 					contentComponent={HTMLContent}
 					image={image}
-					/>
-				{/* <ReactDisqusThread
-				// 	shortname="dantecalderon"
-				// 	identifier={ post.frontmatter.path }
-				// 	title={ post.frontmatter.title }					
-				// 	category_id="123456"
-				// 	onNewComment={ this.handleNewComment }
-				// 	/>
-				// 	{
-				// 		//console.log(`https://dantecalderon.com/${post.frontmatter.path}`)
-				// 		console.log(siteMetadata)
-				// 	**/}
+					/>				
 				<ReactDisqusComments
 				        shortname="dantecalderontest"
 				        identifier={ post.frontmatter.path }
 				        title={ post.frontmatter.title }
-				        url={`https://brave-euclid-f2fc17.netlify.com${this.props.location.pathname}`}				      
-				        category_id="123456"
+				        url={ window.location.href }				      				        
 				        onNewComment={ this.handleNewComment }/>
 				        {
-				        	console.log(`https://brave-euclid-f2fc17.netlify.com${this.props.location.pathname}`)
+				        	console.log(window.location.href)
 				        }
 			</div>
 		)

@@ -11,14 +11,23 @@ export const Post = ({ content, frontmatter, previous, next, siteTitle, image, s
 	const PostContent = contentComponent || Content
 	return (
 		<div className="container Post">
-			<h1>{ frontmatter.title }</h1>
-			<p>{ frontmatter.date }</p>
+			<h1 className="Post__title">{ frontmatter.title }</h1>
+			<p className="Post__date">{ frontmatter.date }</p>			
 			<PostContent content={content} className="post"/>
 		</div>
 	)
 }
 
 export default class BlogPostTemplate extends React.Component {
+	componentDidMount() {
+		/* Remueve los underlines de los links que contienen imagen */
+		let links = document.getElementsByTagName('a')
+		for (const link of links) {			
+			if(link.getElementsByTagName('img').length > 0) {
+				link.style.backgroundImage = 'inherit'
+			}
+		}
+	}
 	render() {
 		const post = this.props.data.markdownRemark
 		const siteMetadata = get(this.props, 'data.site.siteMetadata')

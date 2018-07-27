@@ -2,63 +2,32 @@
 templateKey: blog
 path: es2018-parte2-rest-spread-object-y-promise-finally
 thumbnail: /img/0_tfjfeucebech_w5h.jpeg
-title: 'ES2018 Parte2: Rest/Spread Object y Promise.finally'
+title: 'How to deploy a Node.js application to AWS Lambda using Serverless'
 date: '2018-03-16T20:45:14-05:00'
 description: >
   Dos de las partes más importantes de JavaScript, Objectos y Promesas tienen
   nuevas funcionalidades en ES2018, veamos cómo funcionan.
 ---
-## Dos de las partes más importantes de JavaScript, Objetos y Promesas tienen nuevas funcionalidades en ES2018, veamos cómo funcionan.
+
+## Dos de las partes más importantes de JavaScript, Objectos y Promesas tienen nuevas funcionalidades en ES2018, veamos cómo funcionan.
 
 ![Photo by Emily Marie](/img/0_tfjfeucebech_w5h.jpeg)
 
 > Nota: Este contenido lo publiqué primero en [mi
 > newsletter](https://tinyletter.com/yeion7), la semana después de publicar el
-> newsletter publico en mi blog, si quieres ser el primero en leer [suscríbete](https://tinyletter.com/yeion7).
+> newsletter publico en mi blog, si quieres ser el primero en leer [suscríbete a **mi**](https://tinyletter.com/yeion7).
 
 En Enero el [TC39](https://ecma-international.org/memento/TC39.htm) se reunió y
 **se decidió las propuestas que llegarán a stage 4** y por consiguiente **serán
 incluidas dentro de ECMAScript 2018**.
+
+[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
 Este es un post de una serie donde cubriremos esas nuevas características.
 
 [Parte1: Mejoras a
 RegExp](https://medium.com/@yeion7/es2018-parte-1-mejoras-a-regexp-dad987c52802)
 
-
-
-# Dillinger
-
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
-
-Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered HTML5 Markdown editor.
-
-  - Type some Markdown on the left
-  - See HTML in the right
-  - Magic
-
-# New Features!
-
-  - Import a HTML file and watch it magically convert to Markdown
-  - Drag and drop images (requires your Dropbox account be linked)
-
-
-You can also:
-  - Import and save files from GitHub, Dropbox, Google Drive and One Drive
-  - Drag and drop markdown and HTML files into Dillinger
-  - Export documents as Markdown, HTML and PDF
-
-Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email.  As [John Gruber] writes on the [Markdown site][df1]
-
-> The overriding design goal for Markdown's
-> formatting syntax is to make it as readable
-> as possible. The idea is that a
-> Markdown-formatted document should be
-> publishable as-is, as plain text, without
-> looking like it's been marked up with tags
-> or formatting instructions.
-
-This text you see here is *actually* written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.
 
 ### How do we deploy it?
 
@@ -175,13 +144,11 @@ See [KUBERNETES.md](https://github.com/joemccann/dillinger/blob/master/KUBERNETE
  - Write MORE Tests
  - Add Night Mode
 
-How do we deploy it?
-----
 
 MIT
 
 
-**Free Software, Hell Yeah!**
+Ahora que todo **Free Software, Hell Yeah!**, pero 
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 

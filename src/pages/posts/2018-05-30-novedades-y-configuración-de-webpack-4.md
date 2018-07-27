@@ -161,4 +161,593 @@ Las mejoras de rendimiento en el proceso de construcción del proyecto han sido
 increíbles en está versión y según el equipo de webpack aún hay bastante campo
 de mejora.
 
+Primero modifiquemos un poco los scripts
+
+```
+"scripts": {
+  "dev": "webpack --mode development",
+  "build": "webpack --mode production"
+}
+```
+
+El flag mode va a asignar las optimizaciones para cada entorno.
+
+Para poder usar react debemos añadir babel y el preset `babel-preset-react`
+
+Instalemos las dependencias necesarias
+
+```bash
+yarn add -D babel-core babel-loader babel-preset-env babel-preset-react
+```
+
+Veamos cada dependencia
+
+* babel-core: El core que necesitamos para cargar presets
+* babel-loader: Es un loader para poder utilizar babel con webpack
+* babel-preset-env: Para transpilar características de es6 en adelante
+* babel-preset-react: Para transpilar JSX
+
+Ahora debemos decirle a webpack que utilize babel, para esto podemos crear un
+archivo `webpack.config.js` o podemos utilizar el flag `--module-bind js=babel-loader` , en este caso vamos a utilizar el segundo
+
+```
+"scripts": {
+  "dev": "webpack --mode development --module-bind js=babel-   loader",
+  "build": "webpack --mode production --module-bind js=babel-loader"
+}
+```
+
+Ahora ya tenemos listo nuestro setup, podemos crear los archivos de nuestro
+proyecto, dentro de `./src/index.js`
+
+```js
+import React from 'react';
+import { render } from 'react-dom';
+
+const Hello = ({ name }) => {
+  return <h1>hola {name}!</h1>;
+};
+
+render(<Hello name="mundo" />, document.getElementById('app'));
+```
+
+Esto va a añadir nuestro componente dentro de un elemento con id app, para esto
+debemos crear un html base en `./dist/index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>app</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="./main.js" charset="utf-8"></script>
+    </body>
+</html>
+```
+
+Dentro de poco el plugin `HtmlWebpackPlugin`tendrá soporte para webpack 4
+
+Necesitamos también un servidor de desarrollo, para esto podemos usar
+`webpack-dev-server`
+
+```
+yarn add -D webpack-dev-server
+```
+
+y modificamos el script de `dev`
+
+```
+{
+ "dev": "webpack-dev-server --mode development --module-bind   js=babel-loader --content-base ./dist/"
+}
+```
+
+Debemos agregar el tag `— content-base ./dist/`ya que por ahora el no esta
+buscando esa ruta por defecto, en próximas versiones esto no será necesario.
+
+Ahora puedes ejecutar `yarn dev` y tendrás tu entorno de desarrollo funcionando
+y si decides enviarlo a producción solo debes ejecutar `yarn build.`
+
+Puedes encontrar el resultado final en este
+#### Palabras finales
+
+Las mejoras de rendimiento en el proceso de construcción del proyecto han sido
+increíbles en está versión y según el equipo de webpack aún hay bastante campo
+de mejora.
+Primero modifiquemos un poco los scripts
+
+```
+"scripts": {
+  "dev": "webpack --mode development",
+  "build": "webpack --mode production"
+}
+```
+
+El flag mode va a asignar las optimizaciones para cada entorno.
+
+Para poder usar react debemos añadir babel y el preset `babel-preset-react`
+
+Instalemos las dependencias necesarias
+
+```bash
+yarn add -D babel-core babel-loader babel-preset-env babel-preset-react
+```
+
+Veamos cada dependencia
+
+* babel-core: El core que necesitamos para cargar presets
+* babel-loader: Es un loader para poder utilizar babel con webpack
+* babel-preset-env: Para transpilar características de es6 en adelante
+* babel-preset-react: Para transpilar JSX
+
+Ahora debemos decirle a webpack que utilize babel, para esto podemos crear un
+archivo `webpack.config.js` o podemos utilizar el flag `--module-bind js=babel-loader` , en este caso vamos a utilizar el segundo
+
+```
+"scripts": {
+  "dev": "webpack --mode development --module-bind js=babel-   loader",
+  "build": "webpack --mode production --module-bind js=babel-loader"
+}
+```
+
+Ahora ya tenemos listo nuestro setup, podemos crear los archivos de nuestro
+proyecto, dentro de `./src/index.js`
+
+```js
+import React from 'react';
+import { render } from 'react-dom';
+
+const Hello = ({ name }) => {
+  return <h1>hola {name}!</h1>;
+};
+
+render(<Hello name="mundo" />, document.getElementById('app'));
+```
+
+Esto va a añadir nuestro componente dentro de un elemento con id app, para esto
+debemos crear un html base en `./dist/index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>app</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="./main.js" charset="utf-8"></script>
+    </body>
+</html>
+```
+
+Dentro de poco el plugin `HtmlWebpackPlugin`tendrá soporte para webpack 4
+
+Necesitamos también un servidor de desarrollo, para esto podemos usar
+`webpack-dev-server`
+
+```
+yarn add -D webpack-dev-server
+```
+
+y modificamos el script de `dev`
+
+```
+{
+ "dev": "webpack-dev-server --mode development --module-bind   js=babel-loader --content-base ./dist/"
+}
+```
+
+Debemos agregar el tag `— content-base ./dist/`ya que por ahora el no esta
+buscando esa ruta por defecto, en próximas versiones esto no será necesario.
+
+Ahora puedes ejecutar `yarn dev` y tendrás tu entorno de desarrollo funcionando
+y si decides enviarlo a producción solo debes ejecutar `yarn build.`
+
+Puedes encontrar el resultado final en este
+#### Palabras finales
+
+Las mejoras de rendimiento en el proceso de construcción del proyecto han sido
+increíbles en está versión y según el equipo de webpack aún hay bastante campo
+de mejora.
+Primero modifiquemos un poco los scripts
+
+```
+"scripts": {
+  "dev": "webpack --mode development",
+  "build": "webpack --mode production"
+}
+```
+
+El flag mode va a asignar las optimizaciones para cada entorno.
+
+Para poder usar react debemos añadir babel y el preset `babel-preset-react`
+
+Instalemos las dependencias necesarias
+
+```bash
+yarn add -D babel-core babel-loader babel-preset-env babel-preset-react
+```
+
+Veamos cada dependencia
+
+* babel-core: El core que necesitamos para cargar presets
+* babel-loader: Es un loader para poder utilizar babel con webpack
+* babel-preset-env: Para transpilar características de es6 en adelante
+* babel-preset-react: Para transpilar JSX
+
+Ahora debemos decirle a webpack que utilize babel, para esto podemos crear un
+archivo `webpack.config.js` o podemos utilizar el flag `--module-bind js=babel-loader` , en este caso vamos a utilizar el segundo
+
+```
+"scripts": {
+  "dev": "webpack --mode development --module-bind js=babel-   loader",
+  "build": "webpack --mode production --module-bind js=babel-loader"
+}
+```
+
+Ahora ya tenemos listo nuestro setup, podemos crear los archivos de nuestro
+proyecto, dentro de `./src/index.js`
+
+```js
+import React from 'react';
+import { render } from 'react-dom';
+
+const Hello = ({ name }) => {
+  return <h1>hola {name}!</h1>;
+};
+
+render(<Hello name="mundo" />, document.getElementById('app'));
+```
+
+Esto va a añadir nuestro componente dentro de un elemento con id app, para esto
+debemos crear un html base en `./dist/index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>app</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="./main.js" charset="utf-8"></script>
+    </body>
+</html>
+```
+
+Dentro de poco el plugin `HtmlWebpackPlugin`tendrá soporte para webpack 4
+
+Necesitamos también un servidor de desarrollo, para esto podemos usar
+`webpack-dev-server`
+
+```
+yarn add -D webpack-dev-server
+```
+
+y modificamos el script de `dev`
+
+```
+{
+ "dev": "webpack-dev-server --mode development --module-bind   js=babel-loader --content-base ./dist/"
+}
+```
+
+Debemos agregar el tag `— content-base ./dist/`ya que por ahora el no esta
+buscando esa ruta por defecto, en próximas versiones esto no será necesario.
+
+Ahora puedes ejecutar `yarn dev` y tendrás tu entorno de desarrollo funcionando
+y si decides enviarlo a producción solo debes ejecutar `yarn build.`
+
+Puedes encontrar el resultado final en este
+#### Palabras finales
+
+Las mejoras de rendimiento en el proceso de construcción del proyecto han sido
+increíbles en está versión y según el equipo de webpack aún hay bastante campo
+de mejora.
+Primero modifiquemos un poco los scripts
+
+```
+"scripts": {
+  "dev": "webpack --mode development",
+  "build": "webpack --mode production"
+}
+```
+
+El flag mode va a asignar las optimizaciones para cada entorno.
+
+Para poder usar react debemos añadir babel y el preset `babel-preset-react`
+
+Instalemos las dependencias necesarias
+
+```bash
+yarn add -D babel-core babel-loader babel-preset-env babel-preset-react
+```
+
+Veamos cada dependencia
+
+* babel-core: El core que necesitamos para cargar presets
+* babel-loader: Es un loader para poder utilizar babel con webpack
+* babel-preset-env: Para transpilar características de es6 en adelante
+* babel-preset-react: Para transpilar JSX
+
+Ahora debemos decirle a webpack que utilize babel, para esto podemos crear un
+archivo `webpack.config.js` o podemos utilizar el flag `--module-bind js=babel-loader` , en este caso vamos a utilizar el segundo
+
+```
+"scripts": {
+  "dev": "webpack --mode development --module-bind js=babel-   loader",
+  "build": "webpack --mode production --module-bind js=babel-loader"
+}
+```
+
+Ahora ya tenemos listo nuestro setup, podemos crear los archivos de nuestro
+proyecto, dentro de `./src/index.js`
+
+```js
+import React from 'react';
+import { render } from 'react-dom';
+
+const Hello = ({ name }) => {
+  return <h1>hola {name}!</h1>;
+};
+
+render(<Hello name="mundo" />, document.getElementById('app'));
+```
+
+Esto va a añadir nuestro componente dentro de un elemento con id app, para esto
+debemos crear un html base en `./dist/index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>app</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="./main.js" charset="utf-8"></script>
+    </body>
+</html>
+```
+
+Dentro de poco el plugin `HtmlWebpackPlugin`tendrá soporte para webpack 4
+
+Necesitamos también un servidor de desarrollo, para esto podemos usar
+`webpack-dev-server`
+
+```
+yarn add -D webpack-dev-server
+```
+
+y modificamos el script de `dev`
+
+```
+{
+ "dev": "webpack-dev-server --mode development --module-bind   js=babel-loader --content-base ./dist/"
+}
+```
+
+Debemos agregar el tag `— content-base ./dist/`ya que por ahora el no esta
+buscando esa ruta por defecto, en próximas versiones esto no será necesario.
+
+Ahora puedes ejecutar `yarn dev` y tendrás tu entorno de desarrollo funcionando
+y si decides enviarlo a producción solo debes ejecutar `yarn build.`
+
+Puedes encontrar el resultado final en este
+#### Palabras finales
+
+Las mejoras de rendimiento en el proceso de construcción del proyecto han sido
+increíbles en está versión y según el equipo de webpack aún hay bastante campo
+de mejora.
+Primero modifiquemos un poco los scripts
+
+```
+"scripts": {
+  "dev": "webpack --mode development",
+  "build": "webpack --mode production"
+}
+```
+
+El flag mode va a asignar las optimizaciones para cada entorno.
+
+Para poder usar react debemos añadir babel y el preset `babel-preset-react`
+
+Instalemos las dependencias necesarias
+
+```bash
+yarn add -D babel-core babel-loader babel-preset-env babel-preset-react
+```
+
+Veamos cada dependencia
+
+* babel-core: El core que necesitamos para cargar presets
+* babel-loader: Es un loader para poder utilizar babel con webpack
+* babel-preset-env: Para transpilar características de es6 en adelante
+* babel-preset-react: Para transpilar JSX
+
+Ahora debemos decirle a webpack que utilize babel, para esto podemos crear un
+archivo `webpack.config.js` o podemos utilizar el flag `--module-bind js=babel-loader` , en este caso vamos a utilizar el segundo
+
+```
+"scripts": {
+  "dev": "webpack --mode development --module-bind js=babel-   loader",
+  "build": "webpack --mode production --module-bind js=babel-loader"
+}
+```
+
+Ahora ya tenemos listo nuestro setup, podemos crear los archivos de nuestro
+proyecto, dentro de `./src/index.js`
+
+```js
+import React from 'react';
+import { render } from 'react-dom';
+
+const Hello = ({ name }) => {
+  return <h1>hola {name}!</h1>;
+};
+
+render(<Hello name="mundo" />, document.getElementById('app'));
+```
+
+Esto va a añadir nuestro componente dentro de un elemento con id app, para esto
+debemos crear un html base en `./dist/index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>app</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="./main.js" charset="utf-8"></script>
+    </body>
+</html>
+```
+
+Dentro de poco el plugin `HtmlWebpackPlugin`tendrá soporte para webpack 4
+
+Necesitamos también un servidor de desarrollo, para esto podemos usar
+`webpack-dev-server`
+
+```
+yarn add -D webpack-dev-server
+```
+
+y modificamos el script de `dev`
+
+```
+{
+ "dev": "webpack-dev-server --mode development --module-bind   js=babel-loader --content-base ./dist/"
+}
+```
+
+Debemos agregar el tag `— content-base ./dist/`ya que por ahora el no esta
+buscando esa ruta por defecto, en próximas versiones esto no será necesario.
+
+Ahora puedes ejecutar `yarn dev` y tendrás tu entorno de desarrollo funcionando
+y si decides enviarlo a producción solo debes ejecutar `yarn build.`
+
+Puedes encontrar el resultado final en este
+#### Palabras finales
+
+Las mejoras de rendimiento en el proceso de construcción del proyecto han sido
+increíbles en está versión y según el equipo de webpack aún hay bastante campo
+de mejora.
+Primero modifiquemos un poco los scripts
+
+```
+"scripts": {
+  "dev": "webpack --mode development",
+  "build": "webpack --mode production"
+}
+```
+
+El flag mode va a asignar las optimizaciones para cada entorno.
+
+Para poder usar react debemos añadir babel y el preset `babel-preset-react`
+
+Instalemos las dependencias necesarias
+
+```bash
+yarn add -D babel-core babel-loader babel-preset-env babel-preset-react
+```
+
+Veamos cada dependencia
+
+* babel-core: El core que necesitamos para cargar presets
+* babel-loader: Es un loader para poder utilizar babel con webpack
+* babel-preset-env: Para transpilar características de es6 en adelante
+* babel-preset-react: Para transpilar JSX
+
+Ahora debemos decirle a webpack que utilize babel, para esto podemos crear un
+archivo `webpack.config.js` o podemos utilizar el flag `--module-bind js=babel-loader` , en este caso vamos a utilizar el segundo
+
+```
+"scripts": {
+  "dev": "webpack --mode development --module-bind js=babel-   loader",
+  "build": "webpack --mode production --module-bind js=babel-loader"
+}
+```
+
+Ahora ya tenemos listo nuestro setup, podemos crear los archivos de nuestro
+proyecto, dentro de `./src/index.js`
+
+```js
+import React from 'react';
+import { render } from 'react-dom';
+
+const Hello = ({ name }) => {
+  return <h1>hola {name}!</h1>;
+};
+
+render(<Hello name="mundo" />, document.getElementById('app'));
+```
+
+Esto va a añadir nuestro componente dentro de un elemento con id app, para esto
+debemos crear un html base en `./dist/index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>app</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="./main.js" charset="utf-8"></script>
+    </body>
+</html>
+```
+
+Dentro de poco el plugin `HtmlWebpackPlugin`tendrá soporte para webpack 4
+
+Necesitamos también un servidor de desarrollo, para esto podemos usar
+`webpack-dev-server`
+
+```
+yarn add -D webpack-dev-server
+```
+
+y modificamos el script de `dev`
+
+```
+{
+ "dev": "webpack-dev-server --mode development --module-bind   js=babel-loader --content-base ./dist/"
+}
+```
+
+Debemos agregar el tag `— content-base ./dist/`ya que por ahora el no esta
+buscando esa ruta por defecto, en próximas versiones esto no será necesario.
+
+Ahora puedes ejecutar `yarn dev` y tendrás tu entorno de desarrollo funcionando
+y si decides enviarlo a producción solo debes ejecutar `yarn build.`
+
+Puedes encontrar el resultado final en este
+#### Palabras finales
+
+Las mejoras de rendimiento en el proceso de construcción del proyecto han sido
+increíbles en está versión y según el equipo de webpack aún hay bastante campo
+de mejora.
+
 **¿Cuál herramienta de build utilizan actualmente?**

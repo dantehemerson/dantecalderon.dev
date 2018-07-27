@@ -780,7 +780,13 @@ $post-titles-font: 'Open Sans';
 		h1, h2, h3, h4, h5, h6 {
 			font-family: $post-titles-font;
 		}
+		h2{
+			text-align: center;
+			margin-top: 40px;
+			font-size: 29px;
+		}
 		h3 {			
+			margin-top: 28px;
 			font-size: 29px;
 		}	
 		h4 {

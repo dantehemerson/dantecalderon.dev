@@ -482,7 +482,7 @@ textarea{
 /** Card **/
 .Card {
 	 background: white;
-	 margin: 10px 10px;
+	 margin: 22px 10px;
 	 border-radius: 2px;     
 	 border: 1px solid rgba(0,0,0,.1) !important;
 	 a { // El Link contenedor
@@ -491,12 +491,18 @@ textarea{
 	 }
 
 	 &__header {
-			height: 200px;
-			/** Imagen**/
+			//height: 200px;
+			// * Imagen
 			.gatsby-image-outer-wrapper {
 				 height: 100%;
 				 .gatsby-image-wrapper {
-						height: 100%;
+				 	width: 100% !important;
+				 	@include breakpoint(sm) {	
+				 		height: 300px !important;
+				 	}
+					@include breakpoint(md) {						
+						height: 100% !important;
+					}
 				 }
 			}
 	 }
@@ -549,14 +555,13 @@ textarea{
 			flex-wrap: wrap;
 
 			.Card__header {
-				 height: auto;         
+				// height: auto;         
 				 width: 100%;
-				 
 				 @include breakpoint(xs) {
-						height: auto;
+					//		height: auto;				
 				 }
 				 @include breakpoint(md) {
-						width: 320px;
+					width: 320px;				
 				 }
 				 @include breakpoint(lg) {
 						width: 400px;

@@ -32,7 +32,6 @@ class Blog extends React.Component {
 												data={
 													{
 														title: node.frontmatter.title,
-														image: post.image,
 														thumbnail: node.fields.thumbnail.childImageSharp.resolutions,
 														excerpt: node.excerpt,
 														date: node.frontmatter.date,

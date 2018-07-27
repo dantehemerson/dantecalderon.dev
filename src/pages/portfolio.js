@@ -6,12 +6,13 @@ import Card from '../components/Card'
 class Portfolio extends React.Component {
 	render() {
 		const { data } = this.props  	
-		const post = {
-			image: data.image,
+		const post = {			
 			title: 'Mi nueva vida',
-			content: 'Apps simples',
-			date: '20 Junio 2018'
-
+			thumbnail: data.image,
+			excerpt: 'Apps simples',
+			date: '20 Junio 2018',
+			path: '/holaMundo',
+			timeToRead: '20s'
 		}
 		return (
 			<div className="Portfolio">

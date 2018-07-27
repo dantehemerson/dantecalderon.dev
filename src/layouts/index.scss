@@ -865,11 +865,22 @@ $post-titles-font: 'Open Sans';
 	pre[class*="language-"] {
 		margin-bottom: 2.2em;		
 	}
-	
+	&__footer { // Contenedor de los comentarios y los posts recomendados
+		background: #fafafa;
+		padding-top: 30px;
+	}
 }
 
 .Disqus {
-	max-width: 760px;
+	max-width: 760px;	
+	// background: white;
+	min-height: 300px; // Para que el diseño no cambie mucho cuando se carga
+	padding-top: 25px;
+	padding-bottom: 25px;
+	border-radius: 4px;
+	#disqus_thread a { // Changing link color disqus.
+		color: $hover-link-color;
+	}
 }
 
 /** Footer **/
@@ -880,6 +891,7 @@ $post-titles-font: 'Open Sans';
 	 flex-direction: column;
 	 height: $footer-height;
 	background: #f9f9f9;
+	background: #fafafa;
 	 * {
 			margin: 0;
 			padding: 0;

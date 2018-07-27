@@ -50,14 +50,16 @@ export default class BlogPostTemplate extends React.Component {
 					content={post.html}
 					contentComponent={HTMLContent}
 					image={image}
-					/>			
-					<div className="container Disqus">
-					<ReactDisqusComments
-					        shortname="dantecalderontest"
-					        identifier={ post.frontmatter.path }
-					        title={ post.frontmatter.title }
-					        url={ window.location.href }        
-					        onNewComment={ this.handleNewComment }/>
+					/>		
+					<div className="Post__footer">
+						<div className="container Disqus">
+							<ReactDisqusComments
+							        shortname="dantecalderontest"
+							        identifier={ post.frontmatter.path }
+							        title={ post.frontmatter.title }
+							        url={ window.location.href }        
+							        onNewComment={ this.handleNewComment }/>
+						</div>
 					</div>
 			</div>
 		)

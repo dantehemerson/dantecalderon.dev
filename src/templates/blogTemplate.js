@@ -65,9 +65,13 @@ export default class BlogPostTemplate extends React.Component {
 				<ReactDisqusComments
 				        shortname="dantecalderontest"
 				        identifier={ post.frontmatter.path }
-				        title={ post.frontmatter.title }				      
+				        title={ post.frontmatter.title }
+				        url={`https://brave-euclid-f2fc17.netlify.com${this.props.location.pathname}`}				      
 				        category_id="123456"
 				        onNewComment={ this.handleNewComment }/>
+				        {
+				        	console.log(`https://brave-euclid-f2fc17.netlify.com${this.props.location.pathname}`)
+				        }
 			</div>
 		)
 	}

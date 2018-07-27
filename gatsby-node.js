@@ -63,8 +63,10 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { frontmatter } = node
 
   if (frontmatter) {
+    console.log("entre en frontmatter")
     const { thumbnail } = frontmatter
     if (thumbnail) {
+      console.log("Entreeee")
       if (thumbnail.indexOf('/img') === 0) {
         createNodeField({
           name: `thumbnail`,
@@ -74,6 +76,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       }
     }
   }
+
 
   if (node.internal.type === `MarkdownRemark`) {
     createNodeField({

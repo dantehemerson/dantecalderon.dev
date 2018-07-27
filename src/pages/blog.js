@@ -28,6 +28,7 @@ class Blog extends React.Component {
 						<div className="col-xs-12">
 							{
 								posts.map(({ node }) => {									
+									console.log(node.frontmatter.thumbnail)
 									return <Card 
 												data={
 													{

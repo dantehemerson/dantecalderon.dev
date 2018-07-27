@@ -103,15 +103,15 @@ $height-header-title: 300px;
 * {
 	transition: all $transition-hover-s; // transiciones para todos. Animensen!!!
 }
-::-moz-selection { /* Code for Firefox */
-    color: white;
-    background: $hover-link-color;
-}
+// ::-moz-selection { /* Code for Firefox */
+//     color: white;
+//     background: $hover-link-color;
+// }
 
-::selection {
-    color: white; 
-    background: $hover-link-color;
-}
+// ::selection {
+//     color: white; 
+//     background: $hover-link-color;
+// }
 
 .text-center {
 	text-align: center;
@@ -759,6 +759,105 @@ textarea{
 			&__img {
 				 border: 5px solid #dcbb72;
 			}
+}
+
+
+$post-body-font: serif;
+$post-titles-font: 'Open Sans';
+.Post {	
+	padding-top: 61px;
+	padding-bottom: 50px;
+	max-width: 760px;
+	font-family: $post-body-font;
+	font-size: 19px;	
+	// === CONFIGURACIÓN DE ESTILOS POST ===
+	
+	&__title {
+		margin-top: 60px;
+		font-size: 28px;
+	}
+	&__date {
+		font-family: $post-titles-font;
+		font-size: 13px;
+		font-weight: 600;
+		color: rgba(0,0,0,.54)!important;
+ 		color: $hover-link-color!important;
+	}			
+	h1, h2, h3, h4, h5, h6 {
+			font-family: $post-titles-font;
+	}	
+
+	h2{
+		//text-align: center;
+		color: #838383;
+		font-size: 17px;
+		margin-top: 30px;
+		font-weight: 400;
+	}
+	h3 {			
+		margin-top: 30px;
+		font-size: 25px;
+	}	
+	h4 {
+		font-size: 19px;
+	}
+	
+	@include breakpoint(md) {
+		font-size: 21px;		
+
+		&__title {
+			font-size: 34px;
+
+				// DILEMA
+				 //font-family: 39px;
+				// font-family: 'Playfair Display' !important;
+		}
+		&__date {
+			font-size: 14px;
+	 		color: $hover-link-color!important;
+		}			
+		h2{			
+			margin-top: 40px;
+			font-size: 29px;
+		}
+		h2 { // EL subtitulo del post
+			font-size: 19px;			
+		}
+		h3 {			
+			margin-top: 40px;
+			font-size: 29px;
+		}	
+		h4 {
+			font-size: 21px;
+		}
+	}
+
+
+	a {
+		color: $font-color;
+		text-overflow: ellipsis;
+		// Copiado de Medium(Funciona pero coloca a todos los a, y cuando hay una imagen dentro del a se muestra la linea, se ve feo asi, por el momento lo dejaré por defecto, luego lo haré con JS)
+			text-decoration: none;
+		   background-image: linear-gradient(to bottom,rgba(0,0,0,.68) 50%,rgba(0,0,0,0) 50%);
+		   background-repeat: repeat-x;
+		   background-size: 2px .1em;
+		   background-position: 0 1.02em;
+	}
+
+	blockquote {
+    	font-style: italic;
+    	padding-left: 23px;
+   	margin-left: -23px;
+    	border-left: 3px solid $font-color;
+	}
+	
+	code[class*="language-text"] {
+		font-size: 1rem;
+	}
+	pre[class*="language-"] {
+		margin-bottom: 2.2em;		
+	}
+	
 }
 
 /** Footer **/

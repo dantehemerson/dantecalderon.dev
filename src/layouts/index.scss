@@ -776,7 +776,9 @@ $post-titles-font: 'Open Sans';
 	font-family: $post-body-font;
 	font-size: 19px;	
 	// === CONFIGURACIÓN DE ESTILOS POST ===
-	
+	.gatsby-resp-image-wrapper {
+		max-width: 100% !important;
+	}
 	&__title {
 		margin-top: 60px;
 		font-size: 28px;

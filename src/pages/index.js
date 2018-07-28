@@ -13,7 +13,7 @@ class Index extends React.Component {
 		const { data } = this.props  
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')  
     const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')	
-
+    console.log(siteTitle)
 		return (
       <div>
         <SEO

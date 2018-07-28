@@ -182,7 +182,7 @@ body {
 input[type="text"], input[type="email"], textarea {
 //	 background: #e3e8eb;
 	 border: remcalc(2px) solid #e3e8eb;
-	 border-radius: .2rem;   
+	 //border-radius: .2rem;   
 	 box-shadow: none;
 	 color: #55595c;
 	 outline: 0;   
@@ -267,17 +267,24 @@ textarea{
 			display: flex;
 			list-style: none;      
 	 }
-			&__item {
-				 margin-left: 1.5rem;
-				 @include breakpoint(md) {
-					margin-left: 2rem;
-				 }
+			&__item {		
+				margin-left: 5px;		
+				@include breakpoint(md) {
+					margin-left: 1rem;
+				}
 			}
 				 &__link {
 						display: block; 
 						font-size: 0.9rem;  
 						font-weight: 600;
 						text-transform: uppercase;
+						padding: 4px 8px;
+						@include breakpoint(md) {
+							padding: 4px 19px;
+						}
+						&.active {
+							border: 1px solid;							
+						}
 						img {
 							 padding-right: 4px;
 							 width: 21px;
@@ -335,8 +342,7 @@ textarea{
 	 &__btn-about {		 
 	    border: 2px solid #1f1c1b;
 	    padding: 10px 50px;
-	    margin-top: 28px;
-	    border-radius: 4px;
+	    margin-top: 28px;	    
 	    color: #1f1c1b;
 	    display: inline-block;
 	    &:hover {
@@ -396,8 +402,7 @@ textarea{
 				 }
 			&__submit{
 				padding: 15px 40px;
-				font-weight: bold;
-				border-radius: 4px;
+				font-weight: bold;				
 				background: #28282e;
 				&:hover {
 					background: $hover-link-color;
@@ -491,8 +496,7 @@ textarea{
 /** Card **/
 .Card {
 	 background: white;
-	 margin: 22px 10px;
-	 border-radius: 2px;     
+	 margin: 22px 10px;	
 	 border: 1px solid rgba(0,0,0,.1) !important;
 	 a { // El Link contenedor
 			text-decoration: none;

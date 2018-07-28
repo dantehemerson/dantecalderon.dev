@@ -6,10 +6,7 @@ import Card from '../components/Card'
 
 class Blog extends React.Component {
 	render() {
-		const { data } = this.props  	
-		const post = {
-			image: data.image			
-		}
+		const { data } = this.props  		
 		const posts = get(this, 'props.data.allMarkdownRemark.edges') || []
 		return (
 			<div className="Blog">
@@ -32,7 +29,7 @@ class Blog extends React.Component {
 												data={
 													{
 														title: node.frontmatter.title,
-														thumbnail: node.fields.thumbnail.childImageSharp.resolutions ? node.fields.thumbnail.childImageSharp.resolutions : undefined,
+														thumbnail: node.fields.thumbnail.childImageSharp.resolutions,
 														excerpt: node.excerpt,
 														date: node.frontmatter.date,
 														path: `/${node.frontmatter.path}`,

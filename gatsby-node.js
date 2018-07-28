@@ -24,6 +24,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                     date(formatString: "MMMM DD, YYYY")
                     description
                     thumbnail  
+                    model
                   }
                 }
               }
@@ -62,18 +63,26 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators
   const { frontmatter } = node
 
-  if (frontmatter) {
-    console.log("entre en frontmatter")
-    const { thumbnail } = frontmatter
-    if (thumbnail) {
-      console.log("Entreeee")
-      if (thumbnail.indexOf('/img') === 0) {
-        createNodeField({
-          name: `thumbnail`,
-          node,
-          value: `.${thumbnail}`,
-        })
+  if (frontmatter) {    
+    const { thumbnail, model } = frontmatter    
+    if (thumbnail) {      
+      if(model === 'post') {
+        if (thumbnail.indexOf('/img') === 0) {
+          createNodeField({
+            name: `thumbnail`,
+            node,
+            value: `.${thumbnail}`,
+          })
+        }        
       }
+      else if(model === 'project') {
+        createNodeField({
+          name: 'thumbnail',
+          node,
+          value: `../posts${thumbnail}`,
+        })        
+      }
+
     }
   }
 

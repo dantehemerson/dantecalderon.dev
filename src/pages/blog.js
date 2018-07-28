@@ -27,13 +27,12 @@ class Blog extends React.Component {
 					<div className="row center-xs">
 						<div className="col-xs-12">
 							{
-								posts.map(({ node }) => {									
-									console.log(node.frontmatter.thumbnail)
+								posts.map(({ node }) => {										
 									return <Card 
 												data={
 													{
 														title: node.frontmatter.title,
-														thumbnail: node.fields.thumbnail.childImageSharp.resolutions,
+														thumbnail: node.fields.thumbnail.childImageSharp.resolutions ? node.fields.thumbnail.childImageSharp.resolutions : undefined,
 														excerpt: node.excerpt,
 														date: node.frontmatter.date,
 														path: `/${node.frontmatter.path}`,

@@ -1,5 +1,5 @@
 ---
-templateKey: blog
+model: post
 path: novedades-y-configuración-de-webpack-4
 thumbnail: /img/0_733pce3vafdi88jv.jpeg
 title: Novedades y configuración de Webpack 4

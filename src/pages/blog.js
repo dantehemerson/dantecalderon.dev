@@ -63,7 +63,10 @@ export const queryBlog = graphql`
             title
       }     
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+    	sort: { fields: [frontmatter___date], order: DESC }
+    	filter: { frontmatter: { model: { eq: "post"} }}
+    ) {
     	edges {
     		node {
     			excerpt

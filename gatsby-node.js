@@ -19,12 +19,14 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               edges {
                 node {
                   frontmatter {
-                    title
-                    path
-                    date(formatString: "MMMM DD, YYYY")
-                    description
-                    thumbnail  
                     model
+                    title
+                    description
+                    path
+                    thumbnail  
+                    date(formatString: "MMMM DD, YYYY")
+                    style
+                    tags
                   }
                 }
               }

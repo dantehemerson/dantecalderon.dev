@@ -1,16 +1,25 @@
 import React from 'react'
+import get from 'lodash/get'
 
 import Rotational from '../components/Rotational'
 import About from '../components/About'
+import SEO from '../components/SEO'
 
 import { animateScroller } from '../utils'
 
 class Index extends React.Component {
  
 	render() {
-		const { data } = this.props    	
+		const { data } = this.props  
+    const siteTitle = get(this, 'props.data.site.siteMetadata.title')  
+    const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')	
+
 		return (
       <div>
+        <SEO
+          title={siteTitle}
+          url={siteUrl}          
+        />
   			<main className="Header-Home">			
           <div className="container">
             <div className="row">
@@ -51,6 +60,7 @@ export const queryHome = graphql`
     site {
       siteMetadata {
             title
+            siteUrl
       }     
     }
   }

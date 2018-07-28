@@ -10,10 +10,11 @@ import { animateScroller } from '../utils'
 class Index extends React.Component {
  
 	render() {
+    
 		const { data } = this.props  
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')  
-    const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')	
-    console.log(siteTitle)
+    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')	    
+
 		return (
       <div>
         <SEO

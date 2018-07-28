@@ -3,13 +3,23 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 
 import Card from '../components/Card'
+import SEO from '../components/SEO'
+
 
 class Blog extends React.Component {
+
 	render() {
 		const { data } = this.props  		
 		const posts = get(this, 'props.data.allMarkdownRemark.edges') || []
+		const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    	const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')	 
+
 		return (
 			<div className="Blog">
+				<SEO
+				  title={siteTitle}
+				  url={siteUrl}          
+				/>
 				<section className="HeaderBlog Page">
 					<div className="container">
 						<div className="row center-xs">
@@ -58,6 +68,7 @@ export const queryBlog = graphql`
     site {
       siteMetadata {
             title
+            siteUrl
       }     
     }
     allMarkdownRemark(

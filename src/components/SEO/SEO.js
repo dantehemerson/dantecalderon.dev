@@ -25,6 +25,49 @@ export default class SEO extends PureComponent {
 	render() {
 		const { title, image, url, description, isPost } = this.props
 
+		const schemaOrgJSONLD = [
+		  {
+		    '@context': 'http://schema.org',
+		    '@type': 'WebSite',
+		    url: url,
+		    name: title,
+		    alternateName: description,
+		  },
+		]
+		
+		if (isPost) {
+		  schemaOrgJSONLD.push([
+		    {
+		      '@context': 'http://schema.org',
+		      '@type': 'BreadcrumbList',
+		      itemListElement: [
+		        {
+		          '@type': 'ListItem',
+		          position: 1,
+		          item: {
+		            '@id': url,
+		            name: title,
+		            image: image,
+		          },
+		        },
+		      ],
+		    },
+		    {
+		      '@context': 'http://schema.org',
+		      '@type': 'BlogPosting',
+		      url: url,
+		      name: title,
+		      alternateName: `Dante Calderón | ${url}`,
+		      headline: title,
+		      image: {
+		        '@type': 'ImageObject',
+		        url: image,
+		      },
+		      description,
+		    },
+		  ])
+		}
+
 		return (
 			<Helmet>
 				<html lang="es" />
@@ -33,6 +76,10 @@ export default class SEO extends PureComponent {
 				
 				<meta name="description" content={description} />
 				<meta name="image" content={image} />
+
+				<script type="application/ld+json">
+				  {JSON.stringify(schemaOrgJSONLD)}				  
+				</script>
 
 				{/*  Pfff */}
 				<meta name="distribution" content="global"/>

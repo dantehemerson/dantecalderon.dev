@@ -7,6 +7,7 @@ import getObj from 'ast-get-object'
 import ReactDisqusComments from 'react-disqus-comments'
 
 import Content, { HTMLContent } from '../components/Content'
+import SEO from '../components/SEO'
 
 export const Post = ({ content, frontmatter, previous, next, siteTitle, image, siteUrl, contentComponent }) => {
 	const PostContent = contentComponent || Content
@@ -43,9 +44,14 @@ export default class BlogPostTemplate extends React.Component {
 		const { previous, next } = this.props.pathContext
 		const ast = post.htmlAst
 		const images = getObj(ast, { type: 'element', tagName: 'img' })
-		const image = head(split(last(get(head(images), 'properties.srcSet')), ' '))
+		const image = head(split(last(get(head(images), 'properties.srcSet')), ' '))				
 		return (
 			<div>
+				<SEO
+				  title={`${post.frontmatter.title} · ${siteMetadata.title}`}
+				  url={siteMetadata.siteUrl}   
+				  image={post.frontmatter.thumbnail}       
+				/>
 				<Post 
 					{ ...post }
 					{ ...siteMetadata}

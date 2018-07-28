@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 
 import Card from '../components/Card'
+import SEO from '../components/SEO'
 
 class Portfolio extends React.Component {
 	render() {
@@ -15,9 +16,17 @@ class Portfolio extends React.Component {
 			path: '/holaMundo',
 			timeToRead: '20s'
 		}
+
 		const posts = get(this, 'props.data.allMarkdownRemark.edges') || []
+		const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+		const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')	
+
 		return (
 			<div className="Portfolio">
+				<SEO
+				  title={siteTitle}
+				  url={siteUrl}          
+				/>
 				<section className="HeaderPortfolio Page">
 					<div className="container">
 						<div className="row center-xs">
@@ -68,6 +77,7 @@ export const queryPortfolio = graphql`
     site {
       siteMetadata {
             title
+            siteUrl
       }     
     }
 

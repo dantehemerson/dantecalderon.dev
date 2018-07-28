@@ -1,14 +1,23 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import get from 'lodash/get'
 
 import ContactForm from '../components/ContactForm'
 import ContactSocial from '../components/ContactSocial'
+import SEO from '../components/SEO'
 
 class Contact extends React.Component {
 	render() {
 		const { data } = this.props  	
+		const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    	const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')	 
+
 		return (
 			<div className="Contact">
+				<SEO
+				  title={siteTitle}
+				  url={siteUrl}          
+				/>
 				<section className="HeaderContact Page">
 					<div className="container">
 						<div className="row center-xs">

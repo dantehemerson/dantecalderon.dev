@@ -499,10 +499,7 @@ textarea{
 				 	width: 100% !important;
 				 	@include breakpoint(sm) {	
 				 		height: 300px !important;
-				 	}
-					@include breakpoint(md) {						
-						height: 100% !important;
-					}
+				 	}					
 				 }
 			}
 	 }
@@ -566,6 +563,14 @@ textarea{
 				 }
 				 @include breakpoint(lg) {
 						width: 400px;
+				 }
+
+				 .gatsby-image-outer-wrapper {
+				 	 .gatsby-image-wrapper {
+				 		@include breakpoint(md) {						
+				 			height: 100% !important;
+				 		}
+				 	 }
 				 }
 			}
 

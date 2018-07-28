@@ -32,7 +32,7 @@ class Navbar extends React.Component {
 			}>				
 				<div className="container">
 					<div className="Navbar__titlewrap">
-						<Link className="Navbar__title" to="/">dantehemerson</Link>
+						<Link className="Navbar__title" to="/">dante H.</Link>
 					</div>
 					<div className="Navbar__navwrap">
 						<ul className="Navbar__nav">

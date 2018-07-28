@@ -240,6 +240,8 @@ textarea{
 			display: flex;
 			align-items: center;
 			justify-content: space-between;      
+			padding-left: 20px;
+			padding-right: 20px;
 	 }
 
 	 * {
@@ -250,11 +252,15 @@ textarea{
 	 a {
 			text-decoration: none; 
 			color: $navbar-link-color;  						
+				font-family: 'Playfair Display';				
+				font-weight: 100;
 	 }
 
 	 /** Link to home **/
 	 &__title {            
-			font-weight: 900;         
+			font-weight: 900; 
+    		text-transform: uppercase;
+    		font-family: 'Playfair Display';
 	 }
 
 	 &__nav {
@@ -262,7 +268,10 @@ textarea{
 			list-style: none;      
 	 }
 			&__item {
-				 margin-left: 2rem;
+				 margin-left: 1.5rem;
+				 @include breakpoint(md) {
+					margin-left: 2rem;
+				 }
 			}
 				 &__link {
 						display: block; 

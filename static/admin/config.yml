@@ -23,7 +23,7 @@ collections:
       - { label: Body, name: body, widget: markdown }      
 
   - name: portfolio
-    label: Portfolio
+    label: Projects
     folder: src/pages/projects
     create: true
     slug: "{{year}}-{{month}}-{{slug}}"

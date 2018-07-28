@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import get from 'lodash/get'
 
 import Card from '../components/Card'
 
@@ -14,6 +15,7 @@ class Portfolio extends React.Component {
 			path: '/holaMundo',
 			timeToRead: '20s'
 		}
+		const posts = get(this, 'props.data.allMarkdownRemark.edges') || []
 		return (
 			<div className="Portfolio">
 				<section className="HeaderPortfolio Page">
@@ -28,18 +30,27 @@ class Portfolio extends React.Component {
 				</section>
 				<div className="Page__content container--full">
 					<div className="row center-xs start-md">
-						<div className="col-xs-12 col-sm-10 col-md-6 col-lg-4">
-							<Card data={post} mode="portfolio"/>
-						</div>
-						<div className="col-xs-12 col-sm-10 col-md-6 col-lg-4">
-							<Card data={post} mode="portfolio"/>
-						</div>
-						<div className="col-xs-12 col-sm-10 col-md-6 col-lg-4">
-							<Card data={post} mode="portfolio"/>
-						</div>
-						<div className="col-xs-12 col-sm-10 col-md-6 col-lg-4">
-							<Card data={post} mode="portfolio"/>
-						</div>
+						{
+							posts.map(( { node }, index) => {								
+								return (
+									<div className="col-xs-12 col-sm-10 col-md-6 col-lg-4" key={index}>
+										<Card 
+											data={
+												{
+													title: node.frontmatter.title,
+													thumbnail: node.fields.thumbnail.childImageSharp.resolutions,
+													excerpt: node.excerpt,
+													date: node.frontmatter.date,
+													path: `/${node.frontmatter.path}`,
+													timeToRead: node.timeToRead
+												}
+											} 
+											mode="portfolio"											
+											/>
+									</div>
+								)
+							})
+						}					
 					</div>
 				</div>
 			</div>
@@ -58,6 +69,33 @@ export const queryPortfolio = graphql`
       siteMetadata {
             title
       }     
+    }
+
+    allMarkdownRemark(
+    	sort: { fields: [frontmatter___date], order: DESC }
+    	filter: { frontmatter: { model: { eq: "project"} }}
+    ) {
+    	edges {
+    		node {
+    			excerpt
+    			timeToRead
+    			fields {
+    				thumbnail {
+    					childImageSharp {
+    						resolutions(width: 360, height: 230) {
+    							...GatsbyImageSharpResolutions_withWebp
+    						}
+    					}
+    				}
+    			}
+    			frontmatter {
+    				date(formatString: "DD MMMM, YYYY")
+    				title
+    				path 
+    				thumbnail   			
+    			}
+    		}
+    	}
     }
   }
 `

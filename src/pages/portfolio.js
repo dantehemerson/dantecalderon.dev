@@ -33,7 +33,7 @@ class Portfolio extends React.Component {
 						{
 							posts.map(( { node }, index) => {								
 								return (
-									<div className="col-xs-12 col-sm-10 col-md-6 col-lg-4" key={index}>
+									<div className="col-xs-12 col-sm-12 col-md-6" key={index}>
 										<Card 
 											data={
 												{

@@ -22,7 +22,7 @@ $footer-height: 200px;
 $footer-link-color: #282a2d;
 
 /** Containers */
-$container-padding-lg: 25px;
+$container-padding-lg: 12px;
 
 $font-color: rgba(0,0,0,.88);
 
@@ -499,6 +499,7 @@ textarea{
 	 background: white;
 	 margin: 22px 10px;	
 	 border: 1px solid rgba(0,0,0,.1) !important;
+	 height: 92%;
 	 a { // El Link contenedor
 			text-decoration: none;
 			color: #282a2d;                
@@ -565,6 +566,7 @@ textarea{
 	 &.blogMode {
 	 		display: flex;
 			flex-wrap: wrap;
+			height: auto;
 
 			.Card__header {
 				// height: auto;         

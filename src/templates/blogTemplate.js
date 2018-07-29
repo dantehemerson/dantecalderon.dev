@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from 'gatsby-image'
 import get from 'lodash/get'
 import head from 'lodash/head'
 import last from 'lodash/last'
@@ -14,7 +15,9 @@ export const Post = ({ content, frontmatter, previous, next, siteTitle, image, s
 	return (
 		<div className="container Post">
 			<h1 className="Post__title">{ frontmatter.title }</h1>
-			<p className="Post__date">{ frontmatter.date }</p>			
+			<p className="Post__date">{ frontmatter.date }</p>
+			<Img sizes={ image }/>
+			
 			<PostContent content={content} className="post"/>						
 		</div>
 	)
@@ -44,14 +47,14 @@ export default class BlogPostTemplate extends React.Component {
 		const { previous, next } = this.props.pathContext
 		const ast = post.htmlAst
 		const images = getObj(ast, { type: 'element', tagName: 'img' })
-		const image = head(split(last(get(head(images), 'properties.srcSet')), ' '))			
-		console.log(`https://dantecalderon.com${post.frontmatter.thumbnail}`)
+		const image = head(split(last(get(head(images), 'properties.srcSet')), ' '))					
+		console.log(post.fields.thumbnail)
 		return (
 			<div>
 				<SEO
 				  title={ post.frontmatter.title }
-				  url={ `${siteMetadata.siteUrl}/${post.frontmatter.path}` }   
-				  image={ `${post.frontmatter.thumbnail}` }  
+				  url={ `${siteMetadata.siteUrl}/${post.frontmatter.path}` } 
+				  image={post.fields.thumbnail.childImageSharp.responsiveSizes.src}
 				  description={ post.frontmatter.description }     
 				  isPost={ true }
 				/>
@@ -62,7 +65,7 @@ export default class BlogPostTemplate extends React.Component {
 					next={next}
 					content={post.html}
 					contentComponent={HTMLContent}
-					image={image}
+					image={post.fields.thumbnail.childImageSharp.responsiveSizes}
 					/>		
 					<div className="Post__footer">
 						<div className="container Disqus">
@@ -95,8 +98,20 @@ export const pageQuery = graphql`
 				title
 				date(formatString: "MMMM DD, YYYY")
 				description
-				thumbnail
+				thumbnail		
 				path
+			}
+			fields {
+				thumbnail {
+					childImageSharp {						
+    					responsiveSizes(maxWidth: 1240) {
+    						aspectRatio
+			            src
+			            srcSet
+			            sizes			            
+    					}
+					}
+				}
 			}
 		}
 	}

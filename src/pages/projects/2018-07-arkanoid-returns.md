@@ -5,7 +5,7 @@ description: Juego Arkanoid hecho en C++ con la libreria Allegro5
 path: portfolio/arkanoid-returns-game
 thumbnail: /img/arkanoid-returns-game.png
 date: '2017-07-30T22:13:39-05:00'
-style: medium-img
+style: normal-img
 tags:
   - Arkanoid
   - Game

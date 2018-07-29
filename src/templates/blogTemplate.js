@@ -71,14 +71,16 @@ export default class BlogPostTemplate extends React.Component {
 					image={post.fields.thumbnail.childImageSharp.responsiveSizes}
 					/>		
 					<div className="Post__footer">
-						<div className="container Disqus">
-							<ReactDisqusComments
-							        shortname="dantecalderon"
-							        identifier={ post.frontmatter.path }
-							        title={ post.frontmatter.title }
-							        url={ this.state.location }        
-							        onNewComment={ this.handleNewComment }/>
-						</div>
+						{ post.frontmatter.model === 'post' && 
+							<div className="container Disqus">
+								<ReactDisqusComments
+								        shortname="dantecalderon"
+								        identifier={ post.frontmatter.path }
+								        title={ post.frontmatter.title }
+								        url={ this.state.location }        
+								        onNewComment={ this.handleNewComment }/>
+							</div>
+						}
 					</div>
 			</div>
 		)
@@ -103,6 +105,7 @@ export const pageQuery = graphql`
 				description
 				thumbnail		
 				path
+				model
 			}
 			fields {
 				thumbnail {

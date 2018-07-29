@@ -818,6 +818,47 @@ $post-titles-font: 'Open Sans';
 			}
 		}		
 	}
+	
+	&.medium-img {
+		.Post__header {
+			margin-bottom: 25px;
+			display: flex;		
+			flex-wrap: wrap;	
+			justify-content: center;
+			&__data {
+				width: 100%;
+				max-width: 760px;
+				padding: 12px;
+
+			}
+
+			&__image {
+				width: 100%;
+				max-width: 1000px;
+    			
+			}
+		}		
+	}
+
+	&.normal-img {
+		.Post__header {
+			margin-bottom: 25px;
+			display: flex;		
+			flex-wrap: wrap;	
+			justify-content: center;
+			&__data {
+				width: 100%;
+				max-width: 760px;
+				padding: 12px;
+
+			}
+
+			&__image {
+				width: 100%;
+				max-width: 736px;	   			
+			}
+		}		
+	}
 
 	&__content {
 		max-width: 760px;	

@@ -18,7 +18,7 @@ collections:
       - { label: Path, name: path }
       - { label: "Featured Image", name: thumbnail, widget: image }
       - { label: Date, name: date,  widget: datetime }
-      - { label: "Header Style", name: style, widget: select, options: ["default", "normal-img", "medium-img", "complete-img", "doble-column"], default: default}
+      - { label: "Header Style", name: style, widget: select, options: ["default", "normal-img", "medium-img", "full-image", "doble-column"], default: default}
       - { label: Tags (Separar con comas), name: tags, widget: list }
       - { label: Body, name: body, widget: markdown }      
 
@@ -34,7 +34,7 @@ collections:
       - { label: Path, name: path }
       - { label: "Featured Image", name: thumbnail, widget: image }
       - { label: Date, name: date,  widget: datetime }
-      - { label: "Header Style", name: style, widget: select, options: ["default", "normal-img", "medium-img", "complete-img", "doble-column"], default: default}
+      - { label: "Header Style", name: style, widget: select, options: ["default", "normal-img", "medium-img", "full-image", "doble-column"], default: default}
       - { label: Tags (Separar con comas), name: tags, widget: list }
 
       # Datos propios de un proyecto

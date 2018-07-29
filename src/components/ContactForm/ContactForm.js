@@ -5,7 +5,12 @@ class ContactForm extends React.Component {
 	render() {
 		return (
 			<div className="ContactForm">
-				<form name="contact" method="POST">
+				<form 
+					name="contact" 
+					method="POST"
+					data-netlify="true"
+					data-netlify-honeypot="bot-field"
+					>
 					<div className="ContactForm__item">
 						<div className="ContactForm__labelwrap">
 							<p className="ContactForm__label">Tu nombre</p>

@@ -13,12 +13,17 @@ import SEO from '../components/SEO'
 export const Post = ({ content, frontmatter, previous, next, siteTitle, image, siteUrl, contentComponent }) => {
 	const PostContent = contentComponent || Content
 	return (
-		<div className="container Post">
-			<h1 className="Post__title">{ frontmatter.title }</h1>
-			<p className="Post__date">{ frontmatter.date }</p>
-			<Img sizes={ image }/>
-			
-			<PostContent content={content} className="post"/>						
+		<div className="Post full-image">
+			<div className="Post__header">
+				<div className="Post__header__data">
+					<h1 className="Post__title">{ frontmatter.title }</h1>
+					<p className="Post__date">{ frontmatter.date }</p>
+				</div>
+				<div className="Post__header__image">
+					<Img sizes={ image }/>			
+				</div>
+			</div>
+			<PostContent content={content} className="container Post__content"/>						
 		</div>
 	)
 }

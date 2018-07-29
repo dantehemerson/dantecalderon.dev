@@ -794,13 +794,35 @@ $post-titles-font: 'Open Sans';
 .Post {	
 	padding-top: 61px;
 	padding-bottom: 50px;
-	max-width: 760px;
 	font-family: $post-body-font;
 	font-size: 19px;	
 	// === CONFIGURACIÓN DE ESTILOS POST ===
 	.gatsby-resp-image-wrapper {
 		max-width: 100% !important;
 	}
+	&.full-image {
+		.Post__header {
+			margin-bottom: 25px;
+			display: flex;		
+			flex-wrap: wrap;	
+			justify-content: center;
+			&__data {
+				width: 100%;
+				max-width: 760px;
+				padding: 12px;
+
+			}
+
+			&__image {
+				width: 100%;
+			}
+		}		
+	}
+
+	&__content {
+		max-width: 760px;	
+	}
+
 	&__title {
 		margin-top: 60px;
 		font-size: 28px;

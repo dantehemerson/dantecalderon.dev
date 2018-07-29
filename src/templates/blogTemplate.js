@@ -50,7 +50,7 @@ export default class BlogPostTemplate extends React.Component {
 			<div>
 				<SEO
 				  title={ post.frontmatter.title }
-				  url={ siteMetadata.siteUrl }   
+				  url={ `${siteMetadata.siteUrl}/${post.frontmatter.path}` }   
 				  image={ `${post.frontmatter.thumbnail}` }  
 				  description={ post.frontmatter.description }     
 				  isPost={ true }

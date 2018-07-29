@@ -18,7 +18,7 @@ class Blog extends React.Component {
 			<div className="Blog">
 				<SEO
 				  title="Blog"
-				  url={siteUrl}          
+				  url={`${siteUrl}/blog`}          
 				/>
 				<section className="HeaderBlog Page">
 					<div className="container">

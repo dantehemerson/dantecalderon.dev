@@ -16,7 +16,7 @@ class Contact extends React.Component {
 			<div className="Contact">
 				<SEO
 				  title="Contacto"
-				  url={siteUrl}          
+				  url={`${siteUrl}/contact`}          
 				/>
 				<section className="HeaderContact Page">
 					<div className="container">
@@ -49,7 +49,8 @@ export const queryContact = graphql`
     }     
     site {
       siteMetadata {
-            title
+         title
+         siteUrl
       }     
     }
   }

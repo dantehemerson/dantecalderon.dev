@@ -804,6 +804,19 @@ $post-titles-font: 'Open Sans';
 	.gatsby-resp-image-wrapper {
 		max-width: 100% !important;
 	}
+	&.default {
+		.Post__header {
+			margin-bottom: 50px;
+			display: flex;		
+			flex-wrap: wrap;	
+			justify-content: center;
+			&__data {
+				width: 100%;
+				max-width: 760px;
+				padding: 12px;
+			}
+		}		
+	}
 	&.full-image {
 		.Post__header {
 			margin-bottom: 50px;

@@ -19,9 +19,12 @@ export const Post = ({ content, frontmatter, previous, next, siteTitle, image, s
 					<h1 className="Post__title">{ frontmatter.title }</h1>
 					<p className="Post__date">{ frontmatter.date }</p>
 				</div>
-				<div className="Post__header__image">
-					<Img sizes={ image }/>			
-				</div>
+				{ 
+					frontmatter.style !== 'default' && 
+					<div className="Post__header__image">
+						<Img sizes={ image }/>			
+					</div>
+				}
 			</div>
 			<PostContent content={content} className="container Post__content"/>						
 		</div>

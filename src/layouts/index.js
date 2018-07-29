@@ -23,6 +23,8 @@ class Layout extends React.Component {
         <Helmet>
           <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Open+Sans:400,600,700" rel="stylesheet"/>
           <meta name="theme-color" content="#DFBD83"/>          
+          <meta name="distribution" content="global"/>
+        <meta httpEquiv="Content-Language" content="es" />
         </Helmet>
         <Navbar/>
         <div>

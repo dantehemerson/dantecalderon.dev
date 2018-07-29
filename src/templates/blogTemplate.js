@@ -44,13 +44,15 @@ export default class BlogPostTemplate extends React.Component {
 		const { previous, next } = this.props.pathContext
 		const ast = post.htmlAst
 		const images = getObj(ast, { type: 'element', tagName: 'img' })
-		const image = head(split(last(get(head(images), 'properties.srcSet')), ' '))				
+		const image = head(split(last(get(head(images), 'properties.srcSet')), ' '))			
+		console.log(`https://dantecalderon.com${post.frontmatter.thumbnail}`)
 		return (
 			<div>
 				<SEO
-				  title={`${post.frontmatter.title} · ${siteMetadata.title}`}
-				  url={siteMetadata.siteUrl}   
-				  image={post.frontmatter.thumbnail}       
+				  title={ `${post.frontmatter.title} · ${siteMetadata.title}` }
+				  url={ siteMetadata.siteUrl }   
+				  image={ `${post.frontmatter.thumbnail}` }  
+				  description={ post.frontmatter.description }     
 				/>
 				<Post 
 					{ ...post }

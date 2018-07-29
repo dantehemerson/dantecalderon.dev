@@ -79,11 +79,7 @@ export default class SEO extends PureComponent {
 
 				<script type="application/ld+json">
 				  {JSON.stringify(schemaOrgJSONLD)}				  
-				</script>
-
-				{/*  Pfff */}
-				<meta name="distribution" content="global"/>
-				<meta httpEquiv="Content-Language" content="es" />
+				</script>				
 
 				{/* Facebook Cards */}
 				<meta property="og:url" content={url} />
@@ -95,8 +91,7 @@ export default class SEO extends PureComponent {
 		      {/* Twitter Cards */}
 		      <meta name="twitter:card" content="summary_large_image" />
 		      <meta name="twitter:site" content="@dantehemerson" />
-		      <meta name="twitter:creator" content="@dantehemerson" />
-		      <meta property="og:url" content={ url } />
+		      <meta name="twitter:creator" content="@dantehemerson" />		      
 		      <meta name="twitter:title" content={title} />		      
 		      <meta name="twitter:description" content={description} />
 		      <meta name="twitter:image" content={image} />     

@@ -893,6 +893,7 @@ $post-titles-font: 'Open Sans';
 			}
 
 			@include breakpoint(xxl) {				
+				min-height: 400px;
 				margin-left: 65px;
 				margin-right: 65px;
 				flex-wrap: inherit;					
@@ -901,11 +902,19 @@ $post-titles-font: 'Open Sans';
 					max-width: 612px;
 					padding: 60px 60px 32px 0;
 					order: 1;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
 				}
 				&__image {
 					width: 100%;
 					max-width: 612px;	
-					order: 2;   			
+					order: 2;
+					display: flex;
+					align-items: center;  
+					.gatsby-image-outer-wrapper {
+						width: 100%;
+					} 			
 				}
 			}
 
@@ -920,8 +929,10 @@ $post-titles-font: 'Open Sans';
 	&__title {
 		margin-top: 60px;
 		font-size: 28px;
+		margin: 0;
 	}
 	&__date {
+		margin: 0;
 		font-family: $post-titles-font;
 		font-size: 13px;
 		font-weight: 600;

@@ -47,14 +47,12 @@ export default class BlogPostTemplate extends React.Component {
 		const { previous, next } = this.props.pathContext
 		const ast = post.htmlAst
 		const images = getObj(ast, { type: 'element', tagName: 'img' })
-		const image = head(split(last(get(head(images), 'properties.srcSet')), ' '))					
-		console.log(post.fields.thumbnail)
 		return (
 			<div>
 				<SEO
 				  title={ post.frontmatter.title }
 				  url={ `${siteMetadata.siteUrl}/${post.frontmatter.path}` } 
-				  image={post.fields.thumbnail.childImageSharp.responsiveSizes.src}
+				  image={`https://dantecalderon.com${post.fields.thumbnail.childImageSharp.responsiveSizes.src}`}
 				  description={ post.frontmatter.description }     
 				  isPost={ true }
 				/>

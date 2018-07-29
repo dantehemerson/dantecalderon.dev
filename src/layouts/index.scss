@@ -806,7 +806,7 @@ $post-titles-font: 'Open Sans';
 	}
 	&.full-image {
 		.Post__header {
-			margin-bottom: 25px;
+			margin-bottom: 50px;
 			display: flex;		
 			flex-wrap: wrap;	
 			justify-content: center;
@@ -825,7 +825,7 @@ $post-titles-font: 'Open Sans';
 	
 	&.medium-img {
 		.Post__header {
-			margin-bottom: 25px;
+			margin-bottom: 50px;
 			display: flex;		
 			flex-wrap: wrap;	
 			justify-content: center;
@@ -846,7 +846,7 @@ $post-titles-font: 'Open Sans';
 
 	&.normal-img {
 		.Post__header {
-			margin-bottom: 25px;
+			margin-bottom: 50px;
 			display: flex;		
 			flex-wrap: wrap;	
 			justify-content: center;
@@ -871,7 +871,7 @@ $post-titles-font: 'Open Sans';
 			}
 		}
 		.Post__header {
-			margin-bottom: 25px;			
+			margin-bottom: 50px;			
 			display: flex;		
 			flex-wrap: wrap;
 			justify-content: center;

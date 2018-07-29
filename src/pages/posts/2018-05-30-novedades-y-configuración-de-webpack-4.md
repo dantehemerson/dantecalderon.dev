@@ -1,13 +1,18 @@
 ---
 model: post
-path: novedades-y-configuración-de-webpack-4
-thumbnail: /img/0_733pce3vafdi88jv.jpeg
 title: Novedades y configuración de Webpack 4
-date: '2018-02-27T21:27:53-05:00'
 description: >-
   Este fin de semana se ha lanzado Webpack 4 (nombre clave, Legato), esta es una
   versión bastante importante, ya que se ha trabajado bastante en el performance
   y en seguir el concepto de cero configuración #0CJS
+path: novedades-y-configuración-de-webpack-4
+thumbnail: /img/0_733pce3vafdi88jv.jpeg
+date: '2018-02-27T21:27:53-05:00'
+style: doble-column
+tags:
+  - webpack
+  - react
+  - redux
 ---
 Este fin de semana se ha **lanzado** **Webpack 4** (nombre clave, _Legato_),
 esta es una versión bastante importante, ya que se ha trabajado bastante en el

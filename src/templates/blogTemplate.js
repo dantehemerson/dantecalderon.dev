@@ -64,7 +64,7 @@ export default class BlogPostTemplate extends React.Component {
 					<div className="Post__footer">
 						<div className="container Disqus">
 							<ReactDisqusComments
-							        shortname="dantecalderontest"
+							        shortname="dantecalderon"
 							        identifier={ post.frontmatter.path }
 							        title={ post.frontmatter.title }
 							        url={ this.state.location }        

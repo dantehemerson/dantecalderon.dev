@@ -23,7 +23,10 @@ export default class SEO extends PureComponent {
 	}
 
 	render() {
-		const { title, image, url, description, isPost } = this.props		
+		const { image, url, description, isPost } = this.props	
+
+		const title = (this.props.title === "" ? "" :  `${this.props.title} · `) + "Dante Calderón"
+
 		const schemaOrgJSONLD = [
 		  {
 		    '@context': 'http://schema.org',
@@ -70,7 +73,7 @@ export default class SEO extends PureComponent {
 		return (
 			<Helmet>
 				<html lang="es" />
-				<title>{ (title === "" ? "" :  `${title} · `) + "Dante Calderón" }</title>
+				<title>{ title }</title>
 				<meta name="description" content={description} />
 				<meta name="image" content={image} />
 
@@ -78,7 +81,8 @@ export default class SEO extends PureComponent {
 				  {JSON.stringify(schemaOrgJSONLD)}				  
 				</script>				
 
-				{/* Facebook Cards */}
+				{/* Facebook Cards */}				
+				<meta property="fb:app_id" content="302184056577324" />{/* No se si sea mi app id*/}
 				<meta property="og:url" content={url} />
       		<meta property="og:type" content={ isPost ? "article" : "website" }/>
       		<meta property="og:title" content={title} />

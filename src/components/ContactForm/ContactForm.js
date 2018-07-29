@@ -42,11 +42,10 @@ class ContactForm extends React.Component {
 						<div className="ContactForm__inputwrap">
 							<textarea name="message" className="ContactForm__input" placeholder="Ingresa tu mensaje aquí" rows="6"></textarea>
 						</div>
-					</div>
-					<div data-netlify-recaptcha></div>
+					</div>					
 					<div className="ContactForm__item">
 						<div className="ContactForm__submitwrap">
-							<input className="ContactForm__submit btn" placeholder="E-mail" type="submit"/>
+							<button className="ContactForm__submit btn" placeholder="E-mail" type="submit">Enviar</button>
 						</div>
 					</div>
 				</form>

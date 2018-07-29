@@ -13,7 +13,7 @@ import SEO from '../components/SEO'
 export const Post = ({ content, frontmatter, previous, next, siteTitle, image, siteUrl, contentComponent }) => {
 	const PostContent = contentComponent || Content
 	return (
-		<div className="Post normal-img">
+		<div className="Post doble-column">
 			<div className="Post__header">
 				<div className="Post__header__data">
 					<h1 className="Post__title">{ frontmatter.title }</h1>

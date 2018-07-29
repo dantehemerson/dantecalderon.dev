@@ -26,6 +26,7 @@ $container-padding-lg: 12px;
 
 $font-color: rgba(0,0,0,.88);
 
+$serif-font: 'Playfair Display';
 $sans-serif-font: 'Open Sans';
 
 
@@ -50,6 +51,9 @@ $height-header-title: 300px;
 	 }
 	 @else if $class == xl {
 			@media (min-width: 1140px) { @content; }
+	 }
+	 @else if $class == xxl {
+	 		@media (min-width: 1180px) { @content; }	
 	 }
 	 @else {
 			@warn "Breakpoint mixin supports: xs, sm, md, lg and xl";
@@ -850,13 +854,62 @@ $post-titles-font: 'Open Sans';
 				width: 100%;
 				max-width: 760px;
 				padding: 12px;
-
 			}
-
 			&__image {
 				width: 100%;
 				max-width: 736px;	   			
 			}
+		}		
+	}
+
+	&.doble-column {
+		.Post__title {
+			font-family: $serif-font;
+			font-size: 34px;
+			@include breakpoint(xxl) {
+				font-size: 52px;
+			}
+		}
+		.Post__header {
+			margin-bottom: 25px;			
+			display: flex;		
+			flex-wrap: wrap;
+			justify-content: center;
+			
+			&__data {
+				width: 100%;
+				max-width: 760px;
+				padding: 12px;									
+				order: 2;
+			}
+			&__image {
+				width: 100%;
+				order: 1;
+
+				.gatsby-image-wrapper {
+					max-height: 400px;
+				}
+				
+			}
+
+			@include breakpoint(xxl) {				
+				margin-left: 65px;
+				margin-right: 65px;
+				flex-wrap: inherit;					
+				&__data {
+					width: 100%;
+					max-width: 612px;
+					padding: 60px 60px 32px 0;
+					order: 1;
+				}
+				&__image {
+					width: 100%;
+					max-width: 612px;	
+					order: 2;   			
+				}
+			}
+
+			
 		}		
 	}
 

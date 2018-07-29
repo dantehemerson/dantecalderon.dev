@@ -15,7 +15,7 @@ class Contact extends React.Component {
 		return (
 			<div className="Contact">
 				<SEO
-				  title={siteTitle}
+				  title="Contacto"
 				  url={siteUrl}          
 				/>
 				<section className="HeaderContact Page">

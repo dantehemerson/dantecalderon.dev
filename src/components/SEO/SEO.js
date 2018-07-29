@@ -15,8 +15,8 @@ export default class SEO extends PureComponent {
 	};
 
 	static defaultProps = {
-		title: 'Dante Calderon',
-		image: `https://dantecalderon.com${avatar}`,
+		title: 'Dante Calderón',
+		image: `https://dantecalderon.com${avatar}`, // En produccion no añade la url
 		url: 'https://dantecalderon.com/',
 		description: 'Dante Hemerson Calderón Vasquez - Programador',
 		isPost: false,
@@ -56,7 +56,7 @@ export default class SEO extends PureComponent {
 		      '@type': 'BlogPosting',
 		      url: url,
 		      name: title,
-		      alternateName: `Dante Calderón | ${url}`,
+		      alternateName: `${url} | Dante Calderón`,
 		      headline: title,
 		      image: {
 		        '@type': 'ImageObject',
@@ -70,9 +70,7 @@ export default class SEO extends PureComponent {
 		return (
 			<Helmet>
 				<html lang="es" />
-				<title>{ title }</title>
-
-				
+				<title>{ (title === "" ? "" :  `${title} · `) + "Dante Calderón" }</title>
 				<meta name="description" content={description} />
 				<meta name="image" content={image} />
 
@@ -82,7 +80,7 @@ export default class SEO extends PureComponent {
 
 				{/* Facebook Cards */}
 				<meta property="og:url" content={url} />
-      		{isPost && <meta property="og:type" content="article" />}
+      		<meta property="og:type" content={ isPost ? "article" : "website" }/>
       		<meta property="og:title" content={title} />
 		      <meta property="og:description" content={description} />
 		      <meta property="og:image" content={image} />	     		 

@@ -49,10 +49,11 @@ export default class BlogPostTemplate extends React.Component {
 		return (
 			<div>
 				<SEO
-				  title={ `${post.frontmatter.title} · ${siteMetadata.title}` }
+				  title={ post.frontmatter.title }
 				  url={ siteMetadata.siteUrl }   
 				  image={ `${post.frontmatter.thumbnail}` }  
 				  description={ post.frontmatter.description }     
+				  isPost={ true }
 				/>
 				<Post 
 					{ ...post }

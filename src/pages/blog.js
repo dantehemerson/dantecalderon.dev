@@ -17,7 +17,7 @@ class Blog extends React.Component {
 		return (
 			<div className="Blog">
 				<SEO
-				  title={siteTitle}
+				  title="Blog"
 				  url={siteUrl}          
 				/>
 				<section className="HeaderBlog Page">

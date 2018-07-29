@@ -24,7 +24,7 @@ class Portfolio extends React.Component {
 		return (
 			<div className="Portfolio">
 				<SEO
-				  title={siteTitle}
+				  title="Portafolio"
 				  url={siteUrl}          
 				/>
 				<section className="HeaderPortfolio Page">

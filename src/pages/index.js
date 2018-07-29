@@ -18,7 +18,7 @@ class Index extends React.Component {
 		return (
       <div>
         <SEO
-          title={siteTitle}
+          title=""
           url={siteUrl}          
         />
   			<main className="Header-Home">			

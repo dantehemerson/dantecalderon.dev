@@ -161,8 +161,8 @@ $height-header-title: 300px;
 }
 
 body {
-	 margin: 0;
-	 padding: 0;
+	 margin: 0 !important;
+	 padding: 0 !important;
 	 text-rendering: geometricPrecision;
 	 -moz-osx-font-smoothing: grayscale;
 	 -webkit-font-smoothing: antialiased;
@@ -181,6 +181,31 @@ body {
 	 width: auto;
 	 font-size: 0.9rem;
 	 font-weight: 600;
+}
+
+.Btn {
+	background: #28282e !important;
+	border: 0 !important;
+	border-radius: 0 !important;
+	font-family: $sans-serif-font !important;
+	font-weight: 600 !important;
+	padding-left: 3rem !important;
+	padding-right: 3rem !important;
+	&:hover{
+		background: $hover-link-color !important;
+	}
+
+	&:focus {
+		box-shadow: 0 0 0 !important;
+	}
+}
+
+// SWAL 
+#swal2-title {
+	font-family: $sans-serif-font;
+}
+#swal2-content {	
+	font-family: serif;
 }
 
 input[type="text"], input[type="email"], textarea {

@@ -31,7 +31,8 @@
     "netlify-cms": "^1.9.3",
     "prismjs": "^1.15.0",
     "react-disqus-comments": "^1.2.0",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "sweetalert2": "^7.26.9"
   },
   "keywords": [
     "gatsby"

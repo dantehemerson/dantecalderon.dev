@@ -1,4 +1,5 @@
 import React from 'react'
+import Swal from 'sweetalert2'
 
 
 const encode = (data) => {
@@ -26,8 +27,26 @@ class ContactForm extends React.Component {
 			},
 			body: encode({ "form-name": "contact", ...this.state })
 		})
-			.then(() => alert("Success!!!"))
-			.catch(error => alert("Error"))
+		.then(() => {
+			Swal({
+				type: 'success',
+				title: 'Mensaje Enviado', 
+				text: 'Gracias por enviarme tu mensaje, te responderé lo mas pronto posible.',
+				confirmButtonClass:  'Btn',
+    			cancelButtonClass:  'Btn',
+    			onClose: () => {    				
+					this.setState({
+						name: "",
+						email: "",
+						subject: "",
+						message: ""
+					})
+    			},
+			})
+
+		})
+		.catch(error => alert("Error"))
+
 		e.preventDefault()
 	}
 

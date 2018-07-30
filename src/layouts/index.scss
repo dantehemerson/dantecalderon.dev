@@ -278,7 +278,7 @@ textarea{
   padding: 0;
   border: 0;
   width: 30px;
-  height: 18px;
+  height: 14px;
   position: relative;
 	background: transparent;
 	cursor: pointer;
@@ -421,7 +421,11 @@ textarea{
 			}
 	 }
 			&__item {		
-				margin-left: 5px;		
+				margin-left: 5px;	
+				width: 100%;	
+				@include breakpoint(sm) {
+					width: auto;	
+				}
 				@include breakpoint(md) {
 					margin-left: 1rem;
 				}
@@ -431,12 +435,17 @@ textarea{
 						font-size: 0.9rem;  
 						font-weight: 600;
 						text-transform: uppercase;
-						padding: 4px 8px;
+						padding: 5px 8px;
+						text-align: center;
+						margin: 3px 25px !important;
+						&:hover {
+							box-shadow: 0px 0px 0px 1px $font-color;							
+						}
 						@include breakpoint(md) {
 							padding: 4px 19px;
 						}
 						&.active {
-							border: 1px solid;							
+							box-shadow: 0px 0px 0px 1px $font-color;
 						}
 						img {
 							 padding-right: 4px;
@@ -444,6 +453,10 @@ textarea{
 							 top: 2px;
 							 position: relative;
 						}
+					@include breakpoint(sm) {
+						margin: 0 !important;
+						padding: 4px 8px;
+					}
 				 }
 }
 

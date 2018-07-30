@@ -88,5 +88,17 @@ module.exports = {
         showSpinner: false
       },
     },
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Dante Calderon',
+        short_name: 'Dante',
+        start_url: '/',
+        background_color: '#DFBD83',
+        theme_color: '#DFBD83',
+        display: 'minimal-ui',
+      },
+    },
   ],
 }

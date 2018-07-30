@@ -1,8 +1,12 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
 
 const NotFoundPage = () => (
   <div className="NotFound">  	
+    <Helmet>        
+      <title>{`Error 404(Page Not Found) · Dante Calderón`}</title>
+    </Helmet>
   	 <svg viewBox="0 0 100 33">
      <defs>
        <linearGradient id="gradient" x1={0} x2={0} y1={0} y2={1}>

@@ -54,7 +54,7 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    `gatsby-plugin-catch-links`
+    `gatsby-plugin-catch-links`,
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
     {

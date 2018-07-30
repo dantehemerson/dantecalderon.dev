@@ -52,6 +52,7 @@ module.exports = {
               offsetY: `75`,
             }
           },
+          'gatsby-remark-external-links',
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',

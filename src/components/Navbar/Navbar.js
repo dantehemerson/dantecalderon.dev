@@ -5,6 +5,7 @@ import Link from 'gatsby-link'
 class Navbar extends React.Component {	
 	state = {
 		navbarIsTop: true,
+		menuIsOpen: false
 	}
 
 	static propTypes = {
@@ -13,7 +14,8 @@ class Navbar extends React.Component {
 
 	static defaultProps = {
 		activePage: '',
-		navbarIsTop: true,		
+		navbarIsTop: true,
+		menuIsOpen: false		
 	}
 
 	componentDidMount() {
@@ -24,7 +26,17 @@ class Navbar extends React.Component {
 		window.addEventListener('scroll', scrollListener)
 	}
 
-	render() {		
+	handleToggle = (event) => {			
+		this.setState((prevState, props) => {
+			return {
+				menuIsOpen: !prevState.menuIsOpen,
+			}
+		})
+	}
+
+	render() {	
+		const { menuIsOpen }	 = this.state
+
 		return (					
 			<nav className={
 				"Navbar " + 
@@ -34,19 +46,26 @@ class Navbar extends React.Component {
 					<div className="Navbar__titlewrap">
 						<Link className="Navbar__title" to="/">dante H.</Link>
 					</div>
+					
+
 					<div className="Navbar__navwrap">
-						<ul className="Navbar__nav">
+						
+						<button onClick={ this.handleToggle } id="navbarToggler" className={`Navbar__toggler ${menuIsOpen ? 'open' : ''}`}>
+							<span className="Navbar__toggler__burger-menu">
+							</span>
+						</button>
+						<ul className={`Navbar__nav ${menuIsOpen ? 'open' : ''}`}>
 							<li className={(this.props.activePage === '' ? 'Navbar__item' : '')}>
-								<Link className="Navbar__link" to="/"><img className="icon-item" src="https://icongr.am/clarity/home.svg?size=20&color=000000"/>Inicio</Link>
+								<Link onClick={ this.handleToggle } className="Navbar__link" to="/"><img className="icon-item" src="https://icongr.am/clarity/home.svg?size=20&color=000000"/>Inicio</Link>
 							</li>
 							<li className={(this.props.activePage === 'Blog' ? 'Navbar__item' : 'Navbar__item')}>
-								<Link className="Navbar__link" to="/blog"><img className="icon-item" src="https://icongr.am/clarity/computer.svg?size=20&color=000000"/>Blog</Link>
+								<Link onClick={ this.handleToggle } className="Navbar__link" to="/blog"><img className="icon-item" src="https://icongr.am/clarity/computer.svg?size=20&color=000000"/>Blog</Link>
 							</li>
 							<li className={(this.props.activePage === 'Contact' ? 'Navbar__item' : 'Navbar__item')}>
-								<Link className="Navbar__link" to="/contact"><img className="icon-item" src="https://icongr.am/clarity/user.svg?size=20&color=000000"/>Contacto</Link>
+								<Link onClick={ this.handleToggle } className="Navbar__link" to="/contact"><img className="icon-item" src="https://icongr.am/clarity/user.svg?size=20&color=000000"/>Contacto</Link>
 							</li>						
 							<li className={(this.props.activePage === 'Portfolio' ? 'Navbar__item' : 'Navbar__item')}>
-								<Link className="Navbar__link" to="/portfolio"><img className="icon-item" src="https://icongr.am/clarity/view-cards.svg?size=20&color=000000"/>Portafolio</Link>
+								<Link onClick={ this.handleToggle } className="Navbar__link" to="/portfolio"><img className="icon-item" src="https://icongr.am/clarity/view-cards.svg?size=20&color=000000"/>Portafolio</Link>
 							</li>						
 						</ul>					
 					</div>

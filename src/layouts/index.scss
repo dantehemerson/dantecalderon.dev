@@ -253,6 +253,89 @@ textarea{
 	}
 }
 
+
+
+
+/// ============= TOGGLER =================
+.b-a {
+   transition: all .25s; 
+   position: absolute;
+   content: "";
+   left: 0;           
+   height: 2px;
+   width: 30px;  
+   border-radius: 0; 
+   background: $font-color; 
+}
+
+.b-a-expanded {
+   transition: all .25s;
+   top: 0;
+}
+
+.Navbar__toggler {
+  border-radius: 0;
+  padding: 0;
+  border: 0;
+  width: 30px;
+  height: 18px;
+  position: relative;
+	background: transparent;
+	cursor: pointer;
+	z-index: 100;
+	@include breakpoint(sm) {
+		display: none;
+	}
+
+  &.open {
+    .Navbar__toggler__burger-menu {   
+        background: transparent !important;
+        transition: all .25s;         
+         &:after {
+           @extend .b-a-expanded;           
+            transform: rotate(405deg);
+         }
+         &:before {
+           @extend .b-a-expanded;           
+          transform: rotate(-45deg);
+         }
+       }
+  }
+
+ 	&__burger-menu {   
+
+     @extend .b-a;       
+     top: 8px;
+
+    
+     &:after {
+       @extend .b-a;
+       content: ""; 
+       position: absolute;
+       top: -8px;
+       left: 0;
+     }
+     &:before {
+       @extend .b-a;
+       content: ""; 
+       position: absolute;
+       top: 8px;
+       left: 0;
+     }
+
+
+   }
+	&:focus {
+	   border: 0;        
+		outline-width: 0;
+	}
+}
+ 
+
+
+/// ============== TOGGLER =================
+
+
 /** Navbar Component Styles **/
 .Navbar {
 	 height: $navbar-height;	
@@ -288,15 +371,54 @@ textarea{
 	 }
 
 	 /** Link to home **/
+	 &__titlewrap {
+	 	z-index: 100;
+	 }
 	 &__title {            
 			font-weight: 900; 
     		text-transform: uppercase;
     		font-family: 'Playfair Display';
 	 }
 
-	 &__nav {
-			display: flex;
+	&__navwrap {
+		//@include breakpoint()
+	}
+	 &__nav {			
 			list-style: none;      
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100vh;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			display: none; 				
+			display: flex;
+			visibility: hidden;
+			transition: all 0s !important;
+			* {
+				transition: all 0s !important;		
+			}
+			transition: opacity .4s !important;
+			opacity: 0;
+			&.open {
+				transition: opacity .4s !important;
+				visibility: visible;
+				background: white;
+				opacity: 1;
+			}
+
+			@include breakpoint(sm) {
+				opacity: 1;				
+				visibility: visible;
+				background: transparent !important;
+				display: flex;
+				flex-direction: row;
+				position: relative;				
+				height: auto;
+				
+			}
 	 }
 			&__item {		
 				margin-left: 5px;		

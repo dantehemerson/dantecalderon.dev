@@ -21,6 +21,7 @@
     "gatsby-plugin-sharp": "^1.6.47",
     "gatsby-plugin-sitemap": "^1.2.25",
     "gatsby-plugin-typography": "^1.7.18",
+    "gatsby-remark-autolink-headers": "^1.4.19",
     "gatsby-remark-copy-linked-files": "^1.5.37",
     "gatsby-remark-images": "^1.5.67",
     "gatsby-remark-prismjs": "^2.0.5",

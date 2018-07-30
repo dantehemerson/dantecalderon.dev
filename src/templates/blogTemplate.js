@@ -39,7 +39,7 @@ export default class BlogPostTemplate extends React.Component {
 		/* Remueve los underlines de los links que contienen imagen */
 		let links = document.getElementsByTagName('a')
 		for (const link of links) {			
-			if(link.getElementsByTagName('img').length > 0) {
+			if(link.getElementsByTagName('img').length > 0 || link.getElementsByTagName('svg').length > 0  ) {
 				link.style.backgroundImage = 'inherit'
 			}
 		}

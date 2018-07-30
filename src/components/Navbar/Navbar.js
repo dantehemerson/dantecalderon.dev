@@ -44,7 +44,7 @@ class Navbar extends React.Component {
 			}>				
 				<div className="container">
 					<div className="Navbar__titlewrap">
-						<Link className="Navbar__title" to="/">dante H.</Link>
+						<Link onClick={ (e) => { this.setState({menuIsOpen: false}) } } className="Navbar__title" to="/">dante H.</Link>
 					</div>
 					
 

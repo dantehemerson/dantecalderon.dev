@@ -1080,6 +1080,7 @@ $post-titles-font: 'Open Sans';
 	flex-direction: column;
 	align-items: center;
 	height: 100vh;	
+	min-height: 380px;
 	&__title {
     	font-family: 'Open Sans';
     	text-align: center;

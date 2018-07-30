@@ -73,5 +73,12 @@ module.exports = {
         generateMatchPathRewrites: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: '#43bf4d',
+        showSpinner: false
+      },
+    },
   ],
 }

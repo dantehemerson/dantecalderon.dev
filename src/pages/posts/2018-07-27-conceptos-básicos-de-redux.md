@@ -17,12 +17,12 @@ Redux es comunmente usado con [React](https://es.wikipedia.org/wiki/React), pero
 
 ### Los tres principios de React
 
-* #### Única fuente de verdad
+#### Única fuente de verdad
   El **estado** de toda tu aplicación esta almacenado en un único **store**.
-* #### El estado de solo lectura
+#### El estado de solo lectura
   La **única forma** de modificar el estado es emitiendo una **acción**, un objeto describiendo que ocurrió.
   Esto se hace a través de la función `dispatch()`.
-* #### Los cambios se realizan con funciones puras
+#### Los cambios se realizan con funciones puras
   Para especificar como el árbol de estado es transformado por las acciones, se utilizan **reducers** puros.
   Los reducers son funciones puras que toman el estado anterior y una acción, y devuelven un nuevo estado.
 

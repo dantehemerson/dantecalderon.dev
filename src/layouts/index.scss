@@ -232,7 +232,7 @@ textarea{
 	 padding-top: remcalc(85px);
 	 padding-bottom: remcalc(25px);          
 	 &__title {
-		color: #555555;
+		color: #444;
 		font-size: remcalc(36px);      
 		@include breakpoint(sm) {
 			font-size: remcalc(42px);      			
@@ -240,7 +240,7 @@ textarea{
 	 }
 
 	 &__description {      			
-		color: #555555;
+		color: #444;
 		margin: 0;
 		font-family: serif;
 		font-size: 18px;

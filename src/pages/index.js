@@ -31,7 +31,7 @@ class Index extends React.Component {
                   event.preventDefault()                  
                   let target = document.getElementById('about').getBoundingClientRect().top
                   animateScroller(target)
-                  }}>Sobre mí</a>
+                  }}>About me</a>
               </div>
               <div className="col-xs-12 col-lg-7">
     				    <Rotational avatar={ data.avatar }/>

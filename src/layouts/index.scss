@@ -232,17 +232,18 @@ textarea{
 	 padding-top: remcalc(85px);
 	 padding-bottom: remcalc(25px);          
 	 &__title {
-		color: $font-color;
+		color: #555555;
 		font-size: remcalc(36px);      
 		@include breakpoint(sm) {
 			font-size: remcalc(42px);      			
-		}
+		}		
 	 }
 
 	 &__description {      			
-		color: $font-color;
+		color: #555555;
 		margin: 0;
-
+		font-family: serif;
+		font-size: 18px;
 	 } 
 
 	&__content {			
@@ -882,14 +883,16 @@ textarea{
 .About {
 	background: white;   
 	color: rgba(0,0,0,.88);  
+	&__description {
+		padding-bottom: 15px;
+	}
 	 &__interests {
 			margin-top: 50px;
 			margin-bottom: 50px;
 
 			&__title {
 
-			}
-
+			}			
 			&__list {         
 				 list-style: none;
 			}

@@ -884,6 +884,7 @@ textarea{
 .About {
 	background: white;   
 	color: rgba(0,0,0,.88);  
+	font-size: 15px;
 	&__description {
 		padding-bottom: 15px;
 	}
@@ -897,7 +898,8 @@ textarea{
 			&__list {         
 				 list-style: none;
 			}
-				 &__item {                     
+				 &__item {   
+				 	margin-bottom: calc(1.3rem / 2);                  
 						&:hover {
 							i {
 
@@ -1247,8 +1249,8 @@ $post-titles-font: 'Open Sans';
 	 justify-content: center;
 	 flex-direction: column;
 	 height: $footer-height;
-	background: #f9f9f9;
-	background: #fafafa;
+	
+	//background: #fafafa;
 	 * {
 			margin: 0;
 			padding: 0;

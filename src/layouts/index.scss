@@ -33,8 +33,6 @@ $sans-serif-font: 'Open Sans';
 $transition-hover-s: .4s;
 $border-radius: 4px;
 
-$height-header-title: 300px;
-
 /** Mixin for responsive design **/
 @mixin breakpoint($class) {  
 	 /** Breakpoints based on Bootstrap4 **/
@@ -231,22 +229,23 @@ textarea{
 }
 
 .Page {
-	 padding-top: remcalc(90px);
-	 padding-bottom: remcalc(30px);          
+	 padding-top: remcalc(85px);
+	 padding-bottom: remcalc(25px);          
 	 &__title {
-			font-size: remcalc(45px);      
-			color: $font-color;
+		color: $font-color;
+		font-size: remcalc(36px);      
+		@include breakpoint(sm) {
+			font-size: remcalc(42px);      			
+		}
 	 }
 
 	 &__description {      			
 		color: $font-color;
+		margin: 0;
 
 	 } 
 
-	&__content {	
-		position: relative;
-		top: -80px;
-
+	&__content {			
 		[class^="col"] {
 			 padding: 0;
 		}	 
@@ -278,7 +277,7 @@ textarea{
   padding: 0;
   border: 0;
   width: 30px;
-  height: 14px;
+  height: 18px;
   position: relative;
 	background: transparent;
 	cursor: pointer;
@@ -529,7 +528,7 @@ textarea{
 			align-items: center;   			
 			color: white;
 			height: auto;
-			background: #E8F3EC;
+			//background: #E8F3EC;
 	 }
 
 	 &__form {
@@ -642,8 +641,7 @@ textarea{
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: center;   
-			background-color: #f0f0ee;
-			height: $height-header-title;
+			// background-color: #f0f0ee;			
 			color: white;            
 	 }
 }
@@ -654,9 +652,8 @@ textarea{
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: center;   
-			background-color: #f6f1e4;
+			// background-color: #f6f1e4;
 			color: white;
-			height: $height-header-title;       
 	 }
 }
 

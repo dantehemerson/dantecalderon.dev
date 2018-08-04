@@ -92,7 +92,7 @@ export const queryPortfolio = graphql`
     			fields {
     				thumbnail {
     					childImageSharp {
-    						resolutions(width: 360, height: 230) {
+    						resolutions(width: 720, height: 460) {
     							...GatsbyImageSharpResolutions_withWebp
     						}
     					}

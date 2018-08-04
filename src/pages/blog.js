@@ -85,7 +85,7 @@ export const queryBlog = graphql`
     			fields {
     				thumbnail {
     					childImageSharp {
-    						resolutions(width: 360, height: 230) {
+    						resolutions(width: 760, height: 480) {
     							...GatsbyImageSharpResolutions_withWebp
     						}
     					}

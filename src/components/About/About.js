@@ -28,10 +28,12 @@ class About extends React.Component {
 								<li className="About__interests__item" ><i className="ai"></i>Inteligencia Artificial</li>
 								<li className="About__interests__item" ><i className="ml"></i>Machine Learning</li>
 								<li className="About__interests__item" ><i className="ds"></i>Data Science</li>
-								<li className="About__interests__item" ><i className="js"></i>El fascinante mundo de Javascript y Nodejs</li>
-								<li className="About__interests__item" ><i className="back"></i>Backend Development</li>
 								<li className="About__interests__item" ><i className="cp"></i>Competitive Programming</li>
-								<li className="About__interests__item" ><i className="web"></i>Desarrollo de Videojuegos</li>
+								<li className="About__interests__item" ><i className="game"></i>Desarrollo de Videojuegos</li>
+								<li className="About__interests__item" ><i className="back"></i>Data, data and more data.</li>
+								{/*
+								<li className="About__interests__item" ><i className="js"></i>El fascinante mundo de Javascript y Nodejs</li>
+								*/}
 							</ul>
 
 						</div>

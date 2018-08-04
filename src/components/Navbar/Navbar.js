@@ -56,16 +56,16 @@ class Navbar extends React.Component {
 						</button>
 						<ul className={`Navbar__nav ${menuIsOpen ? 'open' : ''}`}>
 							<li className={(this.props.activePage === '' ? 'Navbar__item' : '')}>
-								<Link onClick={ (e) => { this.setState({menuIsOpen: false}) } } className="Navbar__link" to="/"><img className="icon-item" src="https://icongr.am/clarity/home.svg?size=20&color=000000"/>Home</Link>
+								<Link onClick={ (e) => { this.setState({menuIsOpen: false}) } } className="Navbar__link" to="/"><img className="icon-item" src="https://icongr.am/clarity/home.svg?size=20&color=000000"/>Inicio</Link>
 							</li>
 							<li className={(this.props.activePage === 'Blog' ? 'Navbar__item' : 'Navbar__item')}>
 								<Link onClick={ (e) => { this.setState({menuIsOpen: false}) }} className="Navbar__link" to="/blog"><img className="icon-item" src="https://icongr.am/clarity/computer.svg?size=20&color=000000"/>Blog</Link>
 							</li>
 							<li className={(this.props.activePage === 'Contact' ? 'Navbar__item' : 'Navbar__item')}>
-								<Link onClick={ (e) => { this.setState({menuIsOpen: false}) }} className="Navbar__link" to="/contact"><img className="icon-item" src="https://icongr.am/clarity/user.svg?size=20&color=000000"/>Contact</Link>
+								<Link onClick={ (e) => { this.setState({menuIsOpen: false}) }} className="Navbar__link" to="/contact"><img className="icon-item" src="https://icongr.am/clarity/user.svg?size=20&color=000000"/>Contacto</Link>
 							</li>						
 							<li className={(this.props.activePage === 'Portfolio' ? 'Navbar__item' : 'Navbar__item')}>
-								<Link onClick={ (e) => { this.setState({menuIsOpen: false}) }} className="Navbar__link" to="/portfolio"><img className="icon-item" src="https://icongr.am/clarity/view-cards.svg?size=20&color=000000"/>Portfolio</Link>
+								<Link onClick={ (e) => { this.setState({menuIsOpen: false}) }} className="Navbar__link" to="/portfolio"><img className="icon-item" src="https://icongr.am/clarity/view-cards.svg?size=20&color=000000"/>Portafolio</Link>
 							</li>						
 						</ul>					
 					</div>

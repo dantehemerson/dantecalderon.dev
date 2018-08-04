@@ -232,7 +232,7 @@ textarea{
 	 padding-top: remcalc(85px);
 	 padding-bottom: remcalc(25px);          
 	 &__title {
-		color: #444;
+		color: #353535;
 		font-size: remcalc(36px);      
 		@include breakpoint(sm) {
 			font-size: remcalc(42px);      			
@@ -240,7 +240,7 @@ textarea{
 	 }
 
 	 &__description {      			
-		color: #444;
+		color: #353535;
 		margin: 0;
 		font-family: serif;
 		font-size: 19px;
@@ -672,6 +672,23 @@ textarea{
 			color: #282a2d;                
 	 }
 
+	&__topbar {
+		height: 25px;
+		background: #e0e3e6;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		border-radius: 4px 4px 0 0;
+		&__button {
+			background: white;
+			    border-radius: 50%;
+			    height: 9px;
+			    width: 9px;
+			    position: relative;
+			    margin-left: 5px;
+			
+		}
+	}
 	 &__header {
 			//height: 200px;
 			// * Imagen
@@ -690,7 +707,7 @@ textarea{
 			padding: 15px 20px;
 			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
+			justify-content: space-between;			
 	 }
 	 &__title {
 			text-align: center;  
@@ -707,6 +724,11 @@ textarea{
 			font-weight: 500;
 			text-align: left;
 			color: #757575;
+			font-family: serif;
+			font-size: 18px;			
+			@include breakpoint(sm) {
+				font-size: 19px;							
+			}
 	 }
 	 &__date {
 			text-align: right;

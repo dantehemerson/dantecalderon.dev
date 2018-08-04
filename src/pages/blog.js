@@ -25,7 +25,10 @@ class Blog extends React.Component {
 						<div className="row center-xs">
 							<div className="HeaderBlog__titlewrap Page__titlewrap text-center col-xs-12 col-md-10 col-lg-7">
 								<h2 className="HeaderBlog__title Page__title">Blog</h2>
+								{/*
+
 								<p className="HeaderBlog__description Page__description">Sobre programacion y mas.</p>
+								*/}
 							</div>							
 						</div>
 					</div>					

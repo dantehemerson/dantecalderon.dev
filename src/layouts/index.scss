@@ -666,6 +666,8 @@ textarea{
 	 background: white;
 	 margin: 22px 10px;	
 	 height: 92%;
+	 border: 1px solid rgba(0,0,0,.1) !important;
+	     border-radius: 6px 6px 0 0;
 	 a { // El Link contenedor
 			text-decoration: none;
 			color: #282a2d;                
@@ -712,8 +714,6 @@ textarea{
 	 &__header {
 			//height: 200px;
 			// * Imagen
-			border: 1px solid rgba(0,0,0,.1) !important;
-	 	 	border-bottom: 0 solid !important;
 			.gatsby-image-outer-wrapper {
 				 height: 100%;
 				 .gatsby-image-wrapper {
@@ -726,8 +726,6 @@ textarea{
 	 }
 
 	 &__body {
-	 	 border: 1px solid rgba(0,0,0,.1) !important;
-	 	 border-top: 0 solid !important;
 			padding: 15px 20px;
 			display: flex;
 			flex-direction: column;
@@ -780,7 +778,7 @@ textarea{
 	 		display: flex;
 			flex-wrap: wrap;
 			height: auto;
-
+			border-radius: 0;
 			.Card__header {
 				// height: auto;         
 				 width: 100%;
@@ -810,8 +808,6 @@ textarea{
 			.Card__body {
 				 flex-grow: 1;
 				 padding: 30px 20px;
-			 	border: 1px solid rgba(0,0,0,.1) !important;
-			 	 border-left: 0 solid !important;
 				 width: min-content;
 			}
 

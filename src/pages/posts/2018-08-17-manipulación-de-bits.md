@@ -54,7 +54,10 @@ Luego se suman todas los valores de las posiciónes que sean 1, por lo que la su
 Como vemos cada numero es el doble del anterior iniciando en 1. La suma de los valores sera par siempre que el bit menos significativo sea 0, ya que su valor es 1.
 
 Si sumamos los valores de cualquier combinación de los bits excepto el **bit menos signicativo** el resultado siempre será par ya que todos tiene mitad, por que es el resultado del doble del anterior. Por eso decimos que el **bit menos significativo** es el que define la paridad de un numero.
+
 En conclución si el bit menos significativo del numero es 1 entonces es impar, y si es 0 entonces es par.
 
 Esto se hace de la siguiente manera:
+
+
 

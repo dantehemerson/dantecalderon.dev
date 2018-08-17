@@ -29,3 +29,23 @@ Como el numero 1 solo tiene encendido el bit de la derecha al recorrer `j` posic
 
 Como verás el primer bit desde la derecha es la posición 0, el segundo el 1 y asi sucesivamente. 
 ```
+
+#### Conocer si un número es par o impar
+Para convertir un numero a decimal lo que se hace es sumar sus valores correspondiente. 
+
+Por ejemplo tenemos el siguiente numero en binario:
+
+```
+010100 (bin) = 
+```
+
+```
+2⁵  2⁴  2³  2²  2¹  2⁰
+---------------------
+32  16  8   4   2   1
+0   1   0   1   0   0
+```
+Luego se suman todas los valores de las posiciónes que sean 1, por lo que la suma sería:
+```
+16 + 4 = 22 (dec)
+```

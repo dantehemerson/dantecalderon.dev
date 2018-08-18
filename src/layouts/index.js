@@ -47,7 +47,7 @@ class Layout extends React.Component {
 
         </Helmet>
         <Navbar/>
-        <div>
+        <div className="Dyamic-container">
           {children()}
         </div>
         <Footer/>

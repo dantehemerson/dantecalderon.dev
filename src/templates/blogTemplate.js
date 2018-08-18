@@ -34,7 +34,7 @@ export const Post = ({ content, frontmatter, previous, next, siteTitle, image, s
 			</div>
 			<PostContent content={content} className="container Post__content"/>	
 			<div className="wrapper-post">
-				<Share />					
+				<Share title={frontmatter.title} url={`https://dantecalderon.com/` + frontmatter.path}/>					
 			</div>
 		</div>
 	)
@@ -111,7 +111,9 @@ export default class BlogPostTemplate extends React.Component {
 							</div>
 						}
 					</div>
-					<Share fixed show={ this.state.show_share }/>
+					<Share fixed show={ this.state.show_share } 
+					 title={post.frontmatter.title} 
+					url={`https://dantecalderon.com/` + post.frontmatter.path}/>
 			</div>
 		)
 	}

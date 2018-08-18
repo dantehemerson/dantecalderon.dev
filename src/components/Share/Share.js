@@ -8,7 +8,7 @@ import Comment from '../../assets/images/icons/comment.svg'
 export default (props) => (
 		<div className={`Share ` 
 			+ (props.fixed ? "Share--fixed" : "") 
-			+ (props.hide ? " hide" : "")}>				
+			+ (props.show ? "" : " hide")}>				
 			<a href="#disquser" >
 				<img className="Share__icon" title="Comentar" src={Comment}
 				/>

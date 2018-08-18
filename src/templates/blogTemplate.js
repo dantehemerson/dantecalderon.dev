@@ -43,6 +43,7 @@ export const Post = ({ content, frontmatter, previous, next, siteTitle, image, s
 export default class BlogPostTemplate extends React.Component {
 	state = {
 		location: '',
+		show_share: false,
 	}
 	componentDidMount() {
 		/* Remueve los underlines de los links que contienen imagen */
@@ -53,6 +54,21 @@ export default class BlogPostTemplate extends React.Component {
 			}
 		}
 		this.setState({ location: window.location.href })
+
+		// SHOW HIDE SHARE FIXED
+		let body = document.documentElement
+		let contentY = document.getElementById('Post_content').offsetTop
+		let height = document.getElementById('Post_content').clientHeight		
+
+		const scrollListenerShare = () => {	
+			let y = body.scrollTop - contentY + 110 // 60 para el navbar						
+			let show = y >= 0 && y - 110 <= height - 340
+
+			if(this.state.show_share != show) {				
+				this.setState({ 'show_share': show })		
+			}
+		}
+		window.addEventListener('scroll', scrollListenerShare)		
 	}
 
 	handleNewComment = (comment) => {
@@ -95,7 +111,7 @@ export default class BlogPostTemplate extends React.Component {
 							</div>
 						}
 					</div>
-					<Share fixed/>
+					<Share fixed show={ this.state.show_share }/>
 			</div>
 		)
 	}

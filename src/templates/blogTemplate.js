@@ -23,6 +23,7 @@ export const Post = ({ content, frontmatter, previous, next, siteTitle, image, s
 					<AuthorPost 
 						date={ frontmatter.date }
 						timeToRead={timeToRead}
+						header
 						/>				
 				</div>
 				{ 
@@ -34,7 +35,10 @@ export const Post = ({ content, frontmatter, previous, next, siteTitle, image, s
 			</div>
 			<PostContent content={content} className="container Post__content"/>	
 			<div className="wrapper-post">
-				<Share title={frontmatter.title} url={`https://dantecalderon.com/` + frontmatter.path}/>					
+				<Share title={frontmatter.title} url={`https://dantecalderon.com/` + frontmatter.path}/>
+				<AuthorPost 
+						date={ frontmatter.date }
+						timeToRead={timeToRead}	/>						
 			</div>
 		</div>
 	)

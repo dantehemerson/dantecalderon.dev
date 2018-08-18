@@ -664,9 +664,9 @@ textarea{
 /** Card **/
 .Card {
 	 background: white;
-	 margin: 22px 10px;	
+	 margin: 48px 10px;	
 	 height: 92%;
-	 border: 1px solid rgba(0,0,0,.1) !important;
+	 //border: 1px solid rgba(0,0,0,.1) !important;
 	     border-radius: 6px 6px 0 0;
 	 a { // El Link contenedor
 			text-decoration: none;
@@ -787,10 +787,10 @@ textarea{
 					//		height: auto;				
 				 }
 				 @include breakpoint(md) {
-					width: 320px;				
+					width: 380px;				
 				 }
 				 @include breakpoint(lg) {
-						width: 400px;
+						width: 450px;
 				 }
 
 				 .gatsby-image-outer-wrapper {
@@ -808,7 +808,7 @@ textarea{
 
 			.Card__body {
 				 flex-grow: 1;
-				 padding: 30px 20px;
+				 padding: 0px 20px;
 				 width: min-content;
 			}
 
@@ -1364,6 +1364,12 @@ $post-titles-font: 'Open Sans';
 	margin-top: 20px;
 	margin-bottom: 13px;
 	
+	&.header {
+		.AuthorPost__image {			
+			width: 58px;
+			height: 58px;			
+		}
+	}
 	p {
 		margin: 0;
 	}
@@ -1373,8 +1379,8 @@ $post-titles-font: 'Open Sans';
 	}
 		&__image {
 			margin: 0;
-			width: 58px;
-			height: 58px;
+			width: 70px;
+			height: 70px;
 			border-radius: 50%;
 			margin-right: 13px;
 		}

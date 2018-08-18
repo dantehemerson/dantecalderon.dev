@@ -35,7 +35,7 @@ class Blog extends React.Component {
 				</section>
 				<div className="Page__content container--full">
 					<div className="row center-xs">
-						<div className="col-xs-12">
+						<div className="col-xs-12 col-lg-11">
 							{
 								posts.map(({ node }) => {										
 									return <Card 

@@ -9,6 +9,7 @@ import ReactDisqusComments from 'react-disqus-comments'
 
 import Content, { HTMLContent } from '../components/Content'
 import SEO from '../components/SEO'
+import AuthorPost from '../components/AuthorPost'
 
 export const Post = ({ content, frontmatter, previous, next, siteTitle, image, siteUrl, contentComponent }) => {
 	const PostContent = contentComponent || Content
@@ -18,6 +19,7 @@ export const Post = ({ content, frontmatter, previous, next, siteTitle, image, s
 				<div className="Post__header__data">
 					<h1 className="Post__title">{ frontmatter.title }</h1>
 					<p className="Post__date">{ frontmatter.date }</p>
+					<AuthorPost/>
 				</div>
 				{ 
 					frontmatter.style !== 'default' && 

@@ -10,6 +10,7 @@ import ReactDisqusComments from 'react-disqus-comments'
 import Content, { HTMLContent } from '../components/Content'
 import SEO from '../components/SEO'
 import AuthorPost from '../components/AuthorPost'
+import Share from '../components/Share'
 
 export const Post = ({ content, frontmatter, previous, next, siteTitle, image, siteUrl, contentComponent, timeToRead }) => {
 	const PostContent = contentComponent || Content
@@ -90,6 +91,7 @@ export default class BlogPostTemplate extends React.Component {
 							</div>
 						}
 					</div>
+					<Share />
 			</div>
 		)
 	}

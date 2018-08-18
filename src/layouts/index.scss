@@ -394,7 +394,7 @@ textarea{
 	 &__title {            
 			font-weight: 900; 
     		text-transform: uppercase;
-    		font-family: 'Playfair Display';
+    		font-family: 'Playfair Display' !important;
 	 }
 
 	&__navwrap {
@@ -438,33 +438,33 @@ textarea{
 			}
 	 }
 			&__item {		
-				margin-left: 5px;	
+				margin-left: 2px;	
 				width: 100%;	
 				@include breakpoint(sm) {
 					width: auto;	
 				}
 				@include breakpoint(md) {
-					margin-left: 1rem;
+					margin-left: 2px;
 				}
 			}
 				 &__link {
 						display: block; 
-						font-size: 16px;  
+						font-size: 15px;  
 						font-weight: 600;
-						//text-transform: uppercase;
+						text-transform: uppercase;
 						padding: 5px 8px;
 						text-align: center;
 						margin: 3px 25px !important;						
 						border-bottom: 3px solid transparent;
 						@include breakpoint(md) {
-							padding: 10px 19px;
-							padding-top: 24px;
+							padding: 10px 17px !important;
+							padding-top: 24px !important;
 						}
 						&:hover {
-							border-bottom: 3px solid #d2d2d2;
+							border-bottom: 4px solid #d2d2d2;
 						}
 						&.active {							
-							border-bottom: 3px solid $hover-link-color;
+							border-bottom: 4px solid $hover-link-color;
 						}
 						img {
 							 padding-right: 4px;
@@ -474,7 +474,7 @@ textarea{
 						}
 					@include breakpoint(sm) {
 						margin: 0 !important;
-						padding: 10px 8px;
+						padding: 10px 10px ;
 						padding-top: 24px;
 					}
 				 }
@@ -703,6 +703,9 @@ textarea{
 			color: #282a2d;                
 	 }
 
+	&:first-child {		
+		margin-top: 20px;
+	}
 	&__topbar {
 		height: 25px;
 		background: #e0e3e6;

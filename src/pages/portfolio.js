@@ -22,7 +22,7 @@ class Portfolio extends React.Component {
 					<div className="container">
 						<div className="row center-xs">
 							<div className="HeaderPortfolio__titlewrap Page__titlewrap text-center col-xs-12 col-md-10 col-lg-7">
-								<h2 className="HeaderPortfolio__title Page__title">Portfolio</h2>
+								<h2 className="HeaderPortfolio__title Page__title">Portafolio</h2>
 								<p className="HeaderPortfolio__description Page__description">Un poco de mi trabajo</p>
 							</div>							
 						</div>

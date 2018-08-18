@@ -24,12 +24,9 @@ El numero se puede obtener con la siguiente operación:
 ```
 Como el número 1 solo tiene encendido el **bit menos signicativo**(el bit del extremo derecho) al recorrer `j` posiciónes, el numero 1 quedará en la posición que nosotros queremos.
 
-> Nota: `j` empieza a contar las posiciónes desde 0, es decir el primer bit desde la derecha estará en la posición `0` es segundo en la posición `1` y asi sucesivamente.
+> Nota: `j` empieza a contar las posiciónes desde 0, es decir el primer bit desde la derecha estará en la posición `0` el segundo en la posición `1` y asi sucesivamente.
 
 Ejemplo
-
-
-
 ```
 000001 // 1 << 0 (j = 0)
 000010 // 1 << 1 (j = 1)

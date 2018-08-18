@@ -85,7 +85,7 @@ export default class BlogPostTemplate extends React.Component {
 
 					<div className="Post__footer">
 						{ post.frontmatter.model === 'post' && 
-							<div className="container Disqus">
+							<div id="disquser" className="container Disqus">
 								<ReactDisqusComments
 								        shortname="dantecalderon"
 								        identifier={ post.frontmatter.path }

@@ -1405,9 +1405,8 @@ $post-titles-font: 'Open Sans';
 
 .Share {
 	display: flex;
-	padding-left: 5vw;
 	a {
-		margin: 0 6px;
+		margin: 0 10px;
 	}	
 	&__icon {
 		width: 26px;
@@ -1415,14 +1414,31 @@ $post-titles-font: 'Open Sans';
 		margin: 0;				
 	}
 
-	&--fixed {
-		position: fixed;
-		left: 0;
+	&--fixed {				
+		position: fixed;	
 		top: 30vh;
 		flex-direction: column;		
+		opacity: 1;		
+		display: none;
+		width: 100%;
+		max-width: 760px; // WIDTH
+		left: 50%;
+		margin-left: -490px; // WIDTH /2
+		padding-left: 12px;
+		padding-right: 12px;
 
+		&.hide {
+			opacity: 0;
+		}
 		a {
 			margin: 6px 0;
+			width: 26px;
+		}
+		@include breakpoint(lg) {
+			display: flex;
+		}	
+		@include breakpoint(xl)	 {
+			margin-left: -515px;
 		}
 	}
 }

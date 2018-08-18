@@ -6,18 +6,24 @@ import Linkedin from '../../assets/images/icons/linkedin.svg'
 import Comment from '../../assets/images/icons/comment.svg'
 
 export default (props) => (
-	<div className={`Share ` + (props.fixed ? "Share--fixed" : "")}>		
-		<a href="https://www.facebook.com" >
-			<img className="Share__icon" title="Compartir en Facebook" src={Facebook}
-			/>
-		</a>
-		<a href="https://www.facebook.com">
-			<img className="Share__icon" title="Compartir en Twitter" src={Twitter}
-			/>
-		</a>	
-		<a href="https://www.facebook.com">
-			<img className="Share__icon" title="Compartir en Linkedin" src={Linkedin}
-			/>
-		</a>
+		<div className={`Share ` 
+			+ (props.fixed ? "Share--fixed" : "") 
+			+ (props.hide ? " hide" : "")}>				
+			<a href="#disquser" >
+				<img className="Share__icon" title="Comentar" src={Comment}
+				/>
+			</a>				
+			<a href="https://www.facebook.com">
+				<img className="Share__icon" title="Compartir en Twitter" src={Twitter}
+				/>
+			</a>	
+			<a href="https://www.facebook.com" >
+				<img className="Share__icon" title="Compartir en Facebook" src={Facebook}
+				/>
+			</a>
+			<a href="https://www.facebook.com">
+				<img className="Share__icon" title="Compartir en Linkedin" src={Linkedin}
+				/>
+			</a>
 	</div>
 )

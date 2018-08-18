@@ -12,7 +12,7 @@ $primary-color: #ff7763;
 
 /** Navbar **/
 $navbar-height: 61px;
-$navbar-link-color: #2e2e2e;
+$navbar-link-color: #333;
 
 /** Rotational **/
 $rotation-sec: 10s;
@@ -229,7 +229,7 @@ textarea{
 }
 
 .Page {
-	 padding-top: remcalc(85px);
+	 padding-top: remcalc(120px);
 	 padding-bottom: remcalc(25px);          
 	 &__title {
 		font-family: $sans-serif-font;
@@ -364,6 +364,7 @@ textarea{
 	    background: rgba(255,255,255,0.984);
 	    -webkit-box-shadow: 0 2px 2px -2px rgba(0,0,0,.15);
 	    	box-shadow: 0 2px 2px -2px rgba(0,0,0,.15);	 	
+
 	 }
 	 .container {
 			display: flex;
@@ -381,8 +382,9 @@ textarea{
 	 a {
 			text-decoration: none; 
 			color: $navbar-link-color;  						
-				font-family: 'Playfair Display';				
-				font-weight: 100;
+				font-family: 'Playfair Display';
+				font-family: $sans-serif-font;				
+				font-weight: 600;
 	 }
 
 	 /** Link to home **/
@@ -447,20 +449,22 @@ textarea{
 			}
 				 &__link {
 						display: block; 
-						font-size: 0.9rem;  
+						font-size: 16px;  
 						font-weight: 600;
-						text-transform: uppercase;
+						//text-transform: uppercase;
 						padding: 5px 8px;
 						text-align: center;
-						margin: 3px 25px !important;
-						&:hover {
-							box-shadow: 0px 0px 0px 1px $font-color;							
-						}
+						margin: 3px 25px !important;						
+						border-bottom: 3px solid transparent;
 						@include breakpoint(md) {
-							padding: 4px 19px;
+							padding: 10px 19px;
+							padding-top: 24px;
 						}
-						&.active {
-							box-shadow: 0px 0px 0px 1px $font-color;
+						&:hover {
+							border-bottom: 3px solid #d2d2d2;
+						}
+						&.active {							
+							border-bottom: 3px solid $hover-link-color;
 						}
 						img {
 							 padding-right: 4px;
@@ -470,7 +474,8 @@ textarea{
 						}
 					@include breakpoint(sm) {
 						margin: 0 !important;
-						padding: 4px 8px;
+						padding: 10px 8px;
+						padding-top: 24px;
 					}
 				 }
 }
@@ -483,6 +488,8 @@ textarea{
 	 background-color: $header_home-bg;
 	 min-height: 600px;
 	 color: $font-color;
+
+
 
 	 @include breakpoint(lg) {
 	 	height: 100vh;
@@ -965,6 +972,9 @@ textarea{
 	background: white;   
 	color: rgba(0,0,0,.88);  
 	font-size: 15px;
+		 &__title {
+	 	-webkit-text-stroke-color: #3384a0;
+	 }
 	&__description {
 		padding-bottom: 15px;
 	}
@@ -975,6 +985,7 @@ textarea{
 			&__title {
 
 			}			
+
 			&__list {         
 				 list-style: none;
 			}

@@ -52,10 +52,16 @@ module.exports = {
               offsetY: `75`,
             }
           },
+          {
+            resolve: 'gatsby-remark-embed-gist',
+            options: {
+               username: 'weirdpattern'        
+            }
+          },
           'gatsby-remark-external-links',
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
+          'gatsby-remark-smartypants',        
         ],
       },
     },

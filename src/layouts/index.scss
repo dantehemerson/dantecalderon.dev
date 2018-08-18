@@ -1234,8 +1234,14 @@ $post-titles-font: 'Open Sans';
     	border-left: 3px solid $font-color;
 	}
 	
-	code[class*="language-text"] {
-		font-size: 1rem;
+	pre[class*="language-text"] code[class*="language-text"] {
+		font-size: 15px;
+		@include breakpoint(md) {			
+			font-size: 1rem;
+		}
+	}
+	code.language-text {
+		font-size: 17px;
 	}
 	pre[class*="language-"] {
 		margin-bottom: 2.2em;		

@@ -13,15 +13,15 @@ export default (props) => (
 				<img className="Share__icon" title="Comentar" src={Comment}
 				/>
 			</a>				
-			<a href="https://www.facebook.com">
+			<a href="http://www.facebook.com/sharer.php?u=https://dantecalderon.com" target="_blank">
 				<img className="Share__icon" title="Compartir en Twitter" src={Twitter}
 				/>
 			</a>	
-			<a href="https://www.facebook.com" >
+			<a href="https://www.facebook.com"  target="_blank">
 				<img className="Share__icon" title="Compartir en Facebook" src={Facebook}
 				/>
 			</a>
-			<a href="https://www.facebook.com">
+			<a href="https://www.facebook.com" target="_blank">
 				<img className="Share__icon" title="Compartir en Linkedin" src={Linkedin}
 				/>
 			</a>

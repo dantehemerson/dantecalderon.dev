@@ -664,7 +664,7 @@ textarea{
 /** Card **/
 .Card {
 	 background: white;
-	 margin: 48px 10px;	
+	 margin: 70px 10px;	
 	 height: 92%;
 	 //border: 1px solid rgba(0,0,0,.1) !important;
 	     border-radius: 6px 6px 0 0;
@@ -734,29 +734,37 @@ textarea{
 	 }
 	 &__title {
 			text-align: center;  
-			font-family: $sans-serif-font;
-			font-weight: 700;
+			font-family: $serif-font;
+			font-size: 21px;
 			margin-bottom: remcalc(10px);
 			cursor: pointer;
+			margin-top: 15px;
+			@include breakpoint(sm) {
+				font-size: 29px;
+			}
+			@include breakpoint(md) {
+				margin-top: 0px;
+			}
 			&:hover {
-				color:  $hover-link-color;
-				text-decoration: underline;
+				color:  $hover-link-color;				
 			}
 	 }
 	 &__content {
 			font-weight: 500;
 			text-align: left;
-			color: #757575;
+			//color: #999;
 			font-family: serif;
-			font-size: 18px;			
+			margin-bottom: 14px;
+			font-size: 16px;			
 			@include breakpoint(sm) {
-				font-size: 19px;							
+				font-size: 17px;							
 			}
 	 }
 	 &__date {
 			text-align: right;
 			font-size: remcalc(13px);			
-			color: #757575;
+			color: #999;
+			margin-bottom: 10px;
 			time {
 				//text-transform: uppercase;
 			}
@@ -813,13 +821,18 @@ textarea{
 			}
 
 			.Card__title {
-				 text-align: left;
+				 text-align: left;				 
 			} 
 
 			.Card__btn {
 				display: inherit;
+				color: #999;
+				font-size: 12px;
 				&:hover {
 					color:  $hover-link-color;
+				}
+				@include breakpoint(sm) {
+					font-size: 13px;
 				}
 			}  
 	 }

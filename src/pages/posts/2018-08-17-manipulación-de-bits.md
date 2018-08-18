@@ -15,7 +15,7 @@ tags:
 
 #### Conocer si el j-ésimo bit(desde la derecha) es 1 ó 0
 
-Para saber si el j-ésimo bit está encendido(`1`) ó apagado(`0`) es  necesario realizar la operación **AND** con un segundo número el cual tenga el bit en la posición `j` (desde la derecha) en `1` y el resto en `0`.
+Para saber si el j-ésimo bit está encendido(1) ó apagado(0) es  necesario realizar la operación **AND** con un segundo número el cual tenga el bit en la posición `j` (desde la derecha) en 1 y el resto en 0.
 
 El numero se puede obtener con la siguiente operación:
 ```
@@ -23,7 +23,7 @@ El numero se puede obtener con la siguiente operación:
 ```
 Como el número 1 solo tiene encendido el **bit menos signicativo**(el bit del extremo derecho), al recorrer `j` posiciónes desde la derecha el bit j-esimo será 1.
 
-> Nota: `j` empieza a contar las posiciónes desde 0, es decir el primer bit desde la derecha estará en la posición `0` el segundo en la posición `1` y asi sucesivamente.
+> Nota: `j` empieza a contar las posiciónes desde 0, es decir el primer bit desde la derecha estará en la posición 0 el segundo en la posición 1 y asi sucesivamente.
 
 Ejemplos:
 ```
@@ -32,6 +32,8 @@ Ejemplos:
 000100 // 1 << 2 (j = 2)
 010000 // 1 << 4 (j = 4) 
 ```
+
+`gist:weirdpattern/ce54fdb1e5621b5966e146026995b974#syntax.text`
 
 #### Conocer si un número es par o impar
 
@@ -46,7 +48,9 @@ Por ejemplo tenemos el siguiente numero en binario:
 Lo valores de acuerdo a las posiciónes del numero son:
 
 ```
-2⁵  2⁴  2³  2²  2¹  2⁰ // El exponente aumenta de Izq. > Der.
+El exponente aumenta de Izq. > Der.
+
+2⁵  2⁴  2³  2²  2¹  2⁰ 
 ---------------------
 32  16  8   4   2   1  
 0   1   0   1   0   0

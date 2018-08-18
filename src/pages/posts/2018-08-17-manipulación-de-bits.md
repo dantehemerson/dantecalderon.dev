@@ -33,7 +33,7 @@ Ejemplos:
 010000 // 1 << 4 (j = 4) 
 ```
 
-`gist:535b3a3ad43609ac2370933fd1edc8a9`
+`gist:dantehemerson/535b3a3ad43609ac2370933fd1edc8a9`
 
 #### Conocer si un número es par o impar
 

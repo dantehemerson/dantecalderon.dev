@@ -232,11 +232,25 @@ textarea{
 	 padding-top: remcalc(85px);
 	 padding-bottom: remcalc(25px);          
 	 &__title {
-		color: #353535;
-		font-size: remcalc(36px);      
-		@include breakpoint(sm) {
-			font-size: remcalc(42px);      			
-		}		
+		font-family: $sans-serif-font;
+		color: #333;		
+		font-size: 11vw;      					
+		@include breakpoint(md) {
+			font-size: remcalc(78px);      			
+		}
+
+		text-align: center;		
+		line-height: 100%;		
+		font-weight: 900;
+		letter-spacing: -1px;
+		text-transform: uppercase;
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: #333;
+		margin-top: 0;
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;	
 	 }
 
 	 &__description {      			
@@ -531,6 +545,9 @@ textarea{
 			color: white;
 			height: auto;
 			//background: #E8F3EC;
+			&__title {
+				-webkit-text-stroke-color: #4caf50;
+			}
 	 }
 
 	 &__form {
@@ -644,7 +661,10 @@ textarea{
 			justify-content: flex-start;
 			align-items: center;   
 			// background-color: #f0f0ee;			
-			color: white;            
+			color: white;    
+		&__title {
+			-webkit-text-stroke-color: #007f93;
+		}        
 	 }
 }
 
@@ -656,6 +676,9 @@ textarea{
 			align-items: center;   
 			// background-color: #f6f1e4;
 			color: white;
+			&__title {
+				-webkit-text-stroke-color: #f06668;
+			}
 	 }
 }
 
@@ -1283,16 +1306,18 @@ $post-titles-font: 'Open Sans';
 }
 
 .Disqus {
-	max-width: 760px;	
-	// background: white;
+	max-width: 760px;		
 	min-height: 300px; // Para que el diseño no cambie mucho cuando se carga
 	padding-top: 25px;
 	padding-bottom: 25px;
 	border-radius: $border-radius;
 	#disqus_thread a { // Changing link color disqus.
 		color: $hover-link-color;
-	}
+	}	
 }
+	
+
+
 
 .NotFound {
 	display: flex;
@@ -1359,9 +1384,9 @@ $post-titles-font: 'Open Sans';
 				 &__img {
 						width: remcalc(27px);   
 				 }
-			}
-	 &__copy {
-
+			}	 
+	 &__heart {
+	 	color: #ff7763;
 	 }
 			&__copytext {
 				 font-size: remcalc(13px);

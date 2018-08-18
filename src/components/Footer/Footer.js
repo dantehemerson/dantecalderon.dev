@@ -23,7 +23,7 @@ const Footer = () => (
 			</a>
 		</div>
 		<div className="Footer__copy">
-			<p className="Footer__copytext"> {"Made with ❤ by "}<a href="https://twitter.com/dantehemerson" target="_blank">Dante Calderón</a></p>
+			<p className="Footer__copytext"> © 2017–2018 . All rights reserved. Made with <span className="Footer__heart">❤</span> by <a href="https://twitter.com/dantehemerson" target="_blank">Dante Calderón</a></p>
 		</div>
 	</footer>	
 )

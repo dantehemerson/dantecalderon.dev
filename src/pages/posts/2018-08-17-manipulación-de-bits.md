@@ -17,15 +17,18 @@ tags:
 
 Para saber si un bit está encendido(`1`) ó apagado(`0`) es necesario compararlo con un segundo número el cual   tenga el bit en la posición `j` (desde la derecha) en `1` y el resto en `0`.
 
-Esto se puede hacer de la siguiente manera:
+El numero se puede obtener con la siguiente operación:
 
 ```
 1 << j
 ```
+Como el número 1 solo tiene encendido el **bit menos signicativo**(el bit del extremo derecho) al recorrer `j` posiciónes, el numero 1 quedará en la posición que nosotros queremos.
 
-> Nota: \`j\`  empieza a contar las posiciónes desde 0, es decir el primer bit desde la derecha estará en la posición \`0\` es segundo en la posición \`1\` y asi sucesivamente.
+> Nota: `j` empieza a contar las posiciónes desde 0, es decir el primer bit desde la derecha estará en la posición `0` es segundo en la posición `1` y asi sucesivamente.
 
-Como el numero 1 solo tiene encendido el bit de la derecha al recorrer `j` posiciónes a la izquierda quedaría asi:
+Ejemplo
+
+
 
 ```
 000001 // 1 << 0 (j = 0)

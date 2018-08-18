@@ -15,13 +15,15 @@ tags:
 
 #### Conocer si el j-ésimo bit(desde la derecha) es 1 ó 0
 
-Para saber si un bit está encendido(`1`) ó apagado(`0`) es necesario compararlo con un segundo mapa en el cual  la posición `j` esté en `1` y el resto en `0`.
-Por ejemplo si `j = 2`, una forma de hacerlo es:
+Para saber si un bit está encendido(`1`) ó apagado(`0`) es necesario compararlo con un segundo número el cual   tenga el bit en la posición `j` (desde la derecha) en `1` y el resto en `0`.
+
+Esto se puede hacer de la siguiente manera:
 
 ```
-// 1 (dec) -> 000001 (bin)
 1 << j
 ```
+
+> Nota: \`j\`  empieza a contar las posiciónes desde 0, es decir el primer bit desde la derecha estará en la posición \`0\` es segundo en la posición \`1\` y asi sucesivamente.
 
 Como el numero 1 solo tiene encendido el bit de la derecha al recorrer `j` posiciónes a la izquierda quedaría asi:
 

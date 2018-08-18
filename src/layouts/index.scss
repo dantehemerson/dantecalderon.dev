@@ -1426,7 +1426,7 @@ $post-titles-font: 'Open Sans';
 		margin-left: -490px; // WIDTH /2
 		padding-left: 12px;
 		padding-right: 12px;
-
+		z-index: -100000; // mUAJAJAJ
 		&.hide {
 			opacity: 0;
 		}

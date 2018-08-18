@@ -6,6 +6,8 @@ import Helmet from 'react-helmet'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
+import { actualPage } from '../utils'
+
 // Syntax scheme
 import 'prismjs/themes/prism-solarizedlight.css'
 
@@ -46,7 +48,7 @@ class Layout extends React.Component {
           
 
         </Helmet>
-        <Navbar/>
+        <Navbar activePage={actualPage(this.props.location.pathname)}/>
         <div className="Dyamic-container">
           {children()}
         </div>

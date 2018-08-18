@@ -383,8 +383,8 @@ textarea{
 			text-decoration: none; 
 			color: $navbar-link-color;  						
 				font-family: 'Playfair Display';
-				font-family: $sans-serif-font;				
-				font-weight: 600;
+				//font-family: $sans-serif-font;				
+				font-weight: 400;
 	 }
 
 	 /** Link to home **/
@@ -392,8 +392,8 @@ textarea{
 	 	z-index: 100;
 	 }
 	 &__title {            
-			font-weight: 900; 
-    		text-transform: uppercase;
+			font-weight: 400 !important; 
+    		text-transform: uppercase;    		
     		font-family: 'Playfair Display' !important;
 	 }
 
@@ -457,14 +457,14 @@ textarea{
 						margin: 3px 25px !important;						
 						border-bottom: 3px solid transparent;
 						@include breakpoint(md) {
-							padding: 10px 17px !important;
+							padding: 11px 17px !important;
 							padding-top: 24px !important;
 						}
 						&:hover {
-							border-bottom: 4px solid #d2d2d2;
+							border-bottom: 3px solid #d2d2d2;
 						}
 						&.active {							
-							border-bottom: 4px solid $hover-link-color;
+							border-bottom: 3px solid $hover-link-color;
 						}
 						img {
 							 padding-right: 4px;
@@ -474,7 +474,7 @@ textarea{
 						}
 					@include breakpoint(sm) {
 						margin: 0 !important;
-						padding: 10px 10px ;
+						padding: 11px 10px ;
 						padding-top: 24px;
 					}
 				 }

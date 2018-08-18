@@ -9,8 +9,8 @@ export default (props) => (
 		<div className="AuthorPost__body">
 			<Link to="/#about" className="AuthorPost__name">Dante Calderón</Link>
 			<p className="AuthorPost__about">Programmer</p>
-			<p className="AuthorPost__date">{ props.date } · { props.timeToRead }</p>
-			
+			<p className="AuthorPost__date">{ props.date } · { props.timeToRead } min de lectura</p>
+
 		</div>
 	</div>
 )

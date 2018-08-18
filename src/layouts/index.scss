@@ -1354,15 +1354,20 @@ $post-titles-font: 'Open Sans';
 
 .AuthorPost {
 	display: flex;	
-	margin-top: 10px;
+	margin-top: 20px;
+	margin-bottom: 13px;
+	
+	p {
+		margin: 0;
+	}
 	&__header {
 		display: flex;	
 		
 	}
 		&__image {
 			margin: 0;
-			width: 55px;
-			height: 55px;
+			width: 58px;
+			height: 58px;
 			border-radius: 50%;
 			margin-right: 13px;
 		}
@@ -1387,7 +1392,7 @@ $post-titles-font: 'Open Sans';
 			font-size: .8rem;
 			margin: 0;
 			font-weight: 600;
-			color: $hover-link-color;			
+			color: #ca9f56;			
 		}
 }
 

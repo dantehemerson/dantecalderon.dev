@@ -1006,6 +1006,13 @@ textarea{
 			}
 }
 
+.wrapper-post {
+	padding: 12px;
+	width: 100%;
+	max-width: 760px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 $post-body-font: serif;
 $post-titles-font: 'Open Sans';
@@ -1394,6 +1401,30 @@ $post-titles-font: 'Open Sans';
 			font-weight: 600;
 			color: #ca9f56;			
 		}
+}
+
+.Share {
+	display: flex;
+	padding-left: 5vw;
+	a {
+		margin: 0 6px;
+	}	
+	&__icon {
+		width: 26px;
+		height: 26px;
+		margin: 0;				
+	}
+
+	&--fixed {
+		position: fixed;
+		left: 0;
+		top: 30vh;
+		flex-direction: column;		
+
+		a {
+			margin: 6px 0;
+		}
+	}
 }
 
 

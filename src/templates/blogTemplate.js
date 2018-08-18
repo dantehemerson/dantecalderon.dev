@@ -32,7 +32,10 @@ export const Post = ({ content, frontmatter, previous, next, siteTitle, image, s
 					</div>
 				}
 			</div>
-			<PostContent content={content} className="container Post__content"/>						
+			<PostContent content={content} className="container Post__content"/>	
+			<div className="wrapper-post">
+				<Share />					
+			</div>
 		</div>
 	)
 }
@@ -79,6 +82,7 @@ export default class BlogPostTemplate extends React.Component {
 					contentComponent={HTMLContent}
 					image={post.fields.thumbnail.childImageSharp.responsiveSizes}
 					/>		
+
 					<div className="Post__footer">
 						{ post.frontmatter.model === 'post' && 
 							<div className="container Disqus">
@@ -91,7 +95,7 @@ export default class BlogPostTemplate extends React.Component {
 							</div>
 						}
 					</div>
-					<Share />
+					<Share fixed/>
 			</div>
 		)
 	}

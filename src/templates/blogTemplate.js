@@ -150,9 +150,9 @@ export const pageQuery = graphql`
 					childImageSharp {						
     					responsiveSizes(maxWidth: 1240) {
     						aspectRatio
-			            src
-			            srcSet
-			            sizes			            
+				            src
+				            srcSet
+				            sizes			            
     					}
 					}
 				}

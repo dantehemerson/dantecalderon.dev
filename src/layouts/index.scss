@@ -3,7 +3,7 @@
 /** VARIABLES **/
 
 /** Colors **/
-$primary-color: #e24f54;
+$primary-color: #ff7763;
 	 
 	 // Header Home
 	 $header_home-bg: #FCE7DD;
@@ -31,7 +31,7 @@ $sans-serif-font: 'Open Sans';
 
 
 $transition-hover-s: .4s;
-$border-radius: 4px;
+$border-radius: 0px;
 
 /** Mixin for responsive design **/
 @mixin breakpoint($class) {  
@@ -753,7 +753,7 @@ textarea{
 			font-weight: 500;
 			text-align: left;
 			//color: #999;
-			font-family: serif;
+			font-family: serif;			
 			margin-bottom: 14px;
 			font-size: 16px;			
 			@include breakpoint(sm) {

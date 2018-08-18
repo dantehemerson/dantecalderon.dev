@@ -7,16 +7,7 @@ import SEO from '../components/SEO'
 
 class Portfolio extends React.Component {
 	render() {
-		const { data } = this.props  	
-		const post = {			
-			title: 'Mi nueva vida',
-			thumbnail: data.image,
-			excerpt: 'Apps simples',
-			date: '20 Junio 2018',
-			path: '/holaMundo',
-			timeToRead: '20s'
-		}
-
+		const { data } = this.props  		
 		const posts = get(this, 'props.data.allMarkdownRemark.edges') || []
 		const siteTitle = get(this, 'props.data.site.siteMetadata.title')
 		const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')	
@@ -68,12 +59,7 @@ class Portfolio extends React.Component {
 }
 
 export const queryPortfolio = graphql`
-  query QueryPortfolio {
-    image: imageSharp(id: {regex: "/about-image/"}) {
-      sizes(maxWidth: 960) {
-        ...GatsbyImageSharpSizes_tracedSVG
-      }
-    }   
+  query QueryPortfolio {   
     site {
       siteMetadata {
             title

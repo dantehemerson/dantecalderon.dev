@@ -1419,20 +1419,19 @@ $post-titles-font: 'Open Sans';
 		top: 30vh;
 		flex-direction: column;		
 		opacity: 1;		
-		display: none;
-		width: 100%;
-		max-width: 760px; // WIDTH
+		display: none;				
 		left: 50%;
-		margin-left: -490px; // WIDTH /2
+		margin-left: -490px; 
 		padding-left: 12px;
-		padding-right: 12px;
-		z-index: -100000; // mUAJAJAJ
+		padding-right: 12px;		
 		&.hide {
 			opacity: 0;
 		}
 		a {
 			margin: 6px 0;
 			width: 26px;
+			z-index: 10;
+			position: relative;
 		}
 		@include breakpoint(lg) {
 			display: flex;

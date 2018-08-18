@@ -456,6 +456,7 @@ textarea{
 						text-align: center;
 						margin: 3px 25px !important;						
 						border-bottom: 3px solid transparent;
+						transition: all .4s !important;
 						@include breakpoint(md) {
 							padding: 11px 17px !important;
 							padding-top: 24px !important;

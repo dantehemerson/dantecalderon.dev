@@ -11,15 +11,18 @@ import Content, { HTMLContent } from '../components/Content'
 import SEO from '../components/SEO'
 import AuthorPost from '../components/AuthorPost'
 
-export const Post = ({ content, frontmatter, previous, next, siteTitle, image, siteUrl, contentComponent }) => {
+export const Post = ({ content, frontmatter, previous, next, siteTitle, image, siteUrl, contentComponent, timeToRead }) => {
 	const PostContent = contentComponent || Content
 	return (
 		<div className={`Post ${ frontmatter.style }`}>
 			<div className="Post__header">
 				<div className="Post__header__data">
 					<h1 className="Post__title">{ frontmatter.title }</h1>
-					<p className="Post__date">{ frontmatter.date }</p>
-					<AuthorPost/>
+					{/*  <p className="Post__date">{ frontmatter.date }</p> */}
+					<AuthorPost 
+						date={ frontmatter.date }
+						timeToRead={timeToRead}
+						/>				
 				</div>
 				{ 
 					frontmatter.style !== 'default' && 
@@ -52,7 +55,7 @@ export default class BlogPostTemplate extends React.Component {
 		console.log(comment.text);
 	}
 	render() {
-		const post = this.props.data.markdownRemark
+		const post = this.props.data.markdownRemark		
 		const siteMetadata = get(this.props, 'data.site.siteMetadata')
 		const { previous, next } = this.props.pathContext
 		const ast = post.htmlAst
@@ -104,6 +107,7 @@ export const pageQuery = graphql`
 			id
 			html
 			htmlAst
+			timeToRead
 			frontmatter {
 				title
 				date(formatString: "MMMM DD, YYYY")

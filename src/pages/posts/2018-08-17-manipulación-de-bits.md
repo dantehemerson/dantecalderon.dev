@@ -35,39 +35,45 @@ Ejemplos:
 
 Luego se realiza la operación and así:
 
-`gist:dantehemerson/535b3a3ad43609ac2370933fd1edc8a9`
+`gist:dantehemerson/535b3a3ad43609ac2370933fd1edc8a9#file-check-if-j-is-on__blog`
 
 #### Conocer si un número es par o impar
 
-Para convertir un numero a decimal lo que se hace es sumar sus valores correspondiente. 
+Una forma de convertir un numero binario a decimal es colocando el numero en binario y luego las potencias de dos de derecha a izquierda, incrementando el exponente en uno en cada potencia.
 
 Por ejemplo tenemos el siguiente numero en binario:
 
 ```
 010100
 ```
-
-Lo valores de acuerdo a las posiciónes del numero son:
+Escribimos las potencias y el resultado de las potencias y el numero en binario:
 
 ```
-El exponente aumenta de Izq. > Der.
-
 2⁵  2⁴  2³  2²  2¹  2⁰ 
 ---------------------
 32  16  8   4   2   1  
 0   1   0   1   0   0
 ```
 
-Luego se suman todas los valores de las posiciónes que sean 1, por lo que la suma sería:
+Luego se suman todas los valores de las posiciónes que sean 1:
 
 ```
 16 + 4 = 22 (dec)
 ```
+Como vemos el resultado es 22 en decimal, entonces diríamos que:
+```
+010100 (bin) = 22 (dec)
+```
 
-Como vemos cada numero es el doble del anterior iniciando en 1. La suma de los valores sera par siempre que el bit menos significativo sea 0, ya que su valor es 1.
+Si sumamos los valores de cualquier combinación de los bits excepto el **bit menos signicativo** el resultado siempre será par ya que todos tiene mitad, por que es el resultado del doble del anterior. Por eso decimos que el **bit menos significativo** es el que define la paridad de un número.
 
-Si sumamos los valores de cualquier combinación de los bits excepto el **bit menos signicativo** el resultado siempre será par ya que todos tiene mitad, por que es el resultado del doble del anterior. Por eso decimos que el **bit menos significativo** es el que define la paridad de un numero.
+En conclusión si el bit menos significativo del numero es 1 entonces es impar, y si es 0 entonces es par.
 
-En conclución si el bit menos significativo del numero es 1 entonces es impar, y si es 0 entonces es par.
+Por ejemplo, para saber si un número S es par o impar  realizamos la siguiente operación:
+```
+S & 1
+```
+El resultado de esta operación será siempre 0 ó 1. 
 
-Esto se hace de la siguiente manera:
+El siguiente código nos dice si el numero es par ó impar.
+`gist:dantehemerson/535b3a3ad43609ac2370933fd1edc8a9#file-s-es-par-o-impar__blog`

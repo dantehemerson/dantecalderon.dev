@@ -30,7 +30,7 @@ $serif-font: 'Playfair Display';
 $sans-serif-font: 'Open Sans';
 
 
-$transition-hover-s: .4s;
+$transition-hover-s: .3s;
 $border-radius: 0px;
 
 /** Mixin for responsive design **/
@@ -209,8 +209,7 @@ body {
 }
 
 input[type="text"], input[type="email"], textarea {
-//	 background: #e3e8eb;
-	 border: remcalc(2px) solid #e3e8eb;
+	 border: 1px solid #e3e8eb;
 	 border-radius: $border-radius;   
 	 box-shadow: none;
 	 color: #55595c;
@@ -592,12 +591,12 @@ textarea{
 
 				 }
 			&__submit{
-				padding: 15px 40px;
+				padding: 15px 48px;
 				font-weight: bold;				
-				border-radius: $border-radius;
 				background: #28282e;
 				&:hover {
-					background: $hover-link-color;
+					background-color: #0085a1;
+    				//border: 1px solid #0085a1;;
 				}
 
 			}
@@ -695,10 +694,8 @@ textarea{
 /** Card **/
 .Card {
 	 background: white;
-	 margin: 70px 10px;	
+	 margin: 50px 10px;	
 	 height: 92%;
-	 //border: 1px solid rgba(0,0,0,.1) !important;
-	     border-radius: 6px 6px 0 0;
 	 a { // El Link contenedor
 			text-decoration: none;
 			color: #282a2d;                
@@ -761,7 +758,7 @@ textarea{
 	 }
 
 	 &__body {
-			padding: 15px 20px;
+			padding: 5px 20px 0 20px;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;			
@@ -821,6 +818,7 @@ textarea{
 	 		display: flex;
 			flex-wrap: wrap;
 			height: auto;
+			 margin: 70px 10px;	
 			border-radius: 0;
 			.Card__header {
 				// height: auto;         

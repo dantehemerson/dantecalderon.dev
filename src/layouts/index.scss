@@ -228,7 +228,7 @@ textarea{
 }
 
 .Page {
-	 padding-top: remcalc(120px);
+	 padding-top: remcalc(100px);
 	 padding-bottom: remcalc(25px);          
 	 &__title {
 		font-family: $sans-serif-font;
@@ -702,7 +702,7 @@ textarea{
 	 }
 
 	&:first-child {		
-		margin-top: 20px;
+		margin-top: 20px !important;
 	}
 	&__topbar {
 		height: 25px;

@@ -35,7 +35,7 @@ Ejemplos:
 
 Luego se realiza la operación and así:
 
-`gist:dantehemerson/535b3a3ad43609ac2370933fd1edc8a9#check-if-j-is-on__blog-cpp`
+`gist:dantehemerson/535b3a3ad43609ac2370933fd1edc8a9#S%2520es%2520par%2520o%2520impar__blog.cpp`
 
 #### Conocer si un número es par o impar
 

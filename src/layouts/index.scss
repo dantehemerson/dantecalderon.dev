@@ -6,7 +6,7 @@
 $primary-color: #ff7763;
 	 
 	 // Header Home
-	 $header_home-bg: #FCE7DD;
+	 $header_home-bg: #f8f9f9;
 	 $contact_home-bg: #a0e2b4b5;
 	 $hover-link-color: #DFBD83;
 
@@ -445,10 +445,8 @@ textarea{
 				width: 100%;	
 				@include breakpoint(md) {
 					width: auto;	
-				}
-				@include breakpoint(md) {
 					margin-left: 2px;
-				}
+				}				
 			}
 				 &__link {
 						display: block; 
@@ -456,13 +454,12 @@ textarea{
 						font-weight: 600;
 						text-transform: uppercase;
 						padding: 5px 8px;
-						text-align: center;
-						margin: 3px 25px !important;						
+						text-align: center;						
 						border-bottom: 3px solid transparent;
 						@include breakpoint(md) {
 							transition: all .4s !important;
-							padding: 11px 17px !important;
-							padding-top: 24px !important;
+							padding: 11px 16px !important;
+							padding-top: 26px !important;
 						}
 						&:hover {
 							border-bottom: 3px solid #d2d2d2;
@@ -475,12 +472,7 @@ textarea{
 							 width: 21px;
 							 top: 2px;
 							 position: relative;
-						}
-					@include breakpoint(md) {
-						margin: 0 !important;
-						padding: 11px 10px ;
-						padding-top: 24px;
-					}
+						}					
 				 }
 }
 
@@ -516,8 +508,9 @@ textarea{
 			font-weight: 900;
 			text-transform: uppercase; 
 			text-align: center;
+			color: #363636;
 			@include breakpoint(sm) {
-				font-size: 3rem;      
+				font-size: 4rem;      
 			}
 	 }
 
@@ -982,7 +975,7 @@ textarea{
 .About {
 	background: white;   
 	color: rgba(0,0,0,.88);  
-	padding-top: 4.3rem;
+	padding-top: 4.8rem;
 	font-size: 15px;
 		 &__title {
 	 	-webkit-text-stroke-color: #3384a0;

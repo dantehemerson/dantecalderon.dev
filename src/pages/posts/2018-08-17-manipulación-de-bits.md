@@ -33,6 +33,8 @@ Ejemplos:
 010000 // 1 << 4 (j = 4) 
 ```
 
+Luego se realiza la operación and así:
+
 `gist:dantehemerson/535b3a3ad43609ac2370933fd1edc8a9`
 
 #### Conocer si un número es par o impar

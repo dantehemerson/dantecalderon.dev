@@ -77,3 +77,23 @@ El resultado de esta operación será siempre 0 ó 1.
 
 El siguiente código nos dice si el numero es par ó impar.
 
+#### Dividir y multiplicar un entero por 2
+Las operaciónes son:
+* **`S << 1`** : Para multiplicar por 2
+* **`S >> 1`** : Para dividir entre 2
+El resultado es un entero redondeado. Por ejemplo la división `17/2` sería `8` y no `8.5`. 
+
+Mas ejemplos:
+
+```
+// Teniendo en cuenta que cada operación
+// influye en la siguiente: 
+
+S      = 011010 (bin) = 26 (dec) 
+S << 1 = 110100 (bin) = 52 (dec) = S * 2
+S >> 2 = 001101 (bin) = 13 (dec) = S / 2²
+S >> 1 = 011010 (bin) = 6  (dec) = S / 2
+```
+
+
+

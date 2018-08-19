@@ -6,9 +6,6 @@ const Footer = () => (
 			<a className="Footer__icon" target="_blank" href="https://twitter.com/dantehemerson">
 				<img className="Footer__icon__img" src="https://icongr.am/fontawesome/twitter.svg?size=20&color=282a2d"/>	
 			</a>
-			<a className="Footer__icon" target="_blank" href="https://fb.com/dantehemerson">
-				<img className="Footer__icon__img" src="https://icongr.am/fontawesome/facebook.svg?size=20&color=282a2d"/>	
-			</a>
 			<a className="Footer__icon" target="_blank" href="https://www.instagram.com/dantehemerson">
 				<img className="Footer__icon__img" src="https://icongr.am/fontawesome/instagram.svg?size=20&color=282a2d"/>	
 			</a>

@@ -80,7 +80,7 @@ export const queryBlog = graphql`
     ) {
     	edges {
     		node {
-    			excerpt
+    			excerpt(pruneLength: 320)
     			timeToRead
     			fields {
     				thumbnail {

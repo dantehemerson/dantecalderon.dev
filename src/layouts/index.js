@@ -23,8 +23,9 @@ class Layout extends React.Component {
     return (
       <div>
         <Helmet>
-          <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Open+Sans:400,600,700,800" rel="stylesheet"/>
-        {/* |Noto+Serif:400,400i,700,700i  */}
+          <link 
+          href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Noto+Serif:400,700,400italic,700italic|Playfair+Display:400,700" rel="stylesheet"/>      
+          {/* Quitar el 400 de Playfair*/}  
           <meta name="theme-color" content="#DFBD83"/>          
           <meta name="distribution" content="global"/>
           <meta httpEquiv="Content-Language" content="es" />

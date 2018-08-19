@@ -1439,13 +1439,23 @@ $post-titles-font: 'Open Sans';
 
 .AuthorPost {
 	display: flex;	
-	margin-top: 20px;
-	margin-bottom: 13px;
-	
+	margin-top: 20px;	
 	&.header {
+		margin-bottom: 13px;
+		padding-left: 0px;
 		.AuthorPost__image {			
 			width: 58px;
 			height: 58px;			
+		}
+
+		.AuthorPost__name {
+			font-size: .9rem;
+			color: inherit !important;
+		}
+
+		.AuthorPost__about {
+			font-size: .8rem;
+			color: rgba(0,0,0,.54)!important;
 		}
 	}
 	p {
@@ -1457,8 +1467,8 @@ $post-titles-font: 'Open Sans';
 	}
 		&__image {
 			margin: 0;
-			width: 70px;
-			height: 70px;
+			width: 75px;
+			height: 75px;
 			border-radius: 50%;
 			margin-right: 13px;
 		}
@@ -1469,15 +1479,16 @@ $post-titles-font: 'Open Sans';
     	justify-content: center;
 	}
 		&__name {
-			font-size: .9rem;
+			font-size: 1rem;
 			font-weight: 600;
+			color: white !important;
 			background-image: none !important;
 		}
 
 		&__about {
-			font-size: .8rem;
+			font-size: .9rem;
 			margin: 0;
-			color: rgba(0,0,0,.54)!important;
+			color: #d5d5d5 !important;
 		}
 		&__date {
 			font-size: .8rem;
@@ -1489,6 +1500,7 @@ $post-titles-font: 'Open Sans';
 
 .Share {
 	display: flex;
+	justify-content: center;
 	a {
 		margin: 0 10px;
 	}	
@@ -1522,6 +1534,38 @@ $post-titles-font: 'Open Sans';
 		}	
 		@include breakpoint(xl)	 {
 			margin-left: -520px;
+		}
+	}
+}
+
+.Foot {
+
+	&__Share {
+		margin-top: 45px;		
+		border-top: 1px solid rgba(0, 0, 0, 0.05);
+		border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+		padding: 45px 0 30px 0;
+		margin-bottom: 50px;
+	}
+
+	&__AuthorPost {
+		background: #568492;
+		padding: 10px 10px 10px 15px;
+		border: 1px solid #4B6F7A;
+
+		margin-top: 10px;
+		margin-bottom: 10px;
+
+		&__social {
+			padding: 2px 0 10px 0;		
+			display: flex;
+			justify-content: center;
+			a {
+				margin-right: 13px;
+				img {
+					margin: 0;
+				}
+			}
 		}
 	}
 }

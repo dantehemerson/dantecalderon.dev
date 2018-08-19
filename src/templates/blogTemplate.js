@@ -35,10 +35,16 @@ export const Post = ({ content, frontmatter, previous, next, siteTitle, image, s
 			</div>
 			<PostContent content={content} className="container Post__content"/>	
 			<div className="wrapper-post">
-				<Share title={frontmatter.title} url={`https://dantecalderon.com/` + frontmatter.path}/>
-				<AuthorPost 
-						date={ frontmatter.date }
-						timeToRead={timeToRead}	/>						
+
+				<div className="Foot__Share">
+					<Share title={frontmatter.title} url={`https://dantecalderon.com/` + frontmatter.path}/>
+				</div>				
+				<div className="Foot__AuthorPost">
+					<AuthorPost 
+							date={ frontmatter.date }
+							timeToRead={timeToRead}	/>						
+					
+				</div>
 			</div>
 		</div>
 	)
@@ -66,7 +72,7 @@ export default class BlogPostTemplate extends React.Component {
 
 		const scrollListenerShare = () => {	
 			let y = body.scrollTop - contentY + 110 // 60 para el navbar						
-			let show = y >= 0 && y - 110 <= height - 340
+			let show = y >= 0 && y - 0 <= height - 340
 
 			if(this.state.show_share != show) {				
 				this.setState({ 'show_share': show })		

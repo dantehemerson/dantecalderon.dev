@@ -257,7 +257,10 @@ textarea{
 		color: #353535;
 		margin: 0;
 		font-family: serif;
-		font-size: 19px;
+		font-size: 16px;
+		@include breakpoint(sm) {
+			font-size: 19px;
+		}
 	 } 
 
 	&__content {			
@@ -792,7 +795,7 @@ textarea{
 			//color: #999;
 			font-family: serif;			
 			margin-bottom: 14px;
-			font-size: 16px;			
+			font-size: 15px;			
 			@include breakpoint(sm) {
 				font-size: 17px;							
 			}
@@ -1074,7 +1077,7 @@ $post-titles-font: 'Open Sans';
 	padding-top: 75px;
 	padding-bottom: 50px;
 	font-family: $post-body-font;
-	font-size: 19px;	
+	font-size: 18px;	
 	// === CONFIGURACIÓN DE ESTILOS POST ===
 	.gatsby-resp-image-wrapper {
 		max-width: 100% !important;
@@ -1246,6 +1249,33 @@ $post-titles-font: 'Open Sans';
 		font-size: 19px;
 	}
 	
+	@include breakpoint(sm) {
+		font-size: 19px;		
+
+		&__title {
+			font-size: 28px;
+
+				// DILEMA
+				 //font-family: 39px;
+				// font-family: 'Playfair Display' !important;
+		}
+		&__date {
+			font-size: 13px;
+	 		color: $hover-link-color!important;
+		}			
+		h2{			
+			margin-top: 30px;
+			font-size: 17px;
+		}		
+		h3 {			
+			margin-top: 30px;
+			font-size: 25px;
+		}	
+		h4 {
+			font-size: 19px;
+		}
+	}
+
 	@include breakpoint(md) {
 		font-size: 21px;		
 
@@ -1257,8 +1287,7 @@ $post-titles-font: 'Open Sans';
 				// font-family: 'Playfair Display' !important;
 		}
 		&__date {
-			font-size: 14px;
-	 		color: $hover-link-color!important;
+			font-size: 14px;	 		
 		}			
 		h2{			
 			margin-top: 40px;

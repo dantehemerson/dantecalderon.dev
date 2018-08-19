@@ -527,15 +527,15 @@ textarea{
 	 }
 
 	 &__btn-about {		 
-	    border: 2px solid #1f1c1b;
+	    border: 1px solid #1f1c1b;
 	    padding: 10px 50px;
 	    margin-top: 28px;	    
 	    color: #1f1c1b;
 	    display: inline-block;
 	    border-radius: $border-radius;
 	    &:hover {
-			background: #1f1c1b;
-			color: white;
+			background: #eff1f1;
+			//color: white;
 	    }
 
 	 }

@@ -301,7 +301,7 @@ textarea{
 	background: transparent;
 	cursor: pointer;
 	z-index: 100;
-	@include breakpoint(sm) {
+	@include breakpoint(md) {
 		display: none;
 	}
 
@@ -364,9 +364,9 @@ textarea{
 	 z-index: 100;
 
 	 &.noTop {
-	    background: rgba(255,255,255,0.984);
-	    -webkit-box-shadow: 0 2px 2px -2px rgba(0,0,0,.15);
-	    	box-shadow: 0 2px 2px -2px rgba(0,0,0,.15);	 	
+	    background: rgba(255,255,255,1);	    
+	    box-shadow: 0px 0px 0px 1px #f3f3f3;	 	
+
 
 	 }
 	 .container {
@@ -429,7 +429,7 @@ textarea{
 				opacity: 1;
 			}
 
-			@include breakpoint(sm) {
+			@include breakpoint(md) {
 				opacity: 1;				
 				visibility: visible;
 				background: transparent !important;
@@ -443,7 +443,7 @@ textarea{
 			&__item {		
 				margin-left: 2px;	
 				width: 100%;	
-				@include breakpoint(sm) {
+				@include breakpoint(md) {
 					width: auto;	
 				}
 				@include breakpoint(md) {
@@ -459,8 +459,8 @@ textarea{
 						text-align: center;
 						margin: 3px 25px !important;						
 						border-bottom: 3px solid transparent;
-						transition: all .4s !important;
 						@include breakpoint(md) {
+							transition: all .4s !important;
 							padding: 11px 17px !important;
 							padding-top: 24px !important;
 						}
@@ -476,7 +476,7 @@ textarea{
 							 top: 2px;
 							 position: relative;
 						}
-					@include breakpoint(sm) {
+					@include breakpoint(md) {
 						margin: 0 !important;
 						padding: 11px 10px ;
 						padding-top: 24px;
@@ -981,6 +981,7 @@ textarea{
 .About {
 	background: white;   
 	color: rgba(0,0,0,.88);  
+	padding-top: 3rem;
 	font-size: 15px;
 		 &__title {
 	 	-webkit-text-stroke-color: #3384a0;

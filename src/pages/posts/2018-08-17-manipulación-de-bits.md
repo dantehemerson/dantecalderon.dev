@@ -13,9 +13,10 @@ tags:
 ---
 ### Operaciónes útiles
 
+:smile:
 #### Conocer si el j-ésimo bit(desde la derecha) es 1 ó 0
 
-Para saber si el j-ésimo bit está encendido(1) ó apagado(0) es  necesario realizar la operación **AND** con un segundo número el cual tenga el bit en la posición `j` (desde la derecha) en 1 y el resto en 0.
+Para :smile: saber si el j-ésimo bit está encendido(1) ó apagado(0) es  necesario realizar la operación **AND** con un segundo número el cual tenga el bit en la posición `j` (desde la derecha) I:arrow_down_small:I :computer: Code en 1 y el resto en 0.
 
 El numero se puede obtener con la siguiente operación:
 ```

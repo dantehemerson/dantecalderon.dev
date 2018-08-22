@@ -5,6 +5,7 @@ description: Pagina web de una empresa mantenimiento de automoviles.
 path: portfolio/car-mechanics-template
 thumbnail: /img/carmechanicstemplate-home.png
 date: '2017-12-02T08:48:52-06:00'
+published: true
 style: normal-img
 tags:
   - Html5

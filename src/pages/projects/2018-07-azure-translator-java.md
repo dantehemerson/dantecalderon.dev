@@ -7,6 +7,7 @@ description: >-
 path: portfolio/azure-translator-java
 thumbnail: /img/azure-translator-java.png
 date: '2018-06-07T08:31:52-05:00'
+published: true
 style: normal-img
 tags:
   - Java

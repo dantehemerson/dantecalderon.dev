@@ -5,6 +5,7 @@ description: Una pagina clon de Instagram. Hecho con Materialize.
 path: portfolio/flautigram
 thumbnail: /img/flautigram-home.png
 date: '2018-01-20T08:45:03-06:00'
+published: true
 style: normal-img
 tags:
   - javascript

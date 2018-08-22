@@ -5,6 +5,7 @@ description: 'Un template para una cafetería, hecha con el framework Foundation
 path: portfolio/cafeteria-template
 thumbnail: /img/cafeteria.png
 date: '2018-05-05T08:41:18-05:00'
+published: true
 style: normal-img
 tags:
   - foundation

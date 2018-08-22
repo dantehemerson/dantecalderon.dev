@@ -154,7 +154,7 @@ export const pageQuery = graphql`
 			fields {
 				thumbnail {
 					childImageSharp {						
-    					responsiveSizes(maxWidth: 1240) {
+    					responsiveSizes(maxWidth: 1920) {
     						aspectRatio
 				            src
 				            srcSet

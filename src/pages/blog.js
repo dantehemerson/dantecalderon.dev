@@ -37,20 +37,22 @@ class Blog extends React.Component {
 					<div className="row center-xs">
 						<div className="col-xs-12 col-lg-11">
 							{
-								posts.map(({ node }) => {										
-									return <Card 
-												data={
-													{
-														title: node.frontmatter.title,
-														thumbnail: node.fields.thumbnail.childImageSharp.resolutions,
-														excerpt: node.excerpt,
-														date: node.frontmatter.date,
-														path: `/${node.frontmatter.path}`,
-														timeToRead: node.timeToRead
-													}
-												} 
-												mode="blog" 
-												key={ node.frontmatter.path }/>									
+								posts.map(({ node }) => {
+									console.log(node.frontmatter.published)			
+									if(node.frontmatter.published)
+										return <Card 
+													data={
+														{
+															title: node.frontmatter.title,
+															thumbnail: node.fields.thumbnail.childImageSharp.resolutions,
+															excerpt: node.excerpt,
+															date: node.frontmatter.date,
+															path: `/${node.frontmatter.path}`,
+															timeToRead: node.timeToRead
+														}
+													} 
+													mode="blog" 
+													key={ node.frontmatter.path }/>							
 								})
 							}
 						</div>						

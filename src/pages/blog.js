@@ -62,12 +62,7 @@ class Blog extends React.Component {
 }
 
 export const queryBlog = graphql`
-  query QueryBlog {      
-  	image: imageSharp(id: {regex: "/about-image/"}) {
-      sizes(maxWidth: 960) {
-        ...GatsbyImageSharpSizes_tracedSVG
-      }
-    } 
+  query QueryBlog {        
     site {
       siteMetadata {
             title
@@ -95,7 +90,8 @@ export const queryBlog = graphql`
     				date(formatString: "DD MMMM, YYYY")
     				title
     				path 
-    				thumbnail   			
+    				thumbnail
+    				published   			
     			}
     		}
     	}

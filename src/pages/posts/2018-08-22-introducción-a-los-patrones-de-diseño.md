@@ -8,7 +8,7 @@ path: introduccion-patrones-de-diseno
 thumbnail: /img/jhj.png
 date: '2018-08-22T00:07:28-05:00'
 published: true
-style: default
+style: full-image
 tags:
   - Patrones de Diseño
   - UML

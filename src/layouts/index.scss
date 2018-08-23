@@ -408,6 +408,7 @@ textarea{
 			top: 0;
 			box-shadow: 0px 0px 0px 1px #f3f3f3;
 			width: 80%;
+			max-width: 420px;
 			height: 100vh;
 			flex-direction: column;
 			justify-content: center;
@@ -430,6 +431,7 @@ textarea{
 			@include breakpoint(md) {
 				right: auto;
 				width: 100%;
+				max-width: initial !important;
 				box-shadow: 0px 0px 0px 0px transparent;
 				opacity: 1;				
 				visibility: visible;

@@ -404,31 +404,33 @@ textarea{
 	}
 	 &__nav {			
 			list-style: none;      
-			position: absolute;
-			left: 0;
+			position: absolute;			
 			top: 0;
-			width: 100%;
+			box-shadow: 0px 0px 0px 1px #f3f3f3;
+			width: 80%;
 			height: 100vh;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 			display: none; 				
-			display: flex;
-			visibility: hidden;
+			display: flex;			
+			background: white;				
 			transition: all 0s !important;
 			* {
 				transition: all 0s !important;		
 			}
-			transition: opacity .4s !important;
-			opacity: 0;
-			&.open {
-				transition: opacity .4s !important;
-				visibility: visible;
-				background: white;
-				opacity: 1;
+			transition: right .4s !important;			
+			right: -102%;
+			&.open {				
+				transition: right .4s !important;				
+				left: auto;
+				right: 0;				
 			}
 
 			@include breakpoint(md) {
+				right: auto;
+				width: 100%;
+				box-shadow: 0px 0px 0px 0px transparent;
 				opacity: 1;				
 				visibility: visible;
 				background: transparent !important;
@@ -440,31 +442,47 @@ textarea{
 			}
 	 }
 			&__item {		
-				margin-left: 2px;	
+				margin-left: 0px;	
 				width: 100%;	
+				border-top: 1px solid #eeeded;			
+					&:last-child {
+						border-bottom: 1px solid #eeeded;
+					}			
 				@include breakpoint(md) {
+					border-top: 0 solid transparent !important;
 					width: auto;	
-					margin-left: 2px;
-				}				
+					margin-left: 2px;					
+					&:last-child {
+						border-bottom: 0px solid #eeeded;
+					}
+				}	
 			}
 				 &__link {
 						display: block; 
 						font-size: 15px;  
 						font-weight: 600;
 						text-transform: uppercase;
-						padding: 5px 8px;
-						text-align: center;						
-						border-bottom: 3px solid transparent;
-						@include breakpoint(md) {
+						padding: 8px 8px;
+						text-align: center;			
+
+						@include breakpoint(md) {	
+							border-bottom: 3px solid transparent !important;	
 							transition: all .4s !important;
 							padding: 11px 16px !important;
 							padding-top: 26px !important;
+							&:hover {
+								background: transparent !important;
+								border-bottom: 3px solid #d2d2d2 !important;
+							}
+							&.active {							
+								border-bottom: 3px solid $hover-link-color !important;
+							}
 						}
 						&:hover {
-							border-bottom: 3px solid #d2d2d2;
+							background: #f2f5f5;
 						}
+
 						&.active {							
-							border-bottom: 3px solid $hover-link-color;
 						}
 						img {
 							 padding-right: 4px;

@@ -55,7 +55,7 @@ class Navbar extends React.Component {
 							</span>
 						</button>
 						<ul className={`Navbar__nav ${menuIsOpen ? 'open' : ''}`}>
-							<li className='Navbar_item'>
+							<li className='Navbar__item'>
 								<Link onClick={ (e) => { this.setState({menuIsOpen: false}) } } className={`Navbar__link ${ this.props.activePage === '' ? 'active' : ''}`} to="/">
 									<img className="icon-item" src="https://icongr.am/clarity/home.svg?size=20&color=000000"/>Inicio
 								</Link>

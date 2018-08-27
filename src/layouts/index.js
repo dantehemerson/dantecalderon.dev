@@ -14,13 +14,16 @@ import 'prismjs/themes/prism-solarizedlight.css'
 
 import './index.scss'
 
-import '@webcomponents/custom-elements/custom-elements.min.js'
-import '@clr/icons/clr-icons.min.js'
 import '@clr/icons/clr-icons.min.css'
 
 class Layout extends React.Component {
   static propTypes = {
     children: PropTypes.func,
+  }
+
+  componentDidMount() {
+    require('@webcomponents/custom-elements/custom-elements.min.js')
+    require('@clr/icons/clr-icons.min.js')
   }
 
   render() {

@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
+import Img from 'gatsby-image'
+
+import Logo from '../../assets/images/logo.jpg'
 
 class Navbar extends React.Component {	
 	state = {
@@ -43,12 +46,10 @@ class Navbar extends React.Component {
 				(this.state.navbarIsTop ? '' : 'noTop') 
 			}>				
 				<div className="container">
-					<div className="Navbar__titlewrap">
-						<img src="" />
-						<Link onClick={ (e) => { this.setState({menuIsOpen: false}) } } className="Navbar__title" to="/">Dante Calderón</Link>
-					</div>
-					
-
+					<Link className="Navbar__titlewrap" onClick={ (e) => { this.setState({menuIsOpen: false}) } }  to="/">				
+						<img className="Navbar__logo" src={Logo} />
+						<p className="Navbar__title">Dante Calderón</p>
+					</Link>										
 					<div className="Navbar__navwrap">
 						
 						<button onClick={ this.handleToggle } id="navbarToggler" className={`Navbar__toggler ${menuIsOpen ? 'open' : ''}`}>

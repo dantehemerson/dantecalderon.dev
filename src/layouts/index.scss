@@ -391,11 +391,22 @@ textarea{
 	 /** Link to home **/
 	 &__titlewrap {
 	 	z-index: 100;
+	 	display: flex;
+		align-items: center;
+
 	 }
 	 &__title {            		
     	text-transform: capitalize;    		    	
     	font-weight: 900 !important;
 	 }
+	&__logo {
+		width: 39px;
+		height: 39px;
+		border-radius: 50%;
+		margin-right: 8px;
+		
+	}
+	
 
 	&__navwrap {
 		//@include breakpoint()

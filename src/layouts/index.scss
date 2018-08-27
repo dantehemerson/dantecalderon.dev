@@ -386,6 +386,10 @@ textarea{
 		color: $navbar-link-color;  						
 		font-family: $sans-serif-font;				
 		font-weight: 600;
+
+		&:hover {
+			background: #f5f5f5;
+		}
 	 }
 
 	 /** Link to home **/
@@ -393,6 +397,7 @@ textarea{
 	 	z-index: 100;
 	 	display: flex;
 		align-items: center;
+    	border-radius: 3px;
 
 	 }
 	 &__title {            		
@@ -400,9 +405,10 @@ textarea{
     	font-weight: 900 !important;
 	 }
 	&__logo {
-		width: 39px;
-		height: 39px;
-		border-radius: 50%;
+		width: 32px;
+		height: 32px;
+		border: 1px solid #c0a16c;
+		border-radius: 3px;
 		margin-right: 8px;
 		
 	}
@@ -484,9 +490,7 @@ textarea{
 								opacity: 1;						
 							}							
 						}
-						&:hover {
-							background: #f5f5f5;
-						}
+						
 
 						&.active {							
 							color: #1d6fdc !important;

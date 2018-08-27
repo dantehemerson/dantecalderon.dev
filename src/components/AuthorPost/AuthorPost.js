@@ -1,10 +1,11 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Img from 'gatsby-image'
 
 export default (props) => (
 	<div className={`AuthorPost ${props.header ? ' header' : ''}`}>
 		<div className="AuthorPost__header">
-			<img className="AuthorPost__image" src="https://avatars1.githubusercontent.com/u/18385321?s=120&v=4"/>
+			<Img className="AuthorPost__image" sizes={ props.avatar.sizes } />
 		</div>
 		<div className="AuthorPost__body">
 			<Link to="/#about" className="AuthorPost__name">Dante Calderón</Link>

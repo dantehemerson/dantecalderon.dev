@@ -12,7 +12,7 @@ import SEO from '../components/SEO'
 import AuthorPost from '../components/AuthorPost'
 import Share from '../components/Share'
 
-export const Post = ({ content, frontmatter, previous, next, siteTitle, image, siteUrl, contentComponent, timeToRead }) => {
+export const Post = ({ content, frontmatter, previous, next, siteTitle, image, siteUrl, contentComponent, timeToRead, avatar }) => {
 	const PostContent = contentComponent || Content
 	return (
 		<div className={`Post ${ frontmatter.style }`}>
@@ -23,8 +23,9 @@ export const Post = ({ content, frontmatter, previous, next, siteTitle, image, s
 					<AuthorPost 
 						date={ frontmatter.date }
 						timeToRead={timeToRead}
+						avatar={avatar}
 						header
-						/>				
+						/>									
 				</div>
 				{ 
 					frontmatter.style !== 'default' && 
@@ -42,7 +43,9 @@ export const Post = ({ content, frontmatter, previous, next, siteTitle, image, s
 				<div className="Foot__AuthorPost">
 					<AuthorPost 
 							date={ frontmatter.date }
-							timeToRead={timeToRead}	/>						
+							timeToRead={timeToRead}
+							avatar={avatar}
+								/>						
 					
 				</div>
 			</div>
@@ -86,7 +89,7 @@ export default class BlogPostTemplate extends React.Component {
 	}
 	render() {
 		const post = this.props.data.markdownRemark		
-		const siteMetadata = get(this.props, 'data.site.siteMetadata')
+		const siteMetadata = get(this.props, 'data.site.siteMetadata')		
 		const { previous, next } = this.props.pathContext
 		const ast = post.htmlAst
 		const images = getObj(ast, { type: 'element', tagName: 'img' })
@@ -107,6 +110,7 @@ export default class BlogPostTemplate extends React.Component {
 					content={post.html}
 					contentComponent={HTMLContent}
 					image={post.fields.thumbnail.childImageSharp.responsiveSizes}
+					avatar={ this.props.data.avatar }
 					/>		
 
 					<div className="Post__footer">
@@ -131,6 +135,11 @@ export default class BlogPostTemplate extends React.Component {
 
 export const pageQuery = graphql`
 	query BlogPostBySlug($slug: String!) {
+		avatar: imageSharp(id: {regex: "/avatar/"}) {
+		  sizes(maxWidth: 720) {
+		    ...GatsbyImageSharpSizes_tracedSVG
+		  }
+		} 
 		site {
 			siteMetadata {
 				title

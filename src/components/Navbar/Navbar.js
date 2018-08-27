@@ -58,22 +58,30 @@ class Navbar extends React.Component {
 						<ul className={`Navbar__nav ${menuIsOpen ? 'open' : ''}`}>
 							<li className='Navbar__item'>
 								<Link onClick={ (e) => { this.setState({menuIsOpen: false}) } } className={`Navbar__link ${ this.props.activePage === '' ? 'active' : ''}`} to="/">
-									<img className="icon-item" src="https://icongr.am/clarity/home.svg?size=20&color=000000"/>Inicio
+									<img className="icon-item" 
+										src="https://icongr.am/clarity/home.svg?size=20&color=000000"/>
+										Inicio
 								</Link>
 							</li>
 							<li className='Navbar__item'>
 								<Link onClick={ (e) => { this.setState({menuIsOpen: false}) }} className={`Navbar__link ${ this.props.activePage === 'Blog' ? 'active' : ''}`} to="/blog">
-									<img className="icon-item" src="https://icongr.am/clarity/computer.svg?size=20&color=000000"/>Blog
+									<img className="icon-item" 
+										src="https://icongr.am/clarity/computer.svg?size=20&color=000000"/>
+										Blog
 								</Link>
 							</li>
 							<li className='Navbar__item'>
 								<Link onClick={ (e) => { this.setState({menuIsOpen: false}) }} className={`Navbar__link ${ this.props.activePage === 'Contact' ? 'active' : ''}`} to="/contact">
-									<img className="icon-item" src="https://icongr.am/clarity/user.svg?size=20&color=000000"/>Contacto
+									<img className="icon-item" 
+										src="https://icongr.am/clarity/user.svg?size=20&color=000000"/>
+										Contacto
 								</Link>
 							</li>						
 							<li className='Navbar__item'>
 								<Link onClick={ (e) => { this.setState({menuIsOpen: false}) }} className={`Navbar__link ${ this.props.activePage === 'Portfolio' ? 'active' : ''}`} to="/portfolio">
-									<img className="icon-item" src="https://icongr.am/clarity/view-cards.svg?size=20&color=000000"/>Portafolio
+									<img className="icon-item" 
+										src="https://icongr.am/clarity/view-cards.svg?size=20&color=000000"/>
+										Portafolio
 								</Link>
 							</li>						
 						</ul>					

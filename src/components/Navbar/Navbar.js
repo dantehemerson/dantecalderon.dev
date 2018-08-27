@@ -44,7 +44,8 @@ class Navbar extends React.Component {
 			}>				
 				<div className="container">
 					<div className="Navbar__titlewrap">
-						<Link onClick={ (e) => { this.setState({menuIsOpen: false}) } } className="Navbar__title" to="/">dante H.</Link>
+						<img src="" />
+						<Link onClick={ (e) => { this.setState({menuIsOpen: false}) } } className="Navbar__title" to="/">Dante Calderón</Link>
 					</div>
 					
 

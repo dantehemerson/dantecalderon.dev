@@ -57,30 +57,26 @@ class Navbar extends React.Component {
 						</button>
 						<ul className={`Navbar__nav ${menuIsOpen ? 'open' : ''}`}>
 							<li className='Navbar__item'>
-								<Link onClick={ (e) => { this.setState({menuIsOpen: false}) } } className={`Navbar__link ${ this.props.activePage === '' ? 'active' : ''}`} to="/">
-									<img className="icon-item" 
-										src="https://icongr.am/clarity/home.svg?size=20&color=000000"/>
+								<Link onClick={ (e) => { this.setState({menuIsOpen: false}) } } className={`Navbar__link ${ this.props.activePage === '' ? 'active' : ''}`} to="/">		
+									<clr-icon shape="home" class="icon-item" size="21"></clr-icon>
 										Inicio
 								</Link>
 							</li>
 							<li className='Navbar__item'>
 								<Link onClick={ (e) => { this.setState({menuIsOpen: false}) }} className={`Navbar__link ${ this.props.activePage === 'Blog' ? 'active' : ''}`} to="/blog">
-									<img className="icon-item" 
-										src="https://icongr.am/clarity/computer.svg?size=20&color=000000"/>
+									<clr-icon shape="computer" class="icon-item" size="21"></clr-icon>
 										Blog
 								</Link>
 							</li>
 							<li className='Navbar__item'>
-								<Link onClick={ (e) => { this.setState({menuIsOpen: false}) }} className={`Navbar__link ${ this.props.activePage === 'Contact' ? 'active' : ''}`} to="/contact">
-									<img className="icon-item" 
-										src="https://icongr.am/clarity/user.svg?size=20&color=000000"/>
+								<Link onClick={ (e) => { this.setState({menuIsOpen: false}) }} className={`Navbar__link ${ this.props.activePage === 'Contact' ? 'active' : ''}`} to="/contact">									
+									<clr-icon shape="user" class="icon-item" size="21"></clr-icon>
 										Contacto
 								</Link>
 							</li>						
 							<li className='Navbar__item'>
 								<Link onClick={ (e) => { this.setState({menuIsOpen: false}) }} className={`Navbar__link ${ this.props.activePage === 'Portfolio' ? 'active' : ''}`} to="/portfolio">
-									<img className="icon-item" 
-										src="https://icongr.am/clarity/view-cards.svg?size=20&color=000000"/>
+									<clr-icon shape="view-cards" class="icon-item" size="21"></clr-icon>		
 										Portafolio
 								</Link>
 							</li>						

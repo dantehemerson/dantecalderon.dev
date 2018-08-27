@@ -6,12 +6,17 @@ import Helmet from 'react-helmet'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
+
 import { actualPage } from '../utils'
 
 // Syntax scheme
 import 'prismjs/themes/prism-solarizedlight.css'
 
 import './index.scss'
+
+import '@webcomponents/custom-elements/custom-elements.min.js'
+import '@clr/icons/clr-icons.min.js'
+import '@clr/icons/clr-icons.min.css'
 
 class Layout extends React.Component {
   static propTypes = {

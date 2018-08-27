@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@clr/icons": "^0.12.10",
+    "@webcomponents/custom-elements": "^1.0.0",
     "ast-get-object": "^1.3.2",
     "bluebird": "^3.5.1",
     "gatsby": "^1.9.247",

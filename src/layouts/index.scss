@@ -359,13 +359,13 @@ textarea{
 	 display: flex;
 	 justify-content: center;   
 	 position: fixed;
-	 width: 100%;
+	 width: 100%;	 
 	 z-index: 100;
 
-	    box-shadow: 0px 0px 0px 1px #f3f3f3;	 	
+	 box-shadow: 0px 1px 0px 0px #f3f3f3;	 	
 	 &.noTop {
 	    background: rgba(255,255,255,1);	    
-
+		top:0;
 
 	 }
 	 .container {
@@ -471,16 +471,14 @@ textarea{
 							border-radius: 3px;
 							&:hover {
 								opacity: 1;						
-							}
-							&.active {							
-								color: #1d6fdc !important;
-							}
+							}							
 						}
 						&:hover {
 							background: #f5f5f5;
 						}
 
 						&.active {							
+							color: #1d6fdc !important;
 						}
 						.icon-item {
 							padding-right: 4px;

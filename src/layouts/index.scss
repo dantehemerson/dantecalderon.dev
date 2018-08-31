@@ -1530,12 +1530,42 @@ $post-titles-font: 'Open Sans';
 	display: flex;
 	justify-content: center;
 	a {
-		margin: 0 10px;
+		margin: 0 3px;
+		padding: 8px;
+		border-radius: 3px;
+		opacity: 1;
+		&:hover {
+			opacity: 1;
+		}
 	}	
-	&__icon {
-		width: 26px;
-		height: 26px;
-		margin: 0;				
+
+	&__iconwrapper {
+		background: #4a4a4a;
+		border: 1px solid #373737;
+		display: inline-flex;
+
+		&.facebook {
+			background: #3b5998;
+			border: 1px solid #364C79;
+		}
+		&.twitter {
+			background: #55acee;
+			border: 1px solid #56A3DE;
+		}
+		&.linkedin {
+			background: #007bb5;
+			border: 1px solid #217096;
+		}
+		&.googlep {
+			background: #dd4b39;
+			border: 1px solid #C44333;
+		}
+	}
+
+	&__icon {				
+		margin: 0;	
+		width: 21px;			
+		height: 21px;
 	}
 
 	&--fixed {				
@@ -1545,15 +1575,14 @@ $post-titles-font: 'Open Sans';
 		opacity: 1;		
 		display: none;				
 		left: 50%;
-		margin-left: -490px; 
+		margin-left: -500px; 
 		padding-left: 12px;
 		padding-right: 12px;		
 		&.hide {
 			opacity: 0;
 		}
 		a {
-			margin: 6px 0;
-			width: 26px;
+			margin: 3px 0;			
 			z-index: 10;
 			position: relative;
 		}
@@ -1561,7 +1590,7 @@ $post-titles-font: 'Open Sans';
 			display: flex;
 		}	
 		@include breakpoint(xl)	 {
-			margin-left: -520px;
+			margin-left: -550px;
 		}
 	}
 }

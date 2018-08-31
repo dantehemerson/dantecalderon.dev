@@ -6,7 +6,7 @@
 $primary-color: #ff7763;
 	 
 	 // Header Home
-	 $header_home-bg: #f8f9f9;
+	 $header_home-bg: #f3f3f3;
 	 $contact_home-bg: #a0e2b4b5;
 	 $hover-link-color: #DFBD83;
 
@@ -209,7 +209,7 @@ body {
 }
 
 input[type="text"], input[type="email"], textarea {
-	 border: 1px solid #e3e8eb;
+	 border: 2px solid #e3e8eb;
 	 border-radius: $border-radius;   
 	 box-shadow: none;
 	 color: #55595c;

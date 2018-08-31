@@ -31,6 +31,14 @@ export default class SEO extends PureComponent {
 		  {
 		    '@context': 'http://schema.org',
 		    '@type': 'WebSite',
+		    'sameAs': [
+		    	'https://twitter.com/dantehemerson',
+		    	'https://www.facebook.com/Dante-Calder%C3%B3n-600909820246917/',
+		    	'https://plus.google.com/u/0/101542534057875808813',
+		    	'https://www.instagram.com/dantehemerson',
+		    	'https://www.github.com/dantehemerson',
+		    	'https://www.linkedin.com/in/dantehemerson',
+		    ],
 		    url: url,
 		    name: title,
 		    alternateName: description,
@@ -42,6 +50,14 @@ export default class SEO extends PureComponent {
 		    {
 		      '@context': 'http://schema.org',
 		      '@type': 'BreadcrumbList',
+		      'sameAs': [
+		      	'https://twitter.com/dantehemerson',
+		      	'https://www.facebook.com/Dante-Calder%C3%B3n-600909820246917/',
+		      	'https://plus.google.com/u/0/101542534057875808813',
+		      	'https://www.instagram.com/dantehemerson',
+		      	'https://www.github.com/dantehemerson',
+		      	'https://www.linkedin.com/in/dantehemerson',
+		      ],
 		      itemListElement: [
 		        {
 		          '@type': 'ListItem',
@@ -57,6 +73,14 @@ export default class SEO extends PureComponent {
 		    {
 		      '@context': 'http://schema.org',
 		      '@type': 'BlogPosting',
+		      'sameAs': [
+		      	'https://twitter.com/dantehemerson',
+		      	'https://www.facebook.com/Dante-Calder%C3%B3n-600909820246917/',
+		      	'https://plus.google.com/u/0/101542534057875808813',
+		      	'https://www.instagram.com/dantehemerson',
+		      	'https://www.github.com/dantehemerson',
+		      	'https://www.linkedin.com/in/dantehemerson',
+		      ],
 		      url: url,
 		      name: title,
 		      alternateName: `${url} | Dante Calderón`,

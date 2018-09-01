@@ -19,16 +19,54 @@ const Title = styled.h3`
 const Cover = styled(Img)`	
 	img {				
 		
+	}	 	
+`
+
+const TopBar = styled.div`
+	height: 25px;
+	background: #e0e3e6;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	border-radius: 4px 4px 0 0;
+
+	.TopBarButtons {
+		background: white;
+		border-radius: 50%;
+		height: 9px;
+		width: 9px;
+		position: relative;
+		margin-left: 5px;
+		&:after {
+			content: '';
+			    background: white;
+			    border-radius: 50%;
+			    position: absolute;
+			    left: 260%;
+			    top: 0;
+			    height: 9px;
+			    width: 9px;
+
+		}
+
+		&:before {
+			content: '';
+			background: white;
+			border-radius: 50%;
+			height: 9px;
+			width: 9px;
+			position: absolute;
+			left: 130%;
+			top: 0;
+		}
 	}
-	 		 	
 `
 
 export default (props) => (
 	<ItemWrapper>				
-		 	<div className="PortfolioItem__topbar">
-				<div className="PortfolioItem__topbar__button">
-				</div>
-			</div>				
+		 	<TopBar>
+				<div className="TopBarButtons"></div>
+			</TopBar>				
 			<ItemLink to={ props.data.path }>
 				<Cover sizes={props.data.thumbnail} />
 			</ItemLink>				

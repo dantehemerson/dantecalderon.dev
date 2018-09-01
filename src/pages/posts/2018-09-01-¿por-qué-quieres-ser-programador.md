@@ -24,7 +24,7 @@ Sin importar cuál sea tu objetivo para cumplirlo, el mundo te provee de muchas 
 
 Algunos no conocen tampoco los beneficios de la programación que, sin duda, no solo son monetarios:
 
-
+![Niño con transtorno](https://simplycoding.org/wp-content/uploads/2016/12/kid-programmer.jpg)
 
 Permite desarrollar el pensamiento abstracto;
 

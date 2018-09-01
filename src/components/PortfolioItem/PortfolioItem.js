@@ -3,17 +3,23 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 
-const ItemWrapper = styled.article`	
+const ItemWrapper = styled.article`		
+	box-shadow: 0px 0px 8px #ededed;
+	cursor: pointer;
+`
+
+const ItemContainer = styled.div`
+	position: relative;
 	text-align: center;
 `
 
-const ItemLink = styled(Link)`
-	text-decoration: none;	
+const Title = styled.h3`	
+	color: white;		
+	font-size: 27px;	
 `
 
-const Title = styled.h3`	
-	color: #333;		
-	font-size: 27px;	
+const Content = styled.p`	
+	color: white;			
 `
 
 const Cover = styled(Img)`	
@@ -62,20 +68,34 @@ const TopBar = styled.div`
 	}
 `
 
+const ItemBody = styled.div`
+	position: absolute;
+	background: rgba(0, 0, 0, .4);
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;	
+`
+
+const ItemLink = styled(Link)`
+	text-decoration: none;
+`
+
 export default (props) => (
 	<ItemWrapper>				
 		 	<TopBar>
 				<div className="TopBarButtons"></div>
-			</TopBar>				
+			</TopBar>
 			<ItemLink to={ props.data.path }>
-				<Cover sizes={props.data.thumbnail} />
-			</ItemLink>				
-			<div className="PortfolioItem__body">
-				<ItemLink to={ props.data.path }>
-					<Title className="PortfolioItem__title">{ props.data.title }</Title>
-				</ItemLink>				
-				<p className="PortfolioItem__content">{ props.data.excerpt }</p>						
-				<Link className="btn PortfolioItem__btn" to={ props.data.path }>Seguir Leyendo ➞</Link>			
-			</div>	
+				<ItemContainer>
+					<Cover sizes={props.data.thumbnail} />
+					<ItemBody>					
+						<Title>{ props.data.title }</Title>	
+						<Content>{ props.data.excerpt }</Content>		
+						<ItemLink to={ props.data.path }>VER ➞</ItemLink>	
+					</ItemBody>	
+				</ItemContainer>				
+			</ItemLink>
+
 	</ItemWrapper>
 )

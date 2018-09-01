@@ -1329,13 +1329,7 @@ $post-titles-font: 'Open Sans';
 
 	a {
 		color: $font-color;
-		text-overflow: ellipsis;
-		// Copiado de Medium(Funciona pero coloca a todos los a, y cuando hay una imagen dentro del a se muestra la linea, se ve feo asi, por el momento lo dejaré por defecto, luego lo haré con JS)
-			text-decoration: none;
-		   background-image: linear-gradient(to bottom,rgba(0,0,0,.68) 50%,rgba(0,0,0,0) 50%);
-		   background-repeat: repeat-x;
-		   background-size: 2px .1em;
-		   background-position: 0 1.2em;
+		text-decoration: underline;
 	}
 
 	blockquote {
@@ -1352,7 +1346,9 @@ $post-titles-font: 'Open Sans';
 		}
 	}
 	code.language-text {
-		font-size: 17px;
+		font-size: .9em;
+		color: #4575dc;
+		background: rgba(155,234,243,0.2);				
 	}
 	pre[class*="language-"] {
 		margin-bottom: 2.2em;		

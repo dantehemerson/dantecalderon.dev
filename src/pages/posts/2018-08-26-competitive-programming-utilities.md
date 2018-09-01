@@ -11,6 +11,7 @@ style: medium-img
 tags:
   - Competitive Programming
 ---
+Estas son algúnas funciones utiles que cree y/o recopile para  Programacioń Competitiva, de cierta forma hay una copia de algunas funciónes de javascript, específicamente la librería string. Para todas las funciónes también tienes la complejidad en notacion **O grande**. Esperó que te sea útil.
 #### String a mayúsculas ó minúsculas
 ```cpp
 #include <algorithm>   // transform()

@@ -154,8 +154,8 @@ body {
 	 text-rendering: geometricPrecision;
 	 -moz-osx-font-smoothing: grayscale;
 	 -webkit-font-smoothing: antialiased;
-	 -webkit-font-smoothing: antialiased;
 	 color: #282a2d;
+	 //background: #fafafa;
 }
 
 .btn {   
@@ -576,11 +576,8 @@ textarea{
 			}
 	 }
 }
-	 .ContactForm {
-			background: white;
-			padding: 20px 10px;
-			
-
+	 .ContactForm {			
+			padding: 20px 10px;			
 			&__item {
 				 padding: 15px 0;
 			}

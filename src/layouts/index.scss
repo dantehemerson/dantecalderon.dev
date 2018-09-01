@@ -1092,13 +1092,13 @@ textarea{
 	margin-right: auto;
 }
 
-$post-body-font: serif;
+$post-body-font: 'Noto Serif';
 $post-titles-font: 'Open Sans';
 .Post {	
 	padding-top: 75px;
 	padding-bottom: 50px;
 	font-family: $post-body-font;
-	font-size: 17px;	
+	font-size: 15px;	
 	// === CONFIGURACIÓN DE ESTILOS POST ===
 	.gatsby-resp-image-wrapper {
 		max-width: 100% !important;
@@ -1271,7 +1271,7 @@ $post-titles-font: 'Open Sans';
 	}
 	
 	@include breakpoint(sm) {
-		font-size: 19px;		
+		font-size: 17px;		
 
 		&__title {
 			font-size: 28px;
@@ -1298,7 +1298,7 @@ $post-titles-font: 'Open Sans';
 	}
 
 	@include breakpoint(md) {
-		font-size: 21px;		
+		font-size: 19px;		
 
 		&__title {
 			font-size: 34px;
@@ -1335,7 +1335,7 @@ $post-titles-font: 'Open Sans';
 		   background-image: linear-gradient(to bottom,rgba(0,0,0,.68) 50%,rgba(0,0,0,0) 50%);
 		   background-repeat: repeat-x;
 		   background-size: 2px .1em;
-		   background-position: 0 1.02em;
+		   background-position: 0 1.2em;
 	}
 
 	blockquote {

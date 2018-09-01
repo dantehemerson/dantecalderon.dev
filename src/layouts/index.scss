@@ -28,6 +28,7 @@ $font-color: rgba(0,0,0,.88);
 
 $serif-font: 'Playfair Display';
 $sans-serif-font: 'Open Sans';
+$serif-normal: 'Noto Serif';
 
 
 $transition-hover-s: .3s;
@@ -203,8 +204,7 @@ body {
 #swal2-title {
 	font-family: $sans-serif-font;
 }
-#swal2-content {	
-	font-family: serif;
+#swal2-content {		
 	font-size: 17px;
 }
 
@@ -254,8 +254,7 @@ textarea{
 
 	 &__description {      			
 		color: #353535;
-		margin: 0;
-		font-family: serif;
+		margin: 0;		
 		font-size: 16px;
 		@include breakpoint(sm) {
 			font-size: 19px;
@@ -792,14 +791,14 @@ textarea{
 			justify-content: space-between;			
 	 }
 	 &__title {
-			text-align: center;  
-			font-family: $serif-font;
+			//text-align: center;  
+			font-family:$serif-normal;
 			font-size: 21px;
 			margin-bottom: remcalc(10px);
 			cursor: pointer;
 			margin-top: 15px;
 			@include breakpoint(sm) {
-				font-size: 29px;
+				font-size: 27px;
 			}
 			@include breakpoint(md) {
 				margin-top: 0px;
@@ -810,13 +809,12 @@ textarea{
 	 }
 	 &__content {
 			font-weight: 500;
-			text-align: left;
-			//color: #999;
-			font-family: serif;			
+			text-align: left;			
 			margin-bottom: 14px;
-			font-size: 15px;			
+			font-size: 14px;			
+			color: #474747;
 			@include breakpoint(sm) {
-				font-size: 17px;							
+				font-size: 15px;							
 			}
 	 }
 	 &__date {

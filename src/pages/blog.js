@@ -37,8 +37,7 @@ class Blog extends React.Component {
 					<div className="row center-xs">
 						<div className="col-xs-12 col-lg-11">
 							{
-								posts.map(({ node }) => {
-									console.log(node.frontmatter.published)			
+								posts.map(({ node }) => {							
 									if(node.frontmatter.published)
 										return <Card 
 													data={

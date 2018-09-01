@@ -32,7 +32,7 @@ $serif-normal: 'Noto Serif';
 
 
 $transition-hover-s: .3s;
-$border-radius: 0px;
+$border-radius: 3px;
 
 /** Mixin for responsive design **/
 @mixin breakpoint($class) {  
@@ -130,18 +130,6 @@ $border-radius: 0px;
 }
 
 
-
-.wavey {
-	 background-image: baseurl('wavey.svg');
-	 background-repeat: no-repeat;
-	 background-size: 16rem;   
-	 background-position: center;
-	 height: .8rem;   
-	 max-width: 47rem;
-
-}
-
-	 // containers
 .container {
 	 padding-left: $container-padding-lg;
 	 padding-right: $container-padding-lg;
@@ -209,7 +197,7 @@ body {
 }
 
 input[type="text"], input[type="email"], textarea {
-	 border: 2px solid #e3e8eb;
+	 border: 1px solid #e3e8eb;
 	 border-radius: $border-radius;   
 	 box-shadow: none;
 	 color: #55595c;
@@ -255,9 +243,9 @@ textarea{
 	 &__description {      			
 		color: #353535;
 		margin: 0;		
-		font-size: 16px;
+		font-size: 15px;
 		@include breakpoint(sm) {
-			font-size: 19px;
+			font-size: 16px;
 		}
 	 } 
 
@@ -791,7 +779,7 @@ textarea{
 			justify-content: space-between;			
 	 }
 	 &__title {
-			//text-align: center;  
+			text-align: center;  
 			font-family:$serif-normal;
 			font-size: 21px;
 			margin-bottom: remcalc(10px);
@@ -1096,7 +1084,8 @@ $post-titles-font: 'Open Sans';
 	padding-top: 75px;
 	padding-bottom: 50px;
 	font-family: $post-body-font;
-	font-size: 15px;	
+	font-size: 15px;
+	line-height: 1.6;	
 	// === CONFIGURACIÓN DE ESTILOS POST ===
 	.gatsby-resp-image-wrapper {
 		max-width: 100% !important;
@@ -1351,9 +1340,9 @@ $post-titles-font: 'Open Sans';
 		background: rgba(155,234,243,0.2);				
 	}
 	pre[class*="language-"] {
-		margin-bottom: 2.2em;		
-		background: #f8f7f7 !important;
-		border: 1px solid #e7e7e7 !important;
+		margin-bottom: 2.2em;			
+		background: #f7f7f7 !important;
+		//border: 1px solid #e7e7e7 !important;
 	}
 	&__footer { // Contenedor de los comentarios y los posts recomendados
 		background: #fafafa;

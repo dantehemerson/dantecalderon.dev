@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 
 const ItemWrapper = styled.article`		
-	box-shadow: 0px 0px 8px #BABABA;
+	box-shadow: 0px 0px 5px #BABABA;
 	border-radius: 4px 4px 0 0;
 	cursor: pointer;
 `
@@ -15,7 +15,7 @@ const ItemContainer = styled.div`
 `
 
 const Title = styled.h3`	
-	color: #444;		
+	color: #758282;		
 	font-family: 'Open Sans', serif;
 	font-size: 15px;	
 	text-transform: uppercase;
@@ -81,28 +81,48 @@ const ItemBody = styled.div`
 	top: 0;
 	width: 100%;
 	height: 100%;	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+
 `
 
 const ItemLink = styled(Link)`
 	text-decoration: none;
+
+	&:hover .PortfolioItem__body {
+		opacity: 1;
+	}
+`
+
+const ItemView = styled.p`
+	color: white;
+	padding: 10px 30px;
+	background: gray;
+	border-radius: 3px;
+	font-weight: 600;
+	&:hover {
+		background: yellow;
+	}
 `
 
 
 export default (props) => (
-	<ItemWrapper>				
+	<ItemLink to={ props.data.path }>
+		<ItemWrapper>				
 		 	<TopBar>
 				<div className="TopBarButtons"></div>
 				<Title>{ props.data.title }</Title>	
 			</TopBar>
-			<ItemLink to={ props.data.path }>
-				<ItemContainer>
-					<Cover sizes={props.data.thumbnail} />
-					<ItemBody>					
-						<Content>{ props.data.excerpt }</Content>		
-						<ItemLink to={ props.data.path }>VER ➞</ItemLink>	
-					</ItemBody>	
-				</ItemContainer>				
-			</ItemLink>
-
-	</ItemWrapper>
+			<ItemContainer>
+				<Cover sizes={props.data.thumbnail} />
+				<ItemBody className="PortfolioItem__body">					
+					<Content>{ props.data.excerpt }</Content>		
+					<ItemView>VER ➞</ItemView>	
+				</ItemBody>	
+			</ItemContainer>				
+		</ItemWrapper>
+	</ItemLink>
 )

@@ -1349,12 +1349,13 @@ $post-titles-font: 'Open Sans';
 	}
 	code.language-text {
 		font-size: .9em;
-		color: #4575dc;
-		border: 1px solid red;
+		color: #4575dc;		
 		background: rgba(155,234,243,0.2);				
 	}
 	pre[class*="language-"] {
 		margin-bottom: 2.2em;		
+		background: #f8f7f7 !important;
+		border: 1px solid #e7e7e7 !important;
 	}
 	&__footer { // Contenedor de los comentarios y los posts recomendados
 		background: #fafafa;
@@ -1478,6 +1479,7 @@ $post-titles-font: 'Open Sans';
 		.AuthorPost__name {
 			font-size: .9rem;
 			color: inherit !important;
+
 		}
 
 		.AuthorPost__about {
@@ -1509,7 +1511,7 @@ $post-titles-font: 'Open Sans';
 			font-size: 1rem;
 			font-weight: 600;
 			color: white !important;
-			background-image: none !important;
+			text-decoration: none !important;			
 		}
 
 		&__about {

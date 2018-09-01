@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 
 const ItemWrapper = styled.article`		
-	box-shadow: 0px 0px 5px #BABABA;
+	box-shadow: 0px 0px 1px #BABABA;
 	border-radius: 4px 4px 0 0;
 	cursor: pointer;
 `
@@ -25,7 +25,8 @@ const Title = styled.h3`
 `
 
 const Content = styled.p`	
-	color: white;			
+	color: white;
+	font-weight: 600;			
 `
 
 const Cover = styled(Img)`	
@@ -76,7 +77,7 @@ const TopBar = styled.div`
 
 const ItemBody = styled.div`
 	position: absolute;
-	background: rgba(0, 0, 0, .5);
+	background: rgba(53, 53, 53, 0.8);
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -99,12 +100,16 @@ const ItemLink = styled(Link)`
 
 const ItemView = styled.p`
 	color: white;
-	padding: 10px 30px;
-	background: gray;
+	padding: 10px 40px;
+	background: #c59d59;
 	border-radius: 3px;
 	font-weight: 600;
 	&:hover {
-		background: yellow;
+		background: #a98548;
+	}
+	@media (max-width: 575px) {
+		font-size: .9rem;
+		padding: 9px 30px;
 	}
 `
 
@@ -120,7 +125,7 @@ export default (props) => (
 				<Cover sizes={props.data.thumbnail} />
 				<ItemBody className="PortfolioItem__body">					
 					<Content>{ props.data.excerpt }</Content>		
-					<ItemView>VER ➞</ItemView>	
+					<ItemView><clr-icon shape="eye" class="icon-item" size="20"></clr-icon> VER ➞</ItemView>	
 				</ItemBody>	
 			</ItemContainer>				
 		</ItemWrapper>

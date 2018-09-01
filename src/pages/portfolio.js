@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 
-import Card from '../components/Card'
+import Item from '../components/PortfolioItem'
 import SEO from '../components/SEO'
 
 class Portfolio extends React.Component {
@@ -34,7 +34,7 @@ class Portfolio extends React.Component {
 							posts.map(( { node }, index) => {								
 								return (
 									<div className="col-xs-12 col-sm-12 col-md-6" key={index}>
-										<Card 
+										<Item 
 											data={
 												{
 													title: node.frontmatter.title,

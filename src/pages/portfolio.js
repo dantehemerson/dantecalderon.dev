@@ -38,7 +38,7 @@ class Portfolio extends React.Component {
 											data={
 												{
 													title: node.frontmatter.title,
-													thumbnail: node.fields.thumbnail.childImageSharp.resolutions,
+													thumbnail: node.fields.thumbnail.childImageSharp.sizes,
 													excerpt: node.excerpt,
 													date: node.frontmatter.date,
 													path: `/${node.frontmatter.path}`,
@@ -78,8 +78,8 @@ export const queryPortfolio = graphql`
     			fields {
     				thumbnail {
     					childImageSharp {
-    						resolutions(width: 720, height: 460) {
-    							...GatsbyImageSharpResolutions_withWebp
+    						sizes(traceSVG: { background: "#ced9e0", color: "#738694" }) {
+    							...GatsbyImageSharpSizes_withWebp_tracedSVG
     						}
     					}
     				}
@@ -88,7 +88,7 @@ export const queryPortfolio = graphql`
     				date(formatString: "DD MMMM, YYYY")
     				title
     				path 
-    				thumbnail   			
+    				thumbnail
     			}
     		}
     	}

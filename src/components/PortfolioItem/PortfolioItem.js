@@ -125,7 +125,7 @@ export default (props) => (
 				<Cover sizes={props.data.thumbnail} />
 				<ItemBody className="PortfolioItem__body">					
 					<Content>{ props.data.excerpt }</Content>		
-					<ItemView><clr-icon shape="eye" class="icon-item" size="20"></clr-icon> VER ➞</ItemView>	
+					<ItemView><clr-icon shape="eye" class="icon-item" size="20"></clr-icon> VER</ItemView>	
 				</ItemBody>	
 			</ItemContainer>				
 		</ItemWrapper>

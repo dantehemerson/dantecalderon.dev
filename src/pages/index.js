@@ -54,7 +54,7 @@ export const queryHome = graphql`
     } 
     aboutImage: imageSharp(id: {regex: "/about-image/"}) {
       sizes(maxWidth: 960) {
-        ...GatsbyImageSharpSizes_tracedSVG
+        ...GatsbyImageSharpSizes
       }
     } 
     site {

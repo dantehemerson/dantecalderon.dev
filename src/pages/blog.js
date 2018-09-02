@@ -43,7 +43,7 @@ class Blog extends React.Component {
 													data={
 														{
 															title: node.frontmatter.title,
-															thumbnail: node.fields.thumbnail.childImageSharp.resolutions,
+															thumbnail: node.fields.thumbnail.childImageSharp.sizes,
 															excerpt: node.excerpt,
 															date: node.frontmatter.date,
 															path: `/${node.frontmatter.path}`,
@@ -81,8 +81,8 @@ export const queryBlog = graphql`
     			fields {
     				thumbnail {
     					childImageSharp {
-    						resolutions(width: 760, height: 480) {
-    							...GatsbyImageSharpResolutions_withWebp
+    						sizes {
+    							...GatsbyImageSharpSizes_withWebp
     						}
     					}
     				}

@@ -78,8 +78,8 @@ export const queryPortfolio = graphql`
     			fields {
     				thumbnail {
     					childImageSharp {
-    						sizes(traceSVG: { background: "#ced9e0", color: "#738694" }) {
-    							...GatsbyImageSharpSizes_withWebp_tracedSVG
+    						sizes {
+    							...GatsbyImageSharpSizes_withWebp
     						}
     					}
     				}

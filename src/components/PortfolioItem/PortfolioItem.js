@@ -12,6 +12,7 @@ const ItemWrapper = styled.article`
 const ItemContainer = styled.div`
 	position: relative;
 	text-align: center;
+	overflow: hidden;
 `
 
 const Title = styled.h3`	
@@ -88,6 +89,7 @@ const ItemBody = styled.div`
 	align-items: center;
 	justify-content: center;
 	opacity: 0;
+	transform:  scale3d(1.1, 1.1, 1);
 
 `
 
@@ -96,6 +98,12 @@ const ItemLink = styled(Link)`
 
 	&:hover .PortfolioItem__body {
 		opacity: 1;
+		transform:  scale3d(1,1,1);
+
+	}
+	
+	&:hover .PortfolioItem__tagswrapper{			
+		transform:  translateY(-10px);
 	}
 `
 
@@ -105,12 +113,34 @@ const ItemView = styled.p`
 	background: #c59d59;
 	border-radius: 3px;
 	font-weight: 600;
+	margin: 0;
 	&:hover {
 		background: #a98548;
 	}
 	@media (max-width: 575px) {
 		font-size: .9rem;
 		padding: 9px 30px;
+	}
+`
+
+const TagsWrapper = styled.div`
+	
+`
+
+const Tag = styled(Link)`
+	padding: 3px 6px;
+	background: #282828;
+	border: 1px solid #5D5D5D;
+	color: gray;
+	border-radius: 3px;
+	text-decoration: none;
+	margin: 2px 2px;
+	font-size: 14px;
+	font-weight: 600;
+	display: inline-block;
+
+	&:hover {
+		background: #131313;
 	}
 `
 
@@ -126,7 +156,16 @@ export default (props) => (
 				<Cover sizes={props.data.thumbnail} />
 				<ItemBody className="PortfolioItem__body">					
 					<Content>{ props.data.excerpt }</Content>		
-					<ItemView><clr-icon shape="eye" class="icon-item" size="20"></clr-icon> VER</ItemView>	
+					<TagsWrapper className="PortfolioItem__tagswrapper">					
+						<Tag to="/Portfolio"><clr-icon shape="tag" size="18"></clr-icon> WEBAPP</Tag>
+						<Tag to="/Portfolio"><clr-icon shape="tag" size="18"></clr-icon> JAVASCRIPT</Tag>
+						<Tag to="/Portfolio"><clr-icon shape="tag" size="18"></clr-icon> HTML</Tag>
+						<Tag to="/Portfolio"><clr-icon shape="tag" size="18"></clr-icon> REACT</Tag>
+						<Tag to="/Portfolio"><clr-icon shape="tag" size="18"></clr-icon> CSS</Tag>
+						<Tag to="/Portfolio"><clr-icon shape="tag" size="18"></clr-icon> FLUX</Tag>
+						<Tag to="/Portfolio"><clr-icon shape="tag" size="18"></clr-icon> DJANGO</Tag>
+					</TagsWrapper>
+					<ItemView className="ItemView"><clr-icon shape="eye" class="icon-item" size="20"></clr-icon> VER</ItemView>	
 				</ItemBody>	
 			</ItemContainer>				
 		</ItemWrapper>

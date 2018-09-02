@@ -33,7 +33,7 @@ class Portfolio extends React.Component {
 						{
 							posts.map(( { node }, index) => {								
 								return (
-									<div className="Portfolio__item col-xs-12 col-sm-12 col-md-6" key={index}>
+									<div className="Portfolio__item col-xs-12 col-sm-12 col-md-6 col-xl-4" key={index}>
 										<Item 
 											data={
 												{

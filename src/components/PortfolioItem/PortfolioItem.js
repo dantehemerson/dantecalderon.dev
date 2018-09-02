@@ -80,6 +80,7 @@ const ItemBody = styled.div`
 	background: rgba(53, 53, 53, 0.8);
 	left: 0;
 	top: 0;
+	padding: 10px;
 	width: 100%;
 	height: 100%;	
 	display: flex;

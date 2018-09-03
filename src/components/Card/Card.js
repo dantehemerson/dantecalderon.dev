@@ -3,16 +3,15 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 
 class Card extends React.Component {
-	render() {
-		const blogMode = this.props.mode === 'blog'		
+	render() {		
 		return (
 			<div className='Card'>		
-				<Link className="Card__header">
+				<Link to={ this.props.data.path } className="Card__header">
 					<Img resolutions={this.props.data.thumbnail} />						
 				</Link>				
 				<div className="Card__body">
-					<Link to={ this.props.data.path }>
-						<h3 className="Card__title">{ this.props.data.title }</h3>
+					<Link to={ this.props.data.path } className="Card__title">
+						<h3>{ this.props.data.title }</h3>
 					</Link>		
 					<p className="Card__date">
 						<time dateTime="2008-02-14 20:00">{ this.props.data.date}</time> 

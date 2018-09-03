@@ -49,8 +49,7 @@ class Blog extends React.Component {
 															path: `/${node.frontmatter.path}`,
 															timeToRead: node.timeToRead
 														}
-													} 
-													mode="blog" 
+													}										
 													key={ node.frontmatter.path }/>							
 								})
 							}

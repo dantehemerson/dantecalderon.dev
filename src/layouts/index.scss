@@ -735,20 +735,25 @@ textarea{
 	 }
 	 &__title {
 			text-align: left;				 
-
-			font-family:$serif-normal;
-			font-size: 21px;
 			margin-bottom: remcalc(10px);
 			cursor: pointer;
 			margin-top: 15px;
-			@include breakpoint(sm) {
-				font-size: 27px;
-			}
+			
 			@include breakpoint(md) {
 				margin-top: 0px;
 			}
 			&:hover {
 				color:  $hover-link-color;				
+			}
+
+			h3 {
+				margin: 0;
+				font-family:$serif-normal;
+				font-size: 21px;
+				@include breakpoint(sm) {
+					font-size: 27px;
+				}
+
 			}
 	 }
 	 &__content {			

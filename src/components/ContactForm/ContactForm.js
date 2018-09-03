@@ -1,7 +1,9 @@
 import React from 'react'
 import Swal from 'sweetalert2'
 
-
+import { AwesomeButton } from 'react-awesome-button';
+import AwesomeButtonStyles from 'react-awesome-button/src/styles/styles.scss'
+ 
 const encode = (data) => {
 	return Object.keys(data)
 		.map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -94,7 +96,12 @@ class ContactForm extends React.Component {
 					</div>					
 					<div className="ContactForm__item">
 						<div className="ContactForm__submitwrap">
-							<button className="ContactForm__submit btn" placeholder="E-mail" type="submit">Enviar</button>						
+							<AwesomeButton
+							  size="medium"
+							  type="primary">
+							  ENVIAR
+							</AwesomeButton>
+													
 						</div>
 					</div>
 				</form>

@@ -15,6 +15,7 @@ import 'prismjs/themes/prism-solarizedlight.css'
 import './index.scss'
 
 import '@clr/icons/clr-icons.min.css'
+import 'react-awesome-button/src/styles/styles.scss'
 
 class Layout extends React.Component {
   static propTypes = {

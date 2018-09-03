@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import { AwesomeButton } from 'react-awesome-button';
 
 const ItemWrapper = styled.article`		
 	box-shadow: 0px 0px 1px #BABABA;
@@ -169,7 +170,11 @@ export default (props) => (
 						<Tag to="/Portfolio"><clr-icon shape="tag" size="18"></clr-icon> FLUX</Tag>
 						<Tag to="/Portfolio"><clr-icon shape="tag" size="18"></clr-icon> DJANGO</Tag>
 					</TagsWrapper>
-					<ItemView className="ItemView"><clr-icon shape="eye" class="icon-item" size="20"></clr-icon> VER</ItemView>	
+					<AwesomeButton 
+						type="secondary"						
+						className="ItemView">
+						<clr-icon shape="eye" class="icon-item" size="20"></clr-icon> VER
+					</AwesomeButton>	
 				</ItemBody>	
 			</ItemContainer>				
 		</ItemWrapper>

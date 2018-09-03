@@ -89,6 +89,8 @@ const ItemBody = styled.div`
 	align-items: center;
 	justify-content: center;
 	opacity: 0;
+
+     justify-content: space-between;
 	transform:  scale3d(1.1, 1.1, 1);
 
 `
@@ -128,19 +130,21 @@ const TagsWrapper = styled.div`
 `
 
 const Tag = styled(Link)`
-	padding: 3px 6px;
+	padding: 2px 7px;
 	background: #282828;
-	border: 1px solid #5D5D5D;
-	color: gray;
+	border-bottom: 2px solid #130E0E;
+	color: #6A6A6A;
 	border-radius: 3px;
 	text-decoration: none;
 	margin: 2px 2px;
 	font-size: 14px;
 	font-weight: 600;
 	display: inline-block;
+	box-shadow: 0 0 4px #333;
 
 	&:hover {
 		background: #131313;
+		color: #BCBCBC;
 	}
 `
 

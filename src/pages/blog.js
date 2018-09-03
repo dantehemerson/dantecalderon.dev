@@ -42,7 +42,7 @@ class Blog extends React.Component {
 										return <Card 
 													data={
 														{
-															title: node.frontmatter.title,
+															title: node.frontmatter.title,	
 															thumbnail: node.fields.thumbnail.childImageSharp.sizes,
 															excerpt: node.excerpt,
 															date: node.frontmatter.date,
@@ -91,7 +91,7 @@ export const queryBlog = graphql`
     				title
     				path 
     				thumbnail
-    				published   			
+    				published    				
     			}
     		}
     	}

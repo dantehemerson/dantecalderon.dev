@@ -166,7 +166,7 @@ export default (props) => (
 			<ItemContainer>
 				<Cover sizes={props.data.thumbnail} />
 				<ItemBody className="PortfolioItem__body">					
-					<Content>{ props.data.excerpt }</Content>		
+					<Content>{ props.data.subtitle }</Content>		
 					<TagsWrapper className="PortfolioItem__tagswrapper">					
 						<Tag to="/Portfolio"><clr-icon shape="tag" size="18"></clr-icon> WEBAPP</Tag>
 						<Tag to="/Portfolio"><clr-icon shape="tag" size="18"></clr-icon> JAVASCRIPT</Tag>

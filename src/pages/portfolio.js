@@ -38,6 +38,7 @@ class Portfolio extends React.Component {
 											data={
 												{
 													title: node.frontmatter.title,
+													subtitle: node.frontmatter.subtitle,
 													thumbnail: node.fields.thumbnail.childImageSharp.sizes,
 													excerpt: node.excerpt,
 													date: node.frontmatter.date,
@@ -87,6 +88,7 @@ export const queryPortfolio = graphql`
     			frontmatter {
     				date(formatString: "DD MMMM, YYYY")
     				title
+    				subtitle
     				path 
     				thumbnail
     			}

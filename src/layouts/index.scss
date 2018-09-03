@@ -235,7 +235,11 @@ textarea{
 
 .Page {
 	 padding-top: remcalc(100px);
-	 padding-bottom: remcalc(25px);          
+	 padding-bottom: remcalc(25px);   
+	 &__titlewrap {
+	 	flex-basis: auto;
+	 	max-width: 800px;
+	 }       
 	 &__title {
 		font-family: $sans-serif-font;
 		color: #333;		
@@ -404,7 +408,9 @@ textarea{
 		align-items: center;
     	border-radius: 3px;
 
+
 	 }
+
 	 &__title {            		
     	text-transform: capitalize;    		    	
     	font-weight: 900 !important;

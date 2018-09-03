@@ -705,6 +705,10 @@ textarea{
 				 	@include breakpoint(md) {						
 				 			height: 100% !important;
 				 		}
+
+				 	img {
+				 		margin: 0;
+				 	}
 				 }
 
 			}
@@ -725,8 +729,9 @@ textarea{
 			flex-direction: column;
 			justify-content: space-between;			
 			flex-grow: 1;
-				 padding: 0px 20px;
-				 width: min-content;
+			padding: 0px 20px;
+			width: min-content;
+			width: -moz-min-content;
 	 }
 	 &__title {
 			text-align: left;				 

@@ -1,6 +1,7 @@
 ---
 model: project
 title: Calculator in Javascript
+subtitle: Calculadora simple hecha con Javascript.
 description: 'Una Calculadora simple, con las funciónes básicas.'
 path: portfolio/calculator-in-javascript
 thumbnail: /img/calculator_js.png

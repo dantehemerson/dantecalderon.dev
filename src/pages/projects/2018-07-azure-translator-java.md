@@ -1,6 +1,7 @@
 ---
 model: project
 title: Azure Translator Java
+subtitle: Traductor usando la API de Traduccion de Texto de Microsoft Azure.
 description: >-
   Aplicacion en Java con GUI. Ejemplo de un traductor usando la API de
   Traduccion de Texto de Microsoft Azure.

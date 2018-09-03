@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { AwesomeButton } from 'react-awesome-button';
 
 const ItemWrapper = styled.article`		
-	box-shadow: 0px 0px 1px #BABABA;
+	box-shadow: 0px 0px 3px #989898;
 	border-radius: 4px 4px 0 0;
 	cursor: pointer;
 `
@@ -79,12 +79,12 @@ const TopBar = styled.div`
 
 const ItemBody = styled.div`
 	position: absolute;
-	background: -moz-linear-gradient(270deg, rgba(5,5,5,0.85) 0%, rgba(0,0,0,0.35) 100%); /* ff3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(5,5,5,0.85)), color-stop(100%, rgba(0,0,0,0.35))); /* safari4+,chrome */
-background: -webkit-linear-gradient(270deg, rgba(5,5,5,0.85) 0%, rgba(0,0,0,0.35) 100%); /* safari5.1+,chrome10+ */
-background: -o-linear-gradient(270deg, rgba(5,5,5,0.85) 0%, rgba(0,0,0,0.35) 100%); /* opera 11.10+ */
-background: -ms-linear-gradient(270deg, rgba(5,5,5,0.85) 0%, rgba(0,0,0,0.35) 100%); /* ie10+ */
-background: linear-gradient(180deg, rgba(5,5,5,0.85) 0%, rgba(0,0,0,0.35) 100%); /* w3c */
+	background: -moz-linear-gradient(270deg, rgba(5,5,5,0.75) 0%, rgba(0,0,0,0.35) 100%); /* ff3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(5,5,5,0.75)), color-stop(100%, rgba(0,0,0,0.35))); /* safari4+,chrome */
+background: -webkit-linear-gradient(270deg, rgba(5,5,5,0.75) 0%, rgba(0,0,0,0.35) 100%); /* safari5.1+,chrome10+ */
+background: -o-linear-gradient(270deg, rgba(5,5,5,0.75) 0%, rgba(0,0,0,0.35) 100%); /* opera 11.10+ */
+background: -ms-linear-gradient(270deg, rgba(5,5,5,0.75) 0%, rgba(0,0,0,0.35) 100%); /* ie10+ */
+background: linear-gradient(180deg, rgba(5,5,5,0.75) 0%, rgba(0,0,0,0.35) 100%); /* w3c */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050505', endColorstr='#000000',GradientType=0 ); /* ie6-9 */
 	left: 0;
 	top: 0;

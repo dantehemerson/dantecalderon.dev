@@ -31,6 +31,7 @@ collections:
     fields:
       - { label: Model, name: 'model', widget: hidden, default: project }   
       - { label: Title, name: title }
+      - { label: Subtitle, name: subtitle }
       - { label: Description, name: description, widget: text}
       - { label: Path, name: path }
       - { label: "Featured Image", name: thumbnail, widget: image }

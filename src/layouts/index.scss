@@ -736,22 +736,22 @@ textarea{
 	 &__title {
 			text-align: left;				 
 			margin-bottom: remcalc(10px);
-			cursor: pointer;
 			margin-top: 15px;
 			
 			@include breakpoint(md) {
 				margin-top: 0px;
 			}
-			&:hover {
-				color:  $hover-link-color;				
-			}
-
+			width: fit-content;
+			width: -moz-fit-content;
 			h3 {
 				margin: 0;
 				font-family:$serif-normal;
 				font-size: 21px;
 				@include breakpoint(sm) {
 					font-size: 27px;
+				}
+				&:hover {
+					color:  $hover-link-color;				
 				}
 
 			}

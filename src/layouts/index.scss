@@ -723,7 +723,7 @@ textarea{
 				 width: min-content;
 	 }
 	 &__title {
-				 text-align: left;				 
+			text-align: left;				 
 
 			font-family:$serif-normal;
 			font-size: 21px;
@@ -740,8 +740,7 @@ textarea{
 				color:  $hover-link-color;				
 			}
 	 }
-	 &__content {
-			
+	 &__content {			
 			text-align: left;			
 			margin-bottom: 14px;
 			font-size: 14px;			
@@ -967,7 +966,7 @@ textarea{
 $post-body-font: 'Noto Serif';
 $post-titles-font: 'Open Sans';
 .Post {	
-	padding-top: 75px;
+	padding-top: 62px;
 	padding-bottom: 50px;
 	font-family: $post-body-font;
 	font-size: 15px;

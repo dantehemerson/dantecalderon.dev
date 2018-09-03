@@ -148,6 +148,7 @@ const Tag = styled(Link)`
 	font-weight: 600;
 	display: inline-block;
 	box-shadow: 0 0 4px #333;
+	text-transform: uppercase;
 
 	&:hover {
 		background: #131313;
@@ -155,9 +156,8 @@ const Tag = styled(Link)`
 	}
 `
 
-
 export default (props) => (
-	<ItemLink to={ props.data.path }>
+	<ItemLink to={ props.data.path }>		
 		<ItemWrapper>				
 		 	<TopBar>
 				<div className="TopBarButtons"></div>
@@ -168,13 +168,21 @@ export default (props) => (
 				<ItemBody className="PortfolioItem__body">					
 					<Content>{ props.data.subtitle }</Content>		
 					<TagsWrapper className="PortfolioItem__tagswrapper">					
-						<Tag to="/Portfolio"><clr-icon shape="tag" size="18"></clr-icon> WEBAPP</Tag>
-						<Tag to="/Portfolio"><clr-icon shape="tag" size="18"></clr-icon> JAVASCRIPT</Tag>
-						<Tag to="/Portfolio"><clr-icon shape="tag" size="18"></clr-icon> HTML</Tag>
-						<Tag to="/Portfolio"><clr-icon shape="tag" size="18"></clr-icon> REACT</Tag>
-						<Tag to="/Portfolio"><clr-icon shape="tag" size="18"></clr-icon> CSS</Tag>
-						<Tag to="/Portfolio"><clr-icon shape="tag" size="18"></clr-icon> FLUX</Tag>
-						<Tag to="/Portfolio"><clr-icon shape="tag" size="18"></clr-icon> DJANGO</Tag>
+						{
+	
+							
+							props.data.tags.map((value, index) => {
+								return (
+									<Tag key={index}>
+										<clr-icon shape="tag" class="icon-item" size="18"></clr-icon>
+										{" " + value}
+									</Tag>
+								)
+							})
+							
+	
+							
+						}						
 					</TagsWrapper>
 					<AwesomeButton 
 						type="secondary"						

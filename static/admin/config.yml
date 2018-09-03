@@ -12,7 +12,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { label: Model, name: 'model', widget: hidden, default: post }
+      - { label: Model, name: model, widget: hidden, default: post }
       - { label: Title, name: title }
       - { label: Description, name: description, widget: text}
       - { label: Path, name: path }
@@ -29,7 +29,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{slug}}"
     fields:
-      - { label: Model, name: 'model', widget: hidden, default: project }   
+      - { label: Model, name: model, widget: hidden, default: project }   
       - { label: Title, name: title }
       - { label: Subtitle, name: subtitle }
       - { label: Description, name: description, widget: text}

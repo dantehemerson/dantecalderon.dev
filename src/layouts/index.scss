@@ -670,59 +670,24 @@ textarea{
 		 
 
 /** Card **/
-.Card {
-	 background: white;
-	 margin: 50px 10px;	
-	 height: 92%;
-	 a { // El Link contenedor
-			text-decoration: none;
-			color: #282a2d;                
-	 }
+.Card {	 
+	display: flex;
+	flex-wrap: wrap;
+	height: auto;
+	margin: 70px 10px;	
+	border-radius: 0;
+
+	a { // El Link contenedor
+		text-decoration: none;
+		color: #282a2d;                
+	}
 
 	&:first-child {		
 		margin-top: 20px !important;
-	}
-	&__topbar {
-		height: 25px;
-		background: #e0e3e6;
-		width: 100%;
-		display: flex;
-		align-items: center;
-		border-radius: 4px 4px 0 0;
-		&__button {
-			background: white;
-			    border-radius: 50%;
-			    height: 9px;
-			    width: 9px;
-			    position: relative;
-			    margin-left: 5px;
-			&:after {
-				content: '';
-				    background: white;
-				    border-radius: 50%;
-				    position: absolute;
-				    left: 260%;
-				    top: 0;
-				    height: 9px;
-				    width: 9px;
-
-			}
-
-			&:before {
-				content: '';
-				background: white;
-				border-radius: 50%;
-				height: 9px;
-				width: 9px;
-				position: absolute;
-				left: 130%;
-				top: 0;
-			}
-		}
-	}
+	}	
 	 &__header {
-			//height: 200px;
-			// * Imagen
+			
+			width: 100%;
 			.gatsby-image-outer-wrapper {
 				 height: 100%;
 				 .gatsby-image-wrapper {
@@ -731,18 +696,35 @@ textarea{
 				 	@include breakpoint(sm) {	
 				 		height: 300px !important;
 				 	}					
+				 	@include breakpoint(md) {						
+				 			height: 100% !important;
+				 		}
 				 }
+
 			}
+			 @include breakpoint(xs) {
+					//		height: auto;				
+				 }
+				 @include breakpoint(md) {
+					width: 380px;				
+				 }
+				 @include breakpoint(lg) {
+						width: 450px;
+				 }
+
 	 }
 
 	 &__body {
-			padding: 5px 20px 0 20px;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;			
+			flex-grow: 1;
+				 padding: 0px 20px;
+				 width: min-content;
 	 }
 	 &__title {
-			text-align: center;  
+				 text-align: left;				 
+
 			font-family:$serif-normal;
 			font-size: 21px;
 			margin-bottom: remcalc(10px);
@@ -759,7 +741,7 @@ textarea{
 			}
 	 }
 	 &__content {
-			font-weight: 500;
+			
 			text-align: left;			
 			margin-bottom: 14px;
 			font-size: 14px;			
@@ -772,79 +754,20 @@ textarea{
 			text-align: right;
 			font-size: remcalc(13px);			
 			color: #999;
-			margin-bottom: 10px;
-			time {
-				//text-transform: uppercase;
-			}
-	 }
-	 &__wavey {
-			background: #ebeaea;
-			width: 100%;
-			height: 1px;
-			margin-bottom: 10px;
-	 }
-		
-	&__header__wrapper {
-		 display: flex;
-		 flex-wrap: wrap;
-	}
+			margin-bottom: 10px;			
+	 }		
+	
 	&__btn {
-		display: none;
-	}
-	 &.blogMode {
-	 		display: flex;
-			flex-wrap: wrap;
-			height: auto;
-			 margin: 70px 10px;	
-			border-radius: 0;
-			.Card__header {
-				// height: auto;         
-				 width: 100%;
-				 @include breakpoint(xs) {
-					//		height: auto;				
-				 }
-				 @include breakpoint(md) {
-					width: 380px;				
-				 }
-				 @include breakpoint(lg) {
-						width: 450px;
-				 }
-
-				 .gatsby-image-outer-wrapper {
-				 	 .gatsby-image-wrapper {
-				 		@include breakpoint(md) {						
-				 			height: 100% !important;
-				 		}
-				 	 }
-				 }
+			display: inherit;
+			color: #999 !important;
+			font-size: 12px;
+			&:hover {
+				color:  $hover-link-color !important;
 			}
-
-			.Card__wavey {
-				 display: none;
+			@include breakpoint(sm) {
+				font-size: 14px;
 			}
-
-			.Card__body {
-				 flex-grow: 1;
-				 padding: 0px 20px;
-				 width: min-content;
-			}
-
-			.Card__title {
-				 text-align: left;				 
-			} 
-
-			.Card__btn {
-				display: inherit;
-				color: #999;
-				font-size: 12px;
-				&:hover {
-					color:  $hover-link-color;
-				}
-				@include breakpoint(sm) {
-					font-size: 13px;
-				}
-			}  
-	 }
+	}  	
 }
 
 

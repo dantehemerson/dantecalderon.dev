@@ -28,6 +28,7 @@ class Contact extends React.Component {
 						</div>
 					</div>					
 				</section>
+				<ContactSocial />
 				<div className="Contact__form container--full">
 					<div className="row center-xs">
 						<div className="col-xs-12 col-md-7 start-xs">

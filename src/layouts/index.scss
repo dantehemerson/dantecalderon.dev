@@ -2,6 +2,22 @@
 
 /** VARIABLES **/
 
+.twitter {
+	background: #55acee !important;
+}
+
+.github {
+	background: #333 !important;
+}
+
+.instagram {
+	background: #966842 !important; 
+}
+
+.linkedin {
+	background: #0077B5 !important;
+}
+
 
 
 /** Colors **/
@@ -614,62 +630,6 @@ textarea{
 				}
 
 			}
-	 }
-	 
-	 .ContactSocial {
-			background: #491e70;
-			width: 100%;
-			height: 100%;
-			color: white;
-			font-size: remcalc(15px);
-			font-weight: 600;
-			.contain {
-				 padding: 30px 20px 0 20px;
-			}
-			&__title {
-				 
-			}
-
-			&__info {
-				 &__item {
-						p {
-							 display: flex;
-							 align-items: center;
-							 justify-content: center;
-							 margin-bottom: .4rem;
-
-						}
-						img {
-							 width: remcalc(20px);
-							 margin-right: remcalc(10px);
-						}
-
-						ul {
-							 list-style: none;
-							 li {
-									text-align: center;
-									a {
-										 color: white;
-										 text-decoration: none;
-									}
-							 }
-						}
-				 }
-			}      
-			&__social {
-				 display: flex;
-				 justify-content: center;   
-				 &__icon {
-						img {
-							 width: 25px;
-							 margin: 0 10px;
-						}
-						&:hover {
-							 //transform: scale(1.1);
-						}
-				 }
-			}
-
 	 }
 
 .Blog {  

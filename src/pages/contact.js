@@ -6,6 +6,12 @@ import ContactForm from '../components/ContactForm'
 import ContactSocial from '../components/ContactSocial'
 import SEO from '../components/SEO'
 
+  import { AwesomeButton } from 'react-awesome-button';
+  import AwesomeButtonStyles from 'react-awesome-button/src/styles/styles.scss'
+ 
+
+
+
 class Contact extends React.Component {
 	render() {
 		const { data } = this.props  	
@@ -29,6 +35,15 @@ class Contact extends React.Component {
 					</div>					
 				</section>
 				<ContactSocial />
+
+    <AwesomeButton
+        cssModule={AwesomeButtonStyles}
+        type="twitter"
+      >
+        Share
+      </AwesomeButton>
+<AwesomeButton  type="primary">Primary</AwesomeButton>
+				 <AwesomeButton type="facebook">Button</AwesomeButton>
 				<div className="Contact__form container--full">
 					<div className="row center-xs">
 						<div className="col-xs-12 col-md-7 start-xs">

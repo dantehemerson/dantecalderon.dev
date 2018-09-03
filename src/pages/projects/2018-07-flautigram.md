@@ -1,6 +1,9 @@
 ---
 model: project
 title: Flautigram
+subtitle: >-
+  Flautigram es un clon de Instagram que te permite compartir fotos con tus
+  amigos. 
 description: Una pagina clon de Instagram. Hecho con Materialize.
 path: portfolio/flautigram
 thumbnail: /img/flautigram-home.png

@@ -23,7 +23,7 @@ class Contact extends React.Component {
 						<div className="row center-xs">
 							<div className="HeaderContact__titlewrap Page__titlewrap text-center col-xs-12 col-md-10 col-lg-7">
 								<h2 className="HeaderContact__title Page__title">Contacto</h2>
-								<p className="HeaderContact__description Page__description">Si tienes una pregunta, quieres que trabajemos juntos o quieres dejarme unas palabras. Me encantaría escucharte puedes enviarme un email a <b>dantehemerson@gmail.com</b></p>
+								<p className="HeaderContact__description Page__description">Antes que nada, gracias por visitar mi blog. Si tienes alguna pregunta, quieres que trabajemos juntos o quieres dejarme unas palabras. Me encantaría escucharte. Puedes seguirme en mis redes sociales ó puedes enviarme un email a <b>dantehemerson@gmail.com</b>.</p>
 							</div>							
 						</div>
 					</div>					

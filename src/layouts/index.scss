@@ -1,6 +1,5 @@
 @import '../assets/styles/flex-box-grid';
 
-/** VARIABLES **/
 .aws-btn {
 --button-default-height: 44px !important;
 --button-default-font-size: 15px !important;
@@ -192,19 +191,13 @@ $border-radius: 3px;
 	 }
 }
 
-/** Styles ----------------------- **/
-* {
-	
-}
-
 body {
 	 margin: 0 !important;
 	 padding: 0 !important;
 	 text-rendering: geometricPrecision;
 	 -moz-osx-font-smoothing: grayscale;
 	 -webkit-font-smoothing: antialiased;
-	 color: #282a2d;
-	 //background: #fafafa;
+	 color: #282a2d;	 
 }
 
 .btn {   
@@ -269,7 +262,7 @@ textarea{
 	 padding-bottom: remcalc(25px);   	
 	 &__title {
 		font-family: $sans-serif-font;
-		color: #333;		
+		color: #f06668;		
 		font-size: 11vw;      					
 		@include breakpoint(md) {
 			font-size: remcalc(78px);      			
@@ -282,7 +275,7 @@ textarea{
 		text-transform: uppercase;
 		-webkit-text-fill-color: transparent;
 		-webkit-text-stroke-width: 2px;
-		-webkit-text-stroke-color: #333;
+		-webkit-text-stroke-color: #f06668;
 		margin-top: 0;
 		max-width: 800px;
 		margin-left: auto;
@@ -396,7 +389,7 @@ textarea{
 	 justify-content: center;   
 	 position: fixed;
 	 width: 100%;	 
-	 z-index: 100;
+	 z-index: 10;
 	 box-shadow: 0px 1px 0px 0px #f3f3f3;	 	
 	 background: white;
 	 &.inicio {
@@ -433,8 +426,7 @@ textarea{
 	 }
 
 	 /** Link to home **/
-	 &__titlewrap {
-	 	z-index: 100;
+	 &__titlewrap {	 	
 	 	display: flex;
 		align-items: center;
     	border-radius: 3px;
@@ -455,10 +447,28 @@ textarea{
 	}
 	
 
+	&__shadow {		
+		position: fixed;
+		left: 900%;
+		top: 0;
+		width: 900%;
+		height: 100%;
+		transition: 0;
+		transition: 0;		
+		&.open {	
+			left: 0;		
+			transition: background .4s;
+			background: rgba(0, 0, 0, .6);
+			z-index: 20;
+		}
+
+	}	
 	&__navwrap {
 		//@include breakpoint()
 	}
-	 &__nav {			
+	 &__nav {	
+
+		z-index: 30;
 			list-style: none;      
 			position: absolute;			
 			top: 0;
@@ -669,10 +679,10 @@ textarea{
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: center;   
-			// background-color: #f0f0ee;			
+			// background-color: #f0f0ee;x			
 			color: white;    
 		&__title {
-			-webkit-text-stroke-color: #007f93;
+			-webkit-text-stroke-color: #3fabbb;
 		}        
 	 }
 }
@@ -686,11 +696,6 @@ textarea{
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: center;   
-			// background-color: #f6f1e4;
-			color: white;
-			&__title {
-				-webkit-text-stroke-color: #f06668;
-			}
 	 }
 
 	 &__item {
@@ -700,7 +705,6 @@ textarea{
 
 		 
 
-/** Card **/
 .Card {	 
 	display: flex;
 	flex-wrap: wrap;
@@ -708,7 +712,7 @@ textarea{
 	margin: 70px 10px;	
 	border-radius: 0;
 
-	a { // El Link contenedor
+	a { 
 		text-decoration: none;
 		color: #282a2d;                
 	}
@@ -909,9 +913,7 @@ textarea{
 	 }
 }
 
-/** About Section **/
 .About {
-	background: white;   
 	color: rgba(0,0,0,.88);  
 	padding-top: 4.8rem;
 	font-size: 15px;

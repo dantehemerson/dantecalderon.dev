@@ -45,7 +45,8 @@ class Navbar extends React.Component {
 				"Navbar " + 
 				(this.props.activePage == "" ? "inicio " : "") + 
 				(this.state.navbarIsTop ? '' : 'noTop') 
-			}>				
+			}>		
+				<div className={`Navbar__shadow ${menuIsOpen ? 'open' : ''}`}></div>		
 				<div className="container">
 					<Link className="Navbar__titlewrap" onClick={ (e) => { this.setState({menuIsOpen: false}) } }  to="/">				
 						<img className="Navbar__logo" src={Logo} />

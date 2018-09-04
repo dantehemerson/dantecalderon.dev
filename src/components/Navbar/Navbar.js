@@ -43,6 +43,7 @@ class Navbar extends React.Component {
 
 			<nav className={
 				"Navbar " + 
+				(this.props.activePage == "" ? "inicio " : "") + 
 				(this.state.navbarIsTop ? '' : 'noTop') 
 			}>				
 				<div className="container">

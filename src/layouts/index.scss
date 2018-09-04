@@ -447,21 +447,22 @@ textarea{
 	}
 	
 
-	&__shadow {		
-		position: fixed;
-		left: 900%;
-		top: 0;
-		width: 900%;
-		height: 100%;
-		transition: 0;
-		transition: 0;		
-		&.open {	
-			left: 0;		
-			transition: background .4s;
-			background: rgba(0, 0, 0, .6);
-			z-index: 20;
+	&__shadow {	
+		@media (max-width: 767px)	 {			
+			position: fixed;
+			left: 900%;
+			top: 0;
+			width: 900%;
+			height: 100%;
+			transition: 0;
+			transition: 0;		
+			&.open {	
+				left: 0;		
+				transition: background .4s;
+				background: rgba(0, 0, 0, .3);
+				z-index: 20;
+			}
 		}
-
 	}	
 	&__navwrap {
 		//@include breakpoint()

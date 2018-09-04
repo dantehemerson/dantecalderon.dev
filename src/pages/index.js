@@ -6,6 +6,7 @@ import About from '../components/About'
 import SEO from '../components/SEO'
 
 import { animateScroller } from '../utils'
+import { AwesomeButton } from 'react-awesome-button'
 
 class Index extends React.Component {
  
@@ -26,12 +27,12 @@ class Index extends React.Component {
               <div className="col-xs-12 col-lg-5 text-center" >
         				<h1 className="Header-Home__title" >Dante Calderón</h1>
         				<h2 className="Header-Home__subtitle">⊰ Programmer ⊱</h2>
-                <a className="btn Header-Home__btn-about" href="#about" 
-                  onClick={(event) => { 
-                  event.preventDefault()                  
-                  let target = document.getElementById('about').getBoundingClientRect().top
-                  animateScroller(target)
-                  }}>Sobre mí</a>
+                <AwesomeButton 
+                  size="medium"                  
+                  className="Header-Home__btn-about" 
+                  href="#about" >
+                    SOBRE MÍ
+                </AwesomeButton>
               </div>
               <div className="col-xs-12 col-lg-7">
     				    <Rotational avatar={ data.avatar }/>

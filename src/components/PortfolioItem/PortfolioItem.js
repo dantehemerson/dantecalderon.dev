@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-import { AwesomeButton } from 'react-awesome-button';
+import { AwesomeButton } from 'react-awesome-button'
 
 const ItemWrapper = styled.article`		
 	box-shadow: 0px 0px 3px #989898;

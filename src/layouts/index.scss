@@ -5,7 +5,7 @@
 --button-default-height: 44px !important;
 --button-default-font-size: 15px !important;
 --button-default-border-radius: 2px !important;
-
+--button-horizontal-padding: 41px !important;
 --button-medium-height: 50px !important;
 
 --button-horizontal-padding: 23px !important;
@@ -266,11 +266,7 @@ textarea{
 
 .Page {
 	 padding-top: remcalc(100px);
-	 padding-bottom: remcalc(25px);   
-	 &__titlewrap {
-	 	flex-basis: auto;
-	 	max-width: 800px;
-	 }       
+	 padding-bottom: remcalc(25px);   	
 	 &__title {
 		font-family: $sans-serif-font;
 		color: #333;		
@@ -596,15 +592,9 @@ textarea{
 	 }
 
 	 &__btn-about {		 
-	    border: 1px solid #1f1c1b;
-	    padding: 10px 50px;
-	    margin-top: 28px;	    
-	    color: #1f1c1b;
-	    display: inline-block;
-	    border-radius: $border-radius;
+	 	margin-top: 20px !important;
 	    &:hover {
-			background: #eff1f1;
-			//color: white;
+			background: #eff1f1;			
 	    }
 
 	 }

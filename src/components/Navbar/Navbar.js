@@ -21,8 +21,8 @@ class Navbar extends React.Component {
 	}
 
 	componentDidMount() {
-		let scrollPosition = document.documentElement.scrollTop
 		const scrollListener = () => {
+			let scrollPosition = document.documentElement.scrollTop
 			this.setState({ 
 				navbarIsTop: scrollPosition <= 5 
 			})	

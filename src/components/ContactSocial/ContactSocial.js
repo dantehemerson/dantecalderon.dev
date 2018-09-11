@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-
 const ContactSocialWrapper = styled.div`
 	text-align: center;
 `
@@ -26,7 +25,7 @@ const ContactSocialIcon = styled.a`
 		transform: scale(.9);
 	}
 `
-export default (props) => (
+export default props => (
 	<ContactSocialWrapper>										
 		<ContactSocialIcon
 			className="github" 

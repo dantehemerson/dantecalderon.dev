@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 
-export default (props) => (
+export default props => (
 	<div className={`AuthorPost ${props.header ? ' header' : ''}`}>
 		<div className="AuthorPost__header">
 			<Img className="AuthorPost__image" sizes={ props.avatar.sizes } />

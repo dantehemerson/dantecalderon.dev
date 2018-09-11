@@ -116,24 +116,7 @@ const ItemLink = styled(Link)`
 	}
 `
 
-const ItemView = styled.p`
-	color: white;
-	padding: 10px 40px;
-	background: #c59d59;
-	border-radius: 3px;
-	font-weight: 600;
-	margin: 0;
-	&:hover {
-		background: #a98548;
-	}
-	@media (max-width: 575px) {
-		font-size: .9rem;
-		padding: 9px 30px;
-	}
-`
-
 const TagsWrapper = styled.div`
-	
 `
 
 const Tag = styled(Link)`
@@ -156,7 +139,7 @@ const Tag = styled(Link)`
 	}
 `
 
-export default (props) => (
+export default props => (
 	<ItemLink to={ props.data.path }>		
 		<ItemWrapper>				
 		 	<TopBar>
@@ -164,30 +147,25 @@ export default (props) => (
 				<Title>{ props.data.title }</Title>	
 			</TopBar>
 			<ItemContainer>
-				<Cover sizes={props.data.thumbnail} />
+				<Cover sizes={ props.data.thumbnail } />
 				<ItemBody className="PortfolioItem__body">					
 					<Content>{ props.data.subtitle }</Content>		
 					<TagsWrapper className="PortfolioItem__tagswrapper">					
 						{
-	
-							
 							props.data.tags.map((value, index) => {
 								return (
-									<Tag key={index}>
-										<clr-icon shape="tag" class="icon-item" size="18"></clr-icon>
-										{" " + value}
+									<Tag key={ index }>
+										<clr-icon shape="tag" class="icon-item" size="18"/>
+										{ " " + value }
 									</Tag>
 								)
 							})
-							
-	
-							
 						}						
 					</TagsWrapper>
 					<AwesomeButton 
 						type="secondary"						
 						className="ItemView">
-						<clr-icon shape="eye" class="icon-item" size="20"></clr-icon> VER
+						<clr-icon shape="eye" class="icon-item" size="20"/> VER
 					</AwesomeButton>	
 				</ItemBody>	
 			</ItemContainer>				

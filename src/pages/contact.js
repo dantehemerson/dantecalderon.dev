@@ -11,7 +11,6 @@ class Contact extends React.Component {
 		const { data } = this.props  	
 		const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     	const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')	 
-
 		return (
 			<div className="Contact">
 				<SEO
@@ -29,7 +28,6 @@ class Contact extends React.Component {
 					</div>					
 				</section>
 				<ContactSocial />
-
 				<div className="Contact__form container--full">
 					<div className="row center-xs">
 						<div className="col-xs-12 col-md-7 start-xs">
@@ -43,19 +41,19 @@ class Contact extends React.Component {
 }
 
 export const queryContact = graphql`
-  query QueryContact {
-    contactImage: imageSharp(id: {regex: "/contact/"}) {
-      sizes(maxWidth: 4000) {
-        ...GatsbyImageSharpSizes_tracedSVG
-      }
-    }     
-    site {
-      siteMetadata {
-         title
-         siteUrl
-      }     
-    }
-  }
+  	query QueryContact {
+   	contactImage: imageSharp(id: {regex: "/contact/"}) {
+      	sizes(maxWidth: 4000) {
+        		...GatsbyImageSharpSizes_tracedSVG
+      	}
+    	}     
+    	site {
+      	siteMetadata {
+         	title
+         	siteUrl
+      	}     
+    	}
+  	}
 `
 
 export default Contact	

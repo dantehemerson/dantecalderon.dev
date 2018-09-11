@@ -1,10 +1,9 @@
 import React from 'react'
 import Swal from 'sweetalert2'
-
 import { AwesomeButton } from 'react-awesome-button';
 
  
-const encode = (data) => {
+const encode = data => {
 	return Object.keys(data)
 		.map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
 		.join("&")
@@ -27,7 +26,10 @@ class ContactForm extends React.Component {
 			headers: {
 				 "Content-Type": "application/x-www-form-urlencoded"
 			},
-			body: encode({ "form-name": "contact", ...this.state })
+			body: encode({
+				"form-name": "contact", 
+				...this.state
+			})
 		})
 		.then(() => {
 			Swal({
@@ -43,16 +45,17 @@ class ContactForm extends React.Component {
 						subject: "",
 						message: ""
 					})
-    			},
+    			}
 			})
 
 		})
-		.catch(error => alert("Error"))
-
+		.catch(error => alert("Error al enviar el mensaje. Vuelve a intentarlo."))
 		e.preventDefault()
 	}
 
-	handleChange = e => this.setState({ [e.target.name]: e.target.value })
+	handleChange = e => this.setState({ 
+		[e.target.name]: e.target.value
+	})
 
 	render() {
 		const { name, email, subject, message } = this.state
@@ -67,7 +70,7 @@ class ContactForm extends React.Component {
 							<p className="ContactForm__label">Tu nombre</p>
 						</div>
 						<div className="ContactForm__inputwrap">
-							<input name="name" value={name} className="ContactForm__input" placeholder="Nombre" type="text" required onChange={ this.handleChange }/>
+							<input name="name" value={ name } className="ContactForm__input" placeholder="Nombre" type="text" required onChange={ this.handleChange }/>
 						</div>
 					</div>		
 					<div className="ContactForm__item">
@@ -97,11 +100,10 @@ class ContactForm extends React.Component {
 					<div className="ContactForm__item">
 						<div className="ContactForm__submitwrap">
 							<AwesomeButton
-							  size="medium"
-							  type="primary">
-							  ENVIAR
+								size="medium"
+							  	type="primary">
+							  	ENVIAR
 							</AwesomeButton>
-													
 						</div>
 					</div>
 				</form>

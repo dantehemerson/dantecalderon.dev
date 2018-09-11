@@ -11,7 +11,6 @@ class Portfolio extends React.Component {
 		const posts = get(this, 'props.data.allMarkdownRemark.edges') || []
 		const siteTitle = get(this, 'props.data.site.siteMetadata.title')
 		const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')	
-
 		return (
 			<div className="Portfolio">
 				<SEO
@@ -44,11 +43,10 @@ class Portfolio extends React.Component {
 													date: node.frontmatter.date,
 													path: `/${node.frontmatter.path}`,
 													timeToRead: node.timeToRead,
-													tags: node.frontmatter.tags,		
+													tags: node.frontmatter.tags		
 												}
 											} 
-											mode="portfolio"											
-											/>
+											mode="portfolio"/>
 									</div>
 								)
 							})
@@ -64,8 +62,8 @@ export const queryPortfolio = graphql`
   query QueryPortfolio {   
     site {
       siteMetadata {
-            title
-            siteUrl
+         title
+         siteUrl
       }     
     }
 

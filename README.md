@@ -40,7 +40,3 @@ sudo wget -q -O /tmp/libpng12.deb http://mirrors.kernel.org/ubuntu/pool/main/lib
   && rm /tmp/libpng12.deb
 ```
 then, the issue will be solved.
-
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/dantehemerson/dcweb)

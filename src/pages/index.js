@@ -1,4 +1,5 @@
 import React from 'react'
+import PageTransition from 'gatsby-plugin-page-transitions'
 import { AwesomeButton } from 'react-awesome-button'
 import get from 'lodash/get'
 
@@ -12,31 +13,33 @@ class Index extends React.Component {
       const siteTitle = get(this, 'props.data.site.siteMetadata.title')
       const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')	    
 		return (
-         <div>
-            <SEO
-               title=""
-               url={ siteUrl }/>               
-               <main className="Header-Home">			
-               <div className="container">
-                  <div className="row">
-                     <div className="col-xs-12 col-lg-5 text-center" >
-                        <h1 className="Header-Home__title" >Dante Calderón</h1>
-                        <h2 className="Header-Home__subtitle">Programmer</h2>
-                        <AwesomeButton 
-                           size="medium"                  
-                           className="Header-Home__btn-about" 
-                           href="#about" >
-                           SOBRE MÍ
-                        </AwesomeButton>
-                     </div>
-                     <div className="col-xs-12 col-lg-7">
-                        <Rotational avatar={ data.avatar }/>
+         <PageTransition>
+            <div>
+               <SEO
+                  title=""
+                  url={ siteUrl }/>               
+                  <main className="Header-Home">			
+                  <div className="container">
+                     <div className="row">
+                        <div className="col-xs-12 col-lg-5 text-center" >
+                           <h1 className="Header-Home__title" >Dante Calderón</h1>
+                           <h2 className="Header-Home__subtitle">Programmer</h2>
+                           <AwesomeButton 
+                              size="medium"                  
+                              className="Header-Home__btn-about" 
+                              href="#about" >
+                              SOBRE MÍ
+                           </AwesomeButton>
+                        </div>
+                        <div className="col-xs-12 col-lg-7">
+                           <Rotational avatar={ data.avatar }/>
+                        </div>
                      </div>
                   </div>
-               </div>
-            </main>
-            <About image={ data.aboutImage } />      
-         </div>
+               </main>
+               <About image={ data.aboutImage } />      
+            </div>
+         </PageTransition>
 		)
 	}
 }

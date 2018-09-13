@@ -1,4 +1,5 @@
 import React from 'react'
+import PageTransition from 'gatsby-plugin-page-transitions'
 import get from 'lodash/get'
 
 import Card from '../components/Card'
@@ -11,47 +12,49 @@ class Blog extends React.Component {
 		const siteTitle = get(this, 'props.data.site.siteMetadata.title')
 		const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')
 		return (
-			<div className="Blog">
-				<SEO
-					title="Blog"
-					url={`${siteUrl}/blog`}
-				/>
-				<section className="HeaderBlog Page">
-					<div className="container">
+			<PageTransition>
+				<div className="Blog">
+					<SEO
+						title="Blog"
+						url={`${siteUrl}/blog`}
+					/>
+					<section className="HeaderBlog Page">
+						<div className="container">
+							<div className="row center-xs">
+								<div className="HeaderBlog__titlewrap Page__titlewrap text-center col-xs-12 col-md-10 col-lg-7">
+									<h2 className="HeaderBlog__title Page__title">Blog</h2>
+									{/*
+									<p className="HeaderBlog__description Page__description">Sobre programacion y mas.</p>
+									*/}
+								</div>
+							</div>
+						</div>
+					</section>
+					<div className="Page__content container--full">
 						<div className="row center-xs">
-							<div className="HeaderBlog__titlewrap Page__titlewrap text-center col-xs-12 col-md-10 col-lg-7">
-								<h2 className="HeaderBlog__title Page__title">Blog</h2>
-								{/*
-								<p className="HeaderBlog__description Page__description">Sobre programacion y mas.</p>
-								*/}
+							<div className="col-xs-12 col-lg-11">
+								{
+									posts.map(({ node }) => {
+										if (node.frontmatter.published)
+											return <Card
+												data={
+													{
+														title: node.frontmatter.title,
+														thumbnail: node.fields.thumbnail.childImageSharp.sizes,
+														excerpt: node.excerpt,
+														date: node.frontmatter.date,
+														path: `/${node.frontmatter.path}`,
+														timeToRead: node.timeToRead
+													}
+												}
+												key={node.frontmatter.path} />
+									})
+								}
 							</div>
 						</div>
 					</div>
-				</section>
-				<div className="Page__content container--full">
-					<div className="row center-xs">
-						<div className="col-xs-12 col-lg-11">
-							{
-								posts.map(({ node }) => {
-									if (node.frontmatter.published)
-										return <Card
-											data={
-												{
-													title: node.frontmatter.title,
-													thumbnail: node.fields.thumbnail.childImageSharp.sizes,
-													excerpt: node.excerpt,
-													date: node.frontmatter.date,
-													path: `/${node.frontmatter.path}`,
-													timeToRead: node.timeToRead
-												}
-											}
-											key={node.frontmatter.path} />
-								})
-							}
-						</div>
-					</div>
 				</div>
-			</div>
+			</PageTransition>
 		)
 	}
 }

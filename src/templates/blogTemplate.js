@@ -1,4 +1,5 @@
 import React from 'react'
+import PageTransition from 'gatsby-plugin-page-transitions'
 import Img from 'gatsby-image'
 import get from 'lodash/get'
 import getObj from 'ast-get-object'
@@ -84,39 +85,41 @@ export default class BlogPostTemplate extends React.Component {
 		const ast = post.htmlAst
 		const images = getObj(ast, { type: 'element', tagName: 'img' })
 		return (
-			<div>
-				<SEO
-					title={ post.frontmatter.title }
-					url={ `${siteMetadata.siteUrl}/${post.frontmatter.path}` } 
-					image={`https://dantecalderon.com${post.fields.thumbnail.childImageSharp.responsiveSizes.src}`}
-					description={ post.frontmatter.description }     
-					isPost={ true }
-				/>
-				<Post 
-					{ ...post }
-					{ ...siteMetadata }
-					previous={ previous }
-					next={ next }
-					content={ post.html }
-					contentComponent={ HTMLContent }
-					image={ post.fields.thumbnail.childImageSharp.responsiveSizes }
-					avatar={ this.props.data.avatar }
-					/>		
-					<div className="Post__footer">
-						{  post.frontmatter.model === 'post' && 
-							<div id="disquser" className="container Disqus">
-								<ReactDisqusComments
-											shortname="dantecalderon"
-											identifier={ post.frontmatter.path }
-											title={ post.frontmatter.title }
-											url={ this.state.location }/>
-							</div>
-						}
-					</div>
-					<Share fixed show={ this.state.show_share } 
-					 	title={post.frontmatter.title} 
-						url={`https://dantecalderon.com/` + post.frontmatter.path}/>
-			</div>
+			<PageTransition>
+				<div>
+					<SEO
+						title={ post.frontmatter.title }
+						url={ `${siteMetadata.siteUrl}/${post.frontmatter.path}` } 
+						image={`https://dantecalderon.com${post.fields.thumbnail.childImageSharp.responsiveSizes.src}`}
+						description={ post.frontmatter.description }     
+						isPost={ true }
+					/>
+					<Post 
+						{ ...post }
+						{ ...siteMetadata }
+						previous={ previous }
+						next={ next }
+						content={ post.html }
+						contentComponent={ HTMLContent }
+						image={ post.fields.thumbnail.childImageSharp.responsiveSizes }
+						avatar={ this.props.data.avatar }
+						/>		
+						<div className="Post__footer">
+							{  post.frontmatter.model === 'post' && 
+								<div id="disquser" className="container Disqus">
+									<ReactDisqusComments
+												shortname="dantecalderon"
+												identifier={ post.frontmatter.path }
+												title={ post.frontmatter.title }
+												url={ this.state.location }/>
+								</div>
+							}
+						</div>
+						<Share fixed show={ this.state.show_share } 
+						 	title={post.frontmatter.title} 
+							url={`https://dantecalderon.com/` + post.frontmatter.path}/>
+				</div>
+			</PageTransition>
 		)
 	}
 }

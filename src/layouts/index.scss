@@ -339,7 +339,7 @@ textarea{
         transition: all .25s;         
          &:after {
            @extend .b-a-expanded;           
-            transform: rotate(405deg);
+            transform: rotate(45deg);
          }
          &:before {
            @extend .b-a-expanded;           

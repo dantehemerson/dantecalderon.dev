@@ -124,6 +124,11 @@ module.exports = {
          },
       },
       `gatsby-plugin-styled-components`,
-      'gatsby-plugin-page-transitions'
+      {
+         resolve: 'gatsby-plugin-page-transitions',
+         options: {
+            transitionTime: 300
+         }
+      }    
    ],
 }

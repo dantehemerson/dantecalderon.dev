@@ -3,12 +3,4 @@ root = true
 [*]
 ident_style = tab
 end_of_line = lf
-
-[*.{js, jsx}]
-tab_width = 3
-
-[*.{scss, css}]
 tab_width = 2
-
-[{package.json}]
-tab_width = 3

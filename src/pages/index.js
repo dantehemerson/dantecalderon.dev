@@ -6,6 +6,7 @@ import get from 'lodash/get'
 import Rotational from '../components/Rotational'
 import About from '../components/About'
 import SEO from '../components/SEO'
+import Stack from '../components/Stack'
 
 class Index extends React.Component {
 	render() {
@@ -38,6 +39,7 @@ class Index extends React.Component {
                   </div>
                </main>
                <About image={ data.aboutImage } />      
+               <Stack />
             </div>
          </PageTransition>
 		)

@@ -1627,6 +1627,7 @@ $post-titles-font: 'Open Sans';
 		padding-right: 15px;		
 		margin-bottom: 20px;
 		display: flex;
+		position: relative;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
@@ -1670,6 +1671,45 @@ $post-titles-font: 'Open Sans';
 			
 			font-family: $sans-serif-font;
 		}
+
+		&__tooltip {		
+			position: absolute;
+			left: -8%;
+			top: calc(100% - 28px);
+			width: 106%;
+			margin: 10px;
+			text-align: center;
+			background: white; 
+			color: #333;
+			font-weight: 600;
+			font-size: 14px;
+			border-radius: 3px;
+			padding: 4px;
+			opacity: 0;
+			z-index: 3;
+			transition: .4s;
+			box-shadow: 0 0 4px #555;
+			&__text {
+				position: relative;
+				margin: 0;
+			}
+			&__arrow {
+				z-index: 4;
+				transition: .4s;			
+				display: inline-block;
+				position: absolute;
+				left: calc(50% - 6px);
+				top: -10px;
+				width: 12px;
+				height: 12px;
+				background: white;
+				transform: rotate(45deg);
+			}						
+		}
+
+		&:hover .Stack__item__tooltip {
+			opacity: 1;
+		}		
 	}
 }
 

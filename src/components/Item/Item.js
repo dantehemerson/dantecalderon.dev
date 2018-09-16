@@ -15,5 +15,14 @@ export default props => (
 		<div className="Stack__item__typewrapper">
 			<h4 className="Stack__item__type">{props.item.type}</h4>
 		</div>
+
+		{/*
+		<div className="Stack__item__tooltip">
+			<p className="Stack__item__tooltip__text">
+				This is the tooltip alsdkj  asldkj  alsdkj lakdsj 
+				<span className="Stack__item__tooltip__arrow"></span>
+			</p>
+		</div>
+	*/}
 	</div>
 )

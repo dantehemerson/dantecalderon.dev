@@ -50,7 +50,7 @@ const groups = [
 		title: 'Backed',
 		items: [
 			{ name: 'Django', icon: 'django-original.svg', background: '#003a2b', type: type[8], about: "The Web framework for perfectionists with deadlines" },
-			{ name: 'Express', icon: 'express-original.svg', background: 'white', type: type[10] },
+			{ name: 'Express', icon: 'express-original.svg', background: 'white', type: type[10], about: "Infraestructura web rápida, minimalista y flexible para Node.js" },
 			{ name: 'PostgreSQL', icon: 'postgresql-original.svg', type: type[0], about: "A powerful, open source object-relational database system" },
 			{ name: 'MongoDB', icon: 'mongodb-original.svg', background: '#40474f', type: type[0], about: "The database for giant ideas" },
 			{ name: 'MySQL', icon: 'mysql-original-wordmark.svg', background: 'white', type: type[0], about: "The world's most popular open source database" },
@@ -88,9 +88,17 @@ const groups = [
 ]
 
 export default props => (
-	<div className='Stack'>
-		{
-			groups.map((group, index) => <Group key={index} group={group} />)
-		}
+		<div className='Stack'>
+			<div className="">
+				<h2 className="Page__title">Mi Stack</h2>
+				{/*
+				<p className="About__description Page__description">
+					Hola,  soy Dante Calderón y programo en Python, por que Python es cool.
+				</p>
+			*/}
+			</div>
+			{
+				groups.map((group, index) => <Group key={index} group={group} />)
+			}
 	</div>
 )

@@ -7,6 +7,7 @@ import Rotational from '../components/Rotational'
 import About from '../components/About'
 import SEO from '../components/SEO'
 import Stack from '../components/Stack'
+import Social from '../components/Social'
 
 class Index extends React.Component {
 	render() {
@@ -24,9 +25,10 @@ class Index extends React.Component {
                      <div className="row">
                         <div className="col-xs-12 col-lg-5 text-center" >
                            <h1 className="Header-Home__title" >Dante Calderón</h1>
-                           <h2 className="Header-Home__subtitle">Programmer</h2>
+                           <h2 className="Header-Home__subtitle">Web Developer</h2>
+                           <Social />
                            <AwesomeButton 
-                              size="medium"                  
+                              size="small"                  
                               className="Header-Home__btn-about" 
                               href="#about" >
                               SOBRE MÍ

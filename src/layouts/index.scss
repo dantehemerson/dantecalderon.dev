@@ -48,6 +48,23 @@
 	background: #0077B5 !important;
 }
 
+.twitter--hover:hover {
+	background: #55acee !important;
+}
+
+.github--hover:hover {
+	background: #333 !important;
+}
+
+.instagram--hover:hover {
+	background: #966842 !important; 
+}
+
+.linkedin--hover:hover {
+	background: #0077B5 !important;
+}
+
+
 
 
 /** Colors **/
@@ -474,7 +491,7 @@ textarea{
 			position: absolute;			
 			top: 0;
 			box-shadow: 0px 0px 0px 1px #f3f3f3;
-			width: 80%;
+			width: 75%;
 			max-width: 420px;
 			height: 100vh;
 			flex-direction: column;
@@ -493,6 +510,9 @@ textarea{
 				transition: right .4s !important;				
 				left: auto;
 				right: 0;				
+			}
+			@include breakpoint(sm) {
+				width: 60%;
 			}
 
 			@include breakpoint(md) {
@@ -583,7 +603,7 @@ textarea{
 	 }
 
 	 &__title {
-			font-size: 2.6rem;      
+			font-size: 12vw;      
 			font-weight: 900;
 			text-transform: uppercase; 
 			text-align: center;
@@ -595,19 +615,18 @@ textarea{
 
 
 	 &__subtitle {
-			font-size: 1rem;      
-			font-weight: 400;
+			font-size: 1rem ;
+    	font-weight: 600;
+			margin: 10px 0 20px 0;
 			font-family: 'Open Sans';
 			text-transform: uppercase;
 			text-align: center;
-			color: #6f5838;
-			@include breakpoint(sm) {
-				font-size: 1.2rem;      
-			}
+			color: #1976d2;			
 	 }
 
-	 &__btn-about {		 
-	 	margin-top: 20px !important;
+	 &__btn-about {		
+	 	width: 141px; 
+	 	margin-top: 34px !important;
 	    &:hover {
 			background: #eff1f1;			
 	    }
@@ -830,8 +849,8 @@ textarea{
 			width: 100%;      
 			position: relative;
 			display: flex;
-			max-width: 270px;
-			max-height: 270px;
+			max-width: 255px;
+			max-height: 255px;
 			align-items: center;
 			justify-content: center;
 			margin-top: 110px;
@@ -1350,7 +1369,7 @@ $post-titles-font: 'Open Sans';
 			text-decoration: none;
 	 }
 
-	 &__social {
+	 &__ {
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -1590,7 +1609,7 @@ $post-titles-font: 'Open Sans';
 }
 
 .Stack {
-	max-width: 800px;
+	max-width: 900px;
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-left: auto;
@@ -1689,11 +1708,11 @@ $post-titles-font: 'Open Sans';
 			font-weight: 600;
 			font-size: 13px;
 			border-radius: 3px;
-			padding: 3px 2px;			
+			padding: 3px 3px;			
 			opacity: 0;
 			z-index: 333;
 			transition: .3s;
-			box-shadow: 0 0 3px #666;
+			box-shadow: 0 0 0px 1px #ddd;
 			&__text {
 				position: relative;
 				margin: 0;
@@ -1712,3 +1731,6 @@ $post-titles-font: 'Open Sans';
 	}
 }
 
+.Social {
+
+}

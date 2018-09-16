@@ -5,7 +5,7 @@ const SocialWrapper = styled.div`
 	text-align: center;
 `
 const SocialIcon = styled.a`
-	margin: 0 5px;
+	margin: 0 5px !important;
 	background: #bbbbbb;
 	border-radius: 50%;
 	width: 38px;

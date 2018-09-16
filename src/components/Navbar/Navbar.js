@@ -28,6 +28,15 @@ class Navbar extends React.Component {
 			})	
 		}
 		window.addEventListener('scroll', scrollListener)
+
+		const Headroom = require('headroom.js/dist/headroom.min.js')
+
+		let navbar = document.getElementById('Navbar')
+		let headroom = new Headroom(navbar, {
+			"offset": 200,
+  		"tolerance": 15,
+		})
+		headroom.init()
 	}
 
 	handleToggle = event => {			
@@ -44,7 +53,8 @@ class Navbar extends React.Component {
 			<nav className={
 				"Navbar " + 
 				(this.props.activePage == "" ? "inicio " : "") + 
-				(this.state.navbarIsTop ? '' : 'noTop') }>		
+				(this.state.navbarIsTop ? '' : 'noTop') }
+				id="Navbar">		
 				<div
 					onClick={ (e) => { this.setState({ menuIsOpen: false }) }} 
 					className={`Navbar__shadow ${menuIsOpen ? 'open' : ''}`}>

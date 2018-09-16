@@ -40,6 +40,7 @@
 		"gatsby-source-filesystem": "^1.5.38",
 		"gatsby-transformer-remark": "^1.7.44",
 		"gatsby-transformer-sharp": "^1.6.26",
+		"headroom.js": "^0.9.4",
 		"lodash": "^4.17.10",
 		"netlify-cms": "^1.9.3",
 		"prismjs": "^1.15.0",

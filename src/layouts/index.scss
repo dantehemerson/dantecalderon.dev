@@ -1643,6 +1643,11 @@ $post-titles-font: 'Open Sans';
 			border-radius: 3px;
 			margin-bottom: 6px;
 			box-shadow: 0 0 4px #191919;
+
+			&:hover + .Stack__item__tooltip {
+				opacity: 1;
+				bottom: calc(100%);
+			}		
 		}
 
 		&__name {
@@ -1675,41 +1680,35 @@ $post-titles-font: 'Open Sans';
 		&__tooltip {		
 			position: absolute;
 			left: -8%;
-			top: calc(100% - 28px);
+			bottom: calc(100% - 5px);
 			width: 106%;
 			margin: 10px;
 			text-align: center;
 			background: white; 
 			color: #333;
 			font-weight: 600;
-			font-size: 14px;
+			font-size: 13px;
 			border-radius: 3px;
-			padding: 4px;
+			padding: 3px 2px;			
 			opacity: 0;
-			z-index: 3;
-			transition: .4s;
-			box-shadow: 0 0 4px #555;
+			z-index: 333;
+			transition: .3s;
+			box-shadow: 0 0 3px #666;
 			&__text {
 				position: relative;
 				margin: 0;
 			}
-			&__arrow {
-				z-index: 4;
-				transition: .4s;			
+			&__arrow {				
 				display: inline-block;
 				position: absolute;
 				left: calc(50% - 6px);
-				top: -10px;
+				bottom: -9px;
 				width: 12px;
 				height: 12px;
 				background: white;
 				transform: rotate(45deg);
 			}						
 		}
-
-		&:hover .Stack__item__tooltip {
-			opacity: 1;
-		}		
 	}
 }
 

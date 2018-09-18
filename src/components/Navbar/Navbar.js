@@ -37,6 +37,15 @@ class Navbar extends React.Component {
   		"tolerance": 15,
 		})
 		headroom.init()
+
+		window.addEventListener('resize', () => {
+			let width = window.innerWidth;
+			if(width >= 768) {
+				this.setState({
+					menuIsOpen: false
+				})
+			}
+		})
 	}
 
 	handleToggle = event => {			
@@ -53,7 +62,9 @@ class Navbar extends React.Component {
 			<nav className={
 				"Navbar " + 
 				(this.props.activePage == "" ? "inicio " : "") + 
-				(this.state.navbarIsTop ? '' : 'noTop') }
+				(menuIsOpen ? ' open ' : '') +
+				(this.state.navbarIsTop ? '' : 'noTop')
+			}
 				id="Navbar">		
 				<div
 					onClick={ (e) => { this.setState({ menuIsOpen: false }) }} 

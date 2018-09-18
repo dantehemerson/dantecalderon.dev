@@ -415,8 +415,11 @@ textarea{
 
 	 &.noTop {
 	    background: white;	    
-		top:0;
-
+			top:0 !important;
+			
+			&.open {
+				transform: inherit !important;
+			}
 	 }
 	 .container {
 			display: flex;

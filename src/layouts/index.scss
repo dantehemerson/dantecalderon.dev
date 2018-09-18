@@ -91,9 +91,9 @@ $container-padding-lg: 12px;
 
 $font-color: rgba(0,0,0,.88);
 
-$serif-font: 'Playfair Display';
-$sans-serif-font: 'Open Sans';
-$serif-normal: 'Noto Serif';
+$serif-font: 'Playfair Display', serif;
+$sans-serif-font: 'Open Sans', sans-serif;
+$serif-normal: 'Noto Serif', serif;
 
 
 $transition-hover-s: .3s;

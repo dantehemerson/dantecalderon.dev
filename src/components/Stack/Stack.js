@@ -26,7 +26,8 @@ const type = [
 	'JS Testing Framework',
 	'Project Management',
 	'Group Chat & Notifications',
-	'CMS'
+	'CMS',
+	'Query Languages'
 ]
 const groups = [
 	{
@@ -56,6 +57,7 @@ const groups = [
 			{ name: 'MySQL', icon: 'mysql-original-wordmark.svg', background: 'white', type: type[0], about: "The world's most popular open source database" },
 			{ name: 'Flask', icon: 'flask.jpg', background: 'white', type: type[10], about: "A microframework for Python based on Werkzeug, Jinja 2 and good intentions." },
 			{ name: 'Node', icon: 'nodejs-original.svg', type: type[8], about: "Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications" },
+			{ name: 'GraphQL', icon: 'graphql.svg', type: type[24], about: "A data query language and runtime" },
 		]
 	},
 	{

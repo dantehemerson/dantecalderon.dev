@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import Navbar from '../Navbar'
+import Footer from '../Footer'
 
-import { actualPage } from '../utils'
+import { actualPage } from '../../utils'
 
 import 'prismjs/themes/prism-solarizedlight.css'
 import '@clr/icons/clr-icons.min.css'

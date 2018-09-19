@@ -54,12 +54,6 @@ module.exports = {
                   }
                },
                {
-                  resolve: 'gatsby-remark-embed-gist',
-                  options: {
-                     username: 'dantehemerson'
-                  }
-               },
-               {
                   resolve: 'gatsby-remark-emojis',
                   options: {
                      // Deactivate the plugin globally (default: true)
@@ -130,6 +124,6 @@ module.exports = {
          options: {
             transitionTime: 200
          }
-      }    
+      }
    ],
 }

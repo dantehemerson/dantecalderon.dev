@@ -118,12 +118,6 @@ module.exports = {
             display: 'minimal-ui',
          },
       },
-      `gatsby-plugin-styled-components`,
-      {
-         resolve: 'gatsby-plugin-page-transitions',
-         options: {
-            transitionTime: 200
-         }
-      }
+      `gatsby-plugin-styled-components`
    ],
 }

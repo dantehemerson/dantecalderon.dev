@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from "gatsby"
-import PageTransition from 'gatsby-plugin-page-transitions'
 import { AwesomeButton } from 'react-awesome-button'
 import get from 'lodash/get'
 
@@ -16,7 +15,6 @@ class Index extends React.Component {
 		const { data } = this.props
       const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')
 		return (
-         <PageTransition>
             <Layout location={ this.props.location }>
                <div>
                   <SEO
@@ -46,7 +44,6 @@ class Index extends React.Component {
                   <Stack />
                </div>
             </Layout>
-         </PageTransition>
 		)
 	}
 }

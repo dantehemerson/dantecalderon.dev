@@ -1,5 +1,4 @@
 import React from 'react'
-import PageTransition from 'gatsby-plugin-page-transitions'
 import Img from 'gatsby-image'
 import { graphql } from "gatsby"
 import get from 'lodash/get'
@@ -84,7 +83,6 @@ export default class BlogPostTemplate extends React.Component {
 		const siteMetadata = get(this.props, 'data.site.siteMetadata')
 		const { previous, next } = this.props.pageContext // replaced of pathContext
 		return (
-			<PageTransition>
 				<Layout location={ this.props.location }>
 					<div>
 						<SEO
@@ -120,7 +118,6 @@ export default class BlogPostTemplate extends React.Component {
 								url={`https://dantecalderon.com/` + post.frontmatter.path}/>
 					</div>
 				</Layout>
-			</PageTransition>
 		)
 	}
 }

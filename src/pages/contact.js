@@ -1,5 +1,4 @@
 import React from 'react'
-import PageTransition from 'gatsby-plugin-page-transitions'
 import { graphql } from "gatsby"
 import get from 'lodash/get'
 
@@ -13,7 +12,6 @@ class Contact extends React.Component {
 
    	const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')
 		return (
-			<PageTransition>
 				<Layout location={ this.props.location }>
 					<div className="Contact">
 						<SEO
@@ -40,7 +38,6 @@ class Contact extends React.Component {
 						</div>
 					</div>
 				</Layout>
-			</PageTransition>
 		)
 	}
 }

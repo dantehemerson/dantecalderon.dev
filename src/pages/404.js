@@ -1,12 +1,10 @@
 import React from 'react'
-import PageTransition from 'gatsby-plugin-page-transitions'
 import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/Layout'
 
 export default props => (
-   <PageTransition>
       <Layout location={ props.location }>
          <div className="NotFound">
             <Helmet>
@@ -33,5 +31,4 @@ export default props => (
             </p>
          </div>
       </Layout>
-   </PageTransition>
 )

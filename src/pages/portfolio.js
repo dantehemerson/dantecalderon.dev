@@ -1,5 +1,4 @@
 import React from 'react'
-import PageTransition from 'gatsby-plugin-page-transitions'
 import { graphql } from "gatsby"
 import get from 'lodash/get'
 
@@ -12,7 +11,6 @@ class Portfolio extends React.Component {
 		const posts = get(this, 'props.data.allMarkdownRemark.edges') || []
 		const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')
 		return (
-			<PageTransition>
 				<Layout location={ this.props.location }>
 					<div className="Portfolio">
 						<SEO
@@ -57,7 +55,6 @@ class Portfolio extends React.Component {
 						</div>
 					</div>
 				</Layout>
-			</PageTransition>
 		)
 	}
 }

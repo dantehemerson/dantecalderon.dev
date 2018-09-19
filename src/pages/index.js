@@ -53,12 +53,12 @@ class Index extends React.Component {
 
 export const queryHome = graphql`
    query QueryHome {
-      avatar: imageSharp(id: {regex: "/avatar/"}) {
+      avatar: imageSharp(fluid: {originalName: "/avatar/"}) {
          sizes(maxWidth: 720) {
             ...GatsbyImageSharpSizes_tracedSVG
          }
       }
-      aboutImage: imageSharp(id: {regex: "/about-image/"}) {
+      aboutImage: imageSharp(fluid: {originalName: "/about-image/"}) {
          sizes(maxWidth: 960) {
             ...GatsbyImageSharpSizes
          }

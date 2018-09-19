@@ -129,7 +129,7 @@ export default class BlogPostTemplate extends React.Component {
 
 export const pageQuery = graphql`
 	query BlogPostBySlug($slug: String!) {
-		avatar: imageSharp(id: {regex: "/avatar/"}) {
+		avatar: imageSharp(fluid: {originalName: "/avatar/"}) {
 		  sizes(maxWidth: 720) {
 		   	...GatsbyImageSharpSizes_tracedSVG
 		  }

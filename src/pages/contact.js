@@ -48,7 +48,7 @@ class Contact extends React.Component {
 
 export const queryContact = graphql`
   	query QueryContact {
-   	contactImage: imageSharp(id: {regex: "/contact/"}) {
+   	contactImage: imageSharp(fluid: {originalName: "/contact/"}) {
       	sizes(maxWidth: 4000) {
         		...GatsbyImageSharpSizes_tracedSVG
       	}

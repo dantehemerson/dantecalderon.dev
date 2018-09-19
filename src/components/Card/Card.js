@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 export default props => (
 	<div className='Card'>
 		<Link to={ props.data.path } className="Card__header">
-			<Img resolutions={props.data.thumbnail} />
+			<Img sizes={props.data.thumbnail} />
 		</Link>
 		<div className="Card__body">
 			<Link to={ props.data.path } className="Card__title">

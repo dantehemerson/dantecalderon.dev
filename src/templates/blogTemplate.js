@@ -90,7 +90,7 @@ export default class BlogPostTemplate extends React.Component {
 						<SEO
 							title={ post.frontmatter.title }
 							url={ `${siteMetadata.siteUrl}/${post.frontmatter.path}` }
-							image={`https://dantecalderon.com${post.fields.thumbnail.childImageSharp.responsiveSizes.src}`}
+							//image={`https://dantecalderon.com${post.fields.thumbnail.childImageSharp.responsiveSizes.src}`}
 							description={ post.frontmatter.description }
 							isPost={ true }
 						/>
@@ -127,7 +127,7 @@ export default class BlogPostTemplate extends React.Component {
 
 export const pageQuery = graphql`
 	query BlogPostBySlug($slug: String!) {
-		avatar: imageSharp(fluid: {originalName: { regex: "/avatar/" } }) {
+		avatar: imageSharp(fluid: {originalName: { regex: "/avatar2.jpeg/" } }) {
 		  sizes(maxWidth: 720) {
 		   	...GatsbyImageSharpSizes_tracedSVG
 		  }

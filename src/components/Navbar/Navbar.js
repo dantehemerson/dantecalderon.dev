@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'gatsby'
+import { Link } from 'gatsby'
 
 import Logo from '../../assets/images/logo_letter.png'
 
@@ -61,7 +61,7 @@ class Navbar extends React.Component {
 		return (
 			<nav className={
 				"Navbar " +
-				(this.props.activePage == "" ? "inicio " : "") +
+				(this.props.activePage === "" ? "inicio " : "") +
 				(menuIsOpen ? ' open ' : '') +
 				(this.state.navbarIsTop ? '' : 'noTop')
 			}
@@ -74,7 +74,7 @@ class Navbar extends React.Component {
 					<Link className="Navbar__titlewrap"
 						onClick={ (e) => { this.setState({menuIsOpen: false}) } }
 						to="/">
-						<img className="Navbar__logo" src={Logo} />
+						<img alt="logo" className="Navbar__logo" src={Logo} />
 						<p className="Navbar__title">Dante Calderón</p>
 					</Link>
 					<div className="Navbar__navwrap">

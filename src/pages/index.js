@@ -14,7 +14,6 @@ import Layout from '../components/Layout'
 class Index extends React.Component {
 	render() {
 		const { data } = this.props
-      const siteTitle = get(this, 'props.data.site.siteMetadata.title')
       const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')
 		return (
          <PageTransition>
@@ -54,12 +53,12 @@ class Index extends React.Component {
 
 export const queryHome = graphql`
    query QueryHome {
-      avatar: imageSharp(fluid: {originalName: "/avatar/"}) {
+      avatar: imageSharp(fluid: {originalName: { regex: "/avatar2.jpeg/" }}) {
          sizes(maxWidth: 720) {
             ...GatsbyImageSharpSizes_tracedSVG
          }
       }
-      aboutImage: imageSharp(fluid: {originalName: "/about-image/"}) {
+      aboutImage: imageSharp(fluid: {originalName: { regex: "/about-image.jpg/" } }) {
          sizes(maxWidth: 960) {
             ...GatsbyImageSharpSizes
          }

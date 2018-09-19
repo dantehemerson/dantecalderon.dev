@@ -10,6 +10,7 @@ export default props => (
 				background: (props.item.background ? props.item.background : 'transparent'),
 				boxShadow: (props.item.background ? '0 0 4px #191919' : '0 0 0 transparent' )
 			}}
+			alt="img"
 			src={ withPrefix('icons/' + props.item.icon) }/>
 		{
 			props.item.about &&

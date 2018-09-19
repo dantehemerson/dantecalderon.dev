@@ -3,7 +3,6 @@ import PageTransition from 'gatsby-plugin-page-transitions'
 import Img from 'gatsby-image'
 import { graphql } from "gatsby"
 import get from 'lodash/get'
-import getObj from 'ast-get-object'
 import ReactDisqusComments from 'react-disqus-comments'
 
 import Content, { HTMLContent } from '../components/Content'
@@ -72,7 +71,7 @@ export default class BlogPostTemplate extends React.Component {
 			let y = body.scrollTop - contentY + 110
 			let show = y >= 0 && y - 0 <= height - 340
 
-			if(this.state.show_share != show) {
+			if(this.state.show_share !== show) {
 				this.setState({ 'show_share': show })
 			}
 		}
@@ -84,8 +83,6 @@ export default class BlogPostTemplate extends React.Component {
 		const post = this.props.data.markdownRemark
 		const siteMetadata = get(this.props, 'data.site.siteMetadata')
 		const { previous, next } = this.props.pageContext // replaced of pathContext
-		const ast = post.htmlAst
-		const images = getObj(ast, { type: 'element', tagName: 'img' })
 		return (
 			<PageTransition>
 				<Layout location={ this.props.location }>
@@ -104,7 +101,7 @@ export default class BlogPostTemplate extends React.Component {
 							next={ next }
 							content={ post.html }
 							contentComponent={ HTMLContent }
-							image={ post.fields.thumbnail.childImageSharp.responsiveSizes }
+							image={ post.fields.thumbnail.childImageSharp.sizes }
 							avatar={ this.props.data.avatar }
 							/>
 							<div className="Post__footer">
@@ -130,7 +127,7 @@ export default class BlogPostTemplate extends React.Component {
 
 export const pageQuery = graphql`
 	query BlogPostBySlug($slug: String!) {
-		avatar: imageSharp(fluid: {originalName: "/avatar/"}) {
+		avatar: imageSharp(fluid: {originalName: { regex: "/avatar/" } }) {
 		  sizes(maxWidth: 720) {
 		   	...GatsbyImageSharpSizes_tracedSVG
 		  }
@@ -158,12 +155,9 @@ export const pageQuery = graphql`
 			fields {
 				thumbnail {
 					childImageSharp {
-    					responsiveSizes(maxWidth: 1920) {
-    						aspectRatio
-				            src
-				            srcSet
-				            sizes
-    					}
+						sizes {
+    					...GatsbyImageSharpSizes_withWebp
+    				}
 					}
 				}
 			}

@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby'
+import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { AwesomeButton } from 'react-awesome-button'

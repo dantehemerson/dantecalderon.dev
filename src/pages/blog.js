@@ -9,9 +9,7 @@ import Layout from '../components/Layout'
 
 class Blog extends React.Component {
 	render() {
-		const { data } = this.props
 		const posts = get(this, 'props.data.allMarkdownRemark.edges') || []
-		const siteTitle = get(this, 'props.data.site.siteMetadata.title')
 		const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')
 		return (
 			<PageTransition>
@@ -51,6 +49,8 @@ class Blog extends React.Component {
 														}
 													}
 													key={node.frontmatter.path} />
+											else return false
+
 										})
 									}
 								</div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import PageTransition from 'gatsby-plugin-page-transitions'
-import Link from 'gatsby'
+import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/Layout'

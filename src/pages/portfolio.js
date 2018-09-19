@@ -1,6 +1,7 @@
 import React from 'react'
 import PageTransition from 'gatsby-plugin-page-transitions'
 import Link from 'gatsby'
+import { graphql } from "gatsby"
 import get from 'lodash/get'
 
 import Item from '../components/PortfolioItem'

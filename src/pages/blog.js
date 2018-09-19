@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from "gatsby"
 import PageTransition from 'gatsby-plugin-page-transitions'
 import get from 'lodash/get'
 

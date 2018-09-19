@@ -1,6 +1,7 @@
 import React from 'react'
 import PageTransition from 'gatsby-plugin-page-transitions'
 import Img from 'gatsby-image'
+import { graphql } from "gatsby"
 import get from 'lodash/get'
 import getObj from 'ast-get-object'
 import ReactDisqusComments from 'react-disqus-comments'

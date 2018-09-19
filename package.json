@@ -19,7 +19,6 @@
 		"gatsby-plugin-netlify-cms": "^3.0.2",
 		"gatsby-plugin-nprogress": "^2.0.5",
 		"gatsby-plugin-offline": "^2.0.5",
-		"gatsby-plugin-page-transitions": "^1.0.7",
 		"gatsby-plugin-react-helmet": "^3.0.0",
 		"gatsby-plugin-robots-txt": "^1.3.0",
 		"gatsby-plugin-sass": "^2.0.1",

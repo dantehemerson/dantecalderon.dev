@@ -1,10 +1,10 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Link from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { AwesomeButton } from 'react-awesome-button'
 
-const ItemWrapper = styled.article`		
+const ItemWrapper = styled.article`
 	box-shadow: 0px 0px 3px #989898;
 	border-radius: 4px 4px 0 0;
 	cursor: pointer;
@@ -16,25 +16,25 @@ const ItemContainer = styled.div`
 	overflow: hidden;
 `
 
-const Title = styled.h3`	
-	color: #758282;		
+const Title = styled.h3`
+	color: #758282;
 	font-family: 'Open Sans', serif;
-	font-size: 15px;	
+	font-size: 15px;
 	text-transform: uppercase;
 	width: 100%;
 	text-align: center;
 	margin: 0;
 `
 
-const Content = styled.p`	
+const Content = styled.p`
 	color: white;
-	font-weight: 600;			
+	font-weight: 600;
 `
 
-const Cover = styled(Img)`	
-	img {				
-		
-	}	 	
+const Cover = styled(Img)`
+	img {
+
+	}
 `
 
 const TopBar = styled.div`
@@ -90,7 +90,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050505', end
 	top: 0;
 	padding: 10px;
 	width: 100%;
-	height: 100%;	
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -110,8 +110,8 @@ const ItemLink = styled(Link)`
 		transform:  scale3d(1,1,1);
 
 	}
-	
-	&:hover .PortfolioItem__tagswrapper{			
+
+	&:hover .PortfolioItem__tagswrapper{
 		transform:  translateY(-10px);
 	}
 `
@@ -140,17 +140,17 @@ const Tag = styled(Link)`
 `
 
 export default props => (
-	<ItemLink to={ props.data.path }>		
-		<ItemWrapper>				
+	<ItemLink to={ props.data.path }>
+		<ItemWrapper>
 		 	<TopBar>
 				<div className="TopBarButtons"></div>
-				<Title>{ props.data.title }</Title>	
+				<Title>{ props.data.title }</Title>
 			</TopBar>
 			<ItemContainer>
 				<Cover sizes={ props.data.thumbnail } />
-				<ItemBody className="PortfolioItem__body">					
-					<Content>{ props.data.subtitle }</Content>		
-					<TagsWrapper className="PortfolioItem__tagswrapper">					
+				<ItemBody className="PortfolioItem__body">
+					<Content>{ props.data.subtitle }</Content>
+					<TagsWrapper className="PortfolioItem__tagswrapper">
 						{
 							props.data.tags.map((value, index) => {
 								return (
@@ -160,15 +160,15 @@ export default props => (
 									</Tag>
 								)
 							})
-						}						
+						}
 					</TagsWrapper>
-					<AwesomeButton 
-						type="secondary"						
+					<AwesomeButton
+						type="secondary"
 						className="ItemView">
 						<clr-icon shape="eye" class="icon-item" size="20"/> VER
-					</AwesomeButton>	
-				</ItemBody>	
-			</ItemContainer>				
+					</AwesomeButton>
+				</ItemBody>
+			</ItemContainer>
 		</ItemWrapper>
 	</ItemLink>
 )

@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import Link from 'gatsby'
 import Img from 'gatsby-image'
 
 export default props => (
@@ -12,8 +12,8 @@ export default props => (
 			<p className="AuthorPost__about">Programmer</p>
 			{ props.header && <p className="AuthorPost__date">{ props.date } · { props.timeToRead } min de lectura</p>}
 			{
-				!props.header && 
-				<div className="Foot__AuthorPost__social">					
+				!props.header &&
+				<div className="Foot__AuthorPost__social">
 					<a href="https://www.github.com/dantehemerson">
 						<img src="https://icongr.am/fontawesome/github.svg?color=ffffff&size=21" />
 					</a>
@@ -25,7 +25,7 @@ export default props => (
 					</a>
 					<a href="https://www.instagram.com/dantehemerson">
 						<img src="https://icongr.am/fontawesome/instagram.svg?color=ffffff&size=21" />
-					</a>						
+					</a>
 				</div>
 			}
 		</div>

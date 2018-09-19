@@ -3,7 +3,7 @@ import React from 'react'
 export default props => (
 	<footer className="Footer">
 		<div className="Footer__social">
-			<a rel="noopener noreferrer" lassName="Footer__icon" target="_blank" href="https://www.github.com/dantehemerson">
+			<a rel="noopener noreferrer" className="Footer__icon" target="_blank" href="https://www.github.com/dantehemerson">
 				<img alt="img" className="Footer__icon__img" src="https://icongr.am/fontawesome/github.svg?size=20&color=282a2d"/>
 			</a>
 			<a rel="noopener noreferrer" className="Footer__icon" target="_blank" href="https://twitter.com/dantehemerson">

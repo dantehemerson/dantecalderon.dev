@@ -13,10 +13,6 @@ import 'react-awesome-button/src/styles/styles.scss'
 import './index.scss'
 
 class Layout extends React.Component {
-	static propTypes = {
-		children: PropTypes.func,
-	}
-
 	componentDidMount() {
 		require('@webcomponents/custom-elements/custom-elements.min.js')
 		require('@clr/icons/clr-icons.min.js')

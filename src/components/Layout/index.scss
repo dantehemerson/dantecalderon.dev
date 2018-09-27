@@ -746,24 +746,22 @@ textarea{
 	 &__header {
 
 			width: 100%;
-			.gatsby-image-outer-wrapper {
-				 height: 100%;
-				 .gatsby-image-wrapper {
-				 	width: 100% !important;
-				 	height: 230px !important;
-				 	@include breakpoint(sm) {
-				 		height: 300px !important;
-				 	}
-				 	@include breakpoint(md) {
-				 			height: 100% !important;
-				 		}
+			
+			.gatsby-image-wrapper {
+				width: 100% !important;
+				height: 230px !important;
+				@include breakpoint(sm) {
+					height: 300px !important;
+				}
+				@include breakpoint(md) {
+						height: 200px !important;
+					}
 
-				 	img {
-				 		margin: 0;
-				 	}
-				 }
+				img {
+					margin: 0;
+				}
+			}			
 
-			}
 			 @include breakpoint(xs) {
 					//		height: auto;
 				 }

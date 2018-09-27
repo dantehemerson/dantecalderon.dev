@@ -102,7 +102,7 @@ module.exports = {
       {
          resolve: `gatsby-plugin-nprogress`,
          options: {
-            color: '#dcbb72',
+            color: '#1976d2',
             showSpinner: false
          },
       },
@@ -110,11 +110,11 @@ module.exports = {
       {
          resolve: `gatsby-plugin-manifest`,
          options: {
-            name: 'Dante Calderon',
+            name: 'Dante Calderón',
             short_name: 'Dante',
             start_url: '/',
-            background_color: '#DFBD83',
-            theme_color: '#DFBD83',
+            background_color: '#1976d2',
+            theme_color: '#1976d2',
             display: 'minimal-ui',
          },
       },

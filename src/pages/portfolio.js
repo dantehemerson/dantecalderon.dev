@@ -28,11 +28,11 @@ class Portfolio extends React.Component {
 							</div>
 						</section>
 						<div className="Page__content container--full">
-							<div className="row center-xs start-md">
+							<div className="row center-xs start-md center-xl">
 								{
 									posts.map(( { node }, index) => {
 										return (
-											<div className="Portfolio__item col-xs-12 col-sm-12 col-md-6 col-xl-4" key={index}>
+											<div className="Portfolio__item col-xs-12 col-sm-12 col-md-6 col-xl-5" key={index}>
 												<Item
 													data={
 														{

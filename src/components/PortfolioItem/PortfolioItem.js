@@ -2,33 +2,38 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-import { AwesomeButton } from 'react-awesome-button'
 
 const ItemWrapper = styled.article`
-	box-shadow: 0px 0px 3px #989898;
-	border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0 !important;
 	cursor: pointer;
+	text-align: left;
 `
 
-const ItemContainer = styled.div`
+const CoverWrapper = styled.div`
 	position: relative;
-	text-align: center;
 	overflow: hidden;
+	box-shadow: rgba(102, 51, 153, 0.1) 0px 4px 10px;
+  border-radius: 2px;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+	margin-bottom: 13px !important;
+  ${ItemWrapper}:hover & {
+  	box-shadow: rgba(140, 101, 179, 0.5) 0px 8px 20px;
+    transform: translateY(-3px);
+  }
 `
 
 const Title = styled.h3`
 	color: #758282;
 	font-family: 'Open Sans', serif;
-	font-size: 15px;
-	text-transform: uppercase;
+	font-size: 1.1rem;
+	text-align: left;
 	width: 100%;
-	text-align: center;
+	display: inline;
 	margin: 0;
-`
-
-const Content = styled.p`
-	color: white;
-	font-weight: 600;
+	${ItemWrapper}:hover & {
+  	color: #1976d2;
+  	box-shadow: rgb(224, 214, 235) 0px -3px 0px 0px inset;
+  }
 `
 
 const Cover = styled(Img)`
@@ -38,7 +43,7 @@ const Cover = styled(Img)`
 `
 
 const TopBar = styled.div`
-	height: 30px;
+	height: 26px;
 	background: #e0e3e6;
 	width: 100%;
 	display: flex;
@@ -77,98 +82,54 @@ const TopBar = styled.div`
 	}
 `
 
-const ItemBody = styled.div`
-	position: absolute;
-	background: -moz-linear-gradient(270deg, rgba(5,5,5,0.75) 0%, rgba(0,0,0,0.35) 100%); /* ff3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(5,5,5,0.75)), color-stop(100%, rgba(0,0,0,0.35))); /* safari4+,chrome */
-background: -webkit-linear-gradient(270deg, rgba(5,5,5,0.75) 0%, rgba(0,0,0,0.35) 100%); /* safari5.1+,chrome10+ */
-background: -o-linear-gradient(270deg, rgba(5,5,5,0.75) 0%, rgba(0,0,0,0.35) 100%); /* opera 11.10+ */
-background: -ms-linear-gradient(270deg, rgba(5,5,5,0.75) 0%, rgba(0,0,0,0.35) 100%); /* ie10+ */
-background: linear-gradient(180deg, rgba(5,5,5,0.75) 0%, rgba(0,0,0,0.35) 100%); /* w3c */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050505', endColorstr='#000000',GradientType=0 ); /* ie6-9 */
-	left: 0;
-	top: 0;
-	padding: 10px;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	opacity: 0;
-
-     justify-content: space-between;
-	transform:  scale3d(1.1, 1.1, 1);
-
-`
-
 const ItemLink = styled(Link)`
 	text-decoration: none;
-
-	&:hover .PortfolioItem__body {
-		opacity: 1;
-		transform:  scale3d(1,1,1);
-
-	}
-
-	&:hover .PortfolioItem__tagswrapper{
-		transform:  translateY(-10px);
-	}
 `
 
 const TagsWrapper = styled.div`
+	text-align: left;
 `
 
 const Tag = styled(Link)`
 	padding: 2px 7px;
-	background: #282828;
-	border-bottom: 2px solid #130E0E;
+	background: #F7F7F7;
 	color: #6A6A6A;
 	border-radius: 3px;
 	text-decoration: none;
 	margin: 2px 2px;
-	font-size: 14px;
+	font-size: 13px;
 	font-weight: 600;
 	display: inline-block;
-	box-shadow: 0 0 4px #333;
 	text-transform: uppercase;
-
 	&:hover {
-		background: #131313;
-		color: #BCBCBC;
+		background: #E2E2E2;
+		// color: #BCBCBC;
 	}
 `
 
 export default props => (
 	<ItemLink to={ props.data.path }>
 		<ItemWrapper>
-		 	<TopBar>
-				<div className="TopBarButtons"></div>
-				<Title>{ props.data.title }</Title>
-			</TopBar>
-			<ItemContainer>
-				<Cover sizes={ props.data.thumbnail } />
-				<ItemBody className="PortfolioItem__body">
-					<Content>{ props.data.subtitle }</Content>
-					<TagsWrapper className="PortfolioItem__tagswrapper">
-						{
-							props.data.tags.map((value, index) => {
-								return (
-									<Tag key={ index }>
-										<clr-icon shape="tag" class="icon-item" size="18"/>
-										{ " " + value }
-									</Tag>
-								)
-							})
-						}
-					</TagsWrapper>
-					<AwesomeButton
-						type="secondary"
-						className="ItemView">
-						<clr-icon shape="eye" class="icon-item" size="20"/> VER
-					</AwesomeButton>
-				</ItemBody>
-			</ItemContainer>
+			<CoverWrapper>
+			 	<TopBar>
+					<div className="TopBarButtons"></div>
+					{/* <Title>{ props.data.title }</Title> */}
+				</TopBar>
+				<Cover sizes={ props.data.thumbnail } />				
+			</CoverWrapper>
+			<Title>{ props.data.title }</Title>
 		</ItemWrapper>
+		<TagsWrapper className="PortfolioItem__tagswrapper">
+			{
+				props.data.tags.map((value, index) => {
+					return (
+						<Tag key={ index }>
+							<clr-icon shape="tag" class="icon-item" size="18"/>
+							{ " " + value }
+						</Tag>
+					)
+				})
+			}
+		</TagsWrapper>
 	</ItemLink>
 )

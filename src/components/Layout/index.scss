@@ -554,13 +554,15 @@ textarea{
 					}
 				}
 			}
-				 &__link {
-						display: block;
+				 &__link {						
 						font-size: 15px;
 						font-weight: 600;
 						padding: 8px 8px;
 						text-align: center;
 						opacity: 1;
+						display: flex;
+						align-items: center;
+						justify-content: center;
 
 						@include breakpoint(md) {
 							transition: all .4s !important;
@@ -574,11 +576,17 @@ textarea{
 
 						&.active {
 							color: $primary-color !important;
+							svg path, svg polygon {
+								fill: $primary-color !important;
+								color: $primary-color !important;
+							}
+
 						}
 						.icon-item {
 							padding-right: 4px;
 							position: relative;
-							top: -2px;
+							width: 21px;
+							height: 21px;
 						}
 				 }
 }

@@ -153,7 +153,7 @@ export const pageQuery = graphql`
 				thumbnail {
 					childImageSharp {
 						sizes {
-    					...GatsbyImageSharpSizes_withWebp
+    					...GatsbyImageSharpSizes_tracedSVG
     				}
 					}
 				}

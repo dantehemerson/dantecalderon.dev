@@ -80,7 +80,7 @@ export const queryPortfolio = graphql`
     				thumbnail {
     					childImageSharp {
     						sizes {
-    							...GatsbyImageSharpSizes_withWebp
+    							...GatsbyImageSharpSizes_tracedSVG
     						}
     					}
     				}

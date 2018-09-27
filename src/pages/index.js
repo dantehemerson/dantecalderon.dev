@@ -56,7 +56,7 @@ export const queryHome = graphql`
       }
       aboutImage: imageSharp(fluid: {originalName: { regex: "/about-image.jpg/" } }) {
          sizes(maxWidth: 960) {
-            ...GatsbyImageSharpSizes
+            ...GatsbyImageSharpSizes_tracedSVG
          }
       }
       site {

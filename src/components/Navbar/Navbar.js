@@ -104,9 +104,9 @@ class Navbar extends React.Component {
 							</li>
 							<li className='Navbar__item'>
 								<Link onClick={ (e) => { this.setState({menuIsOpen: false}) }}
-									className={`Navbar__link ${ this.props.activePage === 'Contact' ? 'active' : ''}`} to="/contact">
+									className={`Navbar__link ${ this.props.activePage === 'About' ? 'active' : ''}`} to="/about">
 									<clr-icon shape="user" class="icon-item" size="21"/>
-									Contacto
+									Sobre Mí
 								</Link>
 							</li>
 							<li className='Navbar__item'>
@@ -114,6 +114,13 @@ class Navbar extends React.Component {
 									className={`Navbar__link ${ this.props.activePage === 'Portfolio' ? 'active' : ''}`}to="/portfolio">
 									<clr-icon shape="view-cards" class="icon-item" size="21"/>
 									Portafolio
+								</Link>
+							</li>
+							<li className='Navbar__item'>
+								<Link onClick={ (e) => { this.setState({menuIsOpen: false}) }}
+									className={`Navbar__link ${ this.props.activePage === 'Contact' ? 'active' : ''}`} to="/contact">
+									<clr-icon shape="envelope" class="icon-item" size="21"/>
+									Contacto
 								</Link>
 							</li>
 						</ul>

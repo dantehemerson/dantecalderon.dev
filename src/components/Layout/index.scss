@@ -628,10 +628,10 @@ textarea{
 	 }
 
 	 &__btn-about {
-	 	width: 141px;
+	 	width: 141px !important;
 	 	margin-top: 34px !important;
 	    &:hover {
-			background: #eff1f1;
+				background: #eff1f1;
 	    }
 
 	 }

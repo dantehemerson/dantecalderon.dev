@@ -152,7 +152,7 @@ export const pageQuery = graphql`
 			fields {
 				thumbnail {
 					childImageSharp {
-						sizes {
+						sizes(maxWidth: 1920) {
     					...GatsbyImageSharpSizes_tracedSVG
     				}
 					}

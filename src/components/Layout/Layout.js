@@ -20,7 +20,7 @@ class Layout extends React.Component {
 			<div>
 				<Helmet>
 					<link
-					href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Noto+Serif:400,700,400italic,700italic|Playfair+Display:400,700" rel="stylesheet"/>
+					href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Noto+Serif:400,700,400italic,700italic|Playfair+Display:700" rel="stylesheet"/>
 					<meta name="theme-color" content="#DFBD83"/>
 					<meta name="distribution" content="global"/>
 					<meta httpEquiv="Content-Language" content="es" />

@@ -25,7 +25,6 @@ const CoverWrapper = styled.div`
 
 const Title = styled.h3`
 	color: #22292f;
-	font-family: 'Noto Serif', serif;
 	font-family: 'Open Sans', serif;
 	font-size: 19px;
 	text-align: left;
@@ -39,9 +38,6 @@ const Title = styled.h3`
 `
 
 const Cover = styled(Img)`
-	img {
-
-	}
 `
 
 const TopBar = styled.div`
@@ -113,7 +109,6 @@ const Tag = styled(Link)`
 	text-transform: capitalize;
 	&:hover {
 		background: #E2E2E2;
-		// color: #BCBCBC;
 	}
 `
 
@@ -143,7 +138,6 @@ export default props => (
 			<CoverWrapper>
 			 	<TopBar>
 					<div className="TopBarButtons"></div>
-					{/* <Title>{ props.data.title }</Title> */}
 				</TopBar>
 				<Cover sizes={ props.data.thumbnail } />				
 			</CoverWrapper>

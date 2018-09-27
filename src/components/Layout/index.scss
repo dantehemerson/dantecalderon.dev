@@ -703,7 +703,6 @@ textarea{
 				background: #28282e;
 				&:hover {
 					background-color: #0085a1;
-    				//border: 1px solid #0085a1;;
 				}
 
 			}
@@ -715,7 +714,6 @@ textarea{
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: center;
-			// background-color: #f0f0ee;x
 			color: white;
 		&__title {
 			-webkit-text-stroke-color: #3fabbb;
@@ -771,17 +769,13 @@ textarea{
 				img {
 					margin: 0;
 				}
-			}			
-
-			 @include breakpoint(xs) {
-					//		height: auto;
-				 }
-				 @include breakpoint(md) {
-					width: 380px;
-				 }
-				 @include breakpoint(lg) {
-						width: 450px;
-				 }
+			}					
+			@include breakpoint(md) {
+				width: 380px;
+			}
+			@include breakpoint(lg) {
+				width: 450px;
+			}
 
 	 }
 

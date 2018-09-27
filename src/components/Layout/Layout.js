@@ -7,14 +7,12 @@ import Footer from '../Footer'
 import { actualPage } from '../../utils'
 
 import 'prismjs/themes/prism-solarizedlight.css'
-import '@clr/icons/clr-icons.min.css'
 import 'react-awesome-button/src/styles/styles.scss'
 import './index.scss'
 
 class Layout extends React.Component {
 	componentDidMount() {
 		require('@webcomponents/custom-elements/custom-elements.min.js')
-		require('@clr/icons/clr-icons.min.js')
 	}
 
 	render() {

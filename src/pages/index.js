@@ -5,7 +5,6 @@ import get from 'lodash/get'
 
 import Rotational from '../components/Rotational'
 import SEO from '../components/SEO'
-import Stack from '../components/Stack'
 import Social from '../components/Social'
 import Layout from '../components/Layout'
 
@@ -38,7 +37,6 @@ class Index extends React.Component {
                         </div>
                      </div>
                   </main>
-                  <Stack />
                </div>
             </Layout>
 		)
@@ -51,12 +49,7 @@ export const queryHome = graphql`
          sizes(maxWidth: 720) {
             ...GatsbyImageSharpSizes_tracedSVG
          }
-      }
-      aboutImage: imageSharp(fluid: {originalName: { regex: "/about-image.jpg/" } }) {
-         sizes(maxWidth: 960) {
-            ...GatsbyImageSharpSizes_tracedSVG
-         }
-      }
+      }      
       site {
          siteMetadata {
             title

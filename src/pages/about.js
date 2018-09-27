@@ -33,7 +33,7 @@ class About extends React.Component {
 							<div className="row center-xs">
 									<div className="About__img-container col-xs-12 col-md-6">
 										<div className="About__img">
-											{/* <Img sizes={ this.props.image.sizes } /> */ }
+											<Img sizes={ this.props.data.aboutImage.sizes } />
 										</div>
 									</div>
 									<div className="About__interests col-xs-12 col-md-6 text-left first-md">
@@ -69,14 +69,19 @@ class About extends React.Component {
 }
 
 export const queryAbout = graphql`
-  	query QueryAbout {
-    	site {
-      	siteMetadata {
-         	title
-         	siteUrl
-      	}
-    	}
-  	}
+  query QueryAbout {
+   	site {
+     	siteMetadata {
+       	title
+      	siteUrl
+     	}
+   	}
+   	aboutImage: imageSharp(fluid: {originalName: { regex: "/about-image.jpg/" } }) {
+   	   sizes(maxWidth: 960) {
+   	      ...GatsbyImageSharpSizes_tracedSVG
+   	   }
+   	}
+  }
 `
 
 export default About

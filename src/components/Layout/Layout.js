@@ -43,7 +43,8 @@ class Layout extends React.Component {
 					<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
 				</Helmet>
 
-				<Navbar activePage={ actualPage(this.props.location.pathname) }/>
+				<Navbar 
+					activePage={ actualPage(this.props.location.pathname) } />
 				<div className="Dyamic-container">
 					{ this.props.children }
 				</div>

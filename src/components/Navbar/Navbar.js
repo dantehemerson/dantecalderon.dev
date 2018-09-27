@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
 import Logo from '../../assets/images/logo_letter.png'
+import { isPostOrProject } from '../../utils'
 
 class Navbar extends React.Component {
 	state = {
@@ -58,11 +59,13 @@ class Navbar extends React.Component {
 
 	render() {
 		const { menuIsOpen }	 = this.state
+		const isPost = isPostOrProject(this.props.activePage)
 		return (
 			<nav className={
 				"Navbar " +
 				(this.props.activePage === "" ? "inicio " : "") +
 				(menuIsOpen ? ' open ' : '') +
+				(isPost ? '' : ' isPost ') +
 				(this.state.navbarIsTop ? '' : 'noTop')
 			}
 				id="Navbar">

@@ -6,6 +6,19 @@ const actualPage = (pathname) => {
     return title
 }
 
+const isPostOrProject = (actualPage) => {	
+	switch(actualPage) {
+		case '':
+		case 'Blog':
+		case 'Contact':
+		case 'Portfolio':
+			return false
+		default:
+			return true
+	}	
+}
+
 export {
-   actualPage
+  actualPage,
+  isPostOrProject
 }

@@ -420,6 +420,10 @@ textarea{
 			&.open {
 				transform: inherit !important;
 			}
+
+			&.isPost {
+				transform: inherit !important;	
+			}
 	 }
 	 .container {
 			display: flex;

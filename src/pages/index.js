@@ -27,8 +27,7 @@ class Index extends React.Component {
                               <h1 className="Header-Home__title" >Dante Calderón</h1>
                               <h2 className="Header-Home__subtitle">Web Developer</h2>
                               <Social />
-                              <AwesomeButton
-                                 size="small"
+                              <AwesomeButton                                 
                                  className="Header-Home__btn-about"
                                  href="#about" >
                                  SOBRE MÍ

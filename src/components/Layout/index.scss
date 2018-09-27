@@ -33,7 +33,7 @@
 }
 
 .twitter {
-	background: #55acee !important;
+	background: #00aced !important;
 }
 
 .github {
@@ -49,7 +49,7 @@
 }
 
 .twitter--hover:hover {
-	background: #55acee !important;
+	background: #00aced !important;
 }
 
 .github--hover:hover {
@@ -1466,9 +1466,9 @@ $post-titles-font: 'Open Sans';
 	display: flex;
 	justify-content: center;
 	a {
-		margin: 0 3px;
-		padding: 8px;
-		border-radius: 3px;
+		margin: 0 3px;		
+		padding: 12px 12px;
+		border-radius: 50%;
 		opacity: 1;
 		&:hover {
 			opacity: 1;
@@ -1477,40 +1477,18 @@ $post-titles-font: 'Open Sans';
 
 	&__iconwrapper {
 		background: #4a4a4a;
-		border: 1px solid #373737;
-		display: inline-flex;
-
-		&:hover {
-			background: #373737;
-		}
-
+		display: inline-flex;		
 		&.facebook {
-			background: #3b5998;
-			&:hover {
-				background: #364C79;
-			}
-			border: 1px solid #364C79;
+			background: #3b5998;			
 		}
 		&.twitter {
-			background: #55acee;
-			&:hover {
-				background: #4D96CE;
-			}
-			border: 1px solid #4D96CE;
+			background: #00aced;		
 		}
 		&.linkedin {
-			background: #007bb5;
-			&:hover {
-				background: #217096;
-			}
-			border: 1px solid #217096;
+			background: #007bb5;			
 		}
 		&.googlep {
-			background: #dd4b39;
-			&:hover {
-				background: #C44333;
-			}
-			border: 1px solid #C44333;
+			background: #dd4b39;			
 		}
 	}
 
@@ -1526,10 +1504,7 @@ $post-titles-font: 'Open Sans';
 		flex-direction: column;
 		opacity: 1;
 		display: none;
-		left: 50%;
-		margin-left: -500px;
-		padding-left: 12px;
-		padding-right: 12px;
+		left: 30px;				
 		&.hide {
 			opacity: 0;
 		}
@@ -1540,10 +1515,7 @@ $post-titles-font: 'Open Sans';
 		}
 		@include breakpoint(lg) {
 			display: flex;
-		}
-		@include breakpoint(xl)	 {
-			margin-left: -550px;
-		}
+		}		
 	}
 }
 

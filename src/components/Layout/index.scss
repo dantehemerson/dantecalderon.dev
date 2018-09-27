@@ -461,14 +461,13 @@ textarea{
     	text-transform: capitalize;
     	font-weight: 900 !important;
     	color: $navbar-link-color;
+    	opacity: 0.9;
 	 }
 	&__logo {
 		width: 32px;
 		height: 32px;
-		border: 1px solid #c0a16c;
-		border-radius: 3px;
+		border-radius: 4px;
 		margin-right: 8px;
-
 	}
 
 

@@ -744,18 +744,16 @@ textarea{
 		margin-top: 20px !important;
 	}
 	 &__header {
-
-			width: 100%;
-			
+			width: 100%;		
 			.gatsby-image-wrapper {
 				width: 100% !important;
-				height: 230px !important;
-				@include breakpoint(sm) {
-					height: 300px !important;
-				}
+				height: auto !important;
 				@include breakpoint(md) {
-						height: 200px !important;
-					}
+					height: 280px !important;
+				}
+				@include breakpoint(xl) {
+					height: 200px !important;
+				}
 
 				img {
 					margin: 0;

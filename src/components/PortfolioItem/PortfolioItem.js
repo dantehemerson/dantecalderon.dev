@@ -8,7 +8,6 @@ const ItemWrapper = styled(Link)`
 	cursor: pointer;
 	text-align: left;
 	text-decoration: none;
-
 `
 
 const CoverWrapper = styled.div`
@@ -90,10 +89,11 @@ const ItemLink = styled.article`
 
 const TagsWrapper = styled.div`
 	text-align: left;
+	flex-wrap: wrap;	
+	display: flex;
 	.tag_icon {
 		width: 18px;
-		position: relative;
-		top: 4px;
+		position: relative;		
 		path {
 			fill: #4E4E4E;
 		}
@@ -132,10 +132,9 @@ const ShortcutIcons = styled.div`
 `
 
 const BottomData = styled.div`
-	background: skyblue;
-	display: flex;
+	display: flex;	
+	margin: 10px 0;
 	justify-content: space-between;	
-	align-items: center;
 `
 
 export default props => (

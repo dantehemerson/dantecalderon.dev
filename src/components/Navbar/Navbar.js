@@ -29,16 +29,6 @@ class Navbar extends React.Component {
 			})
 		}
 		window.addEventListener('scroll', scrollListener)
-
-		const Headroom = require('headroom.js/dist/headroom.min.js')
-
-		let navbar = document.getElementById('Navbar')
-		let headroom = new Headroom(navbar, {
-			"offset": 200,
-  		"tolerance": 15,
-		})
-		headroom.init()
-
 		window.addEventListener('resize', () => {
 			let width = window.innerWidth;
 			if(width >= 768) {

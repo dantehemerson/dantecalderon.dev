@@ -412,19 +412,6 @@ textarea{
 	 &.inicio {
 	 	background: transparent;
 	 }
-
-	 &.noTop {
-	    background: white;
-			top:0 !important;
-
-			&.open {
-				transform: inherit !important;
-			}
-
-			&.isPost {
-				transform: inherit !important;	
-			}
-	 }
 	 .container {
 			display: flex;
 			align-items: center;
@@ -487,9 +474,6 @@ textarea{
 				z-index: 20;
 			}
 		}
-	}
-	&__navwrap {
-		//@include breakpoint()
 	}
 	 &__nav {
 
@@ -1408,8 +1392,8 @@ $post-titles-font: 'Open Sans';
 		margin-bottom: 13px;
 		padding-left: 0px;
 		.AuthorPost__image {
-			width: 58px;
-			height: 58px;
+			width: 59x;
+			height: 59px;
 		}
 
 		.AuthorPost__name {

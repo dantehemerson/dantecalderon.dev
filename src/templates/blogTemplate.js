@@ -7,6 +7,7 @@ import ReactDisqusComments from 'react-disqus-comments'
 import Content, { HTMLContent } from '../components/Content'
 import SEO from '../components/SEO'
 import AuthorPost from '../components/AuthorPost'
+import AuthorPostFooter from '../components/AuthorPostFooter'
 import Share from '../components/Share'
 import Layout from '../components/Layout'
 
@@ -35,8 +36,8 @@ export const Post = ({ content, frontmatter, previous, next, siteTitle, image, s
 				<div className="Foot__Share">
 					<Share title={frontmatter.title} url={`https://dantecalderon.com/` + frontmatter.path}/>
 				</div>
-				<div className="Foot__AuthorPost">
-					<AuthorPost
+				<div className="Foot__AuthorPost">				
+					<AuthorPostFooter
 							date={ frontmatter.date }
 							timeToRead={timeToRead}
 							avatar={avatar}

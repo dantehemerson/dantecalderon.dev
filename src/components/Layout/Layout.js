@@ -21,7 +21,6 @@ class Layout extends React.Component {
 				<Helmet>
 					<link
 					href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Noto+Serif:400,700,400italic,700italic|Playfair+Display:700" rel="stylesheet"/>
-					<meta name="theme-color" content="#DFBD83"/>
 					<meta name="distribution" content="global"/>
 					<meta httpEquiv="Content-Language" content="es" />
 					<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
@@ -37,7 +36,6 @@ class Layout extends React.Component {
 					<link rel="icon" type="image/png" sizes="32x32"	href="/favicon-32x32.png" />
 					<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
 					<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-					<meta name="msapplication-TileColor" content="#DFBD83" />
 					<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
 				</Helmet>
 

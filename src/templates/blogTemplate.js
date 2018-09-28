@@ -20,8 +20,7 @@ export const Post = ({ content, frontmatter, previous, next, siteTitle, image, s
 					<AuthorPost
 						date={ frontmatter.date }
 						timeToRead={timeToRead}
-						avatar={avatar}
-						header
+						avatar={avatar}						
 						/>
 				</div>
 				{

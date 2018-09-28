@@ -1427,14 +1427,14 @@ $border-radius: 3px;
 			&__name {
 				font-size: 1rem;
 				font-weight: 600;
-				color: white !important;
+				color: black !important;
 				text-decoration: none !important;
 			}
 
 			&__about {
 				font-size: .9rem;
 				margin: 0;
-				color: #d5d5d5 !important;
+				color: #black !important;
 			}
 			&__date {
 				font-size: .8rem;
@@ -1513,9 +1513,8 @@ $border-radius: 3px;
 			}
 
 			&__AuthorPost {
-				background: #568492;
+				//background: #568492;
 				padding: 10px 10px 10px 15px;
-				border: 1px solid #4B6F7A;
 
 				margin-top: 10px;
 				margin-bottom: 10px;

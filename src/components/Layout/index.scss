@@ -412,6 +412,13 @@ textarea{
 	 &.inicio {
 	 	background: transparent;
 	 }
+	&.noTop {	
+	  background: white;	
+		top:0 !important;	
+		&.open {	
+	 		transform: inherit !important;	
+	 	}		
+	}	
 	 .container {
 			display: flex;
 			align-items: center;

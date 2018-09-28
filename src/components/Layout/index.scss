@@ -1023,7 +1023,6 @@ $border-radius: 3px;
 		$post-titles-font: 'Open Sans';
 		.Post {
 			padding-top: 62px;
-			padding-bottom: 50px;
 			font-family: $post-body-font;
 			font-size: 15px;
 			line-height: 1.6;
@@ -1650,29 +1649,51 @@ $border-radius: 3px;
 	margin-bottom: 13px;
 	padding-left: 0px;
 	margin-top: 20px;
+	flex-direction: column;
+	align-items: center;
+
+	@include breakpoint(md) {
+		flex-direction: row;
+	  align-items: inherit;
+		&__image {			
+			width: 150px !important;
+			height: 150px !important;			
+			margin-right: 21px !important;
+		}
+		&__body {
+			align-items: inherit !important;
+			padding-top: 0 !important;
+		}
+
+		&__about {
+			text-align: left !important;
+		}
+	}
+
 	p, img, a {		
 		margin: 0;
 		text-decoration: none;
 	}
 	&__writtenby {	
-		font-size: 15px;
+		font-size: 14px;
 		text-transform: uppercase;
 		font-weight: 700;
 		color: #767676;
 	}
 	&__image {
 		margin: 0;
-		width: 150px;
-		height: 150px;
+		width: 90px;
+		height: 90px;
 		border-radius: 50%;
-		margin-right: 21px;
+		margin-right: 0;
 	}
 	&__body {
 		display: flex;
 		font-family: $sans-serif-font;
 		flex-direction: column;
 		justify-content: center;
-
+		align-items: center;
+		padding-top: 14px;
 	}
 	&__name {
 		margin: 0;
@@ -1687,5 +1708,10 @@ $border-radius: 3px;
 		font-size: 15px;
 		font-weight: 600;
 		padding-top: 10px;
+		text-align: center;
+	}
+
+	&__social {
+		display: none;
 	}
 }

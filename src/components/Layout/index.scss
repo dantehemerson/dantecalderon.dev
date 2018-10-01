@@ -1260,24 +1260,34 @@ $border-radius: 3px;
 				margin-left: -11px;
 				border-left: 3px solid $font-color;
 			}
-
-			pre[class*="language-text"] code[class*="language-text"] {
-				font-size: 15px;
-				@include breakpoint(md) {
-					font-size: 1rem;
+			
+				pre[class*="language-text"], code[class*="language-text"] {
+					font-size: 15px;
+					@include breakpoint(md) {
+						font-size: 1rem;
+					}
+					background: transparent;
+					color: inherit;
 				}
-				background: transparent;
-				color: inherit;
+				code.language-text {
+					font-size: .9em;
+					color: #4575dc;
+					border: none;
+					background: rgba(155,234,243,0.2);
+				}
+			.gatsby-highlight {				
+				pre[class*="language-"] {
+					border-radius: 4px;
+					background: #f0f2f1;
+					code[class*="language-"], pre[class*="language-"] {						
+						text-shadow: 0 0 white !important;
+					}
+					.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string {
+						background: transparent;	
+					}
+				}
 			}
-			code.language-text {
-				font-size: .9em;
-				color: #4575dc;
-				background: rgba(155,234,243,0.2);
-			}
-			pre[class*="language-"] {
-				margin-bottom: 2.2em;
-				background: #f7f7f7 !important;
-			}
+
 			&__footer { // Contenedor de los comentarios y los posts recomendados
 				background: #fafafa;
 				padding-top: 30px;

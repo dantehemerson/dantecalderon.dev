@@ -6,7 +6,7 @@ import Footer from '../Footer'
 
 import { actualPage } from '../../utils'
 
-import 'prismjs/themes/prism-solarizedlight.css'
+import 'prismjs/themes/prism.css'
 import 'react-awesome-button/src/styles/styles.scss'
 import './index.scss'
 

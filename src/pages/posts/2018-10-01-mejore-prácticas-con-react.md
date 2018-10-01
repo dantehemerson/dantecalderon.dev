@@ -37,6 +37,9 @@ La estructura de la clase de un componente lo ordeno en el siguiente orden:
 * Estado(`state`)
 * PropTypes
 * DefaultProps
-* Funciónes del ciclo de vida de React(`componentDidMount`, `componentWillMount`, etc)
+* Funciónes del ciclo de vida de React(`componentDidMount`, `componentDidUpdate`, etc)
 * Función `render`
+
 Por supuesto, agrega sólo los elementos que vas a utilizar.
+
+Vamos a ver detalladamente como definir estos componentes ya que hay 

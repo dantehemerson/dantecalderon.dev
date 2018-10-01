@@ -30,3 +30,4 @@ class MyComponent extends React.Component {
 	...
 }
 ```
+<script src="https://gist.github.com/dantehemerson/535b3a3ad43609ac2370933fd1edc8a9.js"></script>

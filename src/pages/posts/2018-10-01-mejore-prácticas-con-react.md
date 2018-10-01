@@ -12,7 +12,7 @@ tags:
 ---
 
 ### Importando componentes y librearías
-Al importar componentes y/o librerías lo que hago es separar entre los componentes que son externos y los de mí proyecto. Por ejemplo:
+Al importar componentes lo que hago es separar con una linea en blanco los componentes que son externos y los de mí proyecto. Por ejemplo:
 ```javascript
 import React from 'react'
 import { Link } from 'react-router-dom'
@@ -30,4 +30,13 @@ class MyComponent extends React.Component {
 	...
 }
 ```
-<script src="https://gist.github.com/dantehemerson/535b3a3ad43609ac2370933fd1edc8a9.js"></script>
+
+### Estructura de la clase
+La estructura de la clase de un componente lo ordeno en el siguiente orden:
+* Constructor
+* Estado(`state`)
+* PropTypes
+* DefaultProps
+* Funciónes del ciclo de vida de React(`componentDidMount`, `componentWillMount`, etc)
+* Función `render`
+Por supuesto, agrega sólo los elementos que vas a utilizar.

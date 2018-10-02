@@ -65,7 +65,8 @@ class Component extends React.Component {
 ```
 Aúnque también podemos hacer lo mismo de está forma:
 ```javascript
-class Component extends React.Component {	
+class Component extends React.Component {
+	// ... constructor(si es necesario)
 	state = {
 		...
 	}
@@ -73,3 +74,75 @@ class Component extends React.Component {
 ```
 de está forma ya no necesitamos el constructor(salvo para casos específicos) y nuestro código se ve mas elegante :sunglasses:.
 
+#### propTypes y defaultProps
+`propTypes` y `defaultProps` son propiedades estáticas. Con ES6 las se definen de está manera:
+```javascript
+class Component extends React.Component {
+	static propTypes = {
+		...
+	}
+
+	static defaultProps = {
+		
+	}
+}
+```
+
+#### Escribiendo nuestras propias funciónes
+```javascript
+class Component extends React.Component {
+	// ...
+
+	fetchData = () => {
+
+	}
+
+	updateMenu = () => {
+
+	}
+}
+```
+Definiendo las funciónes de está forma ya no será necesario **bindear** las funciónes en el **constructor**.
+
+:tada: Finalmente así quedaría nuestro componente:
+```javascript
+class Component extends React.Component {
+	// Constructor
+	constructor(...props) {		
+		super(...props)	
+		// ...
+	}
+
+	// Estado
+	state = {
+		//...
+	}
+
+	// Funciónes del ciclo de vida de react
+	componentDidMount() {
+
+	}
+
+	componentDidUpdate() {
+
+	}
+
+	// Nuestras funciónes
+	fetchData = () => {
+		// ...
+	}
+
+	updateMenu = () => {
+		// ...
+	}
+
+	// Función render
+	render() {
+		return (
+			<div>
+				Hello World
+			</div>
+		)
+	}
+}
+```

@@ -190,5 +190,4 @@ Identa las llaves y deja la llave izquieda y derecha en una linea separada cada 
 ```
 
 ## Conclusión
-Tener una estructura y.
-Como dije al principio esta es mi forma en la que yo escribo mis componentes, 
+Tener la estructura defínida de nuestro código es muy importante sobre todo cuando se trabaja en equípo, seguir pautas y reglas sintacticas y semánticas harán que nuestro **código sea mas limpio**.

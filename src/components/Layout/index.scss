@@ -1190,13 +1190,9 @@ $border-radius: 3px;
 			}
 
 			h2{
-				//text-align: center;
-				color: #838383;
-				font-size: 17px;
-				margin-top: 30px;
-				font-weight: 400;
+				text-align: center;			
 			}
-			h3 {
+			h3, h2 {
 				margin-top: 30px;
 				font-size: 25px;
 			}
@@ -1221,12 +1217,8 @@ $border-radius: 3px;
 				&__date {
 					font-size: 13px;
 					color: $hover-link-color!important;
-				}
-				h2{
-					margin-top: 30px;
-					font-size: 17px;
-				}
-				h3 {
+				}	
+				h3, h2 {
 					margin-top: 30px;
 					font-size: 25px;
 				}
@@ -1243,15 +1235,8 @@ $border-radius: 3px;
 				}
 				&__date {
 					font-size: 14px;
-				}
-				h2{
-					margin-top: 40px;
-					font-size: 29px;
-				}
-				h2 { // EL subtitulo del post
-					font-size: 19px;
-				}
-				h3 {
+				}			
+				h3, h2 {
 					margin-top: 40px;
 					font-size: 29px;
 				}
@@ -1260,7 +1245,7 @@ $border-radius: 3px;
 				}
 			}
 			div.gatsby-highlight {				
-				& + h4, & + h3 {
+				& + h4, & + h3, & + h2 {
 					margin-top: 30px !important;
 				}
 			} 

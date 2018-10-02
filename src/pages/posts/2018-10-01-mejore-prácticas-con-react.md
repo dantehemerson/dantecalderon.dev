@@ -44,13 +44,18 @@ Por supuesto, agrega sólo los elementos que vas a utilizar.
 
 Vamos a ver detalladamente como declarar estos componentes.
 
-## Constructor y Estado
-```
+## Constructor
+En muchas ocaciónes no es necesario usar el constructor, ya que el uso más común es para iniciar el **estado** y **bindear** las funciónes. En caso de que quierás usarlo declarálo justo después de definida la clase:
+```javascript
 class Component extends React.Component {
 	constructor(...props) {
 		super(...props)
 	}
+```
+##Estado
 
+```javascript
+class Component extends React.Component {	
 	**state = {
 		...
 	}**

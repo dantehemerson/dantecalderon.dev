@@ -41,24 +41,35 @@ La estructura de la clase de un componente lo ordeno en el siguiente orden:
 * Función `render`
 
 Por supuesto, agrega sólo los elementos que vas a utilizar.
+Vamos a ver como declarar estos componentes.
 
-Vamos a ver detalladamente como declarar estos componentes.
-
-## Constructor
+#### Constructor
 En muchas ocaciónes no es necesario usar el constructor, ya que el uso más común es para iniciar el **estado** y **bindear** las funciónes. En caso de que quierás usarlo declarálo justo después de definida la clase:
 ```javascript
 class Component extends React.Component {
 	constructor(...props) {
 		super(...props)
 	}
-```
-##Estado
-
-```javascript
-class Component extends React.Component {	
-	**state = {
-		...
-	}**
-
 }
 ```
+#### Estado
+Una forma de declarar e inicializar el store es está forma:
+```javascript
+class Component extends React.Component {
+	constructor(...props) {		
+		this.state = {
+			...
+		}
+	}
+}
+```
+Aúnque también podemos hacer lo mismo de está forma:
+```javascript
+class Component extends React.Component {	
+	state = {
+		...
+	}
+}
+```
+de está forma ya no necesitamos el constructor(salvo para casos específicos) y nuestro código se ve mas elegante :sunglasses:.
+

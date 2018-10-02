@@ -42,4 +42,18 @@ La estructura de la clase de un componente lo ordeno en el siguiente orden:
 
 Por supuesto, agrega sólo los elementos que vas a utilizar.
 
-Vamos a ver detalladamente como definir estos componentes ya que hay 
+Vamos a ver detalladamente como declarar estos componentes.
+
+## Constructor y Estado
+```
+class Component extends React.Component {
+	constructor(...props) {
+		super(...props)
+	}
+
+	**state = {
+		...
+	}**
+
+}
+```

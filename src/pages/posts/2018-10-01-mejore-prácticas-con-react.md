@@ -13,7 +13,7 @@ tags:
 
 ### Importando componentes y librearías
 Al importar componentes lo que hago es separar con una linea en blanco los componentes que son externos y los de mí proyecto. Por ejemplo:
-```javascript
+```jsx
 import React from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
@@ -45,7 +45,7 @@ Vamos a ver como declarar estos componentes.
 
 #### Constructor
 En muchas ocaciónes no es necesario usar el constructor, ya que el uso más común es para iniciar el **estado** y **bindear** las funciónes. En caso de que quierás usarlo declarálo justo después de definida la clase:
-```javascript
+```jsx
 class Component extends React.Component {
 	constructor(...props) {
 		super(...props)
@@ -56,7 +56,7 @@ class Component extends React.Component {
 
 #### Estado
 Una forma de declarar e inicializar el store es está forma:
-```javascript
+```jsx
 class Component extends React.Component {
 	constructor(...props) {		
 		this.state = {
@@ -66,7 +66,7 @@ class Component extends React.Component {
 }
 ```
 Aúnque también podemos hacer lo mismo de está forma:
-```javascript
+```jsx
 class Component extends React.Component {
 	// ... constructor(si es necesario)
 	state = {
@@ -78,7 +78,7 @@ de está forma ya no necesitamos el constructor(salvo para casos específicos) y
 
 #### propTypes y defaultProps
 `propTypes` y `defaultProps` son propiedades estáticas. Con ES6 las se definen de está manera:
-```javascript
+```jsx
 class Component extends React.Component {
 	static propTypes = {
 		...
@@ -92,7 +92,7 @@ class Component extends React.Component {
 
 
 #### Escribiendo nuestras propias funciónes
-```javascript
+```jsx
 class Component extends React.Component {
 	// ...
 
@@ -108,7 +108,7 @@ class Component extends React.Component {
 Definiendo las funciónes de está forma ya no será necesario **bindear** las funciónes en el **constructor**.
 
 :tada: Finalmente así quedaría nuestro componente:
-```javascript
+```jsx
 class Component extends React.Component {
 	// Constructor
 	constructor(...props) {		
@@ -153,11 +153,11 @@ class Component extends React.Component {
 ### Propiedades de los componentes
 Sí tu componente tienes muchas propiedades, colocá cada propiedad en una linea separada.
 Por ejemplo:
-```javascript
+```jsx
 <input name="name" value={ name } className="ContactForm__input" placeholder="Nombre" type="text" required onChange={ this.handleChange }/>
 ```
 quedaría mejor como:
-```javascript
+```jsx
 <input 
 	name="name" 
 	value={ name } 
@@ -172,13 +172,13 @@ quedaría mejor como:
 
 #### Una sola linea
 Agrega un espacio en los extremos del código.
-```javascript
+```jsx
 <h1>{ this.state.title }</h1>
 <p>{ this.getBody() }</p>
 ```
 #### Multiples lineas
 Identa las llaves y deja la llave izquieda y derecha en una linea separada cada una.
-```javascript
+```jsx
 <div>
 	{
 		this.date &&

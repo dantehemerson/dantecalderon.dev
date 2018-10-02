@@ -52,6 +52,7 @@ class Component extends React.Component {
 	}
 }
 ```
+
 #### Estado
 Una forma de declarar e inicializar el store es está forma:
 ```javascript

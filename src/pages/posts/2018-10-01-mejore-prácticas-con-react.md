@@ -149,3 +149,46 @@ class Component extends React.Component {
 	}
 }
 ```
+
+### Propiedades de los componentes
+Sí tu componente tienes muchas propiedades, colocá cada propiedad en una linea separada.
+Por ejemplo:
+```html
+<input name="name" value={ name } className="ContactForm__input" placeholder="Nombre" type="text" required onChange={ this.handleChange }/>
+```
+quedaría mejor como:
+```html
+<input 
+	name="name" 
+	value={ name } 
+	className="ContactForm__input" 
+	placeholder="Nombre" 
+	type="text" 
+	required 
+	onChange={ this.handleChange }/>
+```
+
+### Javascript dentro de JSX
+
+#### Una sola linea
+Agrega un espacio en los extremos del código.
+```javascript
+<h1>{ this.state.title }</h1>
+<p>{ this.getBody() }</p>
+```
+#### Multiples lineas
+Identa las llaves y deja la llave izquieda y derecha en una linea separada cada una.
+```javascript
+<div>
+	{
+		this.date &&
+			<time>
+				this.date
+			</time>
+	}
+</div>
+```
+
+## Conclusión
+Tener una estructura y.
+Como dije al principio esta es mi forma en la que yo escribo mis componentes, 

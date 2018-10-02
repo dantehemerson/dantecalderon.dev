@@ -153,11 +153,11 @@ class Component extends React.Component {
 ### Propiedades de los componentes
 Sí tu componente tienes muchas propiedades, colocá cada propiedad en una linea separada.
 Por ejemplo:
-```html
+```javascript
 <input name="name" value={ name } className="ContactForm__input" placeholder="Nombre" type="text" required onChange={ this.handleChange }/>
 ```
 quedaría mejor como:
-```html
+```javascript
 <input 
 	name="name" 
 	value={ name } 

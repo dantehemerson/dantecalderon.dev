@@ -1183,6 +1183,8 @@ $border-radius: 3px;
 				color: rgba(0,0,0,.54)!important;
 				color: $hover-link-color!important;
 			}
+
+			// MARKDOWN
 			h1, h2, h3, h4, h5, h6 {
 				font-family: $post-titles-font;
 			}
@@ -1248,7 +1250,11 @@ $border-radius: 3px;
 					font-size: 21px;
 				}
 			}
-
+			div.gatsby-highlight {				
+				& + h4, & + h3 {
+					margin-top: 30px !important;
+				}
+			} 
 
 			a {
 				color: $font-color;

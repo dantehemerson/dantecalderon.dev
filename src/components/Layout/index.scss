@@ -1448,11 +1448,14 @@ $border-radius: 3px;
 			justify-content: center;
 			a {
 				margin: 0 3px;		
-				padding: 12px 12px;
+				padding: 9px 9px;
 				border-radius: 50%;
 				opacity: 1;
 				&:hover {
 					opacity: 1;
+				}
+				@include breakpoint(md) {
+					padding: 12px 12px;
 				}
 			}
 
@@ -1504,11 +1507,11 @@ $border-radius: 3px;
 		.Foot {
 
 			&__Share {
-				margin-top: 45px;
+				margin-top: 30px;
 				border-top: 1px solid rgba(0, 0, 0, 0.05);
 				border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-				padding: 45px 0 30px 0;
-				margin-bottom: 50px;
+				padding: 30px 0 30px 0;
+				margin-bottom: 32px;
 			}			
 		}
 		.emoji-icon {

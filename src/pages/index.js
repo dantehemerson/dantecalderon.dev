@@ -27,7 +27,7 @@ class Index extends React.Component {
                               <Social />
                               <AwesomeButton                                 
                                  className="Header-Home__btn-about"
-                                 href="#about" >
+                                 href="/about" >
                                  SOBRE MÍ
                               </AwesomeButton>
                            </div>

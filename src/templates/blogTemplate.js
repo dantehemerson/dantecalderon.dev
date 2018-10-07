@@ -10,19 +10,29 @@ import AuthorPost from '../components/AuthorPost'
 import AuthorPostFooter from '../components/AuthorPostFooter'
 import Share from '../components/Share'
 import Layout from '../components/Layout'
+import Toolbar from '../components/ProjectToolbar'
 
-export const Post = ({ content, frontmatter, previous, next, siteTitle, image, siteUrl, contentComponent, timeToRead, avatar }) => {
+export const Post = ({ content, frontmatter, previous, next, siteTitle, image, siteUrl, contentComponent, timeToRead, avatar, model }) => {
 	const PostContent = contentComponent || Content
+	const isProject = (frontmatter.model === 'project' ? true : false)	
 	return (
 		<div className={`Post ${ frontmatter.style }`}>
 			<div className="Post__header">
 				<div className="Post__header__data">
-					<h1 className="Post__title">{ frontmatter.title }</h1>
-					<AuthorPost
-						date={ frontmatter.date }
-						timeToRead={timeToRead}
-						avatar={avatar}						
-						/>
+					<h1 className="Post__title">{ frontmatter.title }</h1>					
+					{
+						!isProject &&						
+						<AuthorPost
+							date={ frontmatter.date }
+							timeToRead={timeToRead}
+							avatar={avatar}						
+							/>
+					}
+					{
+						isProject &&
+						<Toolbar/>
+					}
+
 				</div>
 				{
 					frontmatter.style !== 'default' &&
@@ -30,19 +40,22 @@ export const Post = ({ content, frontmatter, previous, next, siteTitle, image, s
 						<Img sizes={ image }/>
 					</div>
 				}
-			</div>
+			</div>			
 			<PostContent content={content} className="container Post__content"/>
 			<div className="wrapper-post">
 				<div className="Foot__Share">
 					<Share title={frontmatter.title} url={`https://dantecalderon.com/` + frontmatter.path}/>
 				</div>
-				<div className="Foot__AuthorPost">				
-					<AuthorPostFooter
-							date={ frontmatter.date }
-							timeToRead={timeToRead}
-							avatar={avatar}
-								/>
-				</div>
+				{
+					!isProject &&
+					<div className="Foot__AuthorPost">				
+						<AuthorPostFooter
+								date={ frontmatter.date }
+								timeToRead={timeToRead}
+								avatar={avatar}
+									/>
+					</div>
+				}
 			</div>
 		</div>
 	)

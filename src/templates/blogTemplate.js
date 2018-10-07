@@ -42,21 +42,21 @@ export const Post = ({ content, frontmatter, previous, next, siteTitle, image, s
 				}
 			</div>			
 			<PostContent content={content} className="container Post__content"/>
-			<div className="wrapper-post">
-				<div className="Foot__Share">
-					<Share title={frontmatter.title} url={`https://dantecalderon.com/` + frontmatter.path}/>
-				</div>
 				{
 					!isProject &&
-					<div className="Foot__AuthorPost">				
-						<AuthorPostFooter
-								date={ frontmatter.date }
-								timeToRead={timeToRead}
-								avatar={avatar}
-									/>
+					<div className="wrapper-post">
+						<div className="Foot__Share">
+							<Share title={frontmatter.title} url={`https://dantecalderon.com/` + frontmatter.path}/>
+						</div>
+						<div className="Foot__AuthorPost">				
+							<AuthorPostFooter
+									date={ frontmatter.date }
+									timeToRead={timeToRead}
+									avatar={avatar}
+										/>
+						</div>
 					</div>
 				}
-			</div>
 		</div>
 	)
 }
@@ -116,7 +116,7 @@ export default class BlogPostTemplate extends React.Component {
 							avatar={ this.props.data.avatar }
 							/>
 							<div className="Post__footer">
-								{  post.frontmatter.model === 'post' &&
+								
 									<div id="disquser" className="container Disqus">
 										<ReactDisqusComments
 													shortname="dantecalderon"
@@ -124,11 +124,14 @@ export default class BlogPostTemplate extends React.Component {
 													title={ post.frontmatter.title }
 													url={ this.state.location }/>
 									</div>
+								
+								{
+									post.frontmatter.model === 'post' &&
+									<Share fixed show={ this.state.show_share }
+									 	title={post.frontmatter.title}
+										url={`https://dantecalderon.com/` + post.frontmatter.path}/>
 								}
 							</div>
-							<Share fixed show={ this.state.show_share }
-							 	title={post.frontmatter.title}
-								url={`https://dantecalderon.com/` + post.frontmatter.path}/>
 					</div>
 				</Layout>
 		)

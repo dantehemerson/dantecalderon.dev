@@ -164,33 +164,18 @@ $border-radius: 3px;
 	}
 }
 
-/** Functions **/
 @function baseurl($file-path) {
 	@return url('../../assets/images/' + $file-path);
 }
 
-/* Deveuelve pixeles en rems */
 @function remcalc($size) {
 	$remSize: $size / 16px;
 	@return #{$remSize}rem;
 }
 
-
-/* General Modifiers */
-
 * {
 	transition: all $transition-hover-s; // transiciones para todos. Animensen!!!
 }
-// ::-moz-selection { /* Code for Firefox */
-	//     color: white;
-	//     background: $hover-link-color;
-	// }
-
-	// ::selection {
-		//     color: white;
-		//     background: $hover-link-color;
-		// }
-
 		.text-center {
 			text-align: center;
 		}
@@ -202,7 +187,6 @@ $border-radius: 3px;
 		.hide {
 			display: none;
 		}
-
 
 		.container {
 			padding-left: $container-padding-lg;
@@ -226,36 +210,6 @@ $border-radius: 3px;
 			color: #282a2d;
 		}
 
-		.btn {
-			border: 0;
-			color: #fff;
-			cursor: pointer;
-			outline: 0;
-			text-align: center;
-			text-decoration: none; // for tag a
-			text-transform: uppercase;
-			width: auto;
-			font-size: 0.9rem;
-			font-weight: 600;
-		}
-
-		.Btn {
-			background: #28282e !important;
-			border: 0 !important;
-			border-radius: $border-radius !important;
-			font-family: $sans-serif-font !important;
-			font-weight: 600 !important;
-			padding-left: 3rem !important;
-			padding-right: 3rem !important;
-			&:hover{
-				background: $hover-link-color !important;
-			}
-
-			&:focus {
-				box-shadow: 0 0 0 !important;
-			}
-		}
-
 		// SWAL
 		#swal2-title {
 			font-family: $sans-serif-font;
@@ -275,7 +229,7 @@ $border-radius: 3px;
 			padding-right: 4.7rem;
 			font-weight: 400;
 			&:focus {
-				border-color: $hover-link-color;
+				border-color: $primary-color;
 			}
 		}
 
@@ -375,10 +329,8 @@ $border-radius: 3px;
 			}
 
 			&__burger-menu {
-
 				@extend .b-a;
 				top: 8px;
-
 
 				&:after {
 					@extend .b-a;
@@ -394,8 +346,6 @@ $border-radius: 3px;
 					top: 8px;
 					left: 0;
 				}
-
-
 			}
 			&:focus {
 				border: 0;
@@ -404,16 +354,14 @@ $border-radius: 3px;
 		}
 
 
-
-		/// ============== TOGGLER =================
-
-
 		/** Navbar Component Styles **/
 		.Navbar {
 			height: $navbar-height;
 			display: flex;
 			justify-content: center;
 			position: fixed;
+			left: 0;
+			top: 0;
 			width: 100%;
 			z-index: 10;
 			box-shadow: 0px 1px 0px 0px #f3f3f3;
@@ -422,11 +370,7 @@ $border-radius: 3px;
 				background: transparent;
 			}
 			&.noTop {	
-				background: white;	
-				top:0 !important;	
-				&.open {	
-					transform: inherit !important;	
-				}		
+				background: white;								
 			}	
 			.container {
 				display: flex;
@@ -446,7 +390,6 @@ $border-radius: 3px;
 				color: $navbar-link-color;
 				font-family: $sans-serif-font;
 				font-weight: 600;
-
 				&:hover {
 					background: #f5f5f5;
 				}
@@ -473,7 +416,6 @@ $border-radius: 3px;
 				margin-right: 8px;
 			}
 
-
 			&__shadow {
 				@media (max-width: 767px)	 {
 					position: fixed;
@@ -482,17 +424,15 @@ $border-radius: 3px;
 					width: 900%;
 					height: 100%;
 					transition: 0;
-					transition: 0;
 					&.open {
 						left: 0;
 						transition: background .4s;
-						background: rgba(0, 0, 0, .3);
+						background: rgba(0, 0, 0, .3);						
 						z-index: 20;
 					}
 				}
 			}
 			&__nav {
-
 				z-index: 30;
 				list-style: none;
 				position: absolute;
@@ -504,7 +444,6 @@ $border-radius: 3px;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				display: none;
 				display: flex;
 				background: white;
 				transition: all 0s !important;
@@ -537,12 +476,10 @@ $border-radius: 3px;
 
 				}
 			}
-			&__item {
-				margin-left: 0px;
-				width: 100%;
-				border-top: 1px solid #eeeded;
+			&__item {				
+				width: 98%;					
 				&:last-child {
-					border-bottom: 1px solid #eeeded;
+					
 				}
 				@include breakpoint(md) {
 					border-top: 0 solid transparent !important;
@@ -556,9 +493,9 @@ $border-radius: 3px;
 			&__link {						
 				font-size: 15px;
 				font-weight: 600;
-				padding: 8px 8px;
+				padding: 10px 8px;
 				text-align: center;
-				opacity: 1;
+				border-radius: 3px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -566,9 +503,7 @@ $border-radius: 3px;
 				@include breakpoint(md) {
 					transition: all .4s !important;
 					padding: 6px 16px !important;
-					border-radius: 3px;
 					&:hover {
-						opacity: 1;
 					}
 				}
 
@@ -1312,7 +1247,7 @@ $border-radius: 3px;
 			padding-bottom: 25px;
 			border-radius: $border-radius;
 			#disqus_thread a { // Changing link color disqus.
-				color: $hover-link-color;
+				color: #1976d2;
 			}
 		}
 

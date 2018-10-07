@@ -31,6 +31,14 @@
 	--button-anchor-color-light: #ffffff !important;
 	--button-anchor-color-hover: #0d4a7f !important;
 	--button-anchor-border: none !important;
+
+	.icon {
+		width: 19px;
+		top: 2px;
+		position: relative;
+		height: 100%;
+		margin-right: 5px;
+	}
 }
 
 .twitter {
@@ -1723,5 +1731,11 @@ $border-radius: 3px;
 
 	&__social {
 		display: none;
+	}
+}
+
+.ToolbarButton {
+	&:first-child {
+		margin-right: 6px;
 	}
 }

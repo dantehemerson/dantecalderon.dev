@@ -502,12 +502,8 @@ $border-radius: 3px;
 
 				@include breakpoint(md) {
 					transition: all .4s !important;
-					padding: 6px 16px !important;
-					&:hover {
-					}
+					padding: 6px 16px !important;					
 				}
-
-
 				&.active {
 					color: $primary-color !important;
 					svg path, svg polygon {
@@ -534,12 +530,9 @@ $border-radius: 3px;
 			min-height: 600px;
 			color: $font-color;
 
-
-
 			@include breakpoint(lg) {
 				height: 100vh;
 				min-height: 500px;
-
 			}
 
 			& > .container {
@@ -667,8 +660,12 @@ $border-radius: 3px;
 			margin: 45px 10px;
 			border-radius: 4px;		
 			overflow: hidden;	
+			border-width: 1px;
+			border-style: solid;
+			border-color: rgba(0, 0, 0, 0.1);
+			border-image: initial;
+			box-shadow: rgba(0, 0, 0, 0.1) 0 0 4px;				
 			&:hover{
-				box-shadow: rgba(140, 101, 179, 0.5) 0px 2px 16px;
     		//transform: translateY(-2px);
 			}
 
@@ -729,13 +726,14 @@ $border-radius: 3px;
 				width: -moz-fit-content;
 				h3 {
 					margin: 0;
-					font-family:$serif-normal;
+					font-family: 'Open Sans';
 					font-size: 21px;
 					@include breakpoint(sm) {
 						font-size: 27px;
 					}
 					&:hover {
 						color: #1976d2;
+						text-decoration: underline;
 					}
 
 				}
@@ -760,8 +758,9 @@ $border-radius: 3px;
 				display: inherit;
 				color: #999 !important;
 				font-size: 12px;
+				font-weight: 600;
 				&:hover {
-					color:  $hover-link-color !important;
+					color:  $primary-color !important;
 				}
 				@include breakpoint(sm) {
 					font-size: 14px;

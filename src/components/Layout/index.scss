@@ -1,6 +1,7 @@
 @import '../../assets/styles/flex-box-grid';
 
 .aws-btn {
+	width: auto !important;
 	--button-default-height: 44px !important;
 	--button-default-font-size: 15px !important;
 	--button-default-border-radius: 2px !important;

@@ -1748,3 +1748,17 @@ $border-radius: 3px;
 		margin-right: 6px;
 	}
 }
+
+.ContactSocial__icon {
+	margin: 0 3px;
+	.aws-btn__content {
+		padding: 0 15px;
+	}
+	img {
+		width: 25px;
+		height: 25px;
+		margin: 0;
+		position: relative;
+		top: 2px;
+	}
+}

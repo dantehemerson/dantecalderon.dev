@@ -680,22 +680,9 @@ $border-radius: 3px;
 				text-transform: uppercase;
 				margin-bottom: .3rem;
 			}
-
-			&__inputwrap {
-
-			}
-
-			&__input {
-
-			}
+			
 			&__submit{
-				padding: 15px 48px;
-				font-weight: bold;
-				background: #28282e;
-				&:hover {
-					background-color: #0085a1;
-				}
-
+				width: 150px !important;
 			}
 		}
 

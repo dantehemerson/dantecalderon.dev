@@ -100,9 +100,10 @@ class ContactForm extends React.Component {
 					<div className="ContactForm__item">
 						<div className="ContactForm__submitwrap">
 							<AwesomeButton
+								className="ContactForm__submit"
 								size="medium"
-							  	type="primary">
-							  	ENVIAR
+							  type="primary">
+							  ENVIAR
 							</AwesomeButton>
 						</div>
 					</div>

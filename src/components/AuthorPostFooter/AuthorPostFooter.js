@@ -8,7 +8,7 @@ export default props => (
 			<Img className="AuthorPostFooter__image" sizes={ props.avatar.sizes } />
 		</div>
 		<div className="AuthorPostFooter__body">
-			<p className="AuthorPostFooter__writtenby">Escrito por</p>
+			<p className="AuthorPostFooter__writtenby">{ props.make ? 'Hecho' : 'Escrito'} por</p>
 			<Link to="/#about" className="AuthorPostFooter__name">Dante Calderón</Link>
 			<p className="AuthorPostFooter__about">Contribuidor de Software libre(@linux, @git). Desarrollador Web utilizando React, Node y Mongo. También me gusta desarrollar videojuegos, puedes ver los que he creado en mi <Link to="/portfolio">portafolio</Link>.</p>
 			<div className="AuthorPostFooter__social">

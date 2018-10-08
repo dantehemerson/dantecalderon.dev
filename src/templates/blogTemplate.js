@@ -114,7 +114,7 @@ export default class BlogPostTemplate extends React.Component {
 							isPost={ true }
 						/>
 						{
-							post.frontmatter === 'post' ?
+							post.frontmatter.model === 'post' ?
 								<Post
 									{ ...post }
 									{ ...siteMetadata }
@@ -124,17 +124,17 @@ export default class BlogPostTemplate extends React.Component {
 									contentComponent={ HTMLContent }
 									image={ post.fields.thumbnail.childImageSharp.sizes }
 									avatar={ this.props.data.avatar }
-									/> :
-								<Project
-									{ ...post }
-									{ ...siteMetadata }
-									previous={ previous }
-									next={ next }
-									content={ post.html }
-									contentComponent={ HTMLContent }
-									image={ post.fields.thumbnail.childImageSharp.sizes }
-									avatar={ this.props.data.avatar }
 									/>
+								: <Project
+										{ ...post }
+										{ ...siteMetadata }
+										previous={ previous }
+										next={ next }
+										content={ post.html }
+										contentComponent={ HTMLContent }
+										image={ post.fields.thumbnail.childImageSharp.sizes }
+										avatar={ this.props.data.avatar }
+										/>
 						}
 							<div className="Post__footer">
 								

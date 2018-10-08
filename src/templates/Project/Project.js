@@ -26,7 +26,8 @@ export default props => {
 			<PostContent content={ props.content } className="container Post__content"/>				
 			<div className="wrapper-post">				
 				<div className="Foot__AuthorPost">				
-					<AuthorPostFooter												
+					<AuthorPostFooter
+						make									
 						avatar={ props.avatar }/>
 				</div>	
 			</div>				

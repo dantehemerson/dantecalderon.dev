@@ -44,9 +44,8 @@ collections:
       - { label: Roles (Separar con comas), name: roles, widget: list }
       - { label: Stack (Separar con comas), name: stack, widget: list }
       - { label: Client, name: 'client', widget: string, default: Personal }         
-      - { label: Repository, name: 'repository', widget: string }         
-      - { label: Website, name: 'website', widget: string }
-
+      - { label: Repository, name: 'repository', widget: string, required: false }         
+      - { label: Website, name: 'website', widget: string, required: false }
       - { label: Body, name: body, widget: markdown }      
       
 

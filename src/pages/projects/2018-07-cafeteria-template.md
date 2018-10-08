@@ -20,6 +20,6 @@ stack:
   - css3
 client: Personal
 repository: 'https://github.com/dantehemerson/cafeteria/'
-website: 'http://dantecalderon.com/cafeteria/'
+website: 'https://dantecalderon.github.io/cafeteria/'
 ---
 Un template para una cafetería, hecha con el framework [Foundation](https://foundation.zurb.com/)

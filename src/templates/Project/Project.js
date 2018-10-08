@@ -11,7 +11,7 @@ export default props => {
 	const PostContent = props.contentComponent || Content
 	return (
 		<div className="Post ProjectTemplate">
-			<div className="Post__header">
+			<div className="Post__header ProjectTemplate__header">
 				<div className="Post__header__data">								
 					<h1 className="Post__title">{ props.frontmatter.title }</h1>										
 					<h2 className="Post__subtitle">{ props.frontmatter.subtitle }</h2>					

@@ -23,7 +23,7 @@ const List = styled.ul`
 
 const Item = styled.li`
 	font-family: 'Open Sans';
-	font-size: 16px;
+	font-size: 15px;
 
 	display: flex;
 	align-items: center;

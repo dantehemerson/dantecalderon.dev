@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Stack from './Stack'
+import Tags from '../../components/Tags'
+
 const Container = styled.div`
 	
 `
@@ -15,6 +18,7 @@ const Title = styled.h3`
 
 const List = styled.ul`
 	list-style: none;
+	margin-left: 0;
 `
 
 const Item = styled.li`
@@ -50,11 +54,9 @@ export default props => (
         <rect x={0} y={0} width={36} height={36} fillOpacity={0} />
       </svg> Monsters Inc</Item>
 		</List>
-		<Title>Información del Proyecto</Title>
-		<List>
-			<Item>MIT</Item>
-			<Item>Personal</Item>
-			<Item>USK</Item>
-		</List>
+		<Title>Stack</Title>
+		<Stack items={['c++', 'java', 'python']}/>
+		<Title>Tags</Title>
+		<Tags items={['c++', 'java', 'python']}/>
 	</Container>
 )

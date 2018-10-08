@@ -1,9 +1,8 @@
 import React from 'react'
 import Img from 'gatsby-image'
 
-import Content, { HTMLContent } from '../../components/Content'
+import Content from '../../components/Content'
 import AuthorPostFooter from '../../components/AuthorPostFooter'
-import Share from '../../components/Share'
 import Toolbar from '../../components/ProjectToolbar'
 
 export default props => {

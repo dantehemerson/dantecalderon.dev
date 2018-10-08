@@ -24,8 +24,8 @@ client: Personal
 repository: 'https://github.com/dantehemerson/Arkanoid-Returns'
 website: 'https://github.com/dantehemerson/Arkanoid-Returns'
 ---
+---
 ### Acerca del proyecto
-
 Juego Arkanoid hecho en C++ con la libreria [Allegro5](https://liballeg.org/)
 
 #### Video Demo:

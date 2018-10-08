@@ -32,7 +32,7 @@ const Title = styled.h3`
 	margin: 0;
 	${ItemWrapper}:hover & {
   	color: #1976d2;
-  	box-shadow: #DCE7F3 0px -4px 0px 0px inset;
+  	box-shadow: #DCE7F3 0px -4px 0px 0px inset;  	
   }
 `
 

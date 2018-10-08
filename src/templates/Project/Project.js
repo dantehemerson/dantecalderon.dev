@@ -22,7 +22,7 @@ export default props => {
 					</div>
 				}
 			</div>			
-			<PostContent content={ props.content } className="container Post__content"/>				
+			<PostContent content={ props.content } className="container Post__content"/>			
 			<div className="wrapper-post">				
 				<div className="Foot__AuthorPost">				
 					<AuthorPostFooter

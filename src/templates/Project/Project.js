@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import Content from '../../components/Content'
 import AuthorPostFooter from '../../components/AuthorPostFooter'
 import Toolbar from '../../components/ProjectToolbar'
+import Sidebar from '../../components/SidebarProject'
 
 export default props => {
 	const PostContent = props.contentComponent || Content
@@ -27,7 +28,7 @@ export default props => {
 					<PostContent content={ props.content } className="container Post__content ProjectTemplate__content"/>	
 				</div>
 				<div className="col-xs-12 col-lg-3">
-					PVTO
+					<Sidebar/>
 				</div>
 			</div>
 

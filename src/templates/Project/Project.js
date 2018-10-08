@@ -22,7 +22,15 @@ export default props => {
 					</div>
 				}
 			</div>			
-			<PostContent content={ props.content } className="container Post__content"/>			
+			<div className="row ProjectTemplate__contentwrapper">
+				<div className="col-xs-12 col-lg-9 ProjectTemplate__col">
+					<PostContent content={ props.content } className="container Post__content ProjectTemplate__content"/>	
+				</div>
+				<div className="col-xs-12 col-lg-3">
+					PVTO
+				</div>
+			</div>
+
 			<div className="wrapper-post">				
 				<div className="Foot__AuthorPost">				
 					<AuthorPostFooter

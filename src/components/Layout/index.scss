@@ -1722,4 +1722,18 @@ $border-radius: 3px;
 			box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
 		}
 	}
+	&__contentwrapper {		
+		margin-left: auto !important;
+		margin-right: auto !important;
+		max-width: 1140px;		
+	}
+	&__content {
+		@include breakpoint(lg) {
+			max-width: 100%;
+			padding-right: 40px;			
+		}
+	}
+	&__col {
+		padding: 0 !important;
+	}
 }

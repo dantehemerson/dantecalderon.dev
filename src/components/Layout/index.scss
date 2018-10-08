@@ -1726,9 +1726,7 @@ $border-radius: 3px;
 	&__contentwrapper {		
 		margin-left: auto !important;
 		margin-right: auto !important;
-		@include breakpoint(lg) {
-			max-width: 1140px;		
-		}
+		max-width: 1140px;		
 	}
 	&__content {
 		@include breakpoint(lg) {
@@ -1740,7 +1738,9 @@ $border-radius: 3px;
 	}
 	&__col {
 		padding: 0 !important;
-		padding-right: 40px !important;
+		@include breakpoint(lg) {
+			padding-right: 40px !important;
+		}
 	}
 	&__header {
 		margin-bottom: 20px;
@@ -1749,5 +1749,11 @@ $border-radius: 3px;
 	&__header-separator {
 		margin-top: 42px;
 		background: #efefef;
+		max-width: 760px !important;
+		margin-left: auto;
+		margin-right: auto;
+		@include breakpoint(lg) {
+			max-width: 100% !important;
+		}
 	}
 }

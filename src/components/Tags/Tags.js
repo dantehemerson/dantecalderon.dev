@@ -9,9 +9,12 @@ const List = styled.ul`
 
 const Container = styled.div`
 	width: 100%;
-	max-width: 960px;
 	margin-left: auto;
 	margin-right: auto;
+	max-width: 760px;
+	@media (min-width: 992px) { 		
+		max-width: 960px;
+	}
 `
 
 const Item = styled(Link)`

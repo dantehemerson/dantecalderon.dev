@@ -8,16 +8,16 @@ import Toolbar from '../../components/ProjectToolbar'
 export default props => {
 	const PostContent = props.contentComponent || Content
 	return (
-		<div className={`Post ${ props.frontmatter.style }`}>
+		<div className="Post ProjectTemplate">
 			<div className="Post__header">
-				<div className="Post__header__data">
+				<div className="Post__header__data">								
 					<h1 className="Post__title">{ props.frontmatter.title }</h1>										
 					<h2 className="Post__subtitle">{ props.frontmatter.subtitle }</h2>					
-					<Toolbar/>					
+					<Toolbar/>										
 				</div>
 				{
-					props.frontmatter.style !== 'default' &&
-					<div className="Post__header__image">
+					props.frontmatter.style !== 'default' &&					
+					<div className="Post__header__image ProjectTemplate__header__image">
 						<Img sizes={ props.image }/>
 					</div>
 				}

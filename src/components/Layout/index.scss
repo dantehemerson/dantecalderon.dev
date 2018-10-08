@@ -962,19 +962,23 @@ $border-radius: 3px;
 			.gatsby-resp-image-wrapper {
 				max-width: 100% !important;
 			}
-			&.default {
-				.Post__header {
-					margin-bottom: 50px;
-					display: flex;
-					flex-wrap: wrap;
-					justify-content: center;
-					&__data {
-						width: 100%;
-						max-width: 760px;
-						padding: 12px;
-					}
+			
+			&__header {
+				margin-bottom: 50px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;				
+				&__data {
+					width: 100%;
+					max-width: 760px;
+					padding: 12px;					
+				}
+				&__image {
+					width: 100%;
+					max-width: 960px;
 				}
 			}
+			
 			&.full-image {
 				.Post__header {
 					margin-bottom: 50px;
@@ -1709,5 +1713,13 @@ $border-radius: 3px;
 		margin: 0;
 		position: relative;
 		top: 2px;
+	}
+}
+
+.ProjectTemplate {
+	&__header {
+		&__image {
+			
+		}
 	}
 }

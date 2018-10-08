@@ -43,7 +43,9 @@ class Portfolio extends React.Component {
 															date: node.frontmatter.date,
 															path: `/${node.frontmatter.path}`,
 															timeToRead: node.timeToRead,
-															tags: node.frontmatter.tags
+															tags: node.frontmatter.tags,
+															repository: node.frontmatter.repository,
+															website: node.frontmatter.website
 														}
 													}
 													mode="portfolio"/>
@@ -92,6 +94,8 @@ export const queryPortfolio = graphql`
     				path
     				thumbnail
     				tags
+    				repository
+    				website
     			}
     		}
     	}

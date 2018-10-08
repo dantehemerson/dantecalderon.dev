@@ -1752,6 +1752,7 @@ $border-radius: 3px;
 		max-width: 760px !important;
 		margin-left: auto;
 		margin-right: auto;
+		margin-bottom: 20px;
 		@include breakpoint(lg) {
 			max-width: 100% !important;
 		}

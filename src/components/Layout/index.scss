@@ -1726,19 +1726,28 @@ $border-radius: 3px;
 	&__contentwrapper {		
 		margin-left: auto !important;
 		margin-right: auto !important;
-		max-width: 1140px;		
+		@include breakpoint(lg) {
+			max-width: 1140px;		
+		}
 	}
 	&__content {
 		@include breakpoint(lg) {
 			max-width: 100%;
-			padding-right: 40px;			
+		}
+		& > :first-child {
+			margin-top: 15px !important;
 		}
 	}
 	&__col {
 		padding: 0 !important;
+		padding-right: 40px !important;
 	}
 	&__header {
 		margin-bottom: 20px;
 
+	}
+	&__header-separator {
+		margin-top: 42px;
+		background: #efefef;
 	}
 }

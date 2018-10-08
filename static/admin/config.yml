@@ -45,6 +45,7 @@ collections:
       - { label: Stack (Separar con comas), name: stack, widget: list }
       - { label: Client, name: 'client', widget: string, default: Personal }         
       - { label: Repository, name: 'repository', widget: string, required: false }         
+      - { label: Licence, name: licence, widget: string, default: MIT }
       - { label: Website, name: 'website', widget: string, required: false }
       - { label: Body, name: body, widget: markdown }      
       

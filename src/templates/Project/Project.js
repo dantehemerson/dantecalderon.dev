@@ -32,13 +32,18 @@ export default props => {
 			</div>
 			<div className="row ProjectTemplate__contentwrapper">
 				<div className="col-xs-12 col-lg-9 ProjectTemplate__col">
+					<hr className="ProjectTemplate__header-separator"/>					
 					<PostContent content={ props.content } className="container Post__content ProjectTemplate__content"/>	
 				</div>
 				<div className="col-xs-12 col-lg-3">
 					<Sidebar
 						tags={ props.frontmatter.tags }
 						stack={ props.frontmatter.stack }
-						roles={ props.frontmatter.roles }						
+						roles={ props.frontmatter.roles }
+						website={ props.frontmatter.website }	
+						repository={ props.frontmatter.repository }
+						client={ props.frontmatter.client }
+						licence={ props.frontmatter.licence }
 					/>
 				</div>
 			</div>

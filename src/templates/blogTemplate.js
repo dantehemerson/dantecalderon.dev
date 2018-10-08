@@ -171,6 +171,7 @@ export const pageQuery = graphql`
 				client
 				repository
 				website
+				licence
 			}
 			fields {
 				thumbnail {

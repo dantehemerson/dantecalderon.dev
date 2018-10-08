@@ -11,6 +11,7 @@ import AuthorPostFooter from '../components/AuthorPostFooter'
 import Share from '../components/Share'
 import Layout from '../components/Layout'
 import Toolbar from '../components/ProjectToolbar'
+import Project from './Project'
 
 export const Post = ({ content, frontmatter, previous, next, siteTitle, image, siteUrl, contentComponent, timeToRead, avatar, model }) => {
 	const PostContent = contentComponent || Content
@@ -20,6 +21,13 @@ export const Post = ({ content, frontmatter, previous, next, siteTitle, image, s
 			<div className="Post__header">
 				<div className="Post__header__data">
 					<h1 className="Post__title">{ frontmatter.title }</h1>					
+					{
+						isProject &&
+						<h2 className="Post__subtitle">{ frontmatter.subtitle }</h2>
+					}
+					{
+						console.log(frontmatter)
+					}
 					{
 						!isProject &&						
 						<AuthorPost
@@ -105,16 +113,29 @@ export default class BlogPostTemplate extends React.Component {
 							description={ post.frontmatter.description }
 							isPost={ true }
 						/>
-						<Post
-							{ ...post }
-							{ ...siteMetadata }
-							previous={ previous }
-							next={ next }
-							content={ post.html }
-							contentComponent={ HTMLContent }
-							image={ post.fields.thumbnail.childImageSharp.sizes }
-							avatar={ this.props.data.avatar }
-							/>
+						{
+							post.frontmatter === 'post' ?
+								<Post
+									{ ...post }
+									{ ...siteMetadata }
+									previous={ previous }
+									next={ next }
+									content={ post.html }
+									contentComponent={ HTMLContent }
+									image={ post.fields.thumbnail.childImageSharp.sizes }
+									avatar={ this.props.data.avatar }
+									/> :
+								<Project
+									{ ...post }
+									{ ...siteMetadata }
+									previous={ previous }
+									next={ next }
+									content={ post.html }
+									contentComponent={ HTMLContent }
+									image={ post.fields.thumbnail.childImageSharp.sizes }
+									avatar={ this.props.data.avatar }
+									/>
+						}
 							<div className="Post__footer">
 								
 									<div id="disquser" className="container Disqus">
@@ -158,6 +179,7 @@ export const pageQuery = graphql`
 			timeToRead
 			frontmatter {
 				title
+				subtitle
 				date(formatString: "MMMM DD, YYYY")
 				description
 				thumbnail

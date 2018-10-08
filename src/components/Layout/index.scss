@@ -1104,6 +1104,16 @@ $border-radius: 3px;
 				font-size: 28px;
 				margin: 0;
 			}
+
+			&__subtitle {
+				text-align: left !important;
+				font-size: 14px !important;
+				font-weight: 400;
+				margin: 16px 0 !important;
+				color: #717171;
+				//font-style: oblique;
+			}
+
 			&__date {
 				margin: 0;
 				font-family: $post-titles-font;
@@ -1142,6 +1152,9 @@ $border-radius: 3px;
 				&__title {
 					font-size: 28px;
 				}
+				&__subtitle {					
+					font-size: 17px !important;
+				}
 				&__date {
 					font-size: 13px;
 					color: $hover-link-color!important;
@@ -1160,6 +1173,9 @@ $border-radius: 3px;
 
 				&__title {
 					font-size: 37px;
+				}
+				&__subtitle {					
+					font-size: 18px !important;
 				}
 				&__date {
 					font-size: 14px;

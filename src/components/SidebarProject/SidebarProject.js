@@ -5,7 +5,10 @@ import Stack from './Stack'
 import Tags from '../../components/Tags'
 
 const Container = styled.div`
-	
+	max-width: 480px;
+  margin-left: auto;
+  width: 100%;
+  margin-right: auto;
 `
 
 const Title = styled.h3`

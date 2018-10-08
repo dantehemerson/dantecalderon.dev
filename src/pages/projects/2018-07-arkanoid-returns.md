@@ -22,6 +22,7 @@ stack:
   - Paint
 client: Personal
 repository: 'https://github.com/dantehemerson/Arkanoid-Returns'
+licence: MIT
 website: ''
 ---
 ### Acerca del proyecto

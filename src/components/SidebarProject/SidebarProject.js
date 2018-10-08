@@ -58,8 +58,8 @@ export default props => (
       </svg> Monsters Inc</Item>
 		</List>
 		<Title>Stack</Title>
-		<Stack items={['c++', 'java', 'python']}/>
+		<Stack items={ props.stack }/>
 		<Title>Tags</Title>
-		<Tags items={['c++', 'java', 'python']}/>
+		<Tags items={ props.tags }/>
 	</Container>
 )

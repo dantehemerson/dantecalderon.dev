@@ -1688,6 +1688,7 @@ $border-radius: 3px;
 }
 
 .ToolbarButton {
+	text-decoration: none !important;
 	&:first-child {
 		margin-right: 6px;
 	}

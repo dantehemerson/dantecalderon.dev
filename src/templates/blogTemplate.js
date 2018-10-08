@@ -165,6 +165,12 @@ export const pageQuery = graphql`
 				path
 				model
 				style
+				tags
+				stack
+				roles
+				client
+				repository
+				website
 			}
 			fields {
 				thumbnail {

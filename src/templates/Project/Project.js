@@ -15,7 +15,10 @@ export default props => {
 				<div className="Post__header__data">								
 					<h1 className="Post__title">{ props.frontmatter.title }</h1>										
 					<h2 className="Post__subtitle">{ props.frontmatter.subtitle }</h2>					
-					<Toolbar/>										
+					<Toolbar 
+						repository={ props.frontmatter.repository }
+						website={ props.frontmatter.website }
+					/>										
 				</div>
 				{
 					props.frontmatter.style !== 'default' &&					
@@ -23,16 +26,20 @@ export default props => {
 						<Img sizes={ props.image }/>
 					</div>
 				}
-			</div>	
+			</div>				
 			<div>
-				<Tags items={['c++', 'java', 'python', 'instagram', 'webapp']}/>
+				<Tags items={ props.frontmatter.tags }/>
 			</div>
 			<div className="row ProjectTemplate__contentwrapper">
 				<div className="col-xs-12 col-lg-9 ProjectTemplate__col">
 					<PostContent content={ props.content } className="container Post__content ProjectTemplate__content"/>	
 				</div>
 				<div className="col-xs-12 col-lg-3">
-					<Sidebar/>
+					<Sidebar
+						tags={ props.frontmatter.tags }
+						stack={ props.frontmatter.stack }
+						roles={ props.frontmatter.roles }						
+					/>
 				</div>
 			</div>
 

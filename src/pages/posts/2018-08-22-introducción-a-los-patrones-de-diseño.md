@@ -13,24 +13,7 @@ tags:
   - Patrones de Diseño
   - UML
 ---
-Los Patrones de diseño son cool.
-Los Patrones de diseño son cool.Los Patrones de diseño son cool.Los Patrones de diseño son cool.
-Los Patrones de diseño son cool.Los Patrones de diseño son cool.
-Los Patrones de diseño son cool.Los Patrones de diseño son cool.
-Los Patrones de diseño son cool.
-Los Patrones de diseño son cool.
-Los Patrones de diseño son cool.
-Los Patrones de diseño son cool.
-Los Patrones de diseño son cool.
-Los Patrones de diseño son cool.
-Los Patrones de diseño son cool.
-Los Patrones de diseño son cool.Los Patrones de diseño son cool.
-Los Patrones de diseño son cool.
-Los Patrones de diseño son cool.
-Los Patrones de diseño son cool.
-Los Patrones de diseño son cool.
-Los Patrones de diseño son cool.
-Los Patrones de diseño son cool.
+
 Los Patrones de diseño son cool.
 Los Patrones de diseño son cool.
 Los Patrones de diseño son cool.Los Patrones de diseño son cool.

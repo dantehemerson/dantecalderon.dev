@@ -30,6 +30,9 @@ and
 ```sh
 sudo npm install -g pngquant-bin --allow-root  --unsafe-perm=true
 ```
+```sh
+sudo npm i gatsby-image gatsby-transformer-sharp --unsafe-perm=true --allow-root
+```
 
 ---
 

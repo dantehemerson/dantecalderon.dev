@@ -1,5 +1,5 @@
 # Dante Calderón Website
-[![CircleCI](https://circleci.com/gh/dantehemerson/dcweb.svg?style=svg)](https://circleci.com/gh/dantehemerson/dcweb)
+[![CircleCI](https://circleci.com/gh/dantehemerson/dantecalderon.com.svg?style=svg)](https://circleci.com/gh/dantehemerson/dantecalderon.com)
 
 For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
 

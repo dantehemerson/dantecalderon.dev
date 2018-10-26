@@ -27,7 +27,8 @@ const type = [
 	'Project Management',
 	'Group Chat & Notifications',
 	'CMS',
-	'Query Languages'
+	'Query Languages',
+	'JS MVC Framework'
 ]
 const groups = [
 	{
@@ -45,6 +46,7 @@ const groups = [
 			{ name: 'Redux', icon: 'redux.svg', background: '#1c1c1c', type: type[3], about: "Predictable state container for JavaScript apps" },
 			{ name: 'Wordpress', icon: 'wordpress-plain.svg', background: 'white', type: type[23], about: "A semantic personal publishing platform with a focus on aesthetics, web standards, and usability"},
 			{ name: 'Gatsby', icon: 'gatsby.png', background: 'white', type: type[11], about: "A Static Site Generator for React"},
+			{ name: 'Angular', icon: 'angularjs-original.png', type: type[25], about: "Superheroic JS MVC Framework"},
 		]
 	},
 	{

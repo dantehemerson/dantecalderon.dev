@@ -35,7 +35,12 @@ class Blog extends React.Component {
 										posts.map(({ node }) => {
 											if (node.frontmatter.published)
 												return (
-													<div key={node.frontmatter.path} className="col-xs-12 col-md-6 col-lg-5">
+													<div 
+														style={{
+															margin: '20px 0 0'
+														}}
+														key={node.frontmatter.path} 
+														className="col-xs-12 col-md-6 col-lg-5">
 														<Card
 															data={
 																{

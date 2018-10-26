@@ -31,27 +31,28 @@ class Blog extends React.Component {
 						</section>
 						<div className="Page__content container--full">
 							<div className="row center-xs">
-								<div className="col-xs-12 col-lg-11">
 									{
 										posts.map(({ node }) => {
 											if (node.frontmatter.published)
-												return <Card
-													data={
-														{
-															title: node.frontmatter.title,
-															thumbnail: node.fields.thumbnail.childImageSharp.sizes,
-															excerpt: node.excerpt,
-															date: node.frontmatter.date,
-															path: `/${node.frontmatter.path}`,
-															timeToRead: node.timeToRead
-														}
-													}
-													key={node.frontmatter.path} />
+												return (
+													<div key={node.frontmatter.path} className="col-xs-12 col-md-6 col-lg-5">
+														<Card
+															data={
+																{
+																	title: node.frontmatter.title,
+																	thumbnail: node.fields.thumbnail.childImageSharp.sizes,
+																	excerpt: node.excerpt,
+																	date: node.frontmatter.date,
+																	path: `/${node.frontmatter.path}`,
+																	timeToRead: node.timeToRead
+																}
+															}/>
+													</div>
+												)
 											else return false
 
 										})
-									}
-								</div>
+									}								
 							</div>
 						</div>
 					</div>

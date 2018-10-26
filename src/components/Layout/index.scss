@@ -695,14 +695,7 @@ $border-radius: 3px;
 					img {
 						margin: 0;
 					}
-				}					
-				@include breakpoint(md) {
-					width: 380px;
 				}
-				@include breakpoint(lg) {
-					width: 470px;
-				}
-
 			}
 
 			&__body {

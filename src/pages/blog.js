@@ -29,18 +29,18 @@ class Blog extends React.Component {
 								</div>
 							</div>
 						</section>
-						<div className="Page__content container--full">
-							<div className="row center-xs">
+						<div className="Page__content container--blog">
+							<div className="row center-xs start-md">
 									{
 										posts.map(({ node }) => {
 											if (node.frontmatter.published)
 												return (
 													<div 
 														style={{
-															margin: '20px 0 0'
+															margin: '24px 0 0'
 														}}
 														key={node.frontmatter.path} 
-														className="col-xs-12 col-md-6 col-lg-5">
+														className="col-xs-12 col-sm-11 col-md-6 col-lg-6 col-xl-4">
 														<Card
 															data={
 																{

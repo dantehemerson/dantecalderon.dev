@@ -199,6 +199,10 @@ $border-radius: 3px;
 				@extend .container;
 				max-width: 1280px;
 			}
+			&--blog {
+				@extend .container;
+				max-width: 1340px;	
+			}
 		}
 
 		body {
@@ -675,12 +679,15 @@ $border-radius: 3px;
 				width: 100%;		
 				.gatsby-image-wrapper {
 					width: 100% !important;
-					height: auto !important;
+					height: auto !important;					
 					@include breakpoint(md) {
-						height: 280px !important;
+						height: 230px !important;
+					}
+					@include breakpoint(lg) {
+						height: 250px !important;
 					}
 					@include breakpoint(xl) {
-						height: 250px !important;
+						height: 214px !important;
 					}
 
 					img {
@@ -699,12 +706,7 @@ $border-radius: 3px;
 			}
 			&__title {
 				text-align: left;
-				margin-bottom: remcalc(10px);
-				margin-top: 15px;
-
-				@include breakpoint(md) {
-					margin-top: 0px;
-				}
+				margin-bottom: remcalc(10px);						
 				width: fit-content;
 				width: -moz-fit-content;
 				h3 {
@@ -733,6 +735,7 @@ $border-radius: 3px;
 				text-align: right;
 				font-size: remcalc(13px);
 				color: #999;
+				padding-right: 5px;
 				margin-bottom: 10px;
 			}
 

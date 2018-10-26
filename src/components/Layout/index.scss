@@ -635,6 +635,7 @@ $border-radius: 3px;
 				color: white;
 				&__title {
 					-webkit-text-stroke-color: #3fabbb;
+					margin-bottom: 5px;
 				}
 			}
 		}
@@ -651,7 +652,7 @@ $border-radius: 3px;
 			}
 
 			&__item {
-				padding: 18px 8px;
+				padding: 18px 14px;
 			}
 		}
 

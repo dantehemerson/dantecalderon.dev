@@ -30,7 +30,11 @@ class Blog extends React.Component {
 							</div>
 						</section>
 						<div className="Page__content container--blog">
-							<div className="row center-xs start-md">
+							<div 
+								style={{
+									marginBottom: '35px'
+								}} 
+								className="row center-xs start-md">
 									{
 										posts.map(({ node }) => {
 											if (node.frontmatter.published)

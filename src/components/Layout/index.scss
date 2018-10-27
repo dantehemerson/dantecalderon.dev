@@ -709,10 +709,8 @@ $border-radius: 3px;
 			}
 			&__title {
 				text-align: left;
-				margin-bottom: remcalc(10px);						
-				width: fit-content;
-				width: -moz-fit-content;
-				h3 {
+				margin-bottom: remcalc(10px);				
+				a {
 					margin: 0;
 					font-family: 'Open Sans';
 					font-size: 21px;
@@ -730,10 +728,7 @@ $border-radius: 3px;
 				margin-bottom: 0;
 				margin-top: 10px;
 				font-size: 14px;
-				color: #757575;
-				@include breakpoint(sm) {
-					font-size: 15px;
-				}
+				color: #757575;				
 			}
 			&__date {
 				text-align: left !important;

@@ -20,9 +20,11 @@ export default props => (
 		</Link>
 		<div className="Card__body">
 			<Header>
-				<Link to={ props.data.path } className="Card__title">
-					<h3>{ props.data.title }</h3>
-				</Link>
+				<h3 className="Card__title">
+					<Link to={ props.data.path }>
+						{ props.data.title }
+					</Link>
+				</h3>
 				<p className="Card__content">{ props.data.excerpt }</p>
 			</Header>
 			<Bottom>

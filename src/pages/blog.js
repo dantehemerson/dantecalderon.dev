@@ -41,7 +41,7 @@ class Blog extends React.Component {
 												return (
 													<div 
 														style={{
-															margin: '24px 0 0'
+															margin: '32px 0 0'
 														}}
 														key={node.frontmatter.path} 
 														className="col-xs-12 col-sm-11 col-md-6 col-lg-6 col-xl-4">
@@ -83,7 +83,7 @@ export const queryBlog = graphql`
     		filter: { frontmatter: { model: { eq: "post"} }}) {
 				edges {
 					node {
-						excerpt(pruneLength: 270)
+						excerpt(pruneLength: 140)
 						timeToRead
 						fields {
 							thumbnail {

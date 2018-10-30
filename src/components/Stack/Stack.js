@@ -28,7 +28,8 @@ const type = [
 	'Group Chat & Notifications',
 	'CMS',
 	'Query Languages',
-	'JS MVC Framework'
+	'JS MVC Framework',
+	'Cloud Content Management System'
 ]
 const groups = [
 	{
@@ -49,6 +50,8 @@ const groups = [
 			{ name: 'Next.js', icon: 'next.jslogo.svg', background: 'white', type: type[8], about: "A small framework for server-rendered universal JavaScript apps"},
 			{ name: 'Angular', icon: 'angularjs-original.svg', type: type[25], about: "Superheroic JS MVC Framework"},
 			{ name: 'Wordpress', icon: 'wordpress-plain.svg', background: 'white', type: type[23], about: "A semantic personal publishing platform with a focus on aesthetics, web standards, and usability"},
+			{ name: 'Contentful', icon: 'contentful.png', type: type[26], about: "Manage content once, publish it anywhere"},
+			{ name: 'Jest', icon: 'jest.png', type: type[20], about: "Painless JavaScript Unit Testing"},
 		]
 	},
 	{

@@ -86,8 +86,8 @@ const groups = [
 			{ name: 'Trello', icon: 'trello.png', background: '#007fc9', type: type[21], about: "Your entire project, in a single glance."},
 			{ name: 'Sublime Text', icon: 'sublime-text-3.png', background: '#474747', type: type[15], about: "A sophisticated text editor for code, markup and prose." },
 			{ name: 'Linux', icon: 'linux-original.svg', type: type[6] },
-			{ name: 'Ubuntu', icon: 'ubuntu-plain.svg', background: 'white', type: type[6], about: "The leading OS for PC, tablet, phone and cloud" },
-			{ name: 'Debian', icon: 'debian-plain.svg', background: 'white', type: type[6], about: "The Universal Operating System" },
+			//{ name: 'Ubuntu', icon: 'ubuntu-plain.svg', background: 'white', type: type[6], about: "The leading OS for PC, tablet, phone and cloud" },
+			//{ name: 'Debian', icon: 'debian-plain.svg', background: 'white', type: type[6], about: "The Universal Operating System" },
 		]
 	}
 ]

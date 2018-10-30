@@ -56,7 +56,7 @@ const groups = [
 		]
 	},
 	{
-		title: 'Backed',
+		title: 'Backend',
 		items: [
 			{ name: 'Node', icon: 'nodejs-original.svg', type: type[8], about: "Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications" },
 			{ name: 'Express', icon: 'express-original.svg', background: 'white', type: type[10], about: "Infraestructura web rápida, minimalista y flexible para Node.js" },

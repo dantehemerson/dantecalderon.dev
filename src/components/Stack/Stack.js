@@ -45,7 +45,7 @@ const groups = [
 			{ name: 'React', icon: 'react-original.svg', background: '#1c1c1c', type: type[3], about: 'A JavaScript library for building user interfaces' },
 			{ name: 'Redux', icon: 'redux.svg', background: '#1c1c1c', type: type[3], about: "Predictable state container for JavaScript apps" },
 			{ name: 'Gatsby', icon: 'gatsby.png', background: 'white', type: type[11], about: "A Static Site Generator for React"},
-			{ name: 'Next.js', icon: 'next.jslogo.png', type: type[8], about: "A small framework for server-rendered universal JavaScript apps"},
+			{ name: 'Next.js', icon: 'next.jslogo.svg', background: 'white', type: type[8], about: "A small framework for server-rendered universal JavaScript apps"},
 			{ name: 'Angular', icon: 'angularjs-original.svg', type: type[25], about: "Superheroic JS MVC Framework"},
 			{ name: 'Wordpress', icon: 'wordpress-plain.svg', background: 'white', type: type[23], about: "A semantic personal publishing platform with a focus on aesthetics, web standards, and usability"},
 		]

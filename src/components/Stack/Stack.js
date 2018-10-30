@@ -67,7 +67,7 @@ const groups = [
 		title: 'DevOps',
 		items: [
 			{ name: 'AWS', icon: 'amazonwebservices-original-wordmark.svg', background: 'white', type: type[16] },
-			{ name: 'Heroku', icon: 'heroku-plain.svg', background: 'white' , type: type[7], about: "Build, deliver, monitor and scale web apps and APIs with a trail blazing developer experience."},
+			{ name: 'Heroku', icon: 'heroku-plain.png', type: type[7], about: "Build, deliver, monitor and scale web apps and APIs with a trail blazing developer experience."},
 			{ name: 'Firebase', icon: 'firebase.png', background: '#039be6', type: type[9], about: "The Realtime App Platform" },
 			{ name: 'Docker', icon: 'docker-original-wordmark.svg', background: 'white' , type: type[14], about: "An open source project to pack, ship and run any application as a lightweight container"},
 			{ name: 'Nginx', icon: 'nginx-original.svg', background: 'white', type: type[2] },

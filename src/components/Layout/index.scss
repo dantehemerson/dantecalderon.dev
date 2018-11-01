@@ -73,15 +73,11 @@
 	background: #0077B5 !important;
 }
 
-
-
-
 /** Colors **/
 $primary-color: #1976d2;
 
 // Header Home
 $header_home-bg: #f3f3f3;
-$contact_home-bg: #a0e2b4b5;
 $hover-link-color: #DFBD83;
 
 /** Navbar **/
@@ -105,7 +101,6 @@ $sans-serif-font: 'Open Sans', sans-serif;
 $serif-normal: 'Noto Serif', serif;
 
 
-$transition-hover-s: .3s;
 $border-radius: 3px;
 
 /** Mixin for responsive design **/
@@ -172,10 +167,6 @@ $border-radius: 3px;
 	$remSize: $size / 16px;
 	@return #{$remSize}rem;
 }
-
-* {
-	transition: all $transition-hover-s; // transiciones para todos. Animensen!!!
-}
 		.text-center {
 			text-align: center;
 		}
@@ -205,15 +196,6 @@ $border-radius: 3px;
 			}
 		}
 
-		body {
-			margin: 0 !important;
-			padding: 0 !important;
-			text-rendering: geometricPrecision;
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			color: #282a2d;
-		}
-
 		// SWAL
 		#swal2-title {
 			font-family: $sans-serif-font;
@@ -237,9 +219,7 @@ $border-radius: 3px;
 			}
 		}
 
-		textarea{
-			resize: vertical;
-		}
+		
 
 		.Page {
 			padding-top: remcalc(100px);
@@ -653,100 +633,6 @@ $border-radius: 3px;
 
 			&__item {
 				padding: 18px 14px;
-			}
-		}
-
-
-
-		.Card {						
-			height: 100%;
-			margin: 0 15px !important;
-			overflow: hidden;	
-			border-image: initial;
-			display: flex;
-			flex-direction: column;
-
-			a {
-				text-decoration: none;
-				color: #282a2d;
-			}
-
-			&:first-child {
-				margin-top: 20px !important;
-			}
-
-			&:last-child {
-				    margin-bottom: 20px;
-			}
-			&__header {
-				width: 100%;		
-				.gatsby-image-wrapper {
-					width: 100% !important;
-					height: auto !important;					
-					@include breakpoint(md) {
-						height: 230px !important;
-					}
-					@include breakpoint(lg) {
-						height: 250px !important;
-					}
-					@include breakpoint(xl) {
-						height: 214px !important;
-					}
-
-					img {
-						margin: 0;
-					}
-				}
-			}
-
-			&__body {
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				flex-grow: 1;
-				padding: 12px 0 0;
-				width: 100%;				
-			}
-			&__title {
-				text-align: left;
-				margin-bottom: remcalc(10px);				
-				a {
-					margin: 0;
-					font-family: 'Open Sans';
-					font-size: 21px;
-					@include breakpoint(sm) {
-						font-size: 22px;
-					}
-					&:hover {
-						color: #1976d2;
-					}
-
-				}
-			}
-			&__content {
-				text-align: left;
-				margin-bottom: 0;
-				margin-top: 10px;
-				font-size: 14px;
-				color: #757575;				
-			}
-			&__date {
-				text-align: left !important;
-				font-size: remcalc(13px);
-				color: #757575;				
-			}
-
-			&__btn {
-				display: inherit;
-				color: #999 !important;
-				font-size: 12px;
-				font-weight: 600;
-				&:hover {
-					color:  $primary-color !important;
-				}
-				@include breakpoint(sm) {
-					font-size: 14px;
-				}
 			}
 		}
 

@@ -336,9 +336,7 @@ $border-radius: 3px;
 				outline-width: 0;
 			}
 		}
-
-
-		/** Navbar Component Styles **/
+		
 		.Navbar {
 			height: $navbar-height;
 			display: flex;
@@ -350,6 +348,7 @@ $border-radius: 3px;
 			z-index: 10;
 			box-shadow: 0px 1px 0px 0px #f3f3f3;
 			background: white;
+			transition: .3s;
 			&.inicio {
 				background: transparent;
 			}
@@ -375,11 +374,10 @@ $border-radius: 3px;
 				font-family: $sans-serif-font;
 				font-weight: 600;
 				&:hover {
-					background: #f5f5f5;
+					background: #f4f4f4;
 				}
 			}
-
-			/** Link to home **/
+			
 			&__titlewrap {
 				display: flex;
 				align-items: center;
@@ -396,7 +394,7 @@ $border-radius: 3px;
 			&__logo {
 				width: 32px;
 				height: 32px;
-				border-radius: 4px;
+				border-radius: 3px;
 				margin-right: 8px;
 			}
 
@@ -504,15 +502,13 @@ $border-radius: 3px;
 				}
 			}
 		}
-
-		/** Header Home **/
+		
 		.Header-Home {
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			background-color: $header_home-bg;
-			min-height: 600px;
-			color: $font-color;
+			min-height: 600px;			
 
 			@include breakpoint(lg) {
 				height: 100vh;
@@ -551,13 +547,9 @@ $border-radius: 3px;
 				color: #1976d2;
 			}
 
-			&__btn-about {
+			&__btn-about {				
 				width: 141px !important;
-				margin-top: 34px !important;
-				&:hover {
-					background: #eff1f1;
-				}
-
+				margin-top: 34px !important;				
 			}
 		}
 
@@ -566,10 +558,8 @@ $border-radius: 3px;
 				display: flex;
 				flex-direction: column;
 				justify-content: flex-start;
-				align-items: center;
-				color: white;
+				align-items: center;				
 				height: auto;
-				//background: #E8F3EC;
 				&__title {
 					-webkit-text-stroke-color: #4caf50;
 				}
@@ -586,22 +576,18 @@ $border-radius: 3px;
 			padding: 20px 10px;
 			&__item {
 				padding: 15px 0;
-			}
-			&__labelwrap {
-
-			}
+			}		
 			&__label {
 				display: block;
 				font-size: .75rem;
 				font-weight: 700;
 				letter-spacing: .05em;
-				line-height: 1.45;
-				color: #28282e;
+				line-height: 1.45;				
 				text-transform: uppercase;
 				margin-bottom: .3rem;
 			}
 			
-			&__submit{
+			&__submit {
 				width: 150px !important;
 			}
 		}
@@ -611,8 +597,7 @@ $border-radius: 3px;
 				display: flex;
 				flex-direction: column;
 				justify-content: flex-start;
-				align-items: center;
-				color: white;
+				align-items: center;				
 				&__title {
 					-webkit-text-stroke-color: #3fabbb;
 					margin-bottom: 5px;
@@ -623,6 +608,7 @@ $border-radius: 3px;
 		.Dyamic-container {
 			min-height: 100vh;
 		}
+
 		.Portfolio {
 			.HeaderPortfolio {
 				display: flex;
@@ -731,8 +717,7 @@ $border-radius: 3px;
 			}
 		}
 
-		.About {
-			color: rgba(0,0,0,.88);	
+		.About {			
 			font-size: 15px;
 			&__title {
 				-webkit-text-stroke-color: #3384a0;
@@ -744,21 +729,11 @@ $border-radius: 3px;
 				margin-top: 50px;
 				margin-bottom: 50px;
 
-				&__title {
-
-				}
-
 				&__list {
 					list-style: none;
 				}
 				&__item {
-					margin-bottom: calc(1.3rem / 2);
-					&:hover {
-						i {
-
-						}
-					}
-
+					margin-bottom: calc(1.3rem / 2);				
 					i {
 						width: 27px;
 						height: 27px;
@@ -798,7 +773,7 @@ $border-radius: 3px;
 			&__interests__title {
 				font-family: $sans-serif-font;
 				text-transform: uppercase;
-				background: #dcbb72;
+				background: #65a2b7;
 				color: white;
 				font-size: 16px;
 				padding: 10px 85px;
@@ -808,7 +783,7 @@ $border-radius: 3px;
 				align-self: center;
 			}
 			&__img {
-				border: 5px solid #dcbb72;
+				border: 5px solid #65a2b7;
 			}
 		}
 
@@ -1126,52 +1101,7 @@ $border-radius: 3px;
 				}
 			}
 		}
-
-		.Disqus {
-			max-width: 760px;
-			min-height: 300px; // Para que el diseño no cambie mucho cuando se carga
-			padding-top: 25px;
-			padding-bottom: 25px;
-			border-radius: $border-radius;
-			#disqus_thread a { // Changing link color disqus.
-				color: #1976d2;
-			}
-		}
-
-
-
-
-		.NotFound {
-			display: flex;
-			background: #fbf8f3;
-			justify-content: center;
-			flex-direction: column;
-			align-items: center;
-			height: 100vh;
-			min-height: 380px;
-			&__title {
-				font-family: 'Open Sans';
-				text-align: center;
-				font-size: 34px;
-				@include breakpoint(md) {
-					font-size: 50px;
-				}
-			}
-			&__description {
-				text-align: center;
-
-				color: #989898;
-				a {
-					color: #282a2d;
-				}
-			}
-			svg{
-				font-weight:bold;
-				max-width:600px;
-				height:auto;
-			}
-		}
-
+		
 		/** Footer **/
 		.Footer {
 			display: flex;
@@ -1281,10 +1211,7 @@ $border-radius: 3px;
 				}
 				&.linkedin {
 					background: #007bb5;			
-				}
-				&.googlep {
-					background: #dd4b39;			
-				}
+				}			
 			}
 
 			&__icon {

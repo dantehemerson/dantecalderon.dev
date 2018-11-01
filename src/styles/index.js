@@ -9,7 +9,17 @@ const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     color: #282a2d;
   }
-  
+
+  .Disqus {
+    max-width: 760px;
+    min-height: 300px;
+    padding-top: 25px;
+    padding-bottom: 25px;    
+    #disqus_thread a { // Theme color disqus.
+      color: #1976d2;
+    }
+  }
+
 	textarea{
       resize: vertical;
   }

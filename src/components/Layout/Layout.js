@@ -3,12 +3,14 @@ import Helmet from 'react-helmet'
 
 import Navbar from '../Navbar'
 import Footer from '../Footer'
+import { ThemeProvider } from 'styled-components'
 
 import { actualPage } from '../../utils'
 
 import 'prismjs/themes/prism.css'
 import 'react-awesome-button/src/styles/styles.scss'
 import './index.scss'
+import { GlobalStyles, defaultTheme } from '../../styles'
 
 class Layout extends React.Component {
 	componentDidMount() {
@@ -16,7 +18,7 @@ class Layout extends React.Component {
 	}
 
 	render() {
-		return (
+		return (				
 			<div>
 				<Helmet>
 					<link
@@ -39,15 +41,19 @@ class Layout extends React.Component {
 					<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
 					<meta name="p:domain_verify" content="c397688e54fbd5c1a5dc40a1db9b809f"/>
 				</Helmet>
-
-				<Navbar 
-					activePage={ actualPage(this.props.location.pathname) } />
-				<div className="Dyamic-container">
-					{ this.props.children }
-				</div>
-				<Footer/>
-			</div>
-			)
+				<ThemeProvider theme={ defaultTheme }>
+					<>
+					<GlobalStyles/>
+					<Navbar 
+						activePage={ actualPage(this.props.location.pathname) } />
+					<div className="Dyamic-container">
+						{ this.props.children }
+					</div>
+					<Footer/>
+					</>
+				</ThemeProvider>
+			</div>			
+		)
 	}
 }
 

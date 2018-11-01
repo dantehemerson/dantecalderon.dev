@@ -43,14 +43,17 @@ const Info = styled.div`
 `
 const Title = styled.h3`
 	font-family: 'Open Sans', sans-serif;
-	color: #282a2d;
-	padding-bottom: 10px;
+	color: #282a2d;	
+	transition: .3s;
+	${Container}:hover & {
+		color: #1976d2;
+	}
 `
 const Time = styled.p`
 	color: #757575;
 	font-size: 14px;
 	text-align: right;
-	padding: 6px;
+	padding: 6px 6px 6px;
 `
 const Excerpt = styled.p`
 	color: #757575;

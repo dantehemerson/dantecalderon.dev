@@ -76,10 +76,9 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   .Disqus {
-    max-width: 760px;
-    min-height: 300px;
-    padding-top: 25px;
-    padding-bottom: 25px;    
+    max-width: 760px !important;
+    min-height: 300px;    
+    padding-top: 25px;    
     #disqus_thread a { // Theme color disqus.
       color: #1976d2;
     }

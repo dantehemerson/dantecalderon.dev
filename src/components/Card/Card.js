@@ -3,13 +3,19 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 
+import { media } from '../../styles'
+
 const Container = styled(Link)`
 	& > div {
 		display: flex;
 		align-items: center;		
 		text-align: left;		
+		flex-direction: column;
 		border-bottom: 1px solid rgb(221, 221, 221);
     padding: 2rem 0px;
+    ${media.md`
+    	flex-direction: row;
+    `}
 		* {
 			margin: 0;    	
 		}
@@ -17,13 +23,23 @@ const Container = styled(Link)`
 	text-decoration: none;
 `
 const ImageWrapper = styled.div`
-	width: 36%;
 	border-radius: 4px;
 	overflow: hidden;
+	width: 100%;
+	max-width: 500px;
+	${media.md`
+		width: 36%;		
+	`}
 `
 const Info = styled.div`
-	width: 64%;
-	padding-left: 50px;
+	width: 100%;
+	max-width: 560px;
+	padding-top: 12px;
+	${media.md`
+		padding: 0 0 0 50px;
+		width: 64%;		
+		max-width: 100%;
+	`}
 `
 const Title = styled.h3`
 	font-family: 'Open Sans', sans-serif;
@@ -38,6 +54,10 @@ const Time = styled.p`
 `
 const Excerpt = styled.p`
 	color: #757575;
+	font-size: 15px;
+	${media.sm`
+		font-size: 1rem;
+	`}
 `
 
 export default props => (

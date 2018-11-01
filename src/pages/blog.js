@@ -1,10 +1,18 @@
 import React from 'react'
 import { graphql } from "gatsby"
 import get from 'lodash/get'
+import styled from 'styled-components'
 
 import Card from '../components/Card'
 import SEO from '../components/SEO'
 import Layout from '../components/Layout'
+
+
+const PostsWrapper = styled.div`
+	padding: 0 15px;
+	max-width: 1060px;
+	margin: 0 auto;
+`
 
 class Blog extends React.Component {
 	render() {
@@ -29,41 +37,27 @@ class Blog extends React.Component {
 								</div>
 							</div>
 						</section>
-						<div className="Page__content container--blog">
-							<div 
-								style={{
-									marginBottom: '35px'
-								}} 
-								className="row center-xs start-md">
-									{
-										posts.map(({ node }) => {
-											if (node.frontmatter.published)
-												return (
-													<div 
-														style={{
-															margin: '32px 0 0'
-														}}
-														key={node.frontmatter.path} 
-														className="col-xs-12 col-sm-11 col-md-6 col-lg-6 col-xl-4">
-														<Card
-															data={
-																{
-																	title: node.frontmatter.title,
-																	thumbnail: node.fields.thumbnail.childImageSharp.sizes,
-																	excerpt: node.excerpt,
-																	date: node.frontmatter.date,
-																	path: `/${node.frontmatter.path}`,
-																	timeToRead: node.timeToRead
-																}
-															}/>
-													</div>
-												)
-											else return false
-
-										})
-									}								
-							</div>
-						</div>
+						<PostsWrapper>							
+							{
+								posts.map(({ node }) => {
+									if (node.frontmatter.published)
+										return (												
+											<Card
+												data={
+													{
+														title: node.frontmatter.title,
+														thumbnail: node.fields.thumbnail.childImageSharp.sizes,
+														excerpt: node.excerpt,
+														date: node.frontmatter.date,
+														path: `/${node.frontmatter.path}`,
+														timeToRead: node.timeToRead
+													}
+												}/>
+										)
+									else return false
+								})
+							}
+						</PostsWrapper>
 					</div>
 				</Layout>
 		)
@@ -83,7 +77,7 @@ export const queryBlog = graphql`
     		filter: { frontmatter: { model: { eq: "post"} }}) {
 				edges {
 					node {
-						excerpt(pruneLength: 140)
+						excerpt(pruneLength: 240)
 						timeToRead
 						fields {
 							thumbnail {

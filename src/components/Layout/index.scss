@@ -87,8 +87,6 @@ $navbar-link-color: #333;
 /** Rotational **/
 $rotation-sec: 10s;
 
-/** Footer **/
-$footer-height: 200px;
 $footer-link-color: #282a2d;
 
 /** Containers */
@@ -1100,53 +1098,7 @@ $border-radius: 3px;
 					background: transparent;
 				}
 			}
-		}
-		
-		/** Footer **/
-		.Footer {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-			height: $footer-height;
-
-			background: #fafafa;
-			* {
-				margin: 0;
-				padding: 0;
-			}
-
-			a {
-				color: $footer-link-color;
-				text-decoration: none;
-			}
-
-			&__ {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				margin-bottom: remcalc(35px);
-			}
-			&__icon { // tag a
-				margin: 0 remcalc(15px);
-				@include breakpoint(xs) {
-					margin: 0 remcalc(10px);
-				}
-
-				&__img {
-					width: remcalc(27px);
-				}
-			}
-			&__heart {
-				color: #ff7763;
-			}
-			&__copytext {
-				font-size: remcalc(13px);
-				font-weight: 600;
-				color: #848687;
-				text-align: center;
-			}
-		}
+		}		
 
 		.AuthorPost {
 			display: flex;

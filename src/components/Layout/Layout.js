@@ -37,6 +37,7 @@ class Layout extends React.Component {
 					<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
 					<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 					<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+					<meta name="p:domain_verify" content="c397688e54fbd5c1a5dc40a1db9b809f"/>
 				</Helmet>
 
 				<Navbar 

@@ -454,8 +454,7 @@ $border-radius: 3px;
 	      width: 100%;
 	      height: 100%;
         background: baseurl('grain.png');
-	      animation: 1s infinite noise;
-			  pointer-events: none;
+	      //animation: 1s infinite noise;			  
 			}
 
 			@include breakpoint(lg) {

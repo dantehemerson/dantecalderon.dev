@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
-import Logo from '../../assets/images/logo_letter.png'
-import { isPostOrProject } from '../../utils'
+import Logo from '../assets/images/logo_letter.png'
+import { isPostOrProject } from '../utils'
 
 class Navbar extends React.Component {
 	state = {

@@ -1,4 +1,4 @@
-@import '../../assets/styles/flex-box-grid';
+@import '../assets/styles/flex-box-grid';
 
 .twitter {
 	background: #00aced !important;
@@ -117,7 +117,7 @@ $border-radius: 3px;
 }
 
 @function baseurl($file-path) {
-	@return url('../../assets/images/' + $file-path);
+	@return url('../assets/images/' + $file-path);
 }
 
 		.text-center {

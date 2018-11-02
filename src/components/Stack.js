@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Group from '../Group'
+import Group from './Group'
 
 const type = [
 	'Databases',

@@ -1,16 +1,16 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import Navbar from '../Navbar'
-import Footer from '../Footer'
+import Navbar from './Navbar'
+import Footer from './Footer'
 import { ThemeProvider } from 'styled-components'
 
-import { actualPage } from '../../utils'
+import { actualPage } from '../utils'
 
 import 'prismjs/themes/prism.css'
 import 'react-awesome-button/src/styles/styles.scss'
 import './index.scss'
-import { GlobalStyles, defaultTheme } from '../../styles'
+import { GlobalStyles, defaultTheme } from '../styles'
 
 class Layout extends React.Component {
 	componentDidMount() {

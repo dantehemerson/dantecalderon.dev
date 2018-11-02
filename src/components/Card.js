@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 
-import { media } from '../../styles'
+import { media } from '../styles'
 
 const Container = styled(Link)`
 	& > div {

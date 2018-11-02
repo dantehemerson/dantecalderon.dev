@@ -11,7 +11,7 @@ import Layout from '../components/Layout'
 const PostsWrapper = styled.div`
 	padding: 0 15px;
 	max-width: 1060px;
-	margin: 0 auto;
+	margin: 0 auto 35px;
 `
 
 class Blog extends React.Component {

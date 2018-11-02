@@ -7,7 +7,7 @@ const Container = styled.footer`
 	justify-content: center;
 	flex-direction: column;
 	height: 200px;
-	background: #fafafa;
+	background: #f8f8f9;
 	* {
 		margin: 0;
 		padding: 0;

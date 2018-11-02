@@ -1,21 +1,5 @@
 @import '../assets/styles/flex-box-grid';
 
-.twitter {
-	background: #00aced !important;
-}
-
-.github {
-	background: #333 !important;
-}
-
-.instagram {
-	background: #966842 !important;
-}
-
-.linkedin {
-	background: #0077B5 !important;
-}
-
 .twitter--hover:hover {
 	background: #00aced !important;
 }
@@ -528,33 +512,7 @@ $border-radius: 3px;
 					-webkit-text-stroke-color: #4caf50;
 				}
 			}
-
-			&__form {
-				position: relative;
-				[class^="col"] {
-					padding: 0;
-				}
-			}
-		}
-		.ContactForm {
-			padding: 20px 10px;
-			&__item {
-				padding: 15px 0;
-			}		
-			&__label {
-				display: block;
-				font-size: .75rem;
-				font-weight: 700;
-				letter-spacing: .05em;
-				line-height: 1.45;				
-				text-transform: uppercase;
-				margin-bottom: .3rem;
-			}
-			
-			&__submit {
-				width: 150px !important;
-			}
-		}
+		}	
 
 		.Blog {
 			.HeaderBlog {

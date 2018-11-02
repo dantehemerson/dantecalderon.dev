@@ -1,15 +1,20 @@
 import React from 'react'
 import { graphql } from "gatsby"
 import get from 'lodash/get'
+import styled from 'styled-components'
 
 import ContactForm from '../components/ContactForm'
 import ContactSocial from '../components/ContactSocial'
 import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 
+const ContactFormWrapper = styled.div`
+	max-width: 690px;
+	margin: 0 auto;
+`
+
 class Contact extends React.Component {
 	render() {
-
    	const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')
 		return (
 				<Layout location={ this.props.location }>
@@ -29,13 +34,9 @@ class Contact extends React.Component {
 							</div>
 						</section>
 						<ContactSocial />
-						<div className="Contact__form container--full">
-							<div className="row center-xs">
-								<div className="col-xs-12 col-md-7 start-xs">
-									<ContactForm/>
-								</div>
-							</div>
-						</div>
+						<ContactFormWrapper>															
+							<ContactForm/>								
+						</ContactFormWrapper>
 					</div>
 				</Layout>
 		)

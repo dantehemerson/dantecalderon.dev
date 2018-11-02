@@ -2,11 +2,17 @@ import React from 'react'
 import { graphql } from "gatsby"
 import { AwesomeButton } from 'react-awesome-button'
 import get from 'lodash/get'
+import styled from 'styled-components'
 
 import Rotational from '../components/Rotational'
 import SEO from '../components/SEO'
 import Social from '../components/Social'
 import Layout from '../components/Layout'
+
+const ButtonAbout = styled(AwesomeButton)`
+	width: 141px !important;
+	margin-top: 34px !important;
+`
 
 class Index extends React.Component {
 	render() {
@@ -25,11 +31,10 @@ class Index extends React.Component {
 										<h1 className="Header-Home__title" >Dante Calderón</h1>
 										<h2 className="Header-Home__subtitle">Web Developer|Linux Lover</h2>
 										<Social />
-										<AwesomeButton                                 
-											className="Header-Home__btn-about"
+										<ButtonAbout											
 											href="/about" >
 											SOBRE MÍ
-										</AwesomeButton>
+										</ButtonAbout>
 									</div>
 									<div className="col-xs-12 col-lg-7">
 										<Rotational avatar={ data.avatar }/>

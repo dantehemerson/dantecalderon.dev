@@ -11,12 +11,13 @@ const SocialIcon = styled.a`
 	width: 38px;
 	height: 38px;
 	padding: 8px;
+	transition: .3s;
 	display: inline-block;
 	img {
+		transition: .3s;
 		width: 100%;
 		margin: 0;
 	}
-
 	&:hover {
 		transform: scale(1.15);
 	}

@@ -463,6 +463,7 @@ $border-radius: 3px;
 			}
 
 			& > .container {
+				z-index: 999;
 				padding-top: 100px;
 				@include breakpoint(lg) {
 					padding-top: 38px;

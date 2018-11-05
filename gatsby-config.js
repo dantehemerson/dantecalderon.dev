@@ -83,6 +83,11 @@ module.exports = {
          options: {
             trackingId: 'UA-121858272-1',
             head: false,
+            sampleRate: 5,
+            siteSpeedSampleRate: 10,
+            cookieDomain: "dantecalderon.com",
+            cookieName: 'gaDanteCalderon',
+            cookieExpires: 86400
          },
       },
       'gatsby-plugin-netlify-cms',

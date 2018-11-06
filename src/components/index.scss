@@ -156,50 +156,6 @@ $border-radius: 3px;
 			}
 		}	
 
-		.Page {
-			padding-top: 100px;
-			padding-bottom: 25px;
-			&__title {
-				font-family: $sans-serif-font;
-				color: #f06668;
-				font-size: 11vw;
-				@include breakpoint(md) {
-					font-size: 78px;
-				}
-
-				text-align: center;
-				line-height: 100%;
-				font-weight: 900;
-				letter-spacing: -1px;
-				text-transform: uppercase;
-				-webkit-text-fill-color: transparent;
-				-webkit-text-stroke-width: 2px;
-				-webkit-text-stroke-color: #f06668;
-				margin-top: 0;
-				max-width: 800px;
-				margin-left: auto;
-				margin-right: auto;
-			}
-
-			&__description {
-				color: #353535;
-				margin: 0;
-				font-size: 15px;
-				@include breakpoint(sm) {
-					font-size: 16px;
-				}
-			}
-
-			&__content {
-				[class^="col"] {
-					padding: 0;
-				}
-			}
-		}
-
-
-
-
 		/// ============= TOGGLER =================
 		.b-a {
 			transition: all .25s;
@@ -454,7 +410,7 @@ $border-radius: 3px;
 	      width: 100%;
 	      height: 100%;
         background: baseurl('grain.png');
-	      //animation: 1s infinite noise;			  
+	      //animation: 3s infinite noise;			  
 			}
 
 			@include breakpoint(lg) {
@@ -486,57 +442,18 @@ $border-radius: 3px;
 
 
 			&__subtitle {
-				font-size: 1rem ;
+				font-size: 18px;
 				font-weight: 600;
 				margin: 10px 0 20px 0;
 				font-family: 'Open Sans';
-				text-transform: uppercase;
+				
 				text-align: center;
 				color: #1976d2;
 			}		
 		}
 
-		.Contact {
-			.HeaderContact {
-				display: flex;
-				flex-direction: column;
-				justify-content: flex-start;
-				align-items: center;				
-				height: auto;
-				&__title {
-					-webkit-text-stroke-color: #4caf50;
-				}
-			}
-		}	
-
-		.Blog {
-			.HeaderBlog {
-				display: flex;
-				flex-direction: column;
-				justify-content: flex-start;
-				align-items: center;				
-				&__title {
-					-webkit-text-stroke-color: #3fabbb;
-					margin-bottom: 5px;
-				}
-			}
-		}
-
 		.Dyamic-container {
 			min-height: 100vh;
-		}
-
-		.Portfolio {
-			.HeaderPortfolio {
-				display: flex;
-				flex-direction: column;
-				justify-content: flex-start;
-				align-items: center;
-			}
-
-			&__item {
-				padding: 18px 14px;
-			}
 		}
 
 		.Rotational {
@@ -635,13 +552,7 @@ $border-radius: 3px;
 		}
 
 		.About {			
-			font-size: 15px;
-			&__title {
-				-webkit-text-stroke-color: #3384a0;
-			}
-			&__description {
-				padding-bottom: 15px;
-			}
+			font-size: 15px;		
 			&__interests {
 				margin-top: 50px;
 				margin-bottom: 50px;

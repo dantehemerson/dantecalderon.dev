@@ -6,6 +6,7 @@ import get from 'lodash/get'
 import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import Stack from '../components/Stack'
+import Header from '../components/Header'
 
 class About extends React.Component {
 	render() {
@@ -17,18 +18,10 @@ class About extends React.Component {
 						  title="About"
 						  url={`${siteUrl}/about`}
 						/>
-						<section className="HeaderAbout Page">
-							<div className="container">
-								<div className="row center-xs">
-									<div className="HeaderContact__titlewrap Page__titlewrap text-center col-xs-12 col-md-10 col-lg-7">
-										<h2 className="About__title Page__title">Sobre Mí</h2>						
-										<p className="About__description Page__description">
-											Hola,  soy Dante Calderón y programo en Python, por que Python es cool.
-										</p>
-									</div>
-								</div>
-							</div>
-						</section>
+						<Header
+							title='Sobre Mí'
+							description='Hola, soy Dante Calderón soy desarrollador web. me gusta construir cosas con Nodejs y trabajo principalmente con React, Redux, Gatsby, Nextjs y todo el ecosistema de React.'
+							color='#3384a0'/>						
 						<div className="container">
 							<div className="row center-xs">
 									<div className="About__img-container col-xs-12 col-md-6">

@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import Card from '../components/Card'
 import SEO from '../components/SEO'
 import Layout from '../components/Layout'
-
+import Header from '../components/Header'
 
 const PostsWrapper = styled.div`
 	padding: 0 15px;
@@ -25,18 +25,9 @@ class Blog extends React.Component {
 							title="Blog"
 							url={`${siteUrl}/blog`}
 						/>
-						<section className="HeaderBlog Page">
-							<div className="container">
-								<div className="row center-xs">
-									<div className="HeaderBlog__titlewrap Page__titlewrap text-center col-xs-12 col-md-10 col-lg-7">
-										<h2 className="HeaderBlog__title Page__title">Blog</h2>
-										{/*
-										<p className="HeaderBlog__description Page__description">Sobre programacion y mas.</p>
-										*/}
-									</div>
-								</div>
-							</div>
-						</section>
+						<Header
+							title='Blog'							
+							color='#3fabbb'/>		
 						<PostsWrapper>							
 							{
 								posts.map(({ node }) => {

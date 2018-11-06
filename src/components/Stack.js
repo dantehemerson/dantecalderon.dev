@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Group from './Group'
+import Header from '../components/Header'
 
 const type = [
 	'Databases',
@@ -99,15 +100,11 @@ const groups = [
 ]
 
 export default props => (
-		<div className='Stack'>
-			<div className="">
-				<h2 className="Page__title">Mi Stack</h2>
-				{/*
-				<p className="About__description Page__description">
-					Hola,  soy Dante Calderón y programo en Python, por que Python es cool.
-				</p>
-			*/}
-			</div>
+		<div  id='stack' className='Stack'>
+			<Header
+				top='10px'
+				title='Mi Stack'
+				description='Estos son los lenguajes y herramietas que se utilizar.'/>
 			{
 				groups.map((group, index) => <Group key={index} group={group} />)
 			}

@@ -5,6 +5,7 @@ import get from 'lodash/get'
 import Item from '../components/PortfolioItem'
 import SEO from '../components/SEO'
 import Layout from '../components/Layout'
+import Header from '../components/Header'
 
 class Portfolio extends React.Component {
 	render() {
@@ -16,17 +17,10 @@ class Portfolio extends React.Component {
 						<SEO
 						  title="Portafolio"
 						  url={`${siteUrl}/portfolio`}
-						/>
-						<section className="HeaderPortfolio Page">
-							<div className="container">
-								<div className="row center-xs">
-									<div className="HeaderPortfolio__titlewrap Page__titlewrap text-center col-xs-12 col-md-10 col-lg-7">
-										<h2 className="HeaderPortfolio__title Page__title">Portafolio</h2>
-										<p className="HeaderPortfolio__description Page__description">Un poco de mi trabajo</p>
-									</div>
-								</div>
-							</div>
-						</section>
+						/>						
+						<Header
+							title='Portafolio'
+							description={['Estos son algunos de mis proyectos, para ver más proyectos revisa mi ', <a target='__blank' href='https://github.com/dantehemerson'>Github</a>, '.']}/>
 						<div className="Page__content container--full">
 							<div className="row center-xs start-md center-xl">
 								{

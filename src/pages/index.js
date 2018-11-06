@@ -29,7 +29,7 @@ class Index extends React.Component {
 								<div className="row">
 									<div className="col-xs-12 col-lg-5 text-center" >
 										<h1 className="Header-Home__title" >Dante Calderón</h1>
-										<h2 className="Header-Home__subtitle">Web Developer|Linux Lover</h2>
+										<h2 className="Header-Home__subtitle">Javascript / Node.js Developer </h2>
 										<Social />
 										<ButtonAbout											
 											href="/about" >

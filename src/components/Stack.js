@@ -103,6 +103,7 @@ export default props => (
 		<div  id='stack' className='Stack'>
 			<Header
 				top='10px'
+				bottom='30px'
 				title='Mi Stack'
 				description='Estos son los lenguajes y herramietas que se utilizar.'/>
 			{

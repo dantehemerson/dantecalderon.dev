@@ -27,6 +27,7 @@ export const defaultTheme = {
 }
 
 export const GlobalStyles = createGlobalStyle`
+
   body {
     margin: 0 !important;
     padding: 0 !important;
@@ -89,6 +90,30 @@ export const GlobalStyles = createGlobalStyle`
 	textarea{
       resize: vertical;
   }
+
+  #swal2-title {
+    font-family: $sans-serif-font;
+  }
+  #swal2-content {
+    font-size: 17px;
+  }
+
+  input[type="text"], input[type="email"], textarea {
+    border: 2px solid #e3e8eb;
+    border-radius: 3px;
+    box-shadow: none;
+    color: #55595c;
+    outline: 0;
+    width: 100%;
+    padding: 15px 1.6rem;
+    padding-right: 4.7rem;
+    font-weight: 400;
+    &:focus {
+      border-color: #1976d2;
+    }
+  } 
+
+  
 
   ${sliderStyles}
 `

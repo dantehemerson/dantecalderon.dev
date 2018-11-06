@@ -20,7 +20,8 @@ class Portfolio extends React.Component {
 						/>						
 						<Header
 							title='Portafolio'
-							description={['Estos son algunos de mis proyectos, para ver más proyectos revisa mi ', <a target='__blank' href='https://github.com/dantehemerson'>Github</a>, '.']}/>
+							description={['Estos son algunos de mis proyectos, para ver más proyectos revisa mi ', <a target='__blank' href='https://github.com/dantehemerson'>Github</a>, '.']}
+							bottom='40px'/>
 						<div className="Page__content container--full">
 							<div className="row center-xs start-md center-xl">
 								{

@@ -3,6 +3,13 @@ const Promise = require('bluebird')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
+const resolvePathImages = (images) => {
+  return images.map(item => ({
+      ...item,
+      image: item.image ? `../posts${item.image}` : undefined    
+  }))
+}
+
 exports.createPages = ({ graphql, boundActionCreators }) => {
    const { createPage } = boundActionCreators
    return new Promise((resolve, reject) => {
@@ -65,7 +72,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
    const { frontmatter } = node
 
    if (frontmatter) {
-      const { thumbnail, model } = frontmatter
+      const { thumbnail, model } = frontmatter      
       if (thumbnail) {
          if (model === 'post') {
             if (thumbnail.indexOf('/img') === 0) {
@@ -77,11 +84,17 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
             }
          }
          else if (model === 'project') {
+           const images = resolvePathImages(frontmatter.images)           
             createNodeField({
                name: 'thumbnail',
                node,
-               value: `../posts${thumbnail}`,
+               value: `../posts${thumbnail}`
             })
+            createNodeField({
+              name: 'images',
+              node,
+              value: images    
+           })
          }
 
       }

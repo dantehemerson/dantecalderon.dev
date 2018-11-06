@@ -6,6 +6,7 @@ import AuthorPostFooter from '../../components/AuthorPostFooter'
 import Toolbar from '../../components/ProjectToolbar'
 import Sidebar from '../../components/SidebarProject'
 import Tags from '../../components/Tags'
+import Slider from '../../components/Slider'
 
 export default props => {
 	const PostContent = props.contentComponent || Content
@@ -27,6 +28,7 @@ export default props => {
 					</div>
 				}
 			</div>				
+			<Slider images={props.fields.images} />						
 			<div>
 				<Tags items={ props.frontmatter.tags }/>
 			</div>

@@ -1376,10 +1376,7 @@ $border-radius: 3px;
 
 .ProjectTemplate {
 	&__header {
-		margin-bottom: -5px;
-		&__image {
-			box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
-		}
+		margin-bottom: -5px;		
 	}
 	&__contentwrapper {		
 		margin-left: auto !important;

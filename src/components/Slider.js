@@ -57,7 +57,7 @@ const Container = styled.div`
 	background: gray;
 	max-width: 960px;
 	margin: 0 auto;	
-	box-shadow: 0 0 30px rgba(0,0,0,0.45);
+	box-shadow: 0 6px 30px rgba(0,0,0,0.45);
 	border-radius: 7px 7px 2px 2px;
 	overflow: hidden;
 	margin-bottom: 20px;
@@ -65,11 +65,13 @@ const Container = styled.div`
 
 
 const settings = {
-	dots: true,
+	dots: false,
 	infinite: true,
 	speed: 500,
 	slidesToShow: 1,
-	slidesToScroll: 1
+	slidesToScroll: 1,
+	autoplay: true,
+  autoplaySpeed: 5000
 }
 
 export default props => (

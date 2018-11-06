@@ -111,53 +111,42 @@ export default `
 	.slick-next {
 	    position: absolute;
 	    display: block;
-	    height: 20px;
-	    width: 20px;
+	    height: 40px;	    
+	    width: 40px;
+	        border-radius: 23px;
 	    line-height: 0px;
 	    font-size: 0px;
-	    cursor: pointer;
-	    background: transparent;
-	    color: transparent;
-	    top: 50%;
-	    -webkit-transform: translate(0, -50%);
-	    -ms-transform: translate(0, -50%);
-	    transform: translate(0, -50%);
-	    padding: 0;
+	    cursor: pointer;	    
+	    background: rgba(255,255,255,0.25);
+			box-shadow: 0 1px 6px rgba(0,0,0,0.5);
+    	text-shadow: 0 0 4px rgba(0,0,0,0.5);	    
+	    top: 50%;  
+	    overflow: hidden;
+	    transform: translate(0, -50%);	    
 	    border: none;
 	    outline: none;
-	    &:hover, &:focus {
-	        outline: none;	        
-	        color: transparent;
-	        &:before {
-	          //opacity: $slick-opacity-on-hover;
-	        }
-	    }
-	    &.slick-disabled:before {
-	        opacity: $slick-opacity-not-active;
-	    }
+	    z-index: 9;	    	    
 	    &:before {
-	        font-size: 20px;
-	        line-height: 1;
-	        color: $slick-arrow-color;
-	        opacity: $slick-opacity-default;	       
+	      font-size: 50px;
+	      font-family: 'Open Sans';
+	      line-height: 19px !important;
+	      color: white;	       
 	    }
 	}
 
-	.slick-prev {
-		background: red;
-		z-index: 999;
-	    left: 25px;	    	    
+	.slick-prev {									    
+	    left: 20px;	    	    
 	    &:before {
-	      content: 'PreV';	       
+	      content: '\\2039';	       	      
+	      letter-spacing: 2px;	      
 	    }
 	}
 
-	.slick-next {
-		background: red;
-		z-index: 999;
-	    right: 25px;	    
+	.slick-next {				
+	    right: 20px;	    
 	    &:before {
-	      content: 'NEXT';	        
+	    	letter-spacing: -4px;
+	      content: '\\203A';	      
 	    }
 	}
 

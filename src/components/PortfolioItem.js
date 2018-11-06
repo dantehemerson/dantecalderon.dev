@@ -17,7 +17,7 @@ const CoverWrapper = styled.div`
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 	margin-bottom: 13px !important;
   ${ItemWrapper}:hover & {
-  	box-shadow: rgba(140, 101, 179, 0.5) 0px 8px 20px;
+  	box-shadow: #50698a80 0px 8px 20px;
     transform: translateY(-3px);
   }
 `
@@ -28,6 +28,7 @@ const Title = styled.h3`
 	font-size: 19px;
 	text-align: left;
 	width: 100%;
+	transition: .3s;
 	display: inline;
 	margin: 0;
 	${ItemWrapper}:hover & {

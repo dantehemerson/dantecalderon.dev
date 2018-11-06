@@ -113,7 +113,7 @@ export default `
 	    display: block;
 	    height: 40px;	    
 	    width: 40px;
-	        border-radius: 23px;
+	    border-radius: 23px;
 	    line-height: 0px;
 	    font-size: 0px;
 	    cursor: pointer;	    

@@ -11,9 +11,9 @@ images:
   - description: Settings page
     image: /img/storytellingcubes2.png
   - description: Home Page Phone
-    image: /img/screenshot-storytellingcubes-phone-3.png
+    image: /img/storytellig-phone-3.png
   - description: Settings Page Phone
-    image: /img/screenshot-storytellingcubes-phone-4.png
+    image: /img/storytellig-phone-4.png
 date: 2018-11-06T05:27:32.846Z
 published: true
 style: default

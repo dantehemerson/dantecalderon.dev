@@ -928,43 +928,7 @@ $border-radius: 3px;
 					background: transparent;
 				}
 			}
-		}		
-
-		.AuthorPost {
-			display: flex;
-			margin-bottom: 13px;
-			padding-left: 0px;
-			margin-top: 20px;
-			a {
-				text-decoration: none;
-				color: #00aced;
-			}
-			&__image {
-				margin: 0;
-				width: 40px;
-				height: 40px;
-				border-radius: 50%;
-				margin-right: 13px;
-			}
-			&__body {
-				display: flex;
-				font-family: $sans-serif-font;
-				flex-direction: column;
-				justify-content: center;
-			}
-			&__name {
-				margin: 0;
-				font-size: 13px;
-				font-weight: 600;
-				color: #B1B1B1 !important;
-				text-decoration: none !important;
-				text-transform: uppercase;
-				b {
-					color: #575757;
-					font-weight: 400;
-				}
-			}		
-		}
+		}			
 
 		.Share {
 			display: flex;
@@ -1197,77 +1161,6 @@ $border-radius: 3px;
 	height: 21px;
 }
 
-.AuthorPostFooter {
-	display: flex;
-	margin-bottom: 13px;
-	padding-left: 0px;
-	margin-top: 20px;
-	flex-direction: column;
-	align-items: center;
-
-	@include breakpoint(md) {
-		flex-direction: row;
-	  align-items: inherit;
-		&__image {			
-			width: 150px !important;
-			height: 150px !important;			
-			margin-right: 21px !important;
-		}
-		&__body {
-			align-items: inherit !important;
-			padding-top: 0 !important;
-		}
-
-		&__about {
-			text-align: left !important;
-		}
-	}
-
-	p, img, a {		
-		margin: 0;
-		text-decoration: none;
-	}
-	&__writtenby {	
-		font-size: 14px;
-		text-transform: uppercase;
-		font-weight: 700;
-		color: #767676;
-	}
-	&__image {
-		margin: 0;
-		width: 90px;
-		height: 90px;
-		border-radius: 50%;
-		margin-right: 0;
-	}
-	&__body {
-		display: flex;
-		font-family: $sans-serif-font;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding-top: 14px;
-	}
-	&__name {
-		margin: 0;
-		font-size: 26px;
-		line-height: 1;
-		font-weight: 700;		
-		color: #292929 !important;
-		text-decoration: none !important;
-	}		
-	&__about {
-		color: rgba(0,0,0,.54) !important;
-		font-size: 15px;
-		font-weight: 600;
-		padding-top: 10px;
-		text-align: center;
-	}
-
-	&__social {
-		display: none;
-	}
-}
 
 .ToolbarButton {
 	text-decoration: none !important;

@@ -1376,6 +1376,7 @@ $border-radius: 3px;
 
 .ProjectTemplate {
 	&__header {
+		margin-bottom: -5px;
 		&__image {
 			box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
 		}
@@ -1398,10 +1399,6 @@ $border-radius: 3px;
 		@include breakpoint(lg) {
 			padding-right: 40px !important;
 		}
-	}
-	&__header {
-		margin-bottom: 20px;
-
 	}
 	&__header-separator {
 		margin-top: 42px;

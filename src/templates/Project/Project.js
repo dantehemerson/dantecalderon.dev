@@ -1,5 +1,4 @@
 import React from 'react'
-import Img from 'gatsby-image'
 
 import Content from '../../components/Content'
 import AuthorPostFooter from '../../components/AuthorPostFooter'
@@ -20,13 +19,7 @@ export default props => {
 						repository={ props.frontmatter.repository }
 						website={ props.frontmatter.website }
 					/>										
-				</div>
-				{
-					props.frontmatter.style !== 'default' &&					
-					<div className="Post__header__image ProjectTemplate__header__image">
-						<Img sizes={ props.image }/>
-					</div>
-				}
+				</div>	
 			</div>				
 			<Slider images={props.fields.images} />						
 			<div>

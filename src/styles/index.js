@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 import { css } from 'styled-components'
 
+import sliderStyles from './slider'
+
 const sizes = {
   xl: 1170,
   lg: 992,
@@ -87,4 +89,6 @@ export const GlobalStyles = createGlobalStyle`
 	textarea{
       resize: vertical;
   }
+
+  ${sliderStyles}
 `

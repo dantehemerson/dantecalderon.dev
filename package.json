@@ -46,6 +46,7 @@
 		"react-disqus-comments": "^1.4.0",
 		"react-dom": "^16.6.0",
 		"react-helmet": "^5.2.0",
+		"react-slick": "^0.23.2",
 		"react-typography": "^0.16.13",
 		"styled-components": "^4.0.3",
 		"sweetalert2": "^7.28.11",

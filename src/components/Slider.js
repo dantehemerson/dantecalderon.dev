@@ -5,8 +5,49 @@ import Img from 'gatsby-image'
 
 const ContainerItem = styled.div`
 `
+
+const TopBar = styled.div`
+	height: 30px;
+	background: #e9eff3;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	.TopBarButtons {
+		background: #f26e5c;
+		border-radius: 50%;
+		height: 12px;
+		width: 12px;
+		position: relative;
+		margin-left: 10px;
+		&:after {
+			content: '';
+			    background: #47b64b;
+			    border-radius: 50%;
+			    position: absolute;
+			    left: 350%;
+			    top: 0;
+			    height: 12px;
+			    width: 12px;
+
+		}
+
+		&:before {
+			content: '';
+			background: #fbce75;
+			border-radius: 50%;
+			height: 12px;
+			width: 12px;
+			position: absolute;
+			left: 175%;
+			top: 0;
+		}
+	}
+`
 const SliderItem = props => (
 	<ContainerItem>
+		<TopBar>
+			<div className="TopBarButtons"></div>
+		</TopBar>
 		<Img sizes={props.image.childImageSharp.sizes } />
 	</ContainerItem>	
 )

@@ -5,6 +5,7 @@ import { AwesomeButton } from 'react-awesome-button'
 
 import image from '../assets/images/404.jpg'
 import { media } from '../styles'
+import Layout from '../components/Layout'
 
 const Container = styled.main`
 	display: flex;	
@@ -18,7 +19,7 @@ const Container = styled.main`
 const Title = styled.h1`
 	text-align: center;
 	font-size: 16px;	
-	padding: 25px 10px;
+	padding: 0 10px 25px 10px;
 	font-weight: 400;
 	text-transform: uppercase;
 	font-family: sans-serif !important;
@@ -39,14 +40,16 @@ const Button = styled(AwesomeButton)`
 `
 
 export default props => (		
-	<Container>
-		<Helmet>
-			<title>{`Ops :(`}</title>
-		</Helmet>
-		<Image src={image}/>
-		<Title>No encontramos lo que buscabas</Title>		
-		<Button
-			href='/'
-			>VOLVER AL INICIO</Button>
-	</Container>		
+	<Layout location={ props.location } simple>
+		<Container>
+			<Helmet>
+				<title>{`Ops :(`}</title>
+			</Helmet>
+			<Image src={image}/>
+			<Title>No encontramos lo que buscabas</Title>		
+			<Button
+				href='/'
+				>IR AL INICIO</Button>
+		</Container>		
+	</Layout>
 )

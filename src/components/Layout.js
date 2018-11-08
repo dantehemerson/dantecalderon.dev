@@ -18,6 +18,7 @@ class Layout extends React.Component {
 	}
 
 	render() {
+		const { simple } = this.props
 		return (				
 			<div>
 				<Helmet>
@@ -43,13 +44,16 @@ class Layout extends React.Component {
 				</Helmet>
 				<ThemeProvider theme={ defaultTheme }>
 					<>
-					<GlobalStyles/>
-					<Navbar 
-						activePage={ actualPage(this.props.location.pathname) } />
-					<div className="Dyamic-container">
-						{ this.props.children }
-					</div>
-					<Footer/>
+						<GlobalStyles/>						
+						<Navbar 
+							activePage={ actualPage(this.props.location.pathname) } />						
+						<div className="Dyamic-container">
+							{ this.props.children }
+						</div>
+						{
+							!simple &&
+							<Footer/>
+						}
 					</>
 				</ThemeProvider>
 			</div>			

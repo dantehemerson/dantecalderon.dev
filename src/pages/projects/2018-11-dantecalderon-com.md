@@ -1,9 +1,9 @@
 ---
 model: project
-title: dantecalderon.com
+title: dantecalderon
 subtitle: My webpage
 description: Personal-website
-path: dantecalderon-com
+path: portfolio/dantecalderon
 thumbnail: /img/danteclderon-home.png
 images:
   - description: HOme page

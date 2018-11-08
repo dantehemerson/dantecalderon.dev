@@ -104,6 +104,7 @@ export const GlobalStyles = createGlobalStyle`
     box-shadow: none;
     color: #55595c;
     outline: 0;
+    transition: border .3s;
     width: 100%;
     padding: 15px 1.6rem;
     padding-right: 4.7rem;

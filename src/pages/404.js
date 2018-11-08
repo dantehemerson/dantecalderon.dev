@@ -20,9 +20,9 @@ const Title = styled.h1`
 	text-align: center;
 	font-size: 16px;	
 	padding: 0 10px 25px 10px;
-	font-weight: 400;
+	font-weight: 600;
 	text-transform: uppercase;
-	font-family: sans-serif !important;
+	font-family: 'Open Sans', sans-serif !important;
 	margin: 0;
 	color: #4B6A8E;
 	${media.sm`

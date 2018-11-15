@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from "gatsby"
 import { AwesomeButton } from 'react-awesome-button'
-import get from 'lodash/get'
 import styled from 'styled-components'
 
 import Rotational from '../components/Rotational'
@@ -18,7 +17,7 @@ const ButtonAbout = styled(AwesomeButton)`
 class Index extends React.Component {
 	render() {
 		const { data } = this.props
-		const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')
+		const { title, subtitle, siteUrl } = data.site.siteMetadata		
 		return (
 				<Layout location={ this.props.location } active={ pages.home }>
 					<div>
@@ -31,8 +30,8 @@ class Index extends React.Component {
 									<div className="col-xs-12 col-lg-5" style={{
 										textAlign: 'center'
 									}} >
-										<h1 className="Header-Home__title" >Dante Calderón</h1>
-										<h2 className="Header-Home__subtitle">Javascript / Node.js Developer </h2>
+										<h1 className="Header-Home__title" >{ title }</h1>
+										<h2 className="Header-Home__subtitle">{ subtitle }</h2>
 										<Social />
 										<ButtonAbout											
 											href="/about" >
@@ -62,6 +61,7 @@ export const queryHome = graphql`
 			siteMetadata {
 				title
 				siteUrl
+				subtitle
 			}
 		}
 	}

@@ -1,4 +1,10 @@
 import React from 'react'
+import ReactDisqusComments from 'react-disqus-comments'
+
+import AuthorPostFooter from '../components/AuthorPostFooter'
+import Layout from '../components/Layout'
+import Share from '../components/Share'
+import { pages } from '../utils'
 
 export default class BlogPostTemplate extends React.Component {
   state = {
@@ -31,23 +37,24 @@ export default class BlogPostTemplate extends React.Component {
   }
 
   render() {
-    const { isPost, title, url } = this.props
+    const { isPost, title, url, path } = this.props
     return (
       <Layout location={ this.props.location } active={ isPost ? pages.blog : pages.portfolio }>
         <div>
+          { this.props.children }
           <div className="wrapper-post">
             <div className="Foot__Share">
               <Share title={title} url={ url }/>
             </div>
             <div className="Foot__AuthorPost">
-              <AuthorPostFooter avatar={avatar}/>
+              {/*<AuthorPostFooter avatar={avatar}/>*/}
             </div>
           </div>
           <div className="Post__footer">
             <div id="disquser" className="container Disqus">
               <ReactDisqusComments
                 shortname="dantecalderon"
-                identifier={ post.frontmatter.path }
+                identifier={ path }
                 title={ title }
                 url={ this.state.location }/>
             </div>

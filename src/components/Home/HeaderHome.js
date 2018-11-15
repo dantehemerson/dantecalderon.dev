@@ -39,7 +39,7 @@ export default props => (
   <StaticQuery
     query={graphql`
       query {
-        avatar: imageSharp(fluid: {originalName: { regex: "/avatar2.jpeg/" }}) {
+        avatar: imageSharp(fluid: {originalName: { regex: "/avatar.jpg/" }}) {
           sizes(maxWidth: 720) {
             ...GatsbyImageSharpSizes_tracedSVG
           }

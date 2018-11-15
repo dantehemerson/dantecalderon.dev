@@ -93,7 +93,6 @@ export const pageQuery = graphql`
       id
       html
       htmlAst
-      timeToRead
       frontmatter {
         title
         subtitle

@@ -2,8 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { StaticQuery, graphql } from 'gatsby'
-
-import Logo from '../assets/images/logo.png'
+import Img from 'gatsby-image'
 
 const icons = [
   <svg className="icon-item" version="1.1" viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" focusable="false" aria-hidden="true" role="img">
@@ -75,7 +74,7 @@ class Navbar extends React.Component {
 	render() {
 		const { menuIsOpen } = this.state
 		const { active } = this.props
-    const { menu, title } = this.props.data.site.siteMetadata
+    const { menu, title, subtitle } = this.props.data.site.siteMetadata
     console.log(menu)
 		return (
 			<nav className={
@@ -93,7 +92,7 @@ class Navbar extends React.Component {
 					<Link className="Navbar__titlewrap"
 						onClick={ (e) => { this.setState({menuIsOpen: false}) } }
 						to="/">
-						<img alt="logo" className="Navbar__logo" src={Logo} />
+            <Img alt={ subtitle } className="Navbar__logo" sizes={ this.props.data.logo.sizes }/>
 						<p className="Navbar__title">{ title }</p>
 					</Link>
 					<div className="Navbar__navwrap">
@@ -133,13 +132,14 @@ export default props => (
             regex: "/logo.png/"
           }
         }) {
-          sizes(maxWidth: 360) {
+          sizes(maxWidth: 64) {
             ...GatsbyImageSharpSizes_tracedSVG
           }
         }
         site {
           siteMetadata {
             title
+            subtitle
             menu {
               title
               id

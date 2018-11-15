@@ -19,12 +19,12 @@ export const Post = ({ content, frontmatter, previous, next, siteTitle, image, s
 		<div className={`Post ${ frontmatter.style }`}>
 			<div className="Post__header">
 				<div className="Post__header__data">
-					<h1 className="Post__title">{ frontmatter.title }</h1>									
+					<h1 className="Post__title">{ frontmatter.title }</h1>
 					<AuthorPost
 						date={ frontmatter.date }
 						timeToRead={timeToRead}
-						avatar={avatar}						
-						/>					
+						avatar={avatar}
+						/>
 				</div>
 				{
 					frontmatter.style !== 'default' &&
@@ -32,13 +32,13 @@ export const Post = ({ content, frontmatter, previous, next, siteTitle, image, s
 						<Img sizes={ image }/>
 					</div>
 				}
-			</div>			
-			<PostContent content={content} className="container Post__content"/>				
+			</div>
+			<PostContent content={content} className="container Post__content"/>
 			<div className="wrapper-post">
 				<div className="Foot__Share">
 					<Share title={frontmatter.title} url={`https://dantecalderon.com/` + frontmatter.path}/>
 				</div>
-				<div className="Foot__AuthorPost">				
+				<div className="Foot__AuthorPost">
 					<AuthorPostFooter
 							date={ frontmatter.date }
 							timeToRead={timeToRead}
@@ -84,6 +84,7 @@ export default class BlogPostTemplate extends React.Component {
 		const siteMetadata = get(this.props, 'data.site.siteMetadata')
 		const { previous, next } = this.props.pageContext // replaced of pathContext
 		const isPost = post.frontmatter.model === 'post'
+    console.log(this.props)
 		return (
 				<Layout location={ this.props.location } active={ isPost ? pages.blog : pages.portfolio }>
 					<div>
@@ -118,7 +119,7 @@ export default class BlogPostTemplate extends React.Component {
 										/>
 						}
 							<div className="Post__footer">
-								
+
 									<div id="disquser" className="container Disqus">
 										<ReactDisqusComments
 													shortname="dantecalderon"
@@ -126,7 +127,7 @@ export default class BlogPostTemplate extends React.Component {
 													title={ post.frontmatter.title }
 													url={ this.state.location }/>
 									</div>
-								
+
 								{
 									post.frontmatter.model === 'post' &&
 									<Share fixed show={ this.state.show_share }
@@ -185,12 +186,12 @@ export const pageQuery = graphql`
 				}
 				images {
 					description
-					image {												
+					image {
 						childImageSharp {
 							sizes(maxWidth: 1920) {
 								...GatsbyImageSharpSizes_tracedSVG
 							}
-						}						
+						}
 					}
 				}
 			}

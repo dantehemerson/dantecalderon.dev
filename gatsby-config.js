@@ -103,27 +103,31 @@ module.exports = {
             cookieExpires: 86400
          },
       },
-      'gatsby-plugin-netlify-cms',
       {
-         resolve: `gatsby-plugin-netlify`,
-         options: {
+        resolve: 'gatsby-plugin-netlify-cms',
+        options: {
+          modulePath: `${__dirname}/src/cms/cms.js`
+        }
+      },
+      {
+        resolve: 'gatsby-plugin-netlify',
+          options: {
             mergeSecurityHeaders: true,
             mergeLinkHeaders: true,
             mergeCachingHeaders: true,
-            generateMatchPathRewrites: true,
-            modulePath: `${__dirname}/src/cms/cms.js`
+            generateMatchPathRewrites: true
          },
       },
       {
-         resolve: `gatsby-plugin-nprogress`,
+         resolve: 'gatsby-plugin-nprogress',
          options: {
             color: '#1976d2',
             showSpinner: false
          },
       },
-      `gatsby-plugin-offline`,
+      'gatsby-plugin-offline',
       {
-         resolve: `gatsby-plugin-manifest`,
+         resolve: 'gatsby-plugin-manifest',
          options: {
             name: 'Dante Calderón',
             short_name: 'Dante',
@@ -133,6 +137,6 @@ module.exports = {
             display: 'minimal-ui',
          },
       },
-      `gatsby-plugin-styled-components`
+      'gatsby-plugin-styled-components'
    ],
 }

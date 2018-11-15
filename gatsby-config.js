@@ -2,8 +2,7 @@ module.exports = {
    pathPrefix: `/`,
    siteMetadata: {
       title: 'Dante Calderón',
-      subtitle: 'Javascript / Node.js Developer',
-      author: 'Dante Calderón',
+      subtitle: 'Javascript / Node.js Developer',      
       description: 'Dante Hemerson Calderón Vasquez, Programmer',
       siteUrl: 'https://dantecalderon.com',
       social: [

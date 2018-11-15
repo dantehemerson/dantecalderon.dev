@@ -6,14 +6,15 @@ const { createFilePath } = require('gatsby-source-filesystem')
 const resolvePathImages = (images) => {
   return images.map(item => ({
       ...item,
-      image: item.image ? `../posts${item.image}` : undefined    
+      image: item.image ? `../posts${item.image}` : undefined
   }))
 }
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
    const { createPage } = boundActionCreators
    return new Promise((resolve, reject) => {
-      const blogPost = path.resolve('./src/templates/blogTemplate.js')
+      const projectTemplate = path.resolve('./src/templates/ProjectTemplate.js')
+      const postTemplate = path.resolve('./src/templates/PostTemplate.js')
       resolve(
          graphql(
             `
@@ -29,7 +30,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                     title
                     description
                     path
-                    thumbnail  
+                    thumbnail
                     date(formatString: "MMMM DD, YYYY")
                     style
                     tags
@@ -54,7 +55,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
                createPage({
                   path: post.node.frontmatter.path.trim(),
-                  component: blogPost,
+                  component: post.node.frontmatter.model === 'post' ? postTemplate : projectTemplate,
                   context: {
                      slug: post.node.frontmatter.path,
                      previous,
@@ -72,7 +73,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
    const { frontmatter } = node
 
    if (frontmatter) {
-      const { thumbnail, model } = frontmatter      
+      const { thumbnail, model } = frontmatter
       if (thumbnail) {
          if (model === 'post') {
             if (thumbnail.indexOf('/img') === 0) {
@@ -84,7 +85,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
             }
          }
          else if (model === 'project') {
-           const images = resolvePathImages(frontmatter.images)           
+           const images = resolvePathImages(frontmatter.images)
             createNodeField({
                name: 'thumbnail',
                node,
@@ -93,7 +94,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
             createNodeField({
               name: 'images',
               node,
-              value: images    
+              value: images
            })
          }
 

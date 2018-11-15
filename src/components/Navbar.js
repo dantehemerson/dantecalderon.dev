@@ -75,7 +75,6 @@ class Navbar extends React.Component {
 		const { menuIsOpen } = this.state
 		const { active } = this.props
     const { menu, title, subtitle } = this.props.data.site.siteMetadata
-    console.log(menu)
 		return (
 			<nav className={
 				"Navbar " +

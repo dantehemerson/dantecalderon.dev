@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from "gatsby"
+import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import styled from 'styled-components'
 
@@ -27,13 +27,13 @@ class Blog extends React.Component {
 							url={`${siteUrl}/blog`}
 						/>
 						<Header
-							title='Blog'							
-							color='#3fabbb'/>		
-						<PostsWrapper>							
+							title='Blog'
+							color='#3fabbb'/>
+						<PostsWrapper>
 							{
 								posts.map(({ node }) => {
 									if (node.frontmatter.published)
-										return (												
+										return (
 											<Card
 												data={
 													{

@@ -44,7 +44,7 @@ export default props => (
             regex: "/avatar.jpg/"
           }
         }) {
-          sizes(maxWidth: 720) {
+          sizes(maxWidth: 360) {
             ...GatsbyImageSharpSizes_tracedSVG
           }
         }

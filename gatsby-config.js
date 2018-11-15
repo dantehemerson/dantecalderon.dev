@@ -2,9 +2,16 @@ module.exports = {
    pathPrefix: `/`,
    siteMetadata: {
       title: 'Dante Calderón',
+      subtitle: 'Javascript / Node.js Developer',
       author: 'Dante Calderón',
       description: 'Dante Hemerson Calderón Vasquez, Programmer',
-      siteUrl: 'https://dantecalderon.com'
+      siteUrl: 'https://dantecalderon.com',
+      social: [
+         { title: 'Github', link: 'https://github.com/dantehemerson',  icon: 'github' },
+         { title: 'Twitter', link: 'https://twitter.com/dantehemerson',  icon: 'twitter' },
+         { title: 'Linkedin', link: 'https://linkedin.com/in/dantehemerson',  icon: 'linkedin' },
+         { title: 'Instagram', link: 'https://instagram.com/dantehemerson',  icon: 'instagram' }
+      ],
    },
    plugins: [
       'gatsby-plugin-react-helmet',

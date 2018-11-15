@@ -21,7 +21,7 @@ class About extends React.Component {
 						/>
 						<Header
 							title='Sobre Mí'
-							description='Hola, soy Dante Calderón soy desarrollador web. me gusta construir cosas con Nodejs y trabajo principalmente con React, Redux, Gatsby, Nextjs y todo el ecosistema de React.'
+							description='Hola, soy Dante Calderón soy desarrollador web. Me gusta construir cosas con Nodejs y trabajo principalmente con React, Redux, Gatsby, Nextjs y todo el ecosistema de React.'
 							color='#3384a0'/>						
 						<div className="container">
 							<div className="row center-xs">

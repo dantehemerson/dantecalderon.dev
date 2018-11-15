@@ -11,6 +11,13 @@ module.exports = {
          { title: 'Linkedin', link: 'https://linkedin.com/in/dantehemerson',  icon: 'linkedin' },
          { title: 'Instagram', link: 'https://instagram.com/dantehemerson',  icon: 'instagram' }
       ],
+      menu: [
+         { title: 'Inicio', id: '', to: '/', icon: 'home'},
+         { title: 'Blog', id: 'Blog', to: '/blog', icon: 'home'},
+         { title: 'Sobre Mí', id: 'About', to: '/about', icon: 'home'},
+         { title: 'Portafolio', id: 'Portfolio', to: '/portfolio', icon: 'home'},
+         { title: 'Contacto', id: 'Contact', to: '/contact', icon: 'home'},
+      ]
    },
    plugins: [
       'gatsby-plugin-react-helmet',

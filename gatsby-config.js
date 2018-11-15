@@ -2,8 +2,8 @@ module.exports = {
    pathPrefix: `/`,
    siteMetadata: {
       title: 'Dante Calderón',
-      subtitle: 'Javascript / Node.js Developer',      
-      description: 'Dante Hemerson Calderón Vasquez, Programmer',      
+      subtitle: 'Javascript / Node.js Developer',
+      description: 'Dante Hemerson Calderón Vasquez, Programmer',
       siteUrl: 'https://dantecalderon.com',
       social: [
          { title: 'Github', link: 'https://github.com/dantehemerson',  icon: 'github' },
@@ -111,6 +111,7 @@ module.exports = {
             mergeLinkHeaders: true,
             mergeCachingHeaders: true,
             generateMatchPathRewrites: true,
+            modulePath: `${__dirname}/src/cms/cms.js`
          },
       },
       {

@@ -7,12 +7,13 @@ import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import Stack from '../components/Stack'
 import Header from '../components/Header'
+import { pages } from '../utils'
 
 class About extends React.Component {
 	render() {
    	const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')
 		return (
-				<Layout location={ this.props.location }>
+				<Layout location={ this.props.location } active={ pages.about }>
 					<div className="About">
 						<SEO
 						  title="About"

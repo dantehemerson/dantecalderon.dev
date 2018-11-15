@@ -8,6 +8,7 @@ import Rotational from '../components/Rotational'
 import SEO from '../components/SEO'
 import Social from '../components/Social'
 import Layout from '../components/Layout'
+import { pages } from '../utils'
 
 const ButtonAbout = styled(AwesomeButton)`
 	width: 141px !important;
@@ -19,7 +20,7 @@ class Index extends React.Component {
 		const { data } = this.props
 		const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')
 		return (
-				<Layout location={ this.props.location }>
+				<Layout location={ this.props.location } active={ pages.home }>
 					<div>
 						<SEO
 							title=""

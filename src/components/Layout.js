@@ -16,7 +16,7 @@ class Layout extends React.Component {
 	}
 
 	render() {
-		const { simple } = this.props
+		const { simple, active } = this.props
 		return (				
 			<div>
 				<Helmet>
@@ -44,7 +44,7 @@ class Layout extends React.Component {
 				<ThemeProvider theme={ defaultTheme }>
 					<>
 						<GlobalStyles/>						
-						<Navbar activePage='Home'/>
+						<Navbar active={ active }/>
 						<div className="Dyamic-container">
 							{ this.props.children }
 						</div>

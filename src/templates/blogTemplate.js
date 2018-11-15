@@ -11,6 +11,7 @@ import AuthorPostFooter from '../components/AuthorPostFooter'
 import Share from '../components/Share'
 import Layout from '../components/Layout'
 import Project from './Project'
+import { pages } from '../utils'
 
 export const Post = ({ content, frontmatter, previous, next, siteTitle, image, siteUrl, contentComponent, timeToRead, avatar, model }) => {
 	const PostContent = contentComponent || Content
@@ -82,8 +83,9 @@ export default class BlogPostTemplate extends React.Component {
 		const post = this.props.data.markdownRemark
 		const siteMetadata = get(this.props, 'data.site.siteMetadata')
 		const { previous, next } = this.props.pageContext // replaced of pathContext
+		const isPost = post.frontmatter.model === 'post'
 		return (
-				<Layout location={ this.props.location }>
+				<Layout location={ this.props.location } active={ isPost ? pages.blog : pages.portfolio }>
 					<div>
 						<SEO
 							title={ post.frontmatter.title }
@@ -93,7 +95,7 @@ export default class BlogPostTemplate extends React.Component {
 							isPost={ true }
 						/>
 						{
-							post.frontmatter.model === 'post' ?
+							isPost ?
 								<Post
 									{ ...post }
 									{ ...siteMetadata }

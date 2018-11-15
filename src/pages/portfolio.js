@@ -6,13 +6,14 @@ import Item from '../components/PortfolioItem'
 import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import Header from '../components/Header'
+import { pages } from '../utils'
 
 class Portfolio extends React.Component {
 	render() {
 		const posts = get(this, 'props.data.allMarkdownRemark.edges') || []
 		const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')
 		return (
-				<Layout location={ this.props.location }>
+				<Layout location={ this.props.location } active={ pages.portfolio }>
 					<div className="Portfolio">
 						<SEO
 						  title="Portafolio"

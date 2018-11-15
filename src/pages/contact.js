@@ -8,6 +8,7 @@ import ContactSocial from '../components/ContactSocial'
 import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import Header from '../components/Header'
+import { pages } from '../utils'
 
 const ContactFormWrapper = styled.div`
 	max-width: 690px;
@@ -18,7 +19,7 @@ class Contact extends React.Component {
 	render() {
    	const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')
 		return (
-				<Layout location={ this.props.location }>
+				<Layout location={ this.props.location } active={ pages.contact }>
 					<div className="Contact">
 						<SEO
 						  title="Contacto"

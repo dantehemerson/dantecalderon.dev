@@ -7,6 +7,7 @@ import Card from '../components/Card'
 import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import Header from '../components/Header'
+import { pages } from '../utils'
 
 const PostsWrapper = styled.div`
 	padding: 0 15px;
@@ -19,7 +20,7 @@ class Blog extends React.Component {
 		const posts = get(this, 'props.data.allMarkdownRemark.edges') || []
 		const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')
 		return (
-				<Layout location={ this.props.location }>
+				<Layout location={ this.props.location } active={ pages.blog }>
 					<div className="Blog">
 						<SEO
 							title="Blog"

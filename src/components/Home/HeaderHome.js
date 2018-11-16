@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import { AwesomeButton } from 'react-awesome-button'
 import styled from 'styled-components'

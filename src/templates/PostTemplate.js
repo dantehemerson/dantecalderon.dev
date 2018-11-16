@@ -29,7 +29,7 @@ export const Post = (props) => {
             {
               props.contentComponent ?
               <Img sizes={ props.image }/>
-              : <img src={ props.image }/>
+              : <img alt='' src={ props.image }/>
             }
           </div>
         }

@@ -10,8 +10,8 @@ const resolvePathImages = (images) => {
   }))
 }
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-   const { createPage } = boundActionCreators
+exports.createPages = ({ graphql, actions }) => {
+   const { createPage } = actions
    return new Promise((resolve, reject) => {
       const projectTemplate = path.resolve('./src/templates/ProjectTemplate.js')
       const postTemplate = path.resolve('./src/templates/PostTemplate.js')

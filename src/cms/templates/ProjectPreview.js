@@ -1,20 +1,14 @@
 import React from 'react'
-import Content from '../../components/Content'
+import { Post } from '../../templates/PostTemplate'
 
-
-const Template = ({ content }) => {
-  const PostContent = Content
-  return (
-    <div>
-      JJAJJAJAJ
-      <PostContent content={content}/>
-    </div>
-  )
-}
-
-const PostPreview = ({ entry, widgetFor }) => (
-  <Template
-    content={widgetFor('body')}/>
+const PostPreview = ({ entry, widgetFor, getAsset }) => (
+  <Post
+    content={widgetFor('body')}
+    image={getAsset(entry.getIn(['data', 'thumbnail'])) }
+    frontmatter={{
+      style: entry.getIn(['data', 'style']),
+      title: entry.getIn(['data', 'title'])
+    }}/>
 )
 
 export default PostPreview

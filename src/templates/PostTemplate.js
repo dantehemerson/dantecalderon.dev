@@ -9,26 +9,33 @@ import AuthorPost from '../components/AuthorPost'
 
 import Layout from './TemplateLayout'
 
-export const Post = ({ content, frontmatter, image, contentComponent, timeToRead, avatar }) => {
-  const PostContent = contentComponent || Content
+export const Post = (props) => {
+  const PostContent = props.contentComponent || Content
   return (
-    <div className={`Post ${ frontmatter.style }`}>
+    <div className={`Post ${ props.frontmatter.style }`}>
       <div className="Post__header">
         <div className="Post__header__data">
-          <h1 className="Post__title">{ frontmatter.title }</h1>
-          <AuthorPost
-            date={ frontmatter.date }
-            timeToRead={timeToRead ? timeToRead : '3'}
-            avatar={avatar}/>
+          <h1 className="Post__title">{ props.frontmatter.title }</h1>
+          {
+            props.contentComponent &&
+            <AuthorPost
+              date={ props.frontmatter.date }
+              timeToRead={props.timeToRead ? props.timeToRead : '3'}
+              avatar={props.avatar}/>
+          }
         </div>
         {
-          frontmatter.style !== 'default' &&
+          props.frontmatter.style !== 'default' &&
           <div className="Post__header__image">
-            <Img sizes={ image }/>
+            {
+              props.contentComponent ?
+              <Img sizes={ props.image }/>
+              : <img src={ props.image }/>
+            }
           </div>
         }
       </div>
-      <PostContent content={content} className="container Post__content"/>
+      <PostContent content={props.content} className="container Post__content"/>
     </div>
   )
 }

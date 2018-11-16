@@ -126,7 +126,7 @@ export default `
       font-size: 0px;
       cursor: pointer;
       background: rgba(231, 236, 239, 0.46);
-      box-shadow: 0 1px 6px rgba(0,0,0,0.5);
+      box-shadow: 0 0px 6px rgba(0,0,0,0.5);
       text-shadow: 0 0 4px rgba(0,0,0,0.5);
       top: 50%;
       overflow: hidden;
@@ -134,6 +134,11 @@ export default `
       border: none;
       outline: none;
       z-index: 9;
+      opacity: .3;
+      transition: opacity .3s;
+      &:hover {
+        opacity: 1;
+      }
       &:before {
         font-size: 40px;
         font-family: 'Open Sans';

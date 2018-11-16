@@ -77,11 +77,11 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
       if (thumbnail) {
          if (model === 'post') {
             if (thumbnail.indexOf('/img') === 0) {
-               createNodeField({
-                  name: `thumbnail`,
-                  node,
-                  value: `.${thumbnail}`,
-               })
+              createNodeField({
+                name: `thumbnail`,
+                node,
+                value: `../../../static${thumbnail}`,
+              })
             }
          }
          else if (model === 'project') {

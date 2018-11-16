@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby'
 
+import { media } from '../styles'
+
 const Container = styled.footer`
 	display: flex;
 	align-items: center;
@@ -37,9 +39,18 @@ const Copy = styled.p`
 	font-weight: 600;
 	color: #848687;
 	text-align: center;
-	span {
+	.heart {
 		color: #ff7763;
 	}
+
+  .copytext {
+    display: block;
+    padding: 10px 0 5px;
+    ${media.sm`
+      display: inline-block;
+    `}
+  }
+
 	a {
 		color: #282a2d;
 		text-decoration: none;
@@ -75,7 +86,7 @@ export default props => (
             ))
           }
         </Social>
-        <Copy>© 2018 - All rights reserved. Made with <span>❤</span> by <Link to='/about' target="_blank" rel="noopener noreferrer">{ data.site.siteMetadata.title }</Link></Copy>
+        <Copy><span className='copytext'>© 2018 - All rights reserved.</span> Made with <span className='heart'>❤</span> by <Link to='/about' target="_blank" rel="noopener noreferrer">{ data.site.siteMetadata.title }</Link></Copy>
       </Container>
     )}/>
 )

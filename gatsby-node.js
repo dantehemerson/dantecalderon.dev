@@ -16,8 +16,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       const projectTemplate = path.resolve('./src/templates/ProjectTemplate.js')
       const postTemplate = path.resolve('./src/templates/PostTemplate.js')
       resolve(
-         graphql(
-            `
+         graphql(`
           {
             allMarkdownRemark(
               sort: { fields: [frontmatter___date], order: DESC }
@@ -34,8 +33,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               }
             }
           }
-        `
-         ).then(result => {
+        `).then(result => {
             if (result.errors) {
                console.log(result.errors)
                reject(result.errors)

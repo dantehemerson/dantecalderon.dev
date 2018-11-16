@@ -66,7 +66,7 @@ export default class ProjectTemplate extends React.Component {
                 { ...siteMetadata }
                 content={ post.html }
                 contentComponent={ HTMLContent }
-                image={ post.fields.thumbnail.childImageSharp.sizes }
+                image={ post.fields.image.childImageSharp.sizes }
                 avatar={ this.props.data.avatar }
                 />
 
@@ -109,7 +109,7 @@ export const pageQuery = graphql`
         licence
       }
       fields {
-        thumbnail {
+        image {
           childImageSharp {
             sizes(maxWidth: 1920) {
               ...GatsbyImageSharpSizes_tracedSVG

@@ -29,14 +29,21 @@ module.exports = {
          }
 
       },
-      {
+      { // All images from assets folder. For use in website.
+         resolve: 'gatsby-source-filesystem',
+         options: {
+            name: 'img',
+            path: `${__dirname}/src/assets/images`,
+         }
+      },
+      { // All images for Markdown pages. For use in generated posts, projects.
          resolve: 'gatsby-source-filesystem',
          options: {
             name: 'img',
             path: `${__dirname}/static/img/`,
          }
       },
-      {
+      { // Markdown pages: posts and projects folder
          resolve: 'gatsby-source-filesystem',
          options: {
             name: 'pages',

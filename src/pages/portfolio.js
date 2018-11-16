@@ -18,7 +18,7 @@ class Portfolio extends React.Component {
 						<SEO
 						  title="Portafolio"
 						  url={`${siteUrl}/portfolio`}
-						/>						
+						/>
 						<Header
 							title='Portafolio'
 							description={['Estos son algunos de mis proyectos, para ver más proyectos revisa mi ', <a target='__blank' href='https://github.com/dantehemerson'>Github</a>, '.']}
@@ -34,7 +34,7 @@ class Portfolio extends React.Component {
 														{
 															title: node.frontmatter.title,
 															subtitle: node.frontmatter.subtitle,
-															thumbnail: node.fields.thumbnail.childImageSharp.sizes,
+															thumbnail: node.fields.image.childImageSharp.sizes,
 															excerpt: node.excerpt,
 															date: node.frontmatter.date,
 															path: `/${node.frontmatter.path}`,
@@ -75,7 +75,7 @@ export const queryPortfolio = graphql`
     			excerpt
     			timeToRead
     			fields {
-    				thumbnail {
+    				image {
     					childImageSharp {
     						sizes {
     							...GatsbyImageSharpSizes_tracedSVG

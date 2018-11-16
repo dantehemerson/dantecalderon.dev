@@ -3,7 +3,6 @@ import Img from 'gatsby-image'
 import { graphql } from "gatsby"
 import get from 'lodash/get'
 
-
 import Content, { HTMLContent } from '../components/Content'
 import SEO from '../components/SEO'
 import AuthorPost from '../components/AuthorPost'
@@ -101,7 +100,6 @@ export const pageQuery = graphql`
         thumbnail
         path
         model
-        style
         tags
         stack
         roles

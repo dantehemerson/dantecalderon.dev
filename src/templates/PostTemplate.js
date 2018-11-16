@@ -18,9 +18,8 @@ export const Post = ({ content, frontmatter, image, contentComponent, timeToRead
           <h1 className="Post__title">{ frontmatter.title }</h1>
           <AuthorPost
             date={ frontmatter.date }
-            timeToRead={timeToRead}
-            avatar={avatar}
-            />
+            timeToRead={timeToRead ? timeToRead : '3'}
+            avatar={avatar}/>
         </div>
         {
           frontmatter.style !== 'default' &&

@@ -1,12 +1,13 @@
 import React from 'react'
 import ReactDisqusComments from 'react-disqus-comments'
+import { StaticQuery, graphql } from 'gatsby'
 
 import AuthorPostFooter from '../components/AuthorPostFooter'
 import Layout from '../components/Layout'
 import Share from '../components/Share'
 import { pages } from '../utils'
 
-export default class BlogPostTemplate extends React.Component {
+class Template extends React.Component {
   state = {
     location: '',
     show_share: false
@@ -47,7 +48,7 @@ export default class BlogPostTemplate extends React.Component {
               <Share title={title} url={ url }/>
             </div>
             <div className="Foot__AuthorPost">
-              {/*<AuthorPostFooter avatar={avatar}/>*/}
+              <AuthorPostFooter avatar={this.props.data.avatar}/>
             </div>
           </div>
           <div className="Post__footer">
@@ -72,3 +73,28 @@ export default class BlogPostTemplate extends React.Component {
     )
   }
 }
+
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query {
+        avatar: imageSharp (fluid: {
+          originalName: {
+            regex: "/avatar.jpg/"
+          }
+        }) {
+          sizes(maxWidth: 360) {
+            ...GatsbyImageSharpSizes_tracedSVG
+          }
+        }
+        site {
+          siteMetadata {
+            title
+            siteUrl
+            subtitle
+          }
+        }
+      }
+    `}
+    render={ data => <Template data={data} {...props}/> }/>
+)

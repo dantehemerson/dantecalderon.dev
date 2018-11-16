@@ -15,12 +15,6 @@ class Template extends React.Component {
   }
 
   componentDidMount() {
-    let links = document.getElementsByTagName('a')
-    for (const link of links) {
-      if(link.getElementsByTagName('img').length > 0 || link.getElementsByTagName('svg').length > 0  ) {
-        link.style.backgroundImage = 'inherit'
-      }
-    }
     this.setState({ location: window.location.href })
     let body = document.documentElement
     let contentY = document.getElementById('Post_content').offsetTop

@@ -6,7 +6,7 @@ const { createFilePath } = require('gatsby-source-filesystem')
 const resolvePathImages = (images) => {
   return images.map(item => ({
       ...item,
-      image: item.image ? `../posts${item.image}` : undefined
+      image: item.image ? `../../../static${item.image}` : undefined
   }))
 }
 
@@ -75,29 +75,23 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
    if (frontmatter) {
       const { thumbnail, model } = frontmatter
       if (thumbnail) {
-         if (model === 'post') {
-            if (thumbnail.indexOf('/img') === 0) {
-              createNodeField({
-                name: `thumbnail`,
-                node,
-                value: `../../../static${thumbnail}`,
-              })
-            }
-         }
-         else if (model === 'project') {
-           const images = resolvePathImages(frontmatter.images)
-            createNodeField({
-               name: 'thumbnail',
-               node,
-               value: `../posts${thumbnail}`
-            })
+        if (typeof thumbnail === 'string') {
+          createNodeField({
+            name: 'image',
+            node,
+            // Relative path from posts and projects folder. Linking to static/img folder.
+            value: `../../../static${thumbnail}`,
+          })
+        }
+        // Generate path to images for slider in project.
+        if (model === 'project') {
+          const images = resolvePathImages(frontmatter.images)
             createNodeField({
               name: 'images',
               node,
               value: images
-           })
-         }
-
+          })
+        }
       }
    }
    if (node.internal.type === `MarkdownRemark`) {

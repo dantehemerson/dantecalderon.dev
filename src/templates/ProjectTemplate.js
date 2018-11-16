@@ -1,12 +1,7 @@
 import React from 'react'
-import Img from 'gatsby-image'
 import { graphql } from "gatsby"
-import get from 'lodash/get'
 
 import Content, { HTMLContent } from '../components/Content'
-import SEO from '../components/SEO'
-import AuthorPost from '../components/AuthorPost'
-import AuthorPostFooter from '../components/AuthorPostFooter'
 import Toolbar from '../components/ProjectToolbar'
 import Sidebar from '../components/SidebarProject'
 import Tags from '../components/Tags'
@@ -56,20 +51,16 @@ export const Project = props => {
 export default class ProjectTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
-    const siteMetadata = get(this.props, 'data.site.siteMetadata')
-    const isPost = post.frontmatter.model === 'post'
+    const { siteMetadata } = this.props.data.site
     return (
-      <Layout isPost={isPost} >
-
+      <Layout>
         <Project
-                { ...post }
-                { ...siteMetadata }
-                content={ post.html }
-                contentComponent={ HTMLContent }
-                image={ post.fields.image.childImageSharp.sizes }
-                avatar={ this.props.data.avatar }
-                />
-
+          { ...post }
+          { ...siteMetadata }
+          content={ post.html }
+          contentComponent={ HTMLContent }
+          image={ post.fields.image.childImageSharp.sizes }
+          avatar={ this.props.data.avatar }/>
       </Layout>
     )
   }

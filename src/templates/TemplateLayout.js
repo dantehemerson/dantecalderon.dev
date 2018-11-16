@@ -3,6 +3,7 @@ import ReactDisqusComments from 'react-disqus-comments'
 import { StaticQuery, graphql } from 'gatsby'
 
 import AuthorPostFooter from '../components/AuthorPostFooter'
+import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import Share from '../components/Share'
 import { pages } from '../utils'
@@ -41,7 +42,6 @@ class Template extends React.Component {
     const { isPost, title, url, path } = this.props
     return (
       <Layout location={ this.props.location } active={ isPost ? pages.blog : pages.portfolio }>
-        <div>
           { this.props.children }
           <div className="wrapper-post">
             <div className="Foot__Share">
@@ -68,7 +68,6 @@ class Template extends React.Component {
                 url={ url }/>
             }
           </div>
-        </div>
       </Layout>
     )
   }

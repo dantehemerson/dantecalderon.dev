@@ -40,7 +40,6 @@ class Template extends React.Component {
       description,
       path
     } = this.props
-    console.log(description)
     const { siteUrl } = this.props.data.site.siteMetadata
     return (
       <Layout location={ this.props.location } active={ isPost ? pages.blog : pages.portfolio }>
@@ -96,9 +95,7 @@ export default props => (
         }
         site {
           siteMetadata {
-            title
             siteUrl
-            subtitle
           }
         }
       }

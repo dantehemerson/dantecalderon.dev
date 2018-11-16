@@ -23,7 +23,12 @@ export const Project = props => {
               />
             </div>
           </div>
-          <Slider images={props.fields.images} />
+          <div style={{
+            paddingLeft: '10px',
+            paddingRight: '10px'
+          }}>
+            <Slider images={props.fields.images} />
+          </div>
           <div>
             <Tags items={ props.frontmatter.tags }/>
           </div>

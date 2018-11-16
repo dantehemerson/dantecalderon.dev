@@ -33,13 +33,27 @@ class Template extends React.Component {
   }
 
   render() {
-    const { isPost, title, url, path } = this.props
+    const {
+      isPost,
+      title,
+      image,
+      description,
+      path
+    } = this.props
+    console.log(description)
+    const { siteUrl } = this.props.data.site.siteMetadata
     return (
       <Layout location={ this.props.location } active={ isPost ? pages.blog : pages.portfolio }>
+        <SEO
+          title={title}
+          image={`${siteUrl}${image}`}
+          url={`${siteUrl}/${path}`}
+          description={description}
+          isPost={isPost}/>
           { this.props.children }
           <div className="wrapper-post">
             <div className="Foot__Share">
-              <Share title={title} url={ url }/>
+              <Share title={title} url={ `${siteUrl}/${path}` }/>
             </div>
             <div className="Foot__AuthorPost">
               <AuthorPostFooter avatar={this.props.data.avatar}/>
@@ -59,7 +73,7 @@ class Template extends React.Component {
                 fixed
                 show={ this.state.show_share }
                 title={title}
-                url={ url }/>
+                url={ `${siteUrl}/${path}` }/>
             }
           </div>
       </Layout>

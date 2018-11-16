@@ -52,8 +52,13 @@ export default class ProjectTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const { siteMetadata } = this.props.data.site
+    const { title, path, thumbnail, description } = post.frontmatter
     return (
-      <Layout>
+      <Layout
+        title={title}
+        path={path}
+        image={thumbnail}
+        description={description}>
         <Project
           { ...post }
           { ...siteMetadata }

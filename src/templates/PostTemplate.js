@@ -6,6 +6,7 @@ import Content, { HTMLContent } from '../components/Content'
 import AuthorPost from '../components/AuthorPost'
 
 import Layout from './TemplateLayout'
+import 'prismjs/themes/prism.css'
 
 export const Post = (props) => {
   const PostContent = props.contentComponent || Content

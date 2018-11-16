@@ -5,7 +5,6 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import { ThemeProvider } from 'styled-components'
 
-import 'prismjs/themes/prism.css'
 import 'react-awesome-button/src/styles/styles.scss'
 import './index.scss'
 import { GlobalStyles, defaultTheme } from '../styles'
@@ -17,7 +16,7 @@ class Layout extends React.Component {
 
 	render() {
 		const { simple, active } = this.props
-		return (				
+		return (
 			<div>
 				<Helmet>
 					<link
@@ -43,7 +42,7 @@ class Layout extends React.Component {
 				</Helmet>
 				<ThemeProvider theme={ defaultTheme }>
 					<>
-						<GlobalStyles/>						
+						<GlobalStyles/>
 						<Navbar active={ active }/>
 						<div className="Dyamic-container">
 							{ this.props.children }
@@ -54,7 +53,7 @@ class Layout extends React.Component {
 						}
 					</>
 				</ThemeProvider>
-			</div>			
+			</div>
 		)
 	}
 }

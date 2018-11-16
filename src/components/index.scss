@@ -115,11 +115,11 @@ $serif-normal: 'Noto Serif', serif;
 			}
 			&--blog {
 				@extend .container;
-				max-width: 1340px;	
+				max-width: 1340px;
 			}
 		}
 
-		
+
 
 		/// ============= TOGGLER =================
 		.b-a {
@@ -192,7 +192,7 @@ $serif-normal: 'Noto Serif', serif;
 				outline-width: 0;
 			}
 		}
-		
+
 		.Navbar {
 			height: $navbar-height;
 			display: flex;
@@ -208,9 +208,9 @@ $serif-normal: 'Noto Serif', serif;
 			&.inicio {
 				background: transparent;
 			}
-			&.noTop {	
-				background: white;								
-			}	
+			&.noTop {
+				background: white;
+			}
 			.container {
 				display: flex;
 				align-items: center;
@@ -233,7 +233,7 @@ $serif-normal: 'Noto Serif', serif;
 					background: #f4f4f4;
 				}
 			}
-			
+
 			&__titlewrap {
 				display: flex;
 				align-items: center;
@@ -265,7 +265,7 @@ $serif-normal: 'Noto Serif', serif;
 					&.open {
 						left: 0;
 						transition: background .4s;
-						background: rgba(0, 0, 0, .3);						
+						background: rgba(0, 0, 0, .3);
 						z-index: 20;
 					}
 				}
@@ -314,11 +314,11 @@ $serif-normal: 'Noto Serif', serif;
 
 				}
 			}
-			
-			&__item {				
-				width: 98%;					
+
+			&__item {
+				width: 98%;
 				&:last-child {
-					
+
 				}
 				@include breakpoint(md) {
 					border-top: 0 solid transparent !important;
@@ -329,7 +329,7 @@ $serif-normal: 'Noto Serif', serif;
 					}
 				}
 			}
-			&__link {						
+			&__link {
 				font-size: 15px;
 				font-weight: 600;
 				padding: 10px 8px;
@@ -341,7 +341,7 @@ $serif-normal: 'Noto Serif', serif;
 
 				@include breakpoint(md) {
 					transition: all .4s !important;
-					padding: 6px 16px !important;					
+					padding: 6px 16px !important;
 				}
 				&.active {
 					color: $primary-color !important;
@@ -359,14 +359,14 @@ $serif-normal: 'Noto Serif', serif;
 				}
 			}
 		}
-		
+
 		.Header-Home {
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			background-color: $header_home-bg;
-			min-height: 600px;			
-			
+			min-height: 600px;
+
 			&::before {
 		    content: "";
 	      z-index: 2;
@@ -376,7 +376,7 @@ $serif-normal: 'Noto Serif', serif;
 	      width: 100%;
 	      height: 100%;
         background: baseurl('grain.png');
-	      //animation: 3s infinite noise;			  
+	      //animation: 3s infinite noise;
 			}
 
 			@include breakpoint(lg) {
@@ -412,10 +412,10 @@ $serif-normal: 'Noto Serif', serif;
 				font-weight: 600;
 				margin: 10px 0 20px 0;
 				font-family: 'Open Sans';
-				
+
 				text-align: center;
 				color: #1976d2;
-			}		
+			}
 		}
 
 		.Dyamic-container {
@@ -517,8 +517,8 @@ $serif-normal: 'Noto Serif', serif;
 			}
 		}
 
-		.About {			
-			font-size: 15px;		
+		.About {
+			font-size: 15px;
 			&__interests {
 				margin-top: 50px;
 				margin-bottom: 50px;
@@ -528,7 +528,7 @@ $serif-normal: 'Noto Serif', serif;
 					list-style: none;
 				}
 				&__item {
-					margin-bottom: calc(1.3rem / 2);				
+					margin-bottom: calc(1.3rem / 2);
 					i {
 						width: 27px;
 						height: 27px;
@@ -601,23 +601,22 @@ $serif-normal: 'Noto Serif', serif;
 			.gatsby-resp-image-wrapper {
 				max-width: 100% !important;
 			}
-			
 			&__header {
 				margin-bottom: 50px;
 				display: flex;
 				flex-wrap: wrap;
-				justify-content: center;				
+				justify-content: center;
 				&__data {
 					width: 100%;
 					max-width: 760px;
-					padding: 12px;					
+					padding: 12px;
 				}
 				&__image {
 					width: 100%;
 					max-width: 960px;
 				}
 			}
-			
+
 			&.full-image {
 				.Post__header {
 					margin-bottom: 50px;
@@ -653,7 +652,9 @@ $serif-normal: 'Noto Serif', serif;
 					&__image {
 						width: 100%;
 						max-width: 1000px;
-
+            & > img {
+              width: 100% !important;
+            }
 					}
 				}
 			}
@@ -710,7 +711,7 @@ $serif-normal: 'Noto Serif', serif;
 
 					@include breakpoint(xxl) {
 						min-height: 400px;
-						margin-left: 65px;						
+						margin-left: 65px;
 						margin-right: 65px;
 						flex-wrap: inherit;
 						&__data {
@@ -772,7 +773,7 @@ $serif-normal: 'Noto Serif', serif;
 			}
 
 			h2{
-				text-align: center;			
+				text-align: center;
 			}
 			h3, h2 {
 				margin-top: 30px;
@@ -795,13 +796,13 @@ $serif-normal: 'Noto Serif', serif;
 				&__title {
 					font-size: 28px;
 				}
-				&__subtitle {					
+				&__subtitle {
 					font-size: 17px !important;
 				}
 				&__date {
 					font-size: 13px;
 					color: $hover-link-color!important;
-				}	
+				}
 				h3, h2 {
 					margin-top: 30px;
 					font-size: 25px;
@@ -817,12 +818,12 @@ $serif-normal: 'Noto Serif', serif;
 				&__title {
 					font-size: 37px;
 				}
-				&__subtitle {					
+				&__subtitle {
 					font-size: 18px !important;
 				}
 				&__date {
 					font-size: 14px;
-				}			
+				}
 				h3, h2 {
 					margin-top: 40px;
 					font-size: 29px;
@@ -831,11 +832,11 @@ $serif-normal: 'Noto Serif', serif;
 					font-size: 21px;
 				}
 			}
-			div.gatsby-highlight {				
+			div.gatsby-highlight {
 				& + h4, & + h3, & + h2 {
 					margin-top: 30px !important;
 				}
-			} 
+			}
 
 			a {
 				color: $font-color;
@@ -848,7 +849,7 @@ $serif-normal: 'Noto Serif', serif;
 				margin-left: -11px;
 				border-left: 3px solid $font-color;
 			}
-			
+
 				pre[class*="language-text"], code[class*="language-text"] {
 					font-size: 15px;
 					@include breakpoint(md) {
@@ -863,20 +864,20 @@ $serif-normal: 'Noto Serif', serif;
 					border: none;
 					background: rgba(155,234,243,0.2);
 				}
-			.gatsby-highlight {				
+			.gatsby-highlight {
 				pre[class*="language-"] {
 					border-radius: 4px;
 					background: #f0f2f1;
-					code.language-text {		
+					code.language-text {
 						color: #303030;
 						background: transparent;
 					}
-					code[class*="language-"], pre[class*="language-"] {						
+					code[class*="language-"], pre[class*="language-"] {
 						color: #303030 !important;
 						text-shadow: 0 0 white !important;
 					}
 					.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string {
-						background: transparent;	
+						background: transparent;
 					}
 				}
 			}
@@ -895,13 +896,13 @@ $serif-normal: 'Noto Serif', serif;
 					background: transparent;
 				}
 			}
-		}			
+		}
 
 		.Share {
 			display: flex;
 			justify-content: center;
 			a {
-				margin: 0 3px;		
+				margin: 0 3px;
 				padding: 9px 9px;
 				border-radius: 50%;
 				opacity: 1;
@@ -915,16 +916,16 @@ $serif-normal: 'Noto Serif', serif;
 
 			&__iconwrapper {
 				background: #4a4a4a;
-				display: inline-flex;		
+				display: inline-flex;
 				&.facebook {
-					background: #3b5998;			
+					background: #3b5998;
 				}
 				&.twitter {
-					background: #00aced;		
+					background: #00aced;
 				}
 				&.linkedin {
-					background: #007bb5;			
-				}			
+					background: #007bb5;
+				}
 			}
 
 			&__icon {
@@ -938,7 +939,7 @@ $serif-normal: 'Noto Serif', serif;
 				top: 30vh;
 				flex-direction: column;
 				display: none;
-				left: 10px;				
+				left: 10px;
 				&.hide {
 					a {
 						transform: scale(0);
@@ -952,7 +953,7 @@ $serif-normal: 'Noto Serif', serif;
 				}
 				@include breakpoint(lg) {
 					display: flex;
-				}		
+				}
 			}
 		}
 
@@ -964,7 +965,7 @@ $serif-normal: 'Noto Serif', serif;
 				border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 				padding: 30px 0 30px 0;
 				margin-bottom: 32px;
-			}			
+			}
 		}
 		.emoji-icon {
 			display : inline;
@@ -1046,7 +1047,7 @@ $serif-normal: 'Noto Serif', serif;
 				@include breakpoint(md) {
 					width: 25%;
 				}
-				@media (min-width: 932px) { 
+				@media (min-width: 932px) {
 					width: 20%;
 				}
 				&__img {
@@ -1147,12 +1148,12 @@ $serif-normal: 'Noto Serif', serif;
 
 .ProjectTemplate {
 	&__header {
-		margin-bottom: -5px;		
+		margin-bottom: -5px;
 	}
-	&__contentwrapper {		
+	&__contentwrapper {
 		margin-left: auto !important;
 		margin-right: auto !important;
-		max-width: 1140px;		
+		max-width: 1140px;
 	}
 	&__content {
 		@include breakpoint(lg) {

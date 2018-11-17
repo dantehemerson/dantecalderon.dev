@@ -4,14 +4,18 @@ import styled from 'styled-components'
 import Item from './PortfolioItem'
 import Wrapper from '../Wrapper'
 
+const ItemWrapper = styled.div`
+  padding: 14px 14px !important;
+`
+
 export default props => (
   <Wrapper
-    maxWidth='1000px'
-    wrap>
+    maxWidth='1080px'
+    wrap className='center-sm start-md'>
     {
       props.posts.map(( { node }, index) => {
         return (
-          <div className="Portfolio__item col-xs-12 col-sm-12 col-md-6" key={index}>
+          <ItemWrapper className="col-xs-12 col-sm-11 col-md-6" key={index}>
             <Item
               data={
                 {
@@ -24,7 +28,7 @@ export default props => (
                   website: node.frontmatter.website
                 }
               }/>
-          </div>
+          </ItemWrapper>
         )
       })
     }

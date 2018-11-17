@@ -19,6 +19,7 @@ const Container = styled(Wrapper)`
   padding-top: 100px;
   background-color: #f3f3f3;
   background-image: url(${grain_image});
+  margin: 0 auto !important;
   ${media.lg`
     height: 100vh;
     min-height: 500px;
@@ -48,6 +49,7 @@ const Subtitle = styled.h2`
 
 const HeaderHome = ({ data }) => (
   <Container
+    maxWidth='3200px'
     className='row'
     justifyContent='center'>
       <div className="col-xs-12 col-lg-5 center-xs">

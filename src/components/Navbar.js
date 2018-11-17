@@ -103,7 +103,7 @@ class Navbar extends React.Component {
 						<ul className={ `Navbar__nav ${ menuIsOpen ? 'open' : '' }` }>
               {
                 menu.map((item, index) => (
-    							<li className='Navbar__item'>
+    							<li className='Navbar__item' key={index}>
     								<Link
                       onClick={ (e) => { this.setState({menuIsOpen: false}) } }
     									className={`Navbar__link ${ active === item.id ? 'active' : ''}`}

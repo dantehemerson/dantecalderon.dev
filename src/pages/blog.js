@@ -44,7 +44,8 @@ class Blog extends React.Component {
                             path: `/${node.frontmatter.path}`,
                             timeToRead: node.timeToRead
                           }
-                        }/>
+                        }
+                        key={node.frontmatter.path}/>
                     )
                   else return false
                 })

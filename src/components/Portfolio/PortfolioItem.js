@@ -33,7 +33,7 @@ const Title = styled.h3`
 	margin: 0;
 	${ItemWrapper}:hover & {
   	color: #1976d2;
-  	box-shadow: #DCE7F3 0px -4px 0px 0px inset;  	
+  	box-shadow: #DCE7F3 0px -4px 0px 0px inset;
   }
 `
 
@@ -85,11 +85,11 @@ const ItemLink = styled.article`
 
 const TagsWrapper = styled.div`
 	text-align: left;
-	flex-wrap: wrap;	
+	flex-wrap: wrap;
 	display: flex;
 	.tag_icon {
 		width: 18px;
-		position: relative;		
+		position: relative;
 		path {
 			fill: #4E4E4E;
 		}
@@ -112,8 +112,8 @@ const Tag = styled(Link)`
 	}
 `
 
-const ShortcutIcons = styled.div`	
-	display: flex;	
+const ShortcutIcons = styled.div`
+	display: flex;
 	justify-content: flex-end;
 	width: 46px;
 	a {
@@ -128,15 +128,15 @@ const ShortcutIcons = styled.div`
 		&:hover {
 			path {
 				fill: #1976d2;
-			}			
+			}
 		}
 	}
 `
 
 const BottomData = styled.div`
-	display: flex;	
+	display: flex;
 	margin: 10px 0;
-	justify-content: space-between;	
+	justify-content: space-between;
 `
 
 export default props => (
@@ -146,7 +146,7 @@ export default props => (
 			 	<TopBar>
 					<div className="TopBarButtons"></div>
 				</TopBar>
-				<Cover sizes={ props.data.thumbnail } />				
+				<Cover sizes={ props.data.thumbnail } />
 			</CoverWrapper>
 			<div>
 				<Title>{ props.data.title }</Title>
@@ -162,7 +162,7 @@ export default props => (
 				{
 					props.data.tags.map((value, index) => {
 						return (
-							<Tag key={ index } title={`Ver todos los proyectos en ${value}`}>
+							<Tag to='/portfolio' key={ index } title={`Ver todos los proyectos en ${value}`}>
 								{ " " + value }
 							</Tag>
 						)
@@ -170,21 +170,21 @@ export default props => (
 				}
 			</TagsWrapper>
 			<ShortcutIcons>
-				<a title="Ver código fuente en Github" href={ props.data.repository } 
-					target="_blank" 
+				<a title="Ver código fuente en Github" href={ props.data.repository }
+					target="_blank"
 					rel="noopener noreferrer" >
 			    <svg className="Shortcut__icon" fill="currentColor" preserveAspectRatio="xMidYMid meet" height="17px" width="17px" viewBox="0 0 40 40" style={{verticalAlign: 'text-top'}}><g><path d="m20 0c-11 0-20 9-20 20 0 8.8 5.7 16.3 13.7 19 1 0.2 1.3-0.5 1.3-1 0-0.5 0-2 0-3.7-5.5 1.2-6.7-2.4-6.7-2.4-0.9-2.3-2.2-2.9-2.2-2.9-1.9-1.2 0.1-1.2 0.1-1.2 2 0.1 3.1 2.1 3.1 2.1 1.7 3 4.6 2.1 5.8 1.6 0.2-1.3 0.7-2.2 1.3-2.7-4.5-0.5-9.2-2.2-9.2-9.8 0-2.2 0.8-4 2.1-5.4-0.2-0.5-0.9-2.6 0.2-5.3 0 0 1.7-0.5 5.5 2 1.6-0.4 3.3-0.6 5-0.6 1.7 0 3.4 0.2 5 0.7 3.8-2.6 5.5-2.1 5.5-2.1 1.1 2.8 0.4 4.8 0.2 5.3 1.3 1.4 2.1 3.2 2.1 5.4 0 7.6-4.7 9.3-9.2 9.8 0.7 0.6 1.4 1.9 1.4 3.7 0 2.7 0 4.9 0 5.5 0 0.6 0.3 1.2 1.3 1 8-2.7 13.7-10.2 13.7-19 0-11-9-20-20-20z" /></g>
 			         </svg>
 			  </a>
 			  {
 			  	props.data.website &&
-				  <a title="Ver sitio" 
-				  	href={props.data.website} 
-				  	target="_blank" 
+				  <a title="Ver sitio"
+				  	href={props.data.website}
+				  	target="_blank"
 				  	rel="noopener noreferrer" >
 				    <svg className="Shortcut__icon" fill="currentColor" preserveAspectRatio="xMidYMid meet" height="17px" width="17px" viewBox="0 0 40 40" style={{verticalAlign: 'text-top'}}><g><path d="m23.4 5h11.6v11.6h-3.4v-5.9l-16.3 16.3-2.3-2.3 16.3-16.3h-5.9v-3.4z m8.2 26.6v-11.6h3.4v11.6q0 1.4-1 2.4t-2.4 1h-23.2q-1.4 0-2.4-1t-1-2.4v-23.2q0-1.4 1-2.4t2.4-1h11.6v3.4h-11.6v23.2h23.2z" /></g>
 				  	</svg>
-				  </a>			  	
+				  </a>
 			  }
 			</ShortcutIcons>
 		</BottomData>

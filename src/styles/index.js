@@ -10,7 +10,7 @@ const sizes = {
   sm: 576,
 }
 
-export const media = Object.keys(sizes).reduce((accumulator, label) => {  
+export const media = Object.keys(sizes).reduce((accumulator, label) => {
   accumulator[label] = (...args) => css`
     @media (min-width: ${sizes[label]}px) {
       ${css(...args)};
@@ -35,6 +35,10 @@ export const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     color: #282a2d;
+  }
+
+  .Dyamic-container {
+    min-height: 100vh;
   }
 
   .aws-btn {
@@ -77,11 +81,11 @@ export const GlobalStyles = createGlobalStyle`
       margin-right: 6px;
     }
   }
-  
+
   .Disqus {
     max-width: 760px !important;
-    min-height: 300px;    
-    padding-top: 25px;    
+    min-height: 300px;
+    padding-top: 25px;
     #disqus_thread a { // Theme color disqus.
       color: #1976d2;
     }
@@ -112,9 +116,9 @@ export const GlobalStyles = createGlobalStyle`
     &:focus {
       border-color: #1976d2;
     }
-  } 
+  }
 
-  
+
 
   ${sliderStyles}
 `

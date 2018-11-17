@@ -49,14 +49,14 @@ const SliderItem = props => (
 			<div className="TopBarButtons"></div>
 		</TopBar>
 		<Img sizes={props.image.childImageSharp.sizes } />
-	</ContainerItem>	
+	</ContainerItem>
 )
 
 
 const Container = styled.div`
 	background: gray;
 	max-width: 960px;
-	margin: 0 auto;	
+	margin: 0 auto;
 	box-shadow: 0 6px 30px rgba(0,0,0,0.45);
 	border-radius: 7px 7px 2px 2px;
 	overflow: hidden;
@@ -70,13 +70,13 @@ const settings = {
 	speed: 500,
 	slidesToShow: 1,
 	slidesToScroll: 1,
-	autoplay: true,
+	autoplay: false,
   autoplaySpeed: 5000
 }
 
 export default props => (
   <Container>
-    <Slider { ...settings }>	
+    <Slider { ...settings }>
 	    {
 	      props.images.map((item, index) => (
 	      	<SliderItem image={item.image}/>

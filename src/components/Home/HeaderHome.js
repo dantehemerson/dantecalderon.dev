@@ -17,8 +17,6 @@ const ButtonAbout = styled(AwesomeButton)`
 const Container = styled(Wrapper)`
   min-height: 600px;
   padding-top: 100px;
-  background-color: #f3f3f3;
-  background-image: url(${grain_image});
   margin: 0 auto !important;
   ${media.lg`
     height: 100vh;
@@ -48,21 +46,26 @@ const Subtitle = styled.h2`
 `
 
 const HeaderHome = ({ data }) => (
-  <Container
-    wrap='wrap'
-    maxWidth='3200px'
-    className='row'
-    justifyContent='center'>
-      <div className="col-xs-12 col-lg-5 center-xs">
-        <Title>{ data.site.siteMetadata.title }</Title>
-        <Subtitle>{ data.site.siteMetadata.subtitle }</Subtitle>
-        <Social/>
-        <ButtonAbout href="/about" >SOBRE MÍ</ButtonAbout>
-      </div>
-      <div className="col-xs-12 col-lg-7">
-        <Rotational avatar={ data.avatar }/>
-      </div>
-  </Container>
+  <div style={{
+    background: '#f3f3f3',
+    backgroundImage: `url(${grain_image})`
+    }}>
+    <Container
+      wrap='wrap'
+      maxWidth='1100px'
+      className='row'
+      justifyContent='center'>
+        <div className="col-xs-12 col-lg-5 center-xs">
+          <Title>{ data.site.siteMetadata.title }</Title>
+          <Subtitle>{ data.site.siteMetadata.subtitle }</Subtitle>
+          <Social/>
+          <ButtonAbout href="/about" >SOBRE MÍ</ButtonAbout>
+        </div>
+        <div className="col-xs-12 col-lg-7">
+          <Rotational avatar={ data.avatar }/>
+        </div>
+    </Container>
+  </div>
 )
 
 export default props => (

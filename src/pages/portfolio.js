@@ -35,16 +35,12 @@ class Portfolio extends React.Component {
 															title: node.frontmatter.title,
 															subtitle: node.frontmatter.subtitle,
 															thumbnail: node.fields.image.childImageSharp.sizes,
-															excerpt: node.excerpt,
-															date: node.frontmatter.date,
 															path: `/${node.frontmatter.path}`,
-															timeToRead: node.timeToRead,
 															tags: node.frontmatter.tags,
 															repository: node.frontmatter.repository,
 															website: node.frontmatter.website
 														}
-													}
-													mode="portfolio"/>
+													}/>
 											</div>
 										)
 									})

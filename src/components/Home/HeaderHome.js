@@ -49,6 +49,7 @@ const Subtitle = styled.h2`
 
 const HeaderHome = ({ data }) => (
   <Container
+    wrap='wrap'
     maxWidth='3200px'
     className='row'
     justifyContent='center'>

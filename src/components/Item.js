@@ -50,12 +50,12 @@ const Tooltip = styled.div`
   span {
     display: inline-block;
     position: absolute;
-    left: calc(50% - 6px);
-    bottom: -9px;
-    width: 12px;
-    height: 12px;
-    background: white;
-    transform: rotate(45deg);
+    left: calc(50% - 11px);
+    bottom: -23px;
+    border: 10px solid white;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
   }
 `
 
@@ -67,7 +67,7 @@ const Image = styled.img`
   box-shadow: 0 0 4px #191919;
   &:hover + ${Tooltip} {
     opacity: 1;
-    bottom: calc(100%);
+    bottom: calc(102%);
   }
 `
 

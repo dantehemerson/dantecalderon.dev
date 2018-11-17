@@ -361,11 +361,7 @@ $serif-normal: 'Noto Serif', serif;
     }
 
     .Header-Home {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       background-color: $header_home-bg;
-      min-height: 600px;
 
       &::before {
         content: "";
@@ -377,23 +373,6 @@ $serif-normal: 'Noto Serif', serif;
         height: 100%;
         background: baseurl('grain.png');
       }
-
-      @include breakpoint(lg) {
-        height: 100vh;
-        min-height: 500px;
-      }
-
-      & > .container {
-        z-index: 9;
-        padding-top: 100px;
-        @include breakpoint(lg) {
-          padding-top: 38px;
-        }
-      }
-      * {
-        margin: 0;
-      }
-
       &__title {
         font-size: 12vw;
         font-weight: 900;

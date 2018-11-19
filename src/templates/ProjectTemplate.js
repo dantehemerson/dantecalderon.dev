@@ -57,11 +57,11 @@ export default class ProjectTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const { siteMetadata } = this.props.data.site
-    const { title, path, thumbnail, description } = post.frontmatter
+    const { title, thumbnail, description } = post.frontmatter
     return (
       <Layout
         title={title}
-        path={path}
+        path={post.fields.slug}
         image={thumbnail}
         description={description}>
         <Project
@@ -89,7 +89,7 @@ export const pageQuery = graphql`
         siteUrl
       }
     }
-    markdownRemark(frontmatter: { path: { eq: $slug } }) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
       htmlAst
@@ -99,7 +99,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         thumbnail
-        path
         model
         tags
         stack
@@ -110,6 +109,7 @@ export const pageQuery = graphql`
         licence
       }
       fields {
+        slug
         image {
           childImageSharp {
             sizes(maxWidth: 1920) {

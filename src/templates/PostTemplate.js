@@ -43,12 +43,12 @@ export default class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const { siteMetadata } = this.props.data.site
-    const { title, path, thumbnail, description } = post.frontmatter
+    const { title, thumbnail, description } = post.frontmatter
     return (
       <Layout
         isPost
         title={title}
-        path={path}
+        path={post.fields.slug}
         image={thumbnail}
         description={description}>
         <Post
@@ -76,7 +76,7 @@ export const pageQuery = graphql`
         siteUrl
       }
     }
-    markdownRemark(frontmatter: { path: { eq: $slug } }) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
       htmlAst
@@ -87,7 +87,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         thumbnail
-        path
         model
         style
         tags
@@ -100,6 +99,7 @@ export const pageQuery = graphql`
             }
           }
         }
+        slug
       }
     }
   }

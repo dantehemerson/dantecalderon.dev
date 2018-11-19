@@ -49,6 +49,7 @@ export const queryPortfolio = graphql`
     						}
     					}
     				}
+            slug
     			}
     			frontmatter {
     				title

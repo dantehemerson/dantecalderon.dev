@@ -23,7 +23,7 @@ export default props => (
                   title: node.frontmatter.title,
                   subtitle: node.frontmatter.subtitle,
                   thumbnail: node.fields.image.childImageSharp.sizes,
-                  path: `/${node.frontmatter.path}`,
+                  path: `/${node.fields.slug}`,
                   tags: node.frontmatter.tags,
                   repository: node.frontmatter.repository,
                   website: node.frontmatter.website

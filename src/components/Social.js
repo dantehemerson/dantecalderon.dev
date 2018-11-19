@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { StaticQuery, graphql } from 'gatsby'
 
 const SocialWrapper = styled.div`
 	text-align: center;
@@ -26,47 +27,39 @@ const SocialIcon = styled.a`
 		transform: scale(.9);
 	}
 `
+
 export default props => (
-	<SocialWrapper>
-		<SocialIcon
-			className="github--hover"
-			href="https://www.github.com/dantehemerson"
-			title="Github - Dante Calderón"
-			target="_blank">
-			<img
-				alt="img"
-				src="https://icongr.am/fontawesome/github.svg?color=ffffff"
-				title="Github - Dante Calderón"/>
-		</SocialIcon>
-		<SocialIcon
-			className="twitter--hover"
-			href="https://twitter.com/dantehemerson"
-			title="Twitter - Dante Calderón"
-			target="_blank">
-			<img
-				alt="img"
-				src="https://icongr.am/fontawesome/twitter.svg?color=ffffff"
-				title="Twitter - Dante Calderón"/>
-		</SocialIcon>
-		<SocialIcon
-			className="linkedin--hover"
-			href="https://www.linkedin.com/in/dantehemerson/"
-			title="Linkedin - Dante Calderón"
-			target="_blank">
-			<img
-				alt="img"
-				src="https://icongr.am/fontawesome/linkedin.svg?color=ffffff"
-				title="Linkedin - Dante Calderón"/>
-		</SocialIcon>
-		<SocialIcon
-			className="instagram--hover"
-			href="https://www.instagram.com/dantehemerson/"
-			title="Instagram - Dante Calderón"
-			target="_blank">
-			<img
-				alt="img"
-				src="https://icongr.am/fontawesome/instagram.svg?color=ffffff"
-				title="Instagram - Dante Calderón"/>
-		</SocialIcon>
-	</SocialWrapper>
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            subtitle
+            social {
+              title
+              icon
+              link
+            }
+          }
+        }
+      }
+    `}
+    render={ data => (
+      <SocialWrapper>
+        {
+          data.site.siteMetadata.social.map(item => (
+            <SocialIcon
+              className={`${item.icon}--hover`}
+              href={item.link}
+              title={`${item.title} - ${data.site.siteMetadata.title}`}
+              target="_blank">
+              <img
+                alt={item.title}
+                src={`https://icongr.am/fontawesome/${item.icon}.svg?color=ffffff`}/>
+            </SocialIcon>
+          ))
+        }
+      </SocialWrapper>
+    )}/>
 )

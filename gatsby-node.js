@@ -63,9 +63,9 @@ exports.createPages = ({ graphql, actions }) => {
                   path: post.node.frontmatter.path.trim(),
                   component: model === 'post' ? postTemplate : projectTemplate,
                   context: {
-                     slug: post.node.frontmatter.path,
-                     previous,
-                     next,
+                    slug: post.node.frontmatter.path,
+                    previous,
+                    next,
                   },
                })
             })
@@ -75,11 +75,10 @@ exports.createPages = ({ graphql, actions }) => {
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-   const { createNodeField } = actions
-   const { frontmatter } = node
-
-  const { thumbnail, model } = frontmatter
+  const { createNodeField } = actions
+  const { frontmatter } = node
   if (frontmatter) {
+    const { thumbnail, model } = frontmatter
     if (thumbnail) {
       if (typeof thumbnail === 'string') {
         createNodeField({
@@ -99,12 +98,5 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         })
       }
     }
-  }
-  if (node.internal.type === `MarkdownRemark`) {
-    createNodeField({
-      name: 'slug',
-      node,
-      value: `/${frontmatter.path}`,
-    })
   }
 }

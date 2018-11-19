@@ -3,7 +3,7 @@ model: project
 title: Arkanoid Returns
 subtitle: El clasico juego Arkanoid con nuevos features y con un nuevo diseño.
 description: Juego Arkanoid hecho en C++ con la libreria Allegro5
-path: portfolio/arkanoid-returns-game
+path: arkanoid-returns-game
 thumbnail: /img/arkanoid-returns-game.png
 images:
   - description: Screenshot Arkanoid Returns

@@ -10,6 +10,18 @@ const resolvePathImages = (images) => {
   }))
 }
 
+const prefix = {
+  post: 'blog',
+  project: 'portfolio'
+}
+
+const getPrefix = (model) => {
+  if(model && prefix[model]) {
+    return prefix[model]
+  }
+  return ''
+}
+
 exports.createPages = ({ graphql, actions }) => {
    const { createPage } = actions
    return new Promise((resolve, reject) => {
@@ -46,9 +58,10 @@ exports.createPages = ({ graphql, actions }) => {
                   index === posts.length - 1 ? null : posts[index + 1].node
                const next = index === 0 ? null : posts[index - 1].node
 
+               const { model } = post.node.frontmatter
                createPage({
                   path: post.node.frontmatter.path.trim(),
-                  component: post.node.frontmatter.model === 'post' ? postTemplate : projectTemplate,
+                  component: model === 'post' ? postTemplate : projectTemplate,
                   context: {
                      slug: post.node.frontmatter.path,
                      previous,
@@ -65,33 +78,33 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
    const { createNodeField } = actions
    const { frontmatter } = node
 
-   if (frontmatter) {
-      const { thumbnail, model } = frontmatter
-      if (thumbnail) {
-        if (typeof thumbnail === 'string') {
-          createNodeField({
-            name: 'image',
-            node,
-            // Relative path from posts and projects folder. Linking to static/img folder.
-            value: `../../../static${thumbnail}`,
-          })
-        }
-        // Generate path to images for slider in project.
-        if (model === 'project') {
-          const images = resolvePathImages(frontmatter.images)
-            createNodeField({
-              name: 'images',
-              node,
-              value: images
-          })
-        }
+  const { thumbnail, model } = frontmatter
+  if (frontmatter) {
+    if (thumbnail) {
+      if (typeof thumbnail === 'string') {
+        createNodeField({
+          name: 'image',
+          node,
+          // Relative path from posts and projects folder. Linking to static/img folder.
+          value: `../../../static${thumbnail}`,
+        })
       }
-   }
-   if (node.internal.type === `MarkdownRemark`) {
-      createNodeField({
-         name: `slug`,
-         node,
-         value: `/${frontmatter.path}`,
-      })
-   }
+      // Generate path to images for slider in project.
+      if (model === 'project') {
+        const images = resolvePathImages(frontmatter.images)
+          createNodeField({
+            name: 'images',
+            node,
+            value: images
+        })
+      }
+    }
+  }
+  if (node.internal.type === `MarkdownRemark`) {
+    createNodeField({
+      name: 'slug',
+      node,
+      value: `/${frontmatter.path}`,
+    })
+  }
 }

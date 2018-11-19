@@ -10,7 +10,7 @@ module.exports = {
          { title: 'Twitter', link: 'https://twitter.com/dantehemerson',  icon: 'twitter' },
          { title: 'Linkedin', link: 'https://linkedin.com/in/dantehemerson',  icon: 'linkedin' },
          { title: 'Medium', link: 'https://medium.com/@dantehemerson',  icon: 'medium' },
-         { title: 'Dev', link: 'https://dev.to/dantehemerson',  icon: 'dev' },
+         //{ title: 'Dev', link: 'https://dev.to/dantehemerson',  icon: 'dev' },
          { title: 'Instagram', link: 'https://instagram.com/dantehemerson',  icon: 'instagram' },
       ],
       menu: [

@@ -56,7 +56,8 @@ export default props => (
               target="_blank">
               <img
                 alt={item.title}
-                src={`https://icongr.am/fontawesome/${item.icon}.svg?color=ffffff`}/>
+                src={item.icon === 'dev' ? 'https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg' :
+                `https://icongr.am/fontawesome/${item.icon}.svg?color=ffffff`}/>
             </SocialIcon>
           ))
         }

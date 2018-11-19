@@ -9,9 +9,9 @@ module.exports = {
          { title: 'Github', link: 'https://github.com/dantehemerson',  icon: 'github' },
          { title: 'Twitter', link: 'https://twitter.com/dantehemerson',  icon: 'twitter' },
          { title: 'Linkedin', link: 'https://linkedin.com/in/dantehemerson',  icon: 'linkedin' },
+         { title: 'Medium', link: '//m.dantecalderon.com',  icon: 'medium' },
+         { title: 'Dev', link: '//d.dantecalderon.com',  icon: 'dev' },
          { title: 'Instagram', link: 'https://instagram.com/dantehemerson',  icon: 'instagram' },
-         { title: 'Medium', link: 'https://m.dantecalderon.com',  icon: 'medium' },
-         { title: 'Dev', link: 'https://d.dantecalderon.com',  icon: 'imdb' }
       ],
       menu: [
          { title: 'Inicio', id: '', to: '/', icon: 'home'},

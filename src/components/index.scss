@@ -20,8 +20,8 @@
   background: #0bdc6d !important;
 }
 
-.imdb--hover:hover {
-  background: #000 !important;
+.dev--hover:hover {
+  background: white !important;
 }
 
 /** Colors **/
@@ -451,7 +451,6 @@ $serif-normal: 'Noto Serif', serif;
         width: 115px;
         border-radius: 50%;
         overflow: hidden;
-        opacity: .9;
         animation: float 3s ease-in-out infinite;
         @include breakpoint(sm) {
           width: 175px;

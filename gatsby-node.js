@@ -11,8 +11,8 @@ const resolvePathImages = (images) => {
 }
 
 const prefix = {
-  post: 'blog',
-  project: 'portfolio'
+  post: 'blog/',
+  project: 'portfolio/'
 }
 
 const getPrefix = (model) => {
@@ -39,7 +39,6 @@ exports.createPages = ({ graphql, actions }) => {
                   frontmatter {
                     model
                     path
-                    thumbnail
                   }
                 }
               }
@@ -60,10 +59,10 @@ exports.createPages = ({ graphql, actions }) => {
 
                const { model } = post.node.frontmatter
                createPage({
-                  path: post.node.frontmatter.path.trim(),
+                  path: `${getPrefix(model)}${post.node.frontmatter.path.trim()}`,
                   component: model === 'post' ? postTemplate : projectTemplate,
                   context: {
-                    slug: post.node.frontmatter.path,
+                    slug: `${post.node.frontmatter.path}`,
                     previous,
                     next,
                   },
@@ -77,7 +76,8 @@ exports.createPages = ({ graphql, actions }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   const { frontmatter } = node
-  if (frontmatter) {
+
+  if (node.internal.type === 'MarkdownRemark' && frontmatter) {
     const { thumbnail, model } = frontmatter
     if (thumbnail) {
       if (typeof thumbnail === 'string') {
@@ -88,6 +88,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
           value: `../../../static${thumbnail}`,
         })
       }
+      createNodeField({
+         name: 'slug',
+         node,
+         value: `${getPrefix(model)}${frontmatter.path}`,
+      })
       // Generate path to images for slider in project.
       if (model === 'project') {
         const images = resolvePathImages(frontmatter.images)

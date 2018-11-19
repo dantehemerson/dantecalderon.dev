@@ -41,7 +41,7 @@ class Blog extends React.Component {
                             thumbnail: node.fields.image.childImageSharp.sizes,
                             excerpt: node.excerpt,
                             date: node.frontmatter.date,
-                            path: `/${node.frontmatter.path}`,
+                            path: `/${node.fields.slug}`,
                             timeToRead: node.timeToRead
                           }
                         }
@@ -58,28 +58,29 @@ class Blog extends React.Component {
 }
 
 export const queryBlog = graphql`
-    query QueryBlog {
-    site {
-        siteMetadata {
-            title
-            siteUrl
-        }
+  query QueryBlog {
+  site {
+      siteMetadata {
+          title
+          siteUrl
       }
-      allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: DESC }
-        filter: { frontmatter: { model: { eq: "post"} }}) {
-        edges {
-          node {
-            excerpt(pruneLength: 240)
-            timeToRead
-            fields {
-              image {
-                childImageSharp {
-                  sizes {
-                    ...GatsbyImageSharpSizes_tracedSVG
+    }
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { model: { eq: "post"} }}) {
+      edges {
+        node {
+          excerpt(pruneLength: 240)
+          timeToRead
+          fields {
+            image {
+              childImageSharp {
+                sizes {
+                  ...GatsbyImageSharpSizes_tracedSVG
                 }
               }
             }
+            slug
           }
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
@@ -89,7 +90,7 @@ export const queryBlog = graphql`
             published
           }
         }
-        }
+      }
     }
   }
 `

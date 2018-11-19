@@ -58,11 +58,12 @@ exports.createPages = ({ graphql, actions }) => {
                const next = index === 0 ? null : posts[index - 1].node
 
                const { model } = post.node.frontmatter
+               const slug = `${getPrefix(model)}${post.node.frontmatter.path.trim()}`
                createPage({
-                  path: `${getPrefix(model)}${post.node.frontmatter.path.trim()}`,
+                  path: slug,
                   component: model === 'post' ? postTemplate : projectTemplate,
                   context: {
-                    slug: `${post.node.frontmatter.path}`,
+                    slug,
                     previous,
                     next,
                   },

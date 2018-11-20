@@ -15,6 +15,7 @@ images:
   - description: Settings Page Phone
     image: /img/storytellig-phone-4.png
 date: 2018-11-06T05:27:32.846Z
+finished: true
 published: true
 style: default
 tags:

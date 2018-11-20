@@ -2,8 +2,8 @@ module.exports = {
    pathPrefix: `/`,
    siteMetadata: {
       title: 'Dante Calderón',
-      subtitle: 'Javascript / Node.js Developer',
-      description: 'Dante Hemerson Calderón Vasquez, Programmer',
+      subtitle: `Javascript / Node.js Developer  ${process.env.NAME} jj`,
+      description: `Dante Hemerson Calderón Vasquez, Programmer`,
       siteUrl: 'https://dantecalderon.com',
       disqusShortname: 'dantecalderon',
       social: [

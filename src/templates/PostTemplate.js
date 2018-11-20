@@ -6,7 +6,7 @@ import Content, { HTMLContent } from '../components/Content'
 import AuthorPost from '../components/AuthorPost'
 
 import Layout from './TemplateLayout'
-//import 'prismjs/themes/prism.css'
+import 'prismjs/themes/prism.css'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 
 export const Post = (props) => {

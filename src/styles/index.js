@@ -120,11 +120,18 @@ export const GlobalStyles = createGlobalStyle`
 
   ${sliderStyles}
 
+
+  // CODE STYLES
   code {
     -moz-tab-size:    2 !important;
     -o-tab-size:      2 !important;
     tab-size:         2 !important;
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important;
+    text-shadow: none !important;
+    //font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important;
+  }
+
+  .line-numbers .line-numbers-rows {
+    //font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important;
   }
 
   .gatsby-highlight-code-line {
@@ -137,13 +144,6 @@ export const GlobalStyles = createGlobalStyle`
     border-left: 0.25em solid #f99;
   }
 
-  /**
-   * Remove the default PrismJS theme background-color, border-radius, margin,
-   * padding and overflow.
-   * 1. Make the element just wide enough to fit its content.
-   * 2. Always fill the visible space in .gatsby-highlight.
-   * 3. Adjust the position of the line numbers
-   */
   .gatsby-highlight pre[class*="language-"] {
     background-color: transparent;
     margin: 0;
@@ -156,15 +156,11 @@ export const GlobalStyles = createGlobalStyle`
   /**
    * If you already use line highlighting
    */
-
   /* Adjust the position of the line numbers */
   .gatsby-highlight pre[class*="language-"].line-numbers {
     padding-left: 2.8em;
   }
 
-  /**
-   * If you only want to use line numbering
-   */
   .gatsby-highlight {
     background-color: #fdfaf6;
     border-radius: 0.3em;
@@ -188,56 +184,5 @@ export const GlobalStyles = createGlobalStyle`
   }
   .gatsby-highlight::-webkit-scrollbar-track {
     background: #faede5;
-  }
-
-  // PrismJS syntax highlighting token styles
-  // https://www.gatsbyjs.org/packages/gatsby-remark-prismjs
-  .token.comment, .token.block-comment, .token.prolog, .token.doctype, .token.cdata {
-    color: red;
-  }
-
-  .token.punctuation {
-    color: red;
-  }
-  .token.property, .token.tag, .token.boolean, .token.number, .token.function-name, .token.constant, .token.symbol {
-    color: blue;
-  }
-  .token.selector, .token.attr-name, .token.string, .token.char, .token.function, .token.builtin {
-    color: blue;
-  }
-  .token.operator, .token.entity, .token.url, .token.variable {}
-  .token.atrule, .token.attr-value, .token.keyword, .token.class-name {
-    color: peru;
-  }
-  token.inserted {
-    color: blue;
-  }
-  .token.deleted {
-    color: red;
-  }
-  .token.regex, .token.important {
-    color: blue;
-  }
-  .language-css .token.string, .style .token.string {
-    color: blue;
-  }
-  .token.important {
-    fontWeight: normal;
-  }
-  .token.bold {
-    fontWeight: bold;
-  }
-  .token.italic {
-    fontStyle: italic;
-  }
-  .token.entity {
-    cursor: help;
-  }
-  .namespace {
-    opacity: 0.7;
-  }
-  // PrismJS plugin styles
-  token.tab:not(:empty):before, .token.cr:before, .token.lf:before {
-    color: yellow;
   }
 `

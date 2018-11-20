@@ -121,7 +121,7 @@ export const GlobalStyles = createGlobalStyle`
   ${sliderStyles}
 
   // POST STYLES
-  .Post {
+  .Post__content {
     a {
       background-image: linear-gradient(#1f79d3, #1f79d3);
       background-repeat: no-repeat;

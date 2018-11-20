@@ -108,6 +108,7 @@ export const GlobalStyles = createGlobalStyle`
     box-shadow: none;
     color: #55595c;
     outline: 0;
+    background: white;
     transition: border .3s;
     width: 100%;
     padding: 15px 1.6rem;

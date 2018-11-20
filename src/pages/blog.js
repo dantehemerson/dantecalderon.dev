@@ -45,6 +45,7 @@ class Blog extends React.Component {
                             timeToRead: node.timeToRead
                           }
                         }
+                        finished={node.frontmatter.finished}
                         key={node.frontmatter.path}/>
                     )
                   else return false
@@ -88,6 +89,7 @@ export const queryBlog = graphql`
             path
             thumbnail
             published
+            finished
           }
         }
       }

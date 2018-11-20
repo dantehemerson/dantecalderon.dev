@@ -46,6 +46,7 @@ const TopBar = styled.div`
 	width: 100%;
 	display: flex;
 	align-items: center;
+  justify-content: space-between;
 	border-radius: 4px 4px 0 0;
 
 	.TopBarButtons {
@@ -145,6 +146,7 @@ export default props => (
 			<CoverWrapper>
 			 	<TopBar>
 					<div className="TopBarButtons"></div>
+          <div>{props.finished ? 'hola': 'nohola'}</div>
 				</TopBar>
 				<Cover sizes={ props.data.thumbnail } />
 			</CoverWrapper>

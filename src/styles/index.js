@@ -120,6 +120,29 @@ export const GlobalStyles = createGlobalStyle`
 
   ${sliderStyles}
 
+  // POST STYLES
+  .Post {
+    a {
+      background-image: linear-gradient(#1f79d3, #1f79d3);
+      background-repeat: no-repeat;
+      background-size: 100% 3px;
+      background-position: 0 95%;
+      color: inherit;
+      &:hover {
+        background-image: linear-gradient(#ffa707, #ffa707);
+      }
+      text-decoration: none;
+      &.anchor {
+        background: none !important;
+        &:hover {
+          background: none !important;
+        }
+      }
+    }
+  }
+
+
+
 
   // CODE STYLES
   code {

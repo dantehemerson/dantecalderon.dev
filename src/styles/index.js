@@ -151,6 +151,12 @@ export const GlobalStyles = createGlobalStyle`
     tab-size:         2 !important;
     text-shadow: none !important;
     //font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important;
+    &.language-text {
+      font-size: .9em;
+      color: #4575dc !important;
+      border: none !important;
+      background: rgba(155,234,243,0.2) !important;
+    }
   }
 
   .line-numbers .line-numbers-rows {

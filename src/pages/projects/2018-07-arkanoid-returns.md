@@ -9,6 +9,7 @@ images:
   - description: Screenshot Arkanoid Returns
     image: /img/arkanoid-returns-game.png
 date: '2017-07-30T22:13:39-05:00'
+finished: true
 published: true
 style: normal-img
 tags:

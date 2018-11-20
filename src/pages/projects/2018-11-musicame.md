@@ -1,6 +1,6 @@
 ---
 model: project
-title: Musicame
+title: Musicami
 subtitle: Free open source music player
 description: Free open source music player
 path: musicami

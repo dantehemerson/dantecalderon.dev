@@ -15,7 +15,7 @@ Espero que te sirvan :sparkles:.
 
 ### 1.- Importando componentes y librearías
 Al importar componentes lo que hago es separar con una linea en blanco los componentes que son externos y los de mí proyecto. Por ejemplo:
-```jsx
+```jsx{numberLines: true}{1,2,4-5}
 import React from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
@@ -47,7 +47,7 @@ Vamos a ver como declarar estos componentes.
 
 #### Constructor
 En muchas ocaciónes no es necesario usar el constructor, ya que el uso más común es para iniciar el **estado** y **bindear** las funciónes. En caso de que quierás usarlo declarálo justo después de definida la clase:
-```jsx
+```jsx{numberLines: true}
 class Component extends React.Component {
 	constructor(...props) {
 		super(...props)

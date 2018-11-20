@@ -787,44 +787,7 @@ $serif-normal: 'Noto Serif', serif;
         text-decoration: underline;
       }
 
-      blockquote {
-        font-style: italic;
-        padding-left: 11px;
-        margin-left: -11px;
-        border-left: 3px solid $font-color;
-      }
 
-        pre[class*="language-text"], code[class*="language-text"] {
-          font-size: 15px;
-          @include breakpoint(md) {
-            font-size: 1rem;
-          }
-          background: transparent;
-          color: inherit;
-        }
-        code.language-text {
-          font-size: .9em;
-          color: #4575dc;
-          border: none;
-          background: rgba(155,234,243,0.2);
-        }
-      .gatsby-highlight {
-        pre[class*="language-"] {
-          border-radius: 4px;
-          background: #f0f2f1;
-          code.language-text {
-            color: #303030;
-            background: transparent;
-          }
-          code[class*="language-"], pre[class*="language-"] {
-            color: #303030 !important;
-            text-shadow: 0 0 white !important;
-          }
-          .token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string {
-            background: transparent;
-          }
-        }
-      }
 
       &__footer { // Contenedor de los comentarios y los posts recomendados
         background: #fafafa;

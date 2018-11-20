@@ -45,9 +45,8 @@ $container-padding-lg: 12px;
 
 $font-color: rgba(0,0,0,.88);
 
-$serif-font: 'Playfair Display', serif;
 $sans-serif-font: 'Open Sans', sans-serif;
-$serif-normal: 'Noto Serif', serif;
+$serif-normal: 'Gentium Book Basic', serif;
 
 
 
@@ -534,7 +533,7 @@ $serif-normal: 'Noto Serif', serif;
       margin-right: auto;
     }
 
-    $post-body-font: 'Noto Serif';
+    $post-body-font: 'Gentium Book Basic';
     $post-titles-font: 'Open Sans';
     .Post {
       padding-top: 80px;
@@ -624,7 +623,7 @@ $serif-normal: 'Noto Serif', serif;
       &.doble-column {
         padding-top: 62px;
         .Post__title {
-          font-family: $serif-font;
+          font-family: $serif-normal;
           font-size: 34px;
           @include breakpoint(xxl) {
             font-size: 52px;
@@ -757,7 +756,7 @@ $serif-normal: 'Noto Serif', serif;
       }
 
       @include breakpoint(md) {
-        font-size: 19px;
+        font-size: 22px;
 
         &__title {
           font-size: 37px;

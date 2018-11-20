@@ -20,7 +20,7 @@ class Layout extends React.Component {
 			<div>
 				<Helmet>
 					<link
-					href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Noto+Serif:400,700,400italic,700italic|Playfair+Display:700" rel="stylesheet"/>
+					href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Gentium+Book+Basic:400,400i,700,700i" rel="stylesheet"/>
 					<meta name="distribution" content="global"/>
 					<meta httpEquiv="Content-Language" content="es" />
 					<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />

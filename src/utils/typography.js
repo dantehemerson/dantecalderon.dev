@@ -2,7 +2,7 @@ import Typography from 'typography'
 
 
 const typography = new Typography({
-	headerFontFamily: ['Playfair Display', 'serif'],
+	headerFontFamily: ['Gentium Book Basic', 'serif'],
 	bodyFontFamily: ['Open Sans', 'sans-serif']
 })
 

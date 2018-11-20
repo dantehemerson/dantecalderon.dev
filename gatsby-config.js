@@ -2,7 +2,7 @@ module.exports = {
    pathPrefix: `/`,
    siteMetadata: {
       title: 'Dante Calderón',
-      subtitle: `Javascript / Node.js Developer  ${process.env.NAME} jj`,
+      subtitle: `Javascript / Node.js Developer`,
       description: `Dante Hemerson Calderón Vasquez, Programmer`,
       siteUrl: 'https://dantecalderon.com',
       disqusShortname: 'dantecalderon',
@@ -104,7 +104,7 @@ module.exports = {
       {
          resolve: `gatsby-plugin-google-analytics`,
          options: {
-            trackingId: 'UA-121858272-1',
+            trackingId: process.env.ANALITYCS_ID,
             head: false,
             sampleRate: 5,
             siteSpeedSampleRate: 10,

@@ -69,7 +69,7 @@ const Container = styled.div`
 
 const InProgressAbsolute = styled.div`
   position: absolute;
-  z-index: 100;
+  z-index: 2;
   top: 4px;
   right: 4px;
 `

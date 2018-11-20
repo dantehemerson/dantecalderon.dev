@@ -8,6 +8,7 @@ import Tags from '../components/Tags'
 import Slider from '../components/Slider'
 
 import Layout from './TemplateLayout'
+import Message from '../components/Message'
 
 export const Project = props => {
   const PostContent = props.contentComponent || Content
@@ -21,6 +22,8 @@ export const Project = props => {
                 repository={ props.frontmatter.repository }
                 website={ props.frontmatter.website }
               />
+              { !props.frontmatter.finished &&
+                <Message title='Proyecto en progreso...'>Este proyecto aún no está terminado. Estoy trabajando en ello.</Message> }
             </div>
           </div>
           <div style={{
@@ -107,6 +110,7 @@ export const pageQuery = graphql`
         repository
         website
         licence
+        finished
       }
       fields {
         slug

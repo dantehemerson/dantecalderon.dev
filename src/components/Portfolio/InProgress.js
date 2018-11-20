@@ -27,7 +27,7 @@ const InProcess = styled.div`
 `
 
 export default props => (
-  <InProcess marginRight={props.marginRight} title='Aún Estoy trabajando en esto...'>
+  <InProcess marginRight={props.marginRight} title='Aún estoy trabajando en esto...'>
     <img alt='In Progress' src='https://icongr.am/entypo/circular-graph.svg?color=ffffff'/>
     <span>En Progreso</span>
   </InProcess>

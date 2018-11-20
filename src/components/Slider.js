@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import Slider from 'react-slick'
 import Img from 'gatsby-image'
 
+import InProgress from '../components/Portfolio/InProgress'
+
 const ContainerItem = styled.div`
 `
 
@@ -12,6 +14,7 @@ const TopBar = styled.div`
 	width: 100%;
 	display: flex;
 	align-items: center;
+  justify-content: space-between;
 	.TopBarButtons {
 		background: #f26e5c;
 		border-radius: 50%;
@@ -47,6 +50,7 @@ const SliderItem = props => (
 	<ContainerItem>
 		<TopBar>
 			<div className="TopBarButtons"></div>
+      <InProgress marginRight='4px'/>
 		</TopBar>
 		<Img sizes={props.image.childImageSharp.sizes } />
 	</ContainerItem>

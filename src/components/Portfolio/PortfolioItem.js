@@ -3,6 +3,8 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 
+import InProgress from './InProgress'
+
 const ItemWrapper = styled(Link)`
 	cursor: pointer;
 	text-align: left;
@@ -146,7 +148,7 @@ export default props => (
 			<CoverWrapper>
 			 	<TopBar>
 					<div className="TopBarButtons"></div>
-          <div>{props.finished ? 'hola': 'nohola'}</div>
+          { !props.finished && <InProgress/> }
 				</TopBar>
 				<Cover sizes={ props.data.thumbnail } />
 			</CoverWrapper>

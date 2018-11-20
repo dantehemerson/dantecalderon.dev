@@ -28,7 +28,8 @@ export default props => (
                   repository: node.frontmatter.repository,
                   website: node.frontmatter.website
                 }
-              }/>
+              }
+              finished={node.frontmatter.finished}/>
           </ItemWrapper>
         )
       })

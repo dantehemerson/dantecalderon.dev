@@ -58,6 +58,7 @@ export const queryPortfolio = graphql`
     				tags
     				repository
     				website
+            finished
     			}
     		}
     	}

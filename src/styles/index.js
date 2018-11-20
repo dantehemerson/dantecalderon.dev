@@ -181,18 +181,13 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     overflow: initial;
-    float: left; /* 1 */
-    min-width: 100%; /* 2 */
+    float: left;
+    min-width: 100%;
   }
 
-  /**
-   * If you already use line highlighting
-   */
-  /* Adjust the position of the line numbers */
   .gatsby-highlight pre[class*="language-"].line-numbers {
     padding-left: 2.8em;
   }
-
   .gatsby-highlight {
     background-color: #fdfaf6;
     border-radius: 0.3em;
@@ -200,13 +195,11 @@ export const GlobalStyles = createGlobalStyle`
     padding: 1em;
     overflow: auto;
   }
-
   .gatsby-highlight pre[class*="language-"].line-numbers {
     padding: 0;
     padding-left: 2.8em;
     overflow: initial;
   }
-
   .gatsby-highlight::-webkit-scrollbar {
     width: 4px;
     height: 4px;

@@ -11,8 +11,8 @@ const ItemWrapper = styled.div`
 export default props => (
   <Wrapper
     maxWidth='1075px'
-    wrap='true'
-    className='center-sm start-md'>
+    justifyContent='center'
+    wrap='true'>
     {
       props.posts.map(( { node }, index) => {
         return (

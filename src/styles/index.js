@@ -167,7 +167,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .gatsby-highlight-code-line {
-    background-color: #f1beb6;
+    background-color: #f9ecdb;
     display: block;
     margin-right: -1em;
     margin-left: -1em;

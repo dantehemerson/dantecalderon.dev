@@ -34,7 +34,7 @@ export const GlobalStyles = createGlobalStyle`
     text-rendering: geometricPrecision;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    color: #282a2d;
+    color: #333;
   }
 
   .Dyamic-container {
@@ -152,10 +152,13 @@ export const GlobalStyles = createGlobalStyle`
     text-shadow: none !important;
     //font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important;
     &.language-text {
-      font-size: .9em;
-      color: #4575dc !important;
-      border: none !important;
-      background: rgba(155,234,243,0.2) !important;
+      font-size: .75em;
+      top: -1px;
+      position: relative;
+      padding: 0 6px !important;
+      color: inherit !important;
+      border: 1px solid #e4d8c8 !important;
+      background: #fdfaf6 !important;
     }
   }
 

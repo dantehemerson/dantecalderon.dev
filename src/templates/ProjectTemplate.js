@@ -30,7 +30,7 @@ export const Project = props => {
             paddingLeft: '10px',
             paddingRight: '10px'
           }}>
-            <Slider images={props.fields.images} />
+            <Slider finished={props.frontmatter.finished} images={props.fields.images} />
           </div>
           <div>
             <Tags items={ props.frontmatter.tags }/>

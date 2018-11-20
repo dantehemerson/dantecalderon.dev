@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const InProcess = styled.div`
   width: 100px;
   height: 22px;
-  margin-right: ${props => props.marginRight ? props.marginRight : '2px'};
+  margin-right: 2px;
   border-radius: 3px;
   display: flex;
   align-items: center;
@@ -27,7 +27,7 @@ const InProcess = styled.div`
 `
 
 export default props => (
-  <InProcess marginRight={props.marginRight} title='Aún estoy trabajando en esto...'>
+  <InProcess title='Aún estoy trabajando en esto...'>
     <img alt='In Progress' src='https://icongr.am/entypo/circular-graph.svg?color=ffffff'/>
     <span>En Progreso</span>
   </InProcess>

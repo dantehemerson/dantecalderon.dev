@@ -8,6 +8,7 @@ thumbnail: /img/cafeteria.png
 images:
   - image: /img/cafeteria.png
 date: '2018-05-05T08:41:18-05:00'
+finished: true
 published: true
 style: normal-img
 tags:

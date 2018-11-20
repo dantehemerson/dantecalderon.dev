@@ -5,6 +5,7 @@ module.exports = {
       subtitle: 'Javascript / Node.js Developer',
       description: 'Dante Hemerson Calderón Vasquez, Programmer',
       siteUrl: 'https://dantecalderon.com',
+      disqusShortname: 'dantecalderon',
       social: [
          { title: 'Github', link: 'https://github.com/dantehemerson',  icon: 'github' },
          { title: 'Twitter', link: 'https://twitter.com/dantehemerson',  icon: 'twitter' },

@@ -40,7 +40,7 @@ class Template extends React.Component {
       description,
       path
     } = this.props
-    const { siteUrl } = this.props.data.site.siteMetadata
+    const { siteUrl, disqusShortname } = this.props.data.site.siteMetadata
     return (
       <Layout location={ this.props.location } active={ isPost ? pages.blog : pages.portfolio }>
         <SEO
@@ -61,7 +61,7 @@ class Template extends React.Component {
           <div className="Post__footer">
             <div id="disquser" className="container Disqus">
               <ReactDisqusComments
-                shortname="dantecalderon"
+                shortname={disqusShortname}
                 identifier={ path }
                 title={ title }
                 url={ this.state.location }/>
@@ -96,6 +96,7 @@ export default props => (
         site {
           siteMetadata {
             siteUrl
+            disqusShortname
           }
         }
       }

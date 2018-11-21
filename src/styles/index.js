@@ -174,11 +174,11 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .gatsby-highlight-code-line {
-    background-color: #eff3f4;
+    background-color: #edf1f4;
     display: block;
     z-index: 4;
     position: relative;
-    margin-right: 0em;
+    margin-right: -1em;
     margin-left: -1em;
     padding-right: 1em;
     padding-left: 0.75em;

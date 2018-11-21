@@ -756,7 +756,7 @@ $serif-normal: 'Gentium Book Basic', serif;
       }
 
       @include breakpoint(md) {
-        font-size: 22px;
+        font-size: 21px;
 
         &__title {
           font-size: 37px;

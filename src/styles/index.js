@@ -124,13 +124,14 @@ export const GlobalStyles = createGlobalStyle`
   // POST STYLES
   .Post__content {
     a {
-      background-image: linear-gradient(#1f79d3, #1f79d3);
-      background-repeat: no-repeat;
-      background-size: 100% 3px;
-      background-position: 0 95%;
-      color: inherit;
+			//background-image: linear-gradient(#1f79d3, #1f79d3);
+			//background-repeat: no-repeat;
+			//background-size: 100% 3px;
+			//background-position: 0 95%;
+			color: #4a90e2;
+			border-bottom: 1px dotted #5b9fef;
       &:hover {
-        background-image: linear-gradient(#ffa707, #ffa707);
+		    border-bottom-style: solid;
       }
       text-decoration: none;
       &.anchor {

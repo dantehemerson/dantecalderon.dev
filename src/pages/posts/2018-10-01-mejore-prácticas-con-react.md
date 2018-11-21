@@ -15,7 +15,7 @@ Espero que te sirvan :sparkles:.
 
 ### 1.- Importando componentes y librearías
 Al importar componentes lo que hago es separar con una linea en blanco los componentes que son externos y los de mí proyecto. Por ejemplo:
-```jsx{numberLines: true}{1,2,4-5}
+```jsx{numberLines: true}{1-6,8-11}
 import React from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
@@ -68,7 +68,7 @@ class Component extends React.Component {
 }
 ```
 Aúnque también podemos hacer lo mismo de está forma:
-```jsx
+```jsx{3-5}
 class Component extends React.Component {
 	// ... constructor(si es necesario)
 	state = {
@@ -80,21 +80,21 @@ de está forma ya no necesitamos el constructor(salvo para casos específicos) y
 
 #### propTypes y defaultProps
 `propTypes` y `defaultProps` son propiedades estáticas. Con ES6 las se definen de está manera:
-```jsx
+```jsx{2-4,6-8}
 class Component extends React.Component {
 	static propTypes = {
 		...
 	}
 
 	static defaultProps = {
-		
+		...
 	}
 }
 ```
 
 
 #### Escribiendo nuestras propias funciónes
-```jsx
+```jsx{4-6,8-10}
 class Component extends React.Component {
 	// ...
 

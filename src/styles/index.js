@@ -124,10 +124,6 @@ export const GlobalStyles = createGlobalStyle`
   // POST STYLES
   .Post__content {
     a {
-			//background-image: linear-gradient(#1f79d3, #1f79d3);
-			//background-repeat: no-repeat;
-			//background-size: 100% 3px;
-			//background-position: 0 95%;
 			color: #4a90e2;
 			border-bottom: 1px dotted #5b9fef;
       &:hover {
@@ -135,10 +131,7 @@ export const GlobalStyles = createGlobalStyle`
       }
       text-decoration: none;
       &.anchor {
-        background: none !important;
-        &:hover {
-          background: none !important;
-        }
+        border-bottom: none;
       }
     }
     img {
@@ -163,8 +156,8 @@ export const GlobalStyles = createGlobalStyle`
       position: relative;
       padding: 0 6px !important;
       color: inherit !important;
-      border: 1px solid #e4d8c8 !important;
-      background: #fdfaf6 !important;
+      border: 1px solid #dbe3e7 !important;
+      background: #ecf4fc !important;
     }
   }
 
@@ -172,14 +165,24 @@ export const GlobalStyles = createGlobalStyle`
     //font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important;
   }
 
+  .line-numbers-rows {
+    border-right: 1px solid #dbe3e7 !important;
+    & > span:before {
+      color: #a9b9c0 !important;
+      text-shadow: none !important;
+    }
+  }
+
   .gatsby-highlight-code-line {
-    background-color: #f9ecdb;
+    background-color: #eff3f4;
     display: block;
-    margin-right: -1em;
+    z-index: 4;
+    position: relative;
+    margin-right: 0em;
     margin-left: -1em;
     padding-right: 1em;
     padding-left: 0.75em;
-    border-left: 0.25em solid #f99;
+    border-left: 0.25em solid #b2c4ce;
   }
 
   .gatsby-highlight pre[class*="language-"] {
@@ -195,10 +198,11 @@ export const GlobalStyles = createGlobalStyle`
     padding-left: 2.8em;
   }
   .gatsby-highlight {
-    background-color: #fdfaf6;
-    border-radius: 0.3em;
+    background-color: #f7f9fa;
+    border: 1px solid #dbe3e7;
+    border-radius: 3px;
     margin: 0.5em 0;
-    padding: 1em;
+    padding: 0.6em 0.7em;
     overflow: auto;
   }
   .gatsby-highlight pre[class*="language-"].line-numbers {
@@ -211,9 +215,9 @@ export const GlobalStyles = createGlobalStyle`
     height: 4px;
   }
   .gatsby-highlight::-webkit-scrollbar-thumb {
-    background: #f4d1c6;
+    background: #a0c5d6;
   }
   .gatsby-highlight::-webkit-scrollbar-track {
-    background: #faede5;
+    background: #e2e9ec;
   }
 `

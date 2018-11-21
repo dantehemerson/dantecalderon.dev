@@ -5,7 +5,7 @@ description: Manipulación de bits y usos.
 path: manipulacion-de-bits
 thumbnail: /img/bit-manipulation.png
 date: '2018-08-17T03:16:12-05:00'
-published: true
+published: false
 style: full-image
 tags:
   - competitive programming

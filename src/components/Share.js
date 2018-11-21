@@ -4,9 +4,6 @@ export default props => (
 		<div className={ `Share `
 			+ (props.fixed ? "Share--fixed" : "")
 			+ (props.show ? "" : " hide") }>
-			<a className="Share__iconwrapper comment" href="#disquser" >
-				<img alt="img" className="Share__icon" title="Comentar" src="https://icongr.am/fontawesome/comment.svg?color=ffffff"/>
-			</a>
 			<a className="Share__iconwrapper twitter" href={`https://twitter.com/intent/tweet?text=${ props.title } by Dante Calderón(@dantehemerson) ${ props.url}` }  target="_blank" rel="noopener noreferrer" data-size="large">
 				<img alt="img" className="Share__icon" title="Compartir en Twitter" src="https://icongr.am/fontawesome/twitter.svg?color=ffffff"/>
 			</a>

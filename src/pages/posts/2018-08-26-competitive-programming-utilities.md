@@ -17,6 +17,8 @@ En C++ podemos de cierta manera definir aliases para ciertas partes de codigo }
 
 ![Jim Carry Typing](https://media.giphy.com/media/11M1k4fIwVqPF6/giphy.gif)
 
+<script src="https://gist.github.com/dantehemerson/79dbe6b47e777b27860b1515fd238860.js"></script>
+
 Estas son algúnas funciones utiles que cree y/o recopile para  Programacioń Competitiva, de cierta forma hay una copia de algunas funciónes de javascript, específicamente la librería string. Para todas las funciónes también tienes la complejidad en notacion **O grande**. Esperó que te sea útil.
 
 #### String a mayúsculas ó minúsculas

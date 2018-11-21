@@ -140,6 +140,10 @@ export const GlobalStyles = createGlobalStyle`
         }
       }
     }
+    img {
+      margin: 0 auto;
+      display: block;
+    }
   }
 
 

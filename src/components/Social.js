@@ -50,6 +50,7 @@ export default props => (
         {
           data.site.siteMetadata.social.map(item => (
             <SocialIcon
+              key={item.title}
               className={`${item.icon}--hover`}
               href={item.link}
               title={`${item.title} - ${data.site.siteMetadata.title}`}

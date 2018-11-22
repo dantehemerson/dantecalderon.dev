@@ -54,9 +54,7 @@ class Template extends React.Component {
             <div className="Foot__Share">
               <Share title={title} url={ `${siteUrl}/${path}` }/>
             </div>
-            <div className="Foot__AuthorPost">
-              <AuthorPostFooter avatar={this.props.data.avatar}/>
-            </div>
+            <AuthorPostFooter avatar={this.props.data.avatar} make={!isPost}/>
           </div>
           <div className="Post__footer">
             <div id="disquser" className="container Disqus">
@@ -89,7 +87,7 @@ export default props => (
             regex: "/avatar.jpg/"
           }
         }) {
-          sizes(maxWidth: 360) {
+          sizes(maxWidth: 180) {
             ...GatsbyImageSharpSizes_tracedSVG
           }
         }

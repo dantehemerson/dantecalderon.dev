@@ -37,6 +37,15 @@ export const GlobalStyles = createGlobalStyle`
     color: #333;
   }
 
+  a.default {
+    color: #4a90e2;
+    border-bottom: 1px dotted #5b9fef;
+    text-decoration: none !important;
+    &:hover {
+     border-bottom-style: solid;
+    }
+  }
+
   .Dyamic-container {
     min-height: 100vh;
   }

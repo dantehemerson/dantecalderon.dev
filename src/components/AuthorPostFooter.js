@@ -22,11 +22,11 @@ const Image = styled(Img)`
 	margin: 0;
 	width: 90px;
 	height: 90px;
-	border-radius: 50%;
+	border-radius: 3px;
 	margin-right: 0;
 	${media.md`
-		width: 150px !important;
-		height: 150px !important;			
+		width: 134px !important;
+		height: 134px !important;
 		margin-right: 21px !important;
 	`}
 `
@@ -45,25 +45,28 @@ const Body = styled.div`
 const By = styled.p`
 	font-size: 14px;
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: 400;
 	color: #767676;
 	margin: 0;
 `
 
 const Name = styled(Link)`
 	margin: 0;
-	font-size: 26px;
+	font-size: 21px;
 	line-height: 1;
-	font-weight: 700;		
+	font-weight: 600;
 	color: #292929 !important;
 	text-decoration: none !important;
+  ${media.md`
+    font-size: 23px;
+  `}
 `
 
 const About = styled.p`
 	color: rgba(0,0,0,.54) !important;
-	font-size: 15px;
-	font-weight: 600;
-	padding-top: 10px;
+	font-size: 14px;
+	font-weight: 400;
+	padding-top: 5px;
 	margin: 0;
 	text-align: center;
 	${media.md`
@@ -78,7 +81,7 @@ export default props => (
 		<Body>
 			<By>{ props.make ? 'Hecho' : 'Escrito'} por</By>
 			<Name to="/about">Dante Calderón</Name>
-			<About>Contribuidor de Software libre(@linux, @git). Desarrollador Web utilizando React, Node y Mongo. También me gusta desarrollar videojuegos, puedes ver los que he creado en mi <Link to="/portfolio">portafolio</Link>.</About>			
+			<About>Contribuidor de Software libre(@linux, @git). Desarrollador Web utilizando React, Node y Mongo. También me gusta desarrollar videojuegos, puedes ver los que he creado en mi <Link className='default' to="/portfolio">portafolio</Link>.</About>
 		</Body>
 	</Container>
 )

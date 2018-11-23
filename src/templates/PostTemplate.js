@@ -17,10 +17,10 @@ export const Post = (props) => {
       <div className="Post__header">
         <div className="Post__header__data">
           <h1 className="Post__title">{ props.frontmatter.title }</h1>
-          <p>{props.editLink}</p>
           {
             props.contentComponent &&
             <AuthorPost
+              editLink={props.editLink}
               date={ props.frontmatter.date }
               timeToRead={props.timeToRead ? props.timeToRead : '3'}
               avatar={props.avatar}/>

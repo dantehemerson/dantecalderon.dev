@@ -8,6 +8,7 @@ import AuthorPost from '../components/AuthorPost'
 import Layout from './TemplateLayout'
 import 'prismjs/themes/prism.css'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
+import { getLinkEditPost } from '../utils'
 
 export const Post = (props) => {
   const PostContent = props.contentComponent || Content
@@ -16,6 +17,7 @@ export const Post = (props) => {
       <div className="Post__header">
         <div className="Post__header__data">
           <h1 className="Post__title">{ props.frontmatter.title }</h1>
+          <p>{props.editLink}</p>
           {
             props.contentComponent &&
             <AuthorPost
@@ -58,6 +60,7 @@ export default class BlogPostTemplate extends React.Component {
           content={ post.html }
           contentComponent={ HTMLContent }
           image={ post.fields.image.childImageSharp.sizes }
+          editLink={getLinkEditPost(post.fileAbsolutePath)}
           avatar={ this.props.data.avatar }/>
       </Layout>
     )
@@ -82,6 +85,7 @@ export const pageQuery = graphql`
       html
       htmlAst
       timeToRead
+      fileAbsolutePath
       frontmatter {
         title
         subtitle

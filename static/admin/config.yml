@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: dantehemerson/dcweb
 
 media_folder: static/img

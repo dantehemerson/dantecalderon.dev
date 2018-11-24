@@ -60,7 +60,7 @@ const HeaderHome = ({ data }) => (
           <Title>{ data.site.siteMetadata.title }</Title>
           <Subtitle>{ data.site.siteMetadata.subtitle }</Subtitle>
           <Social/>
-          <ButtonAbout href="/about" >SOBRE MÍ</ButtonAbout>
+          <ButtonAbout href="/about" >ABOUT ME</ButtonAbout>
         </div>
         <div className="col-xs-12 col-lg-7">
           <Rotational avatar={ data.avatar }/>

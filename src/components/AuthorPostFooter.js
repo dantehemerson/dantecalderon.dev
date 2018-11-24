@@ -79,9 +79,9 @@ export default props => (
 			<Image sizes={ props.avatar.sizes } />
 		</div>
 		<Body>
-			<By>{ props.make ? 'Hecho' : 'Escrito'} por</By>
+			<By>{ props.make ? 'Made with ❤' : 'Written'} by</By>
 			<Name to="/about">Dante Calderón</Name>
-			<About>Contribuidor de Software libre(@linux, @git). Desarrollador Web utilizando React, Node y Mongo. También me gusta desarrollar videojuegos, puedes ver los que he creado en mi <Link className='default' to="/portfolio">portafolio</Link>.</About>
+			<About>Hi, I'm Dante Calderón, web developer. Click <Link className='default' to="/about">here</Link> if you want know more about me or checkout my <Link className='default' to="/portfolio">portafolio</Link>.</About>
 		</Body>
 	</Container>
 )

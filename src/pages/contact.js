@@ -22,17 +22,17 @@ class Contact extends React.Component {
 				<Layout location={ this.props.location } active={ pages.contact }>
 					<div className="Contact">
 						<SEO
-						  title="Contacto"
+						  title="Contact"
 						  url={`${siteUrl}/contact`}
-						/>		
+						/>
 						<Header
-							title='Contacto'
-							description={['Antes que nada, gracias por visitar mi blog. Si tienes alguna pregunta, quieres que trabajemos juntos o quieres dejarme unas palabras. Me encantaría escucharte. Puedes enviarme un email a ',<b>dantehemerson@gmail.com</b>, ':']}
+							title='Contact'
+							description={['First of all, thanks for visiting my blog. If you have any questions, you want to work with me or you want to leave me some words. I would love to hear you. You can send me an email to ',<b>dantehemerson@gmail.com</b>, ':']}
 							color='#61b865'
 							bottom='24px'/>
 						<ContactSocial />
-						<ContactFormWrapper>															
-							<ContactForm/>								
+						<ContactFormWrapper>
+							<ContactForm/>
 						</ContactFormWrapper>
 					</div>
 				</Layout>

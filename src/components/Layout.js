@@ -22,7 +22,6 @@ class Layout extends React.Component {
           <link
           href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Gentium+Book+Basic:400,400i,700,700i" rel="stylesheet"/>
           <meta name="distribution" content="global"/>
-          <meta httpEquiv="Content-Language" content="es" />
           <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
           <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
           <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />

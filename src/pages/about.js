@@ -20,9 +20,9 @@ class About extends React.Component {
 						  url={`${siteUrl}/about`}
 						/>
 						<Header
-							title='Sobre Mí'
-							description='Hola, soy Dante Calderón soy desarrollador web. Me gusta construir cosas con Nodejs y trabajo principalmente con React, Redux, Gatsby, Nextjs y todo el ecosistema de React.'
-							color='#3384a0'/>						
+							title='ABOUT'
+							description="Hi, I'm Dante Calderón, web developer. I like to build things with Nodejs and I work with React, Redux, Gatsby, Nextjs and the entire React ecosystem."
+							color='#3384a0'/>
 						<div className="container">
 							<div className="row center-xs">
 									<div className="About__img-container col-xs-12 col-md-6">
@@ -31,10 +31,10 @@ class About extends React.Component {
 										</div>
 									</div>
 									<div className="About__interests col-xs-12 col-md-6 text-left first-md">
-										<h3 className="About__interests__title">Intereses</h3>
+										<h3 className="About__interests__title">Interests</h3>
 										<ul className="About__interests__list">
 											<li className="About__interests__item" >
-												<i className="ai"></i>Inteligencia Artificial
+												<i className="ai"></i>Artificial Intelligence
 											</li>
 											<li className="About__interests__item" >
 												<i className="ml"></i>Machine Learning
@@ -49,12 +49,12 @@ class About extends React.Component {
 												<i className="game"></i>Games Development
 											</li>
 											<li className="About__interests__item" >
-												<i className="back"></i>Data, data and more data
+												<i className="back"></i>Backend Development
 												</li>
 										</ul>
 								</div>
-							</div>						
-						</div>					
+							</div>
+						</div>
 						<Stack/>
 					</div>
 				</Layout>

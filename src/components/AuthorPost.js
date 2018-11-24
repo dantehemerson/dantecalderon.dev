@@ -88,13 +88,13 @@ export default props => (
 		<Image sizes={ props.avatar.sizes } />
 		<Body>
 			<Name>
-				<Author to="/about">Dante Calderón</Author> <b>|</b> <span>{ props.date } · { props.timeToRead } min de lectura</span>
+				<Author to="/about">Dante Calderón</Author> <b>|</b> <span>{ props.date } · { props.timeToRead } min read</span>
       </Name>
       <Edit
-        title='Editar en Github'
+        title='Edit on Github'
         className='default' href={props.editLink} target='__blank'>
         <img src='https://icongr.am/fontawesome/github.svg' alt='Edit on Github'/>
-        <span>Editar en Github</span>
+        <span>Edit on Github</span>
       </Edit>
     </Body>
 	</Container>

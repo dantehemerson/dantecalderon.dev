@@ -8,7 +8,7 @@ import { media } from '../styles'
 import Layout from '../components/Layout'
 
 const Container = styled.main`
-	display: flex;	
+	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
@@ -18,7 +18,7 @@ const Container = styled.main`
 
 const Title = styled.h1`
 	text-align: center;
-	font-size: 16px;	
+	font-size: 16px;
 	padding: 0 10px 25px 10px;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -39,17 +39,17 @@ const Button = styled(AwesomeButton)`
 
 `
 
-export default props => (		
+export default props => (
 	<Layout location={ props.location } simple>
 		<Container>
 			<Helmet>
-				<title>{`Ops :(`}</title>
+				<title>{`404 Error`}</title>
 			</Helmet>
 			<Image src={image}/>
-			<Title>No encontramos lo que buscabas</Title>		
+			<Title>Page not found</Title>
 			<Button
 				href='/'
-				>IR AL INICIO</Button>
-		</Container>		
+				>GO TO HOME</Button>
+		</Container>
 	</Layout>
 )

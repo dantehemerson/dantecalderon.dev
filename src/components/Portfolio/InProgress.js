@@ -27,8 +27,8 @@ const InProcess = styled.div`
 `
 
 export default props => (
-  <InProcess title='Aún estoy trabajando en esto...'>
+  <InProcess title="I'm still working on it...">
     <img alt='In Progress' src='https://icongr.am/entypo/circular-graph.svg?color=ffffff'/>
-    <span>En Progreso</span>
+    <span>In Progress</span>
   </InProcess>
 )

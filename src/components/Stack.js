@@ -19,8 +19,8 @@ export default props => (
 		<Header
 			top='10px'
 			bottom='30px'
-			title='Mi Stack'
-			description='Estos son los lenguajes y herramietas que se utilizar.'/>
+			title='My Stack'
+			description='These are my skills'/>
 		{
 			stack.map((group, index) => <Group key={index} group={group} />)
 		}

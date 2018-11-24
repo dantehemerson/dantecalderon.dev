@@ -14,11 +14,11 @@ class Portfolio extends React.Component {
 		return (
       <Layout location={ this.props.location } active={ pages.portfolio }>
         <SEO
-          title="Portafolio"
+          title="Portfolio"
           url={`${siteUrl}/portfolio`}/>
         <Header
-          title='Portafolio'
-          description={['Estos son algunos de mis proyectos, para ver más proyectos revisa mi ', <a key='link' target='__blank' href='https://github.com/dantehemerson'>Github</a>, '.']}
+          title='Portfolio'
+          description={['These are some of my projects, to see more projects check my ', <a key='link' target='__blank' href='https://github.com/dantehemerson'>Github</a>, '.']}
           bottom='40px'/>
         <List posts={posts}/>
      </Layout>

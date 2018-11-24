@@ -3,7 +3,7 @@ module.exports = {
    siteMetadata: {
       title: 'Dante Calderón',
       subtitle: 'Javascript / Node.js Developer',
-      description: 'Dante Hemerson Calderón Vasquez, Programmer',
+      description: `Hi, I'm Dante Calderón, web developer. I like to build things with Nodejs and I work with React, Redux, Gatsby, Nextjs and the entire React ecosystem.`,
       siteUrl: 'https://dantecalderon.com',
       disqusShortname: 'dantecalderon',
       social: [
@@ -15,11 +15,11 @@ module.exports = {
          { title: 'Instagram', link: 'https://instagram.com/dantehemerson',  icon: 'instagram' },
       ],
       menu: [
-         { title: 'Inicio', id: '', to: '/', icon: 'home'},
+         { title: 'Home', id: '', to: '/', icon: 'home'},
          { title: 'Blog', id: 'Blog', to: '/blog', icon: 'home'},
-         { title: 'Sobre Mí', id: 'About', to: '/about', icon: 'home'},
-         { title: 'Portafolio', id: 'Portfolio', to: '/portfolio', icon: 'home'},
-         { title: 'Contacto', id: 'Contact', to: '/contact', icon: 'home'},
+         { title: 'About', id: 'About', to: '/about', icon: 'home'},
+         { title: 'Portfolio', id: 'Portfolio', to: '/portfolio', icon: 'home'},
+         { title: 'Contact', id: 'Contact', to: '/contact', icon: 'home'},
       ]
    },
    plugins: [

@@ -23,7 +23,7 @@ export const Project = props => {
                 website={ props.frontmatter.website }
               />
               { !props.frontmatter.finished &&
-                <Message title='Proyecto en progreso...'>Este proyecto aún no está terminado. Estoy trabajando en ello.</Message> }
+                <Message title='Project in progress...'>This project is not finished yet, I'm working on it.</Message> }
             </div>
           </div>
           <div style={{

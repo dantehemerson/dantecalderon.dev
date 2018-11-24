@@ -32,6 +32,7 @@ const Title = styled.h1`
   text-align: center;
   font-family: 'Gentium Book Basic';
   color: #363636;
+  margin-bottom: 0;
   ${media.sm`
     font-size: 4.4rem;
   `}

@@ -2,35 +2,39 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Item from './PortfolioItem'
-import Wrapper from '../Wrapper'
+import { media } from '../../styles'
 
-const ItemWrapper = styled.div`
-  padding: 14px 14px !important;
+const Wrapper = styled.div`
+  display: grid;
+  max-width: 1080px;
+  margin: 0 auto;
+  grid-template-columns: minmax(min-content, 590px);
+  justify-content: center;
+  grid-gap: 30px;
+  padding: 0 13px;
+  ${media.md`
+    grid-template-columns: 1fr 1fr;
+  `}
 `
 
 export default props => (
-  <Wrapper
-    maxWidth='1075px'
-    justifyContent='center'
-    wrap='true'>
+  <Wrapper>
     {
       props.posts.map(( { node }, index) => {
         return (
-          <ItemWrapper className="col-xs-12 col-sm-11 col-md-6" key={index}>
-            <Item
-              data={
-                {
-                  title: node.frontmatter.title,
-                  subtitle: node.frontmatter.subtitle,
-                  thumbnail: node.fields.image.childImageSharp.sizes,
-                  path: `/${node.fields.slug}`,
-                  tags: node.frontmatter.tags,
-                  repository: node.frontmatter.repository,
-                  website: node.frontmatter.website
-                }
+          <Item
+            data={
+            {
+                title: node.frontmatter.title,
+                subtitle: node.frontmatter.subtitle,
+                thumbnail: node.fields.image.childImageSharp.sizes,
+                path: `/${node.fields.slug}`,
+                tags: node.frontmatter.tags,
+                repository: node.frontmatter.repository,
+                website: node.frontmatter.website
               }
-              finished={node.frontmatter.finished}/>
-          </ItemWrapper>
+            }
+            finished={node.frontmatter.finished}/>
         )
       })
     }

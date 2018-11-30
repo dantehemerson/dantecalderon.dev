@@ -25,7 +25,8 @@ const type = [
   'CMS',
   'Query Languages',
   'JS MVC Framework',
-  'Cloud Content Management System'
+  'Cloud Content Management System',
+	'Command Laguage'
 ]
 
 const groups = [
@@ -77,6 +78,7 @@ const groups = [
       { name: 'Apache', icon: 'apache-original-wordmark.svg', background: 'white', type: type[2] },
       { name: 'Travis CI', icon: 'travisci.png', type: type[17], about: "A hosted continuous integration service for open source and private projects" },
       { name: 'Circle CI', icon: 'circleci.svg', background: 'white', type: type[17], about: "CircleCI’s continuous integration and delivery platform helps software teams rapidly release code with confidence." },
+      { name: 'Bash', icon: 'bash_shell.png', type: type[27], about: "Bourne Again SHell." },
       //{ name: 'Github', icon: 'github-original.svg', background: 'white', type: type[12], about: "Powerful collaboration, review, and code management for open source and private development projects." },
     ]
   },

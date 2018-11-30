@@ -26,7 +26,7 @@ const type = [
   'Query Languages',
   'JS MVC Framework',
   'Cloud Content Management System',
-	'Command Laguage'
+	'Command Language'
 ]
 
 const groups = [

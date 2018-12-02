@@ -1,4 +1,4 @@
 # Redirect default Netlify subdomain to primary domain
 https://dantecalderon.netlify.com/* https://dantecalderon.com/:splat 301!
-/mejores-practicas-con-react /blog/mejores-practicas-con-react 302
-/conceptos-basicos-de-redux /blog/conceptos-basicos-de-redux 302
+/mejores-practicas-con-react /blog/mejores-practicas-con-react 301
+/conceptos-basicos-de-redux /blog/conceptos-basicos-de-redux 301

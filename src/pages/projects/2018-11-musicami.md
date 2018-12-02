@@ -34,6 +34,6 @@ stack:
 client: Personal
 repository: 'https://github.com/dantehemerson/musicami'
 licence: MIT
-website: 'https://dantehemerson.github.io/musicami/'
+website: 'https://musicami.ml'
 ---
 Free open source music player

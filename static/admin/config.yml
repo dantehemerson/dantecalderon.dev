@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: github
   repo: dantehemerson/dantecalderon.com
 
 media_folder: static/img

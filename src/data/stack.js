@@ -26,17 +26,19 @@ const type = [
   'Query Languages',
   'JS MVC Framework',
   'Cloud Content Management System',
-	'Command Language'
+	'Command Language',
+  'Templating Languages & Extensions'
 ]
 
 const groups = [
   {
     title: 'Languages',
     items: [
-      { name: 'Javascript', icon: 'javascript-original.svg', background: '#f0db4f', type: type[1], about: 'Lightweight, interpreted, object-oriented language with first-class functions' },
+      { name: 'JavaScript', icon: 'javascript-original.svg', background: '#f0db4f', type: type[1], about: 'Lightweight, interpreted, object-oriented language with first-class functions' },
       { name: 'Python', icon: 'python-original.svg', type: type[1], about: "Python is a clear and powerful object-oriented programming language, comparable to Perl, Ruby, Scheme, or Java."},
       { name: 'C++', icon: 'cplusplus-original.svg', type: type[1], about: "Has imperative, object-oriented and generic programming features, while also providing the facilities for low level memory manipulation"},
-      { name: 'PHP', icon: 'php-original.svg', background: 'white', type: type[1], about: "A popular general-purpose scripting language that is especially suited to web development"},
+      { name: 'TypeScript', icon: 'typescript.svg', type: type[28], about: 'A superset of JavaScript that compiles to clean JavaScript output' },
+      { name: 'Go', icon: 'go.svg', type: type[1], about: 'An open source programming language that makes it easy to build simple, reliable, and efficient software' }
     ]
   },
   {

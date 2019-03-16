@@ -7,14 +7,14 @@ For an overview of the project structure please refer to the [Gatsby documentati
 
 Make sure that you have the Gatsby CLI program installed:
 ```sh
-npm install --global gatsby-cli
+npm install -g gatsby-cli
 ```
 
 ## Installation
 
 Install packages
 ```sh
-npm i
+yarn
 ```
 
 And run:

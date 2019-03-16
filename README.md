@@ -7,7 +7,7 @@ For an overview of the project structure please refer to the [Gatsby documentati
 
 Make sure that you have the Gatsby CLI program installed:
 ```sh
-npm install --g gatsby-cli
+npm install -g gatsby-cli
 ```
 
 ## Installation

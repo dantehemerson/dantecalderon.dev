@@ -7,6 +7,8 @@ import SEO from '../components/SEO'
 import Layout from '../components/Layout'
 import Stack from '../components/Stack'
 import Header from '../components/Header'
+import AllSocial from '../components/About/AllSocial'
+
 import { pages } from '../utils'
 
 class About extends React.Component {
@@ -56,6 +58,7 @@ class About extends React.Component {
 							</div>
 						</div>
 						<Stack/>
+            <AllSocial/>
 					</div>
 				</Layout>
 		)

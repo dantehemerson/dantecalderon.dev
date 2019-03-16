@@ -1,8 +1,8 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import Group from './Group'
 import Header from '../components/Header'
-import styled from 'styled-components'
 
 import stack from '../data/stack'
 

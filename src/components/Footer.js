@@ -78,7 +78,7 @@ export default props => (
       <Container>
         <Social>
           {
-            data.site.siteMetadata.social.map(item => (
+            data.site.siteMetadata.social.slice(0, 4).map(item => (
               <Icon key={item.title} target="_blank" href={item.link}>
                 <img alt={`${item.title} - ${data.site.siteMetadata.title}`}
                   src={`https://icongr.am/fontawesome/${item.icon}.svg?size=20&color=282a2d`}/>

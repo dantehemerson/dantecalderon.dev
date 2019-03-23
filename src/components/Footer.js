@@ -86,7 +86,7 @@ export default props => (
             ))
           }
         </Social>
-        <Copy><span className='copytext'>© 2018 - All rights reserved.</span> Made with <span className='heart'>❤</span> by <Link to='/about' target="_blank" rel="noopener noreferrer">{ data.site.siteMetadata.title }</Link></Copy>
+        <Copy><span className='copytext'>© { new Date().getFullYear() } - All rights reserved.</span> Made with <span className='heart'>❤</span> by <Link to='/about' target="_blank" rel="noopener noreferrer">{ data.site.siteMetadata.title }</Link></Copy>
       </Container>
     )}/>
 )

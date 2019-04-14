@@ -62,7 +62,7 @@ const Image = styled.img`
   width: 50px;
   height: 50px;
   border-radius: 3px;
-  margin-bottom: 6px;
+  margin-bottom: 0;
   box-shadow: 0 0 4px #191919;
   &:hover + ${Tooltip} {
     opacity: 1;
@@ -95,14 +95,23 @@ const Type = styled.p`
 
 export default props => (
   <Item>
-    <Image
+    <a
       style={{
-        background: props.background ? props.background : 'transparent',
-        boxShadow: props.background ? '0 0 4px #191919' : '0 0 0 transparent'
+        marginBottom: `7px`,
+        display: `flex`
       }}
-      alt="img"
-      src={withPrefix('icons/' + props.icon)}
-    />
+      href={props.url}
+    >
+      <Image
+        style={{
+          background: props.background ? props.background : 'transparent',
+          boxShadow: props.background ? '0 0 4px #191919' : '0 0 0 transparent'
+        }}
+        alt="img"
+        href={props.url}
+        src={withPrefix('icons/' + props.icon)}
+      />
+    </a>
     {props.about && (
       <Tooltip>
         <p>

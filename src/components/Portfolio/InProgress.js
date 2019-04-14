@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-
 const InProcess = styled.div`
   width: 100px;
   height: 22px;
@@ -28,7 +27,7 @@ const InProcess = styled.div`
 
 export default props => (
   <InProcess title="I'm still working on it...">
-    <img alt='In Progress' src='https://icongr.am/entypo/circular-graph.svg?color=ffffff'/>
+    <img alt="In Progress" src="https://icongr.am/entypo/circular-graph.svg?color=ffffff" />
     <span>In Progress</span>
   </InProcess>
 )

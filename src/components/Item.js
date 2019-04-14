@@ -17,8 +17,7 @@ const Item = styled.div`
   justify-content: center;
   ${media.sm`
     width: 33.3333%;
-  `}
-  ${media.md`
+  `} ${media.md`
     width: 25%;
   `}
   @media (min-width: 932px) {
@@ -41,7 +40,7 @@ const Tooltip = styled.div`
   padding: 3px 3px;
   opacity: 0;
   z-index: 333;
-  transition: .3s;
+  transition: 0.3s;
   box-shadow: 0 0 0px 1px #ddd;
   p {
     position: relative;
@@ -85,7 +84,7 @@ const Type = styled.p`
   margin-top: 6px;
   font-size: 13px;
   color: #969696;
-  background: #3D3D3D;
+  background: #3d3d3d;
   border-radius: 3px;
   font-weight: 400;
   width: 100%;
@@ -95,24 +94,31 @@ const Type = styled.p`
 `
 
 export default props => (
-	<Item>
-		<Image
-			style={{
-				background: (props.background ? props.background : 'transparent'),
-				boxShadow: (props.background ? '0 0 4px #191919' : '0 0 0 transparent' )
-			}}
-			alt="img"
-			src={ withPrefix('icons/' + props.icon) }/>
-		{
-			props.about &&
-			<Tooltip><p>{ props.about }<span></span></p></Tooltip>
-		}
-		<Name>{ props.name }</Name>
-		<div style={{
+  <Item>
+    <Image
+      style={{
+        background: props.background ? props.background : 'transparent',
+        boxShadow: props.background ? '0 0 4px #191919' : '0 0 0 transparent'
+      }}
+      alt="img"
+      src={withPrefix('icons/' + props.icon)}
+    />
+    {props.about && (
+      <Tooltip>
+        <p>
+          {props.about}
+          <span />
+        </p>
+      </Tooltip>
+    )}
+    <Name>{props.name}</Name>
+    <div
+      style={{
         width: '100%',
         height: '50px'
-      }}>
-			<Type>{props.type}</Type>
-		</div>
-	</Item>
+      }}
+    >
+      <Type>{props.type}</Type>
+    </div>
+  </Item>
 )

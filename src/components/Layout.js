@@ -19,9 +19,8 @@ class Layout extends React.Component {
     return (
       <React.Fragment>
         <Helmet>
-          <link
-          href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Gentium+Book+Basic:400,400i,700,700i" rel="stylesheet"/>
-          <meta name="distribution" content="global"/>
+          <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Gentium+Book+Basic:400,400i,700,700i" rel="stylesheet" />
+          <meta name="distribution" content="global" />
           <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
           <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
           <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
@@ -37,19 +36,14 @@ class Layout extends React.Component {
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
           {/* Pinterest Domain Verify*/}
-          <meta name="p:domain_verify" content="c397688e54fbd5c1a5dc40a1db9b809f"/>
+          <meta name="p:domain_verify" content="c397688e54fbd5c1a5dc40a1db9b809f" />
         </Helmet>
-        <ThemeProvider theme={ defaultTheme }>
+        <ThemeProvider theme={defaultTheme}>
           <>
-            <GlobalStyles/>
-            <Navbar active={ active }/>
-            <div className="Dyamic-container">
-              { this.props.children }
-            </div>
-            {
-              !simple &&
-              <Footer/>
-            }
+            <GlobalStyles />
+            <Navbar active={active} />
+            <div className="Dyamic-container">{this.props.children}</div>
+            {!simple && <Footer />}
           </>
         </ThemeProvider>
       </React.Fragment>

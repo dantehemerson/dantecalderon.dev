@@ -14,29 +14,26 @@ const Wrapper = styled.div`
   padding: 0 13px;
   ${media.md`
     grid-template-columns: 1fr 1fr;
-  `}
+  `};
 `
 
 export default props => (
   <Wrapper>
-    {
-      props.posts.map(( { node }, index) => {
-        return (
-          <Item
-            data={
-            {
-                title: node.frontmatter.title,
-                subtitle: node.frontmatter.subtitle,
-                thumbnail: node.fields.image.childImageSharp.sizes,
-                path: `/${node.fields.slug}`,
-                tags: node.frontmatter.tags,
-                repository: node.frontmatter.repository,
-                website: node.frontmatter.website
-              }
-            }
-            finished={node.frontmatter.finished}/>
-        )
-      })
-    }
+    {props.posts.map(({ node }, index) => {
+      return (
+        <Item
+          data={{
+            title: node.frontmatter.title,
+            subtitle: node.frontmatter.subtitle,
+            thumbnail: node.fields.image.childImageSharp.sizes,
+            path: `/${node.fields.slug}`,
+            tags: node.frontmatter.tags,
+            repository: node.frontmatter.repository,
+            website: node.frontmatter.website
+          }}
+          finished={node.frontmatter.finished}
+        />
+      )
+    })}
   </Wrapper>
 )

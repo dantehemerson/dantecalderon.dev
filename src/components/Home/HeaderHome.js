@@ -22,7 +22,7 @@ const Container = styled(Wrapper)`
     height: 100vh;
     min-height: 500px;
     padding-top: 38px;
-  `}
+  `};
 `
 
 const Title = styled.h1`
@@ -35,7 +35,7 @@ const Title = styled.h1`
   margin-bottom: 0;
   ${media.sm`
     font-size: 4.4rem;
-  `}
+  `};
 `
 
 const Subtitle = styled.h2`
@@ -48,24 +48,22 @@ const Subtitle = styled.h2`
 `
 
 const HeaderHome = ({ data }) => (
-  <div style={{
-    background: '#f3f3f3',
-    backgroundImage: `url(${grain_image})`
-    }}>
-    <Container
-      wrap='wrap'
-      maxWidth='1100px'
-      className='row'
-      justifyContent='center'>
-        <div className="col-xs-12 col-lg-5 center-xs">
-          <Title>{ data.site.siteMetadata.title }</Title>
-          <Subtitle>{ data.site.siteMetadata.subtitle }</Subtitle>
-          <Social/>
-          <ButtonAbout href="/about" >ABOUT ME</ButtonAbout>
-        </div>
-        <div className="col-xs-12 col-lg-7">
-          <Rotational avatar={ data.avatar }/>
-        </div>
+  <div
+    style={{
+      background: '#f3f3f3',
+      backgroundImage: `url(${grain_image})`
+    }}
+  >
+    <Container wrap="wrap" maxWidth="1100px" className="row" justifyContent="center">
+      <div className="col-xs-12 col-lg-5 center-xs">
+        <Title>{data.site.siteMetadata.title}</Title>
+        <Subtitle>{data.site.siteMetadata.subtitle}</Subtitle>
+        <Social />
+        <ButtonAbout href="/about">ABOUT ME</ButtonAbout>
+      </div>
+      <div className="col-xs-12 col-lg-7">
+        <Rotational avatar={data.avatar} />
+      </div>
     </Container>
   </div>
 )
@@ -74,11 +72,7 @@ export default props => (
   <StaticQuery
     query={graphql`
       query {
-        avatar: imageSharp (fluid: {
-          originalName: {
-            regex: "/avatar.jpg/"
-          }
-        }) {
+        avatar: imageSharp(fluid: { originalName: { regex: "/avatar.jpg/" } }) {
           sizes(maxWidth: 360) {
             ...GatsbyImageSharpSizes_tracedSVG
           }
@@ -92,5 +86,6 @@ export default props => (
         }
       }
     `}
-    render={ data => <HeaderHome data={data} {...props}/> }/>
+    render={data => <HeaderHome data={data} {...props} />}
+  />
 )

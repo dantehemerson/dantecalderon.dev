@@ -11,7 +11,7 @@ const Group = styled.div`
 
 const Title = styled.p`
   background: #555;
-  color: #CCC;
+  color: #ccc;
   display: inline-block;
   width: 140px;
   font-size: 12px;
@@ -32,12 +32,12 @@ const ItemsWrapper = styled.div`
 `
 
 export default ({ group }) => (
-	<Group>
-		<Title>{group.title}</Title>
-		<ItemsWrapper>
-			{
-				group.items.map((item, index) => <Item key={index} {...item}/>)
-			}
-		</ItemsWrapper>
-	</Group>
+  <Group>
+    <Title>{group.title}</Title>
+    <ItemsWrapper>
+      {group.items.map((item, index) => (
+        <Item key={index} {...item} />
+      ))}
+    </ItemsWrapper>
+  </Group>
 )

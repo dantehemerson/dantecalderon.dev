@@ -10,7 +10,7 @@ export default class SEO extends PureComponent {
     image: PropTypes.string,
     url: PropTypes.string,
     description: PropTypes.string,
-    isPost: PropTypes.bool,
+    isPost: PropTypes.bool
   }
 
   static defaultProps = {
@@ -23,37 +23,37 @@ export default class SEO extends PureComponent {
 
   render() {
     const { image, url, description, isPost } = this.props
-    const title = (this.props.title === "" ? "" :  `${this.props.title} · `) + "Dante Calderón"
+    const title = (this.props.title === '' ? '' : `${this.props.title} · `) + 'Dante Calderón'
     const schemaOrgJSONLD = [
-        {
+      {
         '@context': 'http://schema.org',
         '@type': 'WebSite',
-        'sameAs': [
+        sameAs: [
           'https://twitter.com/dantehemerson',
           'https://www.facebook.com/Dante-Calder%C3%B3n-600909820246917/',
           'https://plus.google.com/u/0/101542534057875808813',
           'https://www.instagram.com/dantehemerson',
           'https://www.github.com/dantehemerson',
-          'https://www.linkedin.com/in/dantehemerson',
+          'https://www.linkedin.com/in/dantehemerson'
         ],
         url: url,
         name: title,
-        alternateName: description,
-        }
+        alternateName: description
+      }
     ]
 
     if (isPost) {
-        schemaOrgJSONLD.push([
-          {
+      schemaOrgJSONLD.push([
+        {
           '@context': 'http://schema.org',
           '@type': 'BreadcrumbList',
-          'sameAs': [
+          sameAs: [
             'https://twitter.com/dantehemerson',
             'https://www.facebook.com/Dante-Calder%C3%B3n-600909820246917/',
             'https://plus.google.com/u/0/101542534057875808813',
             'https://www.instagram.com/dantehemerson',
             'https://www.github.com/dantehemerson',
-            'https://www.linkedin.com/in/dantehemerson',
+            'https://www.linkedin.com/in/dantehemerson'
           ],
           itemListElement: [
             {
@@ -62,21 +62,21 @@ export default class SEO extends PureComponent {
               item: {
                 '@id': url,
                 name: title,
-                image: image,
+                image: image
               }
             }
           ]
-          },
+        },
         {
           '@context': 'http://schema.org',
           '@type': 'BlogPosting',
-          'sameAs': [
+          sameAs: [
             'https://twitter.com/dantehemerson',
             'https://www.facebook.com/Dante-Calder%C3%B3n-600909820246917/',
             'https://plus.google.com/u/0/101542534057875808813',
             'https://www.instagram.com/dantehemerson',
             'https://www.github.com/dantehemerson',
-            'https://www.linkedin.com/in/dantehemerson',
+            'https://www.linkedin.com/in/dantehemerson'
           ],
           url: url,
           name: title,
@@ -86,23 +86,21 @@ export default class SEO extends PureComponent {
             '@type': 'ImageObject',
             url: image
           },
-          description,
+          description
         }
-        ])
+      ])
     }
 
     return (
       <Helmet>
-        <title>{ title }</title>
-        <meta name="description" content={ description }/>
-        <meta name="image" content={ image }/>
-        <script type="application/ld+json">
-          {JSON.stringify(schemaOrgJSONLD)}
-        </script>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="image" content={image} />
+        <script type="application/ld+json">{JSON.stringify(schemaOrgJSONLD)}</script>
 
         <meta property="fb:app_id" content="302184056577324" />
         <meta property="og:url" content={url} />
-        <meta property="og:type" content={ isPost ? "article" : "website" }/>
+        <meta property="og:type" content={isPost ? 'article' : 'website'} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={image} />
@@ -117,4 +115,3 @@ export default class SEO extends PureComponent {
     )
   }
 }
-

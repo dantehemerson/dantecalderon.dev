@@ -8,13 +8,11 @@ import { pages } from '../utils'
 
 class Index extends React.Component {
   render() {
-    const { siteUrl } = this.props.data.site.siteMetadata    
+    const { siteUrl } = this.props.data.site.siteMetadata
     return (
-      <Layout location={ this.props.location } active={ pages.home }>          
-        <SEO
-          title=""
-          url={ siteUrl }/>
-        <Header/>               
+      <Layout location={this.props.location} active={pages.home}>
+        <SEO title="" url={siteUrl} />
+        <Header />
       </Layout>
     )
   }
@@ -23,7 +21,7 @@ class Index extends React.Component {
 export const queryBlog = graphql`
   query {
     site {
-      siteMetadata {        
+      siteMetadata {
         siteUrl
       }
     }

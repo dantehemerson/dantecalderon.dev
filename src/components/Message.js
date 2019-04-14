@@ -24,7 +24,7 @@ const Title = styled.p`
 
 export default props => (
   <Container>
-    { props.title && <Title>{props.title}</Title> }
-    { props.children }
+    {props.title && <Title>{props.title}</Title>}
+    {props.children}
   </Container>
 )

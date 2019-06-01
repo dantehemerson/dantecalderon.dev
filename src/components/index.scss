@@ -177,66 +177,6 @@ $serif-normal: 'Gentium Book Basic', serif;
 }
 
 .Navbar {
-  height: $navbar-height;
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-  box-shadow: 0px 1px 0px 0px #f3f3f3;
-  background: white;
-  transition: 0.3s;
-  &.inicio {
-    background: transparent;
-  }
-  &.noTop {
-    background: white;
-  }
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-  }
-
-  a {
-    text-decoration: none;
-    color: $navbar-link-color;
-    font-family: $sans-serif-font;
-    font-weight: 600;
-    &:hover {
-      background: #f4f4f4;
-    }
-  }
-
-  &__titlewrap {
-    display: flex;
-    align-items: center;
-    border-radius: 3px;
-    padding-right: 3px;
-  }
-
-  &__title {
-    text-transform: capitalize;
-    font-weight: 900 !important;
-    color: $navbar-link-color;
-    opacity: 0.9;
-  }
-  &__logo {
-    width: 32px;
-    height: 32px;
-    border-radius: 3px;
-    margin-right: 8px;
-  }
-
   &__shadow {
     @media (max-width: 767px) {
       position: fixed;

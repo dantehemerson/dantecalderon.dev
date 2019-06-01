@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import styled from 'styled-components'
 
 const icons = [
   <svg
@@ -79,6 +80,71 @@ const icons = [
   </svg>
 ]
 
+const Wrapper = styled.nav`
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    &:hover {
+      background: #f4f4f4;
+    }
+  }
+
+  height: 61px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0px 1px 0px 0px #f3f3f3;
+  background: white;
+  transition: 0.3s;
+  &.inicio {
+    background: transparent;
+  }
+  &.noTop {
+    background: white;
+  }
+`
+
+const NavbarContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 1064px;
+`
+
+const Title = styled.p`
+  text-transform: capitalize;
+  font-weight: 900 !important;
+  color: $navbar-link-color;
+  opacity: 0.9;
+`
+
+const Logo = styled(Img)`
+  width: 32px;
+  height: 32px;
+  border-radius: 3px;
+  margin-right: 8px;
+`
+
+const TitleWrapper = styled(Link)`
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  padding-right: 3px;
+`
+
 class Navbar extends React.Component {
   state = {
     navbarIsTop: true,
@@ -126,24 +192,23 @@ class Navbar extends React.Component {
     const { active } = this.props
     const { menu, title, subtitle } = this.props.data.site.siteMetadata
     return (
-      <nav className={'Navbar ' + (active === '' ? 'inicio ' : '') + (menuIsOpen ? ' open ' : '') + (this.state.navbarIsTop ? '' : 'noTop')} id="Navbar">
+      <Wrapper className={'Navbar ' + (active === '' ? 'inicio ' : '') + (menuIsOpen ? ' open ' : '') + (this.state.navbarIsTop ? '' : 'noTop')} id="Navbar">
         <div
           onClick={e => {
             this.setState({ menuIsOpen: false })
           }}
           className={`Navbar__shadow ${menuIsOpen ? 'open' : ''}`}
         />
-        <div className="container">
-          <Link
-            className="Navbar__titlewrap"
+        <NavbarContainer>
+          <TitleWrapper
             onClick={e => {
               this.setState({ menuIsOpen: false })
             }}
             to="/"
           >
-            <Img alt={subtitle} className="Navbar__logo" sizes={this.props.data.logo.sizes} />
-            <p className="Navbar__title">{title}</p>
-          </Link>
+            <Logo alt={subtitle} sizes={this.props.data.logo.sizes} />
+            <Title>{title}</Title>
+          </TitleWrapper>
           <div className="Navbar__navwrap">
             <button onClick={this.handleToggle} id="navbarToggler" className={`Navbar__toggler ${menuIsOpen ? 'open' : ''}`}>
               <span className="Navbar__toggler__burger-menu" />
@@ -165,8 +230,8 @@ class Navbar extends React.Component {
               ))}
             </ul>
           </div>
-        </div>
-      </nav>
+        </NavbarContainer>
+      </Wrapper>
     )
   }
 }

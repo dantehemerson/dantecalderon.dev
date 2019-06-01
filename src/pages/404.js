@@ -1,11 +1,10 @@
 import React from 'react'
+import { AwesomeButton } from 'react-awesome-button'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import { AwesomeButton } from 'react-awesome-button'
-
 import image from '../assets/images/404.jpg'
-import { media } from '../styles'
 import Layout from '../components/Layout'
+import { media } from '../styles'
 
 const Container = styled.main`
   display: flex;

@@ -325,8 +325,6 @@ $serif-normal: 'Gentium Book Basic', serif;
 
   &__item {
     width: 98%;
-    &:last-child {
-    }
     @include breakpoint(md) {
       border-top: 0 solid transparent !important;
       width: auto;

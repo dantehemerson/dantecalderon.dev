@@ -206,6 +206,9 @@ export const GlobalStyles = createGlobalStyle`
   .gatsby-highlight pre[class*="language-"].line-numbers {
     padding-left: 2.8em;
   }
+  code[class*="language-"], pre[class*="language-"] {
+    font-size: initial !important;
+  }
   .gatsby-highlight {
     background-color: #f7f9fa;
     border: 1px solid #dbe3e7;

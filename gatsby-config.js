@@ -23,8 +23,7 @@ module.exports = {
       { title: 'Pinterest', link: 'https://www.pinterest.com/dantehemerson/', icon: 'pinterest' },
       { title: 'Steam', link: 'https://steamcommunity.com/id/dantehemerson/', icon: 'steam' },
       { title: 'Twitch', link: 'https://www.twitch.tv/dantehemerson', icon: 'twitch' },
-      { title: 'Youtube', link: 'https://www.youtube.com/channel/UCCbtGSRgh1RFYysgaZkoE0A', icon: 'youtube-play' },
-      { title: 'Steam', link: 'https://steamcommunity.com/id/dantehemerson/', icon: 'steam' }
+      { title: 'Youtube', link: 'https://www.youtube.com/channel/UCCbtGSRgh1RFYysgaZkoE0A', icon: 'youtube-play' }
     ],
     menu: [
       { title: 'Home', id: '', to: '/', icon: 'home' },

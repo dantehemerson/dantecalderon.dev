@@ -1,13 +1,11 @@
+import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
 import { AwesomeButton } from 'react-awesome-button'
 import styled from 'styled-components'
-
-import Social from '../Social'
-import Rotational from '../Rotational'
-import Wrapper from '../Wrapper'
-import { media } from '../../styles'
 import grain_image from '../../assets/images/grain.png'
+import { media } from '../../styles'
+import Rotational from '../Rotational'
+import Social from '../Social'
 
 const ButtonAbout = styled(AwesomeButton)`
   width: 141px !important;

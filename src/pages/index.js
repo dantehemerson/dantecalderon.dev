@@ -1,9 +1,8 @@
-import React from 'react'
 import { graphql } from 'gatsby'
-
-import SEO from '../components/SEO'
-import Layout from '../components/Layout'
+import React from 'react'
 import Header from '../components/Home/HeaderHome'
+import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 import { pages } from '../utils'
 
 class Index extends React.Component {
@@ -13,6 +12,12 @@ class Index extends React.Component {
       <Layout location={this.props.location} active={pages.home}>
         <SEO title="" url={siteUrl} />
         <Header />
+        <div
+          style={{
+            background: '#22292c',
+            height: '200px'
+          }}
+        />
       </Layout>
     )
   }

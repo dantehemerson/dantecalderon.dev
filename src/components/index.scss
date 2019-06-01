@@ -1,29 +1,3 @@
-@import '../assets/styles/flex-box-grid';
-
-.twitter--hover:hover {
-  background: #00aced !important;
-}
-
-.github--hover:hover {
-  background: #333 !important;
-}
-
-.instagram--hover:hover {
-  background: #966842 !important;
-}
-
-.linkedin--hover:hover {
-  background: #0077b5 !important;
-}
-
-.medium--hover:hover {
-  background: #0bdc6d !important;
-}
-
-.dev--hover:hover {
-  background: white !important;
-}
-
 /** Colors **/
 $primary-color: #1976d2;
 
@@ -886,26 +860,6 @@ $post-titles-font: 'Open Sans';
   100% {
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.5);
     transform: translatey(0px);
-  }
-}
-.icon_svg {
-  width: 21px;
-  height: 21px;
-}
-
-.ToolbarButton {
-  text-decoration: none !important;
-  &:first-child {
-    margin-right: 6px;
-  }
-  font-size: 13px;
-
-  .icon {
-    width: 17px;
-    top: 3px;
-    position: relative;
-    height: 100%;
-    margin-right: 6px;
   }
 }
 

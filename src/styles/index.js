@@ -1,6 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
-import { css } from 'styled-components'
-
+import { createGlobalStyle, css } from 'styled-components'
 import sliderStyles from './slider'
 
 const sizes = {
@@ -27,7 +25,6 @@ export const defaultTheme = {
 }
 
 export const GlobalStyles = createGlobalStyle`
-
   body {
     margin: 0 !important;
     padding: 0 !important;
@@ -232,4 +229,51 @@ export const GlobalStyles = createGlobalStyle`
   .gatsby-highlight::-webkit-scrollbar-track {
     background: #e2e9ec;
   }
+
+
+
+  .twitter--hover:hover {
+    background: #00aced !important;
+  }
+
+  .github--hover:hover {
+    background: #333 !important;
+  }
+
+  .instagram--hover:hover {
+    background: #966842 !important;
+  }
+
+  .linkedin--hover:hover {
+    background: #0077b5 !important;
+  }
+
+  .medium--hover:hover {
+    background: #0bdc6d !important;
+  }
+
+  .dev--hover:hover {
+    background: white !important;
+  }
+  .icon_svg {
+  width: 21px;
+  height: 21px;
+}
+
+.ToolbarButton {
+  text-decoration: none !important;
+  &:first-child {
+    margin-right: 6px;
+  }
+  font-size: 13px;
+
+  .icon {
+    width: 17px;
+    top: 3px;
+    position: relative;
+    height: 100%;
+    margin-right: 6px;
+  }
+}
+
 `

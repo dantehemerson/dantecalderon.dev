@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 const SocialWrapper = styled.div`
   text-align: center;
+  padding-bottom: 30px;
 `
 const SocialIcon = styled.a`
   margin: 0 5px !important;

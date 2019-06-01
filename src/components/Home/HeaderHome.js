@@ -14,14 +14,20 @@ const ButtonAbout = styled(AwesomeButton)`
   margin-top: 34px !important;
 `
 
-const Container = styled(Wrapper)`
+const Container = styled.div`
   min-height: 600px;
+  max-width: 1080px;
+  display: grid;
   padding-top: 100px;
   margin: 0 auto !important;
-  ${media.lg`
+  grid-template-columns: minmax(min-content, 590px);
+  justify-content: center;
+  align-items: center;
+  ${media.md`
     height: 100vh;
     min-height: 500px;
     padding-top: 38px;
+    grid-template-columns: 1fr 1fr;
   `};
 `
 
@@ -36,6 +42,17 @@ const Title = styled.h1`
   ${media.sm`
     font-size: 4.4rem;
   `};
+`
+
+const MainInfoWrapper = styled.div`
+  // justify-content: center;
+  text-align: center;
+  padding: 0 5px;
+  // width: 70%;
+`
+
+const RotationalWrapper = styled.div`
+  padding: 0 20px;
 `
 
 const Subtitle = styled.h2`
@@ -55,15 +72,15 @@ const HeaderHome = ({ data }) => (
     }}
   >
     <Container wrap="wrap" maxWidth="1100px" className="row" justifyContent="center">
-      <div className="col-xs-12 col-lg-5 center-xs">
+      <MainInfoWrapper>
         <Title>{data.site.siteMetadata.title}</Title>
         <Subtitle>{data.site.siteMetadata.subtitle}</Subtitle>
         <Social />
         <ButtonAbout href="/about">ABOUT ME</ButtonAbout>
-      </div>
-      <div className="col-xs-12 col-lg-7">
+      </MainInfoWrapper>
+      <RotationalWrapper className="col-xs-12 col-lg-7">
         <Rotational avatar={data.avatar} />
-      </div>
+      </RotationalWrapper>
     </Container>
   </div>
 )

@@ -1,5 +1,6 @@
 import { createGlobalStyle, css } from 'styled-components'
 import sliderStyles from './slider'
+import constants from './constants'
 
 const sizes = {
   xl: 1170,
@@ -8,9 +9,25 @@ const sizes = {
   sm: 576
 }
 
+const sizesMax = {
+  xl: 1169,
+  lg: 991,
+  md: 767,
+  sm: 575
+}
+
 export const media = Object.keys(sizes).reduce((accumulator, label) => {
   accumulator[label] = (...args) => css`
     @media (min-width: ${sizes[label]}px) {
+      ${css(...args)};
+    }
+  `
+  return accumulator
+}, {})
+
+export const mediaMax = Object.keys(sizesMax).reduce((accumulator, label) => {
+  accumulator[label] = (...args) => css`
+    @media (max-width: ${sizes[label]}px) {
       ${css(...args)};
     }
   `
@@ -34,6 +51,22 @@ export const GlobalStyles = createGlobalStyle`
     color: #333;
   }
 
+  .container {
+  padding-left: ${constants.containerPaddingLg};
+  padding-right: ${constants.containerPaddingLg};
+  max-width: 1130px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &--full {
+    @extend .container;
+    max-width: 1280px;
+  }
+  &--blog {
+    @extend .container;
+    max-width: 1340px;
+  }
+}
   a.default {
     color: #4a90e2;
     border-bottom: 1px dotted #5b9fef;

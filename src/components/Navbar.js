@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import { media, mediaMax } from '../styles'
 
 const icons = [
   <svg
@@ -143,6 +144,112 @@ const TitleWrapper = styled(Link)`
   align-items: center;
   border-radius: 3px;
   padding-right: 3px;
+  ${media.md`
+		flex-direction: row;
+		align-items: inherit;
+	`};
+`
+
+const Shadow = styled.div`
+  ${mediaMax.md`
+    position: fixed;
+    left: 900%;
+    top: 0;
+    width: 900%;
+    height: 100%;
+    transition: 0;
+    &.open {
+      left: 0;
+      transition: background 0.4s;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 20;
+    }
+  `};
+`
+
+const NavbarNav = styled.ul`
+  z-index: 30;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  box-shadow: 0px 0px 0px 1px #f3f3f3;
+  width: 75%;
+  max-width: 420px;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background: white;
+  transition: all 0s !important;
+  * {
+    transition: all 0s !important;
+  }
+  transition: right 0.4s !important;
+  right: -102%;
+  &.open {
+    transition: right 0.4s !important;
+    left: auto;
+    right: 0;
+  }
+  ${media.sm`
+   width: 60%;
+  `}
+
+  ${media.md`
+    right: auto;
+    width: 100%;
+    max-width: initial !important;
+    box-shadow: 0px 0px 0px 0px transparent;
+    opacity: 1;
+    visibility: visible;
+    background: transparent !important;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: auto;
+  `}
+`
+
+const Item = styled.li`
+  width: 98%;
+  ${media.md`
+    border-top: 0 solid transparent !important;
+    width: auto;
+    margin-left: 2px;
+    &:last-child {
+      border-bottom: 0px solid #eeeded;
+    }
+  `}
+`
+
+const ItemLink = styled(Link)`
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 8px;
+  text-align: center;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ${media.md`
+    transition: all 0.4s !important;
+    padding: 6px 16px !important;
+  `}
+  &.active {
+    color: $primary-color !important;
+    svg path,
+    svg polygon {
+      fill: $primary-color !important;
+      color: $primary-color !important;
+    }
+  }
+  .icon-item {
+    padding-right: 4px;
+    position: relative;
+    width: 21px;
+    height: 21px;
+  }
 `
 
 class Navbar extends React.Component {
@@ -192,12 +299,12 @@ class Navbar extends React.Component {
     const { active } = this.props
     const { menu, title, subtitle } = this.props.data.site.siteMetadata
     return (
-      <Wrapper className={'Navbar ' + (active === '' ? 'inicio ' : '') + (menuIsOpen ? ' open ' : '') + (this.state.navbarIsTop ? '' : 'noTop')} id="Navbar">
-        <div
+      <Wrapper className={(active === '' ? 'inicio ' : '') + (menuIsOpen ? ' open ' : '') + (this.state.navbarIsTop ? '' : 'noTop')} id="Navbar">
+        <Shadow
           onClick={e => {
             this.setState({ menuIsOpen: false })
           }}
-          className={`Navbar__shadow ${menuIsOpen ? 'open' : ''}`}
+          className={`${menuIsOpen ? 'open' : ''}`}
         />
         <NavbarContainer>
           <TitleWrapper
@@ -209,26 +316,26 @@ class Navbar extends React.Component {
             <Logo alt={subtitle} sizes={this.props.data.logo.sizes} />
             <Title>{title}</Title>
           </TitleWrapper>
-          <div className="Navbar__navwrap">
+          <div>
             <button onClick={this.handleToggle} id="navbarToggler" className={`Navbar__toggler ${menuIsOpen ? 'open' : ''}`}>
               <span className="Navbar__toggler__burger-menu" />
             </button>
-            <ul className={`Navbar__nav ${menuIsOpen ? 'open' : ''}`}>
+            <NavbarNav className={`${menuIsOpen ? 'open' : ''}`}>
               {menu.map((item, index) => (
-                <li className="Navbar__item" key={index}>
-                  <Link
+                <Item key={index}>
+                  <ItemLink
                     onClick={e => {
                       this.setState({ menuIsOpen: false })
                     }}
-                    className={`Navbar__link ${active === item.id ? 'active' : ''}`}
+                    className={`${active === item.id ? 'active' : ''}`}
                     to={item.to}
                   >
                     {icons[index]}
                     {item.title}
-                  </Link>
-                </li>
+                  </ItemLink>
+                </Item>
               ))}
-            </ul>
+            </NavbarNav>
           </div>
         </NavbarContainer>
       </Wrapper>

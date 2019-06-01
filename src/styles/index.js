@@ -1,6 +1,7 @@
 import { createGlobalStyle, css } from 'styled-components'
 import sliderStyles from './slider'
 import constants from './constants'
+import { withPrefix } from 'gatsby'
 
 const sizes = {
   xl: 1170,
@@ -306,6 +307,71 @@ export const GlobalStyles = createGlobalStyle`
     position: relative;
     height: 100%;
     margin-right: 6px;
+  }
+}
+
+.About {
+  font-size: 15px;
+  &__interests {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: left;
+
+    &__list {
+      list-style: none;
+    }
+    &__item {
+      margin-bottom: calc(1.3rem / 2);
+      i {
+        width: 27px;
+        height: 27px;
+        display: inline-block;
+        position: relative;
+        margin-right: 10px;
+        top: 6px;
+        background-size: cover;
+      }
+      i.ai {
+        background-image: url("${withPrefix('icons/ai.svg')}");
+      }
+      i.ml {
+        background-image: url("${withPrefix('icons/machine-learning.svg')}");
+      }
+      i.ds {
+        background-image: url("${withPrefix('icons/data.svg')}");
+      }
+      i.js {
+        background-image: url("${withPrefix('icons/javascript.svg')}");
+      }
+      i.cp {
+        background-image: url("${withPrefix('icons/algorithm.svg')}");
+      }
+      i.back {
+        background-image: url("${withPrefix('icons/server.svg')}");
+      }
+      i.more {
+        background-image: url("${withPrefix('icons/web-development.svg')}");
+      }
+      i.game {
+        background-image: url("${withPrefix('icons/pacman.svg')}");
+      }
+    }
+  }
+
+  &__interests__title {
+    font-family: 'Open Sans';
+    text-transform: uppercase;
+    background: #3384a0;
+    color: white;
+    font-size: 16px;
+    padding: 10px 85px;
+    display: inline-block;
+  }
+  &__img-container {
+    align-self: center;
+  }
+  &__img {
+    border: 5px solid #3384a0;
   }
 }
 

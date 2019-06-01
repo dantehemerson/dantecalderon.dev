@@ -252,6 +252,74 @@ const ItemLink = styled(Link)`
   }
 `
 
+const ba = `
+  transition: all 0.25s;
+  position: absolute;
+  content: '';
+  left: 0;
+  height: 2px;
+  width: 30px;
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.88);
+`
+const baExpanded = `
+  transition: all 0.25s;
+  top: 0;
+`
+
+const NavbarToggler = styled.button`
+  border-radius: 0;
+  padding: 0;
+  border: 0;
+  width: 30px;
+  height: 18px;
+  top: 4px;
+  position: relative;
+  background: transparent;
+  cursor: pointer;
+  z-index: 100;
+  &:focus {
+    border: 0;
+    outline-width: 0;
+  }
+  ${media.md`
+    display: none;
+  `}
+
+  &.open {
+    .burger-menu {
+      background: transparent !important;
+      transition: all 0.25s;
+      &:after {
+        ${baExpanded}
+        transform: rotate(45deg);
+      }
+      &:before {
+        ${baExpanded}
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  .burger-menu {
+    ${ba}
+    top: 8px;
+    &:after {
+      ${ba}
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 0;
+    }
+    &:before {
+      ${ba}
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 0;
+    }
+  }
+`
+
 class Navbar extends React.Component {
   state = {
     navbarIsTop: true,
@@ -317,9 +385,9 @@ class Navbar extends React.Component {
             <Title>{title}</Title>
           </TitleWrapper>
           <div>
-            <button onClick={this.handleToggle} id="navbarToggler" className={`Navbar__toggler ${menuIsOpen ? 'open' : ''}`}>
-              <span className="Navbar__toggler__burger-menu" />
-            </button>
+            <NavbarToggler onClick={this.handleToggle} id="navbarToggler" className={`Navbar__toggler ${menuIsOpen ? 'open' : ''}`}>
+              <span className="burger-menu" />
+            </NavbarToggler>
             <NavbarNav className={`${menuIsOpen ? 'open' : ''}`}>
               {menu.map((item, index) => (
                 <Item key={index}>

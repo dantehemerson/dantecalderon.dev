@@ -101,6 +101,8 @@ export default props => (
         display: `flex`
       }}
       href={props.url}
+      target="_blank"
+      rel="noopener noreferrer"
     >
       <Image
         style={{
@@ -108,7 +110,6 @@ export default props => (
           boxShadow: props.background ? '0 0 4px #191919' : '0 0 0 transparent'
         }}
         alt="img"
-        href={props.url}
         src={withPrefix('icons/' + props.icon)}
       />
     </a>

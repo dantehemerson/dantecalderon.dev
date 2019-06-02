@@ -171,7 +171,15 @@ const groups = [
         background: 'white',
         about: 'GraphQL server for Express, Connect, Hapi, Koa and more'
       },
-      { url: 'https://google.com', name: 'Firebase', icon: 'firebase.png', background: '#039be6', type: type[9], about: 'The Realtime App Platform' }
+      { url: 'https://google.com', name: 'Firebase', icon: 'firebase.png', background: '#039be6', type: type[9], about: 'The Realtime App Platform' },
+      {
+        url: 'https://serverless.com/',
+        name: 'Serverless (Learning...)',
+        icon: 'serverless.svg',
+        background: '#1e1e1e',
+        type: type[9],
+        about: 'The most widely-adopted toolkit for building serverless applications'
+      }
     ]
   },
   {

@@ -4,7 +4,7 @@ module.exports = {
     title: 'Dante Calderón',
     subtitle: 'Javascript / Node.js Developer',
     description: `Hi, I'm Dante Calderón, web developer. I like to build things with Nodejs and I work with React, Redux, Gatsby, Nextjs and the entire React ecosystem.`,
-    siteUrl: 'https://dantecalderon.com',
+    siteUrl: 'https://dantecalderon.dev',
     disqusShortname: 'dantecalderon',
     social: [
       { title: 'Github', link: 'https://github.com/dantehemerson', icon: 'github' },

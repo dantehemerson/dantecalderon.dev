@@ -14,16 +14,16 @@ export default class SEO extends PureComponent {
   }
 
   static defaultProps = {
-    title: 'Dante Calderón',
-    image: `https://dantecalderon.com${avatar}`,
-    url: 'https://dantecalderon.com/',
-    description: 'Dante Hemerson Calderón Vasquez - Programador',
+    title: 'Dante Calderon',
+    image: `https://dantecalderon.dev${avatar}`,
+    url: 'https://dantecalderon.dev/',
+    description: 'Dante Calderon - Backend Nodejs Developer',
     isPost: false
   }
 
   render() {
     const { image, url, description, isPost } = this.props
-    const title = (this.props.title === '' ? '' : `${this.props.title} · `) + 'Dante Calderón'
+    const title = (this.props.title === '' ? '' : `${this.props.title} · `) + 'Dante Calderon'
     const schemaOrgJSONLD = [
       {
         '@context': 'http://schema.org',
@@ -80,7 +80,7 @@ export default class SEO extends PureComponent {
           ],
           url: url,
           name: title,
-          alternateName: `${url} | Dante Calderón`,
+          alternateName: `${url} | Dante Calderon`,
           headline: title,
           image: {
             '@type': 'ImageObject',

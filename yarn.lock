@@ -5466,10 +5466,10 @@ gatsby-plugin-manifest@^2.1.1:
     semver "^5.6.0"
     sharp "^0.22.1"
 
-gatsby-plugin-netlify-cms@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-4.0.2.tgz#d5c4b4b5c74c72ae0c795173ccb8c93b9a499386"
-  integrity sha512-Q0S4fe5xBLuxlWa0JRCTT54wEebKLVOOcm/XDmA6OiwTKAhpXGb63CfulvmUQK6j3ptvWh9VeaAiRk7TJBa50g==
+gatsby-plugin-netlify-cms@^4.0.1:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-4.1.2.tgz#208578142bdfe63d641507b305b1eab016913be0"
+  integrity sha512-9Lzt1z1kmqoTwW1gXXA6cgrR4Rn3V5YUxOqbHOS2pZBre0Hy2zUKdBihOLYNMpQVvPlV5XuTaQvntIX3GqX9sA==
   dependencies:
     "@pieh/friendly-errors-webpack-plugin" "1.7.0-chalk-2"
     html-webpack-exclude-assets-plugin "^0.0.7"
@@ -8214,9 +8214,9 @@ lodash.merge@^4.6.0:
   integrity sha512-AOYza4+Hf5z1/0Hztxpm2/xiPZgi/cjMqdnKTUWTBSKchJlxXXuUSxCCl8rJlf4g6yww/j6mA8nC8Hw/EZWxKQ==
 
 lodash.mergewith@^4.6.1:
-  version "4.6.1"
-  resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.1.tgz#639057e726c3afbdb3e7d42741caa8d6e4335927"
-  integrity sha512-eWw5r+PYICtEBgrBE5hhlT6aAa75f411bgDz/ZL2KZqYV03USvucsxcHUIlGTDTECs1eunpI7HOV7U+WLDvNdQ==
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.2.tgz#617121f89ac55f59047c7aec1ccd6654c6590f55"
+  integrity sha512-GK3g5RPZWTRSeLSpgP8Xhra+pnjBC56q9FZYe1d5RN3TJ35dbkGy3YqBSMbyCrlbi+CM9Z3Jk5yTL7RCsqboyQ==
 
 lodash.pullall@^4.2.0:
   version "4.2.0"

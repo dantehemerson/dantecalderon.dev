@@ -192,6 +192,7 @@ $serif-normal: 'Gentium Book Basic', serif;
 
 $post-body-font: 'Gentium Book Basic';
 $post-titles-font: 'Open Sans';
+
 .Post {
   padding-top: 80px;
   font-family: $post-body-font;
@@ -201,139 +202,9 @@ $post-titles-font: 'Open Sans';
     max-width: 100% !important;
   }
   &__header {
-    margin-bottom: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    &__data {
-      width: 100%;
-      max-width: 760px;
-      padding: 12px;
-    }
-    &__image {
-      width: 100%;
-      max-width: 960px;
-    }
-  }
-
-  &.full-image {
-    .Post__header {
-      margin-bottom: 50px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      &__data {
-        width: 100%;
-        max-width: 760px;
-        padding: 12px;
-      }
-
-      &__image {
-        width: 100%;
-      }
-    }
-  }
-
-  &.medium-img {
-    .Post__header {
-      margin-bottom: 50px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      &__data {
-        width: 100%;
-        max-width: 760px;
-        padding: 12px;
-      }
-
-      &__image {
-        width: 100%;
-        max-width: 1000px;
-        & > img {
-          width: 100% !important;
-        }
-      }
-    }
-  }
-
-  &.normal-img {
-    .Post__header {
-      margin-bottom: 50px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      &__data {
-        width: 100%;
-        max-width: 760px;
-        padding: 12px;
-      }
-      &__image {
-        width: 100%;
-        max-width: 736px;
-      }
-    }
-  }
-
-  &.doble-column {
-    padding-top: 62px;
-    .Post__title {
-      font-family: $serif-normal;
-      font-size: 34px;
-      @include breakpoint(xxl) {
-        font-size: 52px;
-      }
-    }
-    .Post__header {
-      margin-bottom: 50px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-
-      &__data {
-        width: 100%;
-        max-width: 760px;
-        padding: 12px;
-        order: 2;
-      }
-      &__image {
-        width: 100%;
-        order: 1;
-
-        .gatsby-image-wrapper {
-          max-height: 400px;
-          width: 100%;
-        }
-      }
-
-      @include breakpoint(xxl) {
-        min-height: 400px;
-        margin-left: 65px;
-        margin-right: 65px;
-        flex-wrap: inherit;
-        &__data {
-          width: 100%;
-          max-width: 612px;
-          padding: 60px 60px 32px 0;
-          order: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-        &__image {
-          width: 100%;
-          max-width: 612px;
-          order: 2;
-          display: flex;
-          align-items: center;
-          .gatsby-image-outer-wrapper {
-            width: 100%;
-          }
-        }
-        /** Navbar **/
-        $navbar-height: 61px;
-        $navbar-link-color: #333;
-      }
-    }
+    max-width: 760px;
+    margin: 0 auto;
+    margin-bottom: 26px;
   }
 
   &__content {
@@ -445,7 +316,6 @@ $post-titles-font: 'Open Sans';
     }
   }
   &__footer {
-    // Contenedor de los comentarios y los posts recomendados
     background: #fafafa;
     padding-top: 30px;
   }

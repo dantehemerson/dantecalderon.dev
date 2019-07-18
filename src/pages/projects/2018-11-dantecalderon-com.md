@@ -3,7 +3,7 @@ model: project
 title: dantecalderon
 subtitle: My webpage
 description: Personal-website
-path: portfolio/dantecalderon
+path: dantecalderon
 thumbnail: /img/danteclderon-home.png
 images:
   - description: HOme page
@@ -21,6 +21,7 @@ images:
   - description: Post Page
     image: /img/dantecalderon-post.png
 date: 2018-11-06T20:32:07.279Z
+finished: true
 published: true
 style: default
 tags:

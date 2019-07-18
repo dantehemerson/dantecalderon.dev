@@ -1,0 +1,18 @@
+{
+  "files.exclude": {
+    "**/dist": true,
+    "**/node_modules": true,
+    "package-lock.json": true,
+    ".cache": true,
+    "public": true
+  },
+  "editor.formatOnSave": true,
+  "javascript.format.enable": false,
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "prettier.singleQuote": true,
+  "prettier.eslintIntegration": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.printWidth": 160,
+  "prettier.semi": false
+}

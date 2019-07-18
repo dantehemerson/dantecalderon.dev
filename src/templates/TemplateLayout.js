@@ -1,10 +1,9 @@
+import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
 import ReactDisqusComments from 'react-disqus-comments'
-import { StaticQuery, graphql } from 'gatsby'
-
 import AuthorPostFooter from '../components/AuthorPostFooter'
-import SEO from '../components/SEO'
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 import Share from '../components/Share'
 import { pages } from '../utils'
 
@@ -24,8 +23,8 @@ class Template extends React.Component {
       let y = body.scrollTop - contentY + 110
       let show = y >= 0 && y - 0 <= height - 340
 
-      if(this.state.show_share !== show) {
-        this.setState({ 'show_share': show })
+      if (this.state.show_share !== show) {
+        this.setState({ show_share: show })
       }
     }
 
@@ -33,35 +32,24 @@ class Template extends React.Component {
   }
 
   render() {
-    const { isPost, title, url, path } = this.props
+    const { isPost, title, image, description, path } = this.props
+    const { siteUrl, disqusShortname } = this.props.data.site.siteMetadata
     return (
-      <Layout location={ this.props.location } active={ isPost ? pages.blog : pages.portfolio }>
-          { this.props.children }
-          <div className="wrapper-post">
-            <div className="Foot__Share">
-              <Share title={title} url={ url }/>
-            </div>
-            <div className="Foot__AuthorPost">
-              <AuthorPostFooter avatar={this.props.data.avatar}/>
-            </div>
+      <Layout location={this.props.location} active={isPost ? pages.blog : pages.portfolio}>
+        <SEO title={title} image={`${siteUrl}${image}`} url={`${siteUrl}/${path}`} description={description} isPost={isPost} />
+        {this.props.children}
+        <div className="wrapper-post">
+          <div className="Foot__Share">
+            <Share title={title} url={`${siteUrl}/${path}`} />
           </div>
-          <div className="Post__footer">
-            <div id="disquser" className="container Disqus">
-              <ReactDisqusComments
-                shortname="dantecalderon"
-                identifier={ path }
-                title={ title }
-                url={ this.state.location }/>
-            </div>
-            {
-              isPost &&
-              <Share
-                fixed
-                show={ this.state.show_share }
-                title={title}
-                url={ url }/>
-            }
+          <AuthorPostFooter avatar={this.props.data.avatar} make={!isPost} />
+        </div>
+        <div className="Post__footer">
+          <div id="disquser" className="container Disqus">
+            <ReactDisqusComments shortname={disqusShortname} identifier={path} title={title} url={this.state.location} />
           </div>
+          {isPost && <Share fixed show={this.state.show_share} title={title} url={`${siteUrl}/${path}`} />}
+        </div>
       </Layout>
     )
   }
@@ -71,23 +59,19 @@ export default props => (
   <StaticQuery
     query={graphql`
       query {
-        avatar: imageSharp (fluid: {
-          originalName: {
-            regex: "/avatar.jpg/"
-          }
-        }) {
-          sizes(maxWidth: 360) {
+        avatar: imageSharp(fluid: { originalName: { regex: "/avatar.jpg/" } }) {
+          sizes(maxWidth: 180) {
             ...GatsbyImageSharpSizes_tracedSVG
           }
         }
         site {
           siteMetadata {
-            title
             siteUrl
-            subtitle
+            disqusShortname
           }
         }
       }
     `}
-    render={ data => <Template data={data} {...props}/> }/>
+    render={data => <Template data={data} {...props} />}
+  />
 )

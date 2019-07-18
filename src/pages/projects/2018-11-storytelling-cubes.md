@@ -3,7 +3,7 @@ model: project
 title: Storytelling Cubes
 subtitle: 'Create great stories, exploit your creativity.'
 description: Application that generate random cubes for create histories.
-path: portfolio/storytelling-cubes
+path: storytelling-cubes
 thumbnail: /img/storytellingcubes1.png
 images:
   - description: Home Page
@@ -15,6 +15,7 @@ images:
   - description: Settings Page Phone
     image: /img/storytellig-phone-4.png
 date: 2018-11-06T05:27:32.846Z
+finished: true
 published: true
 style: default
 tags:

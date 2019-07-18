@@ -3,6 +3,7 @@ import React from 'react'
 import ReactDisqusComments from 'react-disqus-comments'
 import AuthorPostFooter from '../components/AuthorPostFooter'
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 import Share from '../components/Share'
 import { pages } from '../utils'
 

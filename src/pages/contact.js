@@ -26,7 +26,7 @@ class Contact extends React.Component {
             title="Contact"
             description={[
               'First of all, thanks for visiting my blog. If you have any questions, you want to work with me or you want to leave me some words. I would love to hear you. You can send me an email to ',
-              <b>mail@dantecalderon.dev</b>,
+              <a href="mailto:mail@dantecalderon.dev">mail@dantecalderon.dev</a>,
               '.'
             ]}
             color="#61b865"

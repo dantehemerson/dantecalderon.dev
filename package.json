@@ -5,7 +5,7 @@
   "author": "Dante Calderón <dantehemerson@gmail.com>",
   "dependencies": {
     "@webcomponents/custom-elements": "1.2.4",
-    "ast-get-object": "1.8.24",
+    "ast-get-object": "1.8.31",
     "babel-plugin-styled-components": "1.10.1",
     "bluebird": "3.5.5",
     "gatsby": "2.9.4",

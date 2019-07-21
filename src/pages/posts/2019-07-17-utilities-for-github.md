@@ -1,9 +1,9 @@
 ---
 model: post
-title: Herramientas para mejorar la exploracion en Github
-description: Github es una de los sitios donde los programadores pasan gran parte de su tiempo, estas son algunas herramientas que te ayudaran a mejorar la experciencia explorando codigo en Github.
+title: Herramientas para mejorar la exploracion de codigo en Github
+description: Los programadores pasamos mucho tiempo en Github explorando codigo, hoy te voy a compartir algunas herramientas que me han sido utiles para la exploracion de codigo en Github.
 path: improve-github-with-tools
-thumbnail: /img/bit-manipulation.png
+thumbnail: /img/explore-code-github.jpg
 date: '2019-07-20T01:42:52-05:00'
 published: true
 style: normal-img
@@ -13,7 +13,7 @@ tags:
   - zen
 ---
 
-Hoy en dia los programadores pasamos mucho tiempo en Github explorando codigo, hoy te voy a compartir algunas herramientas que me han sido utiles para la exploracion de codigo en Github.
+Los programadores pasamos mucho tiempo en Github explorando codigo, hoy te voy a compartir algunas herramientas que me han sido utiles para la exploracion de codigo en Github.
 
 ### 1.- [Octotree](https://octotree.io)
 

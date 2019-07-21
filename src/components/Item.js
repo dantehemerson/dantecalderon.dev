@@ -59,16 +59,18 @@ const Tooltip = styled.div`
   }
 `
 
+const LinkTool = styled.a`
+  &:hover + ${Tooltip} {
+    opacity: 1;
+    bottom: calc(102%);
+  }
+`
 const Image = styled.img`
   width: 50px;
   height: 50px;
   border-radius: 3px;
   margin-bottom: 0;
   box-shadow: 0 0 4px #191919;
-  &:hover + ${Tooltip} {
-    opacity: 1;
-    bottom: calc(102%);
-  }
 `
 
 const Name = styled.h3`
@@ -96,7 +98,7 @@ const Type = styled.p`
 
 export default props => (
   <Item>
-    <a
+    <LinkTool
       style={{
         marginBottom: `7px`,
         display: `flex`
@@ -113,9 +115,10 @@ export default props => (
         alt="img"
         src={withPrefix('icons/' + props.icon)}
       />
-    </a>
+    </LinkTool>
     {props.about && (
       <Tooltip>
+        holo
         <p>
           {props.about}
           <span />

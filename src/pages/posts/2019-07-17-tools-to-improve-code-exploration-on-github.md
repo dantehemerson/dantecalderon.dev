@@ -16,7 +16,7 @@ tags:
 
 Los programadores pasamos mucho tiempo en Github explorando código, hoy te voy a compartir algunas herramientas que me han sido utiles para la exploracion de código en Github.
 
-### 1.- [Octotree](https://octotree.io)
+### 1.- [Octotree](https://www.octotree.io/)
 
 Octotree es un plugin de **Chrome** nos permite tener un arbol de archivos para acceder facilmente a ellos.
 

@@ -29,8 +29,8 @@ module.exports = {
       { title: 'Home', id: '', to: '/', icon: 'home' },
       { title: 'Blog', id: 'Blog', to: '/blog', icon: 'home' },
       { title: 'About', id: 'About', to: '/about', icon: 'home' },
-      { title: 'Portfolio', id: 'Portfolio', to: '/portfolio', icon: 'home' },
-      { title: 'Contact', id: 'Contact', to: '/contact', icon: 'home' }
+      { title: 'Portfolio', id: 'Portfolio', to: '/portfolio', icon: 'home' }
+      //{ title: 'Contact', id: 'Contact', to: '/contact', icon: 'home' }
     ]
   },
   plugins: [

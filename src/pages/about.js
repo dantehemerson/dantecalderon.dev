@@ -6,6 +6,7 @@ import AllSocial from '../components/About/AllSocial'
 import Header from '../components/Header'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
+import ContactSocial from '../components/ContactSocial'
 import Stack from '../components/Stack'
 import { pages } from '../utils'
 
@@ -17,6 +18,12 @@ class About extends React.Component {
         <div className="About">
           <SEO title="About" url={`${siteUrl}/about`} />
           <Header title="ABOUT" description={get(this, 'props.data.site.siteMetadata.description')} color="#3384a0" />
+          <p>
+            First of all, thanks for visiting my blog. If you have any questions, you want to work with me or you want
+            to leave me some words. I would love to hear you. You can send me an email to
+            <a href="mailto:mail@dantecalderon.dev">mail@dantecalderon.dev</a>
+          </p>
+          <ContactSocial />
           <div className="container">
             <div className="row center-xs">
               <div className="About__img-container col-xs-12 col-md-6">

@@ -7,7 +7,7 @@ const ContactSocialWrapper = styled.div`
 `
 
 const Button = styled(AwesomeButton)`
-  margin: 0 3px !important;
+  margin: 14px 3px !important;
   .aws-btn__content {
     padding: 0 15px !important;
   }

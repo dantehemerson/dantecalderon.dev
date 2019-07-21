@@ -17,21 +17,40 @@ class About extends React.Component {
       <Layout location={this.props.location} active={pages.about}>
         <div className="About">
           <SEO title="About" url={`${siteUrl}/about`} />
-          <Header title="ABOUT" description={get(this, 'props.data.site.siteMetadata.description')} color="#3384a0" />
-          <p>
-            First of all, thanks for visiting my blog. If you have any questions, you want to work with me or you want
-            to leave me some words. I would love to hear you. You can send me an email to
-            <a href="mailto:mail@dantecalderon.dev">mail@dantecalderon.dev</a>
-          </p>
+          <Header title="ABOUT" color="#3384a0" />
+          <div
+            className="Post"
+            style={{
+              paddingTop: '20px'
+            }}
+          >
+            <div className="container Post__content">
+              <p>Hi, my name is Dante Calderon.</p>
+              <p>
+                First of all, thanks for visiting my blog. If you have any questions, you want to work with me or you
+                want to leave me some words. I would love to hear you.
+              </p>
+              <p>
+                You can send me an email to <a href="mailto:mail@dantecalderon.dev">mail@dantecalderon.dev</a> or
+                contact me for:
+              </p>
+            </div>
+          </div>
           <ContactSocial />
           <div className="container">
             <div className="row center-xs">
-              <div className="About__img-container col-xs-12 col-md-6">
-                <div className="About__img">
+              <div className="About__img-container">
+                <div
+                  style={{
+                    maxWidth: '400px',
+                    margin: '0 auto',
+                    border: '5px solid #3384a0'
+                  }}
+                >
                   <Img sizes={this.props.data.aboutImage.sizes} />
                 </div>
               </div>
-              <div className="About__interests col-xs-12 col-md-6 text-left first-md">
+              <div className="About__interests">
                 <h3 className="About__interests__title">Interests</h3>
                 <ul className="About__interests__list">
                   <li className="About__interests__item">

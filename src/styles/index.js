@@ -367,12 +367,6 @@ export const GlobalStyles = createGlobalStyle`
     padding: 10px 85px;
     display: inline-block;
   }
-  &__img-container {
-    align-self: center;
-  }
-  &__img {
-    border: 5px solid #3384a0;
-  }
 }
 
 `

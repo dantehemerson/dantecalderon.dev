@@ -34,8 +34,6 @@ La integracion con Github es mediante un [plugin](https://chrome.google.com/webs
 
 Es muy util ya que podemos trabajar desde cualquier computadora, además que es muy rápido ya que corre sobre un servidor.
 
-
-
 ### 3.- [GitHub Repository Size](https://chrome.google.com/webstore/detail/github-repository-size/apnjnioapinblneaedefcnopcjepgkci)
 
 Muestra el peso de un repositorio y sus archivos.

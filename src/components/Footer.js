@@ -1,8 +1,6 @@
+import { graphql, Link, StaticQuery } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
-import { StaticQuery, graphql } from 'gatsby'
-import { Link } from 'gatsby'
-
 import { media } from '../styles'
 
 const Container = styled.footer`
@@ -79,12 +77,16 @@ export default props => (
         <Social>
           {data.site.siteMetadata.social.slice(0, 4).map(item => (
             <Icon key={item.title} target="_blank" href={item.link}>
-              <img alt={`${item.title} - ${data.site.siteMetadata.title}`} src={`https://icongr.am/fontawesome/${item.icon}.svg?size=20&color=282a2d`} />
+              <img
+                alt={`${item.title} - ${data.site.siteMetadata.title}`}
+                src={`https://icongr.am/fontawesome/${item.icon}.svg?size=20&color=282a2d`}
+              />
             </Icon>
           ))}
         </Social>
         <Copy>
-          <span className="copytext">© {new Date().getFullYear()} - All rights reserved.</span> Made with <span className="heart">❤</span> by{' '}
+          <span className="copytext">© {new Date().getFullYear()} - All rights reserved.</span> Made with{' '}
+          <span className="heart">❤</span> by{' '}
           <Link to="/about" target="_blank" rel="noopener noreferrer">
             {data.site.siteMetadata.title}
           </Link>

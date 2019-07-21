@@ -1,13 +1,12 @@
-import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
+import React from 'react'
 import styled from 'styled-components'
-
 import ContactForm from '../components/ContactForm'
 import ContactSocial from '../components/ContactSocial'
-import SEO from '../components/SEO'
-import Layout from '../components/Layout'
 import Header from '../components/Header'
+import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 import { pages } from '../utils'
 
 const ContactFormWrapper = styled.div`

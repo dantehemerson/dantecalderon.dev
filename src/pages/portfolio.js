@@ -1,10 +1,9 @@
-import React from 'react'
 import { graphql } from 'gatsby'
-
-import SEO from '../components/SEO'
-import Layout from '../components/Layout'
+import React from 'react'
 import Header from '../components/Header'
+import Layout from '../components/Layout'
 import List from '../components/Portfolio/ProjectsList'
+import SEO from '../components/SEO'
 import { pages } from '../utils'
 
 class Portfolio extends React.Component {
@@ -40,7 +39,10 @@ export const queryPortfolio = graphql`
       }
     }
 
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { model: { eq: "project" } } }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { model: { eq: "project" } } }
+    ) {
       edges {
         node {
           fields {

@@ -54,21 +54,24 @@ const groups = [
         name: 'C++',
         icon: 'cplusplus-original.svg',
         type: type[1],
-        about: 'Has imperative, object-oriented and generic programming features, while also providing the facilities for low level memory manipulation'
+        about:
+          'Has imperative, object-oriented and generic programming features, while also providing the facilities for low level memory manipulation'
       },
       {
         url: 'https://google.com',
         name: 'Python',
         icon: 'python-original.svg',
         type: type[1],
-        about: 'Python is a clear and powerful object-oriented programming language, comparable to Perl, Ruby, Scheme, or Java.'
+        about:
+          'Python is a clear and powerful object-oriented programming language, comparable to Perl, Ruby, Scheme, or Java.'
       },
       {
         url: 'https://google.com',
         name: 'Go',
         icon: 'go.svg',
         type: type[1],
-        about: 'An open source programming language that makes it easy to build simple, reliable, and efficient software'
+        about:
+          'An open source programming language that makes it easy to build simple, reliable, and efficient software'
       }
     ]
   },
@@ -83,7 +86,14 @@ const groups = [
         type: type[20],
         about: 'Simple, flexible, fun javascript test framework for node.js & the browser'
       },
-      { url: 'https://google.com', name: 'Jest', icon: 'jest.png', background: 'white', type: type[20], about: 'Painless JavaScript Unit Testing' }
+      {
+        url: 'https://google.com',
+        name: 'Jest',
+        icon: 'jest.png',
+        background: 'white',
+        type: type[20],
+        about: 'Painless JavaScript Unit Testing'
+      }
     ]
   },
   {
@@ -105,7 +115,14 @@ const groups = [
         type: type[3],
         about: 'Predictable state container for JavaScript apps'
       },
-      { url: 'https://google.com', name: 'Gatsby', icon: 'gatsby.png', background: 'white', type: type[11], about: 'A Static Site Generator for React' },
+      {
+        url: 'https://google.com',
+        name: 'Gatsby',
+        icon: 'gatsby.png',
+        background: 'white',
+        type: type[11],
+        about: 'A Static Site Generator for React'
+      },
       {
         url: 'https://google.com',
         name: 'Next.js',
@@ -114,7 +131,13 @@ const groups = [
         type: type[8],
         about: 'A small framework for server-rendered universal JavaScript apps'
       },
-      { url: 'https://google.com', name: 'Vue · Vuex · Nuxt.js', icon: 'vuejs.svg', type: type[3], about: 'Reactive Components for Modern Web Interfaces' }
+      {
+        url: 'https://google.com',
+        name: 'Vue · Vuex · Nuxt.js',
+        icon: 'vuejs.svg',
+        type: type[3],
+        about: 'Reactive Components for Modern Web Interfaces'
+      }
       //{ url: 'https://google.com', name: 'Wordpress', icon: 'wordpress-plain.svg', background: 'white', type: type[23], about: "A semantic personal publishing platform with a focus on aesthetics, web standards, and usability"},
       //{ url: 'https://google.com', name: 'Contentful', icon: 'contentful.png', background: 'black', type: type[26], about: "Manage content once, publish it anywhere"},
     ]
@@ -127,7 +150,8 @@ const groups = [
         name: 'Node',
         icon: 'nodejs-original.svg',
         type: type[8],
-        about: "Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications"
+        about:
+          "Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications"
       },
       {
         url: 'https://google.com',
@@ -153,7 +177,14 @@ const groups = [
         type: type[0],
         about: "The world's most popular open source database"
       },
-      { url: 'https://google.com', name: 'MongoDB', icon: 'mongodb-original.svg', background: '#40474f', type: type[0], about: 'The database for giant ideas' },
+      {
+        url: 'https://google.com',
+        name: 'MongoDB',
+        icon: 'mongodb-original.svg',
+        background: '#40474f',
+        type: type[0],
+        about: 'The database for giant ideas'
+      },
       {
         url: 'https://google.com',
         name: 'PostgreSQL',
@@ -162,7 +193,14 @@ const groups = [
         about: 'A powerful, open source object-relational database system'
       },
       //{ url: 'https://google.com', name: 'Flask', icon: 'flask.jpg', background: 'white', type: type[10], about: "A microframework for Python based on Werkzeug, Jinja 2 and good intentions." },
-      { url: 'https://google.com', name: 'GraphQL', icon: 'graphql.svg', type: type[24], background: 'white', about: 'A data query language and runtime' },
+      {
+        url: 'https://google.com',
+        name: 'GraphQL',
+        icon: 'graphql.svg',
+        type: type[24],
+        background: 'white',
+        about: 'A data query language and runtime'
+      },
       {
         url: 'https://google.com',
         name: 'Apollo',
@@ -171,7 +209,14 @@ const groups = [
         background: 'white',
         about: 'GraphQL server for Express, Connect, Hapi, Koa and more'
       },
-      { url: 'https://google.com', name: 'Firebase', icon: 'firebase.png', background: '#039be6', type: type[9], about: 'The Realtime App Platform' },
+      {
+        url: 'https://google.com',
+        name: 'Firebase',
+        icon: 'firebase.png',
+        background: '#039be6',
+        type: type[9],
+        about: 'The Realtime App Platform'
+      },
       {
         url: 'https://serverless.com/',
         name: 'Serverless (Learning...)',
@@ -193,7 +238,13 @@ const groups = [
         type: type[14],
         about: 'An open source project to pack, ship and run any application as a lightweight container'
       },
-      { url: 'https://google.com', name: 'AWS', icon: 'amazonwebservices-original-wordmark.svg', background: 'white', type: type[16] },
+      {
+        url: 'https://google.com',
+        name: 'AWS',
+        icon: 'amazonwebservices-original-wordmark.svg',
+        background: 'white',
+        type: type[16]
+      },
       {
         url: 'https://google.com',
         name: 'Heroku',
@@ -203,7 +254,13 @@ const groups = [
       },
 
       //{ url: 'https://google.com', name: 'Nginx', icon: 'nginx-original.svg', background: '#333', type: type[2] },
-      { url: 'https://google.com', name: 'Apache', icon: 'apache-original-wordmark.svg', background: 'white', type: type[2] },
+      {
+        url: 'https://google.com',
+        name: 'Apache',
+        icon: 'apache-original-wordmark.svg',
+        background: 'white',
+        type: type[2]
+      },
       {
         url: 'https://google.com',
         name: 'Travis CI',
@@ -217,7 +274,8 @@ const groups = [
         icon: 'circleci.svg',
         background: 'white',
         type: type[17],
-        about: 'CircleCI’s continuous integration and delivery platform helps software teams rapidly release code with confidence.'
+        about:
+          'CircleCI’s continuous integration and delivery platform helps software teams rapidly release code with confidence.'
       },
       { url: 'https://google.com', name: 'Bash', icon: 'bash_shell.png', type: type[27], about: 'Bourne Again SHell.' }
       //{ url: 'https://google.com', name: 'Github', icon: 'github-original.svg', background: 'white', type: type[12], about: "Powerful collaboration, review, and code management for open source and private development projects." },

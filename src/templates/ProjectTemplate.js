@@ -1,14 +1,12 @@
-import React from 'react'
 import { graphql } from 'gatsby'
-
+import React from 'react'
 import Content, { HTMLContent } from '../components/Content'
+import Message from '../components/Message'
 import Toolbar from '../components/ProjectToolbar'
 import Sidebar from '../components/SidebarProject'
-import Tags from '../components/Tags'
 import Slider from '../components/Slider'
-
+import Tags from '../components/Tags'
 import Layout from './TemplateLayout'
-import Message from '../components/Message'
 
 export const Project = props => {
   const PostContent = props.contentComponent || Content
@@ -19,7 +17,9 @@ export const Project = props => {
           <h1 className="Post__title">{`${props.frontmatter.title}`}</h1>
           <h2 className="Post__subtitle">{props.frontmatter.subtitle}</h2>
           <Toolbar repository={props.frontmatter.repository} website={props.frontmatter.website} />
-          {!props.frontmatter.finished && <Message title="Project in progress...">This project is not finished yet, I'm working on it.</Message>}
+          {!props.frontmatter.finished && (
+            <Message title="Project in progress...">This project is not finished yet, I'm working on it.</Message>
+          )}
         </div>
       </div>
       <div

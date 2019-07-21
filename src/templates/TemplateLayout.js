@@ -36,7 +36,13 @@ class Template extends React.Component {
     const { siteUrl, disqusShortname } = this.props.data.site.siteMetadata
     return (
       <Layout location={this.props.location} active={isPost ? pages.blog : pages.portfolio}>
-        <SEO title={title} image={`${siteUrl}${image}`} url={`${siteUrl}/${path}`} description={description} isPost={isPost} />
+        <SEO
+          title={title}
+          image={`${siteUrl}${image}`}
+          url={`${siteUrl}/${path}`}
+          description={description}
+          isPost={isPost}
+        />
         {this.props.children}
         <div className="wrapper-post">
           <div className="Foot__Share">
@@ -46,7 +52,12 @@ class Template extends React.Component {
         </div>
         <div className="Post__footer">
           <div id="disquser" className="container Disqus">
-            <ReactDisqusComments shortname={disqusShortname} identifier={path} title={title} url={this.state.location} />
+            <ReactDisqusComments
+              shortname={disqusShortname}
+              identifier={path}
+              title={title}
+              url={this.state.location}
+            />
           </div>
           {isPost && <Share fixed show={this.state.show_share} title={title} url={`${siteUrl}/${path}`} />}
         </div>

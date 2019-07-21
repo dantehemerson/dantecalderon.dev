@@ -1,7 +1,6 @@
-import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import React, { PureComponent } from 'react'
 import Helmet from 'react-helmet'
-
 import avatar from '../assets/images/avatar.jpg'
 
 export default class SEO extends PureComponent {

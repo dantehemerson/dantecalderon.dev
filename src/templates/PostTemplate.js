@@ -1,14 +1,12 @@
-import React from 'react'
-import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
-
-import Content, { HTMLContent } from '../components/Content'
-import AuthorPost from '../components/AuthorPost'
-
-import Layout from './TemplateLayout'
-import 'prismjs/themes/prism.css'
+import Img from 'gatsby-image'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
+import 'prismjs/themes/prism.css'
+import React from 'react'
+import AuthorPost from '../components/AuthorPost'
+import Content, { HTMLContent } from '../components/Content'
 import { getLinkEditPost } from '../utils'
+import Layout from './TemplateLayout'
 
 export const Post = props => {
   const PostContent = props.contentComponent || Content
@@ -18,11 +16,18 @@ export const Post = props => {
         <div className="Post__header__data">
           <h1 className="Post__title">{props.frontmatter.title}</h1>
           {props.contentComponent && (
-            <AuthorPost editLink={props.editLink} date={props.frontmatter.date} timeToRead={props.timeToRead ? props.timeToRead : '3'} avatar={props.avatar} />
+            <AuthorPost
+              editLink={props.editLink}
+              date={props.frontmatter.date}
+              timeToRead={props.timeToRead ? props.timeToRead : '3'}
+              avatar={props.avatar}
+            />
           )}
         </div>
         {props.frontmatter.style !== 'default' && (
-          <div className="Post__header__image">{props.contentComponent ? <Img sizes={props.image} /> : <img alt="" src={props.image} />}</div>
+          <div className="Post__header__image">
+            {props.contentComponent ? <Img sizes={props.image} /> : <img alt="" src={props.image} />}
+          </div>
         )}
       </div>
       <PostContent content={props.content} className="container Post__content" />

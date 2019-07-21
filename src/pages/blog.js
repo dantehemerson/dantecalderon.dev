@@ -1,12 +1,11 @@
-import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
+import React from 'react'
 import styled from 'styled-components'
-
 import Card from '../components/Card'
-import SEO from '../components/SEO'
-import Layout from '../components/Layout'
 import Header from '../components/Header'
+import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 import { pages } from '../utils'
 
 const PostsWrapper = styled.div`
@@ -57,7 +56,10 @@ export const queryBlog = graphql`
         siteUrl
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { model: { eq: "post" } } }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { model: { eq: "post" } } }
+    ) {
       edges {
         node {
           excerpt(pruneLength: 240)

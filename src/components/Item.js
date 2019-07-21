@@ -17,9 +17,10 @@ const Item = styled.div`
   justify-content: center;
   ${media.sm`
     width: 33.3333%;
-  `} ${media.md`
+  `};
+  ${media.md`
     width: 25%;
-  `}
+  `};
   @media (min-width: 932px) {
     width: 20%;
   }

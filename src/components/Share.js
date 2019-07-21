@@ -9,7 +9,12 @@ export default props => (
       rel="noopener noreferrer"
       data-size="large"
     >
-      <img alt="img" className="Share__icon" title="Share on Twitter" src="https://icongr.am/fontawesome/twitter.svg?color=ffffff" />
+      <img
+        alt="img"
+        className="Share__icon"
+        title="Share on Twitter"
+        src="https://icongr.am/fontawesome/twitter.svg?color=ffffff"
+      />
     </a>
     <a
       className="Share__iconwrapper facebook"
@@ -21,7 +26,12 @@ export default props => (
       rel="noopener noreferrer"
       title={props.title}
     >
-      <img alt="img" className="Share__icon" title="Share on Facebook" src="https://icongr.am/fontawesome/facebook.svg?color=ffffff" />
+      <img
+        alt="img"
+        className="Share__icon"
+        title="Share on Facebook"
+        src="https://icongr.am/fontawesome/facebook.svg?color=ffffff"
+      />
     </a>
     <a
       className="Share__iconwrapper linkedin"
@@ -29,7 +39,12 @@ export default props => (
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img alt="img" className="Share__icon" title="Share on Linkedin" src="https://icongr.am/fontawesome/linkedin.svg?color=ffffff" />
+      <img
+        alt="img"
+        className="Share__icon"
+        title="Share on Linkedin"
+        src="https://icongr.am/fontawesome/linkedin.svg?color=ffffff"
+      />
     </a>
   </div>
 )

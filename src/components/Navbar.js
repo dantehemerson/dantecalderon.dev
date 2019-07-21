@@ -1,8 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
-import { StaticQuery, graphql } from 'gatsby'
+import { graphql, Link, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
+import PropTypes from 'prop-types'
+import React from 'react'
 import styled from 'styled-components'
 import { media, mediaMax } from '../styles'
 
@@ -367,7 +366,12 @@ class Navbar extends React.Component {
     const { active } = this.props
     const { menu, title, subtitle } = this.props.data.site.siteMetadata
     return (
-      <Wrapper className={(active === '' ? 'inicio ' : '') + (menuIsOpen ? ' open ' : '') + (this.state.navbarIsTop ? '' : 'noTop')} id="Navbar">
+      <Wrapper
+        className={
+          (active === '' ? 'inicio ' : '') + (menuIsOpen ? ' open ' : '') + (this.state.navbarIsTop ? '' : 'noTop')
+        }
+        id="Navbar"
+      >
         <Shadow
           onClick={e => {
             this.setState({ menuIsOpen: false })

@@ -1,10 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-
-import Group from './Group'
 import Header from '../components/Header'
-
 import stack from '../data/stack'
+import Group from './Group'
 
 const Container = styled.div`
   max-width: 932px;

@@ -1,7 +1,7 @@
 import React from 'react'
-import Swal from 'sweetalert2'
 import { AwesomeButton } from 'react-awesome-button'
 import styled from 'styled-components'
+import Swal from 'sweetalert2'
 
 const encode = data => {
   return Object.keys(data)

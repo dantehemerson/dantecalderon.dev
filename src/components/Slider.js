@@ -1,8 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import Slider from 'react-slick'
 import Img from 'gatsby-image'
-
+import React from 'react'
+import Slider from 'react-slick'
+import styled from 'styled-components'
 import InProgress from '../components/Portfolio/InProgress'
 
 const ContainerItem = styled.div``

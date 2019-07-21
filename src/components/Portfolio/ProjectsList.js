@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-
-import Item from './PortfolioItem'
 import { media } from '../../styles'
+import Item from './PortfolioItem'
 
 const Wrapper = styled.div`
   display: grid;

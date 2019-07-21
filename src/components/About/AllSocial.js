@@ -1,6 +1,6 @@
+import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
-import { StaticQuery, graphql } from 'gatsby'
 
 const SocialWrapper = styled.div`
   text-align: center;
@@ -60,7 +60,11 @@ export default props => (
           >
             <img
               alt={item.title}
-              src={item.icon === 'dev' ? 'https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg' : `https://icongr.am/fontawesome/${item.icon}.svg?color=ffffff`}
+              src={
+                item.icon === 'dev'
+                  ? 'https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg'
+                  : `https://icongr.am/fontawesome/${item.icon}.svg?color=ffffff`
+              }
             />
           </SocialIcon>
         ))}

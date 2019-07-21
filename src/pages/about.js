@@ -1,14 +1,12 @@
-import React from 'react'
-import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import get from 'lodash/get'
-
-import SEO from '../components/SEO'
-import Layout from '../components/Layout'
-import Stack from '../components/Stack'
-import Header from '../components/Header'
+import React from 'react'
 import AllSocial from '../components/About/AllSocial'
-
+import Header from '../components/Header'
+import Layout from '../components/Layout'
+import SEO from '../components/SEO'
+import Stack from '../components/Stack'
 import { pages } from '../utils'
 
 class About extends React.Component {

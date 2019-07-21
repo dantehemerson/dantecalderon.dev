@@ -118,7 +118,6 @@ export default props => (
     </LinkTool>
     {props.about && (
       <Tooltip>
-        holo
         <p>
           {props.about}
           <span />

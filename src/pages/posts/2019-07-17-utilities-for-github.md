@@ -13,4 +13,8 @@ tags:
   - zen
 ---
 
-Hoy en dia los programadores estamos mucho tiempo en Github explorando y compartiendo codigo.
+Hoy en dia los programadores estamos mucho tiempo en Github explorando y compartiendo codigo, hoy te voy a compartir algunas herramientas que me han sido utiles para hacer mi experiencia con Github mas agradable.
+
+### 1.- Octotree
+
+Octotree es un plugin de **Chrome** nos permite tener un arbol de archivos

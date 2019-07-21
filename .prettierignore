@@ -1,0 +1,12 @@
+*.min.js
+**/node_modules/**
+flow-typed
+
+# cache-dirs
+**/.cache
+
+
+# Built dirs
+**/dist/**
+
+*.md

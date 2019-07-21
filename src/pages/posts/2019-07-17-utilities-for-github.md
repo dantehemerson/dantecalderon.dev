@@ -5,7 +5,7 @@ description: Github es una de los sitios donde los programadores pasan gran part
 path: improve-github-with-tools
 thumbnail: /img/bit-manipulation.png
 date: '2019-07-18T01:42:52-05:00'
-published: false
+published: true
 style: normal-img
 tags:
   - github
@@ -13,4 +13,4 @@ tags:
   - zen
 ---
 
-### Por que?
+Hoy en dia los programadores estamos mucho tiempo en Github explorando y compartiendo codigo.

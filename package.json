@@ -1,8 +1,8 @@
 {
-  "name": "dantecalderon.com",
+  "name": "dantecalderon.dev",
   "description": "This is my personal web. Dante Caderón",
   "version": "1.0.0",
-  "author": "Dante Calderón <dantehemerson@gmail.com>",
+  "author": "Dante Calderón <mail@dantecalderon.dev>",
   "dependencies": {
     "@webcomponents/custom-elements": "1.2.4",
     "ast-get-object": "1.8.31",
@@ -69,6 +69,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dantehemerson/dantecalderon.com"
+    "url": "https://github.com/dantehemerson/dantecalderon.dev"
   }
 }

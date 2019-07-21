@@ -8,11 +8,5 @@
   },
   "editor.formatOnSave": true,
   "javascript.format.enable": false,
-  "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.quoteStyle": "single",
-  "prettier.singleQuote": true,
-  "prettier.eslintIntegration": true,
-  "prettier.jsxSingleQuote": true,
-  "prettier.printWidth": 160,
-  "prettier.semi": false
+  "javascript.preferences.quoteStyle": "single"
 }

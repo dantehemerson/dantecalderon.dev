@@ -84,15 +84,36 @@ class ContactForm extends React.Component {
           </Item>
           <Item>
             <Label>E-mail</Label>
-            <input name="email" value={email} placeholder="your@email.com" type="email" required onChange={this.handleChange} />
+            <input
+              name="email"
+              value={email}
+              placeholder="your@email.com"
+              type="email"
+              required
+              onChange={this.handleChange}
+            />
           </Item>
           <Item>
             <Label>Subject</Label>
-            <input name="subject" value={subject} placeholder="Subject" type="text" required onChange={this.handleChange} />
+            <input
+              name="subject"
+              value={subject}
+              placeholder="Subject"
+              type="text"
+              required
+              onChange={this.handleChange}
+            />
           </Item>
           <Item>
             <Label>Your message</Label>
-            <textarea name="message" value={message} placeholder="Put your message here" rows="6" required onChange={this.handleChange} />
+            <textarea
+              name="message"
+              value={message}
+              placeholder="Put your message here"
+              rows="6"
+              required
+              onChange={this.handleChange}
+            />
           </Item>
           <Item>
             <Submit size="medium" type="primary">

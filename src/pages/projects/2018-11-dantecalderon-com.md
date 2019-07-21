@@ -37,8 +37,8 @@ stack:
   - GraphQL
   - Github
 client: Personal
-repository: 'https://github.com/dantehemerson/dantecalderon.com'
+repository: 'https://github.com/dantehemerson/dantecalderon.dev'
 licence: MIT
-website: 'https://dantecalderon.com'
+website: 'https://dantecalderon.dev'
 ---
 My website is awesome

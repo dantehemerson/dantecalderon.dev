@@ -30,9 +30,11 @@ Gitpod es una servicio que nos permite tener un editor online para repositorios 
 
 La integracion con Github es mediante un [plugin](https://chrome.google.com/webstore/detail/gitpod-online-ide/dodmmooeoklaejobgleioelladacbeki?hl=en) que añade un boton que crea facilmente un espacio de trabajo para un repositorio.
 
+![Imgur](https://i.imgur.com/7e2cvkv.png)
+
 Es muy util ya que podemos trabajar desde cualquier computadora, además que es muy rápido ya que corre sobre un servidor.
 
-![Imgur](https://i.imgur.com/7e2cvkv.png)
+
 
 ### 3.- [GitHub Repository Size](https://chrome.google.com/webstore/detail/github-repository-size/apnjnioapinblneaedefcnopcjepgkci)
 

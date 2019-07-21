@@ -18,11 +18,7 @@ class About extends React.Component {
       <Layout location={this.props.location} active={pages.about}>
         <div className="About">
           <SEO title="About" url={`${siteUrl}/about`} />
-          <Header
-            title="ABOUT"
-            description="Hi, I'm Dante Calderón, web developer. I like to build things with Nodejs and I work with React, Redux, Gatsby, Nextjs and the entire React ecosystem."
-            color="#3384a0"
-          />
+          <Header title="ABOUT" description={get(this, 'props.data.site.siteMetadata.description')} color="#3384a0" />
           <div className="container">
             <div className="row center-xs">
               <div className="About__img-container col-xs-12 col-md-6">
@@ -75,6 +71,7 @@ export const queryAbout = graphql`
       siteMetadata {
         title
         siteUrl
+        description
       }
     }
     aboutImage: imageSharp(fluid: { originalName: { regex: "/about-image.jpg/" } }) {

@@ -5,6 +5,7 @@ import 'prismjs/themes/prism.css'
 import React from 'react'
 import AuthorPost from '../components/AuthorPost'
 import Content, { HTMLContent } from '../components/Content'
+import SubscribeForm from '../components/SubscribeForm'
 import { getLinkEditPost } from '../utils'
 import Layout from './TemplateLayout'
 
@@ -51,6 +52,7 @@ export default class BlogPostTemplate extends React.Component {
           editLink={getLinkEditPost(post.fileAbsolutePath)}
           avatar={this.props.data.avatar}
         />
+        <SubscribeForm />
       </Layout>
     )
   }

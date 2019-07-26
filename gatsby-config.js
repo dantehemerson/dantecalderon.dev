@@ -121,7 +121,7 @@ module.exports = {
         head: false,
         sampleRate: 5,
         siteSpeedSampleRate: 10,
-        cookieDomain: 'dantecalderon.com',
+        cookieDomain: 'dantecalderon.dev',
         cookieName: 'gaDanteCalderon',
         cookieExpires: 86400
       }

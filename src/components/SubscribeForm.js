@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 import styled from 'styled-components'
+import Swal from 'sweetalert2'
 
 const Form = styled.form`
   background: #97d1ff;
@@ -43,8 +44,15 @@ const SubscribeForm = () => {
     e.preventDefault()
     addToMailchimp(email)
       .then(data => {
-        console.log(data)
-        alert(data.result + '  ' + data.msg)
+        // console.log(data)
+        // alert(data.result + '  ' + data.msg)
+        Swal.fire({
+          type: data.result,
+          title: data.result === 'success' ? 'Success' : 'Error',
+          html: data.msg,
+          confirmButtonClass: 'Btn',
+          cancelButtonClass: 'Btn'
+        })
       })
       .catch(error => {
         // Errors in here are client side

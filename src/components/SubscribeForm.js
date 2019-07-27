@@ -51,7 +51,10 @@ const SubscribeForm = () => {
           title: data.result === 'success' ? 'Success' : 'Error',
           html: data.msg,
           confirmButtonClass: 'Btn',
-          cancelButtonClass: 'Btn'
+          cancelButtonClass: 'Btn',
+          onClose: () => {
+            if (data.result === 'success') setEmail('')
+          }
         })
       })
       .catch(error => {
@@ -67,7 +70,7 @@ const SubscribeForm = () => {
   return (
     <Form onSubmit={handleSubmit}>
       <Title>Subscribe to my email list!</Title>
-      <Input placeholder="Email address" name="email" type="text" onChange={handleEmailChange} />
+      <Input placeholder="Email address" name="email" value={email} type="text" onChange={handleEmailChange} />
       <Button type="submit">Subscribe</Button>
     </Form>
   )

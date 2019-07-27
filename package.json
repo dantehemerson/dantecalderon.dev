@@ -8,6 +8,7 @@
     "ast-get-object": "1.8.34",
     "babel-plugin-styled-components": "1.10.6",
     "bluebird": "3.5.5",
+    "dotenv": "^8.0.0",
     "gatsby": "2.13.40",
     "gatsby-image": "2.2.7",
     "gatsby-plugin-catch-links": "2.1.2",

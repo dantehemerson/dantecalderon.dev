@@ -1,8 +1,8 @@
 version: 2
 jobs:
   build:
-    docker:      
-      - image: node:8.16
+    docker:
+      - image: node:lts
 
     working_directory: ~/repo
 
@@ -10,12 +10,12 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
       - run: npm install
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}        
+          key: v1-dependencies-{{ checksum "package.json" }}
       - run: npm run build
       #- run: gatsby test

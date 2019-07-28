@@ -37,6 +37,8 @@ module.exports = {
         path: `${__dirname}/src/pages/`
       }
     },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -80,8 +82,6 @@ module.exports = {
         ]
       }
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     `gatsby-plugin-catch-links`,
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
@@ -124,9 +124,9 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Dante Calderón',
-        short_name: 'Dante',
+        short_name: 'Dante C.',
         start_url: '/',
-        background_color: '#1976d2',
+        background_color: '#ff0000',
         theme_color: '#1976d2',
         display: 'minimal-ui'
       }

@@ -196,7 +196,7 @@ $post-titles-font: 'Open Sans';
 .Post {
   padding-top: 80px;
   font-family: $post-body-font;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.4;
   .gatsby-resp-image-wrapper {
     max-width: 100% !important;
@@ -269,7 +269,7 @@ $post-titles-font: 'Open Sans';
     margin-bottom: 0;
   }
   @include breakpoint(sm) {
-    font-size: 17px;
+    font-size: 20px;
     &__title {
       font-size: 28px;
     }

@@ -205,6 +205,9 @@ $post-titles-font: 'Open Sans';
     max-width: 800px;
     margin: 0 auto;
     margin-bottom: 26px;
+    &__data {
+      padding: 0 14px;
+    }
   }
 
   &__content {

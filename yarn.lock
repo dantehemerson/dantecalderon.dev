@@ -5458,10 +5458,10 @@ fuzzy@^0.1.1:
   resolved "https://registry.yarnpkg.com/fuzzy/-/fuzzy-0.1.3.tgz#4c76ec2ff0ac1a36a9dccf9a00df8623078d4ed8"
   integrity sha1-THbsL/CsGjap3M+aAN+GIweNTtg=
 
-gatsby-cli@^2.7.20:
-  version "2.7.20"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.7.20.tgz#1117b21802741c18ec6d16cd53dbb7f41bba8d22"
-  integrity sha512-LVFv8RvMc8zLjCMHOJAdx0nA3Pg7baX7kFUyC/ixMJwhUSy/qUKtt4VNCpGnnTpqjO+743kyVQuw+zNK3dQtIg==
+gatsby-cli@^2.7.21:
+  version "2.7.21"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.7.21.tgz#c406a39013cd3ddce05e6be2504fbf380e6bff1f"
+  integrity sha512-M80MfpIm/S6IMGDthPu5kEUT4i6SXYjmfpg/0/BJxPpvj5xA+CMECzmLk1olSw+5//nVXpf2r3nuiZl1AR78jA==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -5696,10 +5696,10 @@ gatsby-plugin-sharp@2.2.9:
     sharp "^0.22.1"
     svgo "^1.2.0"
 
-gatsby-plugin-sitemap@2.2.3:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-2.2.3.tgz#8accd2a612b834cadd1c5f36b3b0973af9409ffe"
-  integrity sha512-Kf+8rek45xbtsM99JIwKHhxR3oyzxEwKZg76hL/LFmtZ4GnD4PEY80HQpdvcA3beT0RdLWj0uaFMpn+435yZaA==
+gatsby-plugin-sitemap@2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-2.2.4.tgz#daec113ad4c64aea61f52f37ee7880ac1e825bac"
+  integrity sha512-GDY3DTxbWoFI1KyMpyuvGrSbM10tOt+pIfyhwp4zeXDGKYZn3yCOKOMlma+zh0PAxg2yqNUssro9+Xid/KWdNQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     minimatch "^3.0.4"
@@ -5871,10 +5871,10 @@ gatsby-telemetry@^1.1.7:
     stack-utils "1.0.2"
     uuid "3.3.2"
 
-gatsby-transformer-remark@2.6.9:
-  version "2.6.9"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.6.9.tgz#40c40fab689c4217c8de68880712a49867d7dea9"
-  integrity sha512-o1/36A0IPvhoXleayaxhOMPNXH4JzO+b5VFd2ghvdODe88ErgkTF8zSWwhXMj0/pAJymtJBuzrwF+mTU9IK7Sw==
+gatsby-transformer-remark@2.6.10:
+  version "2.6.10"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.6.10.tgz#b799615f7b5041fda6e939e85b8b6365a132c069"
+  integrity sha512-yXYbHzhjWAOq8TGiHd9Roi+JRtbZszzCD2DdZtocmdIYzYaTjvUtpUjS6hrsdmBmhxHcVAGbJ9p9ZV7oPmRAQw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
@@ -5898,10 +5898,10 @@ gatsby-transformer-remark@2.6.9:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.3.0"
 
-gatsby-transformer-sharp@2.2.4:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.2.4.tgz#b394a49422227a287f15472397f211b37c17e0f6"
-  integrity sha512-cfFRL5XlHdindUWTlQjWbxjAxVDtMMAazlzDSDYH/Xek0JcWqlqwZpqaO8tCb/ZrVPcYnBQtaY+bXT1/ro0pPQ==
+gatsby-transformer-sharp@2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.2.5.tgz#ec54982dcff3333a0f6b2a25da4967f5a4241caf"
+  integrity sha512-Onyic4Nfx4874bY6iBIal11zMct2VFU613KRSfiJJPkNCEAEfWje9XiQbI9De3ivIM0Cj8en/eg2vn5QtUeoRg==
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
@@ -5911,10 +5911,10 @@ gatsby-transformer-sharp@2.2.4:
     semver "^5.6.0"
     sharp "^0.22.1"
 
-gatsby@2.13.41:
-  version "2.13.41"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.13.41.tgz#918e22432b4d487420e4bbf65fbbe1cdd8d3b05e"
-  integrity sha512-vTPAt4xq2WOqx8EOUA72zUb9joyYiYowK0eBmt4O+HEyDHnLieubO66srTgH0XDsdXKpc1Aivug9oeKgIV5vdQ==
+gatsby@2.13.42:
+  version "2.13.42"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.13.42.tgz#b398505fda61588da1c571a708dc7e2094e5f884"
+  integrity sha512-EEFpHQtbbMZCcYYCL+yHpeIgSV/AdUeWCEldGAkTQq8qNQHfw/7kTiXn+9m+MEc78r2SgyGMIf2jiesUd3QUAA==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -5972,7 +5972,7 @@ gatsby@2.13.41:
     flat "^4.0.0"
     fs-exists-cached "1.0.0"
     fs-extra "^5.0.0"
-    gatsby-cli "^2.7.20"
+    gatsby-cli "^2.7.21"
     gatsby-core-utils "^1.0.3"
     gatsby-graphiql-explorer "^0.2.3"
     gatsby-link "^2.2.3"

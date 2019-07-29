@@ -35,4 +35,4 @@ repository: 'https://github.com/dantehemerson/audio-tag-editor'
 licence: MIT
 website: 'https://audiotag-editor.netlify.com'
 ---
-My website is awesome
+A simple tag editor for **.mp3** files, so enjoy it.

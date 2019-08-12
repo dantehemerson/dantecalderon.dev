@@ -11548,10 +11548,10 @@ react-side-effect@^1.1.0:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
 
-react-slick@0.25.0:
-  version "0.25.0"
-  resolved "https://registry.yarnpkg.com/react-slick/-/react-slick-0.25.0.tgz#1f460e0ad2437edc5858f5f19e87c54064e7a0ab"
-  integrity sha512-9yI2130Q6w+OYJlm24ISaEljJYMuULAYgp2hdpmM4FHlIp3Uk7kNVypa/MUvwSmxfY4QeXYq7zbjbTteBblatw==
+react-slick@0.25.2:
+  version "0.25.2"
+  resolved "https://registry.yarnpkg.com/react-slick/-/react-slick-0.25.2.tgz#56331b67d47d8bcfe2dceb6acab1c8fd5bd1f6bc"
+  integrity sha512-8MNH/NFX/R7zF6W/w+FS5VXNyDusF+XDW1OU0SzODEU7wqYB+ZTGAiNJ++zVNAVqCAHdyCybScaUB+FCZOmBBw==
   dependencies:
     classnames "^2.2.5"
     enquire.js "^2.1.6"

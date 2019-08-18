@@ -1724,10 +1724,10 @@ arraybuffer.slice@~0.0.7:
   resolved "https://registry.yarnpkg.com/arraybuffer.slice/-/arraybuffer.slice-0.0.7.tgz#3bbc4275dd584cc1b10809b89d4e8b63a69e7675"
   integrity sha512-wGUIVQXuehL5TCqQun8OW81jGzAWycqzFF8lFp+GOM5BXLYj3bKNsYC4daB7n6XjCqxQA/qgTJ+8ANR3acjrog==
 
-arrayiffy-if-string@^3.11.9:
-  version "3.11.9"
-  resolved "https://registry.yarnpkg.com/arrayiffy-if-string/-/arrayiffy-if-string-3.11.9.tgz#72f65b71a7bc9dfe72bbe0e0596be54552b58db4"
-  integrity sha512-jjlkX8ef+nezSSxqZFpqxvva+z3PLgwIG+LGOYxLAkNEiO0fISVbIrKNTpYcpZ++VbRaYjjjBR2+ef5OrzUhNQ==
+arrayiffy-if-string@^3.11.11:
+  version "3.11.11"
+  resolved "https://registry.yarnpkg.com/arrayiffy-if-string/-/arrayiffy-if-string-3.11.11.tgz#126cdab2e669d9efe7002dbea3e6dfb9e558efa6"
+  integrity sha512-H/OiduOFG90MJt+BW9eKSaUMti6qyV4sDAWuCMnIKEQTkpASxsQyXOUvUTlVroLAtnF4BcjHCjiFUGu/WFHuyw==
 
 arrify@^1.0.1:
   version "1.0.1"
@@ -1773,40 +1773,40 @@ assign-symbols@^1.0.0:
   resolved "https://registry.yarnpkg.com/assign-symbols/-/assign-symbols-1.0.0.tgz#59667f41fadd4f20ccbc2bb96b8d4f7f78ec0367"
   integrity sha1-WWZ/QfrdTyDMvCu5a41Pf3jsA2c=
 
-ast-compare@^1.12.9:
-  version "1.12.9"
-  resolved "https://registry.yarnpkg.com/ast-compare/-/ast-compare-1.12.9.tgz#5bf63a749d754db4972ee18bb8656ae35b41e3fd"
-  integrity sha512-WMvDa8pofSH8CnobqnPwgIX3adsnGc9skAI1fn6Sh8/u7hS7uD20GfF3NaJDk9Ueg3XHHlcPUePPmDdeWC5i0Q==
+ast-compare@^1.12.11:
+  version "1.12.11"
+  resolved "https://registry.yarnpkg.com/ast-compare/-/ast-compare-1.12.11.tgz#b27e7e0294a52ce15cf3109c06440cc5bbd6b1b5"
+  integrity sha512-aSSSFci8MLP+cHT3pb3tGzWPEItKoCl5+IhKTx5VZGHpfR97SwBJHYtcgPWr30+jvckfcjdr11kh3oAMl5JgpA==
   dependencies:
-    ast-contains-only-empty-space "^1.8.36"
-    check-types-mini "^5.7.33"
+    ast-contains-only-empty-space "^1.8.38"
+    check-types-mini "^5.7.35"
     lodash.clonedeep "^4.5.0"
     lodash.pullall "^4.2.0"
     matcher "^2.0.0"
     type-detect "^4.0.8"
 
-ast-contains-only-empty-space@^1.8.36:
-  version "1.8.36"
-  resolved "https://registry.yarnpkg.com/ast-contains-only-empty-space/-/ast-contains-only-empty-space-1.8.36.tgz#c30ea674c3d1deedc0624de32587ae32f6253ffc"
-  integrity sha512-4/DBxudq/f8qlga8wu6Zod+0indeTbC3S6mPqwaOGxkFmaCBrAh8tyfwUk807iaQJy6N6WfXIxpbVoMD3BZ98w==
+ast-contains-only-empty-space@^1.8.38:
+  version "1.8.38"
+  resolved "https://registry.yarnpkg.com/ast-contains-only-empty-space/-/ast-contains-only-empty-space-1.8.38.tgz#dc40ee3ea3c2d6a996929b755c8e71ec7ae3b21d"
+  integrity sha512-RR/DTEbKKmpXUtseYpiDNPI0bPizbxtM0MRAGkYrqX6LZYhHJxggEDfRBvFN2qv0P6DvvVF828YWZN3o17wdQg==
   dependencies:
-    ast-monkey-traverse "^1.11.32"
+    ast-monkey-traverse "^1.11.34"
     lodash.isplainobject "^4.0.6"
     lodash.trim "^4.5.1"
 
-ast-get-object@1.8.36:
-  version "1.8.36"
-  resolved "https://registry.yarnpkg.com/ast-get-object/-/ast-get-object-1.8.36.tgz#3ac570482ffdcff279d4a205a6f856a13e749bc6"
-  integrity sha512-f1UxPq3bzzc+m04j3BgZWsf4F6gIhyhHKrZlA8S2615rMNGJo/QzFAv14MV1UjiaNXZQ3cgs+dZd/Ko5ZBSghw==
+ast-get-object@1.8.38:
+  version "1.8.38"
+  resolved "https://registry.yarnpkg.com/ast-get-object/-/ast-get-object-1.8.38.tgz#47570a47e9b455bebb62a6e42ff3a89a50104bca"
+  integrity sha512-/mVZrJamnjug+OIvD8LU1msb2ZloNKfE98Gkn4oxgu7+DkFh//6QXmEuyqACn87t41rHKfwaoIZfzyGtK448tg==
   dependencies:
-    ast-compare "^1.12.9"
+    ast-compare "^1.12.11"
     lodash.clonedeep "^4.5.0"
     lodash.isplainobject "^4.0.6"
 
-ast-monkey-traverse@^1.11.32:
-  version "1.11.32"
-  resolved "https://registry.yarnpkg.com/ast-monkey-traverse/-/ast-monkey-traverse-1.11.32.tgz#5b07dde211f63342a6c3092d8ebb338a6b84e73b"
-  integrity sha512-dgUdeUag5xuakNExCN7sVIE0qFVJ4AP+NQ3uGRXixpUhrY5nWSJZCXVi8d55/E4LDU0hqSUCzVsowgfkwNEDYA==
+ast-monkey-traverse@^1.11.34:
+  version "1.11.34"
+  resolved "https://registry.yarnpkg.com/ast-monkey-traverse/-/ast-monkey-traverse-1.11.34.tgz#e4e503582dcb35e9e1856bef13b9c00fe8f531af"
+  integrity sha512-NinllwDAx6etycmac640cbzWTjo2J4/oRzQrebwUB2alY6MzPDNwTTQlLG7TGJqAFdVRqstkDnW0BzRqhfjH9g==
   dependencies:
     lodash.clonedeep "^4.5.0"
     lodash.isplainobject "^4.0.6"
@@ -2828,13 +2828,13 @@ charenc@~0.0.1:
   resolved "https://registry.yarnpkg.com/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
   integrity sha1-wKHS86cJLgN3S/qD8UwPxXkKhmc=
 
-check-types-mini@^5.7.33:
-  version "5.7.33"
-  resolved "https://registry.yarnpkg.com/check-types-mini/-/check-types-mini-5.7.33.tgz#2bc38dc6f1f241067ed7c532471dcc336e1dfd86"
-  integrity sha512-KreMoHTjix+PiQ6EVxnASrTfgH2BGsAXUqZMhw+8Upj7U3cQa2BbtXecksMfhwGF1SBH5A/lSdFaY3dUsq+QdA==
+check-types-mini@^5.7.35:
+  version "5.7.35"
+  resolved "https://registry.yarnpkg.com/check-types-mini/-/check-types-mini-5.7.35.tgz#f5514047f3c82c54c3b6126a1d39adc8eab3309a"
+  integrity sha512-26cXjWlsfP6aomztyBPIlTs0ZYnSVaf2KymNc5FZi+7+HE7miFsoxEMLYKS1wGiRGqdP8gwku0TrgdGmNpriqQ==
   dependencies:
-    arrayiffy-if-string "^3.11.9"
-    ast-monkey-traverse "^1.11.32"
+    arrayiffy-if-string "^3.11.11"
+    ast-monkey-traverse "^1.11.34"
     lodash.intersection "^4.4.0"
     lodash.pullall "^4.2.0"
     matcher "^2.0.0"

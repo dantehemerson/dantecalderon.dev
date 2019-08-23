@@ -238,7 +238,7 @@ export const GlobalStyles = createGlobalStyle`
     padding-left: 2.8em;
   }
   code[class*="language-"], pre[class*="language-"] {
-    font-size: initial !important;
+    font-size: 12px !important;
   }
   .gatsby-highlight {
     background-color: #f7f9fa;

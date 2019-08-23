@@ -291,7 +291,7 @@ $post-titles-font: 'Open Sans';
   }
 
   @include breakpoint(md) {
-    font-size: 21px;
+    font-size: 20px;
 
     &__title {
       font-size: 37px;

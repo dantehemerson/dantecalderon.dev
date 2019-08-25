@@ -1,12 +1,11 @@
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 import React from 'react'
+import Markdown from '../components/Markdown'
+import PostHeader from '../components/PostHeader'
 import SubscribeForm from '../components/SubscribeForm'
 import { getLinkEditPost } from '../utils'
 import Layout from './TemplateLayout'
-import PostHeader from '../components/PostHeader'
-import Markdown from '../components/Markdown'
 
 export const Post = props => {
   return (

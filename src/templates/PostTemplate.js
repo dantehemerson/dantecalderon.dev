@@ -1,7 +1,6 @@
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
-import 'prismjs/themes/prism.css'
 import React from 'react'
 import AuthorPost from '../components/AuthorPost'
 import Content, { HTMLContent } from '../components/Content'

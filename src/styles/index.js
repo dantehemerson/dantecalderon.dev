@@ -1,6 +1,7 @@
 import { createGlobalStyle, css } from 'styled-components'
 import sliderStyles from './slider'
 import constants from './constants'
+import prismStyles from './prism'
 import { withPrefix } from 'gatsby'
 
 const sizes = {
@@ -43,6 +44,7 @@ export const defaultTheme = {
 }
 
 export const GlobalStyles = createGlobalStyle`
+  ${prismStyles}
   body {
     margin: 0 !important;
     padding: 0 !important;
@@ -189,9 +191,9 @@ export const GlobalStyles = createGlobalStyle`
     -o-tab-size:      2 !important;
     tab-size:         2 !important;
     text-shadow: none !important;
-    //font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important;
     &.language-text {
-      font-size: .75em;
+      font-size: .85em;
       top: -1px;
       position: relative;
       padding: 0 6px !important;
@@ -202,7 +204,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .line-numbers .line-numbers-rows {
-    //font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important;
   }
 
   .line-numbers-rows {
@@ -226,7 +228,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .gatsby-highlight pre[class*="language-"] {
-    background-color: transparent;
     margin: 0;
     padding: 0;
     overflow: initial;
@@ -241,9 +242,9 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 12px !important;
   }
   .gatsby-highlight {
-    background-color: #f7f9fa;
+    background: #2e2e2e;
     border: 1px solid #dbe3e7;
-    border-radius: 3px;
+    border-radius: 5px;
     margin: 0.5em 0;
     padding: 0.6em 0.7em;
     overflow: auto;

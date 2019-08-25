@@ -112,7 +112,11 @@ const StyledContent = styled.div`
   }
   // Aun no se si se usa
   .gatsby-resp-image-wrapper {
-    max-width: 100% !important;
+    max-width: 1000px !important;
+  }
+
+  .gatsby-resp-iframe-wrapper {
+    max-width: 100%;
   }
 
   img.emoji-icon {

@@ -16,8 +16,10 @@ class Template extends React.Component {
   componentDidMount() {
     this.setState({ location: window.location.href })
     let body = document.documentElement
-    let contentY = document.getElementById('Markdown').offsetTop
-    let height = document.getElementById('Markdown').clientHeight
+    const element = document.getElementById('Post_content')
+    if (!element) return
+    let contentY = element.offsetTop
+    let height = element.clientHeight
 
     const scrollListenerShare = () => {
       let y = body.scrollTop - contentY + 110

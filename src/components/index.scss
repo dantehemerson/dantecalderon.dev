@@ -265,39 +265,3 @@ $serif-normal: 'Gentium Book Basic', serif;
     transform: translatey(0px);
   }
 }
-
-.ProjectTemplate {
-  &__header {
-    margin-bottom: -5px;
-  }
-  &__contentwrapper {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    max-width: 1140px;
-  }
-  &__content {
-    @include breakpoint(lg) {
-      max-width: 100%;
-    }
-    & > :first-child {
-      margin-top: 15px !important;
-    }
-  }
-  &__col {
-    padding: 0 !important;
-    @include breakpoint(lg) {
-      padding-right: 40px !important;
-    }
-  }
-  &__header-separator {
-    margin-top: 42px;
-    background: #efefef;
-    max-width: 760px !important;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    @include breakpoint(lg) {
-      max-width: 100% !important;
-    }
-  }
-}

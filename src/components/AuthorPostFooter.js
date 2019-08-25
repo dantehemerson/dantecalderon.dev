@@ -9,6 +9,9 @@ const Container = styled.div`
   margin-bottom: 13px;
   padding-left: 0px;
   margin-top: 20px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
   flex-direction: column;
   align-items: center;
   ${media.md`

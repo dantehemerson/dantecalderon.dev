@@ -9,6 +9,20 @@ const StyledContent = styled.div`
   font-size: 17px;
   line-height: 1.4;
 
+  a {
+    color: rgb(74, 144, 226);
+    border-bottom: 1px dotted rgb(91, 159, 239);
+    text-decoration: none;
+
+    &:hover {
+      border-bottom-style: solid;
+    }
+
+    // Anchor of title
+    &.anchor {
+      border-bottom: none;
+    }
+  }
   // Each item max width
   div.gatsby-highlight,
   ul,

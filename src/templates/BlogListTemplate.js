@@ -7,6 +7,7 @@ import Header from '../components/Header'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import { pages } from '../utils'
+import Pagination from '../components/Pagination'
 
 const PostsWrapper = styled.div`
   padding: 0 15px;
@@ -42,6 +43,11 @@ class Blog extends React.Component {
                 )
               else return false
             })}
+            <Pagination
+              limit={this.props.pageContext.limit}
+              numPages={this.props.pageContext.numPages}
+              currentPage={this.props.pageContext.currentPage}
+            />
           </PostsWrapper>
         </div>
       </Layout>

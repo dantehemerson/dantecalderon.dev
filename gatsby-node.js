@@ -4,7 +4,7 @@ const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
 // CONSTANTS
-const postPerPage = 3
+const postPerPage = 8
 
 const resolvePathImages = images => {
   return images.map(item => ({

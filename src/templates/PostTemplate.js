@@ -2,35 +2,24 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 import React from 'react'
-import AuthorPost from '../components/AuthorPost'
-import Content, { HTMLContent } from '../components/Content'
 import SubscribeForm from '../components/SubscribeForm'
 import { getLinkEditPost } from '../utils'
 import Layout from './TemplateLayout'
+import PostHeader from '../components/PostHeader'
+import Markdown from '../components/Markdown'
 
 export const Post = props => {
-  const PostContent = props.contentComponent || Content
   return (
-    <div className={`Post ${props.frontmatter.style}`}>
-      <div className="Post__header">
-        <div className="Post__header__data">
-          <h1 className="Post__title">{props.frontmatter.title}</h1>
-          {props.contentComponent && (
-            <AuthorPost
-              editLink={props.editLink}
-              date={props.frontmatter.date}
-              timeToRead={props.timeToRead ? props.timeToRead : '3'}
-              avatar={props.avatar}
-            />
-          )}
-        </div>
-        {props.frontmatter.style !== 'default' && (
-          <div className="Post__header__image">
-            {props.contentComponent ? <Img sizes={props.image} /> : <img alt="" src={props.image} />}
-          </div>
-        )}
-      </div>
-      <PostContent content={props.content} className="container Post__content" />
+    <div>
+      <PostHeader
+        title={props.frontmatter.title}
+        image={props.image}
+        editLink={props.editLink}
+        date={props.frontmatter.date}
+        timeToRead={props.timeToRead ? props.timeToRead : '3'}
+        avatar={props.avatar}
+      />
+      <Markdown content={props.content} />
     </div>
   )
 }
@@ -46,7 +35,6 @@ export default class BlogPostTemplate extends React.Component {
           {...post}
           {...siteMetadata}
           content={post.html}
-          contentComponent={HTMLContent}
           image={post.fields.image.childImageSharp.sizes}
           editLink={getLinkEditPost(post.fileAbsolutePath)}
           avatar={this.props.data.avatar}

@@ -25,6 +25,7 @@ export const Post = props => {
 
 export default class BlogPostTemplate extends React.Component {
   render() {
+    console.log(this.props)
     const post = this.props.data.markdownRemark
     const { siteMetadata } = this.props.data.site
     const { title, thumbnail, description } = post.frontmatter

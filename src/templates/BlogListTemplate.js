@@ -16,6 +16,7 @@ const PostsWrapper = styled.div`
 
 class Blog extends React.Component {
   render() {
+    console.log(this.props)
     const posts = get(this, 'props.data.allMarkdownRemark.edges') || []
     const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')
     return (
@@ -49,7 +50,7 @@ class Blog extends React.Component {
 }
 
 export const queryBlog = graphql`
-  query QueryBlog {
+  query QueryBlogList($skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
@@ -58,7 +59,9 @@ export const queryBlog = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { model: { eq: "post" } } }
+      filter: { frontmatter: { model: { eq: "post" }, published: { eq: true } } }
+      limit: $limit
+      skip: $skip
     ) {
       edges {
         node {

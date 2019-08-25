@@ -3,6 +3,9 @@ const Promise = require('bluebird')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
+// CONSTANTS
+const postPerPage = 3
+
 const resolvePathImages = images => {
   return images.map(item => ({
     ...item,
@@ -27,6 +30,8 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     const projectTemplate = path.resolve('./src/templates/ProjectTemplate.js')
     const postTemplate = path.resolve('./src/templates/PostTemplate.js')
+    const blogListTemplate = path.resolve('./src/templates/BlogListTemplate.js')
+
     resolve(
       graphql(`
         {
@@ -36,6 +41,7 @@ exports.createPages = ({ graphql, actions }) => {
                 frontmatter {
                   model
                   path
+                  published
                 }
               }
             }
@@ -48,6 +54,33 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         const posts = result.data.allMarkdownRemark.edges
+
+        const blogPosts = _.filter(result.data.allMarkdownRemark.edges, edge => {
+          // The model is a blog post
+          const model = _.get(edge, 'node.frontmatter.model')
+          // Post is published
+          const published = _.get(edge, 'node.frontmatter.published')
+          if (model === 'post' && published) return edge
+          return undefined
+        })
+
+        console.log(blogPosts)
+        const numOfPages = Math.ceil(blogPosts.length / postPerPage)
+
+        Array.from({
+          length: numOfPages
+        }).forEach((_, i) => {
+          createPage({
+            path: i === 0 ? '/blog' : `/blog/page/${i + 1}`,
+            component: blogListTemplate,
+            context: {
+              limit: postPerPage,
+              skip: i * postPerPage,
+              numPages: numOfPages,
+              currentPage: i + 1
+            }
+          })
+        })
 
         _.each(posts, (post, index) => {
           const previous = index === posts.length - 1 ? null : posts[index + 1].node

@@ -1,6 +1,5 @@
-import { Link } from 'gatsby'
-import React from 'react'
 import Img from 'gatsby-image'
+import React from 'react'
 import styled from 'styled-components'
 import AuthorPost from '../components/AuthorPost'
 import { media } from '../styles'
@@ -33,6 +32,6 @@ export default props => (
       timeToRead={props.timeToRead ? props.timeToRead : '3'}
       avatar={props.avatar}
     />
-    <Img sizes={props.image} /> : <img alt="" src={props.image} />
+    <Img sizes={props.image} />
   </Container>
 )

@@ -250,22 +250,6 @@ $serif-normal: 'Gentium Book Basic', serif;
     margin-bottom: 32px;
   }
 }
-.emoji-icon {
-  display: inline;
-  margin: 0;
-  margin-top: 1px;
-  position: relative;
-
-  width: 17px;
-  top: 3px;
-
-  @include breakpoint(sm) {
-    width: 19px;
-  }
-  @include breakpoint(md) {
-    width: 21px;
-  }
-}
 
 @keyframes float {
   0% {

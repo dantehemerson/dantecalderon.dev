@@ -9,6 +9,46 @@ const StyledContent = styled.div`
   font-size: 17px;
   line-height: 1.4;
 
+  // Each item max width
+  div.gatsby-highlight,
+  ul,
+  p,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // only texts
+  p,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  // titls
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  // dots of list
+  ul {
+    padding-left: 30px;
+  }
+
   h1,
   h2,
   h3,
@@ -73,6 +113,19 @@ const StyledContent = styled.div`
   // Aun no se si se usa
   .gatsby-resp-image-wrapper {
     max-width: 100% !important;
+  }
+
+  img.emoji-icon {
+    display: inline;
+    margin: 0;
+    position: relative;
+    top: 3px;
+    ${media.sm`
+      width: 19px;
+    `}
+    ${media.md`
+      width: 21px;
+    `}
   }
 `
 

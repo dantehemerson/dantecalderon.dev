@@ -8,33 +8,23 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'content',
+        path: `${__dirname}/../content/`
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'assets',
+        path: `${__dirname}/src/assets`
+      }
+    },
+    {
       resolve: 'gatsby-plugin-typography',
       options: {
         pathToConfigModule: 'src/utils/typography.js'
-      }
-    },
-    {
-      // All images from assets folder. For use in website.
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'img',
-        path: `${__dirname}/src/assets/images`
-      }
-    },
-    {
-      // All images for Markdown pages. For use in generated posts, projects.
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'img',
-        path: `${__dirname}/static/img/`
-      }
-    },
-    {
-      // Markdown pages: posts and projects folder
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'pages',
-        path: `${__dirname}/src/pages/`
       }
     },
     'gatsby-transformer-sharp',
@@ -129,7 +119,7 @@ module.exports = {
         name: 'Dante Calderón',
         short_name: 'Dante C.',
         start_url: '/',
-        background_color: '#ff0000',
+        background_color: '#1976d2',
         theme_color: '#1976d2',
         display: 'minimal-ui'
       }

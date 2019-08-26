@@ -1987,7 +1987,7 @@ assign-symbols@^1.0.0:
   resolved "https://registry.yarnpkg.com/assign-symbols/-/assign-symbols-1.0.0.tgz#59667f41fadd4f20ccbc2bb96b8d4f7f78ec0367"
   integrity sha1-WWZ/QfrdTyDMvCu5a41Pf3jsA2c=
 
-ast-compare@^1.12.11:
+ast-compare@^1.12.13:
   version "1.12.13"
   resolved "https://registry.yarnpkg.com/ast-compare/-/ast-compare-1.12.13.tgz#a20caaaa4b6df406a1e1bc77832f4d7594a86c82"
   integrity sha512-t6btYKevug0J4yBPtAWuFLjeqtKwKkrnsl9yWtpn2d0vwSwVogCcK7ik4xNPpj2ithrKBwKGJtFEUaTQNsT2ZA==
@@ -2008,12 +2008,12 @@ ast-contains-only-empty-space@^1.8.40:
     lodash.isplainobject "^4.0.6"
     lodash.trim "^4.5.1"
 
-ast-get-object@1.8.38:
-  version "1.8.38"
-  resolved "https://registry.yarnpkg.com/ast-get-object/-/ast-get-object-1.8.38.tgz#47570a47e9b455bebb62a6e42ff3a89a50104bca"
-  integrity sha512-/mVZrJamnjug+OIvD8LU1msb2ZloNKfE98Gkn4oxgu7+DkFh//6QXmEuyqACn87t41rHKfwaoIZfzyGtK448tg==
+ast-get-object@1.8.40:
+  version "1.8.40"
+  resolved "https://registry.yarnpkg.com/ast-get-object/-/ast-get-object-1.8.40.tgz#cc162f24b106ccc905893f64d257f57de47a542b"
+  integrity sha512-SqMUCX64Y16Nd8tQYAMyl3rP/L6lZtz7QXifEOBABy6nQexYEZg2Wg151PhUsEntXgtW7zyeCw7V/vvkKgSx2w==
   dependencies:
-    ast-compare "^1.12.11"
+    ast-compare "^1.12.13"
     lodash.clonedeep "^4.5.0"
     lodash.isplainobject "^4.0.6"
 

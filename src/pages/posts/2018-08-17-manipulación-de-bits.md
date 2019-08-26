@@ -6,7 +6,6 @@ path: manipulacion-de-bits
 thumbnail: /img/bit-manipulation.png
 date: '2018-08-17T03:16:12-05:00'
 published: true
-style: full-image
 tags:
   - competitive programming
   - bits
@@ -14,13 +13,13 @@ tags:
 ---
 ### Operaciónes útiles
 
-:smile:
+
 #### Conocer si el j-ésimo bit(desde la derecha) es 1 ó 0
 
-Para :smile: saber si el j-ésimo bit está encendido(1) ó apagado(0) es  necesario realizar la operación **AND** con un segundo número el cual tenga el bit en la posición `j` (desde la derecha) I:arrow_down_small:I :computer: Code en 1 y el resto en 0.
+Para :smile: saber si el j-ésimo bit está encendido(1) ó apagado(0) es  necesario realizar la operación **AND** con un segundo número el cual tenga el bit en la posición `j` (desde la derecha) en 1 y el resto en 0.
 
 El numero se puede obtener con la siguiente operación:
-```
+```sh
 1 << j
 ```
 Como el número 1 solo tiene encendido el **bit menos signicativo**(el bit del extremo derecho), al recorrer `j` posiciónes desde la derecha el bit j-esimo será 1.
@@ -28,7 +27,7 @@ Como el número 1 solo tiene encendido el **bit menos signicativo**(el bit del e
 > Nota: `j` empieza a contar las posiciónes desde 0, es decir el primer bit desde la derecha estará en la posición 0 el segundo en la posición 1 y asi sucesivamente.
 
 Ejemplos:
-```
+```sh
 000001 // 1 << 0 (j = 0)
 000010 // 1 << 1 (j = 1)
 000100 // 1 << 2 (j = 2)
@@ -37,7 +36,19 @@ Ejemplos:
 
 Luego se realiza la operación and así:
 
-`gist:dantehemerson/535b3a3ad43609ac2370933fd1edc8a9`
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+  int S = 43;
+  int j = 3;
+  
+  cout << ( S & ( 1 << j ) ) << endl;
+  
+  return 0;
+}
+```
 
 #### Conocer si un número es par o impar
 
@@ -45,12 +56,12 @@ Una forma de convertir un numero binario a decimal es colocando el numero en bin
 
 Por ejemplo tenemos el siguiente numero en binario:
 
-```
+```sh
 010100
 ```
 Escribimos las potencias y el resultado de las potencias y el numero en binario:
 
-```
+```sh
 2⁵  2⁴  2³  2²  2¹  2⁰ 
 ---------------------
 32  16  8   4   2   1  
@@ -59,11 +70,11 @@ Escribimos las potencias y el resultado de las potencias y el numero en binario:
 
 Luego se suman todas los valores de las posiciónes que sean 1:
 
-```
+```sh
 16 + 4 = 22 (dec)
 ```
 Como vemos el resultado es 22 en decimal, entonces diríamos que:
-```
+```sh
 010100 (bin) = 22 (dec)
 ```
 
@@ -72,7 +83,7 @@ Si sumamos los valores de cualquier combinación de los bits excepto el **bit me
 En conclusión si el bit menos significativo del numero es 1 entonces es impar, y si es 0 entonces es par.
 
 Por ejemplo, para saber si un número S es par o impar  realizamos la siguiente operación:
-```
+```sh
 S & 1
 ```
 El resultado de esta operación será siempre 0 ó 1. 
@@ -83,11 +94,13 @@ El siguiente código nos dice si el numero es par ó impar.
 Las operaciónes son:
 * **`S << 1`** : Para multiplicar por 2
 * **`S >> 1`** : Para dividir entre 2
-El resultado es un entero redondeado. Por ejemplo la división `17/2` sería `8` y no `8.5`. 
+El resultado es un entero redondeado. 
+
+Por ejemplo la división `17/2` sería `8` y no `8.5`. 
 
 Mas ejemplos:
 
-```
+```sh
 // Teniendo en cuenta que cada operación
 // influye en la siguiente: 
 
@@ -96,6 +109,6 @@ S << 1 = 110100 (bin) = 52 (dec) = S * 2
 S >> 2 = 001101 (bin) = 13 (dec) = S / 2²
 S >> 1 = 011010 (bin) = 6  (dec) = S / 2
 ```
-
+Fin.
 
 

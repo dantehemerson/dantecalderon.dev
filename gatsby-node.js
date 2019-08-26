@@ -82,6 +82,25 @@ exports.createPages = ({ graphql, actions }) => {
           })
         })
 
+        const makeSlugTag = tag => _.kebabCase(tag.toLowercase())
+        // Create tags pages
+        const tagGroups = _(blogPosts)
+          .map(post => _.get(post, 'node.frontmatter.tags'))
+          .filter()
+          .flatten()
+          .uniq()
+          .groupBy(makeSlugTag)
+
+        tagGroups.forEach((tags, tagsSlug) => {
+          createPage({
+            path: `/blog/tags/${tagsSlug}`,
+            component: blogListTemplate,
+            context: {
+              tags
+            }
+          })
+        })
+
         _.each(posts, (post, index) => {
           const previous = index === posts.length - 1 ? null : posts[index + 1].node
           const next = index === 0 ? null : posts[index - 1].node

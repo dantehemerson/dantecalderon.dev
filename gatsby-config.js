@@ -59,9 +59,26 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
+      resolve: `gatsby-plugin-mdx`
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          `gatsby-remark-embed-video`,
+          {
+            resolve: 'gatsby-remark-code-titles',
+            options: {
+              className: 'gatsby-remark-code-title',
+            },
+          },
+          {
+            resolve: "gatsby-remark-embed-gist",
+            options: {
+              username: 'dantehemerson',
+              includeDefaultCss: true
+            }
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {

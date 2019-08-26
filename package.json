@@ -42,6 +42,7 @@
     "gatsby-source-filesystem": "2.1.18",
     "gatsby-transformer-remark": "2.6.19",
     "gatsby-transformer-sharp": "2.2.12",
+    "gatsby-transformer-yaml": "^2.2.7",
     "lodash": "4.17.15",
     "netlify-cms": "2.9.7",
     "netlify-cms-app": "2.9.7",

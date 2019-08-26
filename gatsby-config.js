@@ -4,8 +4,13 @@ const aboutData = require('./about')
 module.exports = {
   pathPrefix: `/`,
   ...aboutData,
+  mapping: {
+    'MarkdownRemark.frontmatter.author': `AuthorYaml`,
+    'Mdx.frontmatter.author': `AuthorYaml`,
+  },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-transformer-yaml',
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',

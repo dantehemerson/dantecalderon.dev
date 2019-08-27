@@ -45,23 +45,19 @@ const StyledContent = styled.div`
   h4,
   h5,
   h6 {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
-  // titls
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   // dots of list
   ul, ol {
     padding-left: 30px;
+    padding-right: 12px;
+  }
+
+  p {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
   h1,
@@ -139,6 +135,7 @@ const StyledContent = styled.div`
     margin: 0;
     position: relative;
     top: 3px;
+    width: 17px;
     ${media.sm`
       width: 19px;
     `}

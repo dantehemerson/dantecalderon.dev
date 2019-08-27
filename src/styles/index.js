@@ -193,7 +193,7 @@ export const GlobalStyles = createGlobalStyle`
     text-shadow: none !important;
 
     &.language-text.language-text {
-      font-size: .8rem;
+      font-size: .9rem;
       top: -1px;
       position: relative;
       padding: 0 6px !important;
@@ -243,7 +243,12 @@ export const GlobalStyles = createGlobalStyle`
   }
   .gatsby-highlight {
     background: #2e2e2e;
-    border-radius: 5px;
+    border-radius: 0px;
+    ${
+  media.md`
+        border-radius: 5px;
+      `
+  }
     padding: 0.6em 0.7em;
     overflow: auto;
   }
@@ -254,10 +259,10 @@ export const GlobalStyles = createGlobalStyle`
   }
   .gatsby-highlight::-webkit-scrollbar {
     width: 4px;
-    height: 4px;
+    height: 6px;
   }
   .gatsby-highlight::-webkit-scrollbar-thumb {
-    background: #f08c49;
+    background: #f2a29d;
   }
   .gatsby-highlight::-webkit-scrollbar-track {
     background: #717171;

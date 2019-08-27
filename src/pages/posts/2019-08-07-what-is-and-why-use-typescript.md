@@ -20,6 +20,6 @@ Typescript es un muy popular
 
 `gist:dantehemerson/0c74084bec43cc5eea5eef74b30462ef`
 
-```js:title=example-file.js
+```js:title=src/app/example-file.js
 alert('how cool is this!');
 ```js

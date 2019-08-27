@@ -26,6 +26,7 @@ const StyledContent = styled.div`
   // Each item max width
   div.gatsby-highlight,
   ul,
+  div.gist,
   ol,
   p,
   h2,
@@ -40,6 +41,7 @@ const StyledContent = styled.div`
 
   // only texts
   p,
+  div.gist,
   h2,
   h3,
   h4,
@@ -72,13 +74,14 @@ const StyledContent = styled.div`
   h2 {
     text-align: center;
   }
+
   h3,
   h2 {
     margin-top: 30px;
-    font-size: 25px;
+    font-size: 17px;
   }
   h4 {
-    font-size: 19px;
+    font-size: 18px;
   }
   h6 {
     font-weight: 600;
@@ -95,7 +98,7 @@ const StyledContent = styled.div`
     h3,
     h2 {
       margin-top: 30px;
-      font-size: 25px;
+      font-size: 23px;
     }
     h4 {
       font-size: 19px;
@@ -107,7 +110,7 @@ const StyledContent = styled.div`
     h3,
     h2 {
       margin-top: 40px;
-      font-size: 29px;
+      font-size: 27px;
     }
     h4 {
       font-size: 21px;

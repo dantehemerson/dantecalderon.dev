@@ -221,10 +221,14 @@ export const GlobalStyles = createGlobalStyle`
     z-index: 4;
     position: relative;
     margin-right: -1em;
-    margin-left: -1em;
+    margin-left: -1.1em;
     padding-right: 1em;
     padding-left: 0.75em;
     border-left: 0.25em solid #b2c4ce;
+  }
+
+  div.gatsby-highlight {
+    margin-bottom: 15px;
   }
 
   .gatsby-highlight pre[class*="language-"] {
@@ -377,7 +381,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0 auto;
     margin-bottom: -0.4em;
     max-width: 900px;
-    padding: 0.5em 1em 0.6em;
+    padding: 0.8em 1em 0.9em;
     font-family: 'Fira Code', Consolas, monospace;
     background-color: #2d2d2d;
     color: #cacaca;

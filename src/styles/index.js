@@ -191,7 +191,7 @@ export const GlobalStyles = createGlobalStyle`
     -o-tab-size:      2 !important;
     tab-size:         2 !important;
     text-shadow: none !important;
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important;
+
     &.language-text {
       font-size: .85em;
       top: -1px;
@@ -204,7 +204,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .line-numbers .line-numbers-rows {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important;
+
   }
 
   .line-numbers-rows {

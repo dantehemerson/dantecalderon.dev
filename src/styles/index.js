@@ -243,9 +243,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   .gatsby-highlight {
     background: #2e2e2e;
-    border: 1px solid #dbe3e7;
     border-radius: 5px;
-    margin: 0.5em 0;
     padding: 0.6em 0.7em;
     overflow: auto;
   }
@@ -259,10 +257,10 @@ export const GlobalStyles = createGlobalStyle`
     height: 4px;
   }
   .gatsby-highlight::-webkit-scrollbar-thumb {
-    background: #a0c5d6;
+    background: #f08c49;
   }
   .gatsby-highlight::-webkit-scrollbar-track {
-    background: #e2e9ec;
+    background: #717171;
   }
 
 

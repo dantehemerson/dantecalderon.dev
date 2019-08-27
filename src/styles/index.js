@@ -192,8 +192,8 @@ export const GlobalStyles = createGlobalStyle`
     tab-size:         2 !important;
     text-shadow: none !important;
 
-    &.language-text {
-      font-size: .85em;
+    &.language-text.language-text {
+      font-size: .8rem;
       top: -1px;
       position: relative;
       padding: 0 6px !important;
@@ -239,7 +239,7 @@ export const GlobalStyles = createGlobalStyle`
     padding-left: 2.8em;
   }
   code[class*="language-"], pre[class*="language-"] {
-    font-size: 12px !important;
+    font-size: 12px;
   }
   .gatsby-highlight {
     background: #2e2e2e;

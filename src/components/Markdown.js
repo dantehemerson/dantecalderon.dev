@@ -26,6 +26,7 @@ const StyledContent = styled.div`
   // Each item max width
   div.gatsby-highlight,
   ul,
+  ol,
   p,
   h2,
   h3,
@@ -59,7 +60,7 @@ const StyledContent = styled.div`
   }
 
   // dots of list
-  ul {
+  ul, ol {
     padding-left: 30px;
   }
 

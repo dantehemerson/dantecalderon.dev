@@ -373,4 +373,24 @@ export const GlobalStyles = createGlobalStyle`
   }
 }
 
+.gatsby-remark-code-title {
+    margin: 0 auto;
+    margin-bottom: -0.4em;
+    max-width: 900px;
+    padding: 0.5em 1em 0.6em;
+    font-family: 'Fira Code', Consolas, monospace;
+    background-color: #2d2d2d;
+    color: #cacaca;
+    font-size: 10px;
+    border-bottom: 1px solid #464646;
+    z-index: 0;
+    position: relative;
+     ${
+  media.md`
+        border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+      `
+  }
+}
+
 `

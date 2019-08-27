@@ -9,7 +9,7 @@ code[class*="language-"],
 pre[class*="language-"] {
 	color: #ccc;
 	background: none;
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: 'Fira Code', Consolas, monospace !important;
 	font-size: 1em;
 	text-align: left;
 	white-space: pre;

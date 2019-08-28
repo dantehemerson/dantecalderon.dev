@@ -2,6 +2,7 @@
 model: post
 title: Manipulación de bits
 description: Manipulación de bits y usos.
+author: Dante Calderón
 path: manipulacion-de-bits
 thumbnail: /img/bit-manipulation.png
 date: '2018-08-17T03:16:12-05:00'
@@ -31,7 +32,7 @@ Ejemplos:
 000001 // 1 << 0 (j = 0)
 000010 // 1 << 1 (j = 1)
 000100 // 1 << 2 (j = 2)
-010000 // 1 << 4 (j = 4) 
+010000 // 1 << 4 (j = 4)
 ```
 
 Luego se realiza la operación and así:
@@ -43,9 +44,9 @@ using namespace std;
 int main() {
   int S = 43;
   int j = 3;
-  
+
   cout << ( S & ( 1 << j ) ) << endl;
-  
+
   return 0;
 }
 ```
@@ -62,9 +63,9 @@ Por ejemplo tenemos el siguiente numero en binario:
 Escribimos las potencias y el resultado de las potencias y el numero en binario:
 
 ```sh
-2⁵  2⁴  2³  2²  2¹  2⁰ 
+2⁵  2⁴  2³  2²  2¹  2⁰
 ---------------------
-32  16  8   4   2   1  
+32  16  8   4   2   1
 0   1   0   1   0   0
 ```
 
@@ -86,7 +87,7 @@ Por ejemplo, para saber si un número S es par o impar  realizamos la siguiente 
 ```sh
 S & 1
 ```
-El resultado de esta operación será siempre 0 ó 1. 
+El resultado de esta operación será siempre 0 ó 1.
 
 El siguiente código nos dice si el numero es par ó impar.
 
@@ -94,17 +95,17 @@ El siguiente código nos dice si el numero es par ó impar.
 Las operaciónes son:
 * **`S << 1`** : Para multiplicar por 2
 * **`S >> 1`** : Para dividir entre 2
-El resultado es un entero redondeado. 
+El resultado es un entero redondeado.
 
-Por ejemplo la división `17/2` sería `8` y no `8.5`. 
+Por ejemplo la división `17/2` sería `8` y no `8.5`.
 
 Mas ejemplos:
 
 ```sh
 // Teniendo en cuenta que cada operación
-// influye en la siguiente: 
+// influye en la siguiente:
 
-S      = 011010 (bin) = 26 (dec) 
+S      = 011010 (bin) = 26 (dec)
 S << 1 = 110100 (bin) = 52 (dec) = S * 2
 S >> 2 = 001101 (bin) = 13 (dec) = S / 2²
 S >> 1 = 011010 (bin) = 6  (dec) = S / 2

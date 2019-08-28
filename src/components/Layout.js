@@ -6,6 +6,7 @@ import { defaultTheme, GlobalStyles } from '../styles'
 import Footer from './Footer'
 import './index.scss'
 import Navbar from './Navbar'
+import '../assets/fonts/fira'
 
 class Layout extends React.Component {
   componentDidMount() {

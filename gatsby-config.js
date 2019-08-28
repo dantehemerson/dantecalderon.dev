@@ -4,8 +4,13 @@ const aboutData = require('./about')
 module.exports = {
   pathPrefix: `/`,
   ...aboutData,
+  mapping: {
+    'MarkdownRemark.frontmatter.author': `AuthorYaml`,
+    'Mdx.frontmatter.author': `AuthorYaml`,
+  },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-transformer-yaml',
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
@@ -54,9 +59,26 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
+      resolve: `gatsby-plugin-mdx`
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          `gatsby-remark-embed-video`,
+          {
+            resolve: 'gatsby-remark-code-titles',
+            options: {
+              className: 'gatsby-remark-code-title',
+            },
+          },
+          {
+            resolve: "gatsby-remark-embed-gist",
+            options: {
+              username: 'dantehemerson',
+              includeDefaultCss: true
+            }
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -94,7 +116,6 @@ module.exports = {
           },
           'gatsby-remark-external-links',
           'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants'
         ]
       }

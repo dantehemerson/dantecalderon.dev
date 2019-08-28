@@ -48,76 +48,75 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       `).then(result => {
-        if (result.errors) {
-          console.log(result.errors)
-          reject(result.errors)
-        }
+          if (result.errors) {
+            console.log(result.errors)
+            reject(result.errors)
+          }
 
-        const posts = result.data.allMarkdownRemark.edges
+          const posts = result.data.allMarkdownRemark.edges
 
-        const blogPosts = _.filter(result.data.allMarkdownRemark.edges, edge => {
-          // The model is a blog post
-          const model = _.get(edge, 'node.frontmatter.model')
-          // Post is published
-          const published = _.get(edge, 'node.frontmatter.published')
-          if (model === 'post' && published) return edge
-          return undefined
-        })
+          const blogPosts = _.filter(result.data.allMarkdownRemark.edges, edge => {
+            // The model is a blog post
+            const model = _.get(edge, 'node.frontmatter.model')
+            // Post is published
+            const published = _.get(edge, 'node.frontmatter.published')
+            if (model === 'post' && published) return edge
+            return undefined
+          })
 
-        console.log(blogPosts)
-        const numOfPages = Math.ceil(blogPosts.length / postPerPage)
+          const numOfPages = Math.ceil(blogPosts.length / postPerPage)
 
-        Array.from({
-          length: numOfPages
-        }).forEach((_, i) => {
-          createPage({
-            path: i === 0 ? '/blog' : `/blog/page/${i + 1}`,
-            component: blogListTemplate,
-            context: {
-              limit: postPerPage,
-              skip: i * postPerPage,
-              numPages: numOfPages,
-              currentPage: i + 1
-            }
+          Array.from({
+            length: numOfPages
+          }).forEach((_, i) => {
+            createPage({
+              path: i === 0 ? '/blog' : `/blog/page/${i + 1}`,
+              component: blogListTemplate,
+              context: {
+                limit: postPerPage,
+                skip: i * postPerPage,
+                numPages: numOfPages,
+                currentPage: i + 1
+              }
+            })
+          })
+
+          const makeSlugTag = tag => _.kebabCase(tag.toLowercase())
+          // Create tags pages
+          const tagGroups = _(blogPosts)
+            .map(post => _.get(post, 'node.frontmatter.tags'))
+            .filter()
+            .flatten()
+            .uniq()
+            .groupBy(makeSlugTag)
+
+          tagGroups.forEach((tags, tagsSlug) => {
+            createPage({
+              path: `/blog/tags/${tagsSlug}`,
+              component: blogListTemplate,
+              context: {
+                tags
+              }
+            })
+          })
+
+          _.each(posts, (post, index) => {
+            const previous = index === posts.length - 1 ? null : posts[index + 1].node
+            const next = index === 0 ? null : posts[index - 1].node
+
+            const { model } = post.node.frontmatter
+            const slug = `${getPrefix(model)}${post.node.frontmatter.path.trim()}`
+            createPage({
+              path: slug,
+              component: model === 'post' ? postTemplate : projectTemplate,
+              context: {
+                slug,
+                previous,
+                next
+              }
+            })
           })
         })
-
-        const makeSlugTag = tag => _.kebabCase(tag.toLowercase())
-        // Create tags pages
-        const tagGroups = _(blogPosts)
-          .map(post => _.get(post, 'node.frontmatter.tags'))
-          .filter()
-          .flatten()
-          .uniq()
-          .groupBy(makeSlugTag)
-
-        tagGroups.forEach((tags, tagsSlug) => {
-          createPage({
-            path: `/blog/tags/${tagsSlug}`,
-            component: blogListTemplate,
-            context: {
-              tags
-            }
-          })
-        })
-
-        _.each(posts, (post, index) => {
-          const previous = index === posts.length - 1 ? null : posts[index + 1].node
-          const next = index === 0 ? null : posts[index - 1].node
-
-          const { model } = post.node.frontmatter
-          const slug = `${getPrefix(model)}${post.node.frontmatter.path.trim()}`
-          createPage({
-            path: slug,
-            component: model === 'post' ? postTemplate : projectTemplate,
-            context: {
-              slug,
-              previous,
-              next
-            }
-          })
-        })
-      })
     )
   })
 }

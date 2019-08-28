@@ -4,11 +4,11 @@ title: Conceptos Básicos de Redux
 description: >-
   Redux es una pequeña librería de Javascript creada por Facebook que sirve para
   controlar el estado de una aplicación.
+author: Dante Calderón
 path: conceptos-basicos-de-redux
 thumbnail: /img/conceptos-basicos-redux.jpg
 date: '2018-06-29T09:56:23-05:00'
 published: true
-style: medium-img
 tags:
   - redux
 ---
@@ -40,7 +40,7 @@ Básicamente es un objeto que contiene un **tipo**(`type`) y los **datos**, por 
 let myAction = {
    // La acción, un identificador único(normalmente es una cadena descriptiva)
    type: 'ADD_USER',
-   
+
    // Luego los datos que queremos enviar.
    user: {
       name: 'JK Rowling',
@@ -73,7 +73,7 @@ function addUser(name, age, typeUser, ...) {
          age
          ...
       },
-      typeUser      
+      typeUser
    }
 }
 ```

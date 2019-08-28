@@ -2,6 +2,7 @@
 model: post
 title: Competitive Programming Utilities
 description: Funciones útiles que utilizo en programación competitiva.
+author: Dante Calderón
 path: competitive-programming-utilities
 thumbnail: >-
   /img/https_-2f-2fcdn.evbuc.com-2fimages-2f38462400-2f173216012503-2f1-2foriginal.png
@@ -12,7 +13,7 @@ tags:
   - Competitive Programming
 ---
 
-En Programación Competitiva el **tiempo** es un factor muy importante, así que siempre estamos buscando como mejorar nuestro tiempo. Tratamos siempre de minificar el esfuerzo al resolver el problema. 
+En Programación Competitiva el **tiempo** es un factor muy importante, así que siempre estamos buscando como mejorar nuestro tiempo. Tratamos siempre de minificar el esfuerzo al resolver el problema.
 
 Una de los cosas que tenemos en cuenta la velocidad con que escribimos o **WPM**(Word per minute, Palabras por minuto), vaya que es muy importante con Jim?.
 

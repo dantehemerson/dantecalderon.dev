@@ -26,6 +26,8 @@ const StyledContent = styled.div`
   // Each item max width
   div.gatsby-highlight,
   ul,
+  div.gist,
+  ol,
   p,
   h2,
   h3,
@@ -39,28 +41,25 @@ const StyledContent = styled.div`
 
   // only texts
   p,
+  div.gist,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
-  // titls
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   // dots of list
-  ul {
+  ul, ol {
     padding-left: 30px;
+    padding-right: 12px;
+  }
+
+  p {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
   h1,
@@ -75,13 +74,14 @@ const StyledContent = styled.div`
   h2 {
     text-align: center;
   }
+
   h3,
   h2 {
     margin-top: 30px;
-    font-size: 25px;
+    font-size: 17px;
   }
   h4 {
-    font-size: 19px;
+    font-size: 18px;
   }
   h6 {
     font-weight: 600;
@@ -98,7 +98,7 @@ const StyledContent = styled.div`
     h3,
     h2 {
       margin-top: 30px;
-      font-size: 25px;
+      font-size: 23px;
     }
     h4 {
       font-size: 19px;
@@ -110,7 +110,7 @@ const StyledContent = styled.div`
     h3,
     h2 {
       margin-top: 40px;
-      font-size: 29px;
+      font-size: 27px;
     }
     h4 {
       font-size: 21px;
@@ -138,6 +138,7 @@ const StyledContent = styled.div`
     margin: 0;
     position: relative;
     top: 3px;
+    width: 17px;
     ${media.sm`
       width: 19px;
     `}

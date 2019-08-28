@@ -15,6 +15,8 @@ const Title = styled.h1`
   margin-top: 60px;
   font-size: 28px;
   margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
   ${media.sm`
     font-size: 28px;
   `}

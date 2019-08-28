@@ -7,7 +7,9 @@ import { media } from '../styles'
 const Container = styled.div`
   display: flex;
   margin-bottom: 13px;
-  padding-left: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+
   margin-top: 20px;
   align-items: center;
   font-family: 'Open Sans', sans-serif;

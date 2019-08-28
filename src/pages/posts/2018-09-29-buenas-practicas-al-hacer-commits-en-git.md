@@ -2,6 +2,7 @@
 model: post
 title: Buenas practicas al hacer commits en git
 description: Buenas practicas al hacer commits en git
+author: Dante Calderón
 path: buenas-practicas-al-hacer-commits-en-git
 thumbnail: /img/screenshot_2018-09-29_09-17-22.png
 date: 2018-09-29T14:17:50.548Z

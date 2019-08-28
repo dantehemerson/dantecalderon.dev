@@ -191,9 +191,9 @@ export const GlobalStyles = createGlobalStyle`
     -o-tab-size:      2 !important;
     tab-size:         2 !important;
     text-shadow: none !important;
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important;
-    &.language-text {
-      font-size: .85em;
+
+    &.language-text.language-text {
+      font-size: .9rem;
       top: -1px;
       position: relative;
       padding: 0 6px !important;
@@ -204,7 +204,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .line-numbers .line-numbers-rows {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important;
+
   }
 
   .line-numbers-rows {
@@ -221,10 +221,14 @@ export const GlobalStyles = createGlobalStyle`
     z-index: 4;
     position: relative;
     margin-right: -1em;
-    margin-left: -1em;
+    margin-left: -1.1em;
     padding-right: 1em;
     padding-left: 0.75em;
     border-left: 0.25em solid #b2c4ce;
+  }
+
+  div.gatsby-highlight {
+    margin-bottom: 15px;
   }
 
   .gatsby-highlight pre[class*="language-"] {
@@ -239,13 +243,16 @@ export const GlobalStyles = createGlobalStyle`
     padding-left: 2.8em;
   }
   code[class*="language-"], pre[class*="language-"] {
-    font-size: 12px !important;
+    font-size: 12px;
   }
   .gatsby-highlight {
     background: #2e2e2e;
-    border: 1px solid #dbe3e7;
-    border-radius: 5px;
-    margin: 0.5em 0;
+    border-radius: 0px;
+    ${
+  media.md`
+        border-radius: 5px;
+      `
+  }
     padding: 0.6em 0.7em;
     overflow: auto;
   }
@@ -256,13 +263,13 @@ export const GlobalStyles = createGlobalStyle`
   }
   .gatsby-highlight::-webkit-scrollbar {
     width: 4px;
-    height: 4px;
+    height: 6px;
   }
   .gatsby-highlight::-webkit-scrollbar-thumb {
-    background: #a0c5d6;
+    background: #f2a29d;
   }
   .gatsby-highlight::-webkit-scrollbar-track {
-    background: #e2e9ec;
+    background: #717171;
   }
 
 
@@ -367,6 +374,26 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 16px;
     padding: 10px 85px;
     display: inline-block;
+  }
+}
+
+.gatsby-remark-code-title {
+    margin: 0 auto;
+    margin-bottom: -0.4em;
+    max-width: 900px;
+    padding: 0.8em 1em 0.9em;
+    font-family: 'Fira Code', Consolas, monospace;
+    background-color: #2d2d2d;
+    color: #cacaca;
+    font-size: 10px;
+    border-bottom: 1px solid #464646;
+    z-index: 0;
+    position: relative;
+     ${
+  media.md`
+        border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+      `
   }
 }
 

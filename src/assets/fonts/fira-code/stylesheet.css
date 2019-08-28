@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Fira Code";
+  font-family: 'Fira Code';
   font-display: swap;
-  src: url("FiraCode-Medium.otf") format("opentype");
+  src: url('FiraCode-Medium.woff') format('opentype');
 }

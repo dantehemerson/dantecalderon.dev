@@ -25,7 +25,7 @@ export default props => (
     <Button
       type="github"
       size="small"
-      href="https://www.github.com/dantehemerson"
+      href="/g"
       title="Github - Dante Calderón"
       target="_blank"
     >
@@ -34,7 +34,7 @@ export default props => (
     <Button
       type="twitter"
       size="small"
-      href="https://twitter.com/dantehemerson"
+      href="/t"
       title="Twitter - Dante Calderón"
       target="_blank"
     >
@@ -43,7 +43,7 @@ export default props => (
     <Button
       type="linkedin"
       size="small"
-      href="https://www.linkedin.com/in/dantehemerson/"
+      href="/l"
       title="Linkedin - Dante Calderón"
       target="_blank"
     >
@@ -52,7 +52,7 @@ export default props => (
     <Button
       type="instagram"
       size="small"
-      href="https://www.instagram.com/dantehemerson/"
+      href="/i"
       title="Instagram - Dante Calderón"
       target="_blank"
     >

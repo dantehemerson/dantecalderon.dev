@@ -184,7 +184,6 @@ export const GlobalStyles = createGlobalStyle`
 
 
 
-
   // CODE STYLES
   code {
     -moz-tab-size:    2 !important;
@@ -248,11 +247,9 @@ export const GlobalStyles = createGlobalStyle`
   .gatsby-highlight {
     background: #2e2e2e;
     border-radius: 0px;
-    ${
-  media.md`
+    ${media.md`
         border-radius: 5px;
-      `
-  }
+      `}
     padding: 0.6em 0.7em;
     overflow: auto;
   }
@@ -385,16 +382,14 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Fira Code', Consolas, monospace;
     background-color: #2d2d2d;
     color: #cacaca;
-    font-size: 10px;
+    font-size: 11px;
     border-bottom: 1px solid #464646;
     z-index: 0;
     position: relative;
-     ${
-  media.md`
+     ${media.md`
         border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-      `
-  }
+      `}
 }
 
 `

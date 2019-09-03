@@ -6,7 +6,7 @@ module.exports = {
   ...aboutData,
   mapping: {
     'MarkdownRemark.frontmatter.author': `AuthorYaml`,
-    'Mdx.frontmatter.author': `AuthorYaml`,
+    'Mdx.frontmatter.author': `AuthorYaml`
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -69,11 +69,11 @@ module.exports = {
           {
             resolve: 'gatsby-remark-code-titles',
             options: {
-              className: 'gatsby-remark-code-title',
-            },
+              className: 'gatsby-remark-code-title'
+            }
           },
           {
-            resolve: "gatsby-remark-embed-gist",
+            resolve: 'gatsby-remark-embed-gist',
             options: {
               username: 'dantehemerson',
               includeDefaultCss: true
@@ -98,7 +98,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
-              offsetY: `75`
+              offsetY: `80`
             }
           },
           {

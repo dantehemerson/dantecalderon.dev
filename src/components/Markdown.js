@@ -9,6 +9,15 @@ const StyledContent = styled.div`
   font-size: 17px;
   line-height: 1.4;
 
+  blockquote {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+    padding-left: 8px;
+    border-left: 5px solid #6b6b6b;
+  }
+
   a {
     color: rgb(74, 144, 226);
     border-bottom: 1px dotted rgb(91, 159, 239);
@@ -51,8 +60,14 @@ const StyledContent = styled.div`
     padding-right: 10px;
   }
 
+  p > img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   // dots of list
-  ul, ol {
+  ul,
+  ol {
     padding-left: 30px;
     padding-right: 12px;
   }

@@ -1218,23 +1218,23 @@
   dependencies:
     core-js "^2.5.7"
 
-"@mdx-js/mdx@1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-1.4.0.tgz#465218fd9d2479b745eeccb4875601b4f0537cb6"
-  integrity sha512-JV7lBmc4GXu/g6ATIjBBe9iovLnMFP6Ka6ZAIeiZHBRrhec1oj9iYTTShmRY+w2MsMfk0vBIxJxQSiorf4pGYw==
+"@mdx-js/mdx@1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-1.4.3.tgz#875dbb21c73e30522e057a0935dddc112e1c8626"
+  integrity sha512-dAnf51fSf1Se/RH+Hq1r8haiZOb2j+seY4VhJjsfBUqewieJyOfJEgzrr/PXw0nQ+TFgSUN6w2joMxUNCnrtIQ==
   dependencies:
     "@babel/core" "7.5.5"
     "@babel/plugin-syntax-jsx" "7.2.0"
     "@babel/plugin-syntax-object-rest-spread" "7.2.0"
-    "@mdx-js/util" "^1.4.0"
-    babel-plugin-apply-mdx-type-prop "^1.4.0"
-    babel-plugin-extract-import-names "^1.4.0"
+    "@mdx-js/util" "^1.4.3"
+    babel-plugin-apply-mdx-type-prop "^1.4.3"
+    babel-plugin-extract-import-names "^1.4.3"
     camelcase-css "2.0.1"
     detab "2.0.2"
     hast-util-raw "5.0.1"
     lodash.uniq "4.5.0"
     mdast-util-to-hast "6.0.2"
-    remark-mdx "^1.4.0"
+    remark-mdx "^1.4.3"
     remark-parse "7.0.1"
     remark-squeeze-paragraphs "3.0.4"
     style-to-object "0.2.3"
@@ -1242,15 +1242,15 @@
     unist-builder "1.0.4"
     unist-util-visit "2.0.0"
 
-"@mdx-js/react@1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-1.4.0.tgz#b389684b4b5fbfb6770a6cc0d620fca82b8a8549"
-  integrity sha512-UHPG74qvLM8wO+evIKzNQqSw3PzgPei4oEFPuFGee15rK0cYNDKL+utzQLM1Ngv2gmjU/WN9BYrpJxyFh8xOCg==
+"@mdx-js/react@1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-1.4.3.tgz#16fbbcea3c3719396288dd02c411f932f5175656"
+  integrity sha512-+YAPmaB8VcRC6fuIEy/UyFNkQ6O4MX90rdqBzzwqceb7i/jl2FI2pJyKnxLER/0UcyGvQoMw+Q/SCmdDUNtsAA==
 
-"@mdx-js/util@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.4.0.tgz#93d0d78ba0520d162796bb94156b399bd26e9394"
-  integrity sha512-idIFyiYzVr3kNOGtIZzx2n9V0iJdTn06hYmJ05miktP4bHdrTJeonp/6wfLtDxfsfx00mkCxxX0YymvnrqozeA==
+"@mdx-js/util@^1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.4.3.tgz#596820a17a4ef1170c38a11a0bc93855d3b52d30"
+  integrity sha512-GxyOBspTtwO4XqA+ask3q+HIKhARpmg7XZ3NNAJqgVfw8CnGpIEGFNv3XkZFXETjJVKdbCxSsQNR9TPMTzF0fA==
 
 "@mikaelkristiansson/domready@^1.0.9":
   version "1.0.9"
@@ -2179,13 +2179,13 @@ babel-plugin-add-module-exports@^0.3.3:
   optionalDependencies:
     chokidar "^2.0.4"
 
-babel-plugin-apply-mdx-type-prop@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-apply-mdx-type-prop/-/babel-plugin-apply-mdx-type-prop-1.4.0.tgz#73e16d8e9cb26d8ed5f7d9acfefbc7afab8bcee6"
-  integrity sha512-yeLqZ9HinXo0EiV4dUxpwxXswQzya2YhgGw4FErYxD/dQxtPMGnBXNxxudCBvoCThjxclFXU2IDfpfMbJR2UFQ==
+babel-plugin-apply-mdx-type-prop@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/babel-plugin-apply-mdx-type-prop/-/babel-plugin-apply-mdx-type-prop-1.4.3.tgz#7069712b89b53532389eef77bd8ab3ae2a468e0a"
+  integrity sha512-nS5+S0f891TxT0Zv2n2ZF6skojuU1hEumHUHK6zRUYQNCL92s+c40PdUl/Qnm1C0eRt/tvd8ubY7aDCIz5LuhA==
   dependencies:
     "@babel/helper-plugin-utils" "7.0.0"
-    "@mdx-js/util" "^1.4.0"
+    "@mdx-js/util" "^1.4.3"
 
 babel-plugin-dynamic-import-node@^1.2.0:
   version "1.2.0"
@@ -2235,10 +2235,10 @@ babel-plugin-emotion@^9.2.11:
     source-map "^0.5.7"
     touch "^2.0.1"
 
-babel-plugin-extract-import-names@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-extract-import-names/-/babel-plugin-extract-import-names-1.4.0.tgz#4f3a5b3237311e83e8b52161993bd9e5a50652b1"
-  integrity sha512-tPGjqJj44L1saGZ2GGeKKLlaqLYV9oNYawE5nAFMF2umfKv3krXz8ANmsnS5EoagC96fvjo0JBOiMlifUZTiZA==
+babel-plugin-extract-import-names@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/babel-plugin-extract-import-names/-/babel-plugin-extract-import-names-1.4.3.tgz#6e81f86288c69a332dd3b165e38ea046406d5faf"
+  integrity sha512-82dthmUNKI0Bvty7KtKVGbE5StAmm9ZyPQV30FUoutDFivYuVbRV1oBHFCQDSREDURufJq0qHc3v3GiNoDxDhg==
   dependencies:
     "@babel/helper-plugin-utils" "7.0.0"
 
@@ -12700,16 +12700,16 @@ relay-runtime@2.0.0:
     "@babel/runtime" "^7.0.0"
     fbjs "^1.0.0"
 
-remark-mdx@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/remark-mdx/-/remark-mdx-1.4.0.tgz#f50c2b47bdb61e71aa0e15e976277e568ae0d486"
-  integrity sha512-wheABifW7zegJ9ASCbHJ6SlKp5ZF2YgWB62kU9zLR6SE2wSfipk3yK1tgXKmBTpXLrRuxPY/VEaV7YcO8dLLgg==
+remark-mdx@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/remark-mdx/-/remark-mdx-1.4.3.tgz#53daefb0617d9535b85ce2b0cffe4a3afe18f7d3"
+  integrity sha512-y2VptrmhvptbK3UTA5h6r2OilA/ohuUNyEULKaGAAtc+J2Mt40YN1D2zEECHsMGzkka7j63rOmpiZSTndY6nMQ==
   dependencies:
     "@babel/core" "7.5.5"
     "@babel/helper-plugin-utils" "7.0.0"
     "@babel/plugin-proposal-object-rest-spread" "7.5.5"
     "@babel/plugin-syntax-jsx" "7.2.0"
-    "@mdx-js/util" "^1.4.0"
+    "@mdx-js/util" "^1.4.3"
     is-alphabetical "1.0.3"
     remark-parse "7.0.1"
     unified "8.3.2"

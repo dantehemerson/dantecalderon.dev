@@ -7,7 +7,7 @@
     "@mdx-js/mdx": "1.4.0",
     "@mdx-js/react": "1.4.0",
     "@webcomponents/custom-elements": "1.2.4",
-    "ast-get-object": "1.8.40",
+    "ast-get-object": "1.8.41",
     "babel-plugin-styled-components": "1.10.6",
     "bluebird": "3.5.5",
     "dotenv": "8.1.0",

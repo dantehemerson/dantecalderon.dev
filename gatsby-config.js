@@ -86,7 +86,13 @@ module.exports = {
               sizeByPixelDensity: true,
               quality: 90,
               showCaptions: true,
-              linkImagesToOriginal: true
+              linkImagesToOriginal: false
+            }
+          },
+          {
+            resolve: `gatsby-remark-images-medium-zoom`, // point!
+            options: {
+              //...
             }
           },
           {

@@ -147,6 +147,21 @@ const StyledContent = styled.div`
   .gatsby-resp-iframe-wrapper {
     max-width: 100%;
   }
+  .gatsby-resp-image-figcaption {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 45px;
+    font-weight: 600;
+    padding-left: 12px;
+    line-height: 1.9;
+    padding-right: 12px;
+    font-family: 'Open Sans';
+    color: #0000008a;
+    font-size: 12px;
+    max-width: 600px !important;
+  }
 
   img.emoji-icon {
     display: inline;

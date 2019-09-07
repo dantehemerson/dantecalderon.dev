@@ -197,7 +197,7 @@ export const GlobalStyles = createGlobalStyle`
       position: relative;
       padding: 0 6px !important;
       color: inherit !important;
-      border: 1px solid #dbe3e7 !important;
+      border: 1px solid #acd1ff !important;
       background: #ecf4fc !important;
     }
   }
@@ -227,7 +227,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   div.gatsby-highlight {
-    margin-bottom: 15px;
+    margin-bottom: 27px;
   }
 
   .gatsby-highlight pre[class*="language-"] {

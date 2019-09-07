@@ -27,7 +27,8 @@ const type = [
   'JS MVC Framework',
   'Cloud Content Management System',
   'Command Language',
-  'Templating Languages & Extensions'
+  'Templating Languages & Extensions',
+  'Concurrency Framework'
 ]
 
 const groups = [
@@ -76,8 +77,16 @@ const groups = [
     ]
   },
   {
-    title: 'Testing',
+    title: 'Frameworks & Utilities',
     items: [
+       {
+        url: 'https://rxjs.dev/',
+        name: 'RxJS',
+        icon: 'rxjs.svg',
+        type: type[29],
+        about:
+          'The Reactive Extensions for JavaScript is a library for reactive programming using Observables.'
+      },
       {
         url: 'https://google.com',
         name: 'Mocha',
@@ -93,6 +102,22 @@ const groups = [
         background: 'white',
         type: type[20],
         about: 'Painless JavaScript Unit Testing'
+      },
+      {
+        url: 'https://google.com',
+        name: 'Git',
+        icon: 'git-plain.svg',
+        background: 'white',
+        type: type[13],
+        about: 'Fast, scalable, distributed revision control system'
+      },
+      {
+        url: 'https://google.com',
+        name: 'Webpack',
+        icon: 'webpack-original.svg',
+        background: 'white',
+        type: type[18],
+        about: 'A bundler for javascript and friends.'
       }
     ]
   },
@@ -282,24 +307,9 @@ const groups = [
     ]
   },
   {
-    title: 'Utilities',
+    title: 'Others',
     items: [
-      {
-        url: 'https://google.com',
-        name: 'Git',
-        icon: 'git-plain.svg',
-        background: 'white',
-        type: type[13],
-        about: 'Fast, scalable, distributed revision control system'
-      },
-      {
-        url: 'https://google.com',
-        name: 'Webpack',
-        icon: 'webpack-original.svg',
-        background: 'white',
-        type: type[18],
-        about: 'A bundler for javascript and friends.'
-      },
+      
       { url: 'https://google.com', name: 'Linux', icon: 'linux-original.svg', type: type[6], about: 'My favourite OS' },
       {
         url: 'https://google.com',
@@ -316,11 +326,11 @@ const groups = [
         background: '#007fc9',
         type: type[21],
         about: 'Your entire project, in a single glance.'
-      }
+      },
       //{ url: 'https://google.com', name: 'Sublime Text', icon: 'sublime-text-3.png', background: '#474747', type: type[15], about: "A sophisticated text editor for code, markup and prose." },
-      //{ url: 'https://google.com', name: 'VIM', icon: 'vim-original.svg', type: type[15], about: "Highly configurable text editor built to enable efficient text editing" },
-      //{ url: 'https://google.com', name: 'Ubuntu', icon: 'ubuntu-plain.svg', background: 'white', type: type[6], about: "The leading OS for PC, tablet, phone and cloud" },
-      //{ url: 'https://google.com', name: 'Debian', icon: 'debian-plain.svg', background: 'white', type: type[6], about: "The Universal Operating System" },
+      { url: 'https://google.com', name: 'VIM', icon: 'vim-original.svg', type: type[15], about: "Highly configurable text editor built to enable efficient text editing" },
+      { url: 'https://google.com', name: 'Ubuntu', icon: 'ubuntu-plain.svg', background: 'white', type: type[6], about: "The leading OS for PC, tablet, phone and cloud" },
+      { url: 'https://google.com', name: 'Debian', icon: 'debian-plain.svg', background: 'white', type: type[6], about: "The Universal Operating System" },
     ]
   }
 ]

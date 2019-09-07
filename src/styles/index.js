@@ -161,6 +161,9 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  img.medium-zoom-image--opened {
+    border: 1px solid #eee;
+  }
   ${sliderStyles}
 
   // POST STYLES

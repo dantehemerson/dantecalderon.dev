@@ -60,6 +60,10 @@ const StyledContent = styled.div`
     padding-right: 10px;
   }
 
+  img {
+    border: 1px solid #eee;
+  }
+
   p > img {
     margin-left: auto;
     margin-right: auto;

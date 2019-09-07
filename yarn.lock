@@ -6160,6 +6160,13 @@ gatsby-remark-external-links@0.0.4:
     unist-util-find "^1.0.1"
     unist-util-visit "^1.1.3"
 
+gatsby-remark-images-medium-zoom@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images-medium-zoom/-/gatsby-remark-images-medium-zoom-1.2.1.tgz#4574b8fcc5b3905ea9be69ac5ded1bad7e074cb5"
+  integrity sha512-3H9twtoEWo+hh+y2rcVbyzM3pVSyiGUSMiyqKZNtQhaPaZ2Zvo424UeX3+kKHtN2LEZSzh/JhgCYbR99BXiBrA==
+  dependencies:
+    medium-zoom "^1.0.4"
+
 gatsby-remark-images@3.1.20:
   version "3.1.20"
   resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-3.1.20.tgz#faaa0c4f3a1ceceed56203aff94eec868937a5a2"
@@ -9337,6 +9344,11 @@ media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
+
+medium-zoom@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/medium-zoom/-/medium-zoom-1.0.4.tgz#b1063093f81151a19989489589edf28e6090630c"
+  integrity sha512-BjE+00gQku3XQfgHDcqyYwQaBtFddzh6Lnj1RZOliqJ9HS0mh/P2IaqVJ25/j9EbnjAUf27mLeLZBRxnd00bfA==
 
 mem@^1.1.0:
   version "1.1.0"

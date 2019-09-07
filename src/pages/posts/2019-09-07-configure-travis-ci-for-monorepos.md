@@ -20,7 +20,7 @@ Los repositorios multiproyectos o [monorepos](https://en.wikipedia.org/wiki/Mono
 
 ### ¿Qué es TravisCI?
 
-> Travis CI es un servicio de integración continua alojado que se utiliza para construir y testear proyectos de software alojados en GitHub. from [Wikipedia](https://en.wikipedia.org/wiki/Travis_CI).
+> Travis CI es un servicio de integración continua alojado que se utiliza para construir y testear proyectos de software alojados en GitHub. fuente: [Wikipedia](https://en.wikipedia.org/wiki/Travis_CI).
 
 ### Configurar TravisCI para monorepos
 

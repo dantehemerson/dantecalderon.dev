@@ -27,30 +27,6 @@ module.exports = {
       }
     },
     {
-      // All images from assets folder. For use in website.
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'img',
-        path: `${__dirname}/src/assets/images`
-      }
-    },
-    {
-      // All images for Markdown pages. For use in generated posts, projects.
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'img',
-        path: `${__dirname}/static/img/`
-      }
-    },
-    {
-      // Markdown pages: posts and projects folder
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'pages',
-        path: `${__dirname}/src/pages/`
-      }
-    },
-    {
       resolve: 'gatsby-plugin-typography',
       options: {
         pathToConfigModule: 'src/utils/typography.js'
@@ -59,13 +35,11 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-mdx`
-    },
-    {
-      resolve: 'gatsby-transformer-remark',
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        plugins: [
-          `gatsby-remark-embed-video`,
+        extensions: ['.md', '.mdx'],
+        gatsbyRemarkPlugins: [
+          'gatsby-remark-embed-video',
           {
             resolve: 'gatsby-remark-code-titles',
             options: {
@@ -83,17 +57,13 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 2000,
-              sizeByPixelDensity: true,
               quality: 100,
               showCaptions: true,
               linkImagesToOriginal: false
             }
           },
           {
-            resolve: `gatsby-remark-images-medium-zoom`, // point!
-            options: {
-              //...
-            }
+            resolve: `gatsby-remark-images-medium-zoom`
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,

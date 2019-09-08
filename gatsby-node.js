@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const Promise = require('bluebird')
 const path = require('path')
-const { createFilePath } = require('gatsby-source-filesystem')
 
 // CONSTANTS
 const postPerPage = 8
@@ -9,7 +8,7 @@ const postPerPage = 8
 const resolvePathImages = images => {
   return images.map(item => ({
     ...item,
-    image: item.image ? `../../../static${item.image}` : undefined
+    image: item.image ? `../../static${item.image}` : undefined
   }))
 }
 
@@ -36,7 +35,11 @@ exports.createPages = ({ graphql, actions }) => {
     resolve(
       graphql(`
         {
-          allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
+          allMdx(
+            sort: { fields: [frontmatter___date], order: DESC }
+            limit: 1000
+            filter: { fileAbsolutePath: { ne: null } }
+          ) {
             edges {
               node {
                 frontmatter {
@@ -51,13 +54,12 @@ exports.createPages = ({ graphql, actions }) => {
         }
       `).then(result => {
         if (result.errors) {
-          console.log(result.errors)
           reject(result.errors)
         }
 
-        const posts = result.data.allMarkdownRemark.edges
+        const posts = result.data.allMdx.edges
 
-        const blogPosts = _.filter(result.data.allMarkdownRemark.edges, edge => {
+        const blogPosts = _.filter(posts, edge => {
           // The model is a blog post
           const model = _.get(edge, 'node.frontmatter.model')
           // Post is published
@@ -111,15 +113,18 @@ exports.createPages = ({ graphql, actions }) => {
 
           const { model } = post.node.frontmatter
           const slug = `${getPrefix(model)}${post.node.frontmatter.path.trim()}`
-          createPage({
-            path: slug,
-            component: model === 'post' ? postTemplate : projectTemplate,
-            context: {
-              slug,
-              previous,
-              next
-            }
-          })
+
+          if (['post'].includes(model) !== undefined) {
+            createPage({
+              path: slug,
+              component: model === 'post' ? postTemplate : projectTemplate,
+              context: {
+                slug,
+                previous,
+                next
+              }
+            })
+          }
         })
       })
     )
@@ -130,31 +135,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   const { frontmatter } = node
 
-  if (node.internal.type === 'MarkdownRemark' && frontmatter) {
-    const { thumbnail, model } = frontmatter
-    if (thumbnail) {
-      if (typeof thumbnail === 'string') {
-        createNodeField({
-          name: 'image',
-          node,
-          // Relative path from posts and projects folder. Linking to static/img folder.
-          value: `../../../static${thumbnail}`
-        })
-      }
-      createNodeField({
-        name: 'slug',
-        node,
-        value: `${getPrefix(model)}${frontmatter.path}`
-      })
-      // Generate path to images for slider in project.
-      if (model === 'project') {
-        const images = resolvePathImages(frontmatter.images)
-        createNodeField({
-          name: 'images',
-          node,
-          value: images
-        })
-      }
-    }
+  if (['MarkdownRemark', 'Mdx'].includes(node.internal.type) && frontmatter) {
+    const { model } = frontmatter
+    createNodeField({
+      name: 'slug',
+      node,
+      value: `${getPrefix(model)}${frontmatter.path}`
+    })
   }
 }

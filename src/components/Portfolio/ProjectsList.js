@@ -24,12 +24,13 @@ export default props => (
           data={{
             title: node.frontmatter.title,
             subtitle: node.frontmatter.subtitle,
-            thumbnail: node.fields.image.childImageSharp.sizes,
+            thumbnail: node.frontmatter.image.childImageSharp.sizes,
             path: `/${node.fields.slug}`,
             tags: node.frontmatter.tags,
             repository: node.frontmatter.repository,
             website: node.frontmatter.website
           }}
+          key={index}
           finished={node.frontmatter.finished}
         />
       )

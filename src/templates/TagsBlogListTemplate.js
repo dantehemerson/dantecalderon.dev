@@ -21,7 +21,7 @@ class BlogWithTags extends React.Component {
     const tags = get(this.props, 'pageContext.tags')
     const title = `${preferSpacedTag(tags)} - Blog`
     console.log(this.props)
-    const posts = get(this, 'props.data.allMarkdownRemark.edges') || []
+    const posts = get(this, 'props.data.allMdx.edges') || []
     const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')
     return (
       <Layout location={this.props.location} active={pages.blog}>
@@ -35,7 +35,7 @@ class BlogWithTags extends React.Component {
                   <Card
                     data={{
                       title: node.frontmatter.title,
-                      thumbnail: node.fields.image.childImageSharp.sizes,
+                      thumbnail: node.frontmatter.image.childImageSharp.sizes,
                       excerpt: node.excerpt,
                       date: node.frontmatter.date,
                       path: `/${node.fields.slug}`,
@@ -66,7 +66,7 @@ export const queryBlog = graphql`
         siteUrl
       }
     }
-    allMarkdownRemark(
+    allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: $tags }, model: { eq: "post" }, published: { eq: true } } }
       limit: 100
@@ -76,6 +76,12 @@ export const queryBlog = graphql`
           excerpt(pruneLength: 240)
           timeToRead
           fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "DD MMMM, YYYY")
+            title
+            path
             image {
               childImageSharp {
                 sizes {
@@ -83,13 +89,6 @@ export const queryBlog = graphql`
                 }
               }
             }
-            slug
-          }
-          frontmatter {
-            date(formatString: "DD MMMM, YYYY")
-            title
-            path
-            thumbnail
             published
           }
         }

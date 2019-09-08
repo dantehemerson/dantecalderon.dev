@@ -4,16 +4,16 @@ title: Storytelling Cubes
 subtitle: 'Create great stories, exploit your creativity.'
 description: Application that generate random cubes for create histories.
 path: storytelling-cubes
-thumbnail: /img/storytellingcubes1.png
+image: ../images/storytellingcubes1.png
 images:
   - description: Home Page
-    image: /img/storytellingcubes1.png
+    image: ../images/storytellingcubes1.png
   - description: Settings page
-    image: /img/storytellingcubes2.png
+    image: ../images/storytellingcubes2.png
   - description: Home Page Phone
-    image: /img/storytellig-phone-3.png
+    image: ../images/storytellig-phone-3.png
   - description: Settings Page Phone
-    image: /img/storytellig-phone-4.png
+    image: ../images/storytellig-phone-4.png
 date: 2018-11-06T05:27:32.846Z
 finished: true
 published: true

@@ -5,7 +5,7 @@ description: >-
   Typescript is so popular, but what is exactly and why use it.
 author: Dante Calderón
 path: what-is-typescript
-thumbnail: /img/explore-code-github.jpg
+image: ../images/explore-code-github.jpg
 date: '2019-07-20T01:42:52-05:00'
 published: false
 style: normal-img

@@ -6,7 +6,7 @@ description: >-
   orientado a objectos en un proyecto
 author: Dante Calderón
 path: introduccion-patrones-de-diseno
-thumbnail: /img/jhj.png
+image: ../images/jhj.png
 date: '2018-08-22T00:07:28-05:00'
 published: false
 style: full-image

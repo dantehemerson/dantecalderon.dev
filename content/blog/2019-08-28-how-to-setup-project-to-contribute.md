@@ -5,7 +5,7 @@ description: >-
   Mejor forma de como clonar un repositorio y configurarlo para empezar a contribuir.
 author: Dante Calderón
 path: how-to-setup-project-to-contribute
-thumbnail: /img/coders-git.jpg
+image: ../images/coders-git.jpg
 date: '2019-09-28T01:42:52-05:00'
 published: false
 tags:

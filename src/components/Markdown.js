@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { media } from '../styles'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 // All styles for markdown here
 
@@ -186,6 +187,6 @@ const StyledContent = styled.div`
 
 export default ({ content }) => (
   <StyledContent id="Markdown">
-    <div dangerouslySetInnerHTML={{ __html: content }} />
+    <MDXRenderer>{content}</MDXRenderer>
   </StyledContent>
 )

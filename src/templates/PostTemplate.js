@@ -14,14 +14,14 @@ export default class BlogPostTemplate extends React.Component {
     console.log(this.props)
     const {
       timeToRead,
-      html,
+      body,
       fileAbsolutePath,
-      fields: { slug, image },
-      frontmatter: { title, thumbnail, date, description, tags }
-    } = this.props.data.markdownRemark
+      fields: { slug },
+      frontmatter: { title, image, date, description, tags }
+    } = this.props.data.mdx
 
     return (
-      <Layout isPost title={title} path={slug} image={thumbnail} description={description}>
+      <Layout isPost title={title} path={slug} image={`thumbnail`} description={description}>
         <PostHeader
           title={title}
           image={image}
@@ -30,7 +30,7 @@ export default class BlogPostTemplate extends React.Component {
           timeToRead={timeToRead}
           avatar={this.props.data.avatar}
         />
-        <Markdown content={html} />
+        <Markdown content={body} />
         <TagsSection tags={tags} />
         <Share title={title} path={slug} />
         <SubscribeForm />
@@ -52,9 +52,9 @@ export const pageQuery = graphql`
         siteUrl
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    mdx(fields: { slug: { eq: $slug } }) {
       id
-      html
+      body
       timeToRead
       fileAbsolutePath
       frontmatter {
@@ -62,12 +62,6 @@ export const pageQuery = graphql`
         subtitle
         date(formatString: "MMMM DD, YYYY")
         description
-        thumbnail
-        model
-        style
-        tags
-      }
-      fields {
         image {
           childImageSharp {
             sizes(maxWidth: 1920) {
@@ -75,6 +69,11 @@ export const pageQuery = graphql`
             }
           }
         }
+        model
+        style
+        tags
+      }
+      fields {
         slug
       }
     }

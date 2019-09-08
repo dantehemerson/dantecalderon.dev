@@ -6,7 +6,7 @@ description: >-
   controlar el estado de una aplicación.
 author: Dante Calderón
 path: conceptos-basicos-de-redux
-thumbnail: /img/conceptos-basicos-redux.jpg
+image: ../images/conceptos-basicos-redux.jpg
 date: '2018-06-29T09:56:23-05:00'
 published: true
 tags:

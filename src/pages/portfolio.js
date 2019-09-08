@@ -8,7 +8,7 @@ import { pages } from '../utils'
 
 class Portfolio extends React.Component {
   render() {
-    const posts = this.props.data.allMarkdownRemark.edges || []
+    const posts = this.props.data.allMdx.edges || []
     const siteUrl = this.props.data.site.siteMetadata.siteUrl
     return (
       <Layout location={this.props.location} active={pages.portfolio}>
@@ -39,13 +39,15 @@ export const queryPortfolio = graphql`
       }
     }
 
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { model: { eq: "project" } } }
-    ) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { model: { eq: "project" } } }) {
       edges {
         node {
           fields {
+            slug
+          }
+          frontmatter {
+            title
+            path
             image {
               childImageSharp {
                 sizes {
@@ -53,12 +55,6 @@ export const queryPortfolio = graphql`
                 }
               }
             }
-            slug
-          }
-          frontmatter {
-            title
-            path
-            thumbnail
             tags
             repository
             website

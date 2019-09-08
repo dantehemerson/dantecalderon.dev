@@ -14,7 +14,7 @@ export const Project = props => {
         repository={props.frontmatter.repository}
         website={props.frontmatter.website}
         finished={props.frontmatter.finished}
-        images={props.fields.images}
+        images={props.frontmatter.images}
         tags={props.frontmatter.tags}
       />
       <Markdown content={props.content} />
@@ -33,16 +33,16 @@ export const Project = props => {
 
 export default class ProjectTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
+    const post = this.props.data.mdx
     const { siteMetadata } = this.props.data.site
-    const { title, thumbnail, description } = post.frontmatter
+    const { title, description } = post.frontmatter
     return (
-      <Layout title={title} path={post.fields.slug} image={thumbnail} description={description}>
+      <Layout title={title} path={post.fields.slug} image={`thumbnail`} description={description}>
         <Project
           {...post}
           {...siteMetadata}
-          content={post.html}
-          image={post.fields.image.childImageSharp.sizes}
+          content={post.body}
+          image={post.frontmatter.image.childImageSharp.sizes}
           avatar={this.props.data.avatar}
         />
       </Layout>
@@ -63,28 +63,14 @@ export const pageQuery = graphql`
         siteUrl
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    mdx(fields: { slug: { eq: $slug } }) {
       id
-      html
-      htmlAst
+      body
       frontmatter {
         title
         subtitle
         date(formatString: "MMMM DD, YYYY")
         description
-        thumbnail
-        model
-        tags
-        stack
-        roles
-        client
-        repository
-        website
-        licence
-        finished
-      }
-      fields {
-        slug
         image {
           childImageSharp {
             sizes(maxWidth: 1920) {
@@ -102,6 +88,18 @@ export const pageQuery = graphql`
             }
           }
         }
+        model
+        tags
+        stack
+        roles
+        client
+        repository
+        website
+        licence
+        finished
+      }
+      fields {
+        slug
       }
     }
   }

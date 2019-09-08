@@ -4,22 +4,22 @@ title: dantecalderon
 subtitle: My webpage
 description: Personal-website
 path: dantecalderon
-thumbnail: /img/danteclderon-home.png
+image: ../images/danteclderon-home.png
 images:
   - description: HOme page
-    image: /img/danteclderon-home.png
+    image: ../images/danteclderon-home.png
   - description: About page
-    image: /img/danteacalderon-about.png
+    image: ../images/danteacalderon-about.png
   - description: Contact Page
-    image: /img/dantecalderon-portfolio.png
+    image: ../images/dantecalderon-portfolio.png
   - description: 'Siklls section '
-    image: /img/dantecalderon-about-skills.png
+    image: ../images/dantecalderon-about-skills.png
   - description: Blog page
-    image: /img/dantecalderon-blog.png
+    image: ../images/dantecalderon-blog.png
   - description: Project page
-    image: /img/dantecalderon-project.png
+    image: ../images/dantecalderon-project.png
   - description: Post Page
-    image: /img/dantecalderon-post.png
+    image: ../images/dantecalderon-post.png
 date: 2018-11-06T20:32:07.279Z
 finished: true
 published: true

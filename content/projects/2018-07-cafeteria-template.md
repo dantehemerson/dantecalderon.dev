@@ -4,9 +4,9 @@ title: Cafeteria - Template
 subtitle: 'Un template para una cafetería, hecha con el framework Foundation.'
 description: 'Un template para una cafetería, hecha con el framework Foundation'
 path: cafeteria-template
-thumbnail: /img/cafeteria.png
+image: ../images/cafeteria.png
 images:
-  - image: /img/cafeteria.png
+  - image: ../images/cafeteria.png
 date: '2018-05-05T08:41:18-05:00'
 finished: true
 published: true

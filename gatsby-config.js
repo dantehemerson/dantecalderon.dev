@@ -93,7 +93,8 @@ module.exports = {
           'gatsby-remark-external-links',
           'gatsby-remark-prismjs',
           'gatsby-remark-smartypants'
-        ]
+        ],
+        plugins: ['gatsby-remark-images']
       }
     },
     `gatsby-plugin-catch-links`,

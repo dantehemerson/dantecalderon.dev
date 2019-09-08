@@ -6,50 +6,25 @@ import AllSocial from '../components/About/AllSocial'
 import Header from '../components/Header'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import ContactSocial from '../components/ContactSocial'
 import Stack from '../components/Stack'
 import { pages } from '../utils'
+import Markdown from '../components/Markdown'
 
 class About extends React.Component {
   render() {
     const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')
+    const aboutContent = get(this.props.data, 'aboutContent')
+    console.log(aboutContent)
+
     return (
       <Layout location={this.props.location} active={pages.about}>
         <div className="About">
           <SEO title="About" url={`${siteUrl}/about`} />
           <Header title="ABOUT" color="#3384a0" />
-          <div
-            className="Post"
-            style={{
-              paddingTop: '20px'
-            }}
-          >
-            <div className="container Post__content">
-              <p>Hi, my name is Dante Calderon.</p>
-              <p>
-                First of all, thanks for visiting my blog. If you have any questions, you want to work with me or you
-                want to leave me some words. I would love to hear you.
-              </p>
-              <p>
-                You can send me an email to <a href="mailto:mail@dantecalderon.dev">mail@dantecalderon.dev</a> or
-                contact me for:
-              </p>
-            </div>
-          </div>
-          <ContactSocial />
+          <Markdown content={aboutContent.body} />
+
           <div className="container">
             <div className="row center-xs">
-              <div className="About__img-container">
-                <div
-                  style={{
-                    maxWidth: '400px',
-                    margin: '0 auto',
-                    border: '5px solid #3384a0'
-                  }}
-                >
-                  <Img sizes={this.props.data.aboutImage.sizes} />
-                </div>
-              </div>
               <div className="About__interests">
                 <h3 className="About__interests__title">Interests</h3>
                 <ul className="About__interests__list">
@@ -102,6 +77,13 @@ export const queryAbout = graphql`
       sizes(maxWidth: 960) {
         ...GatsbyImageSharpSizes_tracedSVG
       }
+    }
+
+    aboutContent: mdx(fileAbsolutePath: { glob: "**/about.mdx" }, frontmatter: { model: { eq: "section" } }) {
+      frontmatter {
+        title
+      }
+      body
     }
   }
 `

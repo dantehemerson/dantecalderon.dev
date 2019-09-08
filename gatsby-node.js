@@ -5,13 +5,6 @@ const path = require('path')
 // CONSTANTS
 const postPerPage = 8
 
-const resolvePathImages = images => {
-  return images.map(item => ({
-    ...item,
-    image: item.image ? `../../static${item.image}` : undefined
-  }))
-}
-
 const prefix = {
   post: 'blog/',
   project: 'portfolio/'
@@ -57,7 +50,11 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
-        const posts = result.data.allMdx.edges
+        const posts = _.filter(result.data.allMdx.edges, edge => {
+          const model = _.get(edge, 'node.frontmatter.model')
+          if (model && ['post', 'project'].includes(model)) return edge
+          return undefined
+        })
 
         const blogPosts = _.filter(posts, edge => {
           // The model is a blog post
@@ -114,17 +111,16 @@ exports.createPages = ({ graphql, actions }) => {
           const { model } = post.node.frontmatter
           const slug = `${getPrefix(model)}${post.node.frontmatter.path.trim()}`
 
-          if (['post'].includes(model) !== undefined) {
-            createPage({
-              path: slug,
-              component: model === 'post' ? postTemplate : projectTemplate,
-              context: {
-                slug,
-                previous,
-                next
-              }
-            })
-          }
+          // Generate pages only for posts and projects
+          createPage({
+            path: slug,
+            component: model === 'post' ? postTemplate : projectTemplate,
+            context: {
+              slug,
+              previous,
+              next
+            }
+          })
         })
       })
     )

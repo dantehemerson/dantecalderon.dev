@@ -39,6 +39,7 @@ const StyledContent = styled.div`
   div.gist,
   ol,
   p,
+  h1,
   h2,
   h3,
   h4,
@@ -52,16 +53,26 @@ const StyledContent = styled.div`
   // only texts
   p,
   div.gist,
+  h1,
   h2,
   h3,
   h4,
   h5,
+  table,
   h6 {
     padding-left: 10px;
     padding-right: 10px;
   }
 
-  img {
+  table {
+    overflow-x: scroll;
+    max-width: 1200px;
+    border: 1px solid #eee;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  p > img {
     border: 1px solid #eee;
   }
 
@@ -146,6 +157,7 @@ const StyledContent = styled.div`
       margin-top: 30px !important;
     }
   }
+
   // Aun no se si se usa
   .gatsby-resp-image-wrapper {
     max-width: 1000px !important;
@@ -185,9 +197,8 @@ const StyledContent = styled.div`
   }
 `
 
-export default ({ content, isHtml = false }) => (
+export default ({ content }) => (
   <StyledContent id="Markdown">
-    {console.log(content, isHtml)}
-    {isHtml ? <div>{content}</div> : <MDXRenderer>{content}</MDXRenderer>}
+    <MDXRenderer>{content}</MDXRenderer>
   </StyledContent>
 )

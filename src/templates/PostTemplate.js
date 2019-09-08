@@ -9,10 +9,10 @@ import TagsSection from '../components/TagsSection'
 import { getLinkEditPost } from '../utils'
 import Layout from './TemplateLayout'
 
-export const PostContent = ({ title, image, editLink, date, timeToRead, avatar, body }) => (
+export const PostContent = ({ title, image, editLink, date, timeToRead, avatar, content }) => (
   <React.Fragment>
     <PostHeader title={title} image={image} editLink={editLink} date={date} timeToRead={timeToRead} avatar={avatar} />
-    <Markdown content={body} />
+    <Markdown content={content} />
   </React.Fragment>
 )
 

@@ -351,6 +351,16 @@ export const GlobalStyles = createGlobalStyle`
   }
 }
 
+
+.para::first-letter {
+  float: left;
+  font-size: 328%;
+  height: 0.7em;
+  line-height: 0.85em;
+  margin: 0 0 -5px;
+  padding: 0 0.08em 0 0;
+}
+
 .gatsby-remark-code-title {
     margin: 0 auto;
     margin-bottom: -0.4em;

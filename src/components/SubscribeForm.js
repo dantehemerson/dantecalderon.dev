@@ -2,29 +2,40 @@ import React, { useState } from 'react'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 import styled from 'styled-components'
 import Swal from 'sweetalert2'
+import bg from '../assets/images/footer-bg2.png'
 
 const Form = styled.form`
-  background: #97d1ff;
+  background-color: #0e0e0e;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  background-image: url(${bg});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 10px auto;
   align-items: center;
-  padding: 14px;
+  padding: 44px 14px;
   opacity: 0.9;
   display: flex;
   flex-direction: column;
-  border: 7px solid #2e87e7;
-  max-width: 600px;
 `
 const Title = styled.h2`
-  margin-bottom: 1rem;
+  margin-bottom: 1.3em;
+  color: white;
+  font-size: 35px;
 `
 const Input = styled.input`
   padding: 10px 1rem !important;
-  border-color: #939393 !important;
+  max-width: 500px;
+  font-weight: 600 !important;
+  color: white !important;
+  background: transparent !important;
+  border-color: white !important;
 `
 const Button = styled.button`
   margin: 15px 0;
   margin-top: 26px;
-  background: #fad257;
+  background: #efc026;
   border: 0;
   border-radius: 3px;
   padding: 10px 32px;
@@ -33,8 +44,7 @@ const Button = styled.button`
   font-weight: bold;
   box-shadow: 0 0 2px 0px gray;
   &:hover {
-    background: #fad257;
-    box-shadow: 0 0 4px 0px gray;
+    background: #e2b420;
   }
 `
 const SubscribeForm = () => {

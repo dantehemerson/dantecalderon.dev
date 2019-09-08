@@ -13,3 +13,12 @@ export const getLinkEditPost = absolutePath => {
   }
   return ''
 }
+
+export const preferSpacedTag = tags => {
+  for (const tag of tags) {
+    if (!tag.includes(` `)) {
+      return tag
+    }
+  }
+  return tags[0]
+}

@@ -6,6 +6,7 @@ import PostHeader from '../components/PostHeader'
 import SubscribeForm from '../components/SubscribeForm'
 import { getLinkEditPost } from '../utils'
 import Layout from './TemplateLayout'
+import TagsSection from '../components/TagsSection'
 
 export const Post = props => {
   return (
@@ -28,7 +29,7 @@ export default class BlogPostTemplate extends React.Component {
     console.log(this.props)
     const post = this.props.data.markdownRemark
     const { siteMetadata } = this.props.data.site
-    const { title, thumbnail, description } = post.frontmatter
+    const { title, thumbnail, description, tags } = post.frontmatter
     return (
       <Layout isPost title={title} path={post.fields.slug} image={thumbnail} description={description}>
         <Post
@@ -39,6 +40,7 @@ export default class BlogPostTemplate extends React.Component {
           editLink={getLinkEditPost(post.fileAbsolutePath)}
           avatar={this.props.data.avatar}
         />
+        <TagsSection tags={tags} />
         <SubscribeForm />
       </Layout>
     )

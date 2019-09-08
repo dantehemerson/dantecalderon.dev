@@ -6,7 +6,7 @@ import Card from '../components/Card'
 import Header from '../components/Header'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import { pages } from '../utils'
+import { pages, preferSpacedTag } from '../utils'
 import Pagination from '../components/Pagination'
 
 const PostsWrapper = styled.div`
@@ -15,16 +15,19 @@ const PostsWrapper = styled.div`
   margin: 0 auto 35px;
 `
 
-class Blog extends React.Component {
+class BlogWithTags extends React.Component {
   render() {
+    const tagSlug = get(this.props, 'pageContext.tagSlug')
+    const tags = get(this.props, 'pageContext.tags')
+    const title = `${preferSpacedTag(tags)} - Blog`
     console.log(this.props)
     const posts = get(this, 'props.data.allMarkdownRemark.edges') || []
     const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')
     return (
       <Layout location={this.props.location} active={pages.blog}>
         <div className="Blog">
-          <SEO title="Blog" url={`${siteUrl}/blog`} />
-          <Header title="Blog" color="#3fabbb" />
+          <SEO title={title} url={`${siteUrl}/blog/tags/${tagSlug}`} />
+          <Header title={preferSpacedTag(tags)} color="#3fabbb" />
           <PostsWrapper>
             {posts.map(({ node }) => {
               if (node.frontmatter.published)
@@ -56,7 +59,7 @@ class Blog extends React.Component {
 }
 
 export const queryBlog = graphql`
-  query QueryTagBlogList($skip: Int!, $limit: Int!) {
+  query QueryBlogList($tags: [String]) {
     site {
       siteMetadata {
         title
@@ -65,9 +68,8 @@ export const queryBlog = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { model: { eq: "post" }, published: { eq: true } } }
-      limit: $limit
-      skip: $skip
+      filter: { frontmatter: { tags: { in: $tags }, model: { eq: "post" }, published: { eq: true } } }
+      limit: 100
     ) {
       edges {
         node {
@@ -96,4 +98,4 @@ export const queryBlog = graphql`
   }
 `
 
-export default Blog
+export default BlogWithTags

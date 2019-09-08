@@ -19,9 +19,6 @@ $container-padding-lg: 12px;
 
 $font-color: rgba(0, 0, 0, 0.88);
 
-$sans-serif-font: 'Open Sans', sans-serif;
-$serif-normal: 'Gentium Book Basic', serif;
-
 /** Mixin for responsive design **/
 @mixin breakpoint($class) {
   /** Breakpoints based on Bootstrap4 **/
@@ -179,75 +176,6 @@ $serif-normal: 'Gentium Book Basic', serif;
     @include breakpoint(lg) {
       width: 200px;
     }
-  }
-}
-
-.Share {
-  display: flex;
-  justify-content: center;
-  a {
-    margin: 0 3px;
-    padding: 9px 9px;
-    border-radius: 50%;
-    opacity: 1;
-    &:hover {
-      opacity: 1;
-    }
-    @include breakpoint(md) {
-      padding: 12px 12px;
-    }
-  }
-
-  &__iconwrapper {
-    background: #4a4a4a;
-    display: inline-flex;
-    &.facebook {
-      background: #3b5998;
-    }
-    &.twitter {
-      background: #00aced;
-    }
-    &.linkedin {
-      background: #007bb5;
-    }
-  }
-
-  &__icon {
-    margin: 0;
-    width: 21px;
-    height: 21px;
-  }
-
-  &--fixed {
-    position: fixed;
-    top: 30vh;
-    flex-direction: column;
-    display: none;
-    left: 10px;
-    &.hide {
-      a {
-        transform: scale(0);
-      }
-    }
-    a {
-      transition: 0.3s;
-      margin: 3px 0;
-      z-index: 10;
-      position: relative;
-    }
-    @include breakpoint(lg) {
-      display: flex;
-    }
-  }
-}
-
-.Foot {
-  &__Share {
-    margin-top: 30px;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    padding: 30px 0 30px 0;
-    margin-bottom: 32px;
   }
 }
 

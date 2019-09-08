@@ -1,13 +1,10 @@
-import Img from 'gatsby-image'
 import React from 'react'
 import styled from 'styled-components'
-import AuthorPost from '../components/AuthorPost'
-import { media } from '../styles'
-
 import Message from '../components/Message'
 import Toolbar from '../components/ProjectToolbar'
 import Slider from '../components/Slider'
 import Tags from '../components/Tags'
+import { media } from '../styles'
 
 const Container = styled.div`
   max-width: 900px;

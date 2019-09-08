@@ -1,20 +1,17 @@
 import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
-import ReactDisqusComments from 'react-disqus-comments'
 import AuthorPostFooter from '../components/AuthorPostFooter'
+import Disqus from '../components/Disqus'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import Share from '../components/Share'
 import { pages } from '../utils'
 
 class Template extends React.Component {
   state = {
-    location: '',
     show_share: false
   }
 
   componentDidMount() {
-    this.setState({ location: window.location.href })
     let body = document.documentElement
     const element = document.getElementById('Post_content')
     if (!element) return
@@ -35,9 +32,9 @@ class Template extends React.Component {
 
   render() {
     const { isPost, title, image, description, path } = this.props
-    const { siteUrl, disqusShortname } = this.props.data.site.siteMetadata
+    const { siteUrl } = this.props.data.site.siteMetadata
     return (
-      <Layout location={this.props.location} active={isPost ? pages.blog : pages.portfolio}>
+      <Layout active={isPost ? pages.blog : pages.portfolio}>
         <SEO
           title={title}
           image={`${siteUrl}${image}`}
@@ -47,17 +44,8 @@ class Template extends React.Component {
         />
         {this.props.children}
         <AuthorPostFooter avatar={this.props.data.avatar} make={!isPost} />
-        <div className="Post__footer">
-          <div id="disquser" className="container Disqus">
-            <ReactDisqusComments
-              shortname={disqusShortname}
-              identifier={path}
-              title={title}
-              url={this.state.location}
-            />
-          </div>
-          {isPost && <Share fixed show={this.state.show_share} title={title} url={`${siteUrl}/${path}`} />}
-        </div>
+        <Disqus title={title} path={path} />
+        {isPost && true /* Show sharer*/}
       </Layout>
     )
   }
@@ -75,7 +63,6 @@ export default props => (
         site {
           siteMetadata {
             siteUrl
-            disqusShortname
           }
         }
       }

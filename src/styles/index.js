@@ -2,6 +2,7 @@ import { createGlobalStyle, css } from 'styled-components'
 import sliderStyles from './slider'
 import constants from './constants'
 import prismStyles from './prism'
+import socialColors from './social-colors'
 import { withPrefix } from 'gatsby'
 
 const sizes = {
@@ -45,6 +46,7 @@ export const defaultTheme = {
 
 export const GlobalStyles = createGlobalStyle`
   ${prismStyles}
+  ${socialColors}
   body {
     margin: 0 !important;
     padding: 0 !important;
@@ -124,14 +126,11 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-  .Disqus {
-    max-width: 760px !important;
-    min-height: 300px;
-    padding-top: 25px;
-    #disqus_thread a { // Theme color disqus.
+
+  #disqus_thread a { // Theme color disqus.
       color: #1976d2;
-    }
   }
+  
 
 	textarea{
       resize: vertical;
@@ -272,31 +271,6 @@ export const GlobalStyles = createGlobalStyle`
     background: #717171;
   }
 
-
-
-  .twitter--hover:hover {
-    background: #00aced !important;
-  }
-
-  .github--hover:hover {
-    background: #333 !important;
-  }
-
-  .instagram--hover:hover {
-    background: #966842 !important;
-  }
-
-  .linkedin--hover:hover {
-    background: #0077b5 !important;
-  }
-
-  .medium--hover:hover {
-    background: #0bdc6d !important;
-  }
-
-  .dev--hover:hover {
-    background: white !important;
-  }
   .icon_svg {
   width: 21px;
   height: 21px;

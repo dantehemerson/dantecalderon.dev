@@ -54,7 +54,9 @@ const TagsSection = ({ tags }) => {
       <hr />
       <Title>TAGS:</Title>
       {tags.map(tag => (
-        <Tag to={`/blog/tags/${kebabCase(tag.toLowerCase())}`}>{tag}</Tag>
+        <Tag key={tag} to={`/blog/tags/${kebabCase(tag.toLowerCase())}`}>
+          {tag}
+        </Tag>
       ))}
       <hr
         style={{

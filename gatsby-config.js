@@ -170,9 +170,10 @@ module.exports = {
         name: 'Dante Calderón',
         short_name: 'Dante C.',
         start_url: '/',
+        icon: 'src/assets/images/logo.png',
         background_color: '#1976d2',
         theme_color: '#1976d2',
-        display: 'minimal-ui'
+        display: 'standalone'
       }
     },
     'gatsby-plugin-styled-components',

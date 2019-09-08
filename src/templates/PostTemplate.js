@@ -3,46 +3,36 @@ import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 import React from 'react'
 import Markdown from '../components/Markdown'
 import PostHeader from '../components/PostHeader'
+import Share from '../components/Share'
 import SubscribeForm from '../components/SubscribeForm'
+import TagsSection from '../components/TagsSection'
 import { getLinkEditPost } from '../utils'
 import Layout from './TemplateLayout'
-import TagsSection from '../components/TagsSection'
-import Share from '../components/Share'
-
-export const Post = props => {
-  return (
-    <div>
-      <PostHeader
-        title={props.frontmatter.title}
-        image={props.image}
-        editLink={props.editLink}
-        date={props.frontmatter.date}
-        timeToRead={props.timeToRead ? props.timeToRead : '3'}
-        avatar={props.avatar}
-      />
-      <Markdown content={props.content} />
-    </div>
-  )
-}
 
 export default class BlogPostTemplate extends React.Component {
   render() {
     console.log(this.props)
-    const post = this.props.data.markdownRemark
-    const { siteMetadata } = this.props.data.site
-    const { title, thumbnail, description, tags } = post.frontmatter
+    const {
+      timeToRead,
+      html,
+      fileAbsolutePath,
+      fields: { slug, image },
+      frontmatter: { title, thumbnail, date, description, tags }
+    } = this.props.data.markdownRemark
+
     return (
-      <Layout isPost title={title} path={post.fields.slug} image={thumbnail} description={description}>
-        <Post
-          {...post}
-          {...siteMetadata}
-          content={post.html}
-          image={post.fields.image.childImageSharp.sizes}
-          editLink={getLinkEditPost(post.fileAbsolutePath)}
+      <Layout isPost title={title} path={slug} image={thumbnail} description={description}>
+        <PostHeader
+          title={title}
+          image={image}
+          editLink={getLinkEditPost(fileAbsolutePath)}
+          date={date}
+          timeToRead={timeToRead}
           avatar={this.props.data.avatar}
         />
+        <Markdown content={html} />
         <TagsSection tags={tags} />
-        <Share title={title} url={``} />
+        <Share title={title} path={slug} />
         <SubscribeForm />
       </Layout>
     )
@@ -65,7 +55,6 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
-      htmlAst
       timeToRead
       fileAbsolutePath
       frontmatter {

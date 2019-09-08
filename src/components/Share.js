@@ -1,3 +1,6 @@
+import { graphql, useStaticQuery } from 'gatsby'
+import _ from 'lodash'
+import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -40,26 +43,50 @@ const Icon = ({ title, url, icon, ...props }) => (
   </StyledIcon>
 )
 
-export default ({ title, url }) => (
-  <Container>
-    <ShareTitle>Share it:</ShareTitle>
-    <Icon
-      className="twitter-color twitter-color--hover-shadow"
-      title="Share on Twitter"
-      url={`https://twitter.com/intent/tweet?text=${title} by Dante Calderón(@dantehemerson) ${url}`}
-      icon="https://icongr.am/fontawesome/twitter.svg?color=ffffff"
-    />
-    <Icon
-      className="facebook-color facebook-color--hover-shadow"
-      title="Share on Facebook"
-      url={`https://www.facebook.com/sharer/sharer.php?app_id=2209722672595950&sdk=joey&u=${url}`}
-      icon="https://icongr.am/fontawesome/facebook.svg?color=ffffff"
-    />
-    <Icon
-      className="linkedin-color linkedin-color--hover-shadow"
-      title="Share on Linkedin"
-      url={`http://www.linkedin.com/shareArticle?url=${url}&isFramed=true`}
-      icon="https://icongr.am/fontawesome/linkedin.svg?color=ffffff"
-    />
-  </Container>
-)
+const Share = ({ title, path }) => {
+  const { siteUrl } = _.get(
+    useStaticQuery(graphql`
+      query ShareComponentQuery {
+        site {
+          siteMetadata {
+            siteUrl
+          }
+        }
+      }
+    `),
+    'site.siteMetadata'
+  )
+
+  const url = `${siteUrl}/${path}`
+
+  return (
+    <Container>
+      <ShareTitle>Share it:</ShareTitle>
+      <Icon
+        className="twitter-color twitter-color--hover-shadow"
+        title="Share on Twitter"
+        url={`https://twitter.com/intent/tweet?text=${title} by Dante Calderón(@dantehemerson) ${url}`}
+        icon="https://icongr.am/fontawesome/twitter.svg?color=ffffff"
+      />
+      <Icon
+        className="facebook-color facebook-color--hover-shadow"
+        title="Share on Facebook"
+        url={`https://www.facebook.com/sharer/sharer.php?app_id=2209722672595950&sdk=joey&u=${url}`}
+        icon="https://icongr.am/fontawesome/facebook.svg?color=ffffff"
+      />
+      <Icon
+        className="linkedin-color linkedin-color--hover-shadow"
+        title="Share on Linkedin"
+        url={`http://www.linkedin.com/shareArticle?url=${url}&isFramed=true`}
+        icon="https://icongr.am/fontawesome/linkedin.svg?color=ffffff"
+      />
+    </Container>
+  )
+}
+
+Share.propTypes = {
+  title: PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired
+}
+
+export default Share

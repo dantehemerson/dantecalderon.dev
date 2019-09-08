@@ -3,6 +3,7 @@ import addToMailchimp from 'gatsby-plugin-mailchimp'
 import styled from 'styled-components'
 import Swal from 'sweetalert2'
 import bg from '../assets/images/footer-bg2.png'
+import { media } from '../styles'
 
 const Form = styled.form`
   background-color: #0e0e0e;
@@ -14,7 +15,7 @@ const Form = styled.form`
   background-size: cover;
   margin: 10px auto;
   align-items: center;
-  padding: 44px 14px;
+  padding: 44px 12px;
   opacity: 0.9;
   display: flex;
   flex-direction: column;
@@ -22,7 +23,11 @@ const Form = styled.form`
 const Title = styled.h2`
   margin-bottom: 1.3em;
   color: white;
-  font-size: 35px;
+  text-align: center;
+  font-size: 24px;
+  ${media.sm`
+    font-size: 35px;
+  `}
 `
 const Input = styled.input`
   padding: 10px 1rem !important;

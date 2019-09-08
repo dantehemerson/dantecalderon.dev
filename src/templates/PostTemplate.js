@@ -7,6 +7,7 @@ import SubscribeForm from '../components/SubscribeForm'
 import { getLinkEditPost } from '../utils'
 import Layout from './TemplateLayout'
 import TagsSection from '../components/TagsSection'
+import Share from '../components/Share'
 
 export const Post = props => {
   return (
@@ -41,6 +42,7 @@ export default class BlogPostTemplate extends React.Component {
           avatar={this.props.data.avatar}
         />
         <TagsSection tags={tags} />
+        <Share title={title} url={``} />
         <SubscribeForm />
       </Layout>
     )

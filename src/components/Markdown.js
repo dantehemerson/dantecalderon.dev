@@ -97,11 +97,13 @@ const StyledContent = styled.div`
   h3,
   h2 {
     margin-top: 30px;
-    font-size: 17px;
+    font-size: 21px;
   }
+
   h4 {
-    font-size: 18px;
+    font-size: 16px;
   }
+
   h6 {
     font-weight: 600;
     color: rgba(0, 0, 0, 0.53);
@@ -120,7 +122,7 @@ const StyledContent = styled.div`
       font-size: 23px;
     }
     h4 {
-      font-size: 19px;
+      font-size: 18px;
     }
   `}
 
@@ -129,7 +131,7 @@ const StyledContent = styled.div`
     h3,
     h2 {
       margin-top: 40px;
-      font-size: 27px;
+      font-size: 28px;
     }
     h4 {
       font-size: 21px;

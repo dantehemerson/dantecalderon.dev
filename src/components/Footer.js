@@ -9,7 +9,8 @@ const Container = styled.footer`
   justify-content: center;
   flex-direction: column;
   height: 200px;
-  background: #f8f8f9;
+  background: #fafafa;
+  border-top: 1px solid #f3f3f3;
   * {
     margin: 0;
     padding: 0;

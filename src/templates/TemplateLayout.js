@@ -46,9 +46,6 @@ class Template extends React.Component {
           isPost={isPost}
         />
         {this.props.children}
-        <div className="Foot__Share">
-          <Share title={title} url={`${siteUrl}/${path}`} />
-        </div>
         <AuthorPostFooter avatar={this.props.data.avatar} make={!isPost} />
         <div className="Post__footer">
           <div id="disquser" className="container Disqus">

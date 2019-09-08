@@ -2,13 +2,13 @@ backend:
   name: github
   repo: dantehemerson/dantecalderon.dev
 
-media_folder: static/img
-public_folder: /img
+media_folder: content/images
+public_folder: /images
 
 collections:
   - name: blog
     label: Blog
-    folder: src/pages/posts
+    folder: content/blog
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
@@ -31,7 +31,7 @@ collections:
 
   - name: portfolio
     label: Projects
-    folder: src/pages/projects
+    folder: content/projects
     create: true
     slug: '{{year}}-{{month}}-{{slug}}'
     fields:

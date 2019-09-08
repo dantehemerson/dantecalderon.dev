@@ -9,9 +9,15 @@ import TagsSection from '../components/TagsSection'
 import { getLinkEditPost } from '../utils'
 import Layout from './TemplateLayout'
 
+export const PostContent = ({ title, image, editLink, date, timeToRead, avatar, body }) => (
+  <React.Fragment>
+    <PostHeader title={title} image={image} editLink={editLink} date={date} timeToRead={timeToRead} avatar={avatar} />
+    <Markdown content={body} />
+  </React.Fragment>
+)
+
 export default class BlogPostTemplate extends React.Component {
   render() {
-    console.log(this.props)
     const {
       timeToRead,
       body,
@@ -22,15 +28,15 @@ export default class BlogPostTemplate extends React.Component {
 
     return (
       <Layout isPost title={title} path={slug} image={`thumbnail`} description={description}>
-        <PostHeader
+        <PostContent
           title={title}
           image={image}
           editLink={getLinkEditPost(fileAbsolutePath)}
           date={date}
           timeToRead={timeToRead}
           avatar={this.props.data.avatar}
+          content={body}
         />
-        <Markdown content={body} />
         <TagsSection tags={tags} />
         <Share title={title} path={slug} />
         <SubscribeForm />

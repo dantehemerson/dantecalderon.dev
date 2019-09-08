@@ -185,8 +185,9 @@ const StyledContent = styled.div`
   }
 `
 
-export default ({ content }) => (
+export default ({ content, isHtml = false }) => (
   <StyledContent id="Markdown">
-    <MDXRenderer>{content}</MDXRenderer>
+    {console.log(content, isHtml)}
+    {isHtml ? <div>{content}</div> : <MDXRenderer>{content}</MDXRenderer>}
   </StyledContent>
 )

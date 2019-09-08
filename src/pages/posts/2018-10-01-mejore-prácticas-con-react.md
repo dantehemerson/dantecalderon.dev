@@ -8,7 +8,8 @@ thumbnail: /img/react-best-practices.png
 date: 2018-10-01T20:16:06.768Z
 published: true
 tags:
-  - react
+  - ReactJS
+  - Best Practices
 ---
 
 Hola, te quiero compartir mi un lista que consta de unos prácticas que útilizo para escribir componentes en **React**, de seguro tú ya conoces algúnas de ellas. Desde luego este es mi punto de vista, puedes recomendar algúna **practica** que no encuentres en la lista o sugerír una mejora en los comentarios.

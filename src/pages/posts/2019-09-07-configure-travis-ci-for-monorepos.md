@@ -11,7 +11,8 @@ published: true
 tags:
   - Continuous Integration
   - Git
-  - Devops
+  - DevOps
+  - Github
 ---
 
 ### Lo primero: ¿Qué son los monorepos?

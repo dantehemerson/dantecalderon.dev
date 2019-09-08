@@ -11,6 +11,8 @@ published: true
 style: medium-img
 tags:
   - Competitive Programming
+  - C/C++
+  - Tools
 ---
 
 En Programación Competitiva el **tiempo** es un factor muy importante, así que siempre estamos buscando como mejorar nuestro tiempo. Tratamos siempre de minificar el esfuerzo al resolver el problema.

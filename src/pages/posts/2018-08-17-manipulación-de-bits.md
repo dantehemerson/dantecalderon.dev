@@ -8,9 +8,10 @@ thumbnail: /img/bit-manipulation.png
 date: '2018-08-17T03:16:12-05:00'
 published: true
 tags:
-  - competitive programming
-  - bits
-  - c++
+  - Competitive Programming
+  - STLC++
+  - C/C++
+  - Algorithms
 ---
 ### Operaciónes útiles
 

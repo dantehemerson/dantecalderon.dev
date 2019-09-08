@@ -27,6 +27,9 @@ const Tag = styled(Link)`
   border: 2px solid #d6e0ef;
   margin-right: 5px;
   cursor: pointer;
+  &:hover {
+    background-color: #fafafa;
+  }
 `
 
 const Title = styled.span`

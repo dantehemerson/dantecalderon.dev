@@ -9,8 +9,8 @@ date: 2018-09-29T14:17:50.548Z
 published: false
 style: doble-column
 tags:
-  - git
-  - github
+  - Git
+  - Github
 ---
 # Non Phineus et submovet fit terraque
 

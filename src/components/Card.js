@@ -48,6 +48,10 @@ const Title = styled.h3`
   font-family: 'Open Sans', sans-serif;
   color: #282a2d;
   transition: 0.3s;
+  font-size: 17px;
+  ${media.sm`
+    font-size: 1.31951rem;
+  `}
   ${Container}:hover & {
     color: #1976d2;
   }

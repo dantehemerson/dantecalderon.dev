@@ -14,8 +14,8 @@ tags:
   - Git
 ---
 
-> Contribuir a Open Source es una de las cosas mas satisfactorias al momento de programar, es primordial para el autoaprendizaje y hacerlo nos hace sentir bien con nosotros mismos. 
-> 
+> Contribuir a Open Source es una de las cosas mas satisfactorias al momento de programar, es primordial para el autoaprendizaje y hacerlo nos hace sentir bien con nosotros mismos.
+>
 >    By **Andrew Collin**
 
 

@@ -198,7 +198,7 @@ module.exports = {
         start_url: '/',
         icon: 'src/assets/images/logo.png',
         background_color: '#1976d2',
-        theme_color: '#1976d2',
+        theme_color: '#000',
         display: 'standalone'
       }
     },

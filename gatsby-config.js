@@ -71,6 +71,7 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`
             }
           },
+          'gatsby-remark-prismjs',
           {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
@@ -91,10 +92,64 @@ module.exports = {
             }
           },
           'gatsby-remark-external-links',
-          'gatsby-remark-prismjs',
           'gatsby-remark-smartypants'
         ],
-        plugins: ['gatsby-remark-images']
+        plugins: [
+          'gatsby-remark-embed-video',
+          {
+            resolve: 'gatsby-remark-code-titles',
+            options: {
+              className: 'gatsby-remark-code-title'
+            }
+          },
+          {
+            resolve: 'gatsby-remark-embed-gist',
+            options: {
+              username: 'dantehemerson',
+              includeDefaultCss: true
+            }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 2000,
+              quality: 100,
+              showCaptions: true,
+              linkImagesToOriginal: false
+            }
+          },
+          {
+            resolve: `gatsby-remark-images-medium-zoom`
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`
+            }
+          },
+          'gatsby-remark-prismjs',
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offsetY: `80`
+            }
+          },
+          {
+            resolve: 'gatsby-remark-emojis',
+            options: {
+              active: true,
+              class: 'emoji-icon',
+              size: 64,
+              styles: {
+                display: 'inline',
+                margin: '0',
+                position: 'relative'
+              }
+            }
+          },
+          'gatsby-remark-external-links',
+          'gatsby-remark-smartypants'
+        ]
       }
     },
     `gatsby-plugin-catch-links`,

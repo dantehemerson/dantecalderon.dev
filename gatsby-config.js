@@ -197,7 +197,7 @@ module.exports = {
         short_name: 'Dante C.',
         start_url: '/',
         icon: 'src/assets/images/logo.png',
-        background_color: '#1976d2',
+        background_color: '#E1524A',
         theme_color: '#000',
         display: 'standalone'
       }

@@ -58,6 +58,7 @@ const StyledContent = styled.div`
   h3,
   h4,
   h5,
+  .glitch-embed-wrap,
   table,
   h6 {
     padding-left: 10px;
@@ -72,7 +73,14 @@ const StyledContent = styled.div`
     margin-right: auto;
   }
 
-  p > img {
+
+  .glitch-embed-wrap {
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  img {
     border: 1px solid #eee;
   }
 

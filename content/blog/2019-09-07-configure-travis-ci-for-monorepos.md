@@ -42,8 +42,8 @@ Y activamos el repositorio:
 
 #### Estructura del repositorio
 
-Para configurar la integracion continua en un monorepo tomaremos como 
-ejemplo [este repositorio](https://github.com/dantehemerson/audio-tag-editor/tree/575f0f92ee0a4fa4ca8c296b8aea1a370a228ad8) que tiene la siguiente estructura: 
+Para configurar la integracion continua en un monorepo tomaremos como
+ejemplo [este repositorio](https://github.com/dantehemerson/audio-tag-editor/tree/575f0f92ee0a4fa4ca8c296b8aea1a370a228ad8) que tiene la siguiente estructura:
 
 ```js
 .
@@ -82,9 +82,9 @@ script: cd $TEST_DIR && yarn && yarn test
 ```
 
 Luego en el campo `env` declaramos las variables de entorno.
-Tenemos que colocar cada uno de nuestros subproyectos dentro del campo `env`. 
+Tenemos que colocar cada uno de nuestros subproyectos dentro del campo `env`.
 
-Es importante que coloquemos **misma clave** para 
+Es importante que coloquemos **misma clave** para
 todos los nombres de las carpetas, en este caso es `TEST_DIR`:
 
 ```yml{2-4}:title=.travis.yml

@@ -22,13 +22,15 @@ const type = [
   'JS Testing Framework',
   'Project Management',
   'Group Chat & Notifications',
-  'CMS',
+  'Self-Hosted Blogging / CMS', // 23
   'Query Languages',
   'JS MVC Framework',
   'Cloud Content Management System',
   'Command Language',
   'Templating Languages & Extensions',
-  'Concurrency Framework'
+  'Concurrency Framework',
+  'Static Web Hosting', //30
+  'JavaScript Framework Components' // 31
 ]
 
 const groups = [
@@ -79,7 +81,7 @@ const groups = [
   {
     title: 'Frameworks & Utilities',
     items: [
-       {
+      {
         url: 'https://rxjs.dev/',
         name: 'RxJS',
         icon: 'rxjs.svg',
@@ -98,16 +100,15 @@ const groups = [
       {
         url: 'https://google.com',
         name: 'Jest',
-        icon: 'jest.png',
-        background: 'white',
+        icon: 'jest.svg',
+        background: '#3b3738',
         type: type[20],
         about: 'Painless JavaScript Unit Testing'
       },
       {
         url: 'https://google.com',
         name: 'Git',
-        icon: 'git-plain.svg',
-        background: 'white',
+        icon: 'git.svg',
         type: type[13],
         about: 'Fast, scalable, distributed revision control system'
       },
@@ -115,9 +116,23 @@ const groups = [
         url: 'https://google.com',
         name: 'Webpack',
         icon: 'webpack-original.svg',
-        background: 'white',
         type: type[18],
         about: 'A bundler for javascript and friends.'
+      },
+      {
+        url: 'https://google.com',
+        name: 'Contentful',
+        icon: 'contentful.svg',
+        type: type[26],
+        about: 'Manage content once, publish it anywhere'
+      },
+      {
+        url: 'https://google.com',
+        name: 'Netlify',
+        icon: 'netlify.svg',
+        type: type[30],
+        about:
+          'Build, deploy and host your static site or app with a drag and drop interface and automatic delpoys from GitHub or Bitbucket'
       }
     ]
   },
@@ -143,7 +158,7 @@ const groups = [
       {
         url: 'https://google.com',
         name: 'Gatsby',
-        icon: 'gatsby.png',
+        icon: 'gatsby.svg',
         background: 'white',
         type: type[11],
         about: 'A Static Site Generator for React'
@@ -162,9 +177,14 @@ const groups = [
         icon: 'vuejs.svg',
         type: type[3],
         about: 'Reactive Components for Modern Web Interfaces'
+      },
+      {
+        url: 'https://google.com',
+        name: 'Storybook',
+        icon: 'storybook.svg',
+        type: type[31],
+        about: 'Build bulletproof UI components faster'
       }
-      //{ url: 'https://google.com', name: 'Wordpress', icon: 'wordpress-plain.svg', background: 'white', type: type[23], about: "A semantic personal publishing platform with a focus on aesthetics, web standards, and usability"},
-      //{ url: 'https://google.com', name: 'Contentful', icon: 'contentful.png', background: 'black', type: type[26], about: "Manage content once, publish it anywhere"},
     ]
   },
   {
@@ -191,7 +211,8 @@ const groups = [
         name: 'NestJS',
         icon: 'nestjs.svg',
         type: type[8],
-        about: 'A progressive Node.js framework for building efficient and scalable server-side applications'
+        about:
+          'A progressive Node.js framework for building efficient and scalable server-side applications'
       },
       //{ url: 'https://google.com', name: 'Django', icon: 'django-original.svg', background: '#003a2b', type: type[8], about: "The Web framework for perfectionists with deadlines" },
       {
@@ -223,7 +244,6 @@ const groups = [
         name: 'GraphQL',
         icon: 'graphql.svg',
         type: type[24],
-        background: 'white',
         about: 'A data query language and runtime'
       },
       {
@@ -244,7 +264,7 @@ const groups = [
       },
       {
         url: 'https://serverless.com/',
-        name: 'Serverless (Learning...)',
+        name: 'Serverless',
         icon: 'serverless.svg',
         background: '#1e1e1e',
         type: type[9],
@@ -258,10 +278,11 @@ const groups = [
       {
         url: 'https://google.com',
         name: 'Docker',
-        icon: 'docker-original-wordmark.svg',
+        icon: 'docker.svg',
         background: 'white',
         type: type[14],
-        about: 'An open source project to pack, ship and run any application as a lightweight container'
+        about:
+          'An open source project to pack, ship and run any application as a lightweight container'
       },
       {
         url: 'https://google.com',
@@ -273,9 +294,10 @@ const groups = [
       {
         url: 'https://google.com',
         name: 'Heroku',
-        icon: 'heroku-plain.png',
+        icon: 'heroku.svg',
         type: type[7],
-        about: 'Build, deliver, monitor and scale web apps and APIs with a trail blazing developer experience.'
+        about:
+          'Build, deliver, monitor and scale web apps and APIs with a trail blazing developer experience.'
       },
 
       //{ url: 'https://google.com', name: 'Nginx', icon: 'nginx-original.svg', background: '#333', type: type[2] },
@@ -302,15 +324,26 @@ const groups = [
         about:
           'CircleCI’s continuous integration and delivery platform helps software teams rapidly release code with confidence.'
       },
-      { url: 'https://google.com', name: 'Bash', icon: 'bash_shell.png', type: type[27], about: 'Bourne Again SHell.' }
+      {
+        url: 'https://google.com',
+        name: 'Bash',
+        icon: 'bash.svg',
+        type: type[27],
+        about: 'Bourne Again SHell.'
+      }
       //{ url: 'https://google.com', name: 'Github', icon: 'github-original.svg', background: 'white', type: type[12], about: "Powerful collaboration, review, and code management for open source and private development projects." },
     ]
   },
   {
     title: 'Others',
     items: [
-      
-      { url: 'https://google.com', name: 'Linux', icon: 'linux-original.svg', type: type[6], about: 'My favourite OS' },
+      {
+        url: 'https://google.com',
+        name: 'Linux',
+        icon: 'linux-original.svg',
+        type: type[6],
+        about: 'My favourite OS'
+      },
       {
         url: 'https://google.com',
         name: 'Slack',
@@ -322,15 +355,39 @@ const groups = [
       {
         url: 'https://google.com',
         name: 'Trello',
-        icon: 'trello.png',
-        background: '#007fc9',
+        icon: 'trello.svg',
         type: type[21],
         about: 'Your entire project, in a single glance.'
       },
-      //{ url: 'https://google.com', name: 'Sublime Text', icon: 'sublime-text-3.png', background: '#474747', type: type[15], about: "A sophisticated text editor for code, markup and prose." },
-      { url: 'https://google.com', name: 'VIM', icon: 'vim-original.svg', type: type[15], about: "Highly configurable text editor built to enable efficient text editing" },
-      { url: 'https://google.com', name: 'Ubuntu', icon: 'ubuntu-plain.svg', background: 'white', type: type[6], about: "The leading OS for PC, tablet, phone and cloud" },
-      { url: 'https://google.com', name: 'Debian', icon: 'debian-plain.svg', background: 'white', type: type[6], about: "The Universal Operating System" },
+      {
+        url: 'https://google.com',
+        name: 'VSCode',
+        icon: 'vscode.svg',
+        type: type[15],
+        about: 'Build and debug modern web and cloud applications.'
+      },
+      {
+        url: 'https://google.com',
+        name: 'VIM',
+        icon: 'vim-original.svg',
+        type: type[15],
+        about: 'Highly configurable text editor built to enable efficient text editing'
+      },
+      {
+        url: 'https://google.com',
+        name: 'Ubuntu',
+        icon: 'ubuntu-plain.svg',
+        type: type[6],
+        about: 'The leading OS for PC, tablet, phone and cloud'
+      },
+      {
+        url: 'https://google.com',
+        name: 'Debian',
+        icon: 'debian-plain.svg',
+        background: 'white',
+        type: type[6],
+        about: 'The Universal Operating System'
+      }
     ]
   }
 ]

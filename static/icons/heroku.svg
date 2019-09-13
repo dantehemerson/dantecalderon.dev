@@ -1,0 +1,61 @@
+<svg width="81" height="81" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <radialGradient gradientUnits="userSpaceOnUse" r="53.5023" cy="76" cx="72" id="SVGID_1_">
+   <stop stop-color="#844DB8" offset="0"/>
+   <stop stop-color="#5B16A3" offset="1"/>
+  </radialGradient>
+  <linearGradient y2="-0.00956" x2="1.066176" y1="0.94375" x1="0.006944" id="SVGID_6_">
+   <stop stop-color="#675DC6" stop-opacity="0.5" offset="0"/>
+   <stop stop-color="#675DC6" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <radialGradient gradientUnits="userSpaceOnUse" r="53.5023" cy="76" cx="72" id="SVGID_7_">
+   <stop stop-color="#844DB8" offset="0"/>
+   <stop stop-color="#5B16A3" offset="1"/>
+  </radialGradient>
+  <linearGradient y2="-0.00956" x2="1.066176" y1="0.94375" x1="0.006944" id="SVGID_9_">
+   <stop stop-color="#7673C0" stop-opacity="0.5" offset="0"/>
+   <stop stop-color="#7673C0" stop-opacity="0" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="83" width="83" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g display="none" id="work">
+   <g display="inline" id="logotype">
+    <g id="logotype_original"/>
+    <g id="k_development"/>
+    <g id="r_development"/>
+    <g id="e_development"/>
+   </g>
+   <g display="inline" id="logo_v1"/>
+   <g display="inline" id="logo_v2"/>
+   <g display="inline" id="logo_v3__x28_stroke_x29_">
+    <g id="logo-8pt-stroke"/>
+    <g id="logo-9pt-stroke"/>
+    <g id="logo-9pt-expanded"/>
+   </g>
+   <g id="svg_1" display="inline">
+    <path id="svg_2" d="m68.8,0l-57.6,0c-3.976,0 -7.2,3.224 -7.2,7.2l0,65.6c0,3.976 3.224,7.2 7.2,7.2l57.6,0c3.976,0 7.2,-3.224 7.2,-7.2l0,-65.6c0,-3.976 -3.224,-7.2 -7.2,-7.2z" fill="url(#SVGID_1_)"/>
+    <path id="svg_3" d="m68.8,0l-57.6,0c-3.976,0 -7.2,3.224 -7.2,7.2l0,65.6c0,3.976 3.224,7.2 7.2,7.2l57.6,0c3.976,0 7.2,-3.224 7.2,-7.2l0,-65.6c0,-3.976 -3.224,-7.2 -7.2,-7.2z" fill="url(#SVGID_6_)"/>
+   </g>
+  </g>
+  <g stroke="null" id="gradient">
+   <g stroke="null" id="svg_4">
+    <path stroke="null" id="svg_5" d="m72.099996,0l-63.199997,0c-4.362555,0 -7.9,3.224 -7.9,7.2l0,65.6c0,3.976 3.537444,7.2 7.9,7.2l63.199997,0c4.362555,0 7.9,-3.224 7.9,-7.2l0,-65.6c0,-3.976 -3.537444,-7.2 -7.9,-7.2z" fill="url(#SVGID_7_)"/>
+    <path stroke="null" id="svg_6" d="m72.099996,0l-63.199997,0c-4.362555,0 -7.9,3.224 -7.9,7.2l0,65.6c0,3.976 3.537444,7.2 7.9,7.2l63.199997,0c4.362555,0 7.9,-3.224 7.9,-7.2l0,-65.6c0,-3.976 -3.537444,-7.2 -7.9,-7.2z" fill="url(#SVGID_9_)"/>
+   </g>
+  </g>
+  <g id="white">
+   <g id="logo_6_">
+    <polygon id="svg_7" points="25,68 34,60 25,52 " fill="#FFFFFF"/>
+    <path id="svg_8" d="m57.517,35.575c-1.612,-1.631 -4.572,-3.575 -9.517,-3.575c-5.423,0 -11.006,1.411 -15,2.711l0,-22.711l-8,0l0,34.692l5.651,-2.56c0.091,-0.041 9.215,-4.132 17.349,-4.132c4.062,0 4.961,2.243 5,4.11l0,23.89l8,0l0,-24c0.005,-0.512 -0.042,-4.945 -3.483,-8.425z" fill="#FFFFFF"/>
+    <path id="svg_9" d="m47,25l8,0c3.618,-4.1 5.46,-8.456 6,-13l-8,0c-0.882,4.534 -2.856,8.875 -6,13z" fill="#FFFFFF"/>
+   </g>
+  </g>
+  <g id="black"/>
+  <g id="purple"/>
+ </g>
+</svg>

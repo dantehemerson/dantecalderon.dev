@@ -1,14 +1,13 @@
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import get from 'lodash/get'
 import React from 'react'
 import AllSocial from '../components/About/AllSocial'
 import Header from '../components/Header'
 import Layout from '../components/Layout'
+import Markdown from '../components/Markdown'
 import SEO from '../components/SEO'
 import Stack from '../components/Stack'
 import { pages } from '../utils'
-import Markdown from '../components/Markdown'
 
 class About extends React.Component {
   render() {
@@ -79,7 +78,10 @@ export const queryAbout = graphql`
       }
     }
 
-    aboutContent: mdx(fileAbsolutePath: { glob: "**/about.mdx" }, frontmatter: { model: { eq: "section" } }) {
+    aboutContent: mdx(
+      fileAbsolutePath: { glob: "**/about.mdx" }
+      frontmatter: { model: { eq: "section" } }
+    ) {
       frontmatter {
         title
       }

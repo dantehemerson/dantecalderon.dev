@@ -3,6 +3,26 @@ import _ from 'lodash'
 import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
+import { AwesomeButton } from 'react-awesome-button'
+
+const Button = styled(AwesomeButton)`
+  margin: 14px 3px !important;
+  border: 0 !important;
+  .aws-btn__content {
+    padding: 0 14px !important;
+    & > span {
+      height: 100%;
+    }
+  }
+  img {
+    width: 22px;
+    height: 88%;
+    margin: 0;
+    border: 0px solid !important;
+    position: relative;
+    top: 2px;
+  }
+`
 
 const Container = styled.div`
   max-width: 900px;
@@ -62,24 +82,46 @@ const Share = ({ title, path }) => {
   return (
     <Container>
       <ShareTitle>Share it:</ShareTitle>
-      <Icon
-        className="twitter-color twitter-color--hover-shadow"
+      <Button
+        type="twitter"
+        size="small"
+        href={`https://twitter.com/intent/tweet?text=${title} by Dante Calderón(@dantehemerson) ${url}`}
         title="Share on Twitter"
-        url={`https://twitter.com/intent/tweet?text=${title} by Dante Calderón(@dantehemerson) ${url}`}
-        icon="https://icongr.am/fontawesome/twitter.svg?color=ffffff"
-      />
-      <Icon
-        className="facebook-color facebook-color--hover-shadow"
+        target="_blank"
+      >
+        <img
+          src="https://icongr.am/fontawesome/twitter.svg?color=ffffff"
+          title="Share on Twitter"
+          alt="img"
+        />
+      </Button>
+      <Button
+        type="facebook"
+        size="small"
+        href={`https://www.facebook.com/sharer/sharer.php?app_id=2209722672595950&sdk=joey&u=${url}`}
         title="Share on Facebook"
-        url={`https://www.facebook.com/sharer/sharer.php?app_id=2209722672595950&sdk=joey&u=${url}`}
-        icon="https://icongr.am/fontawesome/facebook.svg?color=ffffff"
-      />
-      <Icon
-        className="linkedin-color linkedin-color--hover-shadow"
+        target="_blank"
+      >
+        <img
+          src="https://icongr.am/fontawesome/facebook.svg?color=ffffff"
+          title="Share on Facebook"
+          alt="img"
+        />
+      </Button>
+
+      <Button
+        type="linkedin"
+        size="small"
+        href={`http://www.linkedin.com/shareArticle?url=${url}&isFramed=true`}
         title="Share on Linkedin"
-        url={`http://www.linkedin.com/shareArticle?url=${url}&isFramed=true`}
-        icon="https://icongr.am/fontawesome/linkedin.svg?color=ffffff"
-      />
+        target="_blank"
+      >
+        <img
+          src="https://icongr.am/fontawesome/linkedin.svg?color=ffffff"
+          title="Share on Linkedin"
+          alt="img"
+        />
+      </Button>
     </Container>
   )
 }

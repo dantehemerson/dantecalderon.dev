@@ -12,9 +12,17 @@ module.exports = {
       { title: 'Medium', link: 'https://medium.com/@dantehemerson', icon: 'medium' },
       //{ title: 'Dev', link: 'https://dev.to/dantehemerson',  icon: 'dev' },
       { title: 'Dev', link: 'https://instagram.com/dantehemerson', icon: 'dev' },
-      { title: 'StackOverflow', link: 'https://instagram.com/dantehemerson', icon: 'stack-overflow' },
+      {
+        title: 'StackOverflow',
+        link: 'https://instagram.com/dantehemerson',
+        icon: 'stack-overflow'
+      },
       { title: 'Goodreads', link: 'https://instagram.com/dantehemerson', icon: 'instagram' },
-      { title: 'FreeCodeCamp', link: 'https://instagram.com/dantehemerson', icon: 'free-code-camp' },
+      {
+        title: 'FreeCodeCamp',
+        link: 'https://instagram.com/dantehemerson',
+        icon: 'free-code-camp'
+      },
       { title: 'Gitlab', link: 'https://instagram.com/dantehemerson', icon: 'gitlab' },
       { title: 'Angellist', link: 'https://angel.co/dantehemerson', icon: 'angellist' },
       { title: 'Codepen', link: 'https://codepen.io/dantehemerson', icon: 'codepen' },
@@ -22,8 +30,18 @@ module.exports = {
       { title: 'Pinterest', link: 'https://www.pinterest.com/dantehemerson/', icon: 'pinterest' },
       { title: 'Steam', link: 'https://steamcommunity.com/id/dantehemerson/', icon: 'steam' },
       { title: 'Twitch', link: 'https://www.twitch.tv/dantehemerson', icon: 'twitch' },
-      { title: 'Youtube', link: 'https://www.youtube.com/channel/UCCbtGSRgh1RFYysgaZkoE0A', icon: 'youtube-play' }
+      {
+        title: 'Youtube',
+        link: 'https://www.youtube.com/channel/UCCbtGSRgh1RFYysgaZkoE0A',
+        icon: 'youtube-play'
+      }
     ],
+    socials: {
+      github: 'https://github.com/dantehemerson',
+      twitter: 'https://twitter.com/dantehemerson',
+      linkedin: 'https://linkedin.com/in/dantehemerson',
+      instagram: 'https://instagram.com/dantehemerson'
+    },
     menu: [
       { title: 'Home', id: '', to: '/', icon: 'home' },
       { title: 'Blog', id: 'Blog', to: '/blog', icon: 'home' },

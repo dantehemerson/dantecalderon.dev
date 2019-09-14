@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Swal from 'sweetalert2'
 import bg from '../assets/images/footer-bg2.png'
 import { media } from '../styles'
+import Button from './Button'
 
 const Form = styled.form`
   background-color: #0e0e0e;
@@ -37,7 +38,7 @@ const Input = styled.input`
   background: transparent !important;
   border-color: white !important;
 `
-const Button = styled.button`
+const Buttons = styled.button`
   margin: 15px 0;
   margin-top: 26px;
   background: #efc026;
@@ -85,8 +86,16 @@ const SubscribeForm = () => {
   return (
     <Form onSubmit={handleSubmit}>
       <Title>Subscribe to my email list!</Title>
-      <Input placeholder="Email address" name="email" value={email} type="text" onChange={handleEmailChange} />
-      <Button type="submit">Subscribe</Button>
+      <Input
+        placeholder="Email address"
+        name="email"
+        value={email}
+        type="text"
+        onChange={handleEmailChange}
+      />
+      <Buttons type="facebook" size="small" type="primary">
+        Subscribe
+      </Buttons>
     </Form>
   )
 }

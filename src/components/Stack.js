@@ -14,7 +14,7 @@ const Container = styled.div`
 
 export default props => (
   <Container>
-    <Header top="10px" bottom="30px" title="My Stack" description="These are my skills" />
+    {/** <Header top="10px" bottom="30px" title="My Stack" description="These are my skills" /> */}
     {stack.map((group, index) => (
       <Group key={index} group={group} />
     ))}

@@ -19,7 +19,7 @@ const Title = styled.p`
   margin: 0;
   line-height: 0;
   text-align: center;
-  top: -2px;
+  top: -3px;
   left: 15px;
   position: relative;
 `

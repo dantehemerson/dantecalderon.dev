@@ -54,6 +54,20 @@ module.exports = {
             }
           },
           {
+            resolve: `gatsby-remark-classes`,
+            options: {
+              classMap: {
+                h1: 'md-h1',
+                h2: 'md-h2',
+                h3: 'md-h3',
+                h4: 'md-h4',
+                h5: 'md-h5',
+                h6: 'md-h6',
+                paragraph: 'md-p'
+              }
+            }
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 2000,
@@ -76,19 +90,6 @@ module.exports = {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
               offsetY: `80`
-            }
-          },
-          {
-            resolve: 'gatsby-remark-emojis',
-            options: {
-              active: true,
-              class: 'emoji-icon',
-              size: 64,
-              styles: {
-                display: 'inline',
-                margin: '0',
-                position: 'relative'
-              }
             }
           },
           'gatsby-remark-external-links',
@@ -110,6 +111,20 @@ module.exports = {
             }
           },
           {
+            resolve: `gatsby-remark-classes`,
+            options: {
+              classMap: {
+                h1: 'md-h1',
+                h2: 'md-h2',
+                h3: 'md-h3',
+                h4: 'md-h4',
+                h5: 'md-h5',
+                h6: 'md-h6',
+                paragraph: 'md-p'
+              }
+            }
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 2000,
@@ -132,19 +147,6 @@ module.exports = {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
               offsetY: `80`
-            }
-          },
-          {
-            resolve: 'gatsby-remark-emojis',
-            options: {
-              active: true,
-              class: 'emoji-icon',
-              size: 64,
-              styles: {
-                display: 'inline',
-                margin: '0',
-                position: 'relative'
-              }
             }
           },
           'gatsby-remark-external-links',

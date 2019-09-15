@@ -351,6 +351,10 @@ export const GlobalStyles = createGlobalStyle`
   }
 }
 
+p.para {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
 
 .para::first-letter {
   float: left;
@@ -379,4 +383,24 @@ export const GlobalStyles = createGlobalStyle`
       `}
 }
 
+ // clases for mdx
+ .mdx-image-container {
+  margin: 0 auto;
+  max-width: 1000px;
+  &.with-border {
+    .gatsby-resp-image-image {
+      border: 5px solid #3384a0;
+    }
+  }
+ }
+
+ section {
+  &.lisa {
+    background: #fafafa;
+    border: 1px solid #f3f3f3;
+  }
+  &.rayada {
+    background: white;
+  }
+ }
 `

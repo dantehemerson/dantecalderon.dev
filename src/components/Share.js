@@ -34,19 +34,6 @@ const Container = styled.div`
   padding-bottom: 15px;
   justify-content: center;
 `
-const StyledIcon = styled.a`
-  padding: 10px;
-  margin: 0 10px;
-  padding: 9px 9px;
-  border-radius: 4px;
-  opacity: 1;
-  display: inline-flex;
-  img {
-    margin-bottom: 0;
-    width: 21px;
-    height: 21px;
-  }
-`
 
 const ShareTitle = styled.span`
   width: 100%;
@@ -56,12 +43,6 @@ const ShareTitle = styled.span`
   line-height: 0;
   margin-bottom: 20px;
 `
-
-const Icon = ({ title, url, icon, ...props }) => (
-  <StyledIcon {...props} href={url} target="_blank" rel="noopener noreferrer" data-size="large">
-    <img alt={title} title={title} src={icon} />
-  </StyledIcon>
-)
 
 const Share = ({ title, path }) => {
   const { siteUrl } = _.get(

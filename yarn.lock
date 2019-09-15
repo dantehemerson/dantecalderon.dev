@@ -6148,6 +6148,13 @@ gatsby-remark-autolink-headers@2.1.9:
     mdast-util-to-string "^1.0.6"
     unist-util-visit "^1.4.1"
 
+gatsby-remark-classes@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-classes/-/gatsby-remark-classes-0.1.2.tgz#3f47faac21b09c966f8ada2c6b5e4d51b23ed185"
+  integrity sha512-XowV/FDrBPIvHhTYSc6aKjHDiJS78Src2U7phF3hJD500MqCyYdmE4XpHAoxqAd2gHkTQp67R70eN6bCzpnWmQ==
+  dependencies:
+    unist-util-visit "^1.4.0"
+
 gatsby-remark-code-titles@1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/gatsby-remark-code-titles/-/gatsby-remark-code-titles-1.1.0.tgz#1b7246e4ac78669c1ca7c18ea70c3dd11fede139"
@@ -6190,11 +6197,6 @@ gatsby-remark-embed-video@1.7.1:
     "@types/node" "^11.11.3"
     get-video-id "^3.1.0"
     unist-util-visit "^1.4.0"
-
-gatsby-remark-emojis@0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-emojis/-/gatsby-remark-emojis-0.3.2.tgz#5d8edb4e303dc9e05ee554d080dc486be6d3c810"
-  integrity sha512-IrRHau6xJeDAj766WuHv8LCBcKKaHMyhbYFlbIu2O1veOmTZ5mb/GnGz2raUr6MiAwRXXbUE0XQqWFMSZ1xr8w==
 
 gatsby-remark-external-links@0.0.4:
   version "0.0.4"

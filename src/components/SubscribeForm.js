@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Swal from 'sweetalert2'
 import bg from '../assets/images/footer-bg2.png'
 import { media } from '../styles'
-import Button from './Button'
 
 const Form = styled.form`
   background-color: #0e0e0e;
@@ -93,7 +92,7 @@ const SubscribeForm = () => {
         type="text"
         onChange={handleEmailChange}
       />
-      <Buttons type="facebook" size="small" type="primary">
+      <Buttons size="small" type="primary">
         Subscribe
       </Buttons>
     </Form>

@@ -1,7 +1,7 @@
-import { graphql, Link, useStaticQuery } from 'gatsby'
-import _ from 'lodash'
+import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
+import useSiteMetadata from '../hooks/useSiteMetadata'
 import { media } from '../styles'
 
 const Container = styled.footer`
@@ -55,24 +55,7 @@ const Copy = styled.p`
 `
 
 export default props => {
-  const { title, subtitle, social } = _.get(
-    useStaticQuery(graphql`
-      query FooterQuery {
-        site {
-          siteMetadata {
-            title
-            subtitle
-            social {
-              title
-              icon
-              link
-            }
-          }
-        }
-      }
-    `),
-    'site.siteMetadata'
-  )
+  const { title, social } = useSiteMetadata()
 
   return (
     <Container>

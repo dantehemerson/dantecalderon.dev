@@ -1,8 +1,7 @@
-import { graphql, useStaticQuery } from 'gatsby'
-import _ from 'lodash'
 import React from 'react'
 import { AwesomeButton } from 'react-awesome-button'
 import styled from 'styled-components'
+import useSiteMetadata from '../hooks/useSiteMetadata'
 
 const ContactSocialWrapper = styled.div`
   width: 100%;
@@ -30,24 +29,7 @@ const Button = styled(AwesomeButton)`
 `
 
 const ContactSocial = () => {
-  const { title, socials } = _.get(
-    useStaticQuery(graphql`
-      query HeaderQuery {
-        site {
-          siteMetadata {
-            title
-            socials {
-              github
-              twitter
-              linkedin
-              instagram
-            }
-          }
-        }
-      }
-    `),
-    'site.siteMetadata'
-  )
+  const { title, socials } = useSiteMetadata()
 
   return (
     <ContactSocialWrapper>

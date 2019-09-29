@@ -9,10 +9,6 @@ import Navbar from './Navbar'
 import '../assets/fonts/fira'
 
 class Layout extends React.Component {
-  componentDidMount() {
-    require('@webcomponents/custom-elements/custom-elements.min.js')
-  }
-
   render() {
     const { simple, active } = this.props
     return (

@@ -1,9 +1,8 @@
-import { graphql, useStaticQuery } from 'gatsby'
-import _ from 'lodash'
 import PropTypes from 'prop-types'
 import React from 'react'
 import ReactDisqusComments from 'react-disqus-comments'
 import styled from 'styled-components'
+import useSiteMetadata from '../hooks/useSiteMetadata'
 
 const Container = styled.div`
   max-width: 900px;
@@ -14,20 +13,7 @@ const Container = styled.div`
 `
 
 const Disqus = ({ title, path }) => {
-  const { disqusShortname, siteUrl } = _.get(
-    useStaticQuery(graphql`
-      query DisqusQuery {
-        site {
-          siteMetadata {
-            disqusShortname
-            siteUrl
-          }
-        }
-      }
-    `),
-    'site.siteMetadata'
-  )
-
+  const { disqusShortname, siteUrl } = useSiteMetadata()
   const url = `${siteUrl}/${path}`
 
   return (

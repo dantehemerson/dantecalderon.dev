@@ -12,6 +12,14 @@ const useSiteMetadata = () => {
             icon
             link
           }
+          socials {
+            github
+            twitter
+            linkedin
+            instagram
+          }
+          disqusShortname
+          siteUrl
         }
       }
     }

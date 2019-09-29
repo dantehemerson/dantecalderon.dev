@@ -7,7 +7,7 @@ author: Dante Calderón
 path: carousel-gatsby-image
 image: ../images/travis_ci_subdirs.jpg
 date: '2019-09-15T13:10:52-05:00'
-published: true
+published: false
 tags:
   - Continuous Integration
   - Git

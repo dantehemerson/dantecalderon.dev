@@ -8,5 +8,9 @@
   },
   "editor.formatOnSave": true,
   "javascript.format.enable": false,
-  "javascript.preferences.quoteStyle": "single"
+  "javascript.preferences.quoteStyle": "single",
+  "prettier.disableLanguages": [],
+  "[javascript]": {
+    "editor.formatOnSave": true
+  }
 }

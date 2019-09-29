@@ -192,6 +192,10 @@ const StyledContent = styled.div`
     & + h2 {
       margin-top: 30px !important;
     }
+
+    a {
+      color: #69bcdb;
+    }
   }
 
   // Aun no se si se usa

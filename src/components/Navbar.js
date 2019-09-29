@@ -1,7 +1,7 @@
-import { graphql, Link, StaticQuery } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { media, mediaMax } from '../styles'
 
@@ -77,7 +77,7 @@ const icons = [
   >
     <path d="M32,6H4A2,2,0,0,0,2,8V28a2,2,0,0,0,2,2H32a2,2,0,0,0,2-2V8A2,2,0,0,0,32,6ZM30.46,28H5.66l7-7.24-1.44-1.39L4,26.84V9.52L16.43,21.89a2,2,0,0,0,2.82,0L32,9.21v17.5l-7.36-7.36-1.41,1.41ZM5.31,8H30.38L17.84,20.47Z" />
     <rect x={0} y={0} width={36} height={36} fillOpacity={0} />
-  </svg>
+  </svg>,
 ]
 
 const Wrapper = styled.nav`
@@ -319,125 +319,117 @@ const NavbarToggler = styled.button`
   }
 `
 
-class Navbar extends React.Component {
-  state = {
-    navbarIsTop: true,
-    menuIsOpen: false
-  }
+const Navbar = props => {
+  const [navbarIsTop, setNavbarIsTop] = useState(true)
+  const [menuIsOpen, setMenuIsOpen] = useState(false)
 
-  static propTypes = {
-    activePage: PropTypes.string
-  }
-
-  static defaultProps = {
-    activePage: '',
-    navbarIsTop: true,
-    menuIsOpen: false
-  }
-
-  componentDidMount() {
+  useEffect(() => {
     const scrollListener = () => {
-      let scrollPosition = document.documentElement.scrollTop
-      this.setState({
-        navbarIsTop: scrollPosition <= 5
-      })
+      const scrollPosition = document.documentElement.scrollTop
+      setNavbarIsTop(scrollPosition <= 5)
     }
     window.addEventListener('scroll', scrollListener)
     window.addEventListener('resize', () => {
       let width = window.innerWidth
       if (width >= 768) {
-        this.setState({
-          menuIsOpen: false
-        })
+        setMenuIsOpen(false)
       }
     })
+  }, [])
+
+  const handleToggle = () => {
+    setMenuIsOpen(prevMenuIsOpen => !prevMenuIsOpen)
   }
 
-  handleToggle = event => {
-    this.setState((prevState, props) => {
-      return {
-        menuIsOpen: !prevState.menuIsOpen
+  const { active } = props
+  const { menu, title, subtitle } = props.data.site.siteMetadata
+  return (
+    <Wrapper
+      className={
+        (active === '' ? 'inicio ' : '') +
+        (menuIsOpen ? ' open ' : '') +
+        (navbarIsTop ? '' : 'noTop')
       }
-    })
-  }
-
-  render() {
-    const { menuIsOpen } = this.state
-    const { active } = this.props
-    const { menu, title, subtitle } = this.props.data.site.siteMetadata
-    return (
-      <Wrapper
-        className={
-          (active === '' ? 'inicio ' : '') + (menuIsOpen ? ' open ' : '') + (this.state.navbarIsTop ? '' : 'noTop')
-        }
-        id="Navbar"
-      >
-        <Shadow
+      id="Navbar"
+    >
+      <Shadow
+        onClick={e => {
+          setNavbarIsTop(false)
+        }}
+        className={`${menuIsOpen ? 'open' : ''}`}
+      />
+      <NavbarContainer>
+        <TitleWrapper
           onClick={e => {
-            this.setState({ menuIsOpen: false })
+            setMenuIsOpen(false)
           }}
-          className={`${menuIsOpen ? 'open' : ''}`}
-        />
-        <NavbarContainer>
-          <TitleWrapper
-            onClick={e => {
-              this.setState({ menuIsOpen: false })
-            }}
-            to="/"
+          to="/"
+        >
+          <Logo alt={subtitle} sizes={props.data.logo.sizes} />
+          <Title>{title}</Title>
+        </TitleWrapper>
+        <div>
+          <NavbarToggler
+            onClick={handleToggle}
+            id="navbarToggler"
+            className={`${menuIsOpen ? 'open' : ''}`}
           >
-            <Logo alt={subtitle} sizes={this.props.data.logo.sizes} />
-            <Title>{title}</Title>
-          </TitleWrapper>
-          <div>
-            <NavbarToggler onClick={this.handleToggle} id="navbarToggler" className={`${menuIsOpen ? 'open' : ''}`}>
-              <span className="burger-menu" />
-            </NavbarToggler>
-            <NavbarNav className={`${menuIsOpen ? 'open' : ''}`}>
-              {menu.map((item, index) => (
-                <Item key={index}>
-                  <ItemLink
-                    onClick={e => {
-                      this.setState({ menuIsOpen: false })
-                    }}
-                    className={`${active === item.id ? 'active' : ''}`}
-                    to={item.to}
-                  >
-                    {icons[index]}
-                    {item.title}
-                  </ItemLink>
-                </Item>
-              ))}
-            </NavbarNav>
-          </div>
-        </NavbarContainer>
-      </Wrapper>
-    )
-  }
+            <span className="burger-menu" />
+          </NavbarToggler>
+          <NavbarNav className={`${menuIsOpen ? 'open' : ''}`}>
+            {menu.map((item, index) => (
+              <Item key={index}>
+                <ItemLink
+                  onClick={e => {
+                    setMenuIsOpen(false)
+                  }}
+                  className={`${active === item.id ? 'active' : ''}`}
+                  to={item.to}
+                >
+                  {icons[index]}
+                  {item.title}
+                </ItemLink>
+              </Item>
+            ))}
+          </NavbarNav>
+        </div>
+      </NavbarContainer>
+    </Wrapper>
+  )
 }
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query {
-        logo: imageSharp(fluid: { originalName: { regex: "/logo.png/" } }) {
-          sizes(maxWidth: 64) {
-            ...GatsbyImageSharpSizes_tracedSVG
-          }
+Navbar.propTypes = {
+  activePage: PropTypes.string,
+}
+
+Navbar.defaultProps = {
+  activePage: '',
+  navbarIsTop: true,
+  menuIsOpen: false,
+}
+
+export default props => {
+  const data = useStaticQuery(graphql`
+    query {
+      logo: imageSharp(fluid: { originalName: { regex: "/logo.png/" } }) {
+        sizes(maxWidth: 64) {
+          ...GatsbyImageSharpSizes_tracedSVG
         }
-        site {
-          siteMetadata {
+      }
+      site {
+        siteMetadata {
+          title
+          subtitle
+          menu {
             title
-            subtitle
-            menu {
-              title
-              id
-              icon
-              to
-            }
+            id
+            icon
+            to
           }
         }
       }
-    `}
-    render={data => <Navbar data={data} {...props} />}
-  />
-)
+    }
+  `)
+
+  return <Navbar data={data} {...props} />
+}

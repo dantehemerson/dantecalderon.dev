@@ -31,23 +31,22 @@ export const Project = props => {
   )
 }
 
-export default class ProjectTemplate extends React.Component {
-  render() {
-    const post = this.props.data.mdx
-    const { siteMetadata } = this.props.data.site
-    const { title, description } = post.frontmatter
-    return (
-      <Layout title={title} path={post.fields.slug} image={`thumbnail`} description={description}>
-        <Project
-          {...post}
-          {...siteMetadata}
-          content={post.body}
-          image={post.frontmatter.image.childImageSharp.sizes}
-          avatar={this.props.data.avatar}
-        />
-      </Layout>
-    )
-  }
+const ProjectTemplate = props => {
+  const post = props.data.mdx
+  const { siteMetadata } = props.data.site
+  const { title, description } = post.frontmatter
+
+  return (
+    <Layout title={title} path={post.fields.slug} image={`thumbnail`} description={description}>
+      <Project
+        {...post}
+        {...siteMetadata}
+        content={post.body}
+        image={post.frontmatter.image.childImageSharp.sizes}
+        avatar={props.data.avatar}
+      />
+    </Layout>
+  )
 }
 
 export const pageQuery = graphql`
@@ -104,3 +103,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export default ProjectTemplate

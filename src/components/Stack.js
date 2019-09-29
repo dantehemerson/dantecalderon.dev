@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Header from '../components/Header'
 import stack from '../data/stack'
 import Group from './Group'
 
@@ -14,7 +13,6 @@ const Container = styled.div`
 
 export default props => (
   <Container>
-    {/** <Header top="10px" bottom="30px" title="My Stack" description="These are my skills" /> */}
     {stack.map((group, index) => (
       <Group key={index} group={group} />
     ))}

@@ -15,47 +15,45 @@ const PostsWrapper = styled.div`
   margin: 0 auto 35px;
 `
 
-class BlogWithTags extends React.Component {
-  render() {
-    const tagSlug = get(this.props, 'pageContext.tagSlug')
-    const tags = get(this.props, 'pageContext.tags')
-    const title = `${preferSpacedTag(tags)} - Blog`
-    console.log(this.props)
-    const posts = get(this, 'props.data.allMdx.edges') || []
-    const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')
-    return (
-      <Layout location={this.props.location} active={pages.blog}>
-        <div className="Blog">
-          <SEO title={title} url={`${siteUrl}/blog/tags/${tagSlug}`} />
-          <Header title={preferSpacedTag(tags)} color="#3fabbb" />
-          <PostsWrapper>
-            {posts.map(({ node }) => {
-              if (node.frontmatter.published)
-                return (
-                  <Card
-                    data={{
-                      title: node.frontmatter.title,
-                      thumbnail: node.frontmatter.image.childImageSharp.sizes,
-                      excerpt: node.excerpt,
-                      date: node.frontmatter.date,
-                      path: `/${node.fields.slug}`,
-                      timeToRead: node.timeToRead
-                    }}
-                    key={node.frontmatter.path}
-                  />
-                )
-              else return false
-            })}
-            <Pagination
-              limit={this.props.pageContext.limit}
-              numPages={this.props.pageContext.numPages}
-              currentPage={this.props.pageContext.currentPage}
-            />
-          </PostsWrapper>
-        </div>
-      </Layout>
-    )
-  }
+const BlogWithTags = props => {
+  const tagSlug = get(props, 'pageContext.tagSlug')
+  const tags = get(props, 'pageContext.tags')
+  const title = `${preferSpacedTag(tags)} - Blog`
+  console.log(props)
+  const posts = props.data.allMdx.edges || []
+  const siteUrl = props.data.site.siteMetadata.siteUrl
+  return (
+    <Layout location={props.location} active={pages.blog}>
+      <div className="Blog">
+        <SEO title={title} url={`${siteUrl}/blog/tags/${tagSlug}`} />
+        <Header title={preferSpacedTag(tags)} color="#3fabbb" />
+        <PostsWrapper>
+          {posts.map(({ node }) => {
+            if (node.frontmatter.published)
+              return (
+                <Card
+                  data={{
+                    title: node.frontmatter.title,
+                    thumbnail: node.frontmatter.image.childImageSharp.sizes,
+                    excerpt: node.excerpt,
+                    date: node.frontmatter.date,
+                    path: `/${node.fields.slug}`,
+                    timeToRead: node.timeToRead
+                  }}
+                  key={node.frontmatter.path}
+                />
+              )
+            else return false
+          })}
+          <Pagination
+            limit={props.pageContext.limit}
+            numPages={props.pageContext.numPages}
+            currentPage={props.pageContext.currentPage}
+          />
+        </PostsWrapper>
+      </div>
+    </Layout>
+  )
 }
 
 export const queryBlog = graphql`
@@ -68,7 +66,9 @@ export const queryBlog = graphql`
     }
     allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: $tags }, model: { eq: "post" }, published: { eq: true } } }
+      filter: {
+        frontmatter: { tags: { in: $tags }, model: { eq: "post" }, published: { eq: true } }
+      }
       limit: 100
     ) {
       edges {

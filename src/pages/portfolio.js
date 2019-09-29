@@ -6,28 +6,27 @@ import List from '../components/Portfolio/ProjectsList'
 import SEO from '../components/SEO'
 import { pages } from '../utils'
 
-class Portfolio extends React.Component {
-  render() {
-    const posts = this.props.data.allMdx.edges || []
-    const siteUrl = this.props.data.site.siteMetadata.siteUrl
-    return (
-      <Layout location={this.props.location} active={pages.portfolio}>
-        <SEO title="Portfolio" url={`${siteUrl}/portfolio`} />
-        <Header
-          title="Portfolio"
-          description={[
-            'These are some of my projects, to see more projects check my ',
-            <a key="link" target="__blank" href="https://github.com/dantehemerson">
-              Github
-            </a>,
-            '.'
-          ]}
-          bottom="40px"
-        />
-        <List posts={posts} />
-      </Layout>
-    )
-  }
+const Portfolio = props => {
+  const posts = props.data.allMdx.edges || []
+  const siteUrl = props.data.site.siteMetadata.siteUrl
+
+  return (
+    <Layout location={props.location} active={pages.portfolio}>
+      <SEO title="Portfolio" url={`${siteUrl}/portfolio`} />
+      <Header
+        title="Portfolio"
+        description={[
+          'These are some of my projects, to see more projects check my ',
+          <a key="link" target="__blank" href="https://github.com/dantehemerson">
+            Github
+          </a>,
+          '.'
+        ]}
+        bottom="40px"
+      />
+      <List posts={posts} />
+    </Layout>
+  )
 }
 
 export const queryPortfolio = graphql`
@@ -39,7 +38,10 @@ export const queryPortfolio = graphql`
       }
     }
 
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { model: { eq: "project" } } }) {
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { model: { eq: "project" } } }
+    ) {
       edges {
         node {
           fields {

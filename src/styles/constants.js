@@ -1,3 +1,3 @@
 export default {
-  containerPaddingLg: '12px'
+  containerPaddingLg: '12px',
 }

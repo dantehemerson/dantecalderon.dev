@@ -11,38 +11,43 @@ import Layout from './TemplateLayout'
 
 export const PostContent = ({ title, image, editLink, date, timeToRead, avatar, content }) => (
   <React.Fragment>
-    <PostHeader title={title} image={image} editLink={editLink} date={date} timeToRead={timeToRead} avatar={avatar} />
+    <PostHeader
+      title={title}
+      image={image}
+      editLink={editLink}
+      date={date}
+      timeToRead={timeToRead}
+      avatar={avatar}
+    />
     <Markdown content={content} />
   </React.Fragment>
 )
 
-export default class BlogPostTemplate extends React.Component {
-  render() {
-    const {
-      timeToRead,
-      body,
-      fileAbsolutePath,
-      fields: { slug },
-      frontmatter: { title, image, date, description, tags }
-    } = this.props.data.mdx
+const PostTemplate = props => {
+  const {
+    timeToRead,
+    body,
+    fileAbsolutePath,
+    fields: { slug },
+    frontmatter: { title, image, date, description, tags },
+  } = props.data.mdx
 
-    return (
-      <Layout isPost title={title} path={slug} image={`thumbnail`} description={description}>
-        <PostContent
-          title={title}
-          image={image}
-          editLink={getLinkEditPost(fileAbsolutePath)}
-          date={date}
-          timeToRead={timeToRead}
-          avatar={this.props.data.avatar}
-          content={body}
-        />
-        <TagsSection tags={tags} />
-        <Share title={title} path={slug} />
-        <SubscribeForm />
-      </Layout>
-    )
-  }
+  return (
+    <Layout isPost title={title} path={slug} image={`thumbnail`} description={description}>
+      <PostContent
+        title={title}
+        image={image}
+        editLink={getLinkEditPost(fileAbsolutePath)}
+        date={date}
+        timeToRead={timeToRead}
+        avatar={props.data.avatar}
+        content={body}
+      />
+      <TagsSection tags={tags} />
+      <Share title={title} path={slug} />
+      <SubscribeForm />
+    </Layout>
+  )
 }
 
 export const pageQuery = graphql`
@@ -85,3 +90,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export default PostTemplate

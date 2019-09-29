@@ -7,18 +7,17 @@ import Markdown from '../components/Markdown'
 import SEO from '../components/SEO'
 import { pages } from '../utils'
 
-class About extends React.Component {
-  render() {
-    const siteUrl = get(this, 'props.data.site.siteMetadata.siteUrl')
-    const aboutContent = get(this.props.data, 'aboutContent')
-    return (
-      <Layout location={this.props.location} active={pages.about}>
-        <SEO title="About" url={`${siteUrl}/about`} />
-        <Header title="ABOUT" color="#3384a0" />
-        <Markdown content={aboutContent.body} />
-      </Layout>
-    )
-  }
+const About = props => {
+  const siteUrl = get(props, 'data.site.siteMetadata.siteUrl')
+  const aboutContent = get(props.data, 'aboutContent')
+
+  return (
+    <Layout location={props.location} active={pages.about}>
+      <SEO title="About" url={`${siteUrl}/about`} />
+      <Header title="ABOUT" color="#3384a0" />
+      <Markdown content={aboutContent.body} />
+    </Layout>
+  )
 }
 
 export const queryAbout = graphql`

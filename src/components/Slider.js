@@ -77,7 +77,7 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: false,
-  autoplaySpeed: 5000
+  autoplaySpeed: 5000,
 }
 
 export default props => (

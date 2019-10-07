@@ -11,10 +11,7 @@ const prefix = {
 }
 
 const getPrefix = model => {
-  if (model && prefix[model]) {
-    return prefix[model]
-  }
-  return ''
+  return prefix[model] ? prefix[model] : ''
 }
 
 exports.createPages = ({ graphql, actions }) => {

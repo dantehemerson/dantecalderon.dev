@@ -5,7 +5,6 @@ import { ThemeProvider } from 'styled-components'
 import '../assets/fonts/fira'
 import { defaultTheme, GlobalStyles } from '../styles'
 import Footer from './Footer'
-import './index.scss'
 import Navbar from './Navbar'
 
 const Layout = props => {

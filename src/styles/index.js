@@ -9,14 +9,14 @@ const sizes = {
   xl: 1170,
   lg: 992,
   md: 768,
-  sm: 576
+  sm: 576,
 }
 
 const sizesMax = {
   xl: 1169,
   lg: 991,
   md: 767,
-  sm: 575
+  sm: 575,
 }
 
 export const media = Object.keys(sizes).reduce((accumulator, label) => {
@@ -40,8 +40,8 @@ export const mediaMax = Object.keys(sizesMax).reduce((accumulator, label) => {
 export const defaultTheme = {
   body: {
     background: 'white',
-    color: 'black'
-  }
+    color: 'black',
+  },
 }
 
 export const GlobalStyles = createGlobalStyle`
@@ -403,4 +403,13 @@ p.para {
     background: white;
   }
  }
+
+ @keyframes orb-hacker {
+    from {
+      transform: rotate(20deg);
+    }
+    to {
+      transform: rotate(20deg - 360deg);
+    }
+  }
 `

@@ -5,6 +5,7 @@ module.exports = {
     description: `Hi, I'm Dante Calderón, I am passionate about Nodejs.`,
     siteUrl: 'https://dantecalderon.dev',
     disqusShortname: 'dantecalderon',
+    githubUser: 'dantehemerson',
     social: [
       { title: 'Github', link: 'https://github.com/dantehemerson', icon: 'github' },
       { title: 'Twitter', link: 'https://twitter.com/dantehemerson', icon: 'twitter' },
@@ -15,13 +16,13 @@ module.exports = {
       {
         title: 'StackOverflow',
         link: 'https://instagram.com/dantehemerson',
-        icon: 'stack-overflow'
+        icon: 'stack-overflow',
       },
       { title: 'Goodreads', link: 'https://instagram.com/dantehemerson', icon: 'instagram' },
       {
         title: 'FreeCodeCamp',
         link: 'https://instagram.com/dantehemerson',
-        icon: 'free-code-camp'
+        icon: 'free-code-camp',
       },
       { title: 'Gitlab', link: 'https://instagram.com/dantehemerson', icon: 'gitlab' },
       { title: 'Angellist', link: 'https://angel.co/dantehemerson', icon: 'angellist' },
@@ -33,21 +34,21 @@ module.exports = {
       {
         title: 'Youtube',
         link: 'https://www.youtube.com/channel/UCCbtGSRgh1RFYysgaZkoE0A',
-        icon: 'youtube-play'
-      }
+        icon: 'youtube-play',
+      },
     ],
     socials: {
       github: 'https://github.com/dantehemerson',
       twitter: 'https://twitter.com/dantehemerson',
       linkedin: 'https://linkedin.com/in/dantehemerson',
-      instagram: 'https://instagram.com/dantehemerson'
+      instagram: 'https://instagram.com/dantehemerson',
     },
     menu: [
       { title: 'Home', id: '', to: '/', icon: 'home' },
       { title: 'Blog', id: 'Blog', to: '/blog', icon: 'home' },
       { title: 'About', id: 'About', to: '/about', icon: 'home' },
-      { title: 'Portfolio', id: 'Portfolio', to: '/portfolio', icon: 'home' }
+      { title: 'Portfolio', id: 'Portfolio', to: '/portfolio', icon: 'home' },
       //{ title: 'Contact', id: 'Contact', to: '/contact', icon: 'home' }
-    ]
-  }
+    ],
+  },
 }

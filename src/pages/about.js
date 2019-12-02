@@ -1,15 +1,27 @@
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../components/Header'
 import Layout from '../components/Layout'
 import Markdown from '../components/Markdown'
 import SEO from '../components/SEO'
 import { pages } from '../utils'
+import { getMyGithubInfo } from '../utils/requests/githubInfo'
 
 const About = props => {
   const siteUrl = get(props, 'data.site.siteMetadata.siteUrl')
   const aboutContent = get(props.data, 'aboutContent')
+
+  useEffect(() => {
+    const setGithubInfo = async () => {
+      try {
+        const info = await getMyGithubInfo()
+        console.log('Dante: setGithubInfo -> info', info)
+      } catch (err) {}
+    }
+
+    setGithubInfo()
+  }, [])
 
   return (
     <Layout location={props.location} active={pages.about}>

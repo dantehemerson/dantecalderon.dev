@@ -4,6 +4,7 @@ import { AwesomeButton } from 'react-awesome-button'
 import styled from 'styled-components'
 import grain_image from '../../assets/images/grain.png'
 import { media } from '../../styles'
+import Info from '../Info'
 import Rotational from '../Rotational'
 import Social from '../Social'
 
@@ -66,7 +67,7 @@ const HeaderHome = ({ data }) => (
   <div
     style={{
       background: '#f3f3f3',
-      backgroundImage: `url(${grain_image})`
+      backgroundImage: `url(${grain_image})`,
     }}
   >
     <Container wrap="wrap" maxWidth="1100px" className="row" justifyContent="center">
@@ -75,6 +76,7 @@ const HeaderHome = ({ data }) => (
         <Subtitle>{data.site.siteMetadata.subtitle}</Subtitle>
         <Social />
         <ButtonAbout href="/about">ABOUT ME</ButtonAbout>
+        <Info />
       </MainInfoWrapper>
       <RotationalWrapper className="col-xs-12 col-lg-7">
         <Rotational avatar={data.avatar} />

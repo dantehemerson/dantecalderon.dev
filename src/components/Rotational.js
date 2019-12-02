@@ -132,7 +132,6 @@ const Container = styled.div`
   ${rotationalItem('laptop', '315deg', laptop)}  
   ${rotationalItem('headphones', '360deg', headphones)}  
 `
-console.log(rotationalItem('headphones', '360deg', headphones))
 const AvatarContainer = styled.div`
   width: 115px;
   border-radius: 50%;

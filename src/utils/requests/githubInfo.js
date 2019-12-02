@@ -7,13 +7,20 @@ export const getMyGithubInfo = async () => {
         Authorization: `Bearer ${process.env.GITHUB_API_TOKEN}`,
       },
       body: JSON.stringify({
-        query: '{ user(login: "dantehemerson") { bio status { message emojiHTML } } }',
+        query:
+          '{ user(login: "dantehemerson") { bio status { message emojiHTML  updatedAt indicatesLimitedAvailability } } }',
       }),
     })
-    const { data } = await res.json()
-    console.log('Dante: getMyGithubInfo -> data', data)
+    const {
+      data: {
+        user: { status },
+      },
+    } = await res.json()
+
     return {
-      status: `${data.user.status.emojiHTML} ${data.message}`,
+      status: `${status.emojiHTML} ${status.message}`,
+      updatedAt: status.updatedAt,
+      bussy: status.indicatesLimitedAvailability,
     }
   } catch (err) {
     console.log('Error: ', err)

@@ -1,15 +1,15 @@
 import Img from 'gatsby-image'
 import React from 'react'
-import styled, { keyframes, css } from 'styled-components'
-import { media } from '../styles'
-import hacker from '../assets/images/icons/linux-original.svg'
+import styled, { css } from 'styled-components'
+import computer from '../assets/images/icons//laptop-2.png'
 import protection from '../assets/images/icons/algorithm.svg'
-import server from '../assets/images/icons/spotify.svg'
+import laptop from '../assets/images/icons/books.svg'
 import www from '../assets/images/icons/coffee.svg'
 import browser from '../assets/images/icons/idea.svg'
-import computer from '../assets/images/icons//laptop-2.png'
-import laptop from '../assets/images/icons/books.svg'
+import hacker from '../assets/images/icons/linux-original.svg'
 import headphones from '../assets/images/icons/machine-learning.svg'
+import server from '../assets/images/icons/spotify.svg'
+import { media } from '../styles'
 
 const rotationalItem = (classname, deg, img, duration = '.3s') => css`
   .${classname} {

@@ -13,13 +13,13 @@ tags:
   - Announce
 ---
 
-Estoy en el proceso de cambiar el estilo de mi [pagina de inicio](https://5d904aa582636f00090fd93e--dantecalderon.netlify.com/) que actualmente luce como arriba, pero quisiera agregarlo mas informacion.
+Estoy en el proceso de cambiar el estilo de mi [pagina de inicio](https://5d904aa582636f00090fd93e--dantecalderon.netlify.com/) que actualmente luce como arriba, pero quisiera agregarle mas informacion.
 
-Me gusto la pagina de (Yoginth)[https://yoginth.com/] 
+Me gusto la pagina de (Yoginth)[https://yoginth.com/], asi que la tomare de referencia.
 
 ![Yoginth website](../images/yoginth_website_home_2019_1.png)
 
-que tiene informacion sobre:
+Tiene informacion sobre:
 
 - Su status actual(de Gitlab)
 - La musica que actualmente esta escuchando(de Spotify)
@@ -29,13 +29,18 @@ que tiene informacion sobre:
 - y actual trabajo(de Gitlab)
 
 Asi que tambien quisiera hacer algo similar. Aun no tengo idea de como deberia ser el diseno.
-Estoy en el proceso de obtener los datos.
 
-Estoy usando GraphQL la API de [Github](https://developer.github.com/v4/), ya obtuve mi **status** desde Github(ahora permite poner status), 
+
+Estoy en el proceso de obtener los datos.
+Estoy usando GraphQL la API de [Github](https://developer.github.com/v4/), ya obtuve mi **status** desde Github(ahora permite poner status):
+
+![Mi Github(@datehemerson)](../images/github_dantehemerson_2019_1.png)
+
+y quedo asi:
 
 ![Status home page](../images/status_home_page_2019_1.png)
 
-sin emabargo aun tengo dificultades para obtener el ultimo de commit por Github que no permite saber los commits en general, estoy pensando en consultar todos los repos, obtener su ultimo commit y ordenarlos por fecha y asi obtener el ultimo.
+sin emabargo aun tengo dificultades para obtener el ultimo de commit desde Github que no permite saber los commits en general. Estoy pensando en consultar todos los repos, obtener su ultimo commit y ordenarlos por fecha y asi obtener el ultimo.
 
 En fin, ya encontrare una solucion.
 

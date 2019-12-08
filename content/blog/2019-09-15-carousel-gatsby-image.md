@@ -30,7 +30,7 @@ tags:
 
 ### Creando el proyecto
 
-```sh
+```shell
 gatsby new example-carousel-gatsby-img https://github.com/gatsbyjs/gatsby-starter-blog
 ```
 

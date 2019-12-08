@@ -19,18 +19,18 @@ tags:
 
 * Node >= 8
 * Tenemos que tener instalado [`gatsby-cli`](https://www.gatsbyjs.org/docs/gatsby-cli/), se instala ejecutando:
-  ```shell
+  ```bash
   npm i -g gatsby-cli
   ```
 * > **Nota**: Para este ejemplo usare yarn, pero puedes usar npm, solamente transformando los comandos. Si tambien quieres usar yarn puedes instalarlo ejecutando:
 
-  ```shell
+  ```bash
   npm i -g yarn
   ```
 
 ### Creando el proyecto
 
-```shell
+```bash
 gatsby new example-carousel-gatsby-img https://github.com/gatsbyjs/gatsby-starter-blog
 ```
 
@@ -38,7 +38,7 @@ gatsby new example-carousel-gatsby-img https://github.com/gatsbyjs/gatsby-starte
 
 Una vez creado el proyecto nos movemos al directorio generado:
 
-```shell
+```bash
 cd example-carousel-gatsby-img
 ```
 
@@ -48,6 +48,6 @@ Para este ejemplo usaremos [react-slick](https://github.com/akiran/react-slick)
 
 Instalacion:
 
-```shell
+```bash
 yarn add react-slick
 ```

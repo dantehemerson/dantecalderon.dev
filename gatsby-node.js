@@ -7,7 +7,7 @@ const postPerPage = 8
 
 const prefix = {
   post: 'blog/',
-  project: 'portfolio/'
+  project: 'portfolio/',
 }
 
 const getPrefix = model => {
@@ -65,7 +65,7 @@ exports.createPages = ({ graphql, actions }) => {
         const numOfPages = Math.ceil(blogPosts.length / postPerPage)
 
         Array.from({
-          length: numOfPages
+          length: numOfPages,
         }).forEach((_, i) => {
           createPage({
             path: i === 0 ? '/blog' : `/blog/page/${i + 1}`,
@@ -74,8 +74,8 @@ exports.createPages = ({ graphql, actions }) => {
               limit: postPerPage,
               skip: i * postPerPage,
               numPages: numOfPages,
-              currentPage: i + 1
-            }
+              currentPage: i + 1,
+            },
           })
         })
 
@@ -96,8 +96,8 @@ exports.createPages = ({ graphql, actions }) => {
             component: tagsBlogListTemplate,
             context: {
               tags,
-              tagSlug
-            }
+              tagSlug,
+            },
           })
         })
 
@@ -115,8 +115,8 @@ exports.createPages = ({ graphql, actions }) => {
             context: {
               slug,
               previous,
-              next
-            }
+              next,
+            },
           })
         })
       })
@@ -133,7 +133,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: 'slug',
       node,
-      value: `${getPrefix(model)}${frontmatter.path}`
+      value: `${getPrefix(model)}${frontmatter.path}`,
     })
   }
 }

@@ -18,7 +18,7 @@ tags:
 
 Typescript es un muy popular
 
-`gist:dantehemerson/0c74084bec43cc5eea5eef74b30462ef`
+<!-- `gist:dantehemerson/0c74084bec43cc5eea5eef74b30462ef` -->
 
 ```js:title=src/app/example-file.js
 alert('how cool is this!');

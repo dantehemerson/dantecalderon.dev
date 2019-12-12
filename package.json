@@ -58,7 +58,7 @@
     "react-helmet": "5.2.1",
     "react-slick": "0.25.2",
     "react-typography": "0.16.19",
-    "styled-components": "4.3.2",
+    "styled-components": "4.4.1",
     "sweetalert2": "8.17.1",
     "typography": "0.16.19"
   },

@@ -40,7 +40,7 @@ y quedo asi:
 
 ![Status home page](../images/status_home_page_2019_1.png)
 
-sin emabargo aun tengo dificultades para obtener el ultimo de commit desde Github que no permite saber los commits en general. Estoy pensando en consultar todos los repos, obtener su ultimo commit y ordenarlos por fecha y asi obtener el ultimo.
+sin embargo aun tengo dificultades para obtener el ultimo de commit desde Github que no permite saber los commits en general. Estoy pensando en consultar todos los repos, obtener su ultimo commit y ordenarlos por fecha y asi obtener el ultimo.
 
 En fin, ya encontrare una solucion.
 

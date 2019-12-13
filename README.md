@@ -4,17 +4,15 @@
 [![StackShare](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/dantehemerson/dantecalderon-com)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdantehemerson%2Fdantecalderon.dev.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdantehemerson%2Fdantecalderon.dev?ref=badge_shield)
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
-
 ## Installation
 
 Install packages
-bash
+```bash
 yarn
 ```
 
 And run:
-bash
+```bash
 yarn start
 ```
 

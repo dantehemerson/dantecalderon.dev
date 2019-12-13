@@ -6308,12 +6308,12 @@ gatsby-plugin-catch-links@2.1.21:
     "@babel/runtime" "^7.7.6"
     escape-string-regexp "^1.0.5"
 
-gatsby-plugin-feed@2.3.11:
-  version "2.3.11"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.3.11.tgz#a6cd9402cff7cf0d2f3e0a0b41411a83f91c7d62"
-  integrity sha512-rvzqpii6Xczg5PD4qtRXYDrGN6YyC7x0gRu2uXNx1OnnIH1smzl6R8IgaXQeXN4LjAZaVV1y+RelVNXQM5xlpw==
+gatsby-plugin-feed@2.3.25:
+  version "2.3.25"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.3.25.tgz#ed92ce21fc1fc4a936ca23ab27025c0a8e64e0d0"
+  integrity sha512-a2Asudmf2np+C8k2MqjUPbHABdoBgKgbIX+HvsZAniAiFIBhxEC6QudQP0rNqdo7+OGhPUpSTYawcalrnmtNRA==
   dependencies:
-    "@babel/runtime" "^7.5.5"
+    "@babel/runtime" "^7.7.6"
     "@hapi/joi" "^15.1.1"
     fs-extra "^8.1.0"
     lodash.merge "^4.6.2"

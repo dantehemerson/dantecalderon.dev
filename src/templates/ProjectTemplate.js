@@ -34,10 +34,15 @@ export const Project = props => {
 const ProjectTemplate = props => {
   const post = props.data.mdx
   const { siteMetadata } = props.data.site
-  const { title, description } = post.frontmatter
+  const { title, description, image } = post.frontmatter
 
   return (
-    <Layout title={title} path={post.fields.slug} image={`thumbnail`} description={description}>
+    <Layout
+      title={title}
+      path={post.fields.slug}
+      image={image.childImageSharp.sizes.src}
+      description={description}
+    >
       <Project
         {...post}
         {...siteMetadata}

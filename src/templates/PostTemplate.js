@@ -32,8 +32,15 @@ const PostTemplate = props => {
     frontmatter: { title, image, date, description, tags },
   } = props.data.mdx
 
+  console.log(image)
   return (
-    <Layout isPost title={title} path={slug} image={`thumbnail`} description={description}>
+    <Layout
+      isPost
+      title={title}
+      path={slug}
+      image={image.childImageSharp.sizes.src}
+      description={description}
+    >
       <PostContent
         title={title}
         image={image}

@@ -9,7 +9,7 @@ export default class SEO extends PureComponent {
     image: PropTypes.string,
     url: PropTypes.string,
     description: PropTypes.string,
-    isPost: PropTypes.bool
+    isPost: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -17,7 +17,7 @@ export default class SEO extends PureComponent {
     image: `https://dantecalderon.dev${avatar}`,
     url: 'https://dantecalderon.dev/',
     description: 'Dante Calderon - Backend Nodejs Developer',
-    isPost: false
+    isPost: false,
   }
 
   render() {
@@ -33,12 +33,12 @@ export default class SEO extends PureComponent {
           'https://plus.google.com/u/0/101542534057875808813',
           'https://www.instagram.com/dantehemerson',
           'https://www.github.com/dantehemerson',
-          'https://www.linkedin.com/in/dantehemerson'
+          'https://www.linkedin.com/in/dantehemerson',
         ],
         url: url,
         name: title,
-        alternateName: description
-      }
+        alternateName: description,
+      },
     ]
 
     if (isPost) {
@@ -52,7 +52,7 @@ export default class SEO extends PureComponent {
             'https://plus.google.com/u/0/101542534057875808813',
             'https://www.instagram.com/dantehemerson',
             'https://www.github.com/dantehemerson',
-            'https://www.linkedin.com/in/dantehemerson'
+            'https://www.linkedin.com/in/dantehemerson',
           ],
           itemListElement: [
             {
@@ -61,10 +61,10 @@ export default class SEO extends PureComponent {
               item: {
                 '@id': url,
                 name: title,
-                image: image
-              }
-            }
-          ]
+                image: image,
+              },
+            },
+          ],
         },
         {
           '@context': 'http://schema.org',
@@ -75,7 +75,7 @@ export default class SEO extends PureComponent {
             'https://plus.google.com/u/0/101542534057875808813',
             'https://www.instagram.com/dantehemerson',
             'https://www.github.com/dantehemerson',
-            'https://www.linkedin.com/in/dantehemerson'
+            'https://www.linkedin.com/in/dantehemerson',
           ],
           url: url,
           name: title,
@@ -83,10 +83,10 @@ export default class SEO extends PureComponent {
           headline: title,
           image: {
             '@type': 'ImageObject',
-            url: image
+            url: image,
           },
-          description
-        }
+          description,
+        },
       ])
     }
 

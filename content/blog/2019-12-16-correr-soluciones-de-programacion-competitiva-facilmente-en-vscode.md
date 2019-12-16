@@ -29,15 +29,21 @@ IO Run es un plugin que esta hecho especialmente para correr y testear solucione
 
 Antes de tener instalado tendras que tener instalado algun compilador o interprete para tu lenguages de programacion.
 
+Si usas C++ y Linux instala el compilador GCC con:
+
+```bash
+sudo apt-get install g++
+```
+
 #### Instalacion
 
 Para instalarlo solo vamos a la  seccion de plugins de VSCode y bucamos `io run` y le damos instalar.
 
-Para tener una mejor experiencia, recomiendo instalar el [plugin oficial](https://marketplace.visualstudio.com/search?target=VSCode&category=Programming%20Languages&sortBy=Installs) que tiene VSCode para los diferentes lenguages, si usas C++ recomiendo instalar el plugin oficial de [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools), el cual añade funcionalidades de autocompletado y depuracion.
+> Para tener una mejor experiencia, recomiendo instalar el [plugin oficial](https://marketplace.visualstudio.com/search?target=VSCode&category=Programming%20Languages&sortBy=Installs) que tiene VSCode para los diferentes lenguages, si usas C++ recomiendo instalar el plugin oficial de [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools), el cual añade funcionalidades de autocompletado y depuracion.
 
 #### Correr solucion
 
-Para correr la solucion por defecto podemos hacerlo con`Ctrl+Enter` (Puedes cambiarlo en la configuracion de shortcuts) o presionando en el icono ![Run Icon](https://raw.githubusercontent.com/dantecalderon/vscode-io-run/master/images/run-16.png) en la parte superior.
+Para correr la solucion por defecto podemos hacerlo con `Ctrl+Enter`(Puedes cambiarlo en la configuracion de shortcuts) o presionando en el icono ![Run Icon](https://raw.githubusercontent.com/dantecalderon/vscode-io-run/master/images/run-16.png) en la parte superior.
 
 ### Conclusion
 

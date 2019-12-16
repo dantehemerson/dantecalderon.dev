@@ -9,7 +9,7 @@ image: ../images/correr-soluciones-de-programacion-competitiva-facilmente-en-vsc
 date: '2019-12-16T01:02:52-05:00'
 published: true
 tags:
-  - C++
+  - C/C++
   - Competitive Programming
   - Vscode
   - Setup

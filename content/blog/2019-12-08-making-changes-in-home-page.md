@@ -44,4 +44,8 @@ sin embargo aun tengo dificultades para obtener el ultimo de commit desde Github
 
 En fin, ya encontrare una solucion.
 
+Y aca esta un video de lo que estuve haciendo 😊:
+
+`youtube: https://www.youtube.com/embed/-4eGiLDMyXs`
+
 Peace ✌!!!

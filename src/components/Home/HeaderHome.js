@@ -76,7 +76,7 @@ const HeaderHome = ({ data }) => (
         <Subtitle>{data.site.siteMetadata.subtitle}</Subtitle>
         <Social />
         <ButtonAbout href="/about">ABOUT ME</ButtonAbout>
-        {/* <Info /> */}
+        <Info />
       </MainInfoWrapper>
       <RotationalWrapper className="col-xs-12 col-lg-7">
         <Rotational avatar={data.avatar} />

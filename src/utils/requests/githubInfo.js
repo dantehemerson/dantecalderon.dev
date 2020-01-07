@@ -7,18 +7,34 @@ export const getMyGithubInfo = async () => {
         Authorization: `Bearer ${process.env.GITHUB_API_TOKEN}`,
       },
       body: JSON.stringify({
-        query:
-          '{ user(login: "dantehemerson") { bio status { message emojiHTML  updatedAt indicatesLimitedAvailability } } }',
+        query: `
+        { user(login: "dantehemerson") {
+            contributionsCollection {
+              contributionCalendar {
+                totalContributions
+              }
+            }
+            bio
+            company
+            status {
+              message
+              emojiHTML
+              updatedAt
+              indicatesLimitedAvailability
+            }
+          }
+        }`,
       }),
     })
     const {
       data: {
-        user: { status },
+        user: { company, status },
       },
     } = await res.json()
 
     return {
       status: `${status.emojiHTML} ${status.message}`,
+      company,
       updatedAt: status.updatedAt,
       bussy: status.indicatesLimitedAvailability,
     }

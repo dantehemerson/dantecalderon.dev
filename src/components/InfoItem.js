@@ -14,7 +14,7 @@ const InfoItem = ({ title, description, postfix }) => {
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 27px;
   .title3 {
     font-family: 'Open sans';
@@ -27,13 +27,15 @@ const Container = styled.div`
     & > div {
       margin-right: 4px;
     }
+    color: #484848;
     display: flex;
     align-items: center;
-    font-weight: 600;
+    font-weight: 400;
   }
   .postfix3 {
     font-size: 12px;
     margin: 0;
+    color: #8e8e8e;
     margin-left: 6px;
     display: flex;
     align-items: center;

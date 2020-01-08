@@ -31,19 +31,33 @@ const Info = () => {
   }, [])
 
   return (
-    <Container>
-      <InfoItem title="Status" description={info.status} postfix={info.updatedAt} />
-      <InfoItem title="Working on" description={info.company} />
-      <InfoItem title="Contributions" description={`${info.totalContributions} in the last year`} />
-    </Container>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+      }}
+    >
+      <Container>
+        <InfoItem title="😊 Status" description={info.status} postfix={info.updatedAt} />
+        <InfoItem title="⛏ Working on" description={info.company} />
+        <InfoItem
+          title="🚀 Contributions"
+          description={`${info.totalContributions || 0} in the last year`}
+        />
+      </Container>
+    </div>
   )
 }
 
 const Container = styled.div`
-  margin-top: 20px;
+  margin-top: 15px;
   display: flex;
+  min-width: 366px;
   flex-direction: column;
   align-items: flex-start;
+  border: 1px solid #ccc;
+  padding: 25px;
+  border-radius: 4px;
 `
 
 export default Info

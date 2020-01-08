@@ -10,7 +10,7 @@ import Social from '../Social'
 
 const ButtonAbout = styled(AwesomeButton)`
   width: 141px !important;
-  margin-top: 34px !important;
+  margin-top: 17px !important;
 `
 
 const Container = styled.div`
@@ -75,8 +75,8 @@ const HeaderHome = ({ data }) => (
         <Title>{data.site.siteMetadata.title}</Title>
         <Subtitle>{data.site.siteMetadata.subtitle}</Subtitle>
         <Social />
-        <ButtonAbout href="/about">ABOUT ME</ButtonAbout>
         <Info />
+        <ButtonAbout href="/about">ABOUT ME</ButtonAbout>
       </MainInfoWrapper>
       <RotationalWrapper className="col-xs-12 col-lg-7">
         <Rotational avatar={data.avatar} />

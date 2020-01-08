@@ -4,7 +4,7 @@ export const getMyGithubInfo = async () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${process.env.GITHUB_API_TOKEN}`,
+        Authorization: `Bearer ${process.env.GATSBY_GITHUB_API_TOKEN}`,
       },
       body: JSON.stringify({
         query: `

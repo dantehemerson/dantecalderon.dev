@@ -6,7 +6,7 @@ module.exports = {
   ...aboutData,
   mapping: {
     'MarkdownRemark.frontmatter.author': `AuthorYaml`,
-    'Mdx.frontmatter.author': `AuthorYaml`
+    'Mdx.frontmatter.author': `AuthorYaml`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -16,21 +16,21 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'content',
-        path: `${__dirname}/content/`
-      }
+        path: `${__dirname}/content/`,
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'assets',
-        path: `${__dirname}/src/assets`
-      }
+        path: `${__dirname}/src/assets`,
+      },
     },
     {
       resolve: 'gatsby-plugin-typography',
       options: {
-        pathToConfigModule: 'src/utils/typography.js'
-      }
+        pathToConfigModule: 'src/utils/typography.js',
+      },
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
@@ -43,15 +43,15 @@ module.exports = {
           {
             resolve: 'gatsby-remark-code-titles',
             options: {
-              className: 'gatsby-remark-code-title'
-            }
+              className: 'gatsby-remark-code-title',
+            },
           },
           {
             resolve: 'gatsby-remark-embed-gist',
             options: {
               username: 'dantehemerson',
-              includeDefaultCss: true
-            }
+              includeDefaultCss: true,
+            },
           },
           {
             resolve: `gatsby-remark-classes`,
@@ -63,9 +63,9 @@ module.exports = {
                 h4: 'md-h4',
                 h5: 'md-h5',
                 h6: 'md-h6',
-                paragraph: 'md-p'
-              }
-            }
+                paragraph: 'md-p',
+              },
+            },
           },
           {
             resolve: `gatsby-remark-images`,
@@ -73,42 +73,42 @@ module.exports = {
               maxWidth: 2000,
               quality: 100,
               showCaptions: true,
-              linkImagesToOriginal: false
-            }
+              linkImagesToOriginal: false,
+            },
           },
           {
-            resolve: `gatsby-remark-images-medium-zoom`
+            resolve: `gatsby-remark-images-medium-zoom`,
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`
-            }
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
           },
           'gatsby-remark-prismjs',
           {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
-              offsetY: `80`
-            }
+              offsetY: `80`,
+            },
           },
           'gatsby-remark-external-links',
-          'gatsby-remark-smartypants'
+          'gatsby-remark-smartypants',
         ],
         plugins: [
           'gatsby-remark-embed-video',
           {
             resolve: 'gatsby-remark-code-titles',
             options: {
-              className: 'gatsby-remark-code-title'
-            }
+              className: 'gatsby-remark-code-title',
+            },
           },
           {
             resolve: 'gatsby-remark-embed-gist',
             options: {
               username: 'dantehemerson',
-              includeDefaultCss: true
-            }
+              includeDefaultCss: true,
+            },
           },
           {
             resolve: `gatsby-remark-classes`,
@@ -120,9 +120,9 @@ module.exports = {
                 h4: 'md-h4',
                 h5: 'md-h5',
                 h6: 'md-h6',
-                paragraph: 'md-p'
-              }
-            }
+                paragraph: 'md-p',
+              },
+            },
           },
           {
             resolve: `gatsby-remark-images`,
@@ -130,29 +130,29 @@ module.exports = {
               maxWidth: 2000,
               quality: 100,
               showCaptions: true,
-              linkImagesToOriginal: false
-            }
+              linkImagesToOriginal: false,
+            },
           },
           {
-            resolve: `gatsby-remark-images-medium-zoom`
+            resolve: `gatsby-remark-images-medium-zoom`,
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`
-            }
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
           },
           'gatsby-remark-prismjs',
           {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
-              offsetY: `80`
-            }
+              offsetY: `80`,
+            },
           },
           'gatsby-remark-external-links',
-          'gatsby-remark-smartypants'
-        ]
-      }
+          'gatsby-remark-smartypants',
+        ],
+      },
     },
     `gatsby-plugin-catch-links`,
     'gatsby-plugin-sitemap',
@@ -160,20 +160,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.ANALITYCS_ID,
+        trackingId: process.env.GATSBY_ANALITYCS_ID,
         head: false,
         sampleRate: 5,
         siteSpeedSampleRate: 10,
         cookieDomain: 'dantecalderon.dev',
         cookieName: 'gaDanteCalderon',
-        cookieExpires: 86400
-      }
+        cookieExpires: 86400,
+      },
     },
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
-        modulePath: `${__dirname}/src/cms/cms.js`
-      }
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
     },
     {
       resolve: 'gatsby-plugin-netlify',
@@ -181,15 +181,15 @@ module.exports = {
         mergeSecurityHeaders: true,
         mergeLinkHeaders: true,
         mergeCachingHeaders: true,
-        generateMatchPathRewrites: true
-      }
+        generateMatchPathRewrites: true,
+      },
     },
     {
       resolve: 'gatsby-plugin-nprogress',
       options: {
         color: '#1976d2',
-        showSpinner: false
-      }
+        showSpinner: false,
+      },
     },
     'gatsby-plugin-offline',
     {
@@ -201,15 +201,15 @@ module.exports = {
         icon: 'src/assets/images/logo.png',
         background_color: '#E1524A',
         theme_color: '#000',
-        display: 'standalone'
-      }
+        display: 'standalone',
+      },
     },
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
-        endpoint: process.env.MAILCHIMP_LIST || ''
-      }
-    }
-  ]
+        endpoint: process.env.GATSBY_MAILCHIMP_LIST || '',
+      },
+    },
+  ],
 }

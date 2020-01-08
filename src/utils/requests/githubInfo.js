@@ -28,13 +28,20 @@ export const getMyGithubInfo = async () => {
     })
     const {
       data: {
-        user: { company, status },
+        user: {
+          company,
+          status,
+          contributionsCollection: {
+            contributionCalendar: { totalContributions },
+          },
+        },
       },
     } = await res.json()
 
     return {
       status: `${status.emojiHTML} ${status.message}`,
       company,
+      totalContributions,
       updatedAt: status.updatedAt,
       bussy: status.indicatesLimitedAvailability,
     }

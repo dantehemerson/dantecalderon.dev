@@ -33,7 +33,8 @@ const Info = () => {
   return (
     <Container>
       <InfoItem title="Status" description={info.status} postfix={info.updatedAt} />
-      <InfoItem title="Working on" description={info.company} postfix={info.updatedAt} />
+      <InfoItem title="Working on" description={info.company} />
+      <InfoItem title="Contributions" description={`${info.totalContributions} in the last year`} />
     </Container>
   )
 }

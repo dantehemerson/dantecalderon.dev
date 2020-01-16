@@ -48,7 +48,7 @@
     "javascript-time-ago": "^2.0.4",
     "lodash": "4.17.15",
     "netlify-cms-app": "2.9.7",
-    "node-sass": "4.12.0",
+    "node-sass": "4.13.1",
     "prismjs": "1.17.1",
     "prop-types": "^15.7.2",
     "react": "16.9.0",

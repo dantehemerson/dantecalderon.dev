@@ -28,7 +28,7 @@ stack:
 client: Personal
 repository: 'https://github.com/dantehemerson/url-shortener'
 licence: MIT
-website: 'https://url-shortener-app.netlify.com'
+website: 'https://peque.ml'
 ---
 
 Enjoi it

@@ -30,7 +30,8 @@ const type = [
   'Templating Languages & Extensions',
   'Concurrency Framework',
   'Static Web Hosting', //30
-  'JavaScript Framework Components', // 31
+  'JavaScript Framework Components', // 31,
+  'Cross-Platform Mobile Development', // 32
 ]
 
 const groups = [
@@ -239,6 +240,15 @@ const groups = [
         type: type[31],
         about:
           'Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress.',
+      },
+      {
+        url: 'https://reactjs.org',
+        name: 'React Native',
+        icon: 'react-original.svg',
+        background: 'white',
+        type: type[32],
+        learning: true,
+        about: 'Learn once, write anywhere.',
       },
     ],
   },

@@ -96,12 +96,27 @@ const Type = styled.p`
   text-align: center;
 `
 
+const Learning = styled.span`
+  background: #97ca3f;
+  font-size: 11px;
+  position: absolute;
+  left: 50%;
+  top: -7px;
+  padding: 3px 6px;
+  box-shadow: 0px 0px 3px #252525;
+  line-height: 1;
+  border-radius: 8px;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  color: white;
+`
+
 export default props => (
   <Item>
     <LinkTool
       style={{
         marginBottom: `7px`,
-        display: `flex`
+        display: `flex`,
       }}
       href={props.url}
       target="_blank"
@@ -110,12 +125,13 @@ export default props => (
       <Image
         style={{
           background: props.background ? props.background : 'transparent',
-          boxShadow: props.background ? '0 0 4px #191919' : '0 0 0 transparent'
+          boxShadow: props.background ? '0 0 4px #191919' : '0 0 0 transparent',
         }}
         alt="img"
         src={withPrefix('icons/' + props.icon)}
       />
     </LinkTool>
+    {props.learning && <Learning>Learning...</Learning>}
     {props.about && (
       <Tooltip>
         <p>
@@ -128,7 +144,7 @@ export default props => (
     <div
       style={{
         width: '100%',
-        height: '50px'
+        height: '50px',
       }}
     >
       <Type>{props.type}</Type>

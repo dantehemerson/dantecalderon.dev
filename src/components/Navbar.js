@@ -328,13 +328,20 @@ const Navbar = props => {
       const scrollPosition = document.documentElement.scrollTop
       setNavbarIsTop(scrollPosition <= 5)
     }
-    window.addEventListener('scroll', scrollListener)
-    window.addEventListener('resize', () => {
+
+    const resizeListener = () => {
       let width = window.innerWidth
       if (width >= 768) {
         setMenuIsOpen(false)
       }
-    })
+    }
+    window.addEventListener('scroll', scrollListener)
+    window.addEventListener('resize', resizeListener)
+
+    return () => {
+      window.removeEventListener('scroll', scrollListener)
+      window.removeEventListener('resize', resizeListener)
+    }
   }, [])
 
   const handleToggle = () => {

@@ -17,13 +17,15 @@ const PostsWrapper = styled.div`
 const Blog = props => {
   const posts = props.data.allMdx.edges || []
   const siteUrl = props.data.site.siteMetadata.siteUrl
+
+  const { limit, currentPage } = props.pageContext
   return (
     <Layout location={props.location} active={pages.blog}>
       <div className="Blog">
         <SEO title="Blog" url={`${siteUrl}/blog`} />
         <Header title="Blog" color="#3fabbb" />
         <PostsWrapper>
-          {posts.map(({ node }) => {
+          {posts.map(({ node }, index) => {
             if (node.frontmatter.published)
               return (
                 <Card
@@ -33,18 +35,14 @@ const Blog = props => {
                     excerpt: node.excerpt,
                     date: node.frontmatter.date,
                     path: `/${node.fields.slug}`,
-                    timeToRead: node.timeToRead
+                    timeToRead: node.timeToRead,
                   }}
-                  key={node.frontmatter.path}
+                  key={index}
                 />
               )
             else return false
           })}
-          <Pagination
-            limit={props.pageContext.limit}
-            numPages={props.pageContext.numPages}
-            currentPage={props.pageContext.currentPage}
-          />
+          <Pagination pages={limit - 1} selected={currentPage} />
         </PostsWrapper>
       </div>
     </Layout>

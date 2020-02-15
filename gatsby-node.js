@@ -75,6 +75,8 @@ exports.createPages = ({ graphql, actions }) => {
               skip: i * postPerPage,
               numPages: numOfPages,
               currentPage: i,
+              hasPrevPage: i > 0,
+              hasNextPage: i < numOfPages - 1,
             },
           })
         })

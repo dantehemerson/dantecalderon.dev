@@ -9,6 +9,7 @@ const Button = styled(Link)`
   display: flex;
   margin: 0 20px;
   transition: 0.3s;
+  visibility: ${props => (props.hide ? 'hidden' : 'inherit')};
   p {
     font-weight: bold;
     margin: 0;
@@ -27,9 +28,13 @@ const Button = styled(Link)`
   }
 `
 
-const ButtonNextPrev = ({ isnext = true, toIndex }) => {
+const ButtonNextPrev = ({ isnext = true, toIndex, hide }) => {
   return (
-    <Button isnext={isnext.toString()} to={`/blog${toIndex ? `/page/${toIndex}` : ''}`}>
+    <Button
+      isnext={isnext.toString()}
+      hide={hide ? 1 : 0}
+      to={`/blog${toIndex ? `/page/${toIndex}` : ''}`}
+    >
       {!isnext && <img alt="Prev Page" src={imageSrc} />}
       <p>{isnext ? 'NEXT' : 'PREV'}</p>
       {isnext && <img alt="Next Page" src={imageSrc} />}

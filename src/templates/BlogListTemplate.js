@@ -18,7 +18,7 @@ const Blog = props => {
   const posts = props.data.allMdx.edges || []
   const siteUrl = props.data.site.siteMetadata.siteUrl
 
-  const { limit, currentPage } = props.pageContext
+  const { currentPage, numPages, hasNextPage, hasPrevPage } = props.pageContext
   return (
     <Layout location={props.location} active={pages.blog}>
       <div className="Blog">
@@ -42,7 +42,12 @@ const Blog = props => {
               )
             else return false
           })}
-          <Pagination pages={limit - 1} selected={currentPage} />
+          <Pagination
+            pages={numPages}
+            selected={currentPage}
+            hasNextPage={hasNextPage}
+            hasPrevPage={hasPrevPage}
+          />
         </PostsWrapper>
       </div>
     </Layout>

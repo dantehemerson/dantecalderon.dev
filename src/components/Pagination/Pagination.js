@@ -54,6 +54,8 @@ const Pagination = React.memo(function Pagination({
   selected,
   onChange,
   touchMode,
+  hasNextPage,
+  hasPrevPage,
   ...props
 }) {
   const items = paginationItems(pages, selected)
@@ -62,7 +64,7 @@ const Pagination = React.memo(function Pagination({
       css={`
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         margin-top: 10px;
         border-radius: 4px;
         box-shadow: 0px 0px 12px 1px #d5d0d0eb;
@@ -70,7 +72,7 @@ const Pagination = React.memo(function Pagination({
       `}
       {...props}
     >
-      <ButtonNextPrev isnext={false} />
+      <ButtonNextPrev hide={!hasPrevPage} toIndex={selected - 1} isnext={false} />
       <div
         css={`
           display: flex;
@@ -95,7 +97,7 @@ const Pagination = React.memo(function Pagination({
           )
         )}
       </div>
-      <ButtonNextPrev isnext={true} />
+      <ButtonNextPrev hide={!hasNextPage} toIndex={selected + 1} isnext={true} />
     </div>
   )
 })

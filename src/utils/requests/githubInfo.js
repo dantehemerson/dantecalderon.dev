@@ -1,3 +1,9 @@
+import TimeAgo from 'javascript-time-ago'
+import en from 'javascript-time-ago/locale/en'
+
+TimeAgo.addLocale(en)
+const timeAgo = new TimeAgo('en-US')
+
 export const getMyGithubInfo = async () => {
   try {
     const res = await fetch('https://api.github.com/graphql', {
@@ -42,7 +48,7 @@ export const getMyGithubInfo = async () => {
       status: `${status.emojiHTML} ${status.message}`,
       company,
       totalContributions,
-      updatedAt: status.updatedAt,
+      updatedAt: timeAgo.format(new Date(status.updatedAt)),
       bussy: status.indicatesLimitedAvailability,
     }
   } catch (err) {

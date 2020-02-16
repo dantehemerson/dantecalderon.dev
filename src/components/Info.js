@@ -1,35 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import { getMyGithubInfo } from '../utils/requests/githubInfo'
-import TimeAgo from 'javascript-time-ago'
+import React from 'react'
 import styled from 'styled-components'
+import { useInfo } from '../hooks/useInfo'
 import InfoItem from './InfoItem'
-import en from 'javascript-time-ago/locale/en'
-
-TimeAgo.addLocale(en)
 
 const Info = () => {
-  const [info, setInfo] = useState({
-    status: '',
-    updatedAt: '',
-    bussy: false,
-  })
-
-  useEffect(() => {
-    const setGithubInfo = async () => {
-      const timeAgo = new TimeAgo('en-US')
-
-      try {
-        const info = await getMyGithubInfo()
-        setInfo({
-          ...info,
-          updatedAt: timeAgo.format(new Date(info.updatedAt)),
-        })
-      } catch (err) {}
-    }
-
-    setGithubInfo()
-  }, [])
-
+  const info = useInfo()
   return (
     <div
       style={{

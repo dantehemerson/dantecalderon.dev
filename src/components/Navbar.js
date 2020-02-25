@@ -379,6 +379,7 @@ const Navbar = props => {
           <NavbarToggler
             onClick={handleToggle}
             id="navbarToggler"
+            aria-label="Navbar Toggle"
             className={`${menuIsOpen ? 'open' : ''}`}
           >
             <span className="burger-menu" />

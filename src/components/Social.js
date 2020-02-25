@@ -52,6 +52,7 @@ export default props => (
             key={item.title}
             className={`${item.icon}--hover`}
             href={item.link}
+            rel="noreferrer"
             title={`${item.title} - ${data.site.siteMetadata.title}`}
             target="_blank"
           >

@@ -15,6 +15,6 @@ const Image = styled.img`
 
 export default ({ type = 'normal' }) => (
   <Container>
-    <Image src={type === 'fin' ? fin : normal} />
+    <Image alt="Separator" src={type === 'fin' ? fin : normal} />
   </Container>
 )

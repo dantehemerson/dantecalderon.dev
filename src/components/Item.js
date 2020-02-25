@@ -97,7 +97,7 @@ const Type = styled.p`
 `
 
 const Learning = styled.span`
-  background: #97ca3f;
+  background: #72af2b;
   font-size: 11px;
   position: absolute;
   left: 50%;

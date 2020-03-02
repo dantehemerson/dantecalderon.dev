@@ -12,7 +12,7 @@ images:
     image: ../images/audio_tag_editor02.png
   - description: Download
     image: ../images/audio_tag_editor01.png
-date: 2019-29-08T20:32:07.279Z
+date: '2019-29-08T20:32:07.279Z'
 finished: true
 published: true
 style: default

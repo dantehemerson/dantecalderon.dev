@@ -8,6 +8,7 @@ import { pages } from '../utils'
 
 const Portfolio = props => {
   const posts = props.data.allMdx.edges || []
+  console.log('Dante: posts', posts)
   const siteUrl = props.data.site.siteMetadata.siteUrl
 
   return (
@@ -20,7 +21,7 @@ const Portfolio = props => {
           <a key="link" target="__blank" href="https://github.com/dantehemerson">
             Github
           </a>,
-          '.'
+          '.',
         ]}
         bottom="40px"
       />
@@ -58,6 +59,7 @@ export const queryPortfolio = graphql`
               }
             }
             tags
+            date
             repository
             website
             finished

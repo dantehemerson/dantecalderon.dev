@@ -247,7 +247,6 @@ const groups = [
         icon: 'react-original.svg',
         background: 'white',
         type: type[32],
-        learning: true,
         about: 'Learn once, write anywhere.',
       },
     ],

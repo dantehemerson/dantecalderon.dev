@@ -391,6 +391,45 @@ p.para {
     .gatsby-resp-image-image {
       border: 5px solid #3384a0;
     }
+    &.wone {
+      .gatsby-resp-image-image {
+        border-width: 1px !important;
+      }
+    }
+    &.wtwo {
+      .gatsby-resp-image-image {
+        border-width: 2px !important;
+      }
+    }
+    &.wfour {
+      .gatsby-resp-image-image {
+        border-width: 4px !important;
+      }
+    }
+    &.wfive {
+      .gatsby-resp-image-image {
+        border-width: 5px !important;
+      }
+    }
+
+    // Colors
+    &.gray {
+      .gatsby-resp-image-image {
+        border-color: gray !important;
+      }
+    }
+    &.a1 {
+      .gatsby-resp-image-image {
+        border-color: #607d8b !important;
+      }
+    }
+
+    &.g1 {
+      .gatsby-resp-image-image {
+        border-color:  #e0e0e0 !important;
+      }
+    }
+
   }
  }
 

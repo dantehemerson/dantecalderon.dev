@@ -34,7 +34,7 @@ const Icon = styled.a`
 const Copy = styled.p`
   font-size: 13px;
   font-weight: 600;
-  color: #848687;
+  color: #656565;
   text-align: center;
   .heart {
     color: #ff7763;
@@ -61,7 +61,7 @@ export default props => {
     <Container>
       <Social>
         {social.slice(0, 4).map(item => (
-          <Icon key={item.title} target="_blank" href={item.link}>
+          <Icon key={item.title} target="_blank" href={item.link} rel="noopener">
             <img
               alt={`${item.title} - ${title}`}
               src={`https://icongr.am/fontawesome/${item.icon}.svg?size=20&color=282a2d`}
@@ -72,7 +72,7 @@ export default props => {
       <Copy>
         <span className="copytext">© {new Date().getFullYear()} - All rights reserved.</span> Made
         with <span className="heart">❤</span> by{' '}
-        <Link to="/about" target="_blank" rel="noopener noreferrer">
+        <Link to="/about" target="_blank" rel="noopener">
           {title}
         </Link>
       </Copy>

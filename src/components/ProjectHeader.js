@@ -46,7 +46,9 @@ export default ({ title, subtitle, repository, website, finished, images, tags }
     <Subtitle>{subtitle}</Subtitle>
     <Toolbar repository={repository} website={website} />
     {!finished && (
-      <Message title="Project in progress...">This project is not finished yet, I'm working on it.</Message>
+      <Message title="Project in progress...">
+        This project is not finished yet, I'm working on it.
+      </Message>
     )}
     <Slider finished={finished} images={images} />
     <Tags items={tags} />

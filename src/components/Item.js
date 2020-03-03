@@ -86,8 +86,8 @@ const Type = styled.p`
   margin: 0;
   margin-top: 6px;
   font-size: 13px;
-  color: #969696;
-  background: #3d3d3d;
+  color: #d0d0d0;
+  background: #3c3c3c;
   border-radius: 3px;
   font-weight: 400;
   width: 100%;
@@ -120,7 +120,7 @@ export default props => (
       }}
       href={props.url}
       target="_blank"
-      rel="noopener noreferrer"
+      rel="noopener"
     >
       <Image
         style={{

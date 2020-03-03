@@ -29,12 +29,6 @@ export const queryAbout = graphql`
         description
       }
     }
-    aboutImage: imageSharp(fluid: { originalName: { regex: "/about-image.jpg/" } }) {
-      sizes(maxWidth: 960) {
-        ...GatsbyImageSharpSizes_tracedSVG
-      }
-    }
-
     aboutContent: mdx(
       fileAbsolutePath: { glob: "**/about.mdx" }
       frontmatter: { model: { eq: "section" } }

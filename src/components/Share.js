@@ -69,6 +69,7 @@ const Share = ({ title, path }) => {
         href={`https://twitter.com/intent/tweet?text=${title} by Dante Calderón(@dantehemerson) ${url}`}
         title="Share on Twitter"
         target="_blank"
+        rel="noopener"
       >
         <img
           src="https://icongr.am/fontawesome/twitter.svg?color=ffffff"
@@ -82,6 +83,7 @@ const Share = ({ title, path }) => {
         href={`https://www.facebook.com/sharer/sharer.php?app_id=2209722672595950&sdk=joey&u=${url}`}
         title="Share on Facebook"
         target="_blank"
+        rel="noopener"
       >
         <img
           src="https://icongr.am/fontawesome/facebook.svg?color=ffffff"
@@ -93,6 +95,7 @@ const Share = ({ title, path }) => {
       <Button
         type="linkedin"
         size="small"
+        rel="noopener"
         href={`http://www.linkedin.com/shareArticle?url=${url}&isFramed=true`}
         title="Share on Linkedin"
         target="_blank"
@@ -109,7 +112,7 @@ const Share = ({ title, path }) => {
 
 Share.propTypes = {
   title: PropTypes.string.isRequired,
-  path: PropTypes.string.isRequired
+  path: PropTypes.string.isRequired,
 }
 
 export default Share

@@ -92,7 +92,13 @@ export default props => (
           {props.date} · {props.timeToRead} min read
         </span>
       </Name>
-      <Edit title="Edit on Github" className="default" href={props.editLink} target="__blank">
+      <Edit
+        title="Edit on Github"
+        className="default"
+        href={props.editLink}
+        target="__blank"
+        rel="noopener"
+      >
         <img src="https://icongr.am/fontawesome/github.svg" alt="Edit on Github" />
         <span>Edit on Github</span>
       </Edit>

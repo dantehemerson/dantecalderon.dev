@@ -10,7 +10,14 @@ const Container = styled.div`
 export default props => (
   <Container>
     {props.website && (
-      <AwesomeButton href={props.website} className="ToolbarButton" size="small" target="_blank" type="linkedin">
+      <AwesomeButton
+        href={props.website}
+        className="ToolbarButton"
+        size="small"
+        target="_blank"
+        type="linkedin"
+        rel="noopener"
+      >
         <svg
           className="icon"
           fill="currentColor"
@@ -28,7 +35,14 @@ export default props => (
       </AwesomeButton>
     )}
     {props.repository && (
-      <AwesomeButton href={props.repository} className="ToolbarButton" target="_blank" size="small" type="github">
+      <AwesomeButton
+        href={props.repository}
+        className="ToolbarButton"
+        target="_blank"
+        size="small"
+        rel="noopener"
+        type="github"
+      >
         <svg
           className="icon"
           fill="currentColor"

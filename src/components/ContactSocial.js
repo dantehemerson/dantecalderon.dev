@@ -39,6 +39,7 @@ const ContactSocial = () => {
         href={socials.github}
         title={`Github - ${title}`}
         target="_blank"
+        rel="noopener"
       >
         <img
           src="https://icongr.am/fontawesome/github.svg?color=ffffff"
@@ -52,6 +53,7 @@ const ContactSocial = () => {
         href={socials.twitter}
         title={`Twitter - ${title}`}
         target="_blank"
+        rel="noopener"
       >
         <img
           src="https://icongr.am/fontawesome/twitter.svg?color=ffffff"
@@ -65,6 +67,7 @@ const ContactSocial = () => {
         href={socials.linkedin}
         title={`Linkedin - ${title}`}
         target="_blank"
+        rel="noopener"
       >
         <img
           src="https://icongr.am/fontawesome/linkedin.svg?color=ffffff"
@@ -78,6 +81,7 @@ const ContactSocial = () => {
         href={socials.instagram}
         title={`Instagram - ${title}`}
         target="_blank"
+        rel="noopener"
       >
         <img
           src="https://icongr.am/fontawesome/instagram.svg?color=ffffff"

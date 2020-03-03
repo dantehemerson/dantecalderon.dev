@@ -130,14 +130,14 @@ export const GlobalStyles = createGlobalStyle`
   #disqus_thread a { // Theme color disqus.
       color: #1976d2;
   }
-  
+
 
 	textarea{
       resize: vertical;
   }
 
   #swal2-title {
-    font-family: $sans-serif-font;
+    font-family: $sans-serif-font, sans-serif;
   }
   #swal2-content {
     font-size: 17px;
@@ -341,7 +341,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   &__interests__title {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     background: #3384a0;
     color: white;

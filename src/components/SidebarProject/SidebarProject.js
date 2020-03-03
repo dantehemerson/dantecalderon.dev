@@ -11,7 +11,7 @@ const Container = styled.div`
 `
 
 const Title = styled.h3`
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px !important;
   padding-bottom: 10px;
   text-align: center;
@@ -25,7 +25,7 @@ const List = styled.ul`
 `
 
 const Item = styled.li`
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px;
 
   display: flex;
@@ -54,9 +54,21 @@ export default props => (
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
         >
-          <path d="M24,33H12a1,1,0,0,1,0-2H24a1,1,0,0,1,0,2Z" className="clr-i-outline clr-i-outline-path-1" />
-          <rect x={17} y={9} width={2} height="22.5" className="clr-i-outline clr-i-outline-path-2" />
-          <path d="M28,7H8A1,1,0,0,1,8,5H28a1,1,0,0,1,0,2Z" className="clr-i-outline clr-i-outline-path-3" />
+          <path
+            d="M24,33H12a1,1,0,0,1,0-2H24a1,1,0,0,1,0,2Z"
+            className="clr-i-outline clr-i-outline-path-1"
+          />
+          <rect
+            x={17}
+            y={9}
+            width={2}
+            height="22.5"
+            className="clr-i-outline clr-i-outline-path-2"
+          />
+          <path
+            d="M28,7H8A1,1,0,0,1,8,5H28a1,1,0,0,1,0,2Z"
+            className="clr-i-outline clr-i-outline-path-3"
+          />
           <path
             d="M26.93,24.79a7.23,7.23,0,0,1-5.81-2.89l-.6-.8,1.59-1.21.6.8a5.28,5.28,0,0,0,8.42,0l.6-.8,1.59,1.21-.6.8A7.23,7.23,0,0,1,26.93,24.79Z"
             className="clr-i-outline clr-i-outline-path-4"

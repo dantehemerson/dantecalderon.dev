@@ -17,7 +17,7 @@ const Container = styled.div`
   font-size: 14px;
   line-height: 27px;
   .title3 {
-    font-family: 'Open sans';
+    font-family: 'Open sans', sans-serif;
     font-weight: 600;
     margin: 0;
     margin-right: 6px;

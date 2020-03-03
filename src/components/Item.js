@@ -106,7 +106,7 @@ const Learning = styled.span`
   box-shadow: 0px 0px 3px #252525;
   line-height: 1;
   border-radius: 8px;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   color: white;
 `

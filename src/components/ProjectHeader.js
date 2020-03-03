@@ -31,7 +31,7 @@ const Subtitle = styled.h2`
   font-style: italic;
   color: #656565;
   font-weight: 400;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   ${media.sm`
     font-size: 18px;
   `}

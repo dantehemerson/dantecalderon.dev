@@ -35,7 +35,7 @@ const Title = styled.h1`
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
-  font-family: 'Gentium Book Basic';
+  font-family: 'Gentium Book Basic', 'Times New Roman', Times, serif;
   color: #363636;
   margin-bottom: 0;
   ${media.sm`

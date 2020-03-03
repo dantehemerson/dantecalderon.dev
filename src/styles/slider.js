@@ -143,7 +143,7 @@ export default css`
     }
     &:before {
       font-size: 40px;
-      font-family: 'Open Sans';
+      font-family: 'Open Sans', sans-serif;
       line-height: 14px !important;
       color: white;
       @media (min-width: 576px) {

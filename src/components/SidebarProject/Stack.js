@@ -15,7 +15,7 @@ const Item = styled.li`
   text-decoration: none;
   margin: 0 2px;
   font-size: 13px;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   display: inline-block;
   text-transform: capitalize;

@@ -100,7 +100,7 @@ const StyledContent = styled.div`
 
   p.md-p,
   ul {
-    font-family: 'Gentium Book Basic';
+    font-family: 'Gentium Book Basic', 'Times New Roman', Times, serif;
   }
 
   p.md-p,
@@ -131,7 +131,7 @@ const StyledContent = styled.div`
   h4.md-h4,
   h5.md-h5,
   h6.md-h6 {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
   }
 
   h2.md-h2 {
@@ -216,7 +216,7 @@ const StyledContent = styled.div`
     padding-left: 12px;
     line-height: 1.9;
     padding-right: 12px;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     color: #0000008a;
     font-size: 12px;
     max-width: 600px !important;

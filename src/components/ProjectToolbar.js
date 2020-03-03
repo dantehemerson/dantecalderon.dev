@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Container = styled.div`
   margin-top: 30px;
   margin-bottom: 12px;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
 `
 export default props => (
   <Container>

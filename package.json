@@ -18,7 +18,7 @@
     "gatsby-plugin-mailchimp": "5.1.2",
     "gatsby-plugin-manifest": "2.2.14",
     "gatsby-plugin-mdx": "1.0.39",
-    "gatsby-plugin-netlify": "2.1.11",
+    "gatsby-plugin-netlify": "2.2.0",
     "gatsby-plugin-netlify-cms": "4.1.13",
     "gatsby-plugin-nprogress": "2.1.5",
     "gatsby-plugin-offline": "3.0.29",

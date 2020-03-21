@@ -92,7 +92,6 @@ exports.createPages = ({ graphql, actions }) => {
           .groupBy(makeSlugTag)
 
         tagGroups.forEach((tags, tagSlug) => {
-          console.log(`Creando tag para ${tagSlug}`)
           createPage({
             path: `/blog/tags/${tagSlug}`,
             component: tagsBlogListTemplate,

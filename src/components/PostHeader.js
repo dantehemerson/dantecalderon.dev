@@ -27,8 +27,13 @@ const Title = styled.h1`
 
 export default props => (
   <Container>
-    <Title>{props.title}</Title>
-    <AuthorPost editLink={props.editLink} date={props.date} timeToRead={props.timeToRead} avatar={props.avatar} />
+    <Title id="post_id">{props.title}</Title>
+    <AuthorPost
+      editLink={props.editLink}
+      date={props.date}
+      timeToRead={props.timeToRead}
+      avatar={props.avatar}
+    />
     <Img sizes={props.image.childImageSharp.sizes} />
   </Container>
 )

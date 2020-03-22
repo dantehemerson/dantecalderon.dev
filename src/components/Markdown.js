@@ -238,7 +238,7 @@ const StyledContent = styled.div`
 `
 
 export default ({ content }) => (
-  <StyledContent id="Markdown">
+  <StyledContent id="post_body">
     <MDXRenderer>{content}</MDXRenderer>
   </StyledContent>
 )

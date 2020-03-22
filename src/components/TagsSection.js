@@ -50,7 +50,7 @@ const Title = styled.span`
 `
 const TagsSection = ({ tags }) => {
   return (
-    <Container>
+    <Container id="post_tags">
       <hr />
       <Title>TAGS:</Title>
       {tags.map(tag => (
@@ -60,7 +60,7 @@ const TagsSection = ({ tags }) => {
       ))}
       <hr
         style={{
-          marginTop: '23px'
+          marginTop: '23px',
         }}
       />
     </Container>

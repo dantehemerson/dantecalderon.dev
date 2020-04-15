@@ -17,6 +17,7 @@ const PostsWrapper = styled.div`
 const Blog = props => {
   const posts = props.data.allMdx.edges || []
   const siteUrl = props.data.site.siteMetadata.siteUrl
+  console.log(props.data.allNotionPageDante)
 
   const { currentPage, numPages, hasNextPage, hasPrevPage } = props.pageContext
   return (
@@ -60,6 +61,20 @@ export const queryBlog = graphql`
       siteMetadata {
         title
         siteUrl
+      }
+    }
+    allNotionPageDante(
+      filter: { isDraft: { eq: false } }
+      sort: { fields: [indexPage], order: DESC }
+    ) {
+      edges {
+        node {
+          title
+          slug
+          excerpt
+          pageIcon
+          pageCover
+        }
       }
     }
     allMdx(

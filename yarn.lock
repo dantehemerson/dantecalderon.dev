@@ -6745,15 +6745,16 @@ gatsby-source-filesystem@^2.1.43:
     valid-url "^1.0.9"
     xstate "^4.8.0"
 
-gatsby-source-notionso-dante-version@^1.1.62:
-  version "1.1.62"
-  resolved "https://registry.yarnpkg.com/gatsby-source-notionso-dante-version/-/gatsby-source-notionso-dante-version-1.1.62.tgz#31d20fcde1adb83e817a014ebe9d60c8802549a0"
-  integrity sha512-lTxicEgaRkv7wNbchGkmLxkkI2jr86wcakabsZFFhOGPBsmLFIcTy3VOWRJ76pXDDbMOueCOr3XQQWVY9V/0jg==
+gatsby-source-notionso-dante-version@^1.1.63:
+  version "1.1.63"
+  resolved "https://registry.yarnpkg.com/gatsby-source-notionso-dante-version/-/gatsby-source-notionso-dante-version-1.1.63.tgz#0ab9ea9cd67c82e8fe86cb0512947539ca0cae1a"
+  integrity sha512-Mg/Kg1OFetiTCHM9drX5EhjN09z9U2ofJh8FuqTSr/a5IDqZhxh8GbCGxzQqNvytS/PmxzN+B+eL4GPEdjp92A==
   dependencies:
     axios "^0.19.0"
     debug "^4.1.1"
     fs-extra "^8.1.0"
     gatsby-source-filesystem "^2.1.43"
+    is-url "^1.2.4"
     lodash "^4.17.15"
     oneline "^1.0.3"
 
@@ -8885,6 +8886,11 @@ is-upper-case@^1.1.0:
   integrity sha1-jQsfp+eTOh5YSDYA7H2WYcuvdW8=
   dependencies:
     upper-case "^1.1.0"
+
+is-url@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/is-url/-/is-url-1.2.4.tgz#04a4df46d28c4cff3d73d01ff06abeb318a1aa52"
+  integrity sha512-ITvGim8FhRiYe4IQ5uHSkj7pVaPDrCTkNd3yq3cV7iZAcJdHTUMPMEHcqSOy9xZ9qFenQCvi+2wjH9a1nXqHww==
 
 is-utf8@^0.2.0:
   version "0.2.1"

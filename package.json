@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Dante Calderón <mail@dantecalderon.dev>",
   "dependencies": {
-    "@mdx-js/mdx": "1.4.4",
+    "@mdx-js/mdx": "1.5.8",
     "@mdx-js/react": "1.4.4",
     "ast-get-object": "1.8.41",
     "babel-plugin-styled-components": "1.10.6",

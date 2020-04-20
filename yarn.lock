@@ -2199,42 +2199,36 @@ assign-symbols@^1.0.0:
   resolved "https://registry.yarnpkg.com/assign-symbols/-/assign-symbols-1.0.0.tgz#59667f41fadd4f20ccbc2bb96b8d4f7f78ec0367"
   integrity sha1-WWZ/QfrdTyDMvCu5a41Pf3jsA2c=
 
-ast-compare@^1.12.14:
-  version "1.12.26"
-  resolved "https://registry.yarnpkg.com/ast-compare/-/ast-compare-1.12.26.tgz#020ca239f236f4d5b4791f1ed80badd89ff0ccb3"
-  integrity sha512-AQDVEql8+AaLw9uk7dbj25wEMe1WMExd7ey/r2MeKdZ4NYDT9og06rPu0annffPJnKOS1xe6LAbt/kwnnXuC4w==
+ast-compare@^1.13.4:
+  version "1.13.4"
+  resolved "https://registry.yarnpkg.com/ast-compare/-/ast-compare-1.13.4.tgz#02d7c94a0f709f7d04a16f79843c12460e30d46a"
+  integrity sha512-sDHPliS3G28WBoal2v6qOkpW07ZDD54/q6RnwSVFCCH7cKkc5ppHOZkGjuPgE9jpgG8lUGDysdEyjqlzWal+4A==
   dependencies:
-    ast-contains-only-empty-space "^1.8.51"
-    lodash.clonedeep "^4.5.0"
-    lodash.pullall "^4.2.0"
+    ast-contains-only-empty-space "^1.9.4"
     matcher "^2.1.0"
     type-detect "^4.0.8"
 
-ast-contains-only-empty-space@^1.8.51:
-  version "1.8.51"
-  resolved "https://registry.yarnpkg.com/ast-contains-only-empty-space/-/ast-contains-only-empty-space-1.8.51.tgz#286981539ef85d30ea3fed0af482433a03eaffab"
-  integrity sha512-QY4xRP+yDyc4j6rQIiQ4DkEZlWndqP1S9OnZxKNc8kEE7Guxsw9C/06GWbwyfczNWqkThm/Cid0YI3nQdgpZvQ==
+ast-contains-only-empty-space@^1.9.4:
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/ast-contains-only-empty-space/-/ast-contains-only-empty-space-1.9.4.tgz#0c4a2e73de4a383ff3ab17054513af6e57bffe93"
+  integrity sha512-XEUWcZTnu/Z8CkOAUC0m6Fh+Z7Jc16rNBfilhYXYs3kjowyg8/nA8RphLiiaWAi1AEDenVGR2ZKs14yVhhYyVg==
   dependencies:
-    ast-monkey-traverse "^1.12.0"
-    lodash.isplainobject "^4.0.6"
-    lodash.trim "^4.5.1"
+    ast-monkey-traverse "^1.12.8"
 
-ast-get-object@1.8.41:
-  version "1.8.41"
-  resolved "https://registry.yarnpkg.com/ast-get-object/-/ast-get-object-1.8.41.tgz#f052a64b847bb022a8eebfc65ceda3c0b56f0645"
-  integrity sha512-M7a9NA2/oYrq+HCfngFixZZyiZ1ZNKa+Qo+ldI9xr+E0VungfnFURxIlSb0tHmlLefbdJzM2hIZMDmm6hFv15A==
+ast-get-object@1.9.3:
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/ast-get-object/-/ast-get-object-1.9.3.tgz#1d56e59e21725d5546a0d6300975f13a1938e600"
+  integrity sha512-Fu4v08HdkJ6xLAa7qW5fiPY+0g/uT/UZxavykj7XOanf/ahq0qnzdI2urKdpjXH8i934iKGtaoCCKB8S2R4K8w==
   dependencies:
-    ast-compare "^1.12.14"
+    ast-compare "^1.13.4"
     lodash.clonedeep "^4.5.0"
-    lodash.isplainobject "^4.0.6"
 
-ast-monkey-traverse@^1.12.0:
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/ast-monkey-traverse/-/ast-monkey-traverse-1.12.0.tgz#fb216b40c80f328c1826ff7397759ef937d3754b"
-  integrity sha512-xgY57toTKSArugUoyo3JdjOuwmXHnDLvxFxwKO1H7rowc4bWEzgR9ZiFepf52WEY0qkC6xUQcc3qPaurW7JHcg==
+ast-monkey-traverse@^1.12.8:
+  version "1.12.8"
+  resolved "https://registry.yarnpkg.com/ast-monkey-traverse/-/ast-monkey-traverse-1.12.8.tgz#fef90a537c4b98dcbf443759793b2bb01b0d3c85"
+  integrity sha512-lx0eJySmLGAQNoTjTj5B55YGq5j5tINlF/9E6CP8J9xfaxNNs57toQjLlt/c8i8wxyZACVy2wdwFqtdvKoMacw==
   dependencies:
     lodash.clonedeep "^4.5.0"
-    lodash.isplainobject "^4.0.6"
 
 ast-types-flow@0.0.7, ast-types-flow@^0.0.7:
   version "0.0.7"
@@ -9553,11 +9547,6 @@ lodash.pick@^4.2.1:
   resolved "https://registry.yarnpkg.com/lodash.pick/-/lodash.pick-4.4.0.tgz#52f05610fff9ded422611441ed1fc123a03001b3"
   integrity sha1-UvBWEP/53tQiYRRB7R/BI6AwAbM=
 
-lodash.pullall@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/lodash.pullall/-/lodash.pullall-4.2.0.tgz#9d98b8518b7c965b0fae4099bd9fb7df8bbf38ba"
-  integrity sha1-nZi4UYt8llsPrkCZvZ+334u/OLo=
-
 lodash.reduce@^4.4.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.reduce/-/lodash.reduce-4.6.0.tgz#f1ab6b839299ad48f784abbf476596f03b914d3b"
@@ -9597,11 +9586,6 @@ lodash.toarray@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.toarray/-/lodash.toarray-4.4.0.tgz#24c4bfcd6b2fba38bfd0594db1179d8e9b656561"
   integrity sha1-JMS/zWsvuji/0FlNsRedjptlZWE=
-
-lodash.trim@^4.5.1:
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/lodash.trim/-/lodash.trim-4.5.1.tgz#36425e7ee90be4aa5e27bcebb85b7d11ea47aa57"
-  integrity sha1-NkJefukL5KpeJ7zruFt9EepHqlc=
 
 lodash.unescape@4.0.1:
   version "4.0.1"

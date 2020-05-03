@@ -32,6 +32,7 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     const projectTemplate = path.resolve('./src/templates/ProjectTemplate.js')
     const postTemplate = path.resolve('./src/templates/PostTemplate.js')
+    // const postTemplateNotion = path.resolve('./src/templates/PostTemplateNotion.js')
     const blogListTemplate = path.resolve('./src/templates/BlogListTemplate.js')
     const tagsBlogListTemplate = path.resolve('./src/templates/TagsBlogListTemplate.js')
 
@@ -92,11 +93,10 @@ exports.createPages = ({ graphql, actions }) => {
           return undefined
         })
 
+        const notionPosts = _.get(result.data, 'allNotionPageBlog.edges', [])
+
         /** All posts from Notion and Mdx sorted by date */
-        const allPostIdsSorted = [
-          ...blogPosts,
-          ..._.get(result.data, 'allNotionPageBlog.edges', []),
-        ]
+        const allPostIdsSorted = [...blogPosts, ...notionPosts]
           .sort((postA, postB) => {
             let dateA = getPostCorrectDate(postA)
             let dateB = getPostCorrectDate(postB)
@@ -152,6 +152,19 @@ exports.createPages = ({ graphql, actions }) => {
             },
           })
         })
+
+        // // Notion Pages
+        // notionPosts.forEach(({ node }) => {
+        //   const path = `${node.slug}`
+        //   createPage({
+        //     path,
+        //     component: postTemplateNotion,
+        //     context: {
+        //       pathSlug: path,
+        //       pageId: node.pageId,
+        //     },
+        //   })
+        // })
 
         // PROJECT ------------
 

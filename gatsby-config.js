@@ -1,6 +1,5 @@
 require('dotenv').config()
 const aboutData = require('./about')
-console.log('NOTION TOKEN = ', process.env.GATSBY_NOTION_TOKEN)
 
 module.exports = {
   pathPrefix: `/`,
@@ -171,12 +170,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-netlify',
       options: {
         mergeSecurityHeaders: true,
@@ -210,14 +203,6 @@ module.exports = {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
         endpoint: process.env.GATSBY_MAILCHIMP_LIST || '',
-      },
-    },
-    {
-      resolve: 'gatsby-source-notionso-dante-version',
-      options: {
-        name: 'Dante',
-        rootPageUrl: 'https://www.notion.so/dantecalderon/Blog-06dcf96249e14461a9a66619c18aaf57',
-        debug: false,
       },
     },
   ],

@@ -2,13 +2,23 @@ const _ = require('lodash')
 const Promise = require('bluebird')
 const path = require('path')
 
-// CONSTANTS
 const postPerPage = 20
 
 const getFullPath = frontmatter => {
   const pathPrefix = _.get(frontmatter, 'pathPrefix', '')
   const slug = _.get(frontmatter, 'slug', '')
   return path.join(pathPrefix, slug)
+}
+
+const getAllTagsInPages = (markdownPages = []) => {
+  const makeSlugTag = tag => _.kebabCase(tag.toLowerCase())
+
+  return _(markdownPages)
+    .map(post => _.get(post, 'node.frontmatter.tags'))
+    .filter()
+    .flatten()
+    .uniq()
+    .groupBy(makeSlugTag)
 }
 
 exports.createPages = ({ graphql, actions }) => {
@@ -53,7 +63,6 @@ exports.createPages = ({ graphql, actions }) => {
         )
 
         const blogPostsPaginated = _.chunk(blogPosts, postPerPage)
-
         blogPostsPaginated.forEach((_, i) => {
           createPage({
             path: i === 0 ? '/blog' : `/blog/page/${i}`,
@@ -69,17 +78,8 @@ exports.createPages = ({ graphql, actions }) => {
           })
         })
 
-        const makeSlugTag = tag => _.kebabCase(tag.toLowerCase())
-        // Create tags pages
-
-        const tagGroups = _(blogPosts)
-          .map(post => _.get(post, 'node.frontmatter.tags'))
-          .filter()
-          .flatten()
-          .uniq()
-          .groupBy(makeSlugTag)
-
-        tagGroups.forEach((tags, tagSlug) => {
+        const postTagsGrouped = getAllTagsInPages(blogPosts)
+        postTagsGrouped.forEach((tags, tagSlug) => {
           createPage({
             path: `/blog/tags/${tagSlug}`,
             component: tagsBlogListTemplate,
@@ -98,7 +98,6 @@ exports.createPages = ({ graphql, actions }) => {
           const { model } = post.node.frontmatter
 
           const fullPath = getFullPath(post.node.frontmatter)
-          console.log('Dante: exports.createPages -> fullPath', fullPath)
 
           // Generate pages only for posts and projects
           createPage({

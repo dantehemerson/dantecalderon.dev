@@ -7,7 +7,6 @@ import Header from '../components/Header'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import { pages, preferSpacedTag } from '../utils'
-import Pagination from '../components/Pagination'
 
 const PostsWrapper = styled.div`
   padding: 0 15px;

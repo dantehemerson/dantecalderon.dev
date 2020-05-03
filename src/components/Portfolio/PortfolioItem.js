@@ -183,7 +183,7 @@ export default props => (
           title="View Source Code on Github"
           href={props.data.repository}
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           <svg
             className="Shortcut__icon"
@@ -200,7 +200,12 @@ export default props => (
           </svg>
         </a>
         {props.data.website && (
-          <a title="See Preview" href={props.data.website} target="_blank" rel="noopener">
+          <a
+            title="See Preview"
+            href={props.data.website}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <svg
               className="Shortcut__icon"
               fill="currentColor"

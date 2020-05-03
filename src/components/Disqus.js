@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import useSiteMetadata from '../hooks/useSiteMetadata'
 
 const Container = styled.div`
-  max-width: 900px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 12px;
@@ -25,7 +25,7 @@ const Disqus = ({ title, path }) => {
 
 Disqus.propTypes = {
   title: PropTypes.string.isRequired,
-  path: PropTypes.string.isRequired
+  path: PropTypes.string.isRequired,
 }
 
 export default Disqus

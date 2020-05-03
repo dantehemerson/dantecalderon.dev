@@ -121,7 +121,7 @@ const NavbarContainer = styled.div`
   justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;
-  width: 1064px;
+  width: 900px;
 `
 
 const Title = styled.p`

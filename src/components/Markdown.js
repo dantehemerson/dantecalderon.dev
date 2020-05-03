@@ -8,7 +8,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 const StyledContent = styled.div`
   line-height: 1.4;
   blockquote {
-    max-width: 900px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     font-style: italic;
@@ -48,7 +48,7 @@ const StyledContent = styled.div`
   h4.md-h4,
   h5.md-h5,
   h6.md-h6 {
-    max-width: 900px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
   }

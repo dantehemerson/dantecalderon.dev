@@ -9,7 +9,7 @@ const Container = styled.div`
 
 const Image = styled.img`
   border: 0 !important;
-  max-width: 880px;
+  max-width: 800px;
   width: 100%;
 `
 

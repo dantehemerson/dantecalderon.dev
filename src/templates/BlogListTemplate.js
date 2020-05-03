@@ -63,7 +63,7 @@ export const queryBlog = graphql`
         siteUrl
       }
     }
-    allNotionPageDante(
+    allNotionPageBlog(
       filter: { isDraft: { eq: false } }
       sort: { fields: [indexPage], order: DESC }
     ) {
@@ -73,7 +73,7 @@ export const queryBlog = graphql`
           slug
           excerpt
           pageIcon
-          pageCover
+          # pageCover
         }
       }
     }

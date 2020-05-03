@@ -215,7 +215,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-notionso-dante-version',
       options: {
-        name: 'Dante',
+        name: 'Blog',
         rootPageUrl: 'https://www.notion.so/dantecalderon/Blog-06dcf96249e14461a9a66619c18aaf57',
         debug: false,
       },

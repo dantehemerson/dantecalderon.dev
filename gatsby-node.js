@@ -36,8 +36,24 @@ exports.createPages = ({ graphql, actions }) => {
                   model
                   path
                   published
+                  date
                   tags
                 }
+                internal {
+                  type
+                }
+              }
+            }
+          }
+
+          allNotionPageBlog(
+            filter: { isDraft: { eq: false } }
+            sort: { fields: [indexPage], order: DESC }
+          ) {
+            edges {
+              node {
+                slug
+                createdAt
               }
             }
           }
@@ -61,6 +77,19 @@ exports.createPages = ({ graphql, actions }) => {
           if (model === 'post' && published) return edge
           return undefined
         })
+
+        /** All posts from Notion and Mdx sorted by date */
+        const allPostsSorted = [
+          ...blogPosts,
+          ..._.get(result.data, 'allNotionPageBlog.edges', []),
+        ].forEach(post => {
+          if (['MarkdownRemark', 'Mdx'].includes(_.get(post, 'node.internal.type'))) {
+            console.log('Es post Md*', _.get(post, 'node.frontmatter.date'))
+          } else {
+            console.log('Es Notion: ', _.get(post, 'node.createdAt'))
+          }
+        })
+        console.log('Dante: exports.createPages -> allPostsSorted', allPostsSorted)
 
         const numOfPages = Math.ceil(blogPosts.length / postPerPage)
 
@@ -101,6 +130,8 @@ exports.createPages = ({ graphql, actions }) => {
             },
           })
         })
+
+        // PROJECT ------------
 
         _.each(posts, (post, index) => {
           const previous = index === posts.length - 1 ? null : posts[index + 1].node

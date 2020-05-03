@@ -185,7 +185,6 @@ module.exports = {
         showSpinner: false,
       },
     },
-    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -198,6 +197,7 @@ module.exports = {
         display: 'standalone',
       },
     },
+    'gatsby-plugin-offline',
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-mailchimp',

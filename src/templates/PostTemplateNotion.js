@@ -1,35 +1,33 @@
 import { graphql } from 'gatsby'
 import notionRendererFactory from 'gatsby-source-notionso-dante-version/lib/renderer'
+import _ from 'lodash'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 import React from 'react'
-import Markdown from '../components/Markdown'
-import PostHeader from '../components/PostHeader'
-import Share from '../components/Share'
-import SubscribeForm from '../components/SubscribeForm'
-import _ from 'lodash'
-import TagsSection from '../components/TagsSection'
-import Layout from './TemplateLayout'
+import styled from 'styled-components'
 import NotionBlockRenderer from '../components/renderers/notionBlockRenderer'
+import SubscribeForm from '../components/SubscribeForm'
+import Layout from './TemplateLayout'
 
-export const PostContent = ({ title, image, editLink, date, timeToRead, avatar, content }) => (
-  <React.Fragment>
-    <PostHeader
+export const PostContent = ({ data }) => {
+  const notionRenderer = notionRendererFactory({
+    notionPage: data.notionPageBlog,
+  })
+  return (
+    <PostContentNotionContainer>
+      {/* <PostHeader
       title={title}
       image={image}
       editLink={editLink}
       date={date}
       timeToRead={timeToRead}
       avatar={avatar}
-    />
-    <Markdown content={content} />
-  </React.Fragment>
-)
+    /> */}
+      <NotionBlockRenderer data={data} renderer={notionRenderer} debug={false} />
+    </PostContentNotionContainer>
+  )
+}
 
 const PostTemplateNotion = ({ data }) => {
-  const notionRenderer = notionRendererFactory({
-    notionPage: data.notionPageBlog,
-  })
-
   const { title, slug, excerpt: description } = _.get(data, 'notionPageBlog', {})
 
   return (
@@ -40,7 +38,7 @@ const PostTemplateNotion = ({ data }) => {
       // image={image.childImageSharp.sizes.src}
       description={description}
     >
-      <NotionBlockRenderer data={data} renderer={notionRenderer} debug={false} />
+      <PostContent data={data} />
       {/* <TagsSection tags={tags} /> */}
       {/* <Share title={title} path={slug} /> */}
       <SubscribeForm />
@@ -48,8 +46,12 @@ const PostTemplateNotion = ({ data }) => {
   )
 }
 
-export const pageQuery = graphql`
-  query PostQuery($pageId: String!) {
+const PostContentNotionContainer = styled.div`
+  margin-top: 60px;
+`
+
+export const pageQueryNotion = graphql`
+  query PostQueryNotion($pageId: String!) {
     avatar: imageSharp(fluid: { originalName: { regex: "/avatar.jpg/" } }) {
       sizes(maxWidth: 720) {
         ...GatsbyImageSharpSizes_tracedSVG
@@ -81,12 +83,12 @@ export const pageQuery = graphql`
           }
         }
       }
-      # imageNodes {
-      #   imageUrl
-      #   localFile {
-      #     publicURL
-      #   }
-      # }
+      imageNodes {
+        imageUrl
+        localFile {
+          publicURL
+        }
+      }
       pageId
       slug
       title

@@ -217,7 +217,8 @@ module.exports = {
       options: {
         name: 'Blog',
         rootPageUrl: 'https://www.notion.so/dantecalderon/Blog-06dcf96249e14461a9a66619c18aaf57',
-        debug: false,
+        downloadLocal: false,
+        debug: true,
       },
     },
   ],

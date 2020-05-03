@@ -11,11 +11,11 @@ import './styles.css'
 import 'highlight.js/styles/github.css'
 
 // see: https://github.com/highlightjs/highlight.js
-// hljs.registerLanguage('javascript', hljs_javascript)
-// hljs.registerLanguage('typescript', hljs_typescript)
-// hljs.registerLanguage('bash', hljs_bash)
-// hljs.registerLanguage('plaintext', hljs_plaintext)
-// hljs.registerLanguage('json', hljs_json)
+hljs.registerLanguage('javascript', hljs_javascript)
+hljs.registerLanguage('typescript', hljs_typescript)
+hljs.registerLanguage('bash', hljs_bash)
+hljs.registerLanguage('plaintext', hljs_plaintext)
+hljs.registerLanguage('json', hljs_json)
 
 const notionLanguageToHljs = {
   'Plain Text': 'plaintext',

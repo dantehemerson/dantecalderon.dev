@@ -8,7 +8,6 @@ import { pages } from '../utils'
 
 const Portfolio = props => {
   const posts = props.data.allMdx.edges || []
-  console.log('Dante: posts', posts)
   const siteUrl = props.data.site.siteMetadata.siteUrl
 
   return (

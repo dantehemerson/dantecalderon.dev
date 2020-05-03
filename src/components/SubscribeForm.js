@@ -59,8 +59,6 @@ const SubscribeForm = () => {
     e.preventDefault()
     addToMailchimp(email)
       .then(data => {
-        // console.log(data)
-        // alert(data.result + '  ' + data.msg)
         Swal.fire({
           type: data.result,
           title: data.result === 'success' ? 'Success' : 'Error',
@@ -69,7 +67,7 @@ const SubscribeForm = () => {
           cancelButtonClass: 'Btn',
           onClose: () => {
             if (data.result === 'success') setEmail('')
-          }
+          },
         })
       })
       .catch(error => {

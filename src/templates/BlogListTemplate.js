@@ -10,14 +10,13 @@ import { pages } from '../utils'
 
 const PostsWrapper = styled.div`
   padding: 0 15px;
-  max-width: 1060px;
+  max-width: 900px;
   margin: 0 auto 35px;
 `
 
 const Blog = props => {
   const posts = props.data.allMdx.edges || []
   const siteUrl = props.data.site.siteMetadata.siteUrl
-  console.log(props.data.allNotionPageDante)
 
   const { currentPage, numPages, hasNextPage, hasPrevPage } = props.pageContext
   return (
@@ -61,20 +60,6 @@ export const queryBlog = graphql`
       siteMetadata {
         title
         siteUrl
-      }
-    }
-    allNotionPageDante(
-      filter: { isDraft: { eq: false } }
-      sort: { fields: [indexPage], order: DESC }
-    ) {
-      edges {
-        node {
-          title
-          slug
-          excerpt
-          pageIcon
-          pageCover
-        }
       }
     }
     allMdx(

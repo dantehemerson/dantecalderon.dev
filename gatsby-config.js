@@ -1,6 +1,5 @@
 require('dotenv').config()
 const aboutData = require('./about')
-console.log('NOTION TOKEN = ', process.env.GATSBY_NOTION_TOKEN)
 
 module.exports = {
   pathPrefix: `/`,
@@ -212,13 +211,13 @@ module.exports = {
         endpoint: process.env.GATSBY_MAILCHIMP_LIST || '',
       },
     },
-    {
-      resolve: 'gatsby-source-notionso-dante-version',
-      options: {
-        name: 'Dante',
-        rootPageUrl: 'https://www.notion.so/dantecalderon/Blog-06dcf96249e14461a9a66619c18aaf57',
-        debug: false,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-source-notionso-dante-version',
+    //   options: {
+    //     name: 'Dante',
+    //     rootPageUrl: 'https://www.notion.so/dantecalderon/Blog-06dcf96249e14461a9a66619c18aaf57',
+    //     debug: false,
+    //   },
+    // },
   ],
 }

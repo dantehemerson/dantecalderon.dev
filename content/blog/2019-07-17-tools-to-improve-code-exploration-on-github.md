@@ -6,7 +6,8 @@ description: >-
   a compartir algunas herramientas que me han sido utiles para la exploracion de
   código en Github.
 author: Dante Calderón
-path: tools-to-improve-code-exploration-on-github
+pathPrefix: blog
+slug: tools-to-improve-code-exploration-on-github
 image: ../images/explore-code-github.jpg
 date: '2019-07-20T01:42:52-05:00'
 published: true

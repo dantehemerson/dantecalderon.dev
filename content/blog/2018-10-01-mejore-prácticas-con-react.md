@@ -3,7 +3,8 @@ model: post
 title: Mejores prácticas con React
 description: Simple blog
 author: Dante Calderón
-path: mejores-practicas-con-react
+pathPrefix: blog
+slug: mejores-practicas-con-react
 image: ../images/react-best-practices.png
 date: 2018-10-01T20:16:06.768Z
 published: true

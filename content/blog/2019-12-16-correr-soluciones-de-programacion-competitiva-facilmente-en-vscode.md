@@ -4,7 +4,8 @@ title: Correr soluciones de Programacion Competitiva en VSCode
 description: >- 
   IO Run es un plugin que esta hecho especialmente para correr y testear soluciones de Programacion Competitiva.
 author: Dante Calderón
-path: correr-soluciones-de-programacion-competitiva-en-vscode
+pathPrefix: blog
+slug: correr-soluciones-de-programacion-competitiva-en-vscode
 image: ../images/correr-soluciones-de-programacion-competitiva-facilmente-en-vscode_screenshot.png
 date: '2019-12-16T01:02:52-05:00'
 published: true

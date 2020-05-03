@@ -4,7 +4,8 @@ title: Haciendo cambios en la pagina principal
 description: >- 
   Estoy pensando en hacer algunos cambios a mi pagina principal y agregarle mas informacion.
 author: Dante Calderón
-path: making-changes-in-home-page-2019-1
+pathPrefix: blog
+slug: making-changes-in-home-page-2019-1
 image: ../images/screenshot_home_page_2019_1.png
 date: '2019-12-08T13:10:52-05:00'
 published: true

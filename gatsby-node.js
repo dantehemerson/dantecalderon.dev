@@ -3,15 +3,12 @@ const Promise = require('bluebird')
 const path = require('path')
 
 // CONSTANTS
-const postPerPage = 8
+const postPerPage = 20
 
-const prefix = {
-  post: 'blog/',
-  project: 'portfolio/',
-}
-
-const getPrefix = model => {
-  return prefix[model] ? prefix[model] : ''
+const getFullPath = frontmatter => {
+  const pathPrefix = _.get(frontmatter, 'pathPrefix', '')
+  const slug = _.get(frontmatter, 'slug', '')
+  return path.join(pathPrefix, slug)
 }
 
 exports.createPages = ({ graphql, actions }) => {
@@ -28,14 +25,14 @@ exports.createPages = ({ graphql, actions }) => {
           allMdx(
             sort: { fields: [frontmatter___date], order: DESC }
             limit: 1000
-            filter: { fileAbsolutePath: { ne: null } }
+            filter: { fileAbsolutePath: { ne: null }, frontmatter: { published: { eq: true } } }
           ) {
             edges {
               node {
                 frontmatter {
                   model
-                  path
-                  published
+                  slug
+                  pathPrefix
                   tags
                 }
               }
@@ -47,36 +44,27 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
-        const posts = _.filter(result.data.allMdx.edges, edge => {
-          const model = _.get(edge, 'node.frontmatter.model')
-          if (model && ['post', 'project'].includes(model)) return edge
-          return undefined
+        const allMarkownPages = _.get(result, 'data.allMdx.edges', []).filter(edge => {
+          return ['post', 'project'].includes(_.get(edge, 'node.frontmatter.model'))
         })
 
-        const blogPosts = _.filter(posts, edge => {
-          // The model is a blog post
-          const model = _.get(edge, 'node.frontmatter.model')
-          // Post is published
-          const published = _.get(edge, 'node.frontmatter.published')
-          if (model === 'post' && published) return edge
-          return undefined
-        })
+        const blogPosts = allMarkownPages.filter(
+          edge => _.get(edge, 'node.frontmatter.model') === 'post'
+        )
 
-        const numOfPages = Math.ceil(blogPosts.length / postPerPage)
+        const blogPostsPaginated = _.chunk(blogPosts, postPerPage)
 
-        Array.from({
-          length: numOfPages,
-        }).forEach((_, i) => {
+        blogPostsPaginated.forEach((_, i) => {
           createPage({
             path: i === 0 ? '/blog' : `/blog/page/${i}`,
             component: blogListTemplate,
             context: {
               limit: postPerPage,
               skip: i * postPerPage,
-              numPages: numOfPages,
+              numPages: blogPostsPaginated.length,
               currentPage: i,
               hasPrevPage: i > 0,
-              hasNextPage: i < numOfPages - 1,
+              hasNextPage: i < blogPostsPaginated.length - 1,
             },
           })
         })
@@ -102,19 +90,22 @@ exports.createPages = ({ graphql, actions }) => {
           })
         })
 
-        _.each(posts, (post, index) => {
-          const previous = index === posts.length - 1 ? null : posts[index + 1].node
-          const next = index === 0 ? null : posts[index - 1].node
+        _.each(allMarkownPages, (post, index) => {
+          const previous =
+            index === allMarkownPages.length - 1 ? null : allMarkownPages[index + 1].node
+          const next = index === 0 ? null : allMarkownPages[index - 1].node
 
           const { model } = post.node.frontmatter
-          const slug = `${getPrefix(model)}${post.node.frontmatter.path.trim()}`
+
+          const fullPath = getFullPath(post.node.frontmatter)
+          console.log('Dante: exports.createPages -> fullPath', fullPath)
 
           // Generate pages only for posts and projects
           createPage({
-            path: slug,
+            path: fullPath,
             component: model === 'post' ? postTemplate : projectTemplate,
             context: {
-              slug,
+              slug: fullPath,
               previous,
               next,
             },
@@ -125,16 +116,16 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
   const { frontmatter } = node
 
   if (['MarkdownRemark', 'Mdx'].includes(node.internal.type) && frontmatter) {
-    const { model } = frontmatter
+    const fullPath = getFullPath(frontmatter)
     createNodeField({
       name: 'slug',
       node,
-      value: `${getPrefix(model)}${frontmatter.path}`,
+      value: fullPath,
     })
   }
 }

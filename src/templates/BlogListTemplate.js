@@ -78,7 +78,7 @@ export const queryBlog = graphql`
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
             title
-            path
+            slug
             image {
               childImageSharp {
                 sizes {

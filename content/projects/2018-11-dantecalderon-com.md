@@ -3,7 +3,8 @@ model: project
 title: dantecalderon
 subtitle: My webpage
 description: Personal-website
-path: dantecalderon
+pathPrefix: portfolio
+slug: dantecalderon
 image: ../images/danteclderon-home.png
 images:
   - description: HOme page

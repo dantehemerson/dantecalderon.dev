@@ -49,7 +49,7 @@ export const queryPortfolio = graphql`
           }
           frontmatter {
             title
-            path
+            slug
             image {
               childImageSharp {
                 sizes {

@@ -4,7 +4,8 @@ title: Crear un carousel con lazy-loading imagenes con Gatsby
 description: >-
   Los repositorios multiproyectos o monorepos es una forma de organizar nuestro proyecto de tal forma que contenga múltiples subproyectos y sean sea controlados por un solo repositorio de un Sistema de Control de Versiones como Git por ejemplo.
 author: Dante Calderón
-path: carousel-gatsby-image
+pathPrefix: blog
+slug: carousel-gatsby-image
 image: ../images/travis_ci_subdirs.jpg
 date: '2019-09-15T13:10:52-05:00'
 published: false

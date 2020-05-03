@@ -3,7 +3,8 @@ model: post
 title: Manipulación de bits
 description: Manipulación de bits y usos.
 author: Dante Calderón
-path: manipulacion-de-bits
+pathPrefix: blog
+slug: manipulacion-de-bits
 image: ../images/bit-manipulation.png
 date: '2018-08-17T03:16:12-05:00'
 published: true

@@ -4,7 +4,8 @@ title: Como contribuir a un proyecto en Github
 description: >-
   Mejor forma de como clonar un repositorio y configurarlo para empezar a contribuir.
 author: Dante Calderón
-path: how-to-setup-project-to-contribute
+pathPrefix: blog
+slug: how-to-setup-project-to-contribute
 image: ../images/coders-git.jpg
 date: '2019-09-28T01:42:52-05:00'
 published: false

@@ -5,7 +5,8 @@ description: >-
   Tener una buena experiencia en nuestro SO es muy importante ya que nos permite ser mas productivos. 
   Te invito que te tomes el tiempo de configurar shorcuts, buscar herramientas y extesiones que te permitan mejorar tu experiencia en tu SO y ser mas productivo en tu dia.
 author: Dante Calderón
-path: improving-ux-ubuntu-workspace
+pathPrefix: blog
+slug: improving-ux-ubuntu-workspace
 image: ../images/2019_screenshot_switch_windows.png
 date: '2019-12-11T23:19:52-05:00'
 published: true

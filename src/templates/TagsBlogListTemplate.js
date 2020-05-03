@@ -39,7 +39,7 @@ const BlogWithTags = props => {
                     path: `/${node.fields.slug}`,
                     timeToRead: node.timeToRead,
                   }}
-                  key={node.frontmatter.path}
+                  key={node.frontmatter.slug}
                 />
               )
             else return false
@@ -75,7 +75,7 @@ export const queryBlog = graphql`
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
             title
-            path
+            slug
             image {
               childImageSharp {
                 sizes {

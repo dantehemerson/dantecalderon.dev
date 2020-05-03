@@ -4,7 +4,8 @@ title: Podcastify
 subtitle: >-
   The Best Free Podcasts. Curated.
 description: The Best Free Podcasts. Curated.
-path: podcastifynow
+pathPrefix: portfolio
+slug: podcastifynow
 image: ../images/podcastify.now.sh_undisclosed.3709182.png
 images:
   - description: Movie Page

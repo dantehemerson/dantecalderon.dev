@@ -31,7 +31,7 @@ const ImageWrapper = styled.div`
   width: 100%;
   max-width: 500px;
   ${media.md`
-    width: 25%;
+    width: 36%;
   `};
 `
 const Info = styled.div`
@@ -40,7 +40,7 @@ const Info = styled.div`
   padding-top: 12px;
   ${media.md`
     padding: 0 0 0 50px;
-    width: 75%;
+    width: 64%;
     max-width: 100%;
   `};
 `
@@ -50,7 +50,7 @@ const Title = styled.h3`
   transition: 0.3s;
   font-size: 17px;
   ${media.sm`
-    font-size: 1.2rem;
+    font-size: 1.31951rem;
   `}
   ${Container}:hover & {
     color: #1976d2;
@@ -62,12 +62,11 @@ const Time = styled.p`
   text-align: right;
   padding: 6px 6px 6px;
 `
-
 const Excerpt = styled.p`
   color: #757575;
   font-size: 15px;
   ${media.sm`
-    font-size: 0.9rem;
+    font-size: 1rem;
   `};
 `
 

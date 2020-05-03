@@ -36,7 +36,10 @@ const Blog = props => {
                 title: node.title,
                 imageUrl: node.pageCover,
                 excerpt: node.excerpt,
-                date: dayjs(secureParseDate(node.createdAt).toISOString()).format('MMMM DD, YYYY'),
+                // TODO: change the timezone in notion
+                date: dayjs(secureParseDate(node.createdAt).toISOString())
+                  .add(5, 'hours')
+                  .format('MMMM DD, YYYY'),
                 path: `/${node.slug}`,
                 timeToRead: '~3m',
               }}

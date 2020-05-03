@@ -4,9 +4,9 @@ function secureParseDate(date) {
     if (parsedDate.toString() !== 'Invalid Date') {
       return parsedDate
     }
-    return Date.now()
+    return new Date()
   } else {
-    return Date.now()
+    return new Date()
   }
 }
 

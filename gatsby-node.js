@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const Promise = require('bluebird')
 const path = require('path')
+const { secureParseDate } = require('./src/utils/dates')
 
 // CONSTANTS
 const postPerPage = 8
@@ -8,6 +9,18 @@ const postPerPage = 8
 const prefix = {
   post: 'blog/',
   project: 'portfolio/',
+}
+
+const isPostMarkdown = post => {
+  return ['MarkdownRemark', 'Mdx'].includes(_.get(post, 'node.internal.type'))
+}
+
+const getPostCorrectDate = post => {
+  if (isPostMarkdown(post)) {
+    return secureParseDate(_.get(post, 'node.frontmatter.date'))
+  } else {
+    return secureParseDate(_.get(post, 'node.createdAt'))
+  }
 }
 
 const getPrefix = model => {
@@ -53,6 +66,7 @@ exports.createPages = ({ graphql, actions }) => {
             edges {
               node {
                 slug
+                pageId
                 createdAt
               }
             }
@@ -79,23 +93,29 @@ exports.createPages = ({ graphql, actions }) => {
         })
 
         /** All posts from Notion and Mdx sorted by date */
-        const allPostsSorted = [
+        const allPostIdsSorted = [
           ...blogPosts,
           ..._.get(result.data, 'allNotionPageBlog.edges', []),
-        ].forEach(post => {
-          if (['MarkdownRemark', 'Mdx'].includes(_.get(post, 'node.internal.type'))) {
-            console.log('Es post Md*', _.get(post, 'node.frontmatter.date'))
-          } else {
-            console.log('Es Notion: ', _.get(post, 'node.createdAt'))
-          }
-        })
-        console.log('Dante: exports.createPages -> allPostsSorted', allPostsSorted)
+        ]
+          .sort((postA, postB) => {
+            let dateA = getPostCorrectDate(postA)
+            let dateB = getPostCorrectDate(postB)
 
-        const numOfPages = Math.ceil(blogPosts.length / postPerPage)
+            if (dateA === dateB) {
+              return 0
+            } else {
+              return dateA < dateB ? 1 : -1
+            }
+          })
+          .map(post =>
+            isPostMarkdown(post) ? _.get(post, 'node.frontmatter.path') : _.get(post, 'node.pageId')
+          )
 
-        Array.from({
-          length: numOfPages,
-        }).forEach((_, i) => {
+        const idsByPage = _.chunk(allPostIdsSorted, postPerPage)
+        const numOfPages = idsByPage.length
+
+        idsByPage.forEach((postIdsInPage, i) => {
+          console.log('Dante: exports.createPages -> postIdsInPage', postIdsInPage)
           createPage({
             path: i === 0 ? '/blog' : `/blog/page/${i}`,
             component: blogListTemplate,
@@ -103,6 +123,8 @@ exports.createPages = ({ graphql, actions }) => {
               limit: postPerPage,
               skip: i * postPerPage,
               numPages: numOfPages,
+              mdxIds: postIdsInPage,
+              notionIds: postIdsInPage,
               currentPage: i,
               hasPrevPage: i > 0,
               hasNextPage: i < numOfPages - 1,

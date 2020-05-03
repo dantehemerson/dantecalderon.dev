@@ -29,9 +29,9 @@ const ImageWrapper = styled.div`
   border-radius: 4px;
   overflow: hidden;
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
   ${media.md`
-    width: 36%;
+    width: 24%;
   `};
 `
 const Info = styled.div`
@@ -74,7 +74,11 @@ export default props => (
   <Container to={props.data.path}>
     <div>
       <ImageWrapper>
-        <Img sizes={props.data.thumbnail} />
+        {props.data.imageUrl ? (
+          <img src={props.data.imageUrl} />
+        ) : (
+          <Img sizes={props.data.thumbnail} />
+        )}
       </ImageWrapper>
       <Info>
         <Title>{props.data.title}</Title>

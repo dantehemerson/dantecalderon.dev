@@ -368,7 +368,7 @@ p.para {
 .gatsby-remark-code-title {
     margin: 0 auto;
     margin-bottom: -0.4em;
-    max-width: 900px;
+    max-width: 800px;
     padding: 0.8em 1em 0.9em;
     font-family: 'Fira Code', Consolas, monospace;
     background-color: #2d2d2d;

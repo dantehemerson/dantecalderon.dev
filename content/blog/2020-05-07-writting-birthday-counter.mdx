@@ -1,0 +1,99 @@
+---
+model: post
+title: 'Creando un Bithday Countdown con Next.js'
+description: >-
+  Creando un pagina en Next.js para ver cuantos dias faltan para tu cumpleanios
+author: Dante Calderón
+pathPrefix: blog
+slug: building-a-birthday-countdown-in-nextjs
+image: ../images/mongodb_1.png
+date: '2020-05-07T00:00:00-05:00'
+published: true
+tags:
+  - ReactJS
+  - Next.js
+  - Frontend
+---
+
+Las cosas que aprenderemos seran:
+
+- Usar rutas dinamicas en Next.js
+- Usar Typescript
+- Usar styled-components
+- Crear un sitio increible. 🚀
+
+### Que vamos a hacer?
+
+Hoy estaremos construyendo una pagina que nos ayude a saber cuantos **dias, horas y segundos**
+faltan para nuestro cumpleanos o una cualquier otro cumpleanos.
+Este sera el resultado final.
+
+Puedes dar un vistaso a la demo y al codigo aca:
+
+- [Demo](https://google.com)
+- [Code](https://google.com)
+
+Asi que vamos a ello...
+
+### 💫 Creando el repositorio
+
+Para asegurase que todo funcione correctamente, clonaremos el repositorio original y trabajar sobre el.
+Para ello haremos lo siguiente:
+
+```bash
+# Clonamos el repositorio original y nos movemos a el folder creado
+git clone git@github.com:dantehemerson/birthday-countdown.git && cd birthday-countdown
+
+# Nos movemos al commit del principio
+git reset --hard 658aed
+
+# Reiniciamos el repo para no tener conflictos
+rm -rf .git && git init
+
+# Agregamos los cambios
+git add --all && git commit -m "Initial commit"
+
+```
+
+### 🚀 Iniciando el proyecto
+
+Primero instalamos los paquetes:
+
+```bash
+yarn
+```
+
+y para correr el proyecto usamos:
+
+```bash
+yarn dev
+```
+
+### 🎨 Preparando el fondo
+
+Primero para que nuestro sitio se vea con estilo, vamos a agregar una imagen de background.
+Yo usare [esta imagen](https://images.unsplash.com/photo-1588909741576-6ded462d06b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80),
+sientete libre de usar la que tu prefieras.
+
+```typescript{4-7}:title=components/Layout.tsx
+const Container = styled.div`
+  background: #f9fafa;
+  height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1588909741576-6ded462d06b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+`
+```
+
+Este pedazo de codigo es para que la imagen quede centrada:
+
+```css
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+```
+
+### Creando
+
+Ahora que ya tenemos un lindo background, vamos a crear el contenedor de los **cuadrados para los numeros**

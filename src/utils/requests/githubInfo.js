@@ -1,56 +1,30 @@
-import TimeAgo from 'javascript-time-ago'
-import en from 'javascript-time-ago/locale/en'
-
-TimeAgo.addLocale(en)
-const timeAgo = new TimeAgo('en-US')
-
 export const getMyGithubInfo = async () => {
   try {
-    const res = await fetch('https://api.github.com/graphql', {
+    const res = await fetch('http://api.dantecalderon.dev/graphql', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${process.env.GATSBY_GITHUB_API_TOKEN}`,
       },
       body: JSON.stringify({
         query: `
-        { user(login: "dantehemerson") {
-            contributionsCollection {
-              contributionCalendar {
-                totalContributions
-              }
-            }
+        {
+          githubStatus {
+            status
             bio
             company
-            status {
-              message
-              emojiHTML
-              updatedAt
-              indicatesLimitedAvailability
-            }
+            contributions
+          }
+          latestCommit {
+            message
+            createdAt
+            url
           }
         }`,
       }),
     })
-    const {
-      data: {
-        user: {
-          company,
-          status,
-          contributionsCollection: {
-            contributionCalendar: { totalContributions },
-          },
-        },
-      },
-    } = await res.json()
 
-    return {
-      status: `${status.emojiHTML} ${status.message}`,
-      company,
-      totalContributions,
-      updatedAt: timeAgo.format(new Date(status.updatedAt)),
-      bussy: status.indicatesLimitedAvailability,
-    }
+    const json = await res.json()
+    return json.data
   } catch (err) {
     console.log('Error: ', err)
   }

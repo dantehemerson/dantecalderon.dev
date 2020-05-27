@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { useInfo } from '../hooks/useInfo'
 import InfoItem from './InfoItem'
+import { secureTimeAgo } from '../utils/date'
 
 const Info = () => {
   const info = useInfo()
@@ -13,11 +14,20 @@ const Info = () => {
       }}
     >
       <Container>
-        <InfoItem title="😊 Status" description={info.status} postfix={info.updatedAt} />
-        <InfoItem title="⛏ Working on" description={info.company} />
+        <InfoItem
+          title="😊 Status"
+          description={info.githubStatus.status}
+          postfix={secureTimeAgo(info.latestCommit.createdAt)}
+        />
+        <InfoItem title="⛏ Working on" description={info.githubStatus.company} />
         <InfoItem
           title="🚀 Contributions"
-          description={`${info.totalContributions || 0} in the last year`}
+          description={`${info.githubStatus.contributions || 0} in the last year`}
+        />
+        <InfoItem
+          title="👷 Latest Commit"
+          description={`<a href='${info.latestCommit.url}' target='_blank'>${info.latestCommit.message}</a>`}
+          postfix={secureTimeAgo(info.latestCommit.createdAt)}
         />
       </Container>
     </div>

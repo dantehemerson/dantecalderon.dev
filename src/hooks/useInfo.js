@@ -4,11 +4,18 @@ import { getMyGithubInfo } from '../utils/requests/githubInfo'
 
 export const useInfo = () => {
   const [info, setInfo] = useLocalStorage('info', {
-    status: '',
-    company: '@dantecalderon',
-    updatedAt: '',
-    totalContributions: 0,
-    bussy: false,
+    githubStatus: {
+      status: '🌳 Save the planet',
+      bio: 'Software Developer. ♥ for NodeJS and Typescript.',
+      company: '@dantecalderon',
+      contributions: 2573,
+    },
+    latestCommit: {
+      message: 'WIP WIP WIP',
+      createdAt: '2020-05-23T16:38:10Z',
+      url:
+        'https://github.com/dantehemerson/url-shortener/commit/b378164f3d7b6847f412f437d504ef7a6c84685c',
+    },
   })
 
   useEffect(() => {

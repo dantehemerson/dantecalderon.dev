@@ -10,6 +10,7 @@ export const getMyGithubInfo = async () => {
         {
           githubStatus {
             status
+            updatedAt
             bio
             company
             contributions

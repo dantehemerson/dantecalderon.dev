@@ -17,7 +17,7 @@ const Info = () => {
         <InfoItem
           title="😊 Status"
           description={info.githubStatus.status}
-          postfix={secureTimeAgo(info.latestCommit.createdAt)}
+          postfix={secureTimeAgo(info.githubStatus.updatedAt)}
         />
         <InfoItem title="⛏ Working on" description={info.githubStatus.company} />
         <InfoItem

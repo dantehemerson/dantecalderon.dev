@@ -27,6 +27,12 @@ const Container = styled.div`
     & > div {
       margin-right: 4px;
     }
+    a {
+      white-space: nowrap;
+      max-width: 222px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
     color: #484848;
     display: flex;
     align-items: center;

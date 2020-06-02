@@ -92,7 +92,7 @@ const Wrapper = styled.nav`
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     &:hover {
-      background: #f4f4f4;
+      background: rgba(195, 195, 195, 0.22) !important;
     }
   }
 
@@ -143,6 +143,9 @@ const TitleWrapper = styled(Link)`
   align-items: center;
   border-radius: 3px;
   padding-right: 3px;
+  &:hover {
+    background: rgba(195, 195, 195, 0.22);
+  }
   ${media.md`
 		flex-direction: row;
 		align-items: inherit;
@@ -231,6 +234,9 @@ const ItemLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
+  &:hover {
+    background: rgba(195, 195, 195, 0.22) !important;
+  }
   ${media.md`
     transition: all 0.4s !important;
     padding: 6px 16px !important;

@@ -29,7 +29,9 @@ const Button = styled(AwesomeButton)`
 `
 
 const ContactSocial = () => {
-  const { title, socials } = useSiteMetadata()
+  const {
+    siteMetadata: { title, socials },
+  } = useSiteMetadata()
 
   return (
     <ContactSocialWrapper>

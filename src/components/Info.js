@@ -40,7 +40,7 @@ const Container = styled.div`
   min-width: 366px;
   flex-direction: column;
   align-items: flex-start;
-  border: 1px solid #ccc;
+  border: 1px solid #bcebd3;
   padding: 25px;
   border-radius: 4px;
 `

@@ -66,7 +66,11 @@ export default props => {
           <Icon key={item.title} target="_blank" href={item.link} rel="noopener">
             <img
               alt={`${item.title} - ${title}`}
-              src={`https://icongr.am/fontawesome/${item.icon}.svg?size=20&color=282a2d`}
+              src={
+                item.icon === 'dev'
+                  ? 'https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg'
+                  : `https://icongr.am/fontawesome/${item.icon}.svg?size=20&color=282a2d`
+              }
             />
           </Icon>
         ))}

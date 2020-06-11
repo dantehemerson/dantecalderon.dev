@@ -55,7 +55,9 @@ const Copy = styled.p`
 `
 
 export default props => {
-  const { title, social } = useSiteMetadata()
+  const {
+    siteMetadata: { title, social },
+  } = useSiteMetadata()
 
   return (
     <Container>
@@ -64,7 +66,11 @@ export default props => {
           <Icon key={item.title} target="_blank" href={item.link} rel="noopener">
             <img
               alt={`${item.title} - ${title}`}
-              src={`https://icongr.am/fontawesome/${item.icon}.svg?size=20&color=282a2d`}
+              src={
+                item.icon === 'dev'
+                  ? 'https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg'
+                  : `https://icongr.am/fontawesome/${item.icon}.svg?size=20&color=282a2d`
+              }
             />
           </Icon>
         ))}
@@ -72,7 +78,7 @@ export default props => {
       <Copy>
         <span className="copytext">© {new Date().getFullYear()} - All rights reserved.</span> Made
         with <span className="heart">❤</span> by{' '}
-        <Link to="/about" target="_blank" rel="noopener">
+        <Link to="/#a-little-bit-about-me" target="_blank" rel="noopener">
           {title}
         </Link>
       </Copy>

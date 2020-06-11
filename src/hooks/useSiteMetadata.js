@@ -22,10 +22,22 @@ const useSiteMetadata = () => {
           siteUrl
         }
       }
+      aboutContent: mdx(
+        fileAbsolutePath: { glob: "**/about.mdx" }
+        frontmatter: { model: { eq: "section" } }
+      ) {
+        frontmatter {
+          title
+        }
+        body
+      }
     }
   `)
 
-  return data.site.siteMetadata
+  return {
+    siteMetadata: data.site.siteMetadata,
+    aboutContent: data.aboutContent,
+  }
 }
 
 export default useSiteMetadata

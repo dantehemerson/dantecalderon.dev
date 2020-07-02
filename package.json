@@ -44,7 +44,7 @@
     "gatsby-source-filesystem": "2.1.21",
     "gatsby-source-notionso-dante-version": "^1.1.63",
     "gatsby-transformer-remark": "2.6.21",
-    "gatsby-transformer-sharp": "2.2.13",
+    "gatsby-transformer-sharp": "2.5.10",
     "gatsby-transformer-yaml": "2.2.8",
     "javascript-time-ago": "^2.0.4",
     "lodash": "4.17.15",

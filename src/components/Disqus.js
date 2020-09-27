@@ -13,7 +13,9 @@ const Container = styled.div`
 `
 
 const Disqus = ({ title, path }) => {
-  const { disqusShortname, siteUrl } = useSiteMetadata()
+  const {
+    siteMetadata: { disqusShortname, siteUrl },
+  } = useSiteMetadata()
   const url = `${siteUrl}/${path}`
 
   return (

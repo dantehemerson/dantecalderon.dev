@@ -9007,10 +9007,10 @@ iterall@^1.2.2:
   resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.2.2.tgz#92d70deb8028e0c39ff3164fdbf4d8b088130cd7"
   integrity sha512-yynBb1g+RFUPY64fTrFv7nsjRrENBQJaX2UL+2Szc9REFrSNm1rpSXHGzhmAy7a9uv3vlvgBlXnf9RqmPH1/DA==
 
-javascript-time-ago@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/javascript-time-ago/-/javascript-time-ago-2.0.4.tgz#02a7e81a161d73e518202274d5f72835cc89e3b4"
-  integrity sha512-p4flGt34MFUT8BW+UtRN5BOq28qndYALMoqP18FeixUw4InfA7MRay/wkSOorB+wnxTfnWYpqy9U1kcbUEdk5Q==
+javascript-time-ago@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/javascript-time-ago/-/javascript-time-ago-2.1.5.tgz#3d0b28bbbc9077de75d6c755aeb0a5ac7e050ef0"
+  integrity sha512-+fiOcgMrx2mOyUraDDR3/iD6OS6rhfC4y4ag68ZEY7fHBpPkCYLKwsjBxIVOyHcJKpweUnR5cWgxBBOjoCnPWw==
   dependencies:
     relative-time-format "^0.1.3"
 

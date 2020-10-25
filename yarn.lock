@@ -12987,10 +12987,10 @@ react-side-effect@^1.1.0:
   dependencies:
     shallowequal "^1.0.1"
 
-react-slick@0.25.2:
-  version "0.25.2"
-  resolved "https://registry.yarnpkg.com/react-slick/-/react-slick-0.25.2.tgz#56331b67d47d8bcfe2dceb6acab1c8fd5bd1f6bc"
-  integrity sha512-8MNH/NFX/R7zF6W/w+FS5VXNyDusF+XDW1OU0SzODEU7wqYB+ZTGAiNJ++zVNAVqCAHdyCybScaUB+FCZOmBBw==
+react-slick@0.27.12:
+  version "0.27.12"
+  resolved "https://registry.yarnpkg.com/react-slick/-/react-slick-0.27.12.tgz#9970d9f040e3ee57ad6e0ab98e4e04bb9dd823ab"
+  integrity sha512-MGhkKK2YACB5+65/AjW+V9e/M+labh6zCJzSSGi34YiMg5n9LBzTUV8Qz6N0PbsKZQpeRwEwWkyIwqm8987B1w==
   dependencies:
     classnames "^2.2.5"
     enquire.js "^2.1.6"

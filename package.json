@@ -57,7 +57,7 @@
     "react-disqus-comments": "1.4.0",
     "react-dom": "16.9.0",
     "react-helmet": "5.2.1",
-    "react-slick": "0.25.2",
+    "react-slick": "0.27.12",
     "react-typography": "0.16.19",
     "styled-components": "4.3.2",
     "sweetalert2": "8.17.1",

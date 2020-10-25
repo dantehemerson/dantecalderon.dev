@@ -6589,12 +6589,12 @@ gatsby-remark-autolink-headers@2.1.9:
     mdast-util-to-string "^1.0.6"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-classes@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-classes/-/gatsby-remark-classes-0.1.2.tgz#3f47faac21b09c966f8ada2c6b5e4d51b23ed185"
-  integrity sha512-XowV/FDrBPIvHhTYSc6aKjHDiJS78Src2U7phF3hJD500MqCyYdmE4XpHAoxqAd2gHkTQp67R70eN6bCzpnWmQ==
+gatsby-remark-classes@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-classes/-/gatsby-remark-classes-1.0.0.tgz#6d93f7054a558c2cd7ba73ff5e25a5adc01fd5a9"
+  integrity sha512-F0pM8FdTwqFDDiP2qR4TnZZmkRI6Q3Mry/qzbxI4ORE/7ZnR6EKfvA1DryZ2RnrZyVUnbBEdzmZDPAYcBPE4PA==
   dependencies:
-    unist-util-visit "^1.4.0"
+    unist-util-select "^2.0.2"
 
 gatsby-remark-code-titles@1.1.0:
   version "1.1.0"
@@ -10976,6 +10976,11 @@ normalize-url@^4.1.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-4.5.0.tgz#453354087e6ca96957bd8f5baf753f5982142129"
   integrity sha512-2s47yzUxdexf1OhyRi4Em83iQk0aPvwTddtFz4hnSSw9dCEsLEGf6SwIO8ss/19S9iBb5sJaOuTvTGDeZI00BQ==
+
+not@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/not/-/not-0.1.0.tgz#c9691c1746c55dcfbe54cbd8bd4ff041bc2b519d"
+  integrity sha1-yWkcF0bFXc++VMvYvU/wQbwrUZ0=
 
 npm-bundled@^1.0.1:
   version "1.0.6"
@@ -16073,6 +16078,17 @@ unist-util-select@^1.5.0:
     debug "^2.2.0"
     nth-check "^1.0.1"
 
+unist-util-select@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/unist-util-select/-/unist-util-select-2.0.2.tgz#cb2774b599695172e7b60a8b5f50793e418f7ea6"
+  integrity sha512-Yv5Z5ShMxv7Z9Dw175tKvOiRVXV4FrMHG778DSD9Z0jALgb3wAx9DoeInr3200QlYp71rYUXzzJdCb76xKdrCw==
+  dependencies:
+    css-selector-parser "^1.1.0"
+    not "^0.1.0"
+    nth-check "^1.0.1"
+    unist-util-is "^3.0.0"
+    zwitch "^1.0.3"
+
 unist-util-stringify-position@^1.0.0, unist-util-stringify-position@^1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/unist-util-stringify-position/-/unist-util-stringify-position-1.1.2.tgz#3f37fcf351279dcbca7480ab5889bb8a832ee1c6"
@@ -17160,3 +17176,8 @@ zwitch@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/zwitch/-/zwitch-1.0.4.tgz#93b1b993b13c8926753a41afaf8f27bbfac6be8b"
   integrity sha512-YO803/X+13GNaZB7fVopjvHH0uWQKgJkgKnU1YCjxShjKGVuN9PPHHW8g+uFDpkHpSTNi3rCMKMewIcbC1BAYg==
+
+zwitch@^1.0.3:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/zwitch/-/zwitch-1.0.5.tgz#d11d7381ffed16b742f6af7b3f223d5cd9fe9920"
+  integrity sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==

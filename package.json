@@ -3,6 +3,13 @@
   "description": "This is my personal web. Dante Caderón",
   "version": "1.0.0",
   "author": "Dante Calderón <mail@dantecalderon.dev>",
+ "scripts": {
+    "build": "gatsby build",
+    "start": "gatsby develop",
+    "start:dev": "yarn start",
+    "format": "prettier --write 'src/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "@mdx-js/mdx": "1.4.4",
     "@mdx-js/react": "1.4.4",
@@ -69,12 +76,6 @@
     "blog"
   ],
   "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "start": "gatsby develop",
-    "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "devDependencies": {
     "prettier": "1.18.2"
   },

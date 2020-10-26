@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../components/Home/HeaderHome'
+import { LatestPosts } from '../components/Home/LatestPosts'
 import Layout from '../components/Layout'
 import Markdown from '../components/Markdown'
 import SEO from '../components/SEO'
@@ -16,6 +17,7 @@ const Index = props => {
     <Layout location={props.location} active={pages.home}>
       <SEO title="" url={siteUrl} />
       <Header />
+      <LatestPosts />
       <Markdown content={aboutContent.body} />
     </Layout>
   )

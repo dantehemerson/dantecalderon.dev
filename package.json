@@ -58,7 +58,7 @@
     "netlify-cms-app": "2.9.7",
     "node-sass": "4.12.0",
     "object-merge-advanced": "^10.12.1",
-    "prismjs": "1.17.1",
+    "prismjs": "1.21.0",
     "prop-types": "^15.7.2",
     "react": "16.9.0",
     "react-awesome-button": "6.1.2",

@@ -29,6 +29,12 @@ const Info = () => {
           description={`<a href='${info.latestCommit.url}' target='_blank'>${info.latestCommit.message}</a>`}
           postfix={secureTimeAgo(info.latestCommit.createdAt)}
         />
+        <InfoItem
+          title="🎶 Listening"
+          showPostfixImage={info.listening.playing}
+          description={`<a href='${info.listening.url}' target='_blank'>${info.listening.name}</a>`}
+          postfix={secureTimeAgo(info.listening.lastPlayingDate)}
+        />
       </Container>
     </div>
   )

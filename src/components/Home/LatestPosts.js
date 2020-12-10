@@ -16,8 +16,6 @@ export const LatestPosts = () => {
         ) {
           edges {
             node {
-              excerpt(pruneLength: 240)
-              timeToRead
               fields {
                 slug
               }
@@ -97,6 +95,7 @@ const Header = styled.div`
     text-decoration: none;
   }
 `
+
 const Container = styled.div`
   max-width: 1080px;
   display: grid;

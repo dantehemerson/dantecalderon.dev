@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import { useLocalStorage } from './useLocalStorage'
 import { getMyGithubInfo } from '../utils/requests/githubInfo'
+import merge from 'object-merge-advanced'
+import { get } from 'lodash'
 
 export const useInfo = () => {
   const [info, setInfo] = useLocalStorage('info', {
@@ -16,16 +18,27 @@ export const useInfo = () => {
       url:
         'https://github.com/dantehemerson/url-shortener/commit/b378164f3d7b6847f412f437d504ef7a6c84685c',
     },
+    listening: {
+      name: "Where We're Going",
+      artist: 'Hans Zimmer',
+      album: 'Interstellar (Original Motion Picture Soundtrack)',
+      url: 'https://www.last.fm/music/Hans+Zimmer/_/Where+We%27re+Going',
+      image: 'https://lastfm.freetls.fastly.net/i/u/300x300/b8365c64bec38d1f0d05d9c1367a8cb3.jpg',
+      playing: false,
+      scrobbles: '105',
+      lastPlayingDate: '2020-12-10T02:20:44.000Z',
+    },
   })
 
   useEffect(() => {
     const setGithubInfo = async () => {
       try {
         const newInfo = await getMyGithubInfo()
-        setInfo(prevInfo => ({
-          ...prevInfo,
-          ...newInfo,
-        }))
+        setInfo(prevInfo =>
+          merge(prevInfo, newInfo, {
+            mergeBoolsUsingOrNotAnd: get(newInfo, 'listening.playing', false),
+          })
+        )
       } catch (err) {}
     }
     setGithubInfo()

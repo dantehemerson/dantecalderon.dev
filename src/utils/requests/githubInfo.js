@@ -20,6 +20,16 @@ export const getMyGithubInfo = async () => {
             createdAt
             url
           }
+          listening {
+            name
+            artist
+            album
+            url
+            image
+            playing
+            scrobbles
+            lastPlayingDate
+          }
         }`,
       }),
     })

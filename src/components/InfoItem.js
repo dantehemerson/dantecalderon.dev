@@ -1,11 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const InfoItem = ({ title, description, postfix }) => {
+const InfoItem = ({ title, description, postfix, showPostfixImage }) => {
   return (
     <Container>
       <p className="title3">{title}:</p>
       <div dangerouslySetInnerHTML={{ __html: description }} />
+      {showPostfixImage && (
+        <img
+          className="postfixImage"
+          src="https://i.ibb.co/6gzCdm5/equaliser-animated-green-73b73928.gif"
+        />
+      )}
       <span className="postfix3">{postfix}</span>
     </Container>
   )
@@ -14,6 +20,7 @@ const InfoItem = ({ title, description, postfix }) => {
 const Container = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   font-size: 14px;
   line-height: 27px;
   .title3 {
@@ -38,6 +45,15 @@ const Container = styled.div`
     align-items: center;
     font-weight: 400;
   }
+
+  .postfixImage {
+    margin: 0;
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0 -2px 1px 7px;
+  }
+
   .postfix3 {
     font-size: 12px;
     margin: 0;

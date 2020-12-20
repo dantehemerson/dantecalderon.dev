@@ -75,7 +75,7 @@ export default props => (
   <Container to={props.data.path}>
     <div>
       <ImageWrapper>
-        <Img sizes={props.data.thumbnail} />
+        <Img fluid={props.data.thumbnail} />
       </ImageWrapper>
       <Info>
         <Title>{props.data.title}</Title>

@@ -52,8 +52,8 @@ export const queryPortfolio = graphql`
             slug
             image {
               childImageSharp {
-                sizes {
-                  ...GatsbyImageSharpSizes_tracedSVG
+                fluid {
+                  ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
             }

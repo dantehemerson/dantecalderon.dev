@@ -37,7 +37,7 @@ const PostTemplate = props => {
       isPost
       title={title}
       path={slug}
-      image={image.childImageSharp.sizes.src}
+      image={image.childImageSharp.fluid.src}
       description={description}
     >
       <PostContent
@@ -59,8 +59,8 @@ const PostTemplate = props => {
 export const pageQuery = graphql`
   query PostQuery($slug: String!) {
     avatar: imageSharp(fluid: { originalName: { regex: "/avatar.jpg/" } }) {
-      sizes(maxWidth: 720) {
-        ...GatsbyImageSharpSizes_tracedSVG
+      fluid(maxWidth: 720) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
     site {
@@ -81,8 +81,8 @@ export const pageQuery = graphql`
         description
         image {
           childImageSharp {
-            sizes(maxWidth: 1920) {
-              ...GatsbyImageSharpSizes_tracedSVG
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }

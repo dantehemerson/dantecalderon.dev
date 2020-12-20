@@ -34,6 +34,6 @@ export default props => (
       timeToRead={props.timeToRead}
       avatar={props.avatar}
     />
-    <Img sizes={props.image.childImageSharp.sizes} />
+    <Img fluid={props.image.childImageSharp.fluid} />
   </Container>
 )

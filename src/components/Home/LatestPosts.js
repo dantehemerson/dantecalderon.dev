@@ -25,8 +25,8 @@ export const LatestPosts = () => {
                 slug
                 image {
                   childImageSharp {
-                    sizes {
-                      ...GatsbyImageSharpSizes_tracedSVG
+                    fluid {
+                      ...GatsbyImageSharpFluid_tracedSVG
                     }
                   }
                 }
@@ -55,19 +55,18 @@ export const LatestPosts = () => {
         </Link>
       </Header>
       <Container wrap="wrap" maxWidth="1100px">
-        {posts.map(({ node }) => {
+        {posts.map(({ node }, index) => {
           return (
             <LatestPostsItem
+              key={index}
               post={{
                 title: node.frontmatter.title,
-                thumbnail: node.frontmatter.image.childImageSharp.sizes,
+                thumbnail: node.frontmatter.image.childImageSharp.fluid,
                 excerpt: node.excerpt,
                 date: node.frontmatter.date,
                 path: `/${node.fields.slug}`,
               }}
-            >
-              hola
-            </LatestPostsItem>
+            />
           )
         })}
       </Container>

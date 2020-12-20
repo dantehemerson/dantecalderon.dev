@@ -32,7 +32,7 @@ const BlogWithTags = props => {
                 <Card
                   data={{
                     title: node.frontmatter.title,
-                    thumbnail: node.frontmatter.image.childImageSharp.sizes,
+                    thumbnail: node.frontmatter.image.childImageSharp.fluid,
                     excerpt: node.excerpt,
                     date: node.frontmatter.date,
                     path: `/${node.fields.slug}`,
@@ -77,8 +77,8 @@ export const queryBlog = graphql`
             slug
             image {
               childImageSharp {
-                sizes {
-                  ...GatsbyImageSharpSizes_tracedSVG
+                fluid {
+                  ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
             }

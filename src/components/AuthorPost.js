@@ -84,7 +84,7 @@ const Edit = styled.a`
 
 export default props => (
   <Container>
-    <Image sizes={props.avatar.sizes} />
+    <Image fluid={props.avatar.fluid} />
     <Body>
       <Name>
         <Author id="post_authorname" to="/#a-little-bit-about-me">

@@ -75,25 +75,27 @@ const About = styled.p`
 		text-align: left !important;
 	`};
 `
-export default props => (
-  <Container>
-    <div>
-      <Image sizes={props.avatar.sizes} />
-    </div>
-    <Body>
-      <By>{props.make ? 'Made with ❤' : 'Written'} by</By>
-      <Name to="/#a-little-bit-about-me">Dante Calderón</Name>
-      <About>
-        Hi, I'm Dante Calderón, web developer. Click{' '}
-        <Link className="default" to="/#a-little-bit-about-me">
-          here
-        </Link>{' '}
-        if you want know more about me or checkout my{' '}
-        <Link className="default" to="/portfolio">
-          portafolio
-        </Link>
-        .
-      </About>
-    </Body>
-  </Container>
-)
+export default props => {
+  return (
+    <Container>
+      <div>
+        <Image fluid={props.avatar.fluid} />
+      </div>
+      <Body>
+        <By>{props.make ? 'Made with ❤' : 'Written'} by</By>
+        <Name to="/#a-little-bit-about-me">Dante Calderón</Name>
+        <About>
+          Hi, I'm Dante Calderón, web developer. Click{' '}
+          <Link className="default" to="/#a-little-bit-about-me">
+            here
+          </Link>{' '}
+          if you want know more about me or checkout my{' '}
+          <Link className="default" to="/portfolio">
+            portafolio
+          </Link>
+          .
+        </About>
+      </Body>
+    </Container>
+  )
+}

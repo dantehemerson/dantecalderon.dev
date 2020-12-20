@@ -48,7 +48,7 @@ const SliderItem = props => (
     <TopBar>
       <div className="TopBarButtons" />
     </TopBar>
-    <Img sizes={props.image.childImageSharp.sizes} />
+    <Img fluid={props.image.childImageSharp.fluid} />
   </ContainerItem>
 )
 

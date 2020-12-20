@@ -50,7 +50,7 @@ const AvatarContainer = styled.div`
 export default props => (
   <Container>
     <AvatarContainer>
-      <Img sizes={props.avatar.sizes} />
+      <Img fluid={props.avatar.fluid} />
     </AvatarContainer>
   </Container>
 )

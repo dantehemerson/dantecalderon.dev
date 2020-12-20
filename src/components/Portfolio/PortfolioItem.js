@@ -146,7 +146,7 @@ export default props => (
           <div className="TopBarButtons" />
           {!props.finished && <InProgress />}
         </TopBar>
-        <Cover sizes={props.data.thumbnail} />
+        <Cover fluid={props.data.thumbnail} />
       </CoverWrapper>
       <div>
         <Title>{props.data.title}</Title>

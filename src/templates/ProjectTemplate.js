@@ -40,14 +40,14 @@ const ProjectTemplate = props => {
     <Layout
       title={title}
       path={post.fields.slug}
-      image={image.childImageSharp.sizes.src}
+      image={image.childImageSharp.fluid.src}
       description={description}
     >
       <Project
         {...post}
         {...siteMetadata}
         content={post.body}
-        image={post.frontmatter.image.childImageSharp.sizes}
+        image={post.frontmatter.image.childImageSharp.fluid}
         avatar={props.data.avatar}
       />
     </Layout>
@@ -57,8 +57,8 @@ const ProjectTemplate = props => {
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     avatar: imageSharp(fluid: { originalName: { regex: "/avatar2.jpeg/" } }) {
-      sizes(maxWidth: 720) {
-        ...GatsbyImageSharpSizes_tracedSVG
+      fluid(maxWidth: 720) {
+        ...GatsbyImageSharpFluid_tracedSVG
       }
     }
     site {
@@ -77,8 +77,8 @@ export const pageQuery = graphql`
         description
         image {
           childImageSharp {
-            sizes(maxWidth: 1920) {
-              ...GatsbyImageSharpSizes_tracedSVG
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
@@ -86,8 +86,8 @@ export const pageQuery = graphql`
           description
           image {
             childImageSharp {
-              sizes(maxWidth: 1920) {
-                ...GatsbyImageSharpSizes_tracedSVG
+              fluid(maxWidth: 1920) {
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
           }

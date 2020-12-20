@@ -378,7 +378,7 @@ const Navbar = props => {
           }}
           to="/"
         >
-          <Logo alt={subtitle} sizes={props.data.logo.sizes} />
+          <Logo alt={subtitle} fluid={props.data.logo.fluid} />
           <Title>{title}</Title>
         </TitleWrapper>
         <div>
@@ -426,8 +426,8 @@ export default props => {
   const data = useStaticQuery(graphql`
     query {
       logo: imageSharp(fluid: { originalName: { regex: "/logo.png/" } }) {
-        sizes(maxWidth: 64) {
-          ...GatsbyImageSharpSizes_tracedSVG
+        fluid(maxWidth: 64) {
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
       site {

@@ -45,7 +45,7 @@ export const LatestPostsItem = ({ post }) => (
   <Container to={post.path}>
     <div>
       <ImageWrapper>
-        <Img sizes={post.thumbnail} />
+        <Img fluid={post.thumbnail} />
       </ImageWrapper>
       <Info>
         <Title>{post.title}</Title>

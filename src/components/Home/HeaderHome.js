@@ -84,8 +84,8 @@ export default props => (
     query={graphql`
       query {
         avatar: imageSharp(fluid: { originalName: { regex: "/avatar.jpg/" } }) {
-          sizes(maxWidth: 360) {
-            ...GatsbyImageSharpSizes_tracedSVG
+          fluid(maxWidth: 360) {
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
         site {

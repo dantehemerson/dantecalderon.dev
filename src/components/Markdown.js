@@ -22,7 +22,9 @@ const StyledContent = styled.div`
   h4.md-h4 a,
   h5.md-h5 a,
   h6.md-h6 a,
-  p.md-p a {
+  p.md-p a,
+  ul.md-ul a,
+  ol.md-ol a {
     color: rgb(74, 144, 226);
     border-bottom: 1px dotted rgb(91, 159, 239);
     text-decoration: none;

@@ -59,7 +59,7 @@ const Tooltip = styled.div`
   }
 `
 
-const LinkTool = styled.a`
+const LinkTool = styled.div`
   &:hover + ${Tooltip} {
     opacity: 1;
     bottom: calc(102%);
@@ -118,9 +118,6 @@ export default props => (
         marginBottom: `7px`,
         display: `flex`,
       }}
-      href={props.url}
-      target="_blank"
-      rel="noopener"
     >
       <Image
         style={{

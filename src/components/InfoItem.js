@@ -8,6 +8,7 @@ const InfoItem = ({ title, description, postfix, showPostfixImage }) => {
       <div dangerouslySetInnerHTML={{ __html: description }} />
       {showPostfixImage && (
         <img
+          alt="listening"
           className="postfixImage"
           src="https://i.ibb.co/6gzCdm5/equaliser-animated-green-73b73928.gif"
         />

@@ -6,32 +6,35 @@ import bg from '../assets/images/footer-bg2.png'
 import { media } from '../styles'
 
 const Form = styled.form`
-  background-color: #0e0e0e;
+  background-color: grey;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
-  background-image: url(${bg});
   background-position: center;
   background-repeat: no-repeat;
+  background-image: url(${bg});
   background-size: cover;
   margin: 10px auto;
+  max-width: 770px;
   align-items: center;
-  padding: 44px 12px;
+  padding: 24px 12px 12px;
+  border-radius: 4px;
   opacity: 0.9;
   display: flex;
   flex-direction: column;
 `
 const Title = styled.h2`
-  margin-bottom: 1.3em;
+  margin-bottom: 1em;
   color: white;
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
   font-size: 24px;
   ${media.sm`
-    font-size: 35px;
+    font-size: 22px;
   `}
 `
 const Input = styled.input`
   padding: 10px 1rem !important;
-  max-width: 500px;
+  max-width: 460px;
   font-weight: 600 !important;
   color: white !important;
   background: transparent !important;
@@ -82,9 +85,9 @@ const SubscribeForm = () => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Title>Subscribe to my email list!</Title>
+      <Title>Join the Newsletter</Title>
       <Input
-        placeholder="Email address"
+        placeholder="Email  "
         name="email"
         value={email}
         type="text"

@@ -24,10 +24,10 @@ const getAllTagsInPages = (markdownPages = []) => {
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return new Promise((resolve, reject) => {
-    const projectTemplate = path.resolve('./src/templates/ProjectTemplate.js')
-    const postTemplate = path.resolve('./src/templates/PostTemplate.js')
-    const blogListTemplate = path.resolve('./src/templates/BlogListTemplate.js')
-    const tagsBlogListTemplate = path.resolve('./src/templates/TagsBlogListTemplate.js')
+    const projectTemplate = path.resolve('./src/templates/ProjectTemplate.tsx')
+    const postTemplate = path.resolve('./src/templates/PostTemplate.tsx')
+    const blogListTemplate = path.resolve('./src/templates/BlogListTemplate.tsx')
+    const tagsBlogListTemplate = path.resolve('./src/templates/TagsBlogListTemplate.tsx')
 
     resolve(
       graphql(`

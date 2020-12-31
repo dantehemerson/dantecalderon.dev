@@ -9,8 +9,9 @@ import Navbar from './Navbar'
 
 const Layout = props => {
   const { simple, active, children } = props
+
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <link
           href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Gentium+Book+Basic:400,400i,700,700i"
@@ -28,7 +29,7 @@ const Layout = props => {
           {!simple && <Footer />}
         </>
       </ThemeProvider>
-    </React.Fragment>
+    </>
   )
 }
 

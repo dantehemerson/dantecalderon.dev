@@ -1,7 +1,7 @@
 import React from 'react'
 import { AwesomeButton } from 'react-awesome-button'
 import styled from 'styled-components'
-import useSiteMetadata from '../hooks/useSiteMetadata'
+import {useSiteMetadata} from '../hooks/useSiteMetadata'
 
 const ContactSocialWrapper = styled.div`
   width: 100%;

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import ReactDisqusComments from 'react-disqus-comments'
 import styled from 'styled-components'
-import useSiteMetadata from '../hooks/useSiteMetadata'
+import {useSiteMetadata} from '../hooks/useSiteMetadata'
 
 const Container = styled.div`
   max-width: 800px;

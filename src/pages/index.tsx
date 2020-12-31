@@ -1,13 +1,14 @@
-import React from 'react'
+import { PageRendererProps } from 'gatsby'
+import React, { FC } from 'react'
 import Header from '../components/Home/HeaderHome'
 import { LatestPosts } from '../components/Home/LatestPosts'
 import Layout from '../components/Layout'
 import Markdown from '../components/Markdown'
 import SEO from '../components/SEO'
-import useSiteMetadata from '../hooks/useSiteMetadata'
+import { useSiteMetadata } from '../hooks/useSiteMetadata'
 import { pages } from '../utils'
 
-const Index = props => {
+const Index: FC<PageRendererProps> = props => {
   const {
     siteMetadata: { siteUrl },
     aboutContent,

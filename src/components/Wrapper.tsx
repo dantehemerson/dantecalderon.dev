@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export default styled.div`
+export default styled.div<any>`
   display: flex;
   align-items: ${props => (props.alignItems ? props.alignItems : 'center')};
   flex-direction: ${props => (props.flexDirection ? props.flexDirection : 'row')};

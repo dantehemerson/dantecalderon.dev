@@ -6,6 +6,8 @@
 
 Code of my personal static website were I write about Node, JS/Typescript, Backend development and more.
 
+![Screenshot](./content/images/Screenshot-20210101221653-2169x1171.png)
+
 Deployed at: https://dantecalderon.dev
 
 ## 💪 Powered by:
@@ -19,11 +21,11 @@ See complete stack in [StackShare](https://stackshare.io/dantehemerson/dantecald
 ## 💡 Features:
 * [Blog](https://dantecalderon.dev/blog)
 * [Portfolio](https://dantecalderon.dev/portfolio)
-* [Dynamic status section](https://dantecalderon.dev/) supported via APIs:
-  - Github Status (Github API)
-  - Contributions in last year(Github API)
-  - Latest commit(Github API)
-  - Listening(Last.fm API)
+* [Dynamic status section](https://dantecalderon.dev/) supported via [my API](https://github.com/dantehemerson/api):
+  - Github Status
+  - Contributions in last year
+  - Latest commit
+  - Listening
 * [Tech Stack Section](https://dantecalderon.dev/#my-stack)
 * Share Post buttons
 * TypeScript support

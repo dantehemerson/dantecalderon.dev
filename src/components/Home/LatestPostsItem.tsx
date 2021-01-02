@@ -1,8 +1,29 @@
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+import Img, { FluidObject } from 'gatsby-image'
 import React from 'react'
 import styled from 'styled-components'
 import { media } from '../../styles'
+
+type LatestPostsItemProps = {
+  post: {
+    path: string
+    fluidImg: FluidObject
+    title: string
+  }
+}
+
+export const LatestPostsItem = ({ post }: LatestPostsItemProps) => (
+  <Container to={post.path}>
+    <div>
+      <ImageWrapper>
+        <Img fluid={post.fluidImg} />
+      </ImageWrapper>
+      <Info>
+        <Title>{post.title}</Title>
+      </Info>
+    </div>
+  </Container>
+)
 
 const Container = styled(Link)`
   background: white;
@@ -40,16 +61,3 @@ const Title = styled.h3`
     color: #1976d2;
   }
 `
-
-export const LatestPostsItem = ({ post }) => (
-  <Container to={post.path}>
-    <div>
-      <ImageWrapper>
-        <Img fluid={post.thumbnail} />
-      </ImageWrapper>
-      <Info>
-        <Title>{post.title}</Title>
-      </Info>
-    </div>
-  </Container>
-)

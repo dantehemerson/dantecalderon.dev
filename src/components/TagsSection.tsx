@@ -3,16 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { kebabCase } from 'lodash'
 import { media } from '../styles'
-
-const Container = styled.div`
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-`
+import { Wrapper } from './Wrapper'
 
 const Tag = styled(Link)`
   background: #fff;
@@ -23,7 +14,7 @@ const Tag = styled(Link)`
   font-weight: 600;
   line-height: 23px;
   color: #333;
-  border-radius: 0.5625rem;
+  border-radius: 4px;
   text-decoration: none;
   border: 2px solid #d6e0ef;
   margin: 2px 2px;
@@ -50,7 +41,7 @@ const Title = styled.span`
 `
 const TagsSection = ({ tags }) => {
   return (
-    <Container id="post_tags">
+    <Wrapper id="post_tags" maxWidth={824} display="auto" paddingLeft={12} paddingRight={12}>
       <hr />
       <Title>TAGS:</Title>
       {tags.map(tag => (
@@ -63,7 +54,7 @@ const TagsSection = ({ tags }) => {
           marginTop: '23px',
         }}
       />
-    </Container>
+    </Wrapper>
   )
 }
 

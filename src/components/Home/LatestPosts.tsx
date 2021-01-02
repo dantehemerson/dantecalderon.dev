@@ -7,7 +7,7 @@ import { LatestPostsItem } from './LatestPostsItem'
 
 export const LatestPosts = () => {
   const posts = get(
-    useStaticQuery(graphql`
+    useStaticQuery<{ abs: number }>(graphql`
       query {
         allMdx(
           sort: { fields: [frontmatter___date], order: DESC }
@@ -22,7 +22,6 @@ export const LatestPosts = () => {
               frontmatter {
                 date(formatString: "DD MMMM, YYYY")
                 title
-                slug
                 image {
                   childImageSharp {
                     fluid {
@@ -30,7 +29,6 @@ export const LatestPosts = () => {
                     }
                   }
                 }
-                published
               }
             }
           }
@@ -54,17 +52,15 @@ export const LatestPosts = () => {
           See all ➤
         </Link>
       </Header>
-      <Container wrap="wrap" maxWidth="1100px">
-        {posts.map(({ node }, index) => {
+      <Container>
+        {posts.map(({ node: post }, index) => {
           return (
             <LatestPostsItem
               key={index}
               post={{
-                title: node.frontmatter.title,
-                thumbnail: node.frontmatter.image.childImageSharp.fluid,
-                excerpt: node.excerpt,
-                date: node.frontmatter.date,
-                path: `/${node.fields.slug}`,
+                title: post.frontmatter.title,
+                fluidImg: post.frontmatter.image.childImageSharp.fluid,
+                path: `/${post.fields.slug}`,
               }}
             />
           )
@@ -85,7 +81,6 @@ const Header = styled.div`
     margin: 0;
     text-decoration: underline;
   }
-
   .all {
     color: #4c91e2;
     font-size: 12px;

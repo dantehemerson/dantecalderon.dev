@@ -77,8 +77,7 @@ export default props => (
         <Title>{props.data.title}</Title>
         <Excerpt>{props.data.excerpt}</Excerpt>
         <Time>
-          <time dateTime="2008-02-14 20:00">{props.data.date} </time>
-          &middot; {props.data.timeToRead} min read
+          <time dateTime={props.data.date}>{props.data.date} </time>
         </Time>
       </Info>
     </div>

@@ -35,7 +35,6 @@ const Blog = props => {
                     excerpt: node.frontmatter.description || node.excerpt,
                     date: node.frontmatter.date,
                     path: `/${node.fields.slug}`,
-                    timeToRead: node.timeToRead,
                   }}
                   key={index}
                 />
@@ -71,7 +70,6 @@ export const queryBlog = graphql`
       edges {
         node {
           excerpt(pruneLength: 240)
-          timeToRead
           fields {
             slug
           }

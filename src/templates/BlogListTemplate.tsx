@@ -10,7 +10,7 @@ import { pages } from '../utils'
 
 const PostsWrapper = styled.div`
   padding: 0 15px;
-  max-width: 900px;
+  max-width: 840px;
   margin: 0 auto 35px;
 `
 
@@ -32,7 +32,7 @@ const Blog = props => {
                   data={{
                     title: node.frontmatter.title,
                     thumbnail: node.frontmatter.image.childImageSharp.fluid,
-                    excerpt: node.excerpt,
+                    excerpt: node.frontmatter.description || node.excerpt,
                     date: node.frontmatter.date,
                     path: `/${node.fields.slug}`,
                     timeToRead: node.timeToRead,
@@ -76,8 +76,9 @@ export const queryBlog = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMMM DD, YYYY")
             title
+            description
             slug
             image {
               childImageSharp {

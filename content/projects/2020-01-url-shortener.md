@@ -11,7 +11,7 @@ images:
     image: ../images/url-shortener-pet-5.png
 date: '2020-01-05T22:26:20-05:00'
 finished: true
-published: true
+published: false
 style: default
 tags:
   - Gatsby

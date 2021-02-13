@@ -37,31 +37,6 @@ export default function LatestPosts() {
   )
 
   return (
-<<<<<<< HEAD
-    <div
-      style={{
-        background: '#fafafa',
-        padding: '35px 12px 25px',
-      }}
-    >
-      <Header>
-        <h2>Latest Posts:</h2>
-        <Link className="all" to="/blog">
-          See all ➤
-        </Link>
-      </Header>
-      <Container>
-        {posts.map(({ node: post }, index) => {
-          return (
-            <LatestPostsItem
-              key={index}
-              post={{
-                title: post.frontmatter.title,
-                fluidImg: post.frontmatter.image.childImageSharp.fluid,
-                path: `/${post.fields.slug}`,
-              }}
-            />
-=======
     <div>
       <p className="md-p">
         <strong>📖 Latest Posts:</strong>
@@ -74,7 +49,6 @@ export default function LatestPosts() {
                 <Link to={`/${post.fields.slug}`}>{post.frontmatter.title}</Link>
               </p>
             </li>
->>>>>>> develop
           )
         })}
         <li id="more">
@@ -87,40 +61,6 @@ export default function LatestPosts() {
   )
 }
 
-<<<<<<< HEAD
-const Header = styled.div`
-  max-width: 1080px;
-  margin: 0 auto;
-  display: flex;
-  padding-bottom: 10px;
-  align-items: center;
-  justify-content: space-between;
-  h2 {
-    margin: 0;
-    text-decoration: underline;
-  }
-  .all {
-    color: #4c91e2;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-`
-
-const Container = styled.div`
-  max-width: 1080px;
-  display: grid;
-  grid-gap: 10px;
-  margin: 0 auto;
-  ${media.sm`
-    grid-template-columns: 1fr 1fr;
-  `};
-  ${media.md`
-    grid-template-columns: 1fr 1fr 1fr;
-  `};
-`
-=======
 //   <Header>
 //     <h2>Latest Posts:</h2>
 //     <Link className="all" to="/blog">
@@ -138,4 +78,3 @@ const Container = styled.div`
 // />
 //   </Container>
 // </div>
->>>>>>> develop

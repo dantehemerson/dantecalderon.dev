@@ -5,7 +5,7 @@ import { get } from 'lodash'
 import React from 'react'
 import { LatestPostsItem } from './LatestPostsItem'
 
-export const LatestPosts = () => {
+export default  function LatestPosts() {
   const posts = get(
     useStaticQuery<{ abs: number }>(graphql`
       query {

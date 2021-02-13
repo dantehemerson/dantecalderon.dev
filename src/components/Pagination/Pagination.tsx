@@ -1,9 +1,8 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import ButtonNextPrev from './ButtonNextPrev'
 import { GU } from './contants'
 import { PaginationItem } from './PaginationItem'
 import { PaginationSeparator } from './PaginationSeparator'
-import ButtonNextPrev from './ButtonNextPrev'
 
 function paginationItems(pages, selected) {
   const all = [...Array(pages)].map((_, i) => i)

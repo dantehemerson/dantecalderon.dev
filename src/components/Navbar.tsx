@@ -106,7 +106,6 @@ const Wrapper = styled.nav`
   z-index: 10;
   box-shadow: 0px 1px 0px 0px #f3f3f3;
   background: white;
-  transition: 0.3s;
   &.inicio {
     background: transparent;
   }
@@ -238,7 +237,6 @@ const ItemLink = styled(Link)`
     background: rgba(195, 195, 195, 0.22) !important;
   }
   ${media.md`
-    transition: all 0.4s !important;
     padding: 6px 16px !important;
   `}
   &.active {

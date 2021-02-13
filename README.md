@@ -45,6 +45,12 @@ And run:
 yarn start
 ```
 
+## 💱 Changelog
+
+**Screenshots**
+
+- https://drive.google.com/drive/folders/1SKe0XkNrWMfgsuf66BzjWmVScmDZ95U5
+
 ## ⚖️ License
 
 [MIT](./LICENSE)

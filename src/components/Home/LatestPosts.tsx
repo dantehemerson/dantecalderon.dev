@@ -1,11 +1,8 @@
 import { graphql, Link, useStaticQuery } from 'gatsby'
-import { media } from '../../styles'
-import styled from 'styled-components'
 import { get } from 'lodash'
 import React from 'react'
-import { LatestPostsItem } from './LatestPostsItem'
 
-export const LatestPosts = () => {
+export default function LatestPosts() {
   const posts = get(
     useStaticQuery<{ abs: number }>(graphql`
       query {
@@ -40,6 +37,7 @@ export const LatestPosts = () => {
   )
 
   return (
+<<<<<<< HEAD
     <div
       style={{
         background: '#fafafa',
@@ -63,13 +61,33 @@ export const LatestPosts = () => {
                 path: `/${post.fields.slug}`,
               }}
             />
+=======
+    <div>
+      <p className="md-p">
+        <strong>📖 Latest Posts:</strong>
+      </p>
+      <ul>
+        {posts.map(({ node: post }, index) => {
+          return (
+            <li id={index}>
+              <p className="md-p">
+                <Link to={`/${post.fields.slug}`}>{post.frontmatter.title}</Link>
+              </p>
+            </li>
+>>>>>>> develop
           )
         })}
-      </Container>
+        <li id="more">
+          <p className="md-p">
+            <Link to="/blog">more...</Link>
+          </p>
+        </li>
+      </ul>
     </div>
   )
 }
 
+<<<<<<< HEAD
 const Header = styled.div`
   max-width: 1080px;
   margin: 0 auto;
@@ -102,3 +120,22 @@ const Container = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
   `};
 `
+=======
+//   <Header>
+//     <h2>Latest Posts:</h2>
+//     <Link className="all" to="/blog">
+//       See all ➤
+//     </Link>
+//   </Header>
+//   <Container>
+//   <LatestPostsItem
+//   key={index}
+//   post={{
+//     title: post.frontmatter.title,
+//     fluidImg: post.frontmatter.image.childImageSharp.fluid,
+//     path: `/${post.fields.slug}`,
+//   }}
+// />
+//   </Container>
+// </div>
+>>>>>>> develop

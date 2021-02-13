@@ -3,7 +3,7 @@ model: post
 title: Mejorando mi experiencia en Ubuntu
 description: >- 
   Tener una buena experiencia en nuestro SO es muy importante ya que nos permite ser mas productivos. 
-  Te invito que te tomes el tiempo de configurar shorcuts, buscar herramientas y extesiones que te permitan mejorar tu experiencia en tu SO y ser mas productivo en tu dia.
+  
 author: Dante Calderón
 pathPrefix: blog
 slug: improving-ux-ubuntu-workspace
@@ -16,6 +16,10 @@ tags:
   - GNOME
   - UX
 ---
+
+Tener una buena experiencia en nuestro SO es muy importante ya que nos permite ser mas productivos. 
+
+Te invito que te tomes el tiempo de configurar shorcuts, buscar herramientas y extesiones que te permitan mejorar tu experiencia en tu SO y ser mas productivo en tu dia.
 
 Estoy usando Ubuntu 18.04 y se me hacia muy complicando el cambiar entre pantallas usando `Alt+Tab`, ya que 
 GNOME agrupa las ventanas por aplicacion y personalmente no estoy muy acostumbrado a ese comportamiento.

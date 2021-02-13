@@ -10,7 +10,7 @@ import { pages } from '../utils'
 
 const PostsWrapper = styled.div`
   padding: 0 15px;
-  max-width: 840px;
+  max-width: 800px;
   margin: 0 auto 35px;
 `
 

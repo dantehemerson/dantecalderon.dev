@@ -1,7 +1,7 @@
 ---
 model: post
 title: 'Buffers in Node.js'
-description: Buffers are commonly used to store temporary data
+description: Buffers are commonly used everywere to share data efficiently, learn how it works.
 author: Dante Calderón
 pathPrefix: blog
 slug: buffers-in-nodejs

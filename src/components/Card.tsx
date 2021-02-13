@@ -10,7 +10,7 @@ const Container = styled(Link)`
     align-items: flex-start;
     text-align: left;
     flex-direction: column;
-    padding: 1rem 0.5rem;
+    padding: 1.2rem 0.5rem;
     ${media.md`
       flex-direction: row;
     `} * {
@@ -38,7 +38,7 @@ const Info = styled.div`
   max-width: 560px;
   padding-top: 12px;
   ${media.md`
-    padding: 0 0 0 50px;
+    padding: 0 0 0 30px;
     width: 75%;
     max-width: 100%;
   `};
@@ -47,21 +47,21 @@ const Title = styled.h3`
   font-family: 'Open Sans', sans-serif;
   color: #282a2d;
   transition: 0.3s;
-  font-size: 17px;
+  font-size: 18px;
   ${media.sm`
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   `}
 `
 const Time = styled.p`
   color: #757575;
-  font-size: 14px;
-  text-align: right;
-  padding: 6px 6px 6px;
+  font-size: 13px;
+  padding: 12px 0px 6px;
 `
 
-const Excerpt = styled.p`
+const Summary = styled.p`
   color: #757575;
   font-size: 15px;
+  padding-top: 10px;
   ${media.sm`
     font-size: 0.9rem;
   `};
@@ -75,7 +75,7 @@ export default props => (
       </ImageWrapper>
       <Info>
         <Title>{props.data.title}</Title>
-        <Excerpt>{props.data.excerpt}</Excerpt>
+        <Summary>{props.data.excerpt}</Summary>
         <Time>
           <time dateTime={props.data.date}>{props.data.date} </time>
         </Time>

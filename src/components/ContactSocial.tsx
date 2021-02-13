@@ -32,7 +32,7 @@ const ContactSocial = () => {
   const {
     siteMetadata: { title, socials },
   } = useSiteMetadata()
-    console.log('🤫 Dante ➤ ContactSocial ➤ socials', socials)
+  console.log('🤫 Dante ➤ ContactSocial ➤ socials', socials)
 
   return (
     <ContactSocialWrapper>
@@ -88,7 +88,7 @@ const ContactSocial = () => {
       >
         <img
           style={{ background: 'white', height: 'auto' }}
-          src='https://gist.githubusercontent.com/alexcarpenter/5e5772136ed711cd9fd8089c5ac76ea8/raw/6f6790a9b3defa8a77729176da376ac53a8d1d27/devto.svg'
+          src="https://gist.githubusercontent.com/alexcarpenter/5e5772136ed711cd9fd8089c5ac76ea8/raw/6f6790a9b3defa8a77729176da376ac53a8d1d27/devto.svg"
           title={`Dev.to - ${title}`}
           alt="img"
         />

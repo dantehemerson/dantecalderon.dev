@@ -5,28 +5,33 @@ import prismStyles from './prism'
 import socialColors from './social-colors'
 import { withPrefix } from 'gatsby'
 
-const sizes = {
+type ScreenSizes = 'sm' | 'md' | 'lg' | 'xl'
+
+const sizes: Record<ScreenSizes, number> = {
   xl: 1170,
   lg: 992,
   md: 768,
   sm: 576,
 }
 
-const sizesMax = {
+const sizesMax: Record<ScreenSizes, number> = {
   xl: 1169,
   lg: 991,
   md: 767,
   sm: 575,
 }
 
-export const media = Object.keys(sizes).reduce((accumulator, label) => {
-  accumulator[label] = (...args) => css`
-    @media (min-width: ${sizes[label]}px) {
-      ${css(...args)};
-    }
-  `
-  return accumulator
-}, {})
+export const media = Object.keys(sizes).reduce<Partial<Record<ScreenSizes, any>>>(
+  (accumulator, label) => {
+    accumulator[label] = (...args) => css`
+      @media (min-width: ${sizes[label]}px) {
+        ${css(...args)};
+      }
+    `
+    return accumulator
+  },
+  {}
+)
 
 export const mediaMax = Object.keys(sizesMax).reduce((accumulator, label) => {
   accumulator[label] = (...args) => css`

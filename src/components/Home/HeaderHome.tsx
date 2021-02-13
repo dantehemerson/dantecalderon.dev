@@ -6,7 +6,25 @@ import Info from '../Info'
 import Rotational from '../Rotational'
 import Social from '../SocialBlade'
 
-const Container = styled.div`
+const HeaderHome = ({ data }) => (
+  <div
+    style={{
+      background: '#e8fdf5',
+    }}
+  >
+    <Container className="row">
+      <MainInfoWrapper>
+        <Title>{data.site.siteMetadata.title}</Title>
+        <Subtitle>{data.site.siteMetadata.subtitle}</Subtitle>
+        <Social />
+        <Info />
+      </MainInfoWrapper>
+      <Rotational avatar={data.avatar} />
+    </Container>
+  </div>
+)
+
+const Container = styled.p`
   min-height: 600px;
   max-width: 1080px;
   display: grid;
@@ -30,17 +48,6 @@ const Title = styled.h1`
   color: #052d3f;
   margin-bottom: 0;
   position: relative;
-  &::after {
-    content: '';
-    background-color: #f5c0a2;
-    height: 10px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    width: 100%;
-    z-index: -1;
-  }
   ${media.sm`
     font-size: 2.4rem;
   `};
@@ -60,24 +67,6 @@ const Subtitle = styled.h2`
   text-align: center;
   color: #052d3f;
 `
-
-const HeaderHome = ({ data }) => (
-  <div
-    style={{
-      background: '#e8fdf5',
-    }}
-  >
-    <Container wrap="wrap" maxWidth="1100px" className="row" justifyContent="center">
-      <MainInfoWrapper>
-        <Title>{data.site.siteMetadata.title}</Title>
-        <Subtitle>{data.site.siteMetadata.subtitle}</Subtitle>
-        <Social />
-        <Info />
-      </MainInfoWrapper>
-      <Rotational avatar={data.avatar} />
-    </Container>
-  </div>
-)
 
 export default props => (
   <StaticQuery

@@ -1,7 +1,7 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
-import {useSiteMetadata} from '../hooks/useSiteMetadata'
+import { useSiteMetadata } from '../hooks/useSiteMetadata'
 import { media } from '../styles'
 
 const Container = styled.footer`

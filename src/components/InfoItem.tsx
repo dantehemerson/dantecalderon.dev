@@ -1,7 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const InfoItem = ({ title, description, postfix, showPostfixImage }) => {
+type InfoItem = {
+  title: string
+  description: string
+  postfix?: string
+  showPostfixImage?: boolean
+}
+
+const InfoItem = ({ title, description, postfix, showPostfixImage }: InfoItem) => {
   return (
     <Container>
       <p className="title3">{title}:</p>
@@ -37,8 +44,10 @@ const Container = styled.div`
     }
     a {
       white-space: nowrap;
+      color: #0057bc;
       max-width: 222px;
       overflow: hidden;
+      text-decoration: none;
       text-overflow: ellipsis;
     }
     color: #484848;

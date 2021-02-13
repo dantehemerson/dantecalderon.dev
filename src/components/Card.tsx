@@ -7,26 +7,24 @@ import { media } from '../styles'
 const Container = styled(Link)`
   & > div {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     text-align: left;
     flex-direction: column;
-    border-bottom: 1px solid rgb(221, 221, 221);
-    padding: 2rem 0px;
+    padding: 1.2rem 0.5rem;
     ${media.md`
       flex-direction: row;
     `} * {
       margin: 0;
     }
-  }
-  &:first-child {
-    & > div {
-      border-top: 1px solid rgb(221, 221, 221);
+
+    &:hover {
+      background-color: #f2f2f2;
+      box-shadow: -16px 0 0 0  #f2f2f2, 16px 0 0 0  #f2f2f2;
     }
   }
   text-decoration: none;
 `
 const ImageWrapper = styled.div`
-  border-radius: 4px;
   overflow: hidden;
   width: 100%;
   max-width: 500px;
@@ -36,10 +34,11 @@ const ImageWrapper = styled.div`
 `
 const Info = styled.div`
   width: 100%;
+  height: 100%;
   max-width: 560px;
   padding-top: 12px;
   ${media.md`
-    padding: 0 0 0 50px;
+    padding: 0 0 0 30px;
     width: 75%;
     max-width: 100%;
   `};
@@ -48,24 +47,21 @@ const Title = styled.h3`
   font-family: 'Open Sans', sans-serif;
   color: #282a2d;
   transition: 0.3s;
-  font-size: 17px;
+  font-size: 18px;
   ${media.sm`
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   `}
-  ${Container}:hover & {
-    color: #1976d2;
-  }
 `
 const Time = styled.p`
   color: #757575;
-  font-size: 14px;
-  text-align: right;
-  padding: 6px 6px 6px;
+  font-size: 13px;
+  padding: 12px 0px 6px;
 `
 
-const Excerpt = styled.p`
+const Summary = styled.p`
   color: #757575;
   font-size: 15px;
+  padding-top: 10px;
   ${media.sm`
     font-size: 0.9rem;
   `};
@@ -79,11 +75,10 @@ export default props => (
       </ImageWrapper>
       <Info>
         <Title>{props.data.title}</Title>
+        <Summary>{props.data.excerpt}</Summary>
         <Time>
-          <time dateTime="2008-02-14 20:00">{props.data.date} </time>
-          &middot; {props.data.timeToRead} min read
+          <time dateTime={props.data.date}>{props.data.date} </time>
         </Time>
-        <Excerpt>{props.data.excerpt}</Excerpt>
       </Info>
     </div>
   </Container>

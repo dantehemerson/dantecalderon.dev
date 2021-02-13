@@ -1,9 +1,8 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import ButtonNextPrev from './ButtonNextPrev'
 import { GU } from './contants'
 import { PaginationItem } from './PaginationItem'
 import { PaginationSeparator } from './PaginationSeparator'
-import ButtonNextPrev from './ButtonNextPrev'
 
 function paginationItems(pages, selected) {
   const all = [...Array(pages)].map((_, i) => i)
@@ -66,8 +65,6 @@ const Pagination = React.memo(function Pagination({
         align-items: center;
         justify-content: space-between;
         margin-top: 10px;
-        border-radius: 4px;
-        box-shadow: 0px 0px 12px 1px #d5d0d0eb;
         padding: ${2 * GU}px 0;
       `}
       {...props}
@@ -102,18 +99,5 @@ const Pagination = React.memo(function Pagination({
   )
 })
 
-Pagination.propTypes = {
-  onChange: PropTypes.func,
-  pages: PropTypes.number,
-  selected: PropTypes.number,
-  touchMode: PropTypes.bool,
-}
-
-Pagination.defaultProps = {
-  // onChange: noop,
-  pages: 0,
-  selected: 0,
-  touchMode: false,
-}
 
 export { Pagination }

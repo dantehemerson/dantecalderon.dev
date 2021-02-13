@@ -1,7 +1,7 @@
 import React from 'react'
 import { AwesomeButton } from 'react-awesome-button'
 import styled from 'styled-components'
-import {useSiteMetadata} from '../hooks/useSiteMetadata'
+import { useSiteMetadata } from '../hooks/useSiteMetadata'
 
 const ContactSocialWrapper = styled.div`
   width: 100%;
@@ -32,6 +32,7 @@ const ContactSocial = () => {
   const {
     siteMetadata: { title, socials },
   } = useSiteMetadata()
+  console.log('🤫 Dante ➤ ContactSocial ➤ socials', socials)
 
   return (
     <ContactSocialWrapper>
@@ -78,16 +79,17 @@ const ContactSocial = () => {
         />
       </Button>
       <Button
-        type="instagram"
+        type="github"
         size="small"
-        href={socials.instagram}
+        href={socials.dev}
         title={`Instagram - ${title}`}
         target="_blank"
         rel="noopener"
       >
         <img
-          src="https://icongr.am/fontawesome/instagram.svg?color=ffffff"
-          title={`Instagram - ${title}`}
+          style={{ background: 'white', height: 'auto' }}
+          src="https://gist.githubusercontent.com/alexcarpenter/5e5772136ed711cd9fd8089c5ac76ea8/raw/6f6790a9b3defa8a77729176da376ac53a8d1d27/devto.svg"
+          title={`Dev.to - ${title}`}
           alt="img"
         />
       </Button>

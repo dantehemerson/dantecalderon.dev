@@ -2,7 +2,6 @@ import { graphql } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 import Card from '../components/Card'
-import Header from '../components/Header'
 import Layout from '../components/Layout'
 import Pagination from '../components/Pagination'
 import SEO from '../components/SEO'
@@ -14,16 +13,15 @@ const PostsWrapper = styled.div`
   margin: 0 auto 35px;
 `
 
-const Blog = props => {
+function Blog(props) {
   const posts = props.data.allMdx.edges || []
   const siteUrl = props.data.site.siteMetadata.siteUrl
 
   const { currentPage, numPages, hasNextPage, hasPrevPage } = props.pageContext
   return (
     <Layout location={props.location} active={pages.blog}>
-      <div className="Blog">
+      <div className="Blog" style={{ marginTop: 90 }}>
         <SEO title="Blog" url={`${siteUrl}/blog`} />
-        <Header title="Blog" color="#3fabbb" />
         <PostsWrapper>
           {posts.map(({ node }, index) => {
             if (node.frontmatter.published)

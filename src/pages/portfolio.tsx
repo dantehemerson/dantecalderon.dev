@@ -1,6 +1,5 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import Header from '../components/Header'
 import Layout from '../components/Layout'
 import List from '../components/Portfolio/ProjectsList'
 import SEO from '../components/SEO'
@@ -13,17 +12,6 @@ const Portfolio = props => {
   return (
     <Layout location={props.location} active={pages.portfolio}>
       <SEO title="Portfolio" url={`${siteUrl}/portfolio`} />
-      <Header
-        title="Portfolio"
-        description={[
-          'These are some of my projects, to see more projects check my ',
-          <a key="link" target="__blank" rel="noopener" href="https://github.com/dantehemerson">
-            Github
-          </a>,
-          '.',
-        ]}
-        bottom="40px"
-      />
       <List posts={posts} />
     </Layout>
   )

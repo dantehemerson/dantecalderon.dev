@@ -3,7 +3,6 @@ import get from 'lodash/get'
 import React from 'react'
 import styled from 'styled-components'
 import Card from '../components/Card'
-import Header from '../components/Header'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import { pages, preferSpacedTag } from '../utils'
@@ -22,9 +21,8 @@ const BlogWithTags = props => {
   const siteUrl = props.data.site.siteMetadata.siteUrl
   return (
     <Layout location={props.location} active={pages.blog}>
-      <div className="Blog">
+      <div className="Blog" style={{ marginTop: 40 }}>
         <SEO title={title} url={`${siteUrl}/blog/tags/${tagSlug}`} />
-        <Header title={preferSpacedTag(tags)} color="#3fabbb" />
         <PostsWrapper>
           {posts.map(({ node }) => {
             if (node.frontmatter.published)

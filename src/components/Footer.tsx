@@ -82,7 +82,7 @@ export default props => {
           </a>{' '}
           website - © {new Date().getFullYear()}
         </span>{' '}
-        <Link to="/#a-little-bit-about-me" target="_blank" rel="noopener">
+        <Link to="/#about-me" target="_blank" rel="noopener">
           {title}
         </Link>
       </Copy>

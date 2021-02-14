@@ -87,7 +87,7 @@ export default props => (
     <Image fluid={props.avatar.fluid} />
     <Body>
       <Name>
-        <Author id="post_authorname" to="/#a-little-bit-about-me">
+        <Author id="post_authorname" to="/#about-me">
           Dante Calderón
         </Author>{' '}
         <b>|</b> <span id="post_date">{props.date}</span>

@@ -51,7 +51,7 @@ const PostTemplate = props => {
       />
       <TagsSection tags={tags} />
       <Share title={title} path={slug} />
-      <SubscribeForm />
+      {/* <SubscribeForm /> */}
     </Layout>
   )
 }

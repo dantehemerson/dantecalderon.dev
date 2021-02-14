@@ -83,10 +83,10 @@ export default props => {
       </div>
       <Body>
         <By>{props.make ? 'Made with ❤' : 'Written'} by</By>
-        <Name to="/#a-little-bit-about-me">Dante Calderón</Name>
+        <Name to="/#about-me">Dante Calderón</Name>
         <About>
           Hi, I'm Dante Calderón, web developer. Click{' '}
-          <Link className="default" to="/#a-little-bit-about-me">
+          <Link className="default" to="/#about-me">
             here
           </Link>{' '}
           if you want know more about me or checkout my{' '}

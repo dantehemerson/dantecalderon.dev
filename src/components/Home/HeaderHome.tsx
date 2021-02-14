@@ -3,26 +3,28 @@ import React from 'react'
 import styled from 'styled-components'
 import { media } from '../../styles'
 import Info from '../Info'
-import Rotational from '../Rotational'
-import Social from '../SocialBlade'
+import { AvatarHome } from './AvatarHome'
+import { SocialHome } from '../SocialBlade'
 
-const HeaderHome = ({ data }) => (
-  <div
-    style={{
-      background: '#e8fdf5',
-    }}
-  >
-    <Container className="row">
-      <MainInfoWrapper>
-        <Title>{data.site.siteMetadata.title}</Title>
-        <Subtitle>{data.site.siteMetadata.subtitle}</Subtitle>
-        <Social />
-        <Info />
-      </MainInfoWrapper>
-      <Rotational avatar={data.avatar} />
-    </Container>
-  </div>
-)
+function HeaderHome({ data }) {
+  return (
+    <div
+      style={{
+        background: '#e8fdf5',
+      }}
+    >
+      <Container className="row">
+        <MainInfoWrapper>
+          <Title>{data.site.siteMetadata.title}</Title>
+          <Subtitle>{data.site.siteMetadata.subtitle}</Subtitle>
+          <SocialHome />
+          <Info />
+        </MainInfoWrapper>
+        <AvatarHome image={data.avatar} />
+      </Container>
+    </div>
+  )
+}
 
 const Container = styled.p`
   min-height: 600px;

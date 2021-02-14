@@ -1,7 +1,17 @@
 import Img from 'gatsby-image'
 import React from 'react'
 import styled from 'styled-components'
-import { media } from '../styles'
+import { media } from '../../styles'
+
+export function AvatarHome(props) {
+  return (
+    <Container>
+      <AvatarContainer>
+        <Img fluid={props.image.fluid} />
+      </AvatarContainer>
+    </Container>
+  )
+}
 
 const Container = styled.div`
   width: 100%;
@@ -11,9 +21,9 @@ const Container = styled.div`
   justify-content: center;
 `
 const AvatarContainer = styled.div`
-  width: 115px;
+  width: 150px;
   ${media.sm`
-    width: 175px;
+    width: 150px;
   `}
   ${media.lg`
     width: 200px;
@@ -46,11 +56,3 @@ const AvatarContainer = styled.div`
     }
   }
 `
-
-export default props => (
-  <Container>
-    <AvatarContainer>
-      <Img fluid={props.avatar.fluid} />
-    </AvatarContainer>
-  </Container>
-)

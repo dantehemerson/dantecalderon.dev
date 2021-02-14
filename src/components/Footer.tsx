@@ -1,6 +1,7 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
+import { INFO } from '../data/info'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 import { media } from '../styles'
 
@@ -56,8 +57,8 @@ const Copy = styled.p`
 
 export default props => {
   const {
-    siteMetadata: { title, social },
-  } = useSiteMetadata()
+    title, social,
+  } = INFO
 
   return (
     <Container>

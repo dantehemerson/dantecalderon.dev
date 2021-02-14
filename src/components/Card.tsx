@@ -19,7 +19,7 @@ const Container = styled(Link)`
 
     &:hover {
       background-color: #f2f2f2;
-      box-shadow: -16px 0 0 0  #f2f2f2, 16px 0 0 0  #f2f2f2;
+      box-shadow: -16px 0 0 0 #f2f2f2, 16px 0 0 0 #f2f2f2;
     }
   }
   text-decoration: none;

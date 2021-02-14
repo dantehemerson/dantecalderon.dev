@@ -1,6 +1,6 @@
-import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
+import { INFO } from '../data/info'
 
 const SocialWrapper = styled.div`
   text-align: center;
@@ -18,44 +18,29 @@ const SocialIcon = styled.a`
   }
 `
 
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            subtitle
-            social {
-              title
-              icon
-              link
+export function SocialHome() {
+  const { social, title } = INFO
+
+  return (
+    <SocialWrapper>
+      {social.slice(0, 4).map(item => (
+        <SocialIcon
+          key={item.title}
+          href={item.link}
+          title={`${item.title} - ${title}`}
+          rel="noopener"
+          target="_blank"
+        >
+          <img
+            alt={item.title}
+            src={
+              item.icon === 'dev'
+                ? 'https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg'
+                : `https://icongr.am/fontawesome/${item.icon}.svg?color=052d3f`
             }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <SocialWrapper>
-        {data.site.siteMetadata.social.slice(0, 4).map(item => (
-          <SocialIcon
-            key={item.title}
-            href={item.link}
-            title={`${item.title} - ${data.site.siteMetadata.title}`}
-            rel="noopener"
-            target="_blank"
-          >
-            <img
-              alt={item.title}
-              src={
-                item.icon === 'dev'
-                  ? 'https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg'
-                  : `https://icongr.am/fontawesome/${item.icon}.svg?color=black`
-              }
-            />
-          </SocialIcon>
-        ))}
-      </SocialWrapper>
-    )}
-  />
-)
+          />
+        </SocialIcon>
+      ))}
+    </SocialWrapper>
+  )
+}

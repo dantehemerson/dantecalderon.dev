@@ -99,5 +99,4 @@ const Pagination = React.memo(function Pagination({
   )
 })
 
-
 export { Pagination }

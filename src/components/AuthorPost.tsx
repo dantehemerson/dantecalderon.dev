@@ -90,10 +90,7 @@ export default props => (
         <Author id="post_authorname" to="/#a-little-bit-about-me">
           Dante Calderón
         </Author>{' '}
-        <b>|</b>{' '}
-        <span id="post_date">
-          {props.date}
-        </span>
+        <b>|</b> <span id="post_date">{props.date}</span>
       </Name>
       <Edit
         title="Edit on Github"

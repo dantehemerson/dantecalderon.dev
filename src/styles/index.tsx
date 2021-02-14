@@ -297,65 +297,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 }
 
-.About {
-  font-size: 15px;
-  &__interests {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    text-align: left;
-
-    &__list {
-      list-style: none;
-    }
-    &__item {
-      margin-bottom: calc(1.3rem / 2);
-      i {
-        width: 27px;
-        height: 27px;
-        display: inline-block;
-        position: relative;
-        margin-right: 10px;
-        top: 6px;
-        background-size: cover;
-      }
-      i.ai {
-        background-image: url("${withPrefix('icons/ai.svg')}");
-      }
-      i.ml {
-        background-image: url("${withPrefix('icons/machine-learning.svg')}");
-      }
-      i.ds {
-        background-image: url("${withPrefix('icons/data.svg')}");
-      }
-      i.js {
-        background-image: url("${withPrefix('icons/javascript.svg')}");
-      }
-      i.cp {
-        background-image: url("${withPrefix('icons/algorithm.svg')}");
-      }
-      i.back {
-        background-image: url("${withPrefix('icons/server.svg')}");
-      }
-      i.more {
-        background-image: url("${withPrefix('icons/web-development.svg')}");
-      }
-      i.game {
-        background-image: url("${withPrefix('icons/pacman.svg')}");
-      }
-    }
-  }
-
-  &__interests__title {
-    font-family: 'Open Sans', sans-serif;
-    text-transform: uppercase;
-    background: #3384a0;
-    color: white;
-    font-size: 16px;
-    padding: 10px 85px;
-    display: inline-block;
-  }
-}
-
 p.para {
   padding-left: 0px !important;
   padding-right: 0px !important;

@@ -26,11 +26,11 @@ const AvatarContainer = styled.div`
     &::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: -20%;
-      transform: rotate(-45deg);
+      top: -21%;
+      left: -25%;
       height: 150px;
       width: 150px;
+      border-radius: 50%;
       background-color: #bcebd4;
       z-index: -1;
     }

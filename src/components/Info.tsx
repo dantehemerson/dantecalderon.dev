@@ -44,11 +44,11 @@ const Container = styled.div`
   margin-top: 15px;
   display: flex;
   min-width: 366px;
+  z-index: 10;
   flex-direction: column;
   align-items: flex-start;
   border: 1px solid #bcebd3;
   padding: 25px;
-  border-radius: 4px;
 `
 
 export default Info

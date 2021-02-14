@@ -92,7 +92,7 @@ export default props => (
         </Author>{' '}
         <b>|</b>{' '}
         <span id="post_date">
-          {props.date} · {props.timeToRead} min read
+          {props.date}
         </span>
       </Name>
       <Edit

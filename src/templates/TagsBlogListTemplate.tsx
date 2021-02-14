@@ -36,7 +36,6 @@ const BlogWithTags = props => {
                     excerpt: node.frontmatter.description || node.excerpt,
                     date: node.frontmatter.date,
                     path: `/${node.fields.slug}`,
-                    timeToRead: node.timeToRead,
                   }}
                   key={node.frontmatter.slug}
                 />

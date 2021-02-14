@@ -31,7 +31,6 @@ export default props => (
     <AuthorPost
       editLink={props.editLink}
       date={props.date}
-      timeToRead={props.timeToRead}
       avatar={props.avatar}
     />
     <Img fluid={props.image.childImageSharp.fluid} className="zoomable" />

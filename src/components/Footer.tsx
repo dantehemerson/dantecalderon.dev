@@ -56,9 +56,7 @@ const Copy = styled.p`
 `
 
 export default props => {
-  const {
-    title, social,
-  } = INFO
+  const { title, social } = INFO
 
   return (
     <Container>
@@ -77,8 +75,13 @@ export default props => {
         ))}
       </Social>
       <Copy>
-        <span className="copytext">© {new Date().getFullYear()} - All rights reserved.</span> Made
-        with <span className="heart">❤</span> by{' '}
+        <span className="copytext">
+          Design inpired by{' '}
+          <a href="https://slim.computer/" target="_blank" rel="noopener">
+            Sarah Lim's
+          </a>{' '}
+          website - © {new Date().getFullYear()}
+        </span>{' '}
         <Link to="/#a-little-bit-about-me" target="_blank" rel="noopener">
           {title}
         </Link>

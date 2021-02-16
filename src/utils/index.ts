@@ -6,16 +6,6 @@ export const pages = {
   contact: 'Contact',
 }
 
-export const getLinkEditPost = absolutePath => {
-  const res = /([^/]+)$/g.exec(absolutePath)
-  if (res.length >= 1) {
-    return `https://github.com/dantehemerson/dantecalderon.dev/blob/master/content/blog/${
-      res[res.length - 1]
-    }`
-  }
-  return ''
-}
-
 export const preferSpacedTag = tags => {
   for (const tag of tags) {
     if (!tag.includes(` `)) {

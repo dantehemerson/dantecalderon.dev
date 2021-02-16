@@ -61,27 +61,6 @@ const Author = styled(Link)`
 	`};
 `
 
-// const Edit = styled.a`
-//   font-size: 13px;
-//   display: flex;
-//   align-items: center;
-//   border: none !important;
-//   img {
-//     width: 16px;
-//     height: 16px;
-//     margin: 0;
-//   }
-//   span {
-//     margin-left: 4px;
-//     display: none;
-//   }
-//   ${media.sm`
-//     span {
-//       display: inherit;
-//     }
-//   `};
-// `
-
 export default props => (
   <Container>
     <Image fluid={props.avatar.fluid} />
@@ -92,16 +71,6 @@ export default props => (
         </Author>{' '}
         <b>|</b> <span id="post_date">{props.date}</span>
       </Name>
-      {/* <Edit
-        title="Edit on Github"
-        className="default"
-        href={props.editLink}
-        target="__blank"
-        rel="noopener"
-      >
-        <img src="https://icongr.am/fontawesome/github.svg" alt="Edit on Github" />
-        <span>Edit on Github</span>
-      </Edit> */}
     </Body>
   </Container>
 )

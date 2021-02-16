@@ -388,13 +388,4 @@ p.para {
     background: white;
   }
  }
-
- @keyframes orb-hacker {
-    from {
-      transform: rotate(20deg);
-    }
-    to {
-      transform: rotate(20deg - 360deg);
-    }
-  }
 `

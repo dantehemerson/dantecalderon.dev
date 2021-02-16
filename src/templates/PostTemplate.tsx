@@ -4,17 +4,14 @@ import React from 'react'
 import Markdown from '../components/Markdown'
 import PostHeader from '../components/PostHeader'
 import Share from '../components/Share'
-import SubscribeForm from '../components/SubscribeForm'
 import TagsSection from '../components/TagsSection'
-import { getLinkEditPost } from '../utils'
 import Layout from './TemplateLayout'
 
-export const PostContent = ({ title, image, editLink, date, timeToRead, avatar, content }) => (
+export const PostContent = ({ title, image, date, timeToRead, avatar, content }) => (
   <React.Fragment>
     <PostHeader
       title={title}
       image={image}
-      editLink={editLink}
       date={date}
       timeToRead={timeToRead}
       avatar={avatar}
@@ -27,7 +24,6 @@ const PostTemplate = props => {
   const {
     timeToRead,
     body,
-    fileAbsolutePath,
     fields: { slug },
     frontmatter: { title, image, date, description, tags },
   } = props.data.mdx
@@ -43,7 +39,6 @@ const PostTemplate = props => {
       <PostContent
         title={title}
         image={image}
-        editLink={getLinkEditPost(fileAbsolutePath)}
         date={date}
         timeToRead={timeToRead}
         avatar={props.data.avatar}
@@ -73,7 +68,6 @@ export const pageQuery = graphql`
       id
       body
       timeToRead
-      fileAbsolutePath
       frontmatter {
         title
         subtitle

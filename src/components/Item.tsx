@@ -1,7 +1,6 @@
 import React from 'react'
 import { withPrefix } from 'gatsby'
 import styled from 'styled-components'
-
 import { media } from '../styles'
 
 const Item = styled.div`

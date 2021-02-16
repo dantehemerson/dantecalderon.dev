@@ -133,7 +133,7 @@ const StyledContent = styled.div`
   h4.md-h4,
   h5.md-h5,
   h6.md-h6 {
-    font-family: 'Open Sans', sans-serif;
+    font-family:  'Gentium Book Basic', 'Times New Roman', Times, serif;
   }
 
   h2.md-h2 {
@@ -176,7 +176,7 @@ const StyledContent = styled.div`
 
   ${media.md`
     p.md-p, .gatsby-highlight, ul {
-      font-size: 21px;
+      font-size: 19px;
     }
     h3.md-h3,
     h2.md-h2 {

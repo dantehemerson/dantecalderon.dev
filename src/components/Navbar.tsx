@@ -88,7 +88,7 @@ const Wrapper = styled.nav`
 
   a {
     text-decoration: none;
-    color: #333;
+    color: #052d3f;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     &:hover {
@@ -127,7 +127,6 @@ const Title = styled.p`
   text-transform: capitalize;
   font-weight: 900 !important;
   color: $navbar-link-color;
-  opacity: 0.9;
 `
 
 const Logo = styled(Img)`
@@ -247,6 +246,13 @@ const ItemLink = styled(Link)`
       color: $primary-color !important;
     }
   }
+
+  & > svg path,
+  svg polygon {
+    fill: #052d3f !important;
+    color: #052d3f !important;
+  }
+
   .icon-item {
     padding-right: 4px;
     position: relative;

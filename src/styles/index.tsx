@@ -58,7 +58,7 @@ export const GlobalStyles = createGlobalStyle`
     text-rendering: geometricPrecision;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    color: #333;
+    color: #052d3f;
   }
 
   .container {

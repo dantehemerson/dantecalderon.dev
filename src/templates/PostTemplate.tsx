@@ -9,13 +9,7 @@ import Layout from './TemplateLayout'
 
 export const PostContent = ({ title, image, date, timeToRead, avatar, content }) => (
   <React.Fragment>
-    <PostHeader
-      title={title}
-      image={image}
-      date={date}
-      timeToRead={timeToRead}
-      avatar={avatar}
-    />
+    <PostHeader title={title} image={image} date={date} timeToRead={timeToRead} avatar={avatar} />
     <Markdown content={content} />
   </React.Fragment>
 )

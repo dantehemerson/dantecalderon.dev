@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { media } from '../../styles'
 import Info from '../Info'
 import { AvatarHome } from './AvatarHome'
-import { SocialHome } from '../SocialBlade'
+import { SocialHome } from '../SocialHome'
 
 function HeaderHome({ data }) {
   return (

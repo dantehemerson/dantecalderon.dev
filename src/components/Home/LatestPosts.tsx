@@ -2,7 +2,7 @@ import { graphql, Link, useStaticQuery } from 'gatsby'
 import { get } from 'lodash'
 import React from 'react'
 
-export default function LatestPosts() {
+export function LatestPosts() {
   const posts = get(
     useStaticQuery<{ abs: number }>(graphql`
       query {
@@ -60,21 +60,3 @@ export default function LatestPosts() {
     </div>
   )
 }
-
-//   <Header>
-//     <h2>Latest Posts:</h2>
-//     <Link className="all" to="/blog">
-//       See all ➤
-//     </Link>
-//   </Header>
-//   <Container>
-//   <LatestPostsItem
-//   key={index}
-//   post={{
-//     title: post.frontmatter.title,
-//     fluidImg: post.frontmatter.image.childImageSharp.fluid,
-//     path: `/${post.fields.slug}`,
-//   }}
-// />
-//   </Container>
-// </div>

@@ -162,7 +162,7 @@ const StyledContent = styled.div`
 
   ${media.sm`
     p.md-p, .gatsby-highlight, ul {
-    font-size: 20px;
+    font-size: 18px;
     }
     h3.md-h,
     h2.md-h2 {

@@ -49,7 +49,7 @@ const Container = styled.div`
     a {
       white-space: nowrap;
       color: #0057bc;
-      max-width: 222px;
+      max-width: 280px;
       overflow: hidden;
       text-decoration: none;
       text-overflow: ellipsis;

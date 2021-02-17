@@ -19,10 +19,12 @@ const Info = () => {
           description={info.githubStatus.status}
           postfix={secureTimeAgo(info.githubStatus.updatedAt)}
         />
-        <InfoItem title="⛏ Working on" description={info.githubStatus.company} />
+        <InfoItem title="👨‍💻 Working on" description={info.githubStatus.company} />
         <InfoItem
           title="🚀 Contributions"
-          description={`<b class='code'>${info.githubStatus.contributions || 0}</b>&nbsp;in the last year`}
+          description={`<b class='code'>${
+            info.githubStatus.contributions || 0
+          }</b>&nbsp;in the last year`}
         />
         <InfoItem
           title="👷 Latest Commit"
@@ -34,6 +36,11 @@ const Info = () => {
           showPostfixImage={info.listening.playing}
           description={`<a href='${info.listening.url}' target='_blank'>${info.listening.name}</a>`}
           postfix={secureTimeAgo(info.listening.lastPlayingDate)}
+        />
+        <InfoItem
+          title="📚 Reading"
+          description={`<a href='${info.reading.url}' target='_blank'>${info.reading.title}</a>`}
+          // postfix={secureTimeAgo(info.reading.updatedAt)}
         />
       </Container>
     </div>

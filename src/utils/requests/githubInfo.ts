@@ -30,6 +30,11 @@ export const getMyGithubInfo = async () => {
             scrobbles
             lastPlayingDate
           }
+          reading {
+            title
+            updatedAt
+            url
+          }
         }`,
       }),
     })

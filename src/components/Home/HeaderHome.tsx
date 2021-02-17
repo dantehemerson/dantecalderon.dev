@@ -8,7 +8,7 @@ import { SocialHome } from '../SocialHome'
 import { INFO } from '../../data/info'
 
 function HeaderHome({ data }) {
-  const { subtitle }  = INFO
+  const { subtitle } = INFO
 
   return (
     <div

@@ -133,7 +133,7 @@ const StyledContent = styled.div`
   h4.md-h4,
   h5.md-h5,
   h6.md-h6 {
-    font-family:  'Gentium Book Basic', 'Times New Roman', Times, serif;
+    font-family: 'Gentium Book Basic', 'Times New Roman', Times, serif;
   }
 
   h2.md-h2 {

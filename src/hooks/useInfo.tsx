@@ -28,6 +28,11 @@ export const useInfo = () => {
       scrobbles: '105',
       lastPlayingDate: '2020-12-10T02:20:44.000Z',
     },
+    reading: {
+      title: "I'm 52% done with The Pragmatic Programmer",
+      updatedAt: '2021-02-16T04:53:13.000Z',
+      url: 'https://www.goodreads.com/user_status/show/346760831',
+    },
   })
 
   useEffect(() => {

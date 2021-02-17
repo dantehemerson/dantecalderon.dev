@@ -142,7 +142,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images-medium-zoom`,
             options: {
-              includedSelector: '#post_body img',
+              includedSelector: '#post_body p img',
             },
           },
           {

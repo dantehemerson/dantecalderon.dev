@@ -22,7 +22,7 @@ const Info = () => {
         <InfoItem title="⛏ Working on" description={info.githubStatus.company} />
         <InfoItem
           title="🚀 Contributions"
-          description={`${info.githubStatus.contributions || 0} in the last year`}
+          description={`<b class='code'>${info.githubStatus.contributions || 0}</b>&nbsp;in the last year`}
         />
         <InfoItem
           title="👷 Latest Commit"

@@ -1,6 +1,6 @@
 export const INFO = Object.freeze({
   title: 'Dante Calderón',
-  subtitle: 'TypeScript / Node.js Developer',
+  subtitle: 'NODE.JS SOFTWARE ENGIENNER',
   description: `Hi, I'm Dante Calderon, I am passionate about Nodejs.`,
   siteUrl: 'https://dantecalderon.dev',
   disqusShortname: 'dantecalderon',

@@ -5,8 +5,11 @@ import { media } from '../../styles'
 import Info from '../Info'
 import { AvatarHome } from './AvatarHome'
 import { SocialHome } from '../SocialHome'
+import { INFO } from '../../data/info'
 
 function HeaderHome({ data }) {
+  const { subtitle }  = INFO
+
   return (
     <div
       style={{
@@ -16,7 +19,7 @@ function HeaderHome({ data }) {
       <Container className="row">
         <MainInfoWrapper>
           <Title>{data.site.siteMetadata.title}</Title>
-          <Subtitle>{data.site.siteMetadata.subtitle}</Subtitle>
+          <Subtitle>{subtitle}</Subtitle>
           <SocialHome />
           <Info />
         </MainInfoWrapper>
@@ -62,10 +65,9 @@ const MainInfoWrapper = styled.div`
 
 const Subtitle = styled.h2`
   font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-weight: 400;
   margin: 10px 0 20px 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Fira Code', 'Open Sans', sans-serif;
   text-align: center;
   color: #052d3f;
 `
@@ -83,7 +85,6 @@ export default props => (
           siteMetadata {
             title
             siteUrl
-            subtitle
           }
         }
       }

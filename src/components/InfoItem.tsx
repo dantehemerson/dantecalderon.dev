@@ -29,8 +29,12 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  line-height: 27px;
+  font-size: 12px;
+  line-height: 24px;
+  .code {
+    display: contents;
+    font-family: 'Fira Code';
+  }
   .title3 {
     font-family: 'Open sans', sans-serif;
     font-weight: 600;
@@ -50,7 +54,7 @@ const Container = styled.div`
       text-decoration: none;
       text-overflow: ellipsis;
     }
-    color: #484848;
+    color: #133a4d;
     display: flex;
     align-items: center;
     font-weight: 400;
@@ -65,8 +69,9 @@ const Container = styled.div`
   }
 
   .postfix3 {
-    font-size: 12px;
+    font-size: 9px;
     margin: 0;
+    font-weight: 400;
     color: #8e8e8e;
     margin-left: 6px;
     display: flex;

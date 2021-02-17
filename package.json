@@ -1,7 +1,7 @@
 {
   "name": "dantecalderon",
   "description": "This is my personal web. Dante Caderón",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Dante Calderón <mail@dantecalderon.dev>",
   "scripts": {
     "build": "gatsby build",

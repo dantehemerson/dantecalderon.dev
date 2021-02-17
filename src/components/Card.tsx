@@ -45,25 +45,26 @@ const Info = styled.div`
 `
 const Title = styled.h3`
   font-family: 'Open Sans', sans-serif;
-  color: #282a2d;
+  font-family: 'Gentium Book Basic', 'Times New Roman', Times, serif;
+  color: #052d3e;
   transition: 0.3s;
   font-size: 18px;
   ${media.sm`
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   `}
 `
 const Time = styled.p`
-  color: #757575;
-  font-size: 13px;
+  color: #727272;
+  font-size: 11px;
   padding: 12px 0px 6px;
 `
 
 const Summary = styled.p`
-  color: #757575;
-  font-size: 15px;
+  color: #727272;
+  font-size: 13px;
   padding-top: 10px;
   ${media.sm`
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   `};
 `
 

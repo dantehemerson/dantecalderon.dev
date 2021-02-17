@@ -69,7 +69,7 @@ const Container = styled.div`
   }
 
   .postfix3 {
-    font-size: 9px;
+    font-size: 10px;
     margin: 0;
     font-weight: 400;
     color: #8e8e8e;

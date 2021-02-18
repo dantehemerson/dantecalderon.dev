@@ -39,8 +39,7 @@ const Info = () => {
         />
         <InfoItem
           title="📚 Reading"
-          description={`<a href='${info.reading.url}' target='_blank'>${info.reading.title}</a>`}
-          // postfix={secureTimeAgo(info.reading.updatedAt)}
+          description={`<a href='${info.reading.profileUrl}' target='_blank'>${info.reading.title}</a>`}
         />
       </Container>
     </div>

@@ -32,6 +32,7 @@ export const useInfo = () => {
       title: "I'm 52% done with The Pragmatic Programmer",
       updatedAt: '2021-02-16T04:53:13.000Z',
       url: 'https://www.goodreads.com/user_status/show/346760831',
+      profileUrl: 'https://www.goodreads.com/user/show/72837965-dante-calder-n'
     },
   })
 

@@ -34,6 +34,7 @@ export const getMyGithubInfo = async () => {
             title
             updatedAt
             url
+            profileUrl
           }
         }`,
       }),

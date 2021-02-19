@@ -77,7 +77,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^14.14.17",
+    "@types/node": "^14.14.30",
     "@types/react-dom": "^17.0.0",
     "@types/styled-components": "^5.1.7",
     "prettier": "2.2.1"

@@ -16230,10 +16230,10 @@ swap-case@^1.1.0:
     lower-case "^1.1.1"
     upper-case "^1.1.1"
 
-sweetalert2@8.17.1:
-  version "8.17.1"
-  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-8.17.1.tgz#0c691ce4181661182ad4bc5312aa25e44479a650"
-  integrity sha512-aCPXmK1YyVUfsw36iDETzUnYj1fxwXSY/dkt8cnqViv7f5sOS5i37LXIf9LLiDCd99EbY4d4kvZkyWYlJZ79Xw==
+sweetalert2@10.16.5:
+  version "10.16.5"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-10.16.5.tgz#87637f91ada6befb0536f0e01fdf5ddb861b9fcb"
+  integrity sha512-M2mpdSkVRcCCJ7Asa7y4Mxirwxi+XLVXcQnqfyLLUgZRUyfKaUpakQoRv1uVVmeptoQdC0ydaOy8m+WxVxbTSg==
 
 symbol-observable@^1.0.2, symbol-observable@^1.2.0:
   version "1.2.0"

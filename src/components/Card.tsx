@@ -24,6 +24,7 @@ const Container = styled(Link)`
   }
   text-decoration: none;
 `
+
 const ImageWrapper = styled.div`
   overflow: hidden;
   width: 100%;

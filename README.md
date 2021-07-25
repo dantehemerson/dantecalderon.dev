@@ -29,7 +29,6 @@ See complete stack in [StackShare](https://stackshare.io/dantehemerson/dantecald
 * [Tech Stack Section](https://dantecalderon.dev/#my-stack)
 * Share Post buttons
 * TypeScript support
-* [Netlify CMS](https://www.netlifycms.org/)
 * [Page for ech Tag](https://dantecalderon.dev/blog/tags/backend)
 * Comments supported by [Disqus](https://disqus.com/)
 

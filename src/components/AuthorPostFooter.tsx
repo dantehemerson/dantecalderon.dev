@@ -76,7 +76,6 @@ const About = styled.p`
 	`};
 `
 export default props => {
-console.log('🤫 Dante ➤ props', props)
   return (
     <Container>
       <div>

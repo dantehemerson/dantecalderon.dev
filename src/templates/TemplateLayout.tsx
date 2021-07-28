@@ -5,6 +5,7 @@ import Disqus from '../components/Disqus'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import { pages } from '../utils'
+import { getSrc } from "gatsby-plugin-image"
 
 const Template = props => {
   const [show_share, setShowShare] = useState(false)
@@ -33,7 +34,7 @@ const Template = props => {
     <Layout active={isPost ? pages.blog : pages.portfolio}>
       <SEO
         title={title}
-        image={`${siteUrl}${image}`}
+        image={`${siteUrl}${getSrc(image)}`}
         url={`${siteUrl}/${path}`}
         description={description}
         isPost={isPost}

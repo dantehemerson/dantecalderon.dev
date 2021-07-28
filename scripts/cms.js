@@ -21,7 +21,7 @@ tags:
 
 ### {{ title }}
 
-<Start writting here>
+Start writting here
 `
 
 const questions = [

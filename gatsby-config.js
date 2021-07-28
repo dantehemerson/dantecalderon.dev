@@ -11,7 +11,12 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-yaml',
-    'gatsby-plugin-sass',
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require('node-sass'),
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -169,7 +174,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GATSBY_ANALITYCS_ID,
+        trackingId: 'UA-121858272-1',
         head: false,
         sampleRate: 5,
         siteSpeedSampleRate: 10,

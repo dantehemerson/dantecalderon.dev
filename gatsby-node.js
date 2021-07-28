@@ -122,8 +122,8 @@ exports.onCreateNode = ({ node, actions }) => {
   if (['MarkdownRemark', 'Mdx'].includes(node.internal.type) && frontmatter) {
     const fullPath = getFullPath(frontmatter)
     createNodeField({
-      name: 'slug',
       node,
+      name: 'slug',
       value: fullPath,
     })
   }

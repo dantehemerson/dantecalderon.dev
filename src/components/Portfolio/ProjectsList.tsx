@@ -24,7 +24,7 @@ export default props => (
           data={{
             title: node.frontmatter.title,
             subtitle: node.frontmatter.subtitle,
-            thumbnail: node.frontmatter.image.childImageSharp.fluid,
+            thumbnail: node.frontmatter.image.childImageSharp.gatsbyImageData,
             path: `/${node.fields.slug}`,
             tags: node.frontmatter.tags,
             repository: node.frontmatter.repository,

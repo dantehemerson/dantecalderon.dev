@@ -12,6 +12,7 @@ const Portfolio = props => {
   return (
     <Layout location={props.location} active={pages.portfolio}>
       <SEO title="Portfolio" url={`${siteUrl}/portfolio`} />
+      <div style={{ marginTop: 100 }}></div>
       <List posts={posts} />
     </Layout>
   )
@@ -40,9 +41,7 @@ export const queryPortfolio = graphql`
             slug
             image {
               childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid_tracedSVG
-                }
+                gatsbyImageData(layout: CONSTRAINED, width: 1920, placeholder: TRACED_SVG)
               }
             }
             tags

@@ -1,7 +1,7 @@
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
 import React from 'react'
 import styled from 'styled-components'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { media } from '../styles'
 
 const Container = styled(Link)`
@@ -73,7 +73,7 @@ export default props => (
   <Container to={props.data.path}>
     <div>
       <ImageWrapper>
-        <Img fluid={props.data.thumbnail} />
+        <GatsbyImage alt={`${props.data.title} image`} image={props.data.thumbnail} />
       </ImageWrapper>
       <Info>
         <Title>{props.data.title}</Title>

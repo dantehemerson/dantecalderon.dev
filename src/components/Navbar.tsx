@@ -1,5 +1,5 @@
 import { graphql, Link, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import PropTypes from 'prop-types'
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
@@ -129,7 +129,7 @@ const Title = styled.p`
   color: $navbar-link-color;
 `
 
-const Logo = styled(Img)`
+const Logo = styled(GatsbyImage)`
   width: 32px;
   height: 32px;
   border-radius: 3px;
@@ -382,7 +382,7 @@ const Navbar = props => {
           }}
           to="/"
         >
-          <Logo alt={subtitle} fluid={props.data.logo.fluid} />
+          <Logo alt={subtitle} image={props.data.logo.gatsbyImageData} />
           <Title>{title}</Title>
         </TitleWrapper>
         <div>
@@ -430,9 +430,7 @@ export default props => {
   const data = useStaticQuery(graphql`
     query {
       logo: imageSharp(fluid: { originalName: { regex: "/logo.png/" } }) {
-        fluid(maxWidth: 64) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
+        gatsbyImageData(layout: CONSTRAINED, width: 60, placeholder: TRACED_SVG)
       }
       site {
         siteMetadata {

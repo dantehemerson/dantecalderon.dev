@@ -22,20 +22,21 @@ const PostTemplate = props => {
     frontmatter: { title, image, date, description, tags },
   } = props.data.mdx
 
+  console.log('Imagen', image)
   return (
     <Layout
       isPost
       title={title}
       path={slug}
-      image={image.childImageSharp.fluid.src}
+      image={image.childImageSharp.gatsbyImageData}
       description={description}
     >
       <PostContent
         title={title}
-        image={image}
+        image={image.childImageSharp.gatsbyImageData}
         date={date}
         timeToRead={timeToRead}
-        avatar={props.data.avatar}
+        avatar={props.data.avatar.gatsbyImageData}
         content={body}
       />
       <TagsSection tags={tags} />
@@ -48,9 +49,7 @@ const PostTemplate = props => {
 export const pageQuery = graphql`
   query PostQuery($slug: String!) {
     avatar: imageSharp(fluid: { originalName: { regex: "/avatar.jpg/" } }) {
-      fluid(maxWidth: 720) {
-        ...GatsbyImageSharpFluid_tracedSVG
-      }
+      gatsbyImageData(layout: CONSTRAINED, width: 720, placeholder: TRACED_SVG)
     }
     site {
       siteMetadata {
@@ -69,9 +68,7 @@ export const pageQuery = graphql`
         description
         image {
           childImageSharp {
-            fluid(maxWidth: 1920) {
-              ...GatsbyImageSharpFluid_tracedSVG
-            }
+            gatsbyImageData(layout: CONSTRAINED, width: 1920, placeholder: TRACED_SVG)
           }
         }
         model

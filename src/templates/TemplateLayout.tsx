@@ -39,7 +39,7 @@ const Template = props => {
         isPost={isPost}
       />
       {props.children}
-      <AuthorPostFooter avatar={props.data.avatar} make={!isPost} />
+      <AuthorPostFooter avatar={props.data.avatar.gatsbyImageData} make={!isPost} />
       <Disqus title={title} path={path} />
       {isPost && true /* Show sharer*/}
     </Layout>
@@ -51,9 +51,7 @@ export default props => (
     query={graphql`
       query {
         avatar: imageSharp(fluid: { originalName: { regex: "/avatar.jpg/" } }) {
-          fluid(maxWidth: 180) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
+          gatsbyImageData(layout: CONSTRAINED, width: 180, placeholder: TRACED_SVG)
         }
         site {
           siteMetadata {

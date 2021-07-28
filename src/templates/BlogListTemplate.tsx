@@ -18,18 +18,21 @@ function Blog(props) {
   const siteUrl = props.data.site.siteMetadata.siteUrl
 
   const { currentPage, numPages, hasNextPage, hasPrevPage } = props.pageContext
+
+
   return (
     <Layout location={props.location} active={pages.blog}>
       <div className="Blog" style={{ marginTop: 90 }}>
         <SEO title="Blog" url={`${siteUrl}/blog`} />
         <PostsWrapper>
           {posts.map(({ node }, index) => {
+            console.log(node.frontmatter)
             if (node.frontmatter.published)
               return (
                 <Card
                   data={{
                     title: node.frontmatter.title,
-                    thumbnail: node.frontmatter.image.childImageSharp.fluid,
+                    thumbnail: node.frontmatter.image.childImageSharp.gatsbyImageData,
                     excerpt: node.frontmatter.description || node.excerpt,
                     date: node.frontmatter.date,
                     path: `/${node.fields.slug}`,
@@ -78,9 +81,7 @@ export const queryBlog = graphql`
             slug
             image {
               childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid_tracedSVG
-                }
+                gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
               }
             }
             published

@@ -1,5 +1,5 @@
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 import styled from 'styled-components'
 import InProgress from './InProgress'
@@ -38,7 +38,7 @@ const Title = styled.h3`
   }
 `
 
-const Cover = styled(Img)``
+const Cover = styled(GatsbyImage)``
 
 const TopBar = styled.div`
   height: 26px;

@@ -1,4 +1,4 @@
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 import styled from 'styled-components'
 import { media } from '../../styles'
@@ -7,7 +7,7 @@ export function AvatarHome(props) {
   return (
     <Container>
       <AvatarContainer>
-        <Img fluid={props.image.fluid} />
+        <GatsbyImage alt='Avatar' image={props.image} />
       </AvatarContainer>
     </Container>
   )

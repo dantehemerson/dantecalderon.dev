@@ -1,4 +1,4 @@
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 import Slider from 'react-slick'
 import styled from 'styled-components'
@@ -48,7 +48,7 @@ const SliderItem = props => (
     <TopBar>
       <div className="TopBarButtons" />
     </TopBar>
-    <Img fluid={props.image.childImageSharp.fluid} />
+    <GatsbyImage alt='Slide image' image={props.image} />
   </ContainerItem>
 )
 
@@ -88,8 +88,8 @@ export default props => (
       </InProgressAbsolute>
     )}
     <Slider className="PUVIOIs" {...settings}>
-      {props.images.map((item, index) => (
-        <SliderItem image={item.image} />
+      {props.images.map((item) => (
+        <SliderItem image={item.image.childImageSharp.gatsbyImageData} />
       ))}
     </Slider>
   </Container>

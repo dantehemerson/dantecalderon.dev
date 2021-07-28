@@ -1,5 +1,5 @@
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 import styled from 'styled-components'
 import { media } from '../styles'
@@ -20,7 +20,7 @@ const Container = styled.div`
 	`};
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   margin: 0;
   width: 90px;
   height: 90px;
@@ -79,7 +79,7 @@ export default props => {
   return (
     <Container>
       <div>
-        <Image fluid={props.avatar.fluid} />
+        <Image alt='Author post avatar' image={props.avatar} />
       </div>
       <Body>
         <By>{props.make ? 'Made with ❤' : 'Written'} by</By>

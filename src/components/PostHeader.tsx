@@ -1,4 +1,4 @@
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 import styled from 'styled-components'
 import AuthorPost from '../components/AuthorPost'
@@ -25,10 +25,13 @@ const Title = styled.h1`
   `}
 `
 
-export default props => (
-  <Container>
+export default function PostHeader(props) {
+  return (
+    <Container>
     <Title id="post_id">{props.title}</Title>
     <AuthorPost date={props.date} avatar={props.avatar} />
-    <Img fluid={props.image.childImageSharp.fluid} className="zoomable" />
+    <GatsbyImage alt={`${props.title} cover`} image={props.image} className="zoomable" />
   </Container>
-)
+  )
+}
+

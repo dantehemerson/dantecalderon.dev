@@ -1,5 +1,5 @@
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 import styled from 'styled-components'
 import { media } from '../styles'
@@ -15,7 +15,7 @@ const Container = styled.div`
   font-family: 'Open Sans', sans-serif;
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   margin: 0;
   width: 40px;
   height: 40px;
@@ -63,7 +63,7 @@ const Author = styled(Link)`
 
 export default props => (
   <Container>
-    <Image fluid={props.avatar.fluid} />
+    <Image alt='Author post avatar' image={props.avatar} />
     <Body>
       <Name>
         <Author id="post_authorname" to="/#about-me">

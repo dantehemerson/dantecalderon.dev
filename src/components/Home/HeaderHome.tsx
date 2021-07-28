@@ -8,6 +8,7 @@ import { SocialHome } from '../SocialHome'
 import { INFO } from '../../data/info'
 
 function HeaderHome({ data }) {
+  console.log('🤫 Dante ➤ HeaderHome ➤ data', data)
   const { subtitle } = INFO
 
   return (
@@ -23,7 +24,7 @@ function HeaderHome({ data }) {
           <SocialHome />
           <Info />
         </MainInfoWrapper>
-        <AvatarHome image={data.avatar} />
+        <AvatarHome image={data.avatar.gatsbyImageData} />
       </Container>
     </div>
   )
@@ -77,9 +78,7 @@ export default props => (
     query={graphql`
       query {
         avatar: imageSharp(fluid: { originalName: { regex: "/avatar.jpg/" } }) {
-          fluid(maxWidth: 360) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
+          gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
         }
         site {
           siteMetadata {

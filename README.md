@@ -10,6 +10,11 @@ Code of my personal static website were I write about Node, JS/Typescript, Backe
 
 Deployed at: https://dantecalderon.dev
 
+
+## Commands
+
+* `yarn create`.- Launch an interactive CLI to help to create a new blog post.
+
 ## 💪 Powered by:
 
 * Built with [Gatsby](https://www.gatsbyjs.com/)

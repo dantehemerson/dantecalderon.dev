@@ -5,6 +5,7 @@ import Disqus from '../components/Disqus'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import { pages } from '../utils'
+import { getSrc } from "gatsby-plugin-image"
 
 const Template = props => {
   const [show_share, setShowShare] = useState(false)
@@ -33,13 +34,13 @@ const Template = props => {
     <Layout active={isPost ? pages.blog : pages.portfolio}>
       <SEO
         title={title}
-        image={`${siteUrl}${image}`}
+        image={`${siteUrl}${getSrc(image)}`}
         url={`${siteUrl}/${path}`}
         description={description}
         isPost={isPost}
       />
       {props.children}
-      <AuthorPostFooter avatar={props.data.avatar} make={!isPost} />
+      <AuthorPostFooter avatar={props.data.avatar.gatsbyImageData} make={!isPost} />
       <Disqus title={title} path={path} />
       {isPost && true /* Show sharer*/}
     </Layout>
@@ -51,9 +52,7 @@ export default props => (
     query={graphql`
       query {
         avatar: imageSharp(fluid: { originalName: { regex: "/avatar.jpg/" } }) {
-          fluid(maxWidth: 180) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
+          gatsbyImageData(layout: CONSTRAINED, width: 180, placeholder: TRACED_SVG)
         }
         site {
           siteMetadata {

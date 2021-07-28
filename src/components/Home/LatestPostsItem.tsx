@@ -1,5 +1,6 @@
 import { Link } from 'gatsby'
-import Img, { FluidObject } from 'gatsby-image'
+import { FluidObject } from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import React from 'react'
 import styled from 'styled-components'
 import { media } from '../../styles'
@@ -16,7 +17,7 @@ export const LatestPostsItem = ({ post }: LatestPostsItemProps) => (
   <Container to={post.path}>
     <div>
       <ImageWrapper>
-        <Img fluid={post.fluidImg} />
+        <GatsbyImage alt='Post item image' image={post.fluidImg} />
       </ImageWrapper>
       <Info>
         <Title>{post.title}</Title>

@@ -19,13 +19,6 @@ export function LatestPosts() {
               frontmatter {
                 date(formatString: "DD MMMM, YYYY")
                 title
-                image {
-                  childImageSharp {
-                    fluid {
-                      ...GatsbyImageSharpFluid_tracedSVG
-                    }
-                  }
-                }
               }
             }
           }

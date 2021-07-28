@@ -40,15 +40,15 @@ const ProjectTemplate = props => {
     <Layout
       title={title}
       path={post.fields.slug}
-      image={image.childImageSharp.fluid.src}
+      image={image.childImageSharp.gatsbyImageData}
       description={description}
     >
       <Project
         {...post}
         {...siteMetadata}
         content={post.body}
-        image={post.frontmatter.image.childImageSharp.fluid}
-        avatar={props.data.avatar}
+        image={post.frontmatter.image.childImageSharp.gatsbyImageData}
+        avatar={props.data.avatar.gatsbyImageData}
       />
     </Layout>
   )
@@ -57,9 +57,7 @@ const ProjectTemplate = props => {
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     avatar: imageSharp(fluid: { originalName: { regex: "/avatar2.jpeg/" } }) {
-      fluid(maxWidth: 720) {
-        ...GatsbyImageSharpFluid_tracedSVG
-      }
+      gatsbyImageData(layout: CONSTRAINED, width: 720, placeholder: TRACED_SVG)
     }
     site {
       siteMetadata {
@@ -77,18 +75,14 @@ export const pageQuery = graphql`
         description
         image {
           childImageSharp {
-            fluid(maxWidth: 1920) {
-              ...GatsbyImageSharpFluid_tracedSVG
-            }
+            gatsbyImageData(layout: CONSTRAINED, width: 1920, placeholder: TRACED_SVG)
           }
         }
         images {
           description
           image {
             childImageSharp {
-              fluid(maxWidth: 1920) {
-                ...GatsbyImageSharpFluid_tracedSVG
-              }
+              gatsbyImageData(layout: CONSTRAINED, width: 1920, placeholder: TRACED_SVG)
             }
           }
         }

@@ -26,7 +26,6 @@ const Title = styled.h1`
 `
 
 export default function PostHeader(props) {
-  console.log('🤫 Dante ➤ PostHeader ➤ props', props)
   return (
     <Container>
     <Title id="post_id">{props.title}</Title>

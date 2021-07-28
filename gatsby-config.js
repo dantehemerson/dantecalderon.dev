@@ -37,6 +37,7 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography.ts',
       },
     },
+    'gatsby-plugin-image',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {

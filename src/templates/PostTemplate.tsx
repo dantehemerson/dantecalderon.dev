@@ -22,7 +22,6 @@ const PostTemplate = props => {
     frontmatter: { title, image, date, description, tags },
   } = props.data.mdx
 
-  console.log('Imagen', image)
   return (
     <Layout
       isPost

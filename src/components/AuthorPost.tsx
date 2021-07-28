@@ -63,7 +63,7 @@ const Author = styled(Link)`
 
 export default props => (
   <Container>
-    <Image fluid={props.avatar.fluid} />
+    <Image alt='Author post avatar' image={props.avatar} />
     <Body>
       <Name>
         <Author id="post_authorname" to="/#about-me">

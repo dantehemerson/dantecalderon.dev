@@ -5,8 +5,8 @@ const path = require('path')
 const postPerPage = 20
 
 const getFullPath = frontmatter => {
-  const pathPrefix = _.get(frontmatter, 'pathPrefix', '')
-  const slug = _.get(frontmatter, 'slug', '')
+  const pathPrefix = _.get(frontmatter, 'pathPrefix') || ''
+  const slug = _.get(frontmatter, 'slug') || ''
   return path.join(pathPrefix, slug)
 }
 
@@ -98,6 +98,7 @@ exports.createPages = ({ graphql, actions }) => {
           const { model } = post.node.frontmatter
 
           const fullPath = getFullPath(post.node.frontmatter)
+          console.log('🤫 Dante ➤ _.each ➤ fullPath', fullPath)
 
           // Generate pages only for posts and projects
           createPage({

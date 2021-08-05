@@ -78,21 +78,6 @@ const Share = ({ title, path }) => {
         />
       </Button>
       <Button
-        type="facebook"
-        size="small"
-        href={`https://www.facebook.com/sharer/sharer.php?app_id=2209722672595950&sdk=joey&u=${url}`}
-        title="Share on Facebook"
-        target="_blank"
-        rel="noopener"
-      >
-        <img
-          src="https://icongr.am/fontawesome/facebook.svg?color=ffffff"
-          title="Share on Facebook"
-          alt="img"
-        />
-      </Button>
-
-      <Button
         type="linkedin"
         size="small"
         rel="noopener"

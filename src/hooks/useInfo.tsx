@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useLocalStorage } from './useLocalStorage'
 import { getMyGithubInfo } from '../utils/requests/githubInfo'
-import merge from 'object-merge-advanced'
+import { mergeAdvanced } from 'object-merge-advanced'
 import { get } from 'lodash'
 
 export const useInfo = () => {
@@ -41,7 +41,7 @@ export const useInfo = () => {
       try {
         const newInfo = await getMyGithubInfo()
         setInfo(prevInfo =>
-          merge(prevInfo, newInfo, {
+          mergeAdvanced(prevInfo, newInfo, {
             mergeBoolsUsingOrNotAnd: get(newInfo, 'listening.playing', false),
           })
         )

@@ -37,13 +37,14 @@ export function LatestPosts() {
       <ul>
         {posts.map(({ node: post }, index) => {
           return (
-            <li id={index}>
+            <li id={index} key={index}>
               <p className="md-p">
                 <Link to={`/${post.fields.slug}`}>{post.frontmatter.title}</Link>
               </p>
             </li>
           )
         })}
+
         <li id="more">
           <p className="md-p">
             <Link to="/blog">more...</Link>

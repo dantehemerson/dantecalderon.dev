@@ -8,7 +8,6 @@ import { SocialHome } from '../SocialHome'
 import { INFO } from '../../data/info'
 
 function HeaderHome({ data }) {
-  console.log('🤫 Dante ➤ HeaderHome ➤ data', data)
   const { subtitle } = INFO
 
   return (

@@ -98,7 +98,6 @@ exports.createPages = ({ graphql, actions }) => {
           const { model } = post.node.frontmatter
 
           const fullPath = getFullPath(post.node.frontmatter)
-          console.log('🤫 Dante ➤ _.each ➤ fullPath', fullPath)
 
           // Generate pages only for posts and projects
           createPage({

@@ -1,6 +1,6 @@
 export const getMyGithubInfo = async () => {
   try {
-    const res = await fetch('https://dantecalderon-api.herokuapp.com/graphql', {
+    const res = await fetch('https://api.dantecalderon.dev/graphql', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

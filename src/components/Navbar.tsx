@@ -5,8 +5,8 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { media, mediaMax } from '../styles'
 
-const icons = [
-  <svg
+const icons: Record<string, JSX.Element> = {
+  home: <svg
     className="icon-item"
     version="1.1"
     viewBox="0 0 36 36"
@@ -20,7 +20,7 @@ const icons = [
     <path d="M33.71,17.29l-15-15a1,1,0,0,0-1.41,0l-15,15a1,1,0,0,0,1.41,1.41L18,4.41,32.29,18.71a1,1,0,0,0,1.41-1.41Z" />
     <path d="M28,32h-5V22H13V32H8V18L6,20V32a2,2,0,0,0,2,2h7V24h6V34h7a2,2,0,0,0,2-2V19.76l-2-2Z" />
   </svg>,
-  <svg
+  blog: <svg
     className="icon-item"
     version="1.1"
     width={36}
@@ -35,7 +35,7 @@ const icons = [
     <path d="M1,25v3.4A2.6,2.6,0,0,0,3.6,31H32.34a2.6,2.6,0,0,0,2.6-2.6V25Zm32,3.4a.6.6,0,0,1-.6.6H3.56a.6.6,0,0,1-.6-.6V26.53h9.95a1.64,1.64,0,0,0,1.5,1h7.13a1.64,1.64,0,0,0,1.5-1H33Z" />
     <rect x={0} y={0} width={36} height={36} fillOpacity={0} />
   </svg>,
-  <svg
+  user: <svg
     className="icon-item"
     version="1.1"
     width={36}
@@ -49,7 +49,7 @@ const icons = [
     <path d="M30.47,24.37a17.16,17.16,0,0,0-24.93,0A2,2,0,0,0,5,25.74V31a2,2,0,0,0,2,2H29a2,2,0,0,0,2-2V25.74A2,2,0,0,0,30.47,24.37ZM29,31H7V25.73a15.17,15.17,0,0,1,22,0h0Z" />
     <rect x={0} y={0} width={36} height={36} fillOpacity={0} />
   </svg>,
-  <svg
+  'view-cards': <svg
     className="icon-item"
     version="1.1"
     width={36}
@@ -65,7 +65,7 @@ const icons = [
     <path d="M32,30H21a2,2,0,0,1-2-2V21a2,2,0,0,1,2-2H32a2,2,0,0,1,2,2v7A2,2,0,0,1,32,30ZM21,21v7H32V21Z" />
     <rect x={0} y={0} width={36} height={36} fillOpacity={0} />
   </svg>,
-  <svg
+  mail: <svg
     className="icon-item"
     version="1.1"
     width={36}
@@ -78,7 +78,34 @@ const icons = [
     <path d="M32,6H4A2,2,0,0,0,2,8V28a2,2,0,0,0,2,2H32a2,2,0,0,0,2-2V8A2,2,0,0,0,32,6ZM30.46,28H5.66l7-7.24-1.44-1.39L4,26.84V9.52L16.43,21.89a2,2,0,0,0,2.82,0L32,9.21v17.5l-7.36-7.36-1.41,1.41ZM5.31,8H30.38L17.84,20.47Z" />
     <rect x={0} y={0} width={36} height={36} fillOpacity={0} />
   </svg>,
-]
+  highlighter: <svg
+  className="icon-item"
+  version="1.1"
+  width={36}
+  height={36}
+  viewBox="0 0 36 36"
+  preserveAspectRatio="xMidYMid meet"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlnsXlink="http://www.w3.org/1999/xlink"
+>
+  <path
+    d="M15.82 26.06a1 1 0 01-.71-.29l-6.44-6.44a1 1 0 01-.29-.71 1 1 0 01.29-.71L23 3.54a5.55 5.55 0 117.85 7.86L16.53 25.77a1 1 0 01-.71.29zm-5-7.44l5 5L29.48 10a3.54 3.54 0 000-5 3.63 3.63 0 00-5 0z"
+    className="clr-i-outline clr-i-outline-path-1"
+  ></path>
+  <path
+    d="M10.38 28.28a1 1 0 01-.71-.28l-3.22-3.23a1 1 0 01-.22-1.09l2.22-5.44a1 1 0 011.63-.33l6.45 6.44A1 1 0 0116.2 26l-5.44 2.22a1.33 1.33 0 01-.38.06zm-2.05-4.46l2.29 2.28 3.43-1.4-4.31-4.31z"
+    className="clr-i-outline clr-i-outline-path-2"
+  ></path>
+  <path
+    d="M8.94 30h-5a1 1 0 01-.84-1.55l3.22-4.94a1 1 0 011.55-.16l3.21 3.22a1 1 0 01.06 1.35L9.7 29.64a1 1 0 01-.76.36zm-3.16-2h2.69l.53-.66-1.7-1.7z"
+    className="clr-i-outline clr-i-outline-path-3"
+  ></path>
+  <path
+    d="M3.06 31H33.06V34H3.06z"
+    className="clr-i-outline clr-i-outline-path-4"
+  ></path>
+</svg>
+}
 
 const Wrapper = styled.nav`
   * {
@@ -403,8 +430,13 @@ const Navbar = props => {
                   }}
                   className={`${active === item.id ? 'active' : ''}`}
                   to={item.to}
+                  { ...(item.newtab ? {
+                    target: '_blank',
+                    rel: "noreferrer noopener"
+                  } : undefined)
+                  }
                 >
-                  {icons[index]}
+                  {icons[item.icon]}
                   {item.title}
                 </ItemLink>
               </Item>
@@ -440,6 +472,7 @@ export default props => {
             title
             id
             icon
+            newtab
             to
           }
         }

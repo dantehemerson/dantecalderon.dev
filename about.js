@@ -46,8 +46,15 @@ module.exports = {
       instagram: 'https://instagram.com/dantehemerson',
     },
     menu: [
-      { title: 'Home', id: '', to: '/', icon: 'home' },
-      { title: 'Blog', id: 'Blog', to: '/blog', icon: 'home' },
+      { title: 'Home', id: 'home', icon: 'home' },
+      { title: 'Blog', id: 'blog', to: '/blog', icon: 'blog' },
+      {
+        title: 'Highlights',
+        id: 'highlights',
+        newtab: true,
+        to: 'https://highlights.dantecalderon.dev/',
+        icon: 'highlighter',
+      },
       // { title: 'Portfolio', id: 'Portfolio', to: '/portfolio', icon: 'home' },
       //{ title: 'Contact', id: 'Contact', to: '/contact', icon: 'home' }
     ],

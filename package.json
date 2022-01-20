@@ -8,6 +8,7 @@
     "start": "gatsby develop",
     "start:dev": "yarn start",
     "create": "node ./scripts/cms.js --interactive",
+    "notion": "node ./scripts/notion.js",
     "format": "prettier --config .prettierrc --write 'src/**/*.{ts,tsx}'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -75,10 +76,12 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "@notionhq/client": "^0.4.12",
     "@types/node": "^14.14.17",
     "@types/react-dom": "^17.0.0",
     "@types/styled-components": "^5.1.7",
     "mustache": "^4.2.0",
+    "notion-to-md": "^2.1.0",
     "prettier": "2.2.1",
     "slugify": "^1.6.0"
   },

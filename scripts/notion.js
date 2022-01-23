@@ -3,8 +3,10 @@ require('dotenv').config({
 })
 
 const { Client } = require('@notionhq/client')
+const Mustache = require('mustache')
 const { NotionToMarkdown } = require('notion-to-md')
 const fs = require('fs')
+const { markdownHeaderTemplate } = require('./templates')
 
 const { NOTION_SECRET } = process.env
 
@@ -23,22 +25,25 @@ const n2m = new NotionToMarkdown({ notionClient: notion })
   })
 
   const pageInfo = {}
+
+  const mdblocks = await n2m.pageToMarkdown(pageId)
+  console.log('🤫 Dante ➤ ; ➤ mdblocks', mdblocks.slice(0, 8))
+  pageInfo.content = n2m.toMarkdownString(mdblocks)
+
   pageInfo.createdAtDate = pageData.created_time.slice(0, 10)
+  pageInfo.createdAt = pageData.created_time
   pageInfo.slug = pageData.properties.slug.rich_text[0].text.content
   pageInfo.tags = pageData.properties.tags.multi_select.map(tag => tag.name)
   pageInfo.published = Boolean(pageData.properties.published.checkbox)
   pageInfo.description = pageData.properties.description.rich_text[0].text.content
   pageInfo.pathPrefix = pageData.properties.pathPrefix.select.name || 'blog'
   pageInfo.title = pageData.properties.name.title[0].text.content
+  pageInfo.filePath = `./content/blog/${pageInfo.createdAtDate}-${pageInfo.slug}.mdx`
 
-  console.log('🤫 Dante ➤ ; ➤ pageInfo', pageInfo)
+  // console.log('🤫 Dante ➤ ; ➤ pageInfo', pageInfo)
 
-  // console.log('🤫 Dante ➤ ; ➤ pageData', JSON.stringify(pageData, null, 2))
-  const mdblocks = await n2m.pageToMarkdown(pageId)
-  const mdString = n2m.toMarkdownString(mdblocks)
+  const textContent = Mustache.render(markdownHeaderTemplate, pageInfo)
+  // console.log('🤫 Dante ➤ ; ➤ textContent', textContent)
 
-  //writing to file
-  fs.writeFile('test.md', mdString, err => {
-    console.log(err)
-  })
+  fs.writeFileSync(pageInfo.filePath, textContent)
 })()

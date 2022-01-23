@@ -200,7 +200,6 @@ module.exports = {
         showSpinner: false,
       },
     },
-    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

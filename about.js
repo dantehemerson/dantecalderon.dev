@@ -46,7 +46,7 @@ module.exports = {
       instagram: 'https://instagram.com/dantehemerson',
     },
     menu: [
-      { title: 'Home', id: 'home', icon: 'home' },
+      { title: 'Home', id: 'home', to: '/', icon: 'home' },
       { title: 'Blog', id: 'blog', to: '/blog', icon: 'blog' },
       {
         title: 'Highlights',

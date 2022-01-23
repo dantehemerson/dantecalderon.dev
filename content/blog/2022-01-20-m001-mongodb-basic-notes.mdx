@@ -1,0 +1,333 @@
+---
+model: post
+title: M001 - MongoDB Basics Notes
+description: Some notes of the course M001 - MongoDB from MongoDB University
+author: Dante Calderón
+pathPrefix: blog
+slug: m001-mongodb-basic-notes
+image: ../images/mongodb_1.png
+date: '2022-01-20T00:19:00.000Z'
+published: true
+tags:
+  - mongodb
+  - nodejs
+---
+
+## Chapter 1: **What is MongoDB?**
+
+MongoDB is a NoSQL database.
+
+A NoSQL Database is a database that is structured and can be accessed in a different way to SQL databases, it doesn’t use a legacy approach of related tables of data, not in rows and columns. 
+
+- The data in MongoDB DB is stored in Documents.
+
+- Documents are stored in Collections.
+
+<div class="mdx-image-container with-border wone g1" style="max-width: 430px; border-color: red;">
+
+![MongoDB actors](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5fdfcc2b-de21-4cac-b680-7ecc09b72d35/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T194211Z&X-Amz-Expires=3600&X-Amz-Signature=24a6f27e0110ef40fa3371ccce265e7b799153468baf7704361ee0967cc413a0&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+<figcaption class="gatsby-resp-image-figcaption">MongoDB actors</figcaption>
+</div>
+
+## What is a Document?
+
+Is a way to organize and store data as a set of **field-value** pairs.
+
+_Field_ - a unique identifier for a data point.
+
+_Value_ - data related to a given identifier.
+
+<div class="mdx-image-container with-border wone g1" style="max-width: 400px; border-color: red;">
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/11369bd2-12fb-43d4-8e21-448eef5c7913/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T194211Z&X-Amz-Expires=3600&X-Amz-Signature=a31290d31776006558c0974a81d9f23c1cf0f76054738242726821c5837062e7&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+</div>
+
+### What is a Collection?
+
+An organized store of documents in MongoDB, usually with common fields between documents. 
+
+There can be many collections per-database and many documents per collection.
+
+<div class="mdx-image-container with-border wone g1" style="max-width: 400px; border-color: red;">
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/54866520-98f9-4978-bac4-e24b8971acc1/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T194211Z&X-Amz-Expires=3600&X-Amz-Signature=3a34653785b49dd1b96e84a3e4b8b1cf6854fffdc9e2dfcf71b4fc4877221b5a&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+</div>
+
+### What is MongoDB Atlas?
+
+Atlas is a cloud service that provides a fully managed database built for a range-wide of applications with MongoDB at its core.
+
+It allows you to visualize, export, and more.
+
+<div class="mdx-image-container with-border wone g1" style="max-width: 500px; border-color: red;">
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/76751fdf-bd93-455b-9060-d3219325984b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T194211Z&X-Amz-Expires=3600&X-Amz-Signature=9cff40ee2f28619451fd8ece5cd68de7bc188944f49e1bc28859981cc3aae6fd&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+</div>
+
+### Cluster Deployment
+
+Atlas users can deploy Clusters.
+
+_Cluster_ - group of servers that store your data.
+
+These Clusters are configured in Replica Set.
+
+<div class="mdx-image-container with-border wone g1" style="max-width: 400px; border-color: red;">
+
+![On the left a Cluster, on the right a Replica Set](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3b397aa8-d4be-448f-a600-f7aa6f485aa4/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T194211Z&X-Amz-Expires=3600&X-Amz-Signature=aeab66f1e28b8ef2c2f04727fb75e317324ddea34bc97dfb30df7f5ee1c0b66b&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+<figcaption class="gatsby-resp-image-figcaption">On the left a Cluster, on the right a Replica Set</figcaption>
+</div>
+
+_Replica Set_ - a few connected MongoDB instances that store the same data to ensure that if something happens to one of the machines the data will remain intact. Comes from the word replicate - to copy something.
+
+The major difference between a replica set and a cluster is:
+
+- A replica set copies the data set as a whole.
+
+- A cluster distributes the workload and stores pieces of data (shards) across multiple servers.
+
+MongoDB allows users to combine these two functionalities by creating a **sharded cluster**, where each shard is replicated to a secondary server in order to provide high data availability and redundancy.
+
+_Instance_ - a single machine locally or in the cloud, running certain software, in our case it is the MongoDB database.
+
+<div class="mdx-image-container with-border wone g1" style="max-width: 340px; border-color: red;">
+
+![An Instance is a single machine](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f0ee2777-6484-4f0f-b97e-9b6257dea19b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T194211Z&X-Amz-Expires=3600&X-Amz-Signature=e78d354865e1296fe0ef03f61ec3724307f65ed2f192f8f5a37d1354f2cc944a&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+<figcaption class="gatsby-resp-image-figcaption">An Instance is a single machine</figcaption>
+</div>
+
+This setup ensures that if something happened to one of the machines in the Replica Set, the data will remain intact and available for use by the application by the remaining working member.
+
+<div class="mdx-image-container with-border wone g1" style="max-width: 340px; border-color: red;">
+
+![One of the machines in the Replica Set is failing](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/db9140d4-ad84-4a9d-9526-0c537519df59/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T194211Z&X-Amz-Expires=3600&X-Amz-Signature=339b82a2cb0e77d84f705fda6df8afad24439e4f154a77ee06237f4ebc25025e&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+<figcaption class="gatsby-resp-image-figcaption">One of the machines in the Replica Set is failing</figcaption>
+</div>
+
+Every time that you make a change to a document or collection, redundant copies of that data are stored within the replica set.
+
+It means a copy of that document will exist on every machine in the Replica Set.
+
+> ℹ️ To go deeper about ReplicaSet and Clusters, you can check this answer in StackOverflow: [What is the difference between a cluster and a replica set in MongoDB atlas?](https://stackoverflow.com/a/61661650/8112431)
+
+**Services**
+
+- Managed cluster creation
+
+- Run and maintain database deployment
+
+- Use the cloud provider of your choice
+
+- Experiment with new tools and features
+
+**Pricing**
+
+<div class="mdx-image-container with-border wone g1" style="max-width: 400px; border-color: red;">
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/708146c0-bea7-4c64-b356-c309ac379f06/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T194211Z&X-Amz-Expires=3600&X-Amz-Signature=4f85f1ca11e375d8289011171c0e048dae876f9b863043993e81f8260ff54bb9&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+</div>
+
+**Some free tier features**
+
+<div class="mdx-image-container with-border wone g1" style="max-width: 450px; border-color: red;">
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4fffcd58-6ac7-4be6-88f0-bc662aa1e797/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T194211Z&X-Amz-Expires=3600&X-Amz-Signature=aa943997871cb2b1e4a0de3f13d5a4d8a4de9b67ee07af94675d7e7b153aab83&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+</div>
+
+**Useful Links**:
+
+- [MongoDB Replication: A Complete Introduction](https://www.bmc.com/blogs/mongodb-replication/)
+
+## Chapter 2: Importing, Exporting, and Querying Data
+
+### How documents are represented?
+
+Documents are saved as BSON which is a binary representation of JSON. 
+
+<div class="mdx-image-container with-border wone g1" style="max-width: 400px; border-color: red;">
+
+![A document JSON](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ee9bec4d-c467-49da-ba5c-aff9c7866511/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T194211Z&X-Amz-Expires=3600&X-Amz-Signature=ddd4c844e6dbdfb0561e78b77cc544dbe49c24c77971a2d66617140a97f0e8c6&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+<figcaption class="gatsby-resp-image-figcaption">A document JSON</figcaption>
+</div>
+
+JSON is:
+
+- User friendly
+
+- Readable
+
+- Familiar
+
+Cons of JSON:
+
+- Text-based
+
+- Space Consuming
+
+- Limited number of data types.
+
+BSON is optimized for:
+
+- Speed 
+
+- Space 
+
+- Flexibility
+
+- High performance
+
+- General-purpose focus
+
+<div class="mdx-image-container with-border wone g1" style="max-width: 500px; border-color: red;">
+
+![JSON vs BSON](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7a678f40-4e5d-4c7c-9b1c-51ab44b522f2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T194211Z&X-Amz-Expires=3600&X-Amz-Signature=1337da1553faf8039d83aedca001c12a21235d894ce0742263733a366c04fdaf&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+<figcaption class="gatsby-resp-image-figcaption">JSON vs BSON</figcaption>
+</div>
+
+The additional types in BSON allow for easing communication.
+
+_MongoDB stores data in BSON internally and over the network, but this doesn’t mean you can’t think of MongoDB as a JSON Database._
+
+_Anything you can represent in JSON can also be stored in MongoDB._ 
+
+_We can retrieve and store data as JSON. Actually, with native SDK always use JSON, we don’t think about BSON, it’s just an internal feature that in our day-to-day we never think of._
+
+Optional reading:
+
+- [JSON vs BSON](https://www.mongodb.com/json-and-bson)
+
+- [Read more about BSON](http://bsonspec.org/)
+
+### Importing and Exporting Data
+
+> Data is Stored in **BSON** but Viewed in **JSON  
+>BSON** is great but isn’t human-readable
+
+To learn more about other `mongoimport` supported formats [check out this documentation page](https://docs.mongodb.com/manual/reference/program/mongoimport/#compatibility).
+
+_SRV connection string_ - a specific format used to establish a connection between your application and a MongoDB instance. [Click here to learn more.](https://docs.mongodb.com/manual/reference/connection-string/#connections-dns-seedlist)
+
+Code used in this lecture:
+
+```bash
+mongodump --uri "mongodb+srv://<your username>:<your password>@<your cluster>.mongodb.net/sample_supplies"
+
+mongoexport --uri="mongodb+srv://<your username>:<your password>@<your cluster>.mongodb.net/sample_supplies" --collection=sales --out=sales.json
+
+mongorestore --uri "mongodb+srv://<your username>:<your password>@<your cluster>.mongodb.net/sample_supplies"  --drop dump
+
+mongoimport --uri="mongodb+srv://<your username>:<your password>@<your cluster>.mongodb.net/sample_supplies" --drop sales.json
+
+```
+
+**Terminal Commands**
+
+<div class="mdx-image-container with-border wone g1" style="max-width: 340px; border-color: red;">
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fa1d0097-085a-471a-b01d-ffac625056d4/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T194211Z&X-Amz-Expires=3600&X-Amz-Signature=42fdc1bb2605f3a6b59e9cb3df9dfebfe4cb94805488938c36c55c734e378357&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+</div>
+
+**Exporting**
+
+<div class="mdx-image-container with-border wone g1" style="max-width: 420px; border-color: red;">
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9c43a443-ba49-498c-8525-0dd2734e3179/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T194211Z&X-Amz-Expires=3600&X-Amz-Signature=4e6d16e3d7596bdb32bc6b75eced58830819fa03f26e1d2ea796b689d5f784eb&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+</div>
+
+**Importing**
+
+<div class="mdx-image-container with-border wone g1" style="max-width: 420px; border-color: red;">
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c7ec50a1-e206-40b7-8ed8-05d1f1c52c67/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T194211Z&X-Amz-Expires=3600&X-Amz-Signature=ee181ee99d8a5faa2263630a1a2b85f1ed2697d6d3f477e5f11e145e095c7a95&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+</div>
+
+### Data Explorer
+
+`mongosh` allows you to interact with your MongoDB instance without using a Graphical User Interface
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2b89faf6-cf9c-4ebf-9ba6-8633ea40da55/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T194211Z&X-Amz-Expires=3600&X-Amz-Signature=8d584e9768b184c12890e958eda2cce04febcd08d8a64b0d7488b6349aea471d&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+## **Chapter 3: Creating and Manipulating Documents**
+
+### Inserting New Documents - ObjectId
+
+Every document must have a **unique** `_id` value.
+
+**Optional Reading**
+
+If you want to read more about the ObjectId data type, and the ObjectId() function, which generates ObjectId values, [check out this excellent documentation page](https://docs.mongodb.com/manual/reference/method/ObjectId/index.html#objectid).
+
+Every document can have a different structure, nothing prevents you from doing this. Either is a good practice to know how to organize your data.
+
+The default value of `_id` field is `ObjectId()` unless otherwise is specified.
+
+Idential documents can exist in the same collection as long as their `_id` values are different.
+
+MongoDB has schema validation functionality allow you to enforce document structure.
+
+### Inserting New Documents - insert() order
+
+Insert in order, which means if something fails, it will fail and will not continue with the next item.
+
+```bash
+db.inspections.insert([{ "_id": 1, "test": 1 },{ "_id": 1, "test": 2 },{ "_id": 3, "test": 3 }])
+```
+
+We can avoid this behaviour by adding the option `{ ordered: false` 
+
+```bash
+db.inspections.insert([{ "_id": 1, "test": 1 },{ "_id": 1, "test": 2 }, { "_id": 3, "test": 3 }], { ordered: false } )
+```
+
+### Updating Documents - mongo shell
+
+<div class="mdx-image-container with-border wone g1" style="max-width: 500px; border-color: red;">
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0c1fceff-ff76-4e68-929d-0973eb055e1a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T194212Z&X-Amz-Expires=3600&X-Amz-Signature=14a28ba94b5fd6cee385097a69d7230defd88f174957ffd1e65d4c9e663e5f98&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+</div>
+
+### Deleting Documents and Collections
+
+<div class="mdx-image-container with-border wone g1" style="max-width: 500px; border-color: red;">
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/05d7e53a-a913-40c0-8258-b43d3ccacc0a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T194212Z&X-Amz-Expires=3600&X-Amz-Signature=4aeaae04002ccad8e260017f52733ee7daf6053af0ebf894aa4c4a075d270c49&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+</div>
+
+We can delete a collection by doing:
+
+```bash
+db.collection_name.drop()
+```
+
+When we delete all collections from a database, the database will be removed as well.
+
+## **Chapter 4: Advanced CRUD Operations**
+
+ddd
+

@@ -4,7 +4,7 @@ require('dotenv').config({
 
 const { Client } = require('@notionhq/client')
 const Mustache = require('mustache')
-const { NotionToMarkdown } = require('notion-to-md')
+const { NotionToMarkdown } = require('@dantehemerson2/notion-to-md')
 const fs = require('fs')
 const { markdownHeaderTemplate } = require('./templates')
 
@@ -26,8 +26,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion })
 
   const pageInfo = {}
 
-  const mdblocks = await n2m.pageToMarkdown(pageId)
-  console.log('🤫 Dante ➤ ; ➤ mdblocks', mdblocks.slice(0, 8))
+  const mdblocks = await n2m.pageToMarkdown(pageId, 100)
   pageInfo.content = n2m.toMarkdownString(mdblocks)
 
   pageInfo.createdAtDate = pageData.created_time.slice(0, 10)
@@ -45,5 +44,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion })
   const textContent = Mustache.render(markdownHeaderTemplate, pageInfo)
   // console.log('🤫 Dante ➤ ; ➤ textContent', textContent)
 
-  fs.writeFileSync(pageInfo.filePath, textContent)
+  console.log(textContent)
+
+  fs.writeFileSync(pageInfo.filePath, textContent, { encoding: 'utf-8' })
 })()

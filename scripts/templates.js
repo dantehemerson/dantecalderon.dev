@@ -13,7 +13,7 @@ tags:
   - {{.}}
 {{/tags}}
 ---
-{{ content }}
+{{{ content }}}
 `
 
 module.exports.markdownHeaderTemplate = markdownHeaderTemplate

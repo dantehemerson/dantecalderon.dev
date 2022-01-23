@@ -5,7 +5,8 @@ description: {{ description }}
 author: Dante Calderón
 pathPrefix: blog
 slug: {{ slug }}
-image: ../images/mongodb_1.png
+image: {{ image }}
+externalImage: {{{ externalImage }}}
 date: '{{ createdAt }}'
 published: {{ published }}
 tags:

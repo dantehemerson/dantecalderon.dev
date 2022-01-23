@@ -28,13 +28,13 @@ const Template = props => {
     window.addEventListener('scroll', scrollListenerShare)
   }, [show_share])
 
-  const { isPost, title, image, description, path } = props
+  const { isPost, title, image, externalImage, description, path } = props
   const { siteUrl } = props.data.site.siteMetadata
   return (
     <Layout active={isPost ? pages.blog : pages.portfolio}>
       <SEO
         title={title}
-        image={`${siteUrl}${getSrc(image)}`}
+        image={image ? `${siteUrl}${getSrc(image)}` : externalImage}
         url={`${siteUrl}/${path}`}
         description={description}
         isPost={isPost}

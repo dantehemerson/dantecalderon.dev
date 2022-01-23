@@ -2,6 +2,7 @@ require('dotenv').config({
   path: `${process.cwd()}/.env.development`,
 })
 
+const _ = require('lodash')
 const { Client } = require('@notionhq/client')
 const Mustache = require('mustache')
 const { NotionToMarkdown } = require('@dantehemerson2/notion-to-md')
@@ -23,6 +24,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion })
   const pageData = await notion.pages.retrieve({
     page_id: pageId,
   })
+  console.log('🤫 Dante ➤ ; ➤ pageData', pageData)
 
   const pageInfo = {}
 
@@ -38,6 +40,8 @@ const n2m = new NotionToMarkdown({ notionClient: notion })
   pageInfo.pathPrefix = pageData.properties.pathPrefix.select.name || 'blog'
   pageInfo.title = pageData.properties.name.title[0].text.content
   pageInfo.filePath = `./content/blog/${pageInfo.createdAtDate}-${pageInfo.slug}.mdx`
+  pageInfo.externalImage =
+    _.get(pageData.cover, 'external.url') || _.get(pageData.cover, 'file.url')
 
   // console.log('🤫 Dante ➤ ; ➤ pageInfo', pageInfo)
 

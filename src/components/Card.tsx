@@ -69,19 +69,25 @@ const Summary = styled.p`
   `};
 `
 
-export default props => (
-  <Container to={props.data.path}>
-    <div>
-      <ImageWrapper>
-        <GatsbyImage alt={`${props.data.title} image`} image={props.data.thumbnail} />
-      </ImageWrapper>
-      <Info>
-        <Title>{props.data.title}</Title>
-        <Summary>{props.data.excerpt}</Summary>
-        <Time>
-          <time dateTime={props.data.date}>{props.data.date} </time>
-        </Time>
-      </Info>
-    </div>
-  </Container>
-)
+export default function (props) {
+  return (
+    <Container to={props.data.path}>
+      <div>
+        <ImageWrapper>
+          {
+            props.data.thumbnail ? <GatsbyImage alt={`${props.data.title} image`} image={props.data.thumbnail} /> : <img src={props.data.externalThumbnail}/>
+          }
+
+        </ImageWrapper>
+        <Info>
+          <Title>{props.data.title}</Title>
+          <Summary>{props.data.excerpt}</Summary>
+          <Time>
+            <time dateTime={props.data.date}>{props.data.date} </time>
+          </Time>
+        </Info>
+      </div>
+    </Container>
+  )
+
+}

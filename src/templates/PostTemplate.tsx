@@ -7,9 +7,9 @@ import Share from '../components/Share'
 import TagsSection from '../components/TagsSection'
 import Layout from './TemplateLayout'
 
-export const PostContent = ({ title, image, date, timeToRead, avatar, content }) => (
+export const PostContent = ({ title, image, externalImage, date, timeToRead, avatar, content }) => (
   <React.Fragment>
-    <PostHeader title={title} image={image} date={date} timeToRead={timeToRead} avatar={avatar} />
+    <PostHeader title={title} image={image} externalImage={externalImage} date={date} timeToRead={timeToRead} avatar={avatar} />
     <Markdown content={content} />
   </React.Fragment>
 )
@@ -19,7 +19,7 @@ const PostTemplate = props => {
     timeToRead,
     body,
     fields: { slug },
-    frontmatter: { title, image, date, description, tags },
+    frontmatter: { title, image, externalImage, date, description, tags },
   } = props.data.mdx
 
   return (
@@ -27,12 +27,14 @@ const PostTemplate = props => {
       isPost
       title={title}
       path={slug}
-      image={image.childImageSharp.gatsbyImageData}
+      image={image?.childImageSharp.gatsbyImageData}
+      externalImage={externalImage}
       description={description}
     >
       <PostContent
         title={title}
-        image={image.childImageSharp.gatsbyImageData}
+        image={image?.childImageSharp.gatsbyImageData}
+        externalImage={externalImage}
         date={date}
         timeToRead={timeToRead}
         avatar={props.data.avatar.gatsbyImageData}
@@ -65,6 +67,7 @@ export const pageQuery = graphql`
         subtitle
         date(formatString: "MMMM DD, YYYY")
         description
+        externalImage
         image {
           childImageSharp {
             gatsbyImageData(layout: CONSTRAINED, width: 1920, placeholder: TRACED_SVG)

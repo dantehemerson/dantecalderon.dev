@@ -9,6 +9,11 @@ const Container = styled.div`
   margin: 0 auto;
   margin-bottom: 26px;
   margin-top: 100px;
+
+  .externalHeaderImage {
+    text-align: center;
+    width: 100%;
+  }
 `
 
 const Title = styled.h1`
@@ -30,7 +35,10 @@ export default function PostHeader(props) {
     <Container>
     <Title id="post_id">{props.title}</Title>
     <AuthorPost date={props.date} avatar={props.avatar} />
-    <GatsbyImage alt={`${props.title} cover`} image={props.image} className="zoomable" />
+    {
+      props.image ? <GatsbyImage alt={`${props.title} cover`} image={props.image} className="zoomable" /> : <img className='externalHeaderImage' src={props.externalImage} />
+    }
+
   </Container>
   )
 }

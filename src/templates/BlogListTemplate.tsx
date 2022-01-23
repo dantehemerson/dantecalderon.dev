@@ -26,13 +26,13 @@ function Blog(props) {
         <SEO title="Blog" url={`${siteUrl}/blog`} />
         <PostsWrapper>
           {posts.map(({ node }, index) => {
-            console.log(node.frontmatter)
             if (node.frontmatter.published)
               return (
                 <Card
                   data={{
                     title: node.frontmatter.title,
-                    thumbnail: node.frontmatter.image.childImageSharp.gatsbyImageData,
+                    thumbnail: node.frontmatter.image?.childImageSharp?.gatsbyImageData,
+                    externalThumbnail: node.frontmatter.externalImage,
                     excerpt: node.frontmatter.description || node.excerpt,
                     date: node.frontmatter.date,
                     path: `/${node.fields.slug}`,
@@ -79,12 +79,13 @@ export const queryBlog = graphql`
             title
             description
             slug
+            externalImage
+            published
             image {
               childImageSharp {
                 gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
               }
             }
-            published
           }
         }
       }

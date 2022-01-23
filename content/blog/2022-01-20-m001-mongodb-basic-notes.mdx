@@ -6,12 +6,13 @@ author: Dante Calderón
 pathPrefix: blog
 slug: m001-mongodb-basic-notes
 image: 
-externalImage: https://www.notion.so/images/page-cover/met_william_morris_1875.jpg
+externalImage: https://images.unsplash.com/photo-1598058921517-81a452bc7cce?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb
 date: '2022-01-20T00:19:00.000Z'
 published: true
 tags:
   - mongodb
   - nodejs
+  - notes
 ---
 
 ## Chapter 1: **What is MongoDB?**
@@ -26,7 +27,7 @@ A NoSQL Database is a database that is structured and can be accessed in a diffe
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 430px; border-color: red;">
 
-![MongoDB actors](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5fdfcc2b-de21-4cac-b680-7ecc09b72d35/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T204708Z&X-Amz-Expires=3600&X-Amz-Signature=d640c669047fdd4d923bd2261c261daa5ad891e32b972e3c2c616d38464e4637&X-Amz-SignedHeaders=host&x-id=GetObject)
+![MongoDB actors](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5fdfcc2b-de21-4cac-b680-7ecc09b72d35/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T205457Z&X-Amz-Expires=3600&X-Amz-Signature=c601655110d4d876b2982680b722e2475dc144bd2cf2857575b34d4afec727b0&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 <figcaption class="gatsby-resp-image-figcaption">MongoDB actors</figcaption>
 </div>
@@ -41,7 +42,7 @@ _Value_ - data related to a given identifier.
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 400px; border-color: red;">
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/11369bd2-12fb-43d4-8e21-448eef5c7913/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T204708Z&X-Amz-Expires=3600&X-Amz-Signature=d33e6c407be0e11c42ed055c44333e8e540ca94293e3b532302c5bdafb7c5844&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/11369bd2-12fb-43d4-8e21-448eef5c7913/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T205457Z&X-Amz-Expires=3600&X-Amz-Signature=eb7250594de4a51982661b25551b1f07f055fbba170d14d873fd6114beef9dc7&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 </div>
@@ -54,7 +55,7 @@ There can be many collections per-database and many documents per collection.
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 400px; border-color: red;">
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/54866520-98f9-4978-bac4-e24b8971acc1/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T204708Z&X-Amz-Expires=3600&X-Amz-Signature=b3ee09291939bdbacaceea091871bee3f864cc8a1c18f1401b7b15252c32c060&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/54866520-98f9-4978-bac4-e24b8971acc1/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T205457Z&X-Amz-Expires=3600&X-Amz-Signature=f641b40b1a66a65a878a56977a53d1560b11c44109aa6dabe6037310fe5d7a68&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 </div>
@@ -67,7 +68,7 @@ It allows you to visualize, export, and more.
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 500px; border-color: red;">
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/76751fdf-bd93-455b-9060-d3219325984b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T204708Z&X-Amz-Expires=3600&X-Amz-Signature=60fabe322ce7ff80b4f7e2990311c723af7f2b9a453b1c46a2267521115122fa&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/76751fdf-bd93-455b-9060-d3219325984b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T205457Z&X-Amz-Expires=3600&X-Amz-Signature=04afbd2fa987273a0bcf1d590b24dcde8b1d3b5be63eb99b834f56699e07129b&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 </div>
@@ -82,7 +83,7 @@ These Clusters are configured in Replica Set.
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 400px; border-color: red;">
 
-![On the left a Cluster, on the right a Replica Set](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3b397aa8-d4be-448f-a600-f7aa6f485aa4/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T204708Z&X-Amz-Expires=3600&X-Amz-Signature=18217cdf8507e6e1552012b8dbfa52a2f2a2ba02db69820cbb6266421478af0e&X-Amz-SignedHeaders=host&x-id=GetObject)
+![On the left a Cluster, on the right a Replica Set](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3b397aa8-d4be-448f-a600-f7aa6f485aa4/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T205457Z&X-Amz-Expires=3600&X-Amz-Signature=f894df1a8b6c790458e3f3e8d24888ef2ef26de10a598fff11c5794d7a606ca2&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 <figcaption class="gatsby-resp-image-figcaption">On the left a Cluster, on the right a Replica Set</figcaption>
 </div>
@@ -101,7 +102,7 @@ _Instance_ - a single machine locally or in the cloud, running certain software
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 200px; border-color: red;">
 
-![An Instance is a single machine](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f0ee2777-6484-4f0f-b97e-9b6257dea19b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T204708Z&X-Amz-Expires=3600&X-Amz-Signature=e6c8e7c56458195da7194619a3e8fea078db816a378e9c54daa3303efeb2b0f7&X-Amz-SignedHeaders=host&x-id=GetObject)
+![An Instance is a single machine](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f0ee2777-6484-4f0f-b97e-9b6257dea19b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T205457Z&X-Amz-Expires=3600&X-Amz-Signature=15437921af33b357be2c1d659152bba3d3963fb9706b552b40c9a78b32168ea2&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 <figcaption class="gatsby-resp-image-figcaption">An Instance is a single machine</figcaption>
 </div>
@@ -110,7 +111,7 @@ This setup ensures that if something happened to one of the machines in the Repl
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 200px; border-color: red;">
 
-![One of the machines in the Replica Set is failing](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/db9140d4-ad84-4a9d-9526-0c537519df59/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T204708Z&X-Amz-Expires=3600&X-Amz-Signature=3ab2e9c8e38efd7cc9c5fabd5d8a65fbaa046f1d6710b8a15dc3f5b8ae4d22d7&X-Amz-SignedHeaders=host&x-id=GetObject)
+![One of the machines in the Replica Set is failing](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/db9140d4-ad84-4a9d-9526-0c537519df59/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T205457Z&X-Amz-Expires=3600&X-Amz-Signature=9f2ca7a85c7634d5dcc7f3b2324ff476b279eb266ed3253475888072163ea502&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 <figcaption class="gatsby-resp-image-figcaption">One of the machines in the Replica Set is failing</figcaption>
 </div>
@@ -135,7 +136,7 @@ It means a copy of that document will exist on every machine in the Replica Set.
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 400px; border-color: red;">
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/708146c0-bea7-4c64-b356-c309ac379f06/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T204708Z&X-Amz-Expires=3600&X-Amz-Signature=2cd2cb37515efd79d889b299d1a6e865f19a7b167d0e9eb4994de117f289c8c3&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/708146c0-bea7-4c64-b356-c309ac379f06/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T205457Z&X-Amz-Expires=3600&X-Amz-Signature=3f8f1f777b68fbc5e186747a86e585b4cffdb21bfd62756ee145b8408bdce88f&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 </div>
@@ -144,7 +145,7 @@ It means a copy of that document will exist on every machine in the Replica Set.
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 450px; border-color: red;">
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4fffcd58-6ac7-4be6-88f0-bc662aa1e797/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T204708Z&X-Amz-Expires=3600&X-Amz-Signature=5207611076f1f9e73d2cd666c41cb7eecb0bfd76007d4403b687daa668b50ad4&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4fffcd58-6ac7-4be6-88f0-bc662aa1e797/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T205457Z&X-Amz-Expires=3600&X-Amz-Signature=29ae2ce946a1a5ec4a99bd018f80a08d5eee08c83c6c656a69ab3e2f1d45524a&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 </div>
@@ -161,7 +162,7 @@ Documents are saved as BSON which is a binary representation of JSON.
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 400px; border-color: red;">
 
-![A document JSON](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ee9bec4d-c467-49da-ba5c-aff9c7866511/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T204708Z&X-Amz-Expires=3600&X-Amz-Signature=baa4fce6f6ae9c45e48bda6358c09f5c0a37a1ecf2cce359f460cb87708dde42&X-Amz-SignedHeaders=host&x-id=GetObject)
+![A document JSON](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ee9bec4d-c467-49da-ba5c-aff9c7866511/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T205457Z&X-Amz-Expires=3600&X-Amz-Signature=0e4a6ce2f829089c902389fe7bc52ace961837520d446fe05c3514800745d180&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 <figcaption class="gatsby-resp-image-figcaption">A document JSON</figcaption>
 </div>
@@ -196,7 +197,7 @@ BSON is optimized for:
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 500px; border-color: red;">
 
-![JSON vs BSON](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7a678f40-4e5d-4c7c-9b1c-51ab44b522f2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T204708Z&X-Amz-Expires=3600&X-Amz-Signature=4aa989e71e59a98c88b2220d81ed05b7fbaa4971d120ca115a0ecf61c6918bc9&X-Amz-SignedHeaders=host&x-id=GetObject)
+![JSON vs BSON](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7a678f40-4e5d-4c7c-9b1c-51ab44b522f2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T205457Z&X-Amz-Expires=3600&X-Amz-Signature=67d234a46fe75bb3547705bc112dd36367d971fe524576db8e6680945e315ab1&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 <figcaption class="gatsby-resp-image-figcaption">JSON vs BSON</figcaption>
 </div>
@@ -241,7 +242,7 @@ mongoimport --uri="mongodb+srv://<your username>:<your password>@<your cluster>.
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 340px; border-color: red;">
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fa1d0097-085a-471a-b01d-ffac625056d4/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T204708Z&X-Amz-Expires=3600&X-Amz-Signature=9752c2204b4387ce4dbb6f17dcdd94247cdf4d7bd7e061418e222814ca2e9702&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fa1d0097-085a-471a-b01d-ffac625056d4/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T205457Z&X-Amz-Expires=3600&X-Amz-Signature=a5168ecfd185584d29a545e3b7e4cef4db041606ab6fe92d19ca9450978757ed&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 </div>
@@ -250,7 +251,7 @@ mongoimport --uri="mongodb+srv://<your username>:<your password>@<your cluster>.
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 420px; border-color: red;">
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9c43a443-ba49-498c-8525-0dd2734e3179/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T204708Z&X-Amz-Expires=3600&X-Amz-Signature=efc2b9a782a283ec3193a96d1149ba175dff5cc80e0ed787728cdf5b4ab3acfc&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9c43a443-ba49-498c-8525-0dd2734e3179/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T205457Z&X-Amz-Expires=3600&X-Amz-Signature=83d5ef6f3ae0db6a71f5112aee8762555b9a3eab42bd1395e6315194bdb20529&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 </div>
@@ -259,7 +260,7 @@ mongoimport --uri="mongodb+srv://<your username>:<your password>@<your cluster>.
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 420px; border-color: red;">
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c7ec50a1-e206-40b7-8ed8-05d1f1c52c67/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T204708Z&X-Amz-Expires=3600&X-Amz-Signature=86d0e99f6f8ea685c0777bbd6961d823d2bb98eb52252c22ef46865bb051f3d2&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c7ec50a1-e206-40b7-8ed8-05d1f1c52c67/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T205457Z&X-Amz-Expires=3600&X-Amz-Signature=5ce147b041c81840f89571f2421c4de6e3630d41637a9a59c237ab6396b9e683&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 </div>
@@ -268,7 +269,7 @@ mongoimport --uri="mongodb+srv://<your username>:<your password>@<your cluster>.
 
 `mongosh` allows you to interact with your MongoDB instance without using a Graphical User Interface
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2b89faf6-cf9c-4ebf-9ba6-8633ea40da55/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T204708Z&X-Amz-Expires=3600&X-Amz-Signature=27e9dc6636aa6cb4ce7421dd2d545bcc1ad60e3c333e4d1551632af2caf881a0&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2b89faf6-cf9c-4ebf-9ba6-8633ea40da55/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T205457Z&X-Amz-Expires=3600&X-Amz-Signature=0840a433754f4e89f5648d6794d4033846b172ef40c5fea44151ee37931aa692&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 ## **Chapter 3: Creating and Manipulating Documents**
 
@@ -306,7 +307,7 @@ db.inspections.insert([{ "_id": 1, "test": 1 },{ "_id": 1, "test": 2 }, { "_id":
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 500px; border-color: red;">
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0c1fceff-ff76-4e68-929d-0973eb055e1a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T204709Z&X-Amz-Expires=3600&X-Amz-Signature=ea5b8e7ff514204c8091ecd44df4ad4c43d3c5ecea1d910c2ba97b1778d95f81&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0c1fceff-ff76-4e68-929d-0973eb055e1a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T205459Z&X-Amz-Expires=3600&X-Amz-Signature=7d23b8bd72f65a5858147b853b234029ec6e00dff9fa4aea13f19d6f776c0aa4&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 </div>
@@ -315,7 +316,7 @@ db.inspections.insert([{ "_id": 1, "test": 1 },{ "_id": 1, "test": 2 }, { "_id":
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 500px; border-color: red;">
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/05d7e53a-a913-40c0-8258-b43d3ccacc0a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T204709Z&X-Amz-Expires=3600&X-Amz-Signature=687ea944b5508cf6d005f3d9e6e57377b3188873a48837376e0fc93aabc7d38f&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/05d7e53a-a913-40c0-8258-b43d3ccacc0a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220123T205459Z&X-Amz-Expires=3600&X-Amz-Signature=d56c41ec6d0e913251e2fdde8e5d6ad9aa456f29cec296f94d54f98e50cbcf14&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 </div>

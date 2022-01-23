@@ -44,7 +44,9 @@ const n2m = new NotionToMarkdown({ notionClient: notion })
   const textContent = Mustache.render(markdownHeaderTemplate, pageInfo)
   // console.log('🤫 Dante ➤ ; ➤ textContent', textContent)
 
-  console.log(textContent)
+  // console.log(textContent)
 
   fs.writeFileSync(pageInfo.filePath, textContent, { encoding: 'utf-8' })
+
+  console.log('Notion page imported correcly!!!')
 })()

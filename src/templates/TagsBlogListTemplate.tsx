@@ -9,7 +9,7 @@ import { pages, preferSpacedTag } from '../utils'
 
 const PostsWrapper = styled.div`
   padding: 0 15px;
-  max-width: 1060px;
+  max-width: 800px;
   margin: 0 auto 35px;
 `
 
@@ -21,7 +21,7 @@ const BlogWithTags = props => {
   const siteUrl = props.data.site.siteMetadata.siteUrl
   return (
     <Layout location={props.location} active={pages.blog}>
-      <div className="Blog" style={{ marginTop: 40 }}>
+      <div className="Blog" style={{ marginTop: 90 }}>
         <SEO title={title} url={`${siteUrl}/blog/tags/${tagSlug}`} />
         <PostsWrapper>
           {posts.map(({ node }) => {
@@ -30,7 +30,8 @@ const BlogWithTags = props => {
                 <Card
                   data={{
                     title: node.frontmatter.title,
-                    thumbnail: node.frontmatter.image.childImageSharp.gatsbyImageData,
+                    thumbnail: node.frontmatter.image?.childImageSharp.gatsbyImageData,
+                    externalThumbnail: node.frontmatter.externalImage,
                     excerpt: node.frontmatter.description || node.excerpt,
                     date: node.frontmatter.date,
                     path: `/${node.fields.slug}`,
@@ -73,6 +74,7 @@ export const queryBlog = graphql`
             title
             description
             slug
+            externalImage
             image {
               childImageSharp {
                 gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)

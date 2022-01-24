@@ -20,7 +20,7 @@ const notion = new Client({
 const n2m = new NotionToMarkdown({ notionClient: notion })
 
 ;(async () => {
-  const pageId = 'a6dfe4142490406d84ecdf45501c378d'
+  const pageId = process.argv[2]
   const pageData = await notion.pages.retrieve({
     page_id: pageId,
   })

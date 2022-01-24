@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Tags from '../../components/Tags'
+import { Tags } from '../../components/Tags'
 import Stack from './Stack'
 
 const Container = styled.div`

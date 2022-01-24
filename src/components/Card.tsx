@@ -77,7 +77,6 @@ export default function (props) {
           {
             props.data.thumbnail ? <GatsbyImage alt={`${props.data.title} image`} image={props.data.thumbnail} /> : <img src={props.data.externalThumbnail}/>
           }
-
         </ImageWrapper>
         <Info>
           <Title>{props.data.title}</Title>

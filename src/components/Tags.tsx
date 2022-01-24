@@ -1,6 +1,7 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
+import { kebabCase } from 'lodash'
 
 const List = styled.ul`
   list-style: none;
@@ -34,12 +35,14 @@ const Item = styled(Link)`
   }
 `
 
-export default props => (
-  <Container>
-    <List>
-      {props.items.map(item => (
-        <Item>{item}</Item>
-      ))}
-    </List>
-  </Container>
-)
+export function Tags({ items }) {
+  return (
+    <Container>
+      <List>
+        {items.map(item => (
+          <Item to={`/blog/tags/${kebabCase(item.toLowerCase())}`}>{item}</Item>
+        ))}
+      </List>
+    </Container>
+  )
+}

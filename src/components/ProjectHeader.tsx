@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Message from '../components/Message'
 import Toolbar from '../components/ProjectToolbar'
 import Slider from '../components/Slider'
-import Tags from '../components/Tags'
+import { Tags } from '../components/Tags'
 import { media } from '../styles'
 
 const Container = styled.div`

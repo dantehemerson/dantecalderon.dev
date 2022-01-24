@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { media } from '../styles'
+import { Tags } from './Tags'
 
 const Container = styled(Link)`
   & > div {
@@ -13,7 +14,8 @@ const Container = styled(Link)`
     padding: 1.2rem 0.5rem;
     ${media.md`
       flex-direction: row;
-    `} * {
+    `}
+    * {
       margin: 0;
     }
 
@@ -80,6 +82,7 @@ export default function (props) {
         </ImageWrapper>
         <Info>
           <Title>{props.data.title}</Title>
+          <Tags items={props.data.tags.slice(0, 4)} />
           <Summary>{props.data.excerpt}</Summary>
           <Time>
             <time dateTime={props.data.date}>{props.data.date} </time>

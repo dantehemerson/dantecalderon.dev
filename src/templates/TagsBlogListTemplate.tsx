@@ -34,6 +34,7 @@ const BlogWithTags = props => {
                     externalThumbnail: node.frontmatter.externalImage,
                     excerpt: node.frontmatter.description || node.excerpt,
                     date: node.frontmatter.date,
+                    tags: node.frontmatter.tags,
                     path: `/${node.fields.slug}`,
                   }}
                   key={node.frontmatter.slug}
@@ -75,6 +76,7 @@ export const queryBlog = graphql`
             description
             slug
             externalImage
+            tags
             image {
               childImageSharp {
                 gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)

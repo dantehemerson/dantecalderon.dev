@@ -23,5 +23,11 @@ export const tags: Record<string, ITag> =  {
     slug: 'notes',
     color: '#f1d83d',
     textColor: '#505050'
+  },
+  'software-engineering': {
+    title: '👨‍💻 Software Engineering',
+    slug: 'notes',
+    color: '#0271b3',
+    textColor: 'white'
   }
 }

@@ -38,7 +38,7 @@ const Item = styled(Link)`
   }
 `
 
-export function Tags({ items }: { items: string[] }) {
+export function Tags({ items = [] }: { items: string[] }) {
   return (
     <Container>
       <List>

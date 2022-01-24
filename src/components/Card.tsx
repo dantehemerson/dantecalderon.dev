@@ -82,7 +82,7 @@ export default function (props) {
         </ImageWrapper>
         <Info>
           <Title>{props.data.title}</Title>
-          <Tags items={props.data.tags.slice(0, 4)} />
+          <Tags items={props.data?.tags?.slice(0, 4)} />
           <Summary>{props.data.excerpt}</Summary>
           <Time>
             <time dateTime={props.data.date}>{props.data.date} </time>

@@ -27,6 +27,8 @@ const Item = styled(Link)`
   font-size: 13px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
+  min-width: 32px;
+  text-align: center;
   display: inline-block;
   text-transform: capitalize;
   text-decoration: none !important;
@@ -44,7 +46,7 @@ export function Tags({ items = [] }: { items: string[] }) {
       <List>
         {items.map(item => {
           const tagSlug = kebabCase(item.toLowerCase())
-          const tagData: ITag = { title: item, slug: tagSlug, color: '#f7f7f7', textColor: '#6a6a6a', ...tags[tagSlug] }
+          const tagData: ITag = { title: item, slug: tagSlug, color: '#dcdcdc', textColor: '#6a6a6a', ...tags[tagSlug] }
           return  <Item key={tagData.slug} to={`/blog/tags/${tagData.slug}`} style={{
             backgroundColor: tagData.color,
             color: tagData.textColor

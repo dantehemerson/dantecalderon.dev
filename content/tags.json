@@ -12,7 +12,7 @@
     "textColor": "white"
   },
   "mongodb": {
-    "title": "MongoDB",
+    "title": "🌿 MongoDB",
     "slug": "mongodb",
     "color": "#42a36a",
     "textColor": "white"
@@ -34,5 +34,35 @@
     "slug": "setup",
     "color": "#6a6a6a",
     "textColor": "white"
+  },
+  "databases": {
+    "title": "💾 Databases",
+    "slug": "databases",
+    "color": "#343434",
+    "textColor": "white"
+  },
+  "linux": {
+    "title": "🐧 Linux",
+    "slug": "linux",
+    "color": "#884873",
+    "textColor": "white"
+  },
+  "backend": {
+    "title": "🗃️ Backend",
+    "slug": "backend",
+    "color": "#343434",
+    "textColor": "white"
+  },
+  "javascript": {
+    "title": "JS",
+    "slug": "javascript",
+    "color": "#efd81e",
+    "textColor": "#000000"
+  },
+  "v-8": {
+    "title": "V8",
+    "slug": "v-8",
+    "color": "#4088ec",
+    "textColor": "#242424"
   }
 }

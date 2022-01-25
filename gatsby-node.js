@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const Promise = require('bluebird')
 const path = require('path')
+const tags = require('./content/tags.json')
 
 const postPerPage = 20
 
@@ -11,7 +12,8 @@ const getFullPath = frontmatter => {
 }
 
 const getAllTagsInPages = (markdownPages = []) => {
-  const makeSlugTag = tag => _.kebabCase(tag.toLowerCase())
+  const makeSlugTag = tag =>
+    _.get(tags[_.kebabCase(tag.toLowerCase())], 'slug') || _.kebabCase(tag.toLowerCase())
 
   return _(markdownPages)
     .map(post => _.get(post, 'node.frontmatter.tags'))

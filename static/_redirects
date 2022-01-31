@@ -5,3 +5,7 @@ https://dantecalderon.netlify.com/* https://dantecalderon.dev/:splat 301!
 /i https://www.instagram.com/dantehemerson 301
 /l https://www.linkedin.com/in/dantehemerson 301
 /about /#about-me 301
+
+# Rewrites
+/resume /resume.pdf 200!
+

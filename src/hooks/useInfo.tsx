@@ -37,7 +37,7 @@ export const useInfo = () => {
   })
 
   useEffect(() => {
-    const setGithubInfo = async () => {
+    const loadGithubInfo = async () => {
       try {
         const newInfo = await getMyGithubInfo()
         setInfo(prevInfo =>
@@ -49,7 +49,10 @@ export const useInfo = () => {
         console.error('Error loading info', error);
       }
     }
-    setGithubInfo()
+
+    const intervalId = setInterval(() => loadGithubInfo(), 2000);
+
+    return () => clearInterval(intervalId);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 

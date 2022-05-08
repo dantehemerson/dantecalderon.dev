@@ -76,11 +76,7 @@ export default props => {
       </Social>
       <Copy>
         <span className="copytext">
-          Design inpired by{' '}
-          <a href="https://slim.computer/" target="_blank" rel="noopener">
-            Sarah Lim's
-          </a>{' '}
-          website - © {new Date().getFullYear()}
+          © {new Date().getFullYear()}
         </span>{' '}
         <Link to="/#about-me" target="_blank" rel="noopener">
           {title}

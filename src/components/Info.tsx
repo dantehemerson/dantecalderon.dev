@@ -52,7 +52,7 @@ const Container = styled.div`
   min-width: 366px;
   flex-direction: column;
   align-items: flex-start;
-  border: 1px solid #bcebd3;
+  border: 1px solid #d3c79e;
   padding: 25px;
 `
 

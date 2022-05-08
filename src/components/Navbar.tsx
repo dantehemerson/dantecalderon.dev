@@ -131,7 +131,7 @@ const Wrapper = styled.nav`
   top: 0;
   width: 100%;
   z-index: 10;
-  box-shadow: 0px 1px 0px 0px #f3f3f3;
+  box-shadow: 0px 1px 0px 0px #e8e8e8;
   background: white;
   &.inicio {
     background: transparent;

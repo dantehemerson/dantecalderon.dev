@@ -3,7 +3,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { media } from '../../styles'
 import Info from '../Info'
-import { AvatarHome } from './AvatarHome'
 import { SocialHome } from '../SocialHome'
 import { INFO } from '../../data/info'
 
@@ -13,7 +12,7 @@ function HeaderHome({ data }) {
   return (
     <div
       style={{
-        background: '#e8fdf5',
+        background: '#dfd3a68f',
       }}
     >
       <Container className="row">
@@ -23,7 +22,7 @@ function HeaderHome({ data }) {
           <SocialHome />
           <Info />
         </MainInfoWrapper>
-        <AvatarHome image={data.avatar.gatsbyImageData} />
+        {/* <AvatarHome image={data.avatar.gatsbyImageData} /> */}
       </Container>
     </div>
   )
@@ -38,11 +37,11 @@ const Container = styled.p`
   grid-template-columns: minmax(min-content, 590px);
   justify-content: center;
   align-items: center;
-  ${media.md`
-    min-height: 500px;
-    padding-top: 38px;
-    grid-template-columns: 1fr 1fr;
-  `};
+  // ${media.md`
+  //   min-height: 500px;
+  //   padding-top: 38px;
+  //   grid-template-columns: 1fr 1fr;
+  // `};
 `
 
 const Title = styled.h1`

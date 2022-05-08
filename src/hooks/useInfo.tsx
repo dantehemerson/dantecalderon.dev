@@ -45,7 +45,9 @@ export const useInfo = () => {
             mergeBoolsUsingOrNotAnd: get(newInfo, 'listening.playing', false),
           })
         )
-      } catch (err) {}
+      } catch (error) {
+        console.error('Error loading info', error);
+      }
     }
     setGithubInfo()
     // eslint-disable-next-line react-hooks/exhaustive-deps

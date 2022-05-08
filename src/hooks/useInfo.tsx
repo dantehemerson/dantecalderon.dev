@@ -50,7 +50,7 @@ export const useInfo = () => {
       }
     }
 
-    const intervalId = setInterval(() => loadGithubInfo(), 2000);
+    const intervalId = setInterval(() => loadGithubInfo(), 10000);
 
     return () => clearInterval(intervalId);
     // eslint-disable-next-line react-hooks/exhaustive-deps

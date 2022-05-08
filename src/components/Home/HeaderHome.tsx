@@ -34,14 +34,8 @@ const Container = styled.div`
   display: grid;
   padding-top: 80px;
   margin: 0 auto !important;
-  grid-template-columns: minmax(min-content, 590px);
   justify-content: center;
   align-items: center;
-  // ${media.md`
-  //   min-height: 500px;
-  //   padding-top: 38px;
-  //   grid-template-columns: 1fr 1fr;
-  // `};
 `
 
 const Title = styled.h1`

@@ -12,7 +12,7 @@ function HeaderHome({ data }) {
   return (
     <div
       style={{
-        background: '#dfd3a68f',
+        background: '#dfd5a66e',
       }}
     >
       <Container className="row">
@@ -28,7 +28,7 @@ function HeaderHome({ data }) {
   )
 }
 
-const Container = styled.p`
+const Container = styled.div`
   min-height: 600px;
   max-width: 1080px;
   display: grid;

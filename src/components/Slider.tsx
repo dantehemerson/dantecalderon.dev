@@ -48,7 +48,7 @@ const SliderItem = props => (
     <TopBar>
       <div className="TopBarButtons" />
     </TopBar>
-    <GatsbyImage alt='Slide image' image={props.image} />
+    <GatsbyImage alt="Slide image" image={props.image} />
   </ContainerItem>
 )
 
@@ -88,7 +88,7 @@ export default props => (
       </InProgressAbsolute>
     )}
     <Slider className="PUVIOIs" {...settings}>
-      {props.images.map((item) => (
+      {props.images.map(item => (
         <SliderItem image={item.image.childImageSharp.gatsbyImageData} />
       ))}
     </Slider>

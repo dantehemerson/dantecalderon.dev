@@ -146,7 +146,7 @@ export default props => (
           <div className="TopBarButtons" />
           {!props.finished && <InProgress />}
         </TopBar>
-        <Cover alt='Portfolio item cover' image={props.data.thumbnail} />
+        <Cover alt="Portfolio item cover" image={props.data.thumbnail} />
       </CoverWrapper>
       <div>
         <Title>{props.data.title}</Title>

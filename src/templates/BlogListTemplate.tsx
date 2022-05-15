@@ -19,7 +19,6 @@ function Blog(props) {
 
   const { currentPage, numPages, hasNextPage, hasPrevPage } = props.pageContext
 
-
   return (
     <Layout location={props.location} active={pages.blog}>
       <div className="Blog" style={{ marginTop: 90 }}>

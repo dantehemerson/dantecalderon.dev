@@ -7,7 +7,7 @@ export function AvatarHome(props) {
   return (
     <Container>
       <AvatarContainer>
-        <GatsbyImage alt='Avatar' image={props.image} />
+        <GatsbyImage alt="Avatar" image={props.image} />
       </AvatarContainer>
     </Container>
   )

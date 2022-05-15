@@ -32,7 +32,7 @@ export const useInfo = () => {
       title: "I'm 52% done with The Pragmatic Programmer",
       updatedAt: '2021-02-16T04:53:13.000Z',
       url: 'https://www.goodreads.com/user_status/show/346760831',
-      profileUrl: 'https://www.goodreads.com/user/show/72837965-dante-calder-n'
+      profileUrl: 'https://www.goodreads.com/user/show/72837965-dante-calder-n',
     },
   })
 
@@ -46,13 +46,13 @@ export const useInfo = () => {
           })
         )
       } catch (error) {
-        console.error('Error loading info', error);
+        console.error('Error loading info', error)
       }
     }
 
-    const intervalId = setInterval(() => loadGithubInfo(), 10000);
+    const intervalId = setInterval(() => loadGithubInfo(), 10000)
 
-    return () => clearInterval(intervalId);
+    return () => clearInterval(intervalId)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 

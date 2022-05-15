@@ -49,6 +49,13 @@ module.exports = {
       { title: 'Home', id: 'home', to: '/', icon: 'home' },
       { title: 'Blog', id: 'blog', to: '/blog', icon: 'blog' },
       {
+        title: 'Newsletter',
+        id: 'newsletter',
+        newtab: true,
+        to: 'https://newsletter.dantecalderon.dev?ref=dantecalderon.dev',
+        icon: 'newsletter',
+      },
+      {
         title: 'Highlights',
         id: 'highlights',
         newtab: true,

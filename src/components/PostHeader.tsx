@@ -33,13 +33,13 @@ const Title = styled.h1`
 export default function PostHeader(props) {
   return (
     <Container>
-    <Title id="post_id">{props.title}</Title>
-    <AuthorPost date={props.date} avatar={props.avatar} />
-    {
-      props.image ? <GatsbyImage alt={`${props.title} cover`} image={props.image} className="zoomable" /> : <img className='externalHeaderImage' src={props.externalImage} />
-    }
-
-  </Container>
+      <Title id="post_id">{props.title}</Title>
+      <AuthorPost date={props.date} avatar={props.avatar} />
+      {props.image ? (
+        <GatsbyImage alt={`${props.title} cover`} image={props.image} className="zoomable" />
+      ) : (
+        <img className="externalHeaderImage" src={props.externalImage} />
+      )}
+    </Container>
   )
 }
-

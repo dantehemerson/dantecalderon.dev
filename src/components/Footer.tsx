@@ -75,9 +75,7 @@ export default props => {
         ))}
       </Social>
       <Copy>
-        <span className="copytext">
-          © {new Date().getFullYear()}
-        </span>{' '}
+        <span className="copytext">© {new Date().getFullYear()}</span>{' '}
         <Link to="/#about-me" target="_blank" rel="noopener">
           {title}
         </Link>

@@ -76,9 +76,11 @@ export default function (props) {
     <Container to={props.data.path}>
       <div>
         <ImageWrapper>
-          {
-            props.data.thumbnail ? <GatsbyImage alt={`${props.data.title} image`} image={props.data.thumbnail} /> : <img src={props.data.externalThumbnail}/>
-          }
+          {props.data.thumbnail ? (
+            <GatsbyImage alt={`${props.data.title} image`} image={props.data.thumbnail} />
+          ) : (
+            <img src={props.data.externalThumbnail} />
+          )}
         </ImageWrapper>
         <Info>
           <Title>{props.data.title}</Title>
@@ -91,5 +93,4 @@ export default function (props) {
       </div>
     </Container>
   )
-
 }

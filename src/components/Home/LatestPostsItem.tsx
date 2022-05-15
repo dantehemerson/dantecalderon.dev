@@ -17,7 +17,7 @@ export const LatestPostsItem = ({ post }: LatestPostsItemProps) => (
   <Container to={post.path}>
     <div>
       <ImageWrapper>
-        <GatsbyImage alt='Post item image' image={post.fluidImg} />
+        <GatsbyImage alt="Post item image" image={post.fluidImg} />
       </ImageWrapper>
       <Info>
         <Title>{post.title}</Title>

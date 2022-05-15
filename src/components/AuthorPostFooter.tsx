@@ -79,7 +79,7 @@ export default props => {
   return (
     <Container>
       <div>
-        <Image alt='Author post avatar' image={props.avatar} />
+        <Image alt="Author post avatar" image={props.avatar} />
       </div>
       <Body>
         <By>{props.make ? 'Made with ❤' : 'Written'} by</By>

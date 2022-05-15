@@ -46,11 +46,25 @@ export function Tags({ items = [] }: { items: string[] }) {
       <List>
         {items.map(item => {
           const tagSlug = kebabCase(item.toLowerCase())
-          const tagData: ITag = { title: item, slug: tagSlug, color: '#dcdcdc', textColor: '#6a6a6a', ...tags[tagSlug] }
-          return  <Item key={tagData.slug} to={`/blog/tags/${tagData.slug}`} style={{
-            backgroundColor: tagData.color,
-            color: tagData.textColor
-          }}>{tagData.title}</Item>
+          const tagData: ITag = {
+            title: item,
+            slug: tagSlug,
+            color: '#dcdcdc',
+            textColor: '#6a6a6a',
+            ...tags[tagSlug],
+          }
+          return (
+            <Item
+              key={tagData.slug}
+              to={`/blog/tags/${tagData.slug}`}
+              style={{
+                backgroundColor: tagData.color,
+                color: tagData.textColor,
+              }}
+            >
+              {tagData.title}
+            </Item>
+          )
         })}
       </List>
     </Container>

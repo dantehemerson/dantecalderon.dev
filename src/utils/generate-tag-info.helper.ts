@@ -2,7 +2,6 @@ import { kebabCase } from 'lodash'
 import { ITag, tags } from '../data/tags'
 
 export function generateTagInfo(tagPlain): ITag {
-  console.log('🤫 Dante ➤ generateTagInfo ➤ tagPlain', tagPlain)
   const tagSlug = kebabCase(tagPlain.toLowerCase())
 
   return {

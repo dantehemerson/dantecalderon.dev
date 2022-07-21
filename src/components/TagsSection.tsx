@@ -39,14 +39,14 @@ const Title = styled.span`
     font-size: 15px;
   `}
 `
-const TagsSection = ({ tags }) => {
+const TagsSection = ({ tags, title = 'TAGS: ' }) => {
   return (
     <Wrapper id="post_tags" maxWidth={824} display="auto" paddingLeft={12} paddingRight={12}>
       <hr />
-      <Title>TAGS:</Title>
+      <Title>{title}</Title>
       {tags.map(tag => (
-        <Tag key={tag} to={`/blog/tags/${kebabCase(tag.toLowerCase())}`}>
-          {tag}
+        <Tag key={tag} to={`/blog/tags/${tag.node.slug}`}>
+          {tag.node.postCount ? `${tag.node.postCount} - ` : ''}{tag.node.title}
         </Tag>
       ))}
       <hr

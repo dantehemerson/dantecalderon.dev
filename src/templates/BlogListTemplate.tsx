@@ -16,6 +16,7 @@ const PostsWrapper = styled.div`
 
 function Blog(props) {
   const posts = props.data.allMdx.edges || []
+  const tags = props.data.allTag.edges || []
   const siteUrl = props.data.site.siteMetadata.siteUrl
 
   const { currentPage, numPages, hasNextPage, hasPrevPage } = props.pageContext
@@ -24,12 +25,7 @@ function Blog(props) {
     <Layout location={props.location} active={pages.blog}>
       <div className="Blog" style={{ marginTop: 90 }}>
         <SEO title="Blog" url={`${siteUrl}/blog`} />
-        <TagsSection tags={[{
-          "title": "⬢ Node.js",
-          "slug": "nodejs",
-          "color": "#568155",
-          "textColor": "white"
-        }]} />
+        <TagsSection tags={tags} title='Popular Tags:' />
         <PostsWrapper>
           {posts.map(({ node }, index) => {
             if (node.frontmatter.published)
@@ -67,6 +63,16 @@ export const queryBlog = graphql`
       siteMetadata {
         title
         siteUrl
+      }
+    }
+    allTag(limit: 12,  sort: { fields: [postCount], order: DESC }) {
+      edges {
+        node {
+          textColor
+          slug
+          title
+          postCount
+        }
       }
     }
     allMdx(

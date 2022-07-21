@@ -2,8 +2,20 @@ const _ = require('lodash')
 const Promise = require('bluebird')
 const path = require('path')
 const tags = require('./content/tags.json')
+const { kebabCase } = require('lodash')
 
 const postPerPage = 20
+
+function generateTagInfo(tagPlain) {
+  const tagSlug = kebabCase(tagPlain.toLowerCase())
+  return {
+    title: tagPlain,
+    slug: tagSlug,
+    color: '#dcdcdc',
+    textColor: '#6a6a6a',
+    ...tags[tagSlug],
+  }
+}
 
 const getFullPath = frontmatter => {
   const pathPrefix = _.get(frontmatter, 'pathPrefix') || ''
@@ -15,16 +27,21 @@ const getAllTagsInPages = (markdownPages = []) => {
   const makeSlugTag = tag =>
     _.get(tags[_.kebabCase(tag.toLowerCase())], 'slug') || _.kebabCase(tag.toLowerCase())
 
-  return _(markdownPages)
+  const items = _(markdownPages)
     .map(post => _.get(post, 'node.frontmatter.tags'))
-    .filter()
     .flatten()
     .uniq()
-    .groupBy(makeSlugTag)
+
+  const groupedTags = items.groupBy(makeSlugTag)
+
+  return {
+    existentTags: items.map(tagName => generateTagInfo(tagName)),
+    groupedTags,
+  }
 }
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+exports.createPages = ({ graphql, actions, createNodeId, createContentDigest }) => {
+  const { createPage, createNode } = actions
   return new Promise((resolve, reject) => {
     const projectTemplate = path.resolve('./src/templates/ProjectTemplate.tsx')
     const postTemplate = path.resolve('./src/templates/PostTemplate.tsx')
@@ -80,8 +97,8 @@ exports.createPages = ({ graphql, actions }) => {
           })
         })
 
-        const postTagsGrouped = getAllTagsInPages(blogPosts)
-        postTagsGrouped.forEach((tags, tagSlug) => {
+        const { groupedTags } = getAllTagsInPages(blogPosts)
+        groupedTags.forEach((tags, tagSlug) => {
           createPage({
             path: `/blog/tags/${tagSlug}`,
             component: tagsBlogListTemplate,
@@ -117,9 +134,12 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
-exports.onCreateNode = ({ node, actions }) => {
-  const { createNodeField } = actions
+const counter = {}
+exports.onCreateNode = ({ node, actions, createNodeId, createContentDigest }) => {
+  const { createNodeField, createNode } = actions
   const { frontmatter } = node
+
+  const TAG_NODE_TYPE = `Tag`
 
   if (['MarkdownRemark', 'Mdx'].includes(node.internal.type) && frontmatter) {
     const fullPath = getFullPath(frontmatter)
@@ -128,5 +148,30 @@ exports.onCreateNode = ({ node, actions }) => {
       name: 'slug',
       value: fullPath,
     })
+
+    if (frontmatter.tags && frontmatter.published && frontmatter.model === 'post') {
+      frontmatter.tags.forEach(tag => {
+        const tagInfo = generateTagInfo(tag)
+
+        if (counter[tagInfo.slug] === undefined) {
+          counter[tagInfo.slug] = 1
+        } else {
+          counter[tagInfo.slug]++
+        }
+        tagInfo.postCount = counter[tagInfo.slug]
+
+        createNode({
+          ...tagInfo,
+          id: createNodeId(`${TAG_NODE_TYPE}-${tagInfo.slug}`),
+          parent: null,
+          children: [],
+          internal: {
+            type: TAG_NODE_TYPE,
+            content: JSON.stringify(tagInfo),
+            contentDigest: createContentDigest(tagInfo),
+          },
+        })
+      })
+    }
   }
 }

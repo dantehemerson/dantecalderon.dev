@@ -12,3 +12,13 @@ export function generateTagInfo(tagPlain): ITag {
     ...tags[tagSlug],
   }
 }
+
+export function getTagInfoSelected(tagSlug): ITag {
+  return {
+    title: tagSlug,
+    slug: tagSlug,
+    color: '#515151',
+    textColor: 'white',
+    ...tags[tagSlug],
+  }
+}

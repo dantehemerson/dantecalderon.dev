@@ -64,5 +64,11 @@
     "slug": "v-8",
     "color": "#4088ec",
     "textColor": "#242424"
+  },
+  "vscode": {
+    "title": "VSCode",
+    "slug": "vscode",
+    "color": "#0066b8",
+    "textColor": "white"
   }
 }

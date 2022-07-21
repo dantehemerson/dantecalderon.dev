@@ -16,7 +16,7 @@ export default class SEO extends PureComponent {
     title: 'Dante Calderon',
     image: `https://dantecalderon.dev${avatar}`,
     url: 'https://dantecalderon.dev/',
-    description: 'Dante Calderon - Backend Nodejs Developer',
+    description: 'Dante Calderon - Backend Node.js Developer',
     isPost: false,
   }
 

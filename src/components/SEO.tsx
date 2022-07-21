@@ -52,7 +52,7 @@ export default class SEO extends PureComponent {
             'https://plus.google.com/u/0/101542534057875808813',
             'https://www.instagram.com/dantehemerson',
             'https://www.github.com/dantehemerson',
-            'https://www.linkedin.com/in/dantehemerson',
+            'https://www.linkedin.com/in/dantecalderon',
           ],
           itemListElement: [
             {
@@ -75,7 +75,7 @@ export default class SEO extends PureComponent {
             'https://plus.google.com/u/0/101542534057875808813',
             'https://www.instagram.com/dantehemerson',
             'https://www.github.com/dantehemerson',
-            'https://www.linkedin.com/in/dantehemerson',
+            'https://www.linkedin.com/in/dantecalderon',
           ],
           url: url,
           name: title,

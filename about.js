@@ -10,7 +10,7 @@ module.exports = {
       { title: 'Github', link: 'https://github.com/dantehemerson', icon: 'github' },
       { title: 'Twitter', link: 'https://twitter.com/dantehemerson', icon: 'twitter' },
       { title: 'Dev', link: 'https://dev.to/dantehemerson', icon: 'dev' },
-      { title: 'Linkedin', link: 'https://linkedin.com/in/dantehemerson', icon: 'linkedin' },
+      { title: 'Linkedin', link: 'https://linkedin.com/in/dantecalderon', icon: 'linkedin' },
       { title: 'Twitch', link: 'https://www.twitch.tv/dantehemerson', icon: 'twitch' },
       { title: 'Medium', link: 'https://medium.com/@dantehemerson', icon: 'medium' },
       { title: 'Dev', link: 'https://instagram.com/dantehemerson', icon: 'dev' },
@@ -41,7 +41,7 @@ module.exports = {
     socials: {
       github: 'https://github.com/dantehemerson',
       twitter: 'https://twitter.com/dantehemerson',
-      linkedin: 'https://linkedin.com/in/dantehemerson',
+      linkedin: 'https://linkedin.com/in/dantecalderon',
       dev: 'https://dev.to/dantehemerson',
       instagram: 'https://instagram.com/dantehemerson',
     },

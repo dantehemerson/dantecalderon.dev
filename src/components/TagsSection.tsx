@@ -41,7 +41,6 @@ const Title = styled.span`
   `}
 `
 const TagsSection = ({ tags, title = 'TAGS: ', selectedSlug }) => {
-console.log('🤫 Dante ➤ TagsSection ➤ tags', tags)
   const selectedInfo = getTagInfoSelected(selectedSlug)
   return (
     <Wrapper id="post_tags" maxWidth={824} display="auto" paddingLeft={12} paddingRight={12}>

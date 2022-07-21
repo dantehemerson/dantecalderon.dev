@@ -5,6 +5,7 @@ import Card from '../components/Card'
 import Layout from '../components/Layout'
 import Pagination from '../components/Pagination'
 import SEO from '../components/SEO'
+import TagsSection from '../components/TagsSection'
 import { pages } from '../utils'
 
 const PostsWrapper = styled.div`
@@ -23,6 +24,12 @@ function Blog(props) {
     <Layout location={props.location} active={pages.blog}>
       <div className="Blog" style={{ marginTop: 90 }}>
         <SEO title="Blog" url={`${siteUrl}/blog`} />
+        <TagsSection tags={[{
+          "title": "⬢ Node.js",
+          "slug": "nodejs",
+          "color": "#568155",
+          "textColor": "white"
+        }]} />
         <PostsWrapper>
           {posts.map(({ node }, index) => {
             if (node.frontmatter.published)

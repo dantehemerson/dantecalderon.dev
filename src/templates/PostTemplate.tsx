@@ -5,6 +5,7 @@ import Markdown from '../components/Markdown'
 import PostHeader from '../components/PostHeader'
 import Share from '../components/Share'
 import TagsSection from '../components/TagsSection'
+import { generateTagInfo } from '../utils/generate-tag-info.helper'
 import Layout from './TemplateLayout'
 
 export const PostContent = ({ title, image, externalImage, date, timeToRead, avatar, content }) => (
@@ -47,7 +48,7 @@ const PostTemplate = props => {
         avatar={props.data.avatar.gatsbyImageData}
         content={body}
       />
-      <TagsSection tags={tags} />
+      <TagsSection tags={tags.map(tag => ({ node: generateTagInfo(tag)}) )} />
       <Share title={title} path={slug} />
       {/* <SubscribeForm /> */}
     </Layout>

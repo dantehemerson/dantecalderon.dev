@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import { kebabCase } from 'lodash'
 import { media } from '../styles'
 import { Wrapper } from './Wrapper'
+import { getTagInfoSelected } from '../utils/generate-tag-info.helper'
 
 const Tag = styled(Link)`
   background: #fff;
@@ -39,14 +40,20 @@ const Title = styled.span`
     font-size: 15px;
   `}
 `
-const TagsSection = ({ tags }) => {
+const TagsSection = ({ tags, title = 'TAGS: ', selectedSlug }) => {
+console.log('🤫 Dante ➤ TagsSection ➤ tags', tags)
+  const selectedInfo = getTagInfoSelected(selectedSlug)
   return (
     <Wrapper id="post_tags" maxWidth={824} display="auto" paddingLeft={12} paddingRight={12}>
       <hr />
-      <Title>TAGS:</Title>
+      <Title>{title}</Title>
       {tags.map(tag => (
-        <Tag key={tag} to={`/blog/tags/${kebabCase(tag.toLowerCase())}`}>
-          {tag}
+        <Tag key={tag} to={`/blog/tags/${tag.node.slug}`} style={selectedSlug === tag.node.slug ? {
+          backgroundColor: selectedInfo.color,
+          color: selectedInfo.textColor,
+          border: `2px solid ${selectedInfo.color}`
+        } : {}}>
+          {tag.node.title}{tag.node.postCount ? ` (${tag.node.postCount})` : ''}
         </Tag>
       ))}
       <hr

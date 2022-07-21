@@ -1,8 +1,7 @@
-import { Link } from 'gatsby'
 import React from 'react'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { kebabCase } from 'lodash'
-import { ITag, tags } from '../data/tags'
+import { generateTagInfo } from '../utils/generate-tag-info.helper'
 
 const List = styled.ul`
   list-style: none;
@@ -45,14 +44,7 @@ export function Tags({ items = [] }: { items: string[] }) {
     <Container>
       <List>
         {items.map(item => {
-          const tagSlug = kebabCase(item.toLowerCase())
-          const tagData: ITag = {
-            title: item,
-            slug: tagSlug,
-            color: '#dcdcdc',
-            textColor: '#6a6a6a',
-            ...tags[tagSlug],
-          }
+          const tagData = generateTagInfo(item);
           return (
             <Item
               key={tagData.slug}

@@ -3,6 +3,10 @@
   "description": "This is my personal web. Dante Caderón",
   "version": "1.2.0",
   "author": "Dante Calderón <mail@dantecalderon.dev>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dantehemerson/dantecalderon.dev"
+  },
   "scripts": {
     "build": "gatsby build",
     "start": "gatsby develop",
@@ -15,6 +19,12 @@
   "browserslist": [
     "defaults"
   ],
+  "keywords": [
+    "gatsby",
+    "portfolio",
+    "blog"
+  ],
+  "license": "MIT",
   "dependencies": {
     "@mdx-js/mdx": "1.6.22",
     "@mdx-js/react": "1.6.22",
@@ -70,12 +80,6 @@
     "sweetalert2": "8.17.1",
     "typography": "0.16.19"
   },
-  "keywords": [
-    "gatsby",
-    "portfolio",
-    "blog"
-  ],
-  "license": "MIT",
   "devDependencies": {
     "@dantehemerson2/notion-to-md": "^2.2.2",
     "@notionhq/client": "^0.4.12",
@@ -86,9 +90,5 @@
     "mustache": "^4.2.0",
     "prettier": "2.2.1",
     "slugify": "^1.6.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dantehemerson/dantecalderon.dev"
   }
 }

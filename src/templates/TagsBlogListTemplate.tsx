@@ -1,11 +1,10 @@
-import { graphql } from 'gatsby'
-import get from 'lodash/get'
 import React from 'react'
+import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Card from '../components/Card'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import TagsSection from '../components/TagsSection'
+import { TagsSection } from '../components/TagsSection'
 import { pages, preferSpacedTag } from '../utils'
 
 const PostsWrapper = styled.div`
@@ -15,12 +14,13 @@ const PostsWrapper = styled.div`
 `
 
 const BlogWithTags = props => {
-  const tagSlug = get(props, 'pageContext.tagSlug')
-  const tagsPage = get(props, 'pageContext.tags')
+  const tagSlug = props.pageContext.tagSlug
+  const tagsPage = props.pageContext.tags
   const tags = props.data.allTag.edges || []
   const title = `${preferSpacedTag(tagsPage)} - Blog`
   const posts = props.data.allMdx.edges || []
   const siteUrl = props.data.site.siteMetadata.siteUrl
+
   return (
     <Layout location={props.location} active={pages.blog}>
       <div className="Blog" style={{ marginTop: 90 }}>

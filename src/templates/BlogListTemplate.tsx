@@ -1,11 +1,11 @@
-import { graphql } from 'gatsby'
 import React from 'react'
+import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Card from '../components/Card'
 import Layout from '../components/Layout'
 import Pagination from '../components/Pagination'
 import SEO from '../components/SEO'
-import TagsSection from '../components/TagsSection'
+import { TagsSection } from '../components/TagsSection'
 import { pages } from '../utils'
 
 const PostsWrapper = styled.div`

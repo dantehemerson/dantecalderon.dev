@@ -1,4 +1,4 @@
-import { kebabCase } from 'lodash'
+import kebabCase from 'lodash/kebabCase'
 import { ITag, tags } from '../data/tags'
 
 export function generateTagInfo(tagPlain): ITag {

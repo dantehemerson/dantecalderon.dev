@@ -5,6 +5,45 @@ import { media } from '../styles'
 import { Wrapper } from './Wrapper'
 import { getTagInfoSelected } from '../utils/generate-tag-info.helper'
 
+export type TagsSectionProps = {
+  tags: any[]
+  title?: string
+  selectedSlug?: string
+}
+
+export function TagsSection({ tags, title = 'TAGS: ', selectedSlug }: TagsSectionProps) {
+  const selectedInfo = getTagInfoSelected(selectedSlug)
+  return (
+    <Wrapper id="post_tags" maxWidth={824} display="auto" paddingLeft={12} paddingRight={12}>
+      <hr />
+      <Title>{title}</Title>
+      {tags.map(tag => (
+        <Tag
+          key={tag}
+          to={`/blog/tags/${tag.node.slug}`}
+          style={
+            selectedSlug === tag.node.slug
+              ? {
+                  backgroundColor: selectedInfo.color,
+                  color: selectedInfo.textColor,
+                  border: `2px solid ${selectedInfo.color}`,
+                }
+              : {}
+          }
+        >
+          {tag.node.title}
+          {tag.node.postCount ? ` (${tag.node.postCount})` : ''}
+        </Tag>
+      ))}
+      <hr
+        style={{
+          marginTop: '23px',
+        }}
+      />
+    </Wrapper>
+  )
+}
+
 const Tag = styled(Link)`
   background: #fff;
   display: inline-block;
@@ -39,37 +78,3 @@ const Title = styled.span`
     font-size: 15px;
   `}
 `
-const TagsSection = ({ tags, title = 'TAGS: ', selectedSlug }) => {
-  const selectedInfo = getTagInfoSelected(selectedSlug)
-  return (
-    <Wrapper id="post_tags" maxWidth={824} display="auto" paddingLeft={12} paddingRight={12}>
-      <hr />
-      <Title>{title}</Title>
-      {tags.map(tag => (
-        <Tag
-          key={tag}
-          to={`/blog/tags/${tag.node.slug}`}
-          style={
-            selectedSlug === tag.node.slug
-              ? {
-                  backgroundColor: selectedInfo.color,
-                  color: selectedInfo.textColor,
-                  border: `2px solid ${selectedInfo.color}`,
-                }
-              : {}
-          }
-        >
-          {tag.node.title}
-          {tag.node.postCount ? ` (${tag.node.postCount})` : ''}
-        </Tag>
-      ))}
-      <hr
-        style={{
-          marginTop: '23px',
-        }}
-      />
-    </Wrapper>
-  )
-}
-
-export default TagsSection

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { omit } from 'lodash'
+import omit from 'lodash/omit'
 
 type WrapperProps = Record<string, any> & { styles: Record<string, any> }
 

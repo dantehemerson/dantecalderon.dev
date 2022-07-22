@@ -1,33 +1,30 @@
-import { graphql, Link, useStaticQuery } from 'gatsby'
-import { get } from 'lodash'
 import React from 'react'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 
 export function LatestPosts() {
-  const posts = get(
-    useStaticQuery<{ abs: number }>(graphql`
-      query {
-        allMdx(
-          sort: { fields: [frontmatter___date], order: DESC }
-          filter: { frontmatter: { model: { eq: "post" }, published: { eq: true } } }
-          limit: 3
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                date(formatString: "DD MMMM, YYYY")
-                title
-              }
+  const {
+    allMdx: { edges },
+  } = useStaticQuery(graphql`
+    query {
+      allMdx(
+        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { frontmatter: { model: { eq: "post" }, published: { eq: true } } }
+        limit: 3
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              date(formatString: "DD MMMM, YYYY")
+              title
             }
           }
         }
       }
-    `),
-    'allMdx.edges',
-    []
-  )
+    }
+  `)
 
   return (
     <div>
@@ -35,7 +32,7 @@ export function LatestPosts() {
         <strong>📖 Latest Posts:</strong>
       </p>
       <ul>
-        {posts.map(({ node: post }, index) => {
+        {edges.map(({ node: post }, index) => {
           return (
             <li id={index} key={index}>
               <p className="md-p">

@@ -1,7 +1,6 @@
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import Swal from 'sweetalert2'
 import bg from '../assets/images/footer-bg2.png'
 import { media } from '../styles'
 
@@ -62,16 +61,16 @@ const SubscribeForm = () => {
     e.preventDefault()
     addToMailchimp(email)
       .then(data => {
-        Swal.fire({
-          type: data.result,
-          title: data.result === 'success' ? 'Success' : 'Error',
-          html: data.msg,
-          confirmButtonClass: 'Btn',
-          cancelButtonClass: 'Btn',
-          onClose: () => {
-            if (data.result === 'success') setEmail('')
-          },
-        })
+        // Swal.fire({
+        //   type: data.result,
+        //   title: data.result === 'success' ? 'Success' : 'Error',
+        //   html: data.msg,
+        //   confirmButtonClass: 'Btn',
+        //   cancelButtonClass: 'Btn',
+        //   onClose: () => {
+        //     if (data.result === 'success') setEmail('')
+        //   },
+        // })
       })
       .catch(error => {
         // Errors in here are client side

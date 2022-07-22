@@ -35,8 +35,8 @@ module.exports = {
       },
     },
     'gatsby-plugin-image',
-    'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
@@ -185,7 +185,6 @@ module.exports = {
       resolve: 'gatsby-plugin-netlify',
       options: {
         mergeSecurityHeaders: true,
-        mergeLinkHeaders: true,
         mergeCachingHeaders: true,
         generateMatchPathRewrites: true,
       },

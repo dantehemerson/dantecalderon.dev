@@ -1,4 +1,6 @@
 const _ = require('lodash')
+import Promise from 'bluebird'
+console.log('🤫 Dante ➤ Promise', Promise)
 const Promise = require('bluebird')
 const path = require('path')
 const tags = require('./content/tags.json')

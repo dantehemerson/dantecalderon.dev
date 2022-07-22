@@ -2,9 +2,16 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV || 'development'}`,
 })
 
+console.log(
+  'BUENOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOlln',
+  `${__dirname}/content/`
+)
+
+import type { GatsbyConfig } from 'gatsby'
+
 const aboutData = require('./about')
 
-module.exports = {
+const config: GatsbyConfig = {
   pathPrefix: `/`,
   ...aboutData,
   mapping: {
@@ -219,3 +226,5 @@ module.exports = {
     },
   ],
 }
+
+export default config

@@ -66,7 +66,7 @@
     "gatsby-transformer-yaml": "^3.14.0",
     "javascript-time-ago": "^2.3.8",
     "object-merge-advanced": "^12.1.0",
-    "prismjs": "^1.25.0",
+    "prismjs": "^1.27.0",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
     "react-disqus-comments": "^1.4.0",

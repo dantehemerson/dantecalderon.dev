@@ -1,23 +1,11 @@
 const _ = require('lodash')
 import Promise from 'bluebird'
-console.log('🤫 Dante ➤ Promise', Promise)
+import { generateTagInfo } from './src/helpers/generate-tag-info.helper'
 const Promise = require('bluebird')
 const path = require('path')
 const tags = require('./content/tags.json')
-const { kebabCase } = require('lodash')
 
 const postPerPage = 20
-
-function generateTagInfo(tagPlain) {
-  const tagSlug = kebabCase(tagPlain.toLowerCase())
-  return {
-    title: tagPlain,
-    slug: tagSlug,
-    color: '#dcdcdc',
-    textColor: '#6a6a6a',
-    ...tags[tagSlug],
-  }
-}
 
 const getFullPath = frontmatter => {
   const pathPrefix = _.get(frontmatter, 'pathPrefix') || ''
@@ -42,7 +30,7 @@ const getAllTagsInPages = (markdownPages = []) => {
   }
 }
 
-exports.createPages = ({ graphql, actions, createNodeId, createContentDigest }) => {
+export const createPages = ({ graphql, actions, createNodeId, createContentDigest }) => {
   const { createPage, createNode } = actions
   return new Promise((resolve, reject) => {
     const projectTemplate = path.resolve('./src/templates/ProjectTemplate.tsx')
@@ -137,7 +125,7 @@ exports.createPages = ({ graphql, actions, createNodeId, createContentDigest }) 
 }
 
 const counter = {}
-exports.onCreateNode = ({ node, actions, createNodeId, createContentDigest }) => {
+export const onCreateNode = ({ node, actions, createNodeId, createContentDigest }) => {
   const { createNodeField, createNode } = actions
   const { frontmatter } = node
 

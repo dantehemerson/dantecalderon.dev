@@ -4,7 +4,7 @@ import AuthorPostFooter from '../components/AuthorPostFooter'
 import Disqus from '../components/Disqus'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import { pages } from '../utils'
+import { pages } from '../helpers'
 import { getSrc } from 'gatsby-plugin-image'
 
 const Template = props => {

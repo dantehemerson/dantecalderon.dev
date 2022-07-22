@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { useInfo } from '../hooks/useInfo'
 import InfoItem from './InfoItem'
-import { secureTimeAgo } from '../utils/date'
+import { secureTimeAgo } from '../helpers/date'
 
 const Info = () => {
   const info = useInfo()

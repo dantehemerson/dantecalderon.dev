@@ -5,7 +5,7 @@ import Card from '../components/Card'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import { TagsSection } from '../components/TagsSection'
-import { pages, preferSpacedTag } from '../utils'
+import { pages, preferSpacedTag } from '../helpers'
 
 const PostsWrapper = styled.div`
   padding: 0 15px;

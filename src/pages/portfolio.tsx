@@ -3,7 +3,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import List from '../components/Portfolio/ProjectsList'
 import SEO from '../components/SEO'
-import { pages } from '../utils'
+import { pages } from '../helpers'
 
 const Portfolio = props => {
   const posts = props.data.allMdx.edges || []

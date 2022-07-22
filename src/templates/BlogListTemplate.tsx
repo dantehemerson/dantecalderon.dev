@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 import Pagination from '../components/Pagination'
 import SEO from '../components/SEO'
 import { TagsSection } from '../components/TagsSection'
-import { pages } from '../utils'
+import { pages } from '../helpers'
 
 const PostsWrapper = styled.div`
   padding: 0 15px;

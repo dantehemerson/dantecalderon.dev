@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import Markdown from '../components/Markdown'
 import SEO from '../components/SEO'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
-import { pages } from '../utils'
+import { pages } from '../helpers'
 
 const Index: FC<PageRendererProps> = props => {
   const {

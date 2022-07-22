@@ -5,7 +5,7 @@ import Markdown from '../components/Markdown'
 import PostHeader from '../components/PostHeader'
 import { Share } from '../components/Share'
 import { TagsSection } from '../components/TagsSection'
-import { generateTagInfo } from '../utils/generate-tag-info.helper'
+import { generateTagInfo } from '../helpers/generate-tag-info.helper'
 import Layout from './TemplateLayout'
 
 export const PostContent = ({ title, image, externalImage, date, timeToRead, avatar, content }) => (

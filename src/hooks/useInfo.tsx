@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useLocalStorage } from './useLocalStorage'
-import { getMyGithubInfo } from '../utils/requests/githubInfo'
+import { getMyGithubInfo } from '../helpers/requests/githubInfo'
 import { mergeAdvanced } from 'object-merge-advanced'
 
 export const useInfo = () => {

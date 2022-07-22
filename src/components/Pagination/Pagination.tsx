@@ -57,6 +57,10 @@ const Pagination = React.memo(function Pagination({
   hasPrevPage,
   ...props
 }) {
+  if (pages <= 1) {
+    return null
+  }
+
   const items = paginationItems(pages, selected)
   return (
     <div

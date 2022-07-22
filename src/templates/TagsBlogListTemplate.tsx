@@ -25,7 +25,7 @@ const BlogWithTags = props => {
     <Layout location={props.location} active={pages.blog}>
       <div className="Blog" style={{ marginTop: 90 }}>
         <SEO title={title} url={`${siteUrl}/blog/tags/${tagSlug}`} />
-        <TagsSection tags={tags} title='Popular Tags:' selectedSlug={tagSlug} />
+        <TagsSection tags={tags} title="Popular Tags:" selectedSlug={tagSlug} />
         <PostsWrapper>
           {posts.map(({ node }) => {
             if (node.frontmatter.published)
@@ -59,7 +59,7 @@ export const queryBlog = graphql`
         siteUrl
       }
     }
-    allTag(limit: 12,  sort: { fields: [postCount], order: DESC }) {
+    allTag(limit: 12, sort: { fields: [postCount], order: DESC }) {
       edges {
         node {
           textColor

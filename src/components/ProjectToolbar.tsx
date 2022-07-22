@@ -1,5 +1,4 @@
 import React from 'react'
-import { AwesomeButton } from 'react-awesome-button'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -10,10 +9,9 @@ const Container = styled.div`
 export default props => (
   <Container>
     {props.website && (
-      <AwesomeButton
+      <a
         href={props.website}
         className="ToolbarButton"
-        size="small"
         target="_blank"
         type="linkedin"
         rel="noopener"
@@ -32,14 +30,13 @@ export default props => (
           </g>
         </svg>
         PREVIEW
-      </AwesomeButton>
+      </a>
     )}
     {props.repository && (
-      <AwesomeButton
+      <a
         href={props.repository}
         className="ToolbarButton"
         target="_blank"
-        size="small"
         rel="noopener"
         type="github"
       >
@@ -57,7 +54,7 @@ export default props => (
           </g>
         </svg>
         SOURCE CODE
-      </AwesomeButton>
+      </a>
     )}
   </Container>
 )

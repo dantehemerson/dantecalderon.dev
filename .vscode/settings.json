@@ -9,8 +9,13 @@
   "editor.formatOnSave": true,
   "javascript.format.enable": false,
   "javascript.preferences.quoteStyle": "single",
-  "prettier.disableLanguages": [],
   "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
     "editor.formatOnSave": true
   }
 }

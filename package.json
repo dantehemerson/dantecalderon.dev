@@ -12,6 +12,9 @@
     "format": "prettier --config .prettierrc --write 'src/**/*.{ts,tsx}'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "browserslist": [
+    "defaults"
+  ],
   "dependencies": {
     "@mdx-js/mdx": "1.6.22",
     "@mdx-js/react": "1.6.22",
@@ -58,7 +61,6 @@
     "prismjs": "1.25.0",
     "prop-types": "^15.7.2",
     "react": "16.9.0",
-    "react-awesome-button": "6.5.1",
     "react-disqus-comments": "1.4.0",
     "react-dom": "16.9.0",
     "react-helmet": "6.1.0",

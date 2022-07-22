@@ -3,7 +3,7 @@ import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 import React from 'react'
 import Markdown from '../components/Markdown'
 import PostHeader from '../components/PostHeader'
-import Share from '../components/Share'
+import { Share } from '../components/Share'
 import TagsSection from '../components/TagsSection'
 import { generateTagInfo } from '../utils/generate-tag-info.helper'
 import Layout from './TemplateLayout'
@@ -48,7 +48,7 @@ const PostTemplate = props => {
         avatar={props.data.avatar.gatsbyImageData}
         content={body}
       />
-      <TagsSection tags={tags.map(tag => ({ node: generateTagInfo(tag)}) )} />
+      <TagsSection tags={tags.map(tag => ({ node: generateTagInfo(tag) }))} />
       <Share title={title} path={slug} />
       {/* <SubscribeForm /> */}
     </Layout>

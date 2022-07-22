@@ -1,5 +1,4 @@
 import React from 'react'
-import 'react-awesome-button/src/styles/styles.scss'
 import Helmet from 'react-helmet'
 import { ThemeProvider } from 'styled-components'
 import '../assets/fonts/fira'

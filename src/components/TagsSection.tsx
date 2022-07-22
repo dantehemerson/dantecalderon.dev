@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import { kebabCase } from 'lodash'
 import { media } from '../styles'
 import { Wrapper } from './Wrapper'
 import { getTagInfoSelected } from '../utils/generate-tag-info.helper'
@@ -47,12 +46,21 @@ const TagsSection = ({ tags, title = 'TAGS: ', selectedSlug }) => {
       <hr />
       <Title>{title}</Title>
       {tags.map(tag => (
-        <Tag key={tag} to={`/blog/tags/${tag.node.slug}`} style={selectedSlug === tag.node.slug ? {
-          backgroundColor: selectedInfo.color,
-          color: selectedInfo.textColor,
-          border: `2px solid ${selectedInfo.color}`
-        } : {}}>
-          {tag.node.title}{tag.node.postCount ? ` (${tag.node.postCount})` : ''}
+        <Tag
+          key={tag}
+          to={`/blog/tags/${tag.node.slug}`}
+          style={
+            selectedSlug === tag.node.slug
+              ? {
+                  backgroundColor: selectedInfo.color,
+                  color: selectedInfo.textColor,
+                  border: `2px solid ${selectedInfo.color}`,
+                }
+              : {}
+          }
+        >
+          {tag.node.title}
+          {tag.node.postCount ? ` (${tag.node.postCount})` : ''}
         </Tag>
       ))}
       <hr

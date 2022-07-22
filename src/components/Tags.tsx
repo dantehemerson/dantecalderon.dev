@@ -44,7 +44,7 @@ export function Tags({ items = [] }: { items: string[] }) {
     <Container>
       <List>
         {items.map(item => {
-          const tagData = generateTagInfo(item);
+          const tagData = generateTagInfo(item)
           return (
             <Item
               key={tagData.slug}

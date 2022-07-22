@@ -25,7 +25,7 @@ function Blog(props) {
     <Layout location={props.location} active={pages.blog}>
       <div className="Blog" style={{ marginTop: 90 }}>
         <SEO title="Blog" url={`${siteUrl}/blog`} />
-        <TagsSection tags={tags} title='Popular Tags:' />
+        <TagsSection tags={tags} title="Popular Tags:" />
         <PostsWrapper>
           {posts.map(({ node }, index) => {
             if (node.frontmatter.published)
@@ -65,7 +65,7 @@ export const queryBlog = graphql`
         siteUrl
       }
     }
-    allTag(limit: 12,  sort: { fields: [postCount], order: DESC }) {
+    allTag(limit: 12, sort: { fields: [postCount], order: DESC }) {
       edges {
         node {
           textColor

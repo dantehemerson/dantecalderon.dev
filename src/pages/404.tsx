@@ -1,5 +1,4 @@
 import React from 'react'
-import { AwesomeButton } from 'react-awesome-button'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import image from '../assets/images/404.jpg'
@@ -34,7 +33,8 @@ const Image = styled.img`
   max-width: 479px;
 `
 
-const Button = styled(AwesomeButton)``
+// TODO: Missing Button
+const Button = styled.a``
 
 export default props => (
   <Layout location={props.location} simple>

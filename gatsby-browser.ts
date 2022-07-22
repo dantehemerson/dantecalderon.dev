@@ -1,6 +1,6 @@
 const { version } = require('./package.json')
 
-exports.onClientEntry = () => {
+export const onClientEntry = () => {
   /** Clear data to prevent structure errors, needs update version in package.json */
   const localVersion = localStorage.getItem('version')
   if (localVersion !== version) {

@@ -2,11 +2,6 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV || 'development'}`,
 })
 
-console.log(
-  'BUENOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOlln',
-  `${__dirname}/content/`
-)
-
 import type { GatsbyConfig } from 'gatsby'
 
 const aboutData = require('./about')

@@ -6,6 +6,7 @@ import { secureTimeAgo } from '../helpers/date'
 
 const Info = () => {
   const info = useInfo()
+  console.log('🤫 Dante ➤ Info ➤ info', info)
   return (
     <div
       style={{

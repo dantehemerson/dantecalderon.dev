@@ -37,13 +37,16 @@ export const useInfo = () => {
 
   useEffect(() => {
     const loadGithubInfo = async () => {
+      console.log('Loading Github info')
       try {
         const newInfo = await getMyGithubInfo()
+        console.log('🤫 Dante ➤ loadGithubInfo ➤ newInfo', newInfo)
         setInfo(prevInfo =>
           mergeAdvanced(prevInfo, newInfo, {
             mergeBoolsUsingOrNotAnd: newInfo?.listening?.playing ?? false,
           })
         )
+        console.log('Set info', info)
       } catch (error) {
         console.error('Error loading info', error)
       }
@@ -51,7 +54,10 @@ export const useInfo = () => {
 
     const intervalId = setInterval(() => loadGithubInfo(), 10000)
 
-    return () => clearInterval(intervalId)
+    return () => {
+      console.log('Clearing interval')
+      clearInterval(intervalId)
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 

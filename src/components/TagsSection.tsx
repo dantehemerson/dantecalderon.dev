@@ -17,24 +17,28 @@ export function TagsSection({ tags, title = 'TAGS: ', selectedSlug }: TagsSectio
     <Wrapper id="post_tags" maxWidth={824} display="auto" paddingLeft={12} paddingRight={12}>
       <hr />
       <Title>{title}</Title>
-      {tags.map(tag => (
-        <Tag
-          key={tag}
-          to={`/blog/tags/${tag.node.slug}`}
-          style={
-            selectedSlug === tag.node.slug
-              ? {
-                  backgroundColor: selectedInfo.color,
-                  color: selectedInfo.textColor,
-                  border: `2px solid ${selectedInfo.color}`,
-                }
-              : {}
-          }
-        >
-          {tag.node.title}
-          {tag.node.postCount ? ` (${tag.node.postCount})` : ''}
-        </Tag>
-      ))}
+      {tags.map(tag => {
+        return (
+          <Tag
+            // TODO: Use id instead of slug
+            key={tag.node.slug}
+            to={`/blog/tags/${tag.node.slug}`}
+            style={
+              selectedSlug === tag.node.slug
+                ? {
+                    backgroundColor: selectedInfo.color,
+                    color: selectedInfo.textColor,
+                    border: `2px solid ${selectedInfo.color}`,
+                  }
+                : {}
+            }
+          >
+            {tag.node.title}
+            {tag.node.postCount ? ` (${tag.node.postCount})` : ''}
+          </Tag>
+        )
+      })}
+
       <hr
         style={{
           marginTop: '23px',

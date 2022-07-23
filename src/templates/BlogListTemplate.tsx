@@ -28,22 +28,20 @@ function Blog(props) {
         <TagsSection tags={tags} title="Popular Tags:" />
         <PostsWrapper>
           {posts.map(({ node }, index) => {
-            if (node.frontmatter.published)
-              return (
-                <Card
-                  data={{
-                    title: node.frontmatter.title,
-                    thumbnail: node.frontmatter.image?.childImageSharp?.gatsbyImageData,
-                    externalThumbnail: node.frontmatter.externalImage,
-                    excerpt: node.frontmatter.description || node.excerpt,
-                    date: node.frontmatter.date,
-                    tags: node.frontmatter.tags,
-                    path: `/${node.fields.slug}`,
-                  }}
-                  key={index}
-                />
-              )
-            else return false
+            return (
+              <Card
+                data={{
+                  title: node.frontmatter.title,
+                  thumbnail: node.frontmatter.image?.childImageSharp?.gatsbyImageData,
+                  externalThumbnail: node.frontmatter.externalImage,
+                  excerpt: node.frontmatter.description || node.excerpt,
+                  date: node.frontmatter.date,
+                  tags: node.frontmatter.tags,
+                  path: `/${node.fields.slug}`,
+                }}
+                key={index}
+              />
+            )
           })}
           <Pagination
             pages={numPages}

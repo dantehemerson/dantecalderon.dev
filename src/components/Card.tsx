@@ -1,28 +1,26 @@
-import { Link } from 'gatsby'
 import React from 'react'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { media } from '../styles'
 import { Tags } from './Tags'
 
 const Container = styled(Link)`
-  & > div {
-    display: flex;
-    align-items: flex-start;
-    text-align: left;
-    flex-direction: column;
-    padding: 1.2rem 0.5rem;
-    ${media.md`
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  flex-direction: column;
+  padding: 1.2rem 0.5rem;
+  ${media.md`
       flex-direction: row;
     `}
-    * {
-      margin: 0;
-    }
+  * {
+    margin: 0;
+  }
 
-    &:hover {
-      background-color: #f2f2f2;
-      box-shadow: -16px 0 0 0 #f2f2f2, 16px 0 0 0 #f2f2f2;
-    }
+  &:hover {
+    background-color: #f2f2f2;
+    box-shadow: -16px 0 0 0 #f2f2f2, 16px 0 0 0 #f2f2f2;
   }
   text-decoration: none;
 `
@@ -74,23 +72,21 @@ const Summary = styled.p`
 export default function (props) {
   return (
     <Container to={props.data.path}>
-      <div>
-        <ImageWrapper>
-          {props.data.thumbnail ? (
-            <GatsbyImage alt={`${props.data.title} image`} image={props.data.thumbnail} />
-          ) : (
-            <img src={props.data.externalThumbnail} />
-          )}
-        </ImageWrapper>
-        <Info>
-          <Title>{props.data.title}</Title>
-          <Tags items={props.data?.tags?.slice(0, 4)} />
-          <Summary>{props.data.excerpt}</Summary>
-          <Time>
-            <time dateTime={props.data.date}>{props.data.date} </time>
-          </Time>
-        </Info>
-      </div>
+      <ImageWrapper>
+        {props.data.thumbnail ? (
+          <GatsbyImage alt={`${props.data.title} image`} image={props.data.thumbnail} />
+        ) : (
+          <img src={props.data.externalThumbnail} />
+        )}
+      </ImageWrapper>
+      <Info>
+        <Title>{props.data.title}</Title>
+        <Tags items={props.data?.tags?.slice(0, 4)} />
+        <Summary>{props.data.excerpt}</Summary>
+        <Time>
+          <time dateTime={props.data.date}>{props.data.date} </time>
+        </Time>
+      </Info>
     </Container>
   )
 }

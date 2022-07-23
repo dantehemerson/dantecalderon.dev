@@ -34,7 +34,7 @@ export const createPages = async ({ graphql, actions }) => {
     {
       allPosts: allMdx(
         sort: { fields: [frontmatter___date], order: DESC }
-        limit: 1
+        limit: 200
         filter: {
           fileAbsolutePath: { ne: null }
           frontmatter: { published: { eq: true }, model: { eq: "post" } }
@@ -74,16 +74,16 @@ export const createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  const postPerPage = 20
+  const POSTS_PER_PAGE = 20
 
-  const blogPostsPaginated = _.chunk(allPosts.edges, postPerPage)
+  const blogPostsPaginated = _.chunk(allPosts.edges, POSTS_PER_PAGE)
   blogPostsPaginated.forEach((_, i) => {
     createPage({
       path: i === 0 ? '/blog' : `/blog/page/${i}`,
       component: blogListTemplate,
       context: {
-        limit: postPerPage,
-        skip: i * postPerPage,
+        limit: POSTS_PER_PAGE,
+        skip: i * POSTS_PER_PAGE,
         numPages: blogPostsPaginated.length,
         currentPage: i,
         hasPrevPage: i > 0,
@@ -127,7 +127,7 @@ export const createPages = async ({ graphql, actions }) => {
   }
 
   createMdxPages(allPosts.edges)
-  // createMdxPages(allProjects.edges)
+  createMdxPages(allProjects.edges)
 }
 
 const counter = {}

@@ -45,7 +45,7 @@ const ImageWrapper = styled.div`
     width: 25%;
   `};
 `
-const Info = styled.div`
+const Info = styled('div')`
   width: 100%;
   height: 100%;
   margin: 0;
@@ -104,14 +104,14 @@ export function Card(props) {
             <time dateTime={props.data.date}>{props.data.date} </time>
           </Time>
         </div>
-        <div className="cardInfo">
+        <Info>
           <Title>{props.data.title}</Title>
           <Tags items={props.data?.tags?.slice(0, 4)} />
           <Summary>{props.data.excerpt}</Summary>
           <Time>
             <time dateTime={props.data.date}>{props.data.date} </time>
           </Time>
-        </div>
+        </Info>
       </>
     </Container>
   )

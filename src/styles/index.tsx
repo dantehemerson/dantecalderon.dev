@@ -377,14 +377,4 @@ p.para {
 
   }
  }
-
- section {
-  &.lisa {
-    background: #fafafa;
-    border: 1px solid #f3f3f3;
-  }
-  &.rayada {
-    background: white;
-  }
- }
 `

@@ -59,7 +59,7 @@ export const queryBlog = graphql`
         siteUrl
       }
     }
-    allTag(limit: 12, sort: { fields: [postCount], order: DESC }) {
+    allTag(limit: 10, sort: { fields: [postCount], order: DESC }) {
       edges {
         node {
           textColor

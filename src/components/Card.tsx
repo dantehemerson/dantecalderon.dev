@@ -109,7 +109,7 @@ export function Card(props) {
           <Tags items={props.data?.tags?.slice(0, 4)} />
           <Summary>{props.data.excerpt}</Summary>
           <Time>
-            <time dateTime={props.data.date}>{props.data.date} </time>
+            <time dateTime={props.data.date}>{props.data.date}</time>
           </Time>
         </div>
       </>

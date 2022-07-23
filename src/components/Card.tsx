@@ -32,7 +32,7 @@ const ImageWrapper = styled.div`
     width: 25%;
   `};
 `
-const Info = styled.div`
+const div = styled.div`
   width: 100%;
   height: 100%;
   margin: 0;
@@ -84,14 +84,14 @@ export function Card(props) {
         )} */}
         </ImageWrapper>
         <div className="ESTO ESTA DENTRO DE NUEVO"></div>
-        <Info>
+        <div>
           <Title>{props.data.title}</Title>
           <Tags items={props.data?.tags?.slice(0, 4)} />
           <Summary>{props.data.excerpt}</Summary>
           <Time>
             <time dateTime={props.data.date}>{props.data.date} </time>
           </Time>
-        </Info>
+        </div>
       </>
     </Container>
   )

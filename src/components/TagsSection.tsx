@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { media } from '../styles'
 import { Wrapper } from './Wrapper'
-import { getTagInfoSelected } from '../helpers/generate-tag-info.helper'
+import { getTagInfoSelected } from '../helpers/tags.helpers'
 
 export type TagsSectionProps = {
   tags: any[]

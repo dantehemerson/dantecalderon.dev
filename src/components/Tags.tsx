@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { generateTagInfo } from '../helpers/generate-tag-info.helper'
+import { generateTagInfo } from '../helpers/tags.helpers'
 
 const List = styled.ul`
   list-style: none;

@@ -5,6 +5,7 @@ export interface ITag {
   slug: string
   color?: string
   textColor?: string
+  postCount?: number
 }
 
 export const tags: Record<string, ITag> = tagsJSON

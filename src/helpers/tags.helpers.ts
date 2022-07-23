@@ -22,3 +22,14 @@ export function getTagInfoSelected(tagSlug): ITag {
     ...tags[tagSlug],
   }
 }
+
+export function makeSlugForTag(tagPlain): string {
+  const tagSlug = kebabCase(tagPlain.toLowerCase())
+
+  const existCustomTag = Boolean(tags[tagSlug])
+  if (existCustomTag) {
+    return tags[tagSlug].slug
+  }
+
+  return tagSlug
+}

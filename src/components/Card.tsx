@@ -127,7 +127,7 @@ export function Card(props) {
         </ImageWrapper>
         <div className="cadInfo">
           <h3 className="cardInfo__title">{props.data.title}</h3>
-          {/* <Tags items={props.data?.tags} /> */}
+          <Tags items={props.data.tags} />
           <p className="cardInfo__summary">{props.data.excerpt}</p>
           <p className="cardInfo__time">
             <time dateTime={props.data.date}>{props.data.date}</time>

@@ -21,48 +21,6 @@ const Container = styled(props => <Link {...props} />)`
     box-shadow: -16px 0 0 0 #f2f2f2, 16px 0 0 0 #f2f2f2;
   }
   text-decoration: none;
-
-  .cardInfo {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    max-width: 560px;
-    padding-top: 12px;
-    ${media.md`
-      padding: 0 0 0 30px;
-      width: 75%;
-      max-width: 100%;
-    `};
-
-    &__title {
-      font-family: 'Open Sans', sans-serif;
-      font-family: 'Gentium Book Basic', 'Times New Roman', Times, serif;
-      color: #052d3e;
-      margin: 0;
-      transition: 0.3s;
-      font-size: 18px;
-      ${media.sm`
-        font-size: 1.3rem;
-      `}
-    }
-
-    &__summary {
-      color: #727272;
-      margin: 0;
-      font-size: 13px;
-      padding-top: 10px;
-      ${media.sm`
-        font-size: 0.8rem;
-      `};
-    }
-
-    &__time {
-      color: #727272;
-      font-size: 11px;
-      margin: 0;
-      padding: 12px 0px 6px;
-    }
-  }
 `
 
 const ImageWrapper = styled.div`
@@ -127,21 +85,12 @@ export function Card(props) {
         </ImageWrapper>
         <Info>
           <Title>{props.data.title}</Title>
-          {/* <Tags items={props.data?.tags?.slice(0, 4)} /> */}
+          <Tags items={props.data.tags} />
           <Summary>{props.data.excerpt}</Summary>
           <Time>
             <time dateTime={props.data.date}>{props.data.date}</time>
           </Time>
         </Info>
-
-        {/* <div className="cadInfo">
-          <h3 className="cardInfo__title">{props.data.title}</h3>
-          <Tags items={props.data.tags} />
-          <p className="cardInfo__summary">{props.data.excerpt}</p>
-          <p className="cardInfo__time">
-            <time dateTime={props.data.date}>{props.data.date}</time>
-          </p>
-        </div> */}
       </>
     </Container>
   )

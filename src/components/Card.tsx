@@ -21,6 +21,19 @@ const Container = styled(Link)`
     box-shadow: -16px 0 0 0 #f2f2f2, 16px 0 0 0 #f2f2f2;
   }
   text-decoration: none;
+
+  .cardInfo {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    max-width: 560px;
+    padding-top: 12px;
+    ${media.md`
+      padding: 0 0 0 30px;
+      width: 75%;
+      max-width: 100%;
+    `};
+  }
 `
 
 const ImageWrapper = styled.div`
@@ -32,7 +45,7 @@ const ImageWrapper = styled.div`
     width: 25%;
   `};
 `
-const div = styled.div`
+const Info = styled.div`
   width: 100%;
   height: 100%;
   margin: 0;
@@ -77,14 +90,21 @@ export function Card(props) {
     <Container to={props.data.path}>
       <>
         <ImageWrapper>
-          {/* {props.data.thumbnail ? (
-          <GatsbyImage alt={`${props.data.title} image`} image={props.data.thumbnail} />
-        ) : (
-          <img src={props.data.externalThumbnail} />
-        )} */}
+          {props.data.thumbnail ? (
+            <GatsbyImage alt={`${props.data.title} image`} image={props.data.thumbnail} />
+          ) : (
+            <img src={props.data.externalThumbnail} />
+          )}
         </ImageWrapper>
-        <div className="ESTO ESTA DENTRO DE NUEVO"></div>
-        <div>
+        <div className="ESTO ESTA DENTRO DE NUEVO">
+          <Title>{props.data.title}</Title>
+          <Tags items={props.data?.tags?.slice(0, 4)} />
+          <Summary>{props.data.excerpt}</Summary>
+          <Time>
+            <time dateTime={props.data.date}>{props.data.date} </time>
+          </Time>
+        </div>
+        <div className="cardInfo">
           <Title>{props.data.title}</Title>
           <Tags items={props.data?.tags?.slice(0, 4)} />
           <Summary>{props.data.excerpt}</Summary>

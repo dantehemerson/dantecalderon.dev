@@ -75,21 +75,24 @@ const Summary = styled.p`
 export function Card(props) {
   return (
     <Container to={props.data.path}>
-      <ImageWrapper>
-        {/* {props.data.thumbnail ? (
+      <>
+        <ImageWrapper>
+          {/* {props.data.thumbnail ? (
           <GatsbyImage alt={`${props.data.title} image`} image={props.data.thumbnail} />
         ) : (
           <img src={props.data.externalThumbnail} />
         )} */}
-      </ImageWrapper>
-      <Info>
-        <Title>{props.data.title}</Title>
-        <Tags items={props.data?.tags?.slice(0, 4)} />
-        <Summary>{props.data.excerpt}</Summary>
-        <Time>
-          <time dateTime={props.data.date}>{props.data.date} </time>
-        </Time>
-      </Info>
+        </ImageWrapper>
+        <div className="ESTO ESTA DENTRO DE NUEVO"></div>
+        <Info>
+          <Title>{props.data.title}</Title>
+          <Tags items={props.data?.tags?.slice(0, 4)} />
+          <Summary>{props.data.excerpt}</Summary>
+          <Time>
+            <time dateTime={props.data.date}>{props.data.date} </time>
+          </Time>
+        </Info>
+      </>
     </Container>
   )
 }

@@ -3,12 +3,12 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { generateTagInfo } from '../helpers/tags.helpers'
 
-const List = styled.ul`
+const List = styled('ul')`
   list-style: none;
   margin: 0;
 `
 
-const Container = styled.div`
+const Container = styled('div')`
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -19,7 +19,7 @@ const Container = styled.div`
   }
 `
 
-const Item = styled(Link)`
+const Item = styled(props => <Link {...props} />)`
   padding: 2px 7px;
   background: #f7f7f7;
   color: #6a6a6a;

@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import Card from '../components/Card'
+import { Card } from '../components/Card'
 import Layout from '../components/Layout'
 import Pagination from '../components/Pagination'
 import SEO from '../components/SEO'

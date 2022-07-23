@@ -72,7 +72,7 @@ const Summary = styled.p`
   `};
 `
 
-export default function (props) {
+export function Card(props) {
   return (
     <Container to={props.data.path}>
       <ImageWrapper>

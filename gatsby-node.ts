@@ -127,7 +127,7 @@ export const createPages = async ({ graphql, actions }) => {
   }
 
   createMdxPages(allPosts.edges)
-  createMdxPages(allProjects.edges)
+  // createMdxPages(allProjects.edges)
 }
 
 const counter = {}

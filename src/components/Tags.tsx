@@ -50,17 +50,17 @@ export function Tags({ items = [] }: { items: string[] }) {
           const tagData = generateTagInfo(item)
           return (
             <Item>
-              <a
+              <p
                 className="tagLink"
                 key={tagData.slug}
-                href={`/blog/tags/${tagData.slug}`}
+                // href={`/blog/tags/${tagData.slug}`}
                 style={{
                   backgroundColor: tagData.color,
                   color: tagData.textColor,
                 }}
               >
                 {tagData.title}
-              </a>
+              </p>
             </Item>
           )
         })}

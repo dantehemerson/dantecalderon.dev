@@ -125,14 +125,6 @@ export function Card(props) {
             <img src={props.data.externalThumbnail} />
           )}
         </ImageWrapper>
-        <Info>
-          <Title>{props.data.title}</Title>
-          <Tags items={props.data.tags} />
-          <Summary>{props.data.excerpt}</Summary>
-          <Time>
-            <time dateTime={props.data.date}>{props.data.date} </time>
-          </Time>
-        </Info>
         <div className="cadInfo">
           <h3 className="cardInfo__title">{props.data.title}</h3>
           {/* <Tags items={props.data?.tags} /> */}

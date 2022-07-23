@@ -3,7 +3,6 @@ import sliderStyles from './slider'
 import constants from './constants'
 import prismStyles from './prism'
 import socialColors from './social-colors'
-import { withPrefix } from 'gatsby'
 
 type ScreenSizes = 'sm' | 'md' | 'lg' | 'xl'
 

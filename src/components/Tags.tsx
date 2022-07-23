@@ -5,7 +5,7 @@ import { generateTagInfo } from '../helpers/tags.helpers'
 
 const List = styled.ul`
   list-style: none;
-  margin-left: 0;
+  margin: 0;
 `
 
 const Container = styled.div`
@@ -13,6 +13,7 @@ const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: 760px;
+
   @media (min-width: 992px) {
     max-width: 960px;
   }

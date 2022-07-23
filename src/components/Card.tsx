@@ -14,9 +14,7 @@ const Container = styled(Link)`
   ${media.md`
       flex-direction: row;
     `}
-  * {
-    margin: 0;
-  }
+  margin: 0;
 
   &:hover {
     background-color: #f2f2f2;
@@ -29,6 +27,7 @@ const ImageWrapper = styled.div`
   overflow: hidden;
   width: 100%;
   max-width: 500px;
+  margin: 0;
   ${media.md`
     width: 25%;
   `};
@@ -36,6 +35,7 @@ const ImageWrapper = styled.div`
 const Info = styled.div`
   width: 100%;
   height: 100%;
+  margin: 0;
   max-width: 560px;
   padding-top: 12px;
   ${media.md`
@@ -48,6 +48,7 @@ const Title = styled.h3`
   font-family: 'Open Sans', sans-serif;
   font-family: 'Gentium Book Basic', 'Times New Roman', Times, serif;
   color: #052d3e;
+  margin: 0;
   transition: 0.3s;
   font-size: 18px;
   ${media.sm`
@@ -57,11 +58,13 @@ const Title = styled.h3`
 const Time = styled.p`
   color: #727272;
   font-size: 11px;
+  margin: 0;
   padding: 12px 0px 6px;
 `
 
 const Summary = styled.p`
   color: #727272;
+  margin: 0;
   font-size: 13px;
   padding-top: 10px;
   ${media.sm`

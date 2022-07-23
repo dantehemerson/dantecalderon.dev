@@ -96,6 +96,14 @@ export function Card(props) {
             <img src={props.data.externalThumbnail} />
           )}
         </ImageWrapper>
+        <Info>
+          <Title>{props.data.title}</Title>
+          <Tags items={props.data.tags} />
+          <Summary>{props.data.excerpt}</Summary>
+          <Time>
+            <time dateTime={props.data.date}>{props.data.date} </time>
+          </Time>
+        </Info>
         <div className="ESTO ESTA DENTRO DE NUEVO">
           <Title>{props.data.title}</Title>
           <Tags items={props.data?.tags?.slice(0, 4)} />
@@ -104,14 +112,6 @@ export function Card(props) {
             <time dateTime={props.data.date}>{props.data.date} </time>
           </Time>
         </div>
-        <Info>
-          <Title>{props.data.title}</Title>
-          <Tags items={props.data?.tags?.slice(0, 4)} />
-          <Summary>{props.data.excerpt}</Summary>
-          <Time>
-            <time dateTime={props.data.date}>{props.data.date} </time>
-          </Time>
-        </Info>
       </>
     </Container>
   )

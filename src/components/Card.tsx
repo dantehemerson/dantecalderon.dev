@@ -5,7 +5,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import { media } from '../styles'
 import { Tags } from './Tags'
 
-const Container = styled(Link)`
+const Container = styled(props => <Link {...props} />)`
   display: flex;
   align-items: flex-start;
   text-align: left;

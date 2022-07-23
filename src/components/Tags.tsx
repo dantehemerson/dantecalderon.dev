@@ -21,6 +21,7 @@ const List = styled('ul')`
 `
 
 const Item = styled('li')`
+  margin: 0;
   .tagLink {
     padding: 2px 7px;
     background: #f7f7f7;

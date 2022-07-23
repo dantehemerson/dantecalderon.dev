@@ -36,7 +36,7 @@ function Blog(props) {
                   externalThumbnail: node.frontmatter.externalImage,
                   excerpt: node.frontmatter.description || node.excerpt,
                   date: node.frontmatter.date,
-                  tags: node.frontmatter.tags,
+                  tags: node.frontmatter.tags.slice(0, 4),
                   path: `/${node.fields.slug}`,
                 }}
                 key={index}
@@ -63,7 +63,7 @@ export const queryBlog = graphql`
         siteUrl
       }
     }
-    allTag(limit: 12, sort: { fields: [postCount], order: DESC }) {
+    allTag(limit: 10, sort: { fields: [postCount], order: DESC }) {
       edges {
         node {
           textColor

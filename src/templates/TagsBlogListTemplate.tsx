@@ -37,7 +37,7 @@ const BlogWithTags = props => {
                     externalThumbnail: node.frontmatter.externalImage,
                     excerpt: node.frontmatter.description || node.excerpt,
                     date: node.frontmatter.date,
-                    tags: node.frontmatter.tags,
+                    tags: node.frontmatter.tags.slice(0, 4),
                     path: `/${node.fields.slug}`,
                   }}
                   key={node.frontmatter.slug}

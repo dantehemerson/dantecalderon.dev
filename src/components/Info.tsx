@@ -1,18 +1,16 @@
+import React, { useEffect } from 'react'
 import { mergeAdvanced } from 'object-merge-advanced'
-import React from 'react'
 import styled from 'styled-components'
 import { GLOBAL_CONTEXT_KEY } from '../../gatsby/gatsby.constants'
-import { initialGlobalContext } from '../contex/initial.global.context'
 import { secureTimeAgo } from '../helpers/date'
 import { getMyGithubInfo } from '../helpers/requests/githubInfo'
 import { useLocalStorage } from '../hooks/useLocalStorage'
 import InfoItem from './InfoItem'
 
 export function Info() {
-  const [info, setInfo] = useLocalStorage(GLOBAL_CONTEXT_KEY, initialGlobalContext)
-  console.log('🤫 Dante ➤ ThemeProvider ➤ info', info)
+  const [info, setInfo] = useLocalStorage(GLOBAL_CONTEXT_KEY, undefined)
 
-  React.useEffect(() => {
+  useEffect(() => {
     const loadGithubInfo = async () => {
       try {
         const newInfo = await getMyGithubInfo()
@@ -36,7 +34,9 @@ export function Info() {
     }
   }, [])
 
-  console.log('🤫 Dante ➤ Info ➤ infoBot', info)
+  const isLoading = info === undefined
+
+  console.log('🤫 Dante ➤ Info ➤ infoBot', info, isLoading)
 
   return (
     <div
@@ -48,30 +48,39 @@ export function Info() {
       <Container>
         <InfoItem
           title="😊 Status"
-          description={info.githubStatus.status}
-          postfix={secureTimeAgo(info.githubStatus.updatedAt)}
+          isLoading={isLoading}
+          description={info?.githubStatus?.status}
+          postfix={secureTimeAgo(info?.githubStatus?.updatedAt)}
         />
-        <InfoItem title="👨‍💻 Working on" description={info.githubStatus.company} />
+        <InfoItem
+          title="👨‍💻 Working on"
+          isLoading={isLoading}
+          description={info?.githubStatus?.company}
+        />
         <InfoItem
           title="🚀 Contributions"
+          isLoading={isLoading}
           description={`<b class='code'>${
-            info.githubStatus.contributions || 0
+            info?.githubStatus?.contributions ?? 0
           }</b>&nbsp;in the last year`}
         />
         <InfoItem
           title="👷 Latest Commit"
-          description={`<a href='${info.latestCommit.url}' target='_blank'>${info.latestCommit.message}</a>`}
-          postfix={secureTimeAgo(info.latestCommit.createdAt)}
+          isLoading={isLoading}
+          description={`<a href='${info?.latestCommit?.url}' target='_blank'>${info?.latestCommit?.message}</a>`}
+          postfix={secureTimeAgo(info?.latestCommit?.createdAt)}
         />
         <InfoItem
           title="🎶 Listening"
-          showPostfixImage={info.listening.playing}
-          description={`<a href='${info.listening.url}' target='_blank'>${info.listening.name}</a>`}
-          postfix={secureTimeAgo(info.listening.lastPlayingDate)}
+          isLoading={isLoading}
+          showPostfixImage={info?.listening?.playing}
+          description={`<a href='${info?.listening?.url}' target='_blank'>${info?.listening?.name}</a>`}
+          postfix={secureTimeAgo(info?.listening?.lastPlayingDate)}
         />
         <InfoItem
           title={'📚 Reading'}
-          description={`<a href='${info.reading.profileUrl}' target='_blank'>${info.reading.title}</a>`}
+          isLoading={isLoading}
+          description={`<a href='${info?.reading?.profileUrl}' target='_blank'>${info?.reading?.title}</a>`}
         />
       </Container>
     </div>

@@ -1,29 +1,36 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 type InfoItem = {
   title: string
   description: string
+  isLoading: boolean
   postfix?: string
   showPostfixImage?: boolean
 }
 
-const InfoItem = ({ title, description, postfix, showPostfixImage }: InfoItem) => {
+const InfoItem = ({ title, description, postfix, showPostfixImage, isLoading }: InfoItem) => {
   return (
     <Container>
-      <p className="title3">{title}:</p>
-      <div
-        key={new Date().getTime()}
-        dangerouslySetInnerHTML={{ __html: `<div> ${description} </div>` }}
-      />
-      {showPostfixImage && (
-        <img
-          alt="listening"
-          className="postfixImage"
-          src="https://i.ibb.co/6gzCdm5/equaliser-animated-green-73b73928.gif"
-        />
+      <p className="title3">{title + ':'}</p>
+      {isLoading ? (
+        <Skeleton />
+      ) : (
+        <>
+          <div
+            key={new Date().getTime()}
+            dangerouslySetInnerHTML={{ __html: `<div> ${description} </div>` }}
+          />
+          {showPostfixImage && (
+            <img
+              alt="listening"
+              className="postfixImage"
+              src="https://i.ibb.co/6gzCdm5/equaliser-animated-green-73b73928.gif"
+            />
+          )}
+          <span className="postfix3">{postfix}</span>
+        </>
       )}
-      <span className="postfix3">{postfix}</span>
     </Container>
   )
 }
@@ -33,7 +40,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 12px;
-  line-height: 24px;
+  height: 24px;
   .code {
     display: contents;
     font-family: 'Fira Code';
@@ -81,4 +88,24 @@ const Container = styled.div`
     align-items: center;
   }
 `
+
+const skeletonLoading = keyframes`
+  0% {
+    background-color: hsl(50deg 46% 76%);
+  }
+
+  100% {
+    background-color: hsl(50deg 46% 87%);
+  }
+`
+
+const Skeleton = styled.div`
+  opacity: 0.7;
+  animation: ${skeletonLoading} 1s linear infinite alternate;
+
+  width: 200px;
+  height: 18px;
+  border-radius: 4px;
+`
+
 export default InfoItem

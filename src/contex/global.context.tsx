@@ -1,4 +1,4 @@
-import React, { createContext, useMemo } from 'react'
+import React, { createContext } from 'react'
 import { mergeAdvanced } from 'object-merge-advanced'
 import { GLOBAL_CONTEXT_KEY } from '../../gatsby/gatsby.constants'
 import { getMyGithubInfo } from '../helpers/requests/githubInfo'
@@ -10,11 +10,13 @@ export const GlobalContext = createContext(undefined)
 
 export const ThemeProvider = ({ children }) => {
   const [info, setInfo] = useLocalStorage(GLOBAL_CONTEXT_KEY, initialGlobalContext)
+  console.log('🤫 Dante ➤ ThemeProvider ➤ info', info)
 
   React.useEffect(() => {
     const loadGithubInfo = async () => {
       try {
         const newInfo = await getMyGithubInfo()
+        console.log('🤫 Dante ➤ loadGithubInfo ➤ newInfo', newInfo)
         setInfo(prevInfo =>
           mergeAdvanced(prevInfo, newInfo, {
             mergeBoolsUsingOrNotAnd: newInfo?.listening?.playing ?? false,

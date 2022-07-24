@@ -24,7 +24,7 @@ export function getInitialLocalStorageValue(key, initialValue) {
     const item = window.localStorage.getItem(key)
     return item ? JSON.parse(item) : initialValue
   } catch (error) {
-    console.log(error)
+    console.log('An error ocurred while getting initialValue', error)
     return initialValue
   }
 }

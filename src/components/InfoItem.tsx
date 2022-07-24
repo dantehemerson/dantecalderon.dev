@@ -9,17 +9,13 @@ type InfoItem = {
 }
 
 const InfoItem = ({ title, description, postfix, showPostfixImage }: InfoItem) => {
-  console.log(
-    '🤫 Dante ➤ InfoItem ➤ title, description, postfix, showPostfixImage',
-    title,
-    description,
-    postfix,
-    showPostfixImage
-  )
   return (
     <Container>
       <p className="title3">{title}:</p>
-      <div dangerouslySetInnerHTML={{ __html: `<div> ${description} </div>` }} />
+      <div
+        key={new Date().getTime()}
+        dangerouslySetInnerHTML={{ __html: `<div> ${description} </div>` }}
+      />
       {showPostfixImage && (
         <img
           alt="listening"

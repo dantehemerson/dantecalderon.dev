@@ -1,7 +1,7 @@
 import React from 'react'
 import { GLOBAL_CONTEXT_KEY } from './gatsby/gatsby.constants'
-import App from './src/components/App'
 import Terser from 'terser'
+import { window } from 'browser-monads-ts'
 
 function preScriptBody() {
   var globalContext = undefined
@@ -11,7 +11,7 @@ function preScriptBody() {
     globalContext = globalContext ? JSON.parse(globalContext) : undefined
   } catch (error) {}
   console.log('🤫 Dante ➤ preScriptBody ➤ globalContext', globalContext)
-  ;(window as any).GLOBAL_CONTEXT = globalContext
+  window.GLOBAL_CONTEXT = globalContext
 }
 
 const MagicScriptTag = () => {
@@ -27,8 +27,4 @@ const MagicScriptTag = () => {
 
 export const onRenderBody = ({ setPreBodyComponents, setHeadComponents }) => {
   setPreBodyComponents(<MagicScriptTag key="mgsc-1" />)
-}
-
-export const wrapPageElement = ({ element }) => {
-  return <App>{element}</App>
 }

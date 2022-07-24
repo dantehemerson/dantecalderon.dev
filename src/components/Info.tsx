@@ -1,11 +1,41 @@
-import React, { useContext } from 'react'
+import { mergeAdvanced } from 'object-merge-advanced'
+import React from 'react'
 import styled from 'styled-components'
-import InfoItem from './InfoItem'
+import { GLOBAL_CONTEXT_KEY } from '../../gatsby/gatsby.constants'
+import { initialGlobalContext } from '../contex/initial.global.context'
 import { secureTimeAgo } from '../helpers/date'
-import { GlobalContext } from '../contex/global.context'
+import { getMyGithubInfo } from '../helpers/requests/githubInfo'
+import { useLocalStorage } from '../hooks/useLocalStorage'
+import InfoItem from './InfoItem'
 
 export function Info() {
-  const { info } = useContext(GlobalContext)
+  const [info, setInfo] = useLocalStorage(GLOBAL_CONTEXT_KEY, initialGlobalContext)
+  console.log('🤫 Dante ➤ ThemeProvider ➤ info', info)
+
+  React.useEffect(() => {
+    const loadGithubInfo = async () => {
+      try {
+        const newInfo = await getMyGithubInfo()
+        console.log('🤫 Dante ➤ loadGithubInfo ➤ newInfo', newInfo)
+        setInfo(prevInfo =>
+          mergeAdvanced(prevInfo, newInfo, {
+            mergeBoolsUsingOrNotAnd: newInfo?.listening?.playing ?? false,
+          })
+        )
+      } catch (error) {
+        console.error('Error loading info', error)
+      }
+    }
+
+    loadGithubInfo()
+    const intervalId = setInterval(() => loadGithubInfo(), 10000)
+
+    return () => {
+      console.log('Clearing interval')
+      clearInterval(intervalId)
+    }
+  }, [])
+
   console.log('🤫 Dante ➤ Info ➤ infoBot', info)
 
   return (

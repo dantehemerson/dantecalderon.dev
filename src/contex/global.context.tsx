@@ -40,7 +40,7 @@ export const ThemeProvider = ({ children }) => {
       info: (window as any).GLOBAL_CONTEXT || info,
       setInfo,
     }
-  }, [info, setInfo])
+  }, [info, (window as any).GLOBAL_CONTEXT, setInfo])
 
   return <GlobalContext.Provider value={contextValue}>{children}</GlobalContext.Provider>
 }

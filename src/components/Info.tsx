@@ -4,7 +4,7 @@ import InfoItem from './InfoItem'
 import { secureTimeAgo } from '../helpers/date'
 import { GlobalContext } from '../contex/global.context'
 import { GLOBAL_CONTEXT_KEY } from '../../gatsby/gatsby.constants'
-import { window } from 'browser-monads'
+import { window } from 'browser-monads-ts'
 
 export function Info() {
   const { info } = useContext(GlobalContext)

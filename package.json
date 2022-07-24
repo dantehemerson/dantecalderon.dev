@@ -32,7 +32,7 @@
     "ast-get-object": "^1.10.1",
     "babel-plugin-styled-components": "^2.0.7",
     "bluebird": "^3.7.2",
-    "browser-monads": "^1.0.0",
+    "browser-monads-ts": "^2.0.1",
     "dotenv": "^16.0.1",
     "gatsby": "^4.19.2",
     "gatsby-plugin-catch-links": "^4.19.0",

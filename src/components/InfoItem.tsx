@@ -19,7 +19,7 @@ const InfoItem = ({ title, description, postfix, showPostfixImage }: InfoItem) =
   return (
     <Container>
       <p className="title3">{title}:</p>
-      <div dangerouslySetInnerHTML={{ __html: description }} />
+      <div dangerouslySetInnerHTML={{ __html: `<div> ${description} </div>` }} />
       {showPostfixImage && (
         <img
           alt="listening"

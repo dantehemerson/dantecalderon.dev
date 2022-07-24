@@ -70,5 +70,47 @@
     "slug": "vscode",
     "color": "#0066b8",
     "textColor": "white"
+  },
+  "reactjs": {
+    "title": "⚛️ ReactJs",
+    "slug": "reactjs",
+    "color": "#5dd3f3",
+    "textColor": "#212121"
+  },
+  "react": {
+    "title": "⚛️ ReactJs",
+    "slug": "reactjs",
+    "color": "#5dd3f3",
+    "textColor": "#212121"
+  },
+  "github": {
+    "title": "😺 Github",
+    "slug": "github",
+    "color": "#23292e",
+    "textColor": "white"
+  },
+  "c": {
+    "title": "C/C++",
+    "slug": "c-cpp",
+    "color": "#f34b7d",
+    "textColor": "white"
+  },
+  "cpp": {
+    "title": "C/C++",
+    "slug": "c-cpp",
+    "color": "#f34b7d",
+    "textColor": "white"
+  },
+  "c-c": {
+    "title": "C/C++",
+    "slug": "c-cpp",
+    "color": "#f34b7d",
+    "textColor": "white"
+  },
+  "apps": {
+    "title": "📱 Apps",
+    "slug": "apps",
+    "color": "#43748b",
+    "textColor": "white"
   }
 }

@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { useInfo } from '../hooks/useInfo'
 import InfoItem from './InfoItem'
 import { secureTimeAgo } from '../helpers/date'
 
-const Info = () => {
+export function Info() {
+  const [hasMounted, setHasMounted] = useState(false)
+
+  useEffect(() => {
+    setHasMounted(true)
+  }, [])
+
   const info = useInfo()
+
   console.log('🤫 Dante ➤ Info ➤ info', info)
   return (
     <div
@@ -56,5 +63,3 @@ const Container = styled.div`
   border: 1px solid #d3c79e;
   padding: 25px;
 `
-
-export default Info

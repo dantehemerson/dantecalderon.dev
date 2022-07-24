@@ -2,7 +2,7 @@ import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 import { media } from '../../styles'
-import Info from '../Info'
+import { Info } from '../Info'
 import { SocialHome } from '../SocialHome'
 import { INFO } from '../../data/info'
 

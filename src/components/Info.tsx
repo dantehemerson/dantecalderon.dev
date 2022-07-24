@@ -3,10 +3,12 @@ import styled from 'styled-components'
 import InfoItem from './InfoItem'
 import { secureTimeAgo } from '../helpers/date'
 import { GlobalContext } from '../contex/global.context'
+import { GLOBAL_CONTEXT_KEY } from '../../gatsby/gatsby.constants'
 
 export function Info() {
   const { info } = useContext(GlobalContext)
 
+  console.log(window && window.localStorage.getItem(GLOBAL_CONTEXT_KEY))
   return (
     <div
       style={{

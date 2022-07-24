@@ -73,7 +73,7 @@
     "react-slick": "^0.28.1",
     "react-typography": "^0.16.20",
     "styled-components": "^5.3.5",
-    "terser": "^5.14.2",
+    "terser": "^4.6.11",
     "typography": "^0.16.21"
   },
   "devDependencies": {

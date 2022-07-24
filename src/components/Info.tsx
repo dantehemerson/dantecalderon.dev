@@ -1,17 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { useInfo } from '../hooks/useInfo'
 import InfoItem from './InfoItem'
 import { secureTimeAgo } from '../helpers/date'
+import { GlobalContext } from '../contex/global.context'
 
 export function Info() {
-  const [hasMounted, setHasMounted] = useState(false)
-
-  useEffect(() => {
-    setHasMounted(true)
-  }, [])
-
-  const info = useInfo()
+  const { info } = useContext(GlobalContext)
 
   console.log('🤫 Dante ➤ Info ➤ info', info)
   return (

@@ -4,6 +4,7 @@ import { GLOBAL_CONTEXT_KEY } from '../../gatsby/gatsby.constants'
 import { getMyGithubInfo } from '../helpers/requests/githubInfo'
 import { useLocalStorage } from '../hooks/useLocalStorage'
 import { initialGlobalContext } from './initial.global.context'
+import { window } from 'browser-monads-ts'
 
 export const GlobalContext = createContext(undefined)
 
@@ -35,7 +36,7 @@ export const ThemeProvider = ({ children }) => {
 
   const contextValue = useMemo(() => {
     return {
-      info,
+      info: (window as any).GLOBAL_CONTEXT || info,
       setInfo,
     }
   }, [info, setInfo])

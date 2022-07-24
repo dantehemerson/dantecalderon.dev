@@ -1,1 +1,1 @@
-export const GLOBAL_CONTEXT_KEY = 'userInfo'
+export const GLOBAL_CONTEXT_KEY = 'gcl'

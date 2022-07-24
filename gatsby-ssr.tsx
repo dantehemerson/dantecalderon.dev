@@ -4,21 +4,25 @@ import App from './src/components/App'
 import Terser from 'terser'
 
 function preScriptBody() {
-  var HOLA = 'buenos dias'
-  console.log('Log from preScriptBody', localStorage, HOLA)
+  var globalContext = undefined
+  try {
+    globalContext = localStorage.getItem('gcl')
+    // Mantain The Initial Global Context updated
+    globalContext = globalContext ? JSON.parse(globalContext) : undefined
+  } catch (error) {}
+
+  ;(window as any).GLOBAL_CONTEXT = globalContext
 }
 
 const MagicScriptTag = () => {
   const boundFn = String(preScriptBody).replace('🔑', GLOBAL_CONTEXT_KEY)
 
   let calledFunction = `(${boundFn})()`
-  console.log('🤫 Dante ➤ MagicScriptTag ➤ calledFunction', calledFunction)
 
   calledFunction = Terser.minify(calledFunction).code
-  console.log('🤫 Dante ➤ MagicScriptTag ➤ calledFunction', calledFunction)
 
   // eslint-disable-next-line react/no-danger
-  return <script key="s-1" dangerouslySetInnerHTML={{ __html: "var HOLA='hola mundo';" }} />
+  return <script key="s-1" dangerouslySetInnerHTML={{ __html: calledFunction }} />
 }
 
 export const onRenderBody = ({ setPreBodyComponents, setHeadComponents }) => {

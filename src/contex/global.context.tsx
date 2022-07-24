@@ -38,7 +38,7 @@ export const ThemeProvider = ({ children }) => {
       info,
       setInfo,
     }
-  }, [JSON.stringify(info), setInfo])
+  }, [info, setInfo])
 
   return <GlobalContext.Provider value={contextValue}>{children}</GlobalContext.Provider>
 }

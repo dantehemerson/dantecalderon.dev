@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import InfoItem from './InfoItem'
 import { secureTimeAgo } from '../helpers/date'
@@ -6,12 +6,7 @@ import { GlobalContext } from '../contex/global.context'
 
 export function Info() {
   const { info } = useContext(GlobalContext)
-  const [lastUpdated, setLastUpdated] = useState(new Date().toISOString())
 
-  useEffect(() => {
-    setLastUpdated(new Date().toISOString())
-  }, [JSON.stringify(info)])
-  console.log('🤫 Dante ➤ Info ➤ info', info)
   return (
     <div
       style={{
@@ -44,7 +39,7 @@ export function Info() {
           postfix={secureTimeAgo(info.listening.lastPlayingDate)}
         />
         <InfoItem
-          title={'📚 Reading' + lastUpdated}
+          title={'📚 Reading'}
           description={`<a href='${info.reading.profileUrl}' target='_blank'>${info.reading.title}</a>`}
         />
       </Container>

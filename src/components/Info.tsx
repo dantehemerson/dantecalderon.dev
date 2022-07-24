@@ -3,28 +3,15 @@ import styled from 'styled-components'
 import InfoItem from './InfoItem'
 import { secureTimeAgo } from '../helpers/date'
 import { GlobalContext } from '../contex/global.context'
-import { GLOBAL_CONTEXT_KEY } from '../../gatsby/gatsby.constants'
 import { window } from 'browser-monads-ts'
-import { atom, RecoilRoot, useRecoilState } from 'recoil'
-import { recoilPersist } from 'recoil-persist'
 import { initialGlobalContext } from '../contex/initial.global.context'
 
-const { persistAtom } = recoilPersist()
-
-const counterState = atom({
-  key: 'recoilInfo',
-  default: initialGlobalContext,
-  effects_UNSTABLE: [persistAtom],
-})
-
 export function Info() {
-  const [recoilInfo, setRecoilInfo] = useRecoilState(counterState)
-  console.log('🤫 Dante ➤ Info ➤ recoilInfo', recoilInfo)
   const { info: infoBot } = useContext(GlobalContext)
   console.log('🤫 Dante ➤ Info ➤ infoBot', infoBot)
 
-  const info = recoilInfo || infoBot || window.localStorage.getItem(GLOBAL_CONTEXT_KEY)
-  console.log('🤫 Dante ➤ Info ➤ info', info)
+  const info = (window as any).GLOBAL_CONTEXT_KEY || infoBot
+  console.log('🤫 Dante ➤ Info ➤ info >>>>>>>>>> ', info)
   return (
     <div
       style={{

@@ -6,7 +6,11 @@ import { GlobalContext } from '../contex/global.context'
 
 export function Info() {
   const { info } = useContext(GlobalContext)
+  const [lastUpdated, setLastUpdated] = useState(new Date().toISOString())
 
+  useEffect(() => {
+    setLastUpdated(new Date().toISOString())
+  }, [JSON.stringify(info)])
   console.log('🤫 Dante ➤ Info ➤ info', info)
   return (
     <div
@@ -40,7 +44,7 @@ export function Info() {
           postfix={secureTimeAgo(info.listening.lastPlayingDate)}
         />
         <InfoItem
-          title="📚 Reading"
+          title={'📚 Reading' + lastUpdated}
           description={`<a href='${info.reading.profileUrl}' target='_blank'>${info.reading.title}</a>`}
         />
       </Container>

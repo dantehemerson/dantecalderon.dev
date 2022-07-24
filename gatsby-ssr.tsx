@@ -1,7 +1,6 @@
 import React from 'react'
 import { GLOBAL_CONTEXT_KEY } from './gatsby/gatsby.constants'
 import Terser from 'terser'
-import { window } from 'browser-monads-ts'
 
 function preScriptBody() {
   var globalContext = undefined

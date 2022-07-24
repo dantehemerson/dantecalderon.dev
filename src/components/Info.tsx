@@ -7,9 +7,10 @@ import { GLOBAL_CONTEXT_KEY } from '../../gatsby/gatsby.constants'
 import { window } from 'browser-monads-ts'
 
 export function Info() {
-  const { info } = useContext(GlobalContext)
+  const { info: infoBot } = useContext(GlobalContext)
 
-  console.log(window && window.localStorage.getItem(GLOBAL_CONTEXT_KEY))
+  const info = infoBot ? infoBot : window.localStorage.getItem(GLOBAL_CONTEXT_KEY)
+  console.log('🤫 Dante ➤ Info ➤ info', info)
   return (
     <div
       style={{

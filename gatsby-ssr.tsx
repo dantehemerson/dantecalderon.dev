@@ -10,7 +10,7 @@ function preScriptBody() {
     // Mantain The Initial Global Context updated
     globalContext = globalContext ? JSON.parse(globalContext) : undefined
   } catch (error) {}
-
+  console.log('🤫 Dante ➤ preScriptBody ➤ globalContext', globalContext)
   ;(window as any).GLOBAL_CONTEXT = globalContext
 }
 

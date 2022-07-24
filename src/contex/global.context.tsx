@@ -34,13 +34,10 @@ export const ThemeProvider = ({ children }) => {
     }
   }, [])
 
-  const contextValue = useMemo(() => {
-    console.log('El fucking info chamo: ', (window as any).GLOBAL_CONTEXT || info)
-    return {
-      info: (window as any).GLOBAL_CONTEXT || info,
-      setInfo,
-    }
-  }, [info, (window as any).GLOBAL_CONTEXT, setInfo])
+  const contextValue = {
+    info: (window as any).GLOBAL_CONTEXT || info,
+    setInfo,
+  }
 
   return <GlobalContext.Provider value={contextValue}>{children}</GlobalContext.Provider>
 }

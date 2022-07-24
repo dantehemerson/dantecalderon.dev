@@ -3,15 +3,11 @@ import styled from 'styled-components'
 import InfoItem from './InfoItem'
 import { secureTimeAgo } from '../helpers/date'
 import { GlobalContext } from '../contex/global.context'
-import { window } from 'browser-monads-ts'
-import { initialGlobalContext } from '../contex/initial.global.context'
 
 export function Info() {
-  const { info: infoBot } = useContext(GlobalContext)
-  console.log('🤫 Dante ➤ Info ➤ infoBot', infoBot)
+  const { info } = useContext(GlobalContext)
+  console.log('🤫 Dante ➤ Info ➤ infoBot', info)
 
-  const info = (window as any).GLOBAL_CONTEXT_KEY || infoBot
-  console.log('🤫 Dante ➤ Info ➤ info >>>>>>>>>> ', info)
   return (
     <div
       style={{

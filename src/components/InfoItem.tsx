@@ -9,6 +9,13 @@ type InfoItem = {
 }
 
 const InfoItem = ({ title, description, postfix, showPostfixImage }: InfoItem) => {
+  console.log(
+    '🤫 Dante ➤ InfoItem ➤ title, description, postfix, showPostfixImage',
+    title,
+    description,
+    postfix,
+    showPostfixImage
+  )
   return (
     <Container>
       <p className="title3">{title}:</p>

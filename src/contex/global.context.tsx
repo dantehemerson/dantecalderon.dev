@@ -27,6 +27,7 @@ export const ThemeProvider = ({ children }) => {
       }
     }
 
+    loadGithubInfo()
     const intervalId = setInterval(() => loadGithubInfo(), 10000)
 
     return () => {

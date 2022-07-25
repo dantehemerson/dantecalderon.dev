@@ -16,7 +16,7 @@ export function Info() {
         const newInfo = await getMyGithubInfo()
         console.log('🤫 Dante ➤ loadGithubInfo ➤ newInfo', newInfo)
         setInfo(prevInfo => {
-          mergeAdvanced(prevInfo, newInfo, {
+          return mergeAdvanced(prevInfo, newInfo, {
             mergeBoolsUsingOrNotAnd: newInfo?.listening?.playing ?? false,
           })
         })
@@ -35,6 +35,7 @@ export function Info() {
   }, [])
 
   const isLoading = info === undefined
+  console.log('🤫 Dante ➤ Info ➤ info', info)
 
   console.log('🤫 Dante ➤ Info ➤ infoBot', info, isLoading)
 

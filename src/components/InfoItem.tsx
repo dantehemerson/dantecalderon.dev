@@ -18,6 +18,7 @@ const InfoItem: React.FC<InfoItem> = ({
   children,
 }) => {
   const { isClient, key } = useIsClient()
+  console.log('🤫 Dante ➤ isClient', isClient, isLoading)
 
   return (
     <Container key={key}>

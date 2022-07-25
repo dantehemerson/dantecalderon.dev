@@ -12,7 +12,7 @@ import * as md from '@dantehemerson/notion-to-md/build/utils/md'
 
 import fs from 'fs'
 import { markdownHeaderTemplate } from './templates'
-import { downloadImageAndGetPath } from './helpers/notion.helpers'
+import { downloadImageAndGetPath, getNotionImageData } from './helpers/notion.helpers'
 
 const { NOTION_SECRET } = process.env
 
@@ -34,7 +34,7 @@ async function imageParser(block) {
     imageUrl = blockContent.file.url
   }
 
-  console.log('🤫 Dante ➤ imageParser ➤ image_url', imageUrl)
+  console.log('🤫 Dante ➤ imageParser ➤ image_url', getNotionImageData(imageUrl))
 
   return md.image(image_caption_plain, imageUrl)
 }
@@ -42,19 +42,14 @@ async function imageParser(block) {
 const n2m = new NotionToMarkdown({ notionClient: notion })
 n2m.setCustomTransformer('image', imageParser)
 ;(async () => {
-  await downloadImageAndGetPath('')
-  return
-
   const pageId = process.argv[2]
   const pageData: any = await notion.pages.retrieve({
     page_id: pageId,
   })
-  console.log('🤫 Dante ➤ ; ➤ pageData')
 
   const pageInfo: any = {}
 
   const mdblocks = await n2m.pageToMarkdown(pageId, 100)
-  console.log('🤫 Dante ➤ ; ➤ mdblocks', mdblocks)
   pageInfo.content = n2m.toMarkdownString(mdblocks)
 
   pageInfo.createdAtDate = pageData.created_time.slice(0, 10)

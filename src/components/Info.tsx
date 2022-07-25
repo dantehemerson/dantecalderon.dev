@@ -49,39 +49,42 @@ export function Info() {
         <InfoItem
           title="😊 Status"
           isLoading={isLoading}
-          description={info?.githubStatus?.status}
           postfix={secureTimeAgo(info?.githubStatus?.updatedAt)}
-        />
-        <InfoItem
-          title="👨‍💻 Working on"
-          isLoading={isLoading}
-          description={info?.githubStatus?.company}
-        />
-        <InfoItem
-          title="🚀 Contributions"
-          isLoading={isLoading}
-          description={`<b class='code'>${
-            info?.githubStatus?.contributions ?? 0
-          }</b>&nbsp;in the last year`}
-        />
+        >
+          {info?.githubStatus?.status}
+        </InfoItem>
+        <InfoItem title="👨‍💻 Working on" isLoading={isLoading}>
+          {info?.githubStatus?.company}
+        </InfoItem>
+        <InfoItem title="🚀 Contributions" isLoading={isLoading}>
+          <>
+            <b className="code">${info?.githubStatus?.contributions ?? 0}</b>&nbsp;in the last year
+          </>
+        </InfoItem>
         <InfoItem
           title="👷 Latest Commit"
           isLoading={isLoading}
-          description={`<a href='${info?.latestCommit?.url}' target='_blank'>${info?.latestCommit?.message}</a>`}
           postfix={secureTimeAgo(info?.latestCommit?.createdAt)}
-        />
+        >
+          <a href="${info?.latestCommit?.url}" target="_blank">
+            ${info?.latestCommit?.message}
+          </a>
+        </InfoItem>
         <InfoItem
           title="🎶 Listening"
           isLoading={isLoading}
           showPostfixImage={info?.listening?.playing}
-          description={`<a href='${info?.listening?.url}' target='_blank'>${info?.listening?.name}</a>`}
           postfix={secureTimeAgo(info?.listening?.lastPlayingDate)}
-        />
-        <InfoItem
-          title={'📚 Reading'}
-          isLoading={isLoading}
-          description={`<a href='${info?.reading?.profileUrl}' target='_blank'>${info?.reading?.title}</a>`}
-        />
+        >
+          <a href="${info?.listening?.url}" target="_blank">
+            ${info?.listening?.name}
+          </a>
+        </InfoItem>
+        <InfoItem title={'📚 Reading'} isLoading={isLoading}>
+          <a href="${info?.reading?.profileUrl}" target="_blank">
+            ${info?.reading?.title}
+          </a>
+        </InfoItem>
       </Container>
     </div>
   )

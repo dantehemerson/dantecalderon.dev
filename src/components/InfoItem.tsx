@@ -3,13 +3,19 @@ import styled, { keyframes } from 'styled-components'
 
 type InfoItem = {
   title: string
-  description: string
   isLoading: boolean
   postfix?: string
   showPostfixImage?: boolean
+  children: JSX.Element
 }
 
-const InfoItem = ({ title, description, postfix, showPostfixImage, isLoading }: InfoItem) => {
+const InfoItem: React.FC<InfoItem> = ({
+  title,
+  postfix,
+  showPostfixImage,
+  isLoading,
+  children,
+}) => {
   return (
     <Container>
       <p className="title3">{title + ':'}</p>
@@ -17,10 +23,7 @@ const InfoItem = ({ title, description, postfix, showPostfixImage, isLoading }: 
         <Skeleton />
       ) : (
         <>
-          <div
-            key={new Date().getTime()}
-            dangerouslySetInnerHTML={{ __html: `<div> ${description} </div>` }}
-          />
+          <div>{children}</div>
           {showPostfixImage && (
             <img
               alt="listening"

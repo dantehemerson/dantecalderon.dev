@@ -8,8 +8,11 @@ import _ from 'lodash'
 import { Client } from '@notionhq/client'
 import Mustache from 'mustache'
 import { NotionToMarkdown } from '@dantehemerson/notion-to-md'
+import * as md from '@dantehemerson/notion-to-md/build/utils/md'
+
 import fs from 'fs'
 import { markdownHeaderTemplate } from './templates'
+import { downloadImageAndGetPath } from './helpers/notion.helpers'
 
 const { NOTION_SECRET } = process.env
 
@@ -19,11 +22,29 @@ const notion = new Client({
   auth: NOTION_SECRET,
 })
 
-// function image
+async function imageParser(block) {
+  let blockContent = block.image
+  const image_caption_plain = blockContent.caption.map(item => item.plain_text).join('')
+  const image_type = blockContent.type
+
+  let imageUrl = undefined
+  if (image_type === 'external') {
+    imageUrl = blockContent.external.url
+  } else if (image_type === 'file') {
+    imageUrl = blockContent.file.url
+  }
+
+  console.log('🤫 Dante ➤ imageParser ➤ image_url', imageUrl)
+
+  return md.image(image_caption_plain, imageUrl)
+}
 
 const n2m = new NotionToMarkdown({ notionClient: notion })
-
+n2m.setCustomTransformer('image', imageParser)
 ;(async () => {
+  await downloadImageAndGetPath('')
+  return
+
   const pageId = process.argv[2]
   const pageData: any = await notion.pages.retrieve({
     page_id: pageId,

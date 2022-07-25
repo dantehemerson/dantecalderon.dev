@@ -1,5 +1,5 @@
+import React, { useEffect } from 'react'
 import { mergeAdvanced } from 'object-merge-advanced'
-import { useEffect } from 'react'
 import styled from 'styled-components'
 import { GLOBAL_CONTEXT_KEY } from '../../gatsby/gatsby.constants'
 import { secureTimeAgo } from '../helpers/date'

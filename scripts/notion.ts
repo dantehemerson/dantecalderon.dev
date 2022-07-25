@@ -22,33 +22,36 @@ const notion = new Client({
   auth: NOTION_SECRET,
 })
 
-async function imageParser(block) {
-  let blockContent = block.image
-  const image_caption_plain = blockContent.caption.map(item => item.plain_text).join('')
-  const image_type = blockContent.type
-
-  let imageUrl = undefined
-  if (image_type === 'external') {
-    imageUrl = blockContent.external.url
-  } else if (image_type === 'file') {
-    imageUrl = blockContent.file.url
-  }
-
-  const imageData = getNotionImageData(imageUrl)
-  // console.log('🤫 Dante ➤ imageParser ➤ imageData', imageData)
-
-  await downloadImageAndGetPath(imageData)
-
-  return md.image(image_caption_plain, imageData.filePathFromBlog)
-}
-
-const n2m = new NotionToMarkdown({ notionClient: notion })
-n2m.setCustomTransformer('image', imageParser)
 ;(async () => {
+  const n2m = new NotionToMarkdown({ notionClient: notion })
+
   const pageId = process.argv[2]
   const pageData: any = await notion.pages.retrieve({
     page_id: pageId,
   })
+  console.log('🤫 Dante ➤ ; ➤ pageData', pageData)
+
+  const imageParser = async block => {
+    let blockContent = block.image
+    const image_caption_plain = blockContent.caption.map(item => item.plain_text).join('')
+    const image_type = blockContent.type
+
+    let imageUrl = undefined
+    if (image_type === 'external') {
+      imageUrl = blockContent.external.url
+    } else if (image_type === 'file') {
+      imageUrl = blockContent.file.url
+    }
+
+    const imageData = getNotionImageData(imageUrl)
+    console.log('🤫 Dante ➤ imageParser ➤ imageData', imageData)
+
+    await downloadImageAndGetPath(imageData)
+
+    return md.image(image_caption_plain, imageData.filePathFromBlog)
+  }
+
+  n2m.setCustomTransformer('image', imageParser)
 
   const pageInfo: any = {}
 

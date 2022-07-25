@@ -20,7 +20,7 @@ const InfoItem: React.FC<InfoItem> = ({
     <Container>
       <p className="title3">{title + ':'}</p>
       {isLoading ? (
-        <Skeleton />
+        <Skeleton key={new Date().getTime()} />
       ) : (
         <>
           <div>{children}</div>

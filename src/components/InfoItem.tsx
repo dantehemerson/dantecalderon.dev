@@ -27,6 +27,7 @@ const InfoItem: React.FC<InfoItem> = ({
             style={{
               animation: 'none',
               opacity: 1,
+              width: 'auto',
             }}
           >
             {children}

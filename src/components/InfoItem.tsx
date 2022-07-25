@@ -26,15 +26,7 @@ const InfoItem: React.FC<InfoItem> = ({
         <Skeleton />
       ) : (
         <div>
-          <div
-            style={{
-              animation: 'none',
-              opacity: 1,
-              width: 'auto',
-            }}
-          >
-            {children}
-          </div>
+          <div>{children}</div>
           {showPostfixImage && (
             <img
               alt="listening"

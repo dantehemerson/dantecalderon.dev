@@ -23,7 +23,14 @@ const InfoItem: React.FC<InfoItem> = ({
         <Skeleton key="from-ssr" />
       ) : (
         <>
-          <div>{children}</div>
+          <div
+            style={{
+              animation: 'none',
+              opacity: 1,
+            }}
+          >
+            {children}
+          </div>
           {showPostfixImage && (
             <img
               alt="listening"

@@ -1,14 +1,13 @@
 import React, { useEffect } from 'react'
 import { mergeAdvanced } from 'object-merge-advanced'
 import styled from 'styled-components'
-import { GLOBAL_CONTEXT_KEY } from '../../gatsby/gatsby.constants'
 import { secureTimeAgo } from '../helpers/date'
 import { getMyGithubInfo } from '../helpers/requests/githubInfo'
-import { useLocalStorage } from '../hooks/useLocalStorage'
 import InfoItem from './InfoItem'
+import { useState } from 'react'
 
 export function Info() {
-  const [info, setInfo] = useLocalStorage(GLOBAL_CONTEXT_KEY, undefined)
+  const [info, setInfo] = useState(undefined)
 
   useEffect(() => {
     const loadGithubInfo = async () => {
@@ -58,7 +57,7 @@ export function Info() {
         </InfoItem>
         <InfoItem title="🚀 Contributions" isLoading={isLoading}>
           <>
-            <b className="code">${info?.githubStatus?.contributions ?? 0}</b>&nbsp;in the last year
+            <b className="code">{info?.githubStatus?.contributions ?? 0}</b>&nbsp;in the last year
           </>
         </InfoItem>
         <InfoItem

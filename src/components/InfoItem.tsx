@@ -17,16 +17,15 @@ const InfoItem: React.FC<InfoItem> = ({
   isLoading,
   children,
 }) => {
-  const { isClient, key } = useIsClient()
-  console.log('🤫 Dante ➤ isClient', isClient, isLoading)
+  const { key } = useIsClient()
 
   return (
     <Container key={key}>
       <p className="title3">{title + ':'}</p>
-      {isLoading || !isClient ? (
-        <Skeleton key={key} />
+      {isLoading ? (
+        <Skeleton />
       ) : (
-        <div key={key}>
+        <div>
           <div
             style={{
               animation: 'none',

@@ -1,13 +1,14 @@
-import React, { useEffect } from 'react'
 import { mergeAdvanced } from 'object-merge-advanced'
+import { useEffect } from 'react'
 import styled from 'styled-components'
+import { GLOBAL_CONTEXT_KEY } from '../../gatsby/gatsby.constants'
 import { secureTimeAgo } from '../helpers/date'
 import { getMyGithubInfo } from '../helpers/requests/githubInfo'
+import { useLocalStorage } from '../hooks/useLocalStorage'
 import InfoItem from './InfoItem'
-import { useState } from 'react'
 
 export function Info() {
-  const [info, setInfo] = useState(undefined)
+  const [info, setInfo] = useLocalStorage(GLOBAL_CONTEXT_KEY, undefined)
 
   useEffect(() => {
     const loadGithubInfo = async () => {

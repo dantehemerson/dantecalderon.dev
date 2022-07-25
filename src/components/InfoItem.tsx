@@ -20,9 +20,9 @@ const InfoItem: React.FC<InfoItem> = ({
     <Container>
       <p className="title3">{title + ':'}</p>
       {isLoading ? (
-        <Skeleton key="from-ssr" />
+        <Skeleton key={title + '-from-ssr'} />
       ) : (
-        <>
+        <div key={title}>
           <div
             style={{
               animation: 'none',
@@ -40,7 +40,7 @@ const InfoItem: React.FC<InfoItem> = ({
             />
           )}
           <span className="postfix3">{postfix}</span>
-        </>
+        </div>
       )}
     </Container>
   )

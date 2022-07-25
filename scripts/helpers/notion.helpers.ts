@@ -16,16 +16,23 @@ export type NotionLocalImageData = {
   filePathFromBlog: string
 }
 
-export function getNotionImageData(imageUrl): NotionLocalImageData {
-  const directory = './content/images'
-  let name = imageUrl.split('notion-static.com/')[1].split('?')[0]
-  const ext = gatsbyUtils.getRemoteFileExtension(imageUrl)
+export function getNotionImageData(imageUrl: string, pageId: string): NotionLocalImageData {
+  const directory = `./content/images/${pageId}`
+
+  let name
+
+  if (imageUrl.includes('notion-static.com/')) {
+    name = imageUrl.split('notion-static.com/')[1].split('?')[0]
+  } else {
+    name = gatsbyUtils.createFileHash(imageUrl, 20)
+  }
+  const ext = gatsbyUtils.getRemoteFileExtension(imageUrl) || '.jpg'
   // Remove the extension from the name
   name = name.replace(ext, '')
 
   const fullFileName = createFilePath('', name, ext)
 
-  const filePathFromBlog = path.join('../images', fullFileName)
+  const filePathFromBlog = path.join(`../images/${pageId}`, fullFileName)
   const filePathFromRoot = path.join(directory, fullFileName)
 
   return {

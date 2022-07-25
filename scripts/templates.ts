@@ -6,9 +6,11 @@ author: Dante Calderón
 pathPrefix: blog
 slug: {{ slug }}
 {{#image}}
-image: {{ image }}
+image: {{{ image }}}
 {{/image}}
+{{#externalImage}}
 externalImage: {{{ externalImage }}}
+{{/externalImage}}
 date: '{{ createdAt }}'
 published: {{ published }}
 tags:

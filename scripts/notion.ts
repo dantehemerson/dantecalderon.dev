@@ -43,8 +43,7 @@ const notion = new Client({
       imageUrl = blockContent.file.url
     }
 
-    const imageData = getNotionImageData(imageUrl)
-    console.log('🤫 Dante ➤ imageParser ➤ imageData', imageData)
+    const imageData = getNotionImageData(imageUrl, pageId)
 
     await downloadImageAndGetPath(imageData)
 
@@ -67,8 +66,13 @@ const notion = new Client({
   pageInfo.pathPrefix = pageData.properties.pathPrefix.select.name || 'blog'
   pageInfo.title = pageData.properties.name.title[0].text.content
   pageInfo.filePath = `./content/blog/${pageInfo.createdAtDate}-${pageInfo.slug}.mdx`
-  pageInfo.externalImage =
-    _.get(pageData.cover, 'external.url') || _.get(pageData.cover, 'file.url')
+  const coverImage = _.get(pageData.cover, 'external.url') || _.get(pageData.cover, 'file.url')
+
+  const coverImageData = getNotionImageData(coverImage, pageId)
+  console.log('🤫 Dante ➤ ; ➤ coverImageData', coverImageData)
+  pageInfo.image = coverImageData.filePathFromBlog
+
+  await downloadImageAndGetPath(coverImageData)
 
   // console.log('🤫 Dante ➤ ; ➤ pageInfo', pageInfo)
 

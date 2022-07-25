@@ -15,138 +15,167 @@ tags:
 
 ## Chapter 1: **What is MongoDB?**
 
+
 MongoDB is a NoSQL database.
+
 
 A NoSQL Database is a database that is structured and can be accessed in a different way to SQL databases, it doesn’t use a legacy approach of related tables of data, not in rows and columns. 
 
 - The data in MongoDB DB is stored in Documents.
-
 - Documents are stored in Collections.
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 430px; border-color: red;">
 
-![MongoDB actors](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5fdfcc2b-de21-4cac-b680-7ecc09b72d35/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=2c0e6fa0fc678d00584a16fa0f46a09096bea69935fe7ce04c37910908479164&X-Amz-SignedHeaders=host&x-id=GetObject)
+![MongoDB actors](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5fdfcc2b-de21-4cac-b680-7ecc09b72d35/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051608Z&X-Amz-Expires=3600&X-Amz-Signature=d44bb8dedbd6ebf262bb2967af0c33527092fbc75e5a049669bf98a8de961d5c&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 <figcaption class="gatsby-resp-image-figcaption">MongoDB actors</figcaption>
 </div>
 
+
 ## What is a Document?
+
 
 Is a way to organize and store data as a set of **field-value** pairs.
 
+
 _Field_ - a unique identifier for a data point.
+
 
 _Value_ - data related to a given identifier.
 
+
 <div class="mdx-image-container with-border wone g1" style="max-width: 400px; border-color: red;">
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/11369bd2-12fb-43d4-8e21-448eef5c7913/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=dc9a995a5122f622d5524f98efd4302838325cf2d80879a60a0a6abefea2374f&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/11369bd2-12fb-43d4-8e21-448eef5c7913/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051608Z&X-Amz-Expires=3600&X-Amz-Signature=35b0cccb88952e40a9de97e1c5dc06d773053082796cea121aa118fb0f7025e5&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 </div>
+
 
 ### What is a Collection?
 
+
 An organized store of documents in MongoDB, usually with common fields between documents. 
+
 
 There can be many collections per-database and many documents per collection.
 
+
 <div class="mdx-image-container with-border wone g1" style="max-width: 400px; border-color: red;">
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/54866520-98f9-4978-bac4-e24b8971acc1/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=92cb257077c1bddfd093604c47a26ac59c42b67572b91fc00a746f6bcbf68bb9&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/54866520-98f9-4978-bac4-e24b8971acc1/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051608Z&X-Amz-Expires=3600&X-Amz-Signature=12bc0fda066f75012c598ecc7caca5a9f5460037f1dac8823a48062c6de5cf9d&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 </div>
+
 
 ### What is MongoDB Atlas?
 
+
 Atlas is a cloud service that provides a fully managed database built for a range-wide of applications with MongoDB at its core.
+
 
 It allows you to visualize, export, and more.
 
+
 <div class="mdx-image-container with-border wone g1" style="max-width: 500px; border-color: red;">
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/76751fdf-bd93-455b-9060-d3219325984b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=70e972a7fee97e8cca3213e3bf4b12ca4d269ef251f5674ee75f253ef523ec31&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/76751fdf-bd93-455b-9060-d3219325984b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051608Z&X-Amz-Expires=3600&X-Amz-Signature=eb31df8a5c66f9278d6e483d5e9e3201b16b368336a73fdac8a85b8fb7d5e7fd&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 </div>
 
+
 ### Cluster Deployment
+
 
 Atlas users can deploy Clusters.
 
+
 _Cluster_ - group of servers that store your data.
+
 
 These Clusters are configured in Replica Set.
 
+
 <div class="mdx-image-container with-border wone g1" style="max-width: 400px; border-color: red;">
 
-![On the left a Cluster, on the right a Replica Set](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3b397aa8-d4be-448f-a600-f7aa6f485aa4/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=2bcb4d41e5ff21c5160c941220f711bd55bf6a63a92b42eb941e3867c2b5cd12&X-Amz-SignedHeaders=host&x-id=GetObject)
+![On the left a Cluster, on the right a Replica Set](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3b397aa8-d4be-448f-a600-f7aa6f485aa4/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051608Z&X-Amz-Expires=3600&X-Amz-Signature=09df2d6c05daacbf3f139cb7102687c05df82277369e35e3da89e190f9075115&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 <figcaption class="gatsby-resp-image-figcaption">On the left a Cluster, on the right a Replica Set</figcaption>
 </div>
 
+
 _Replica Set_ - a few connected MongoDB instances that store the same data to ensure that if something happens to one of the machines the data will remain intact. Comes from the word replicate - to copy something.
+
 
 The major difference between a replica set and a cluster is:
 
 - A replica set copies the data set as a whole.
-
 - A cluster distributes the workload and stores pieces of data (shards) across multiple servers.
 
 MongoDB allows users to combine these two functionalities by creating a **sharded cluster**, where each shard is replicated to a secondary server in order to provide high data availability and redundancy.
 
+
 _Instance_ - a single machine locally or in the cloud, running certain software, in our case it is the MongoDB database.
+
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 200px; border-color: red;">
 
-![An Instance is a single machine](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f0ee2777-6484-4f0f-b97e-9b6257dea19b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=345b96b0e211146c625e1c0d4e1471719a8376e00cfea71502f791e3a83965c8&X-Amz-SignedHeaders=host&x-id=GetObject)
+![An Instance is a single machine](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f0ee2777-6484-4f0f-b97e-9b6257dea19b/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051608Z&X-Amz-Expires=3600&X-Amz-Signature=70635cfd7d4c545ca4bf7419b94dd0d08acd783772cf0979c47d6091ee348349&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 <figcaption class="gatsby-resp-image-figcaption">An Instance is a single machine</figcaption>
 </div>
 
+
 This setup ensures that if something happened to one of the machines in the Replica Set, the data will remain intact and available for use by the application by the remaining working member.
+
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 200px; border-color: red;">
 
-![One of the machines in the Replica Set is failing](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/db9140d4-ad84-4a9d-9526-0c537519df59/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=af2fe15700b1b0d32b7018c3187d850838991e3682c33092f67442c3636cbf06&X-Amz-SignedHeaders=host&x-id=GetObject)
+![One of the machines in the Replica Set is failing](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/db9140d4-ad84-4a9d-9526-0c537519df59/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051608Z&X-Amz-Expires=3600&X-Amz-Signature=7c6249a6ca3db15a590aa0d672741cd9de641f6662157b44196342ed941908af&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 <figcaption class="gatsby-resp-image-figcaption">One of the machines in the Replica Set is failing</figcaption>
 </div>
 
+
 Every time that you make a change to a document or collection, redundant copies of that data are stored within the replica set.
+
 
 It means a copy of that document will exist on every machine in the Replica Set.
 
+
 > ℹ️ To go deeper about ReplicaSet and Clusters, you can check this answer in StackOverflow: [What is the difference between a cluster and a replica set in MongoDB atlas?](https://stackoverflow.com/a/61661650/8112431)
+
 
 **Services**
 
 - Managed cluster creation
-
 - Run and maintain database deployment
-
 - Use the cloud provider of your choice
-
 - Experiment with new tools and features
 
 **Pricing**
 
+
 <div class="mdx-image-container with-border wone g1" style="max-width: 400px; border-color: red;">
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/708146c0-bea7-4c64-b356-c309ac379f06/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=bc104727ec9d27306a227b29dd98bc69b6d2f495abb7189cbf29189daf9508e3&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/708146c0-bea7-4c64-b356-c309ac379f06/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051608Z&X-Amz-Expires=3600&X-Amz-Signature=e490c005faf6518c19dcdd2156285e75810bfdad9f1b33b4c03d2d1aef6cd554&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 </div>
+
 
 **Some free tier features**
 
+
 <div class="mdx-image-container with-border wone g1" style="max-width: 450px; border-color: red;">
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4fffcd58-6ac7-4be6-88f0-bc662aa1e797/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=e56af1dc65ce600b9f52cf9641fef969dd5113053bdec90d3febf3e81868db45&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4fffcd58-6ac7-4be6-88f0-bc662aa1e797/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051608Z&X-Amz-Expires=3600&X-Amz-Signature=962454303d39892b89a8284deb1a26498f337dc328dc32bdd524b91ed506827f&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 </div>
+
 
 **Useful Links**:
 
@@ -154,76 +183,81 @@ It means a copy of that document will exist on every machine in the Replica Set.
 
 ## Chapter 2: Importing, Exporting, and Querying Data
 
+
 ### How documents are represented?
+
 
 Documents are saved as BSON which is a binary representation of JSON. 
 
+
 <div class="mdx-image-container with-border wone g1" style="max-width: 400px; border-color: red;">
 
-![A document JSON](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ee9bec4d-c467-49da-ba5c-aff9c7866511/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=587354a54e08c959a45ec8f6db86774441abc66173b14f0e67b71c52366ea04f&X-Amz-SignedHeaders=host&x-id=GetObject)
+![A document JSON](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ee9bec4d-c467-49da-ba5c-aff9c7866511/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051608Z&X-Amz-Expires=3600&X-Amz-Signature=84806578ea2d4a5545b73387e21df4b8db3c56d8730f4b10c04e1d01902b07dd&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 <figcaption class="gatsby-resp-image-figcaption">A document JSON</figcaption>
 </div>
 
+
 JSON is:
 
 - User friendly
-
 - Readable
-
 - Familiar
 
 Cons of JSON:
 
 - Text-based
-
 - Space Consuming
-
 - Limited number of data types.
 
 BSON is optimized for:
 
-- Speed 
-
-- Space 
-
+- Speed
+- Space
 - Flexibility
-
 - High performance
-
 - General-purpose focus
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 500px; border-color: red;">
 
-![JSON vs BSON](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7a678f40-4e5d-4c7c-9b1c-51ab44b522f2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=4973cb1fc598c6f84ffd2580e861a80228a9b6f5f4406ec5069922d6404dbaaa&X-Amz-SignedHeaders=host&x-id=GetObject)
+![JSON vs BSON](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7a678f40-4e5d-4c7c-9b1c-51ab44b522f2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051608Z&X-Amz-Expires=3600&X-Amz-Signature=08960911ed25b523e4cca0a6c94208fd1e54f769155c38fbafa02703f67926c6&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 <figcaption class="gatsby-resp-image-figcaption">JSON vs BSON</figcaption>
 </div>
 
+
 The additional types in BSON allow for easing communication.
+
 
 _MongoDB stores data in BSON internally and over the network, but this doesn’t mean you can’t think of MongoDB as a JSON Database._
 
+
 _Anything you can represent in JSON can also be stored in MongoDB._ 
 
+
 _We can retrieve and store data as JSON. Actually, with native SDK always use JSON, we don’t think about BSON, it’s just an internal feature that in our day-to-day we never think of._
+
 
 Optional reading:
 
 - [JSON vs BSON](https://www.mongodb.com/json-and-bson)
-
 - [Read more about BSON](http://bsonspec.org/)
 
 ### Importing and Exporting Data
 
+
 > Data is Stored in **BSON** but Viewed in **JSON  
 >BSON** is great but isn’t human-readable
 
+
 To learn more about other `mongoimport` supported formats [check out this documentation page](https://docs.mongodb.com/manual/reference/program/mongoimport/#compatibility).
+
 
 _SRV connection string_ - a specific format used to establish a connection between your application and a MongoDB instance. [Click here to learn more.](https://docs.mongodb.com/manual/reference/connection-string/#connections-dns-seedlist)
 
+
 Code used in this lecture:
+
 
 ```bash
 mongodump --uri "mongodb+srv://<your username>:<your password>@<your cluster>.mongodb.net/sample_supplies"
@@ -236,209 +270,294 @@ mongoimport --uri="mongodb+srv://<your username>:<your password>@<your cluster>.
 
 ```
 
+
 **Terminal Commands**
+
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 340px; border-color: red;">
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fa1d0097-085a-471a-b01d-ffac625056d4/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=0afa0180b81eb3d09d35eaad83fe33d2fe2285008a4691f979f6b6a42de61086&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fa1d0097-085a-471a-b01d-ffac625056d4/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051608Z&X-Amz-Expires=3600&X-Amz-Signature=e4f02863150bf28bc6a3c014cec9b8741e31645963dbb8abfca74d4c0f854efc&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 </div>
+
 
 **Exporting**
 
+
 <div class="mdx-image-container with-border wone g1" style="max-width: 420px; border-color: red;">
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9c43a443-ba49-498c-8525-0dd2734e3179/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=762e16fb853b251575a7464e0738773ab8e15716c5384921ac6492c11bb67d55&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9c43a443-ba49-498c-8525-0dd2734e3179/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051608Z&X-Amz-Expires=3600&X-Amz-Signature=e1cfd496d28b4c1b78480a58a2cd4986071c86c6a3307028c5fd3963bad84b87&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 </div>
+
 
 **Importing**
 
+
 <div class="mdx-image-container with-border wone g1" style="max-width: 420px; border-color: red;">
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c7ec50a1-e206-40b7-8ed8-05d1f1c52c67/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=6063032ae859be9db0bb2936cad3913f3748c21a3461630df9a369a76411eaac&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c7ec50a1-e206-40b7-8ed8-05d1f1c52c67/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051608Z&X-Amz-Expires=3600&X-Amz-Signature=d10004ebf2bea73de0df7d1cb5d0dd2a8f05e47fd8d73e11f8fe861ff099df3f&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 </div>
+
 
 ### Data Explorer
 
+
 `mongosh` allows you to interact with your MongoDB instance without using a Graphical User Interface
+
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 500px; border-color: red;">
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2b89faf6-cf9c-4ebf-9ba6-8633ea40da55/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=c4e1ba4a3ab7afe4c7d0198b3ddb9f78b1bc241ed9c71eb77ba06ded79834676&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2b89faf6-cf9c-4ebf-9ba6-8633ea40da55/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051608Z&X-Amz-Expires=3600&X-Amz-Signature=c828ca262c8c1eeb5f364e8f32287cee8cd35c585c3c7e02133506e57ad8353d&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 </div>
 
+
 ## **Chapter 3: Creating and Manipulating Documents**
+
 
 ### Inserting New Documents - ObjectId
 
+
 Every document must have a **unique** `_id` value.
+
 
 **Optional Reading**
 
+
 If you want to read more about the ObjectId data type, and the ObjectId() function, which generates ObjectId values, [check out this excellent documentation page](https://docs.mongodb.com/manual/reference/method/ObjectId/index.html#objectid).
+
 
 Every document can have a different structure, nothing prevents you from doing this. Either is a good practice to know how to organize your data.
 
+
 The default value of `_id` field is `ObjectId()` unless otherwise is specified.
+
 
 Idential documents can exist in the same collection as long as their `_id` values are different.
 
+
 MongoDB has schema validation functionality allow you to enforce document structure.
+
 
 ### Inserting New Documents - insert() order
 
+
 Insert in order, which means if something fails, it will fail and will not continue with the next item.
+
 
 ```bash
 db.inspections.insert([{ "_id": 1, "test": 1 },{ "_id": 1, "test": 2 },{ "_id": 3, "test": 3 }])
 ```
 
+
 We can avoid this behaviour by adding the option `{ ordered: false` 
+
 
 ```bash
 db.inspections.insert([{ "_id": 1, "test": 1 },{ "_id": 1, "test": 2 }, { "_id": 3, "test": 3 }], { ordered: false } )
 ```
 
+
 ### Updating Documents - mongo shell
+
 
 <div class="mdx-image-container with-border wone g1" style="max-width: 500px; border-color: red;">
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0c1fceff-ff76-4e68-929d-0973eb055e1a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=7da05c37f01da1b8a03222ac4556fe7f76c5a3715101171ce4c9c666e5fe1931&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0c1fceff-ff76-4e68-929d-0973eb055e1a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=1409fbedb7c8990039ec8c345ba1ca19fec92f67944464439ce2ae1b4c4c334f&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 </div>
+
 
 ### Deleting Documents and Collections
 
+
 <div class="mdx-image-container with-border wone g1" style="max-width: 500px; border-color: red;">
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/05d7e53a-a913-40c0-8258-b43d3ccacc0a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=de9c37e273ad1c0ece6042e8d87e61c186da39301b80ce49410123d499ee8510&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/05d7e53a-a913-40c0-8258-b43d3ccacc0a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=671ef105a71ccdd742e19fa4d078709d986ad1f511878472b4ddb8862b8c8935&X-Amz-SignedHeaders=host&x-id=GetObject)
 
 
 </div>
 
+
 We can delete a collection by doing:
+
 
 ```bash
 db.collection_name.drop()
 ```
 
+
 When we delete all collections from a database, the database will be removed as well.
+
 
 **Update operators**
 
+
 Example: `$inc` `$set` `$unset`
+
 
 ## **Chapter 4: Advanced CRUD Operations**
 
+
 ### Query Operators - Comparison
+
 
 Query operators provide additional ways to locate data within the database
 
+
 Comparison operators specifically allow us to find data within a certain range.
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/32d2067b-e944-4b6e-80a0-12da4c6cb05c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=aab66ce63266904a5d3a81b6359214b0880365c310939db408d72d3d835da6e3&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/32d2067b-e944-4b6e-80a0-12da4c6cb05c/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=388841a66862e7b983122a99feab188ff008c8cb26adb0e5991cf54653689b37&X-Amz-SignedHeaders=host&x-id=GetObject)
+
 
 If a comparison operator is not specified, `$eq` is used as default operator.
 
+
 Check the list of comparison operators [here](https://docs.mongodb.com/manual/reference/operator/query/#comparison).
+
 
 ### [Query Operators - Logic ](https://docs.mongodb.com/manual/reference/operator/query-logical/)
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/00e2c5ac-8da2-4d21-89e5-619d5414fa94/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=d8274b73426aca88913a6a4528bf2439f64acfd6e5d5d60b5510f9fcde13f2e4&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/00e2c5ac-8da2-4d21-89e5-619d5414fa94/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=ae6b65086d237c61450537581f3bd02e0b870d6fcee72ece5dfa05d4ccdc3111&X-Amz-SignedHeaders=host&x-id=GetObject)
+
 
 Structure:
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fc42d20d-91dc-4975-9452-7fa559246c70/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=3b7427b030eb0863763ec372f531e122ee751a2a49d0c89bf8d6306f11e52baf&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fc42d20d-91dc-4975-9452-7fa559246c70/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=68e1f4da60e394fcdfbe4e4f64d2934eed002b5b09e106176e4056cac613bcc4&X-Amz-SignedHeaders=host&x-id=GetObject)
+
 
 **And**
 
+
 And is implicit:
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/27d5fae1-c585-464c-a316-f25397be7611/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=4c7023c1f9d9c837d6475453b8c00d5f71c3215fce95f54572dccc835ce4e7bf&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/27d5fae1-c585-464c-a316-f25397be7611/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=927f46389d3cac5f9ceb03f071b00350a7b136c9defb02f415c195c48fea3958&X-Amz-SignedHeaders=host&x-id=GetObject)
+
 
 Here, and is implicit.
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5dfb2f1d-4207-40a7-a31f-e9de1a57fcb2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=c0c25655c844e3369f868ed7e30517ed15df5cdc4a704c7732cb93136ad89b87&X-Amz-SignedHeaders=host&x-id=GetObject)
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/04fb5a2a-d6ed-4ca3-a163-65a10745be38/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=601bc48fea1b791276dac5c1d6a767bc9823e43b819c8fbb82a67505391b4e02&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5dfb2f1d-4207-40a7-a31f-e9de1a57fcb2/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=65b9af5c8c57c7f0e98de1b345556d410fb4dd8831e6d241bd97e303cf605518&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/04fb5a2a-d6ed-4ca3-a163-65a10745be38/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=f9eec567f62ea96346d4a2b6a1a98820f2723ef4de709a2482c2664ac2387241&X-Amz-SignedHeaders=host&x-id=GetObject)
+
 
 ### Expressive Query Operator
 
+
 `$` denotes the use of an operator
+
 
 `$` addresses the field value
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/34d4d2c6-1f2c-4f91-a4b0-d09c5d68abea/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=157e031cf8556c9e01b57bf26e8856b91460fd7303dcb6d973f3e71067af9912&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/34d4d2c6-1f2c-4f91-a4b0-d09c5d68abea/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=839d86dd28ba97bc5e904144c19557878437fcdee7aa4cc2408a9e3607147346&X-Amz-SignedHeaders=host&x-id=GetObject)
+
 
 Class: [https://university.mongodb.com/mercury/M001/2022_January_18/chapter/Chapter_4_Advanced_CRUD_Operations/lesson/5f36f78304e9ffa9eb9deb79/lecture](https://university.mongodb.com/mercury/M001/2022_January_18/chapter/Chapter_4_Advanced_CRUD_Operations/lesson/5f36f78304e9ffa9eb9deb79/lecture)
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/52efbfef-e1ad-4b19-bf13-1f14077cb9b7/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=d4373b5314261b1383fa54a40c32fefeb2c012d062d5d6e002781262d0ac6017&X-Amz-SignedHeaders=host&x-id=GetObject)
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4ea8c273-ff64-4b25-8e4e-58d3232704ce/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=805f370268e3e1d042d7a3bf0fcdabfb3b89f8607d5e481954a44a5382b6a4f7&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/52efbfef-e1ad-4b19-bf13-1f14077cb9b7/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=24a847f0bad0a985b7f9c0ed798d599ceaccabb10ef1d699e7a218aad880831d&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4ea8c273-ff64-4b25-8e4e-58d3232704ce/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=8b5e7dbf81ac2f2069ab1d744f22c0db34ac1cc0fbe6f15f53ed6e06c7b392c5&X-Amz-SignedHeaders=host&x-id=GetObject)
+
 
 ### Array Operators
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ed981005-a079-46ec-88d0-46acb3972a2d/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=c3e0d208e59533cf86d4e4a19ba53db9c428d6ba3a70404010ff1432da906e5e&X-Amz-SignedHeaders=host&x-id=GetObject)
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/73c7686a-fbdc-43fc-a276-22762aca59d3/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=08abfda23be990a8247823d94111678ef24406325dd6a73c45be2b0a94b3c690&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ed981005-a079-46ec-88d0-46acb3972a2d/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=fef4fd058b3ed0a33510b6e96e2afadc4eb34d0dcd409d4b8785d2aa0f93ff4f&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/73c7686a-fbdc-43fc-a276-22762aca59d3/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=8f7f295c0a34a8b7c6d67a2d385fe205d96ea37781844fbe9f9bcfe672422408&X-Amz-SignedHeaders=host&x-id=GetObject)
+
 
 ### Array Operators and Projection
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/41b874cd-65b4-4ddd-af51-60e9133916b4/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=3fc87726c5ee2bba1c1c86cb2fc37a2f23b745643ce69100744bdd1d36a1bcdb&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/41b874cd-65b4-4ddd-af51-60e9133916b4/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=2b607019a3433c53b7482f257bb8f010ffb471921d13dcb5bef2311b17ed6869&X-Amz-SignedHeaders=host&x-id=GetObject)
+
 
 ## **Chapter 5: Indexing and Aggregation Pipeline**
 
+
 Another way to create queries. 
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/36460ebd-ae69-4795-ace5-d64c8c0ec909/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=bf9b9436bb3c4cf1681edc93d603677b91b545826ec474986c35ad6c32d5b73c&X-Amz-SignedHeaders=host&x-id=GetObject)
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d6be69a9-4070-4c2a-8814-dc26b422cfc5/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=4ed3728ab546f2003787dbfbd1021c852e41d90b99d4a8bd5fd8deb13ee9ab03&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/36460ebd-ae69-4795-ace5-d64c8c0ec909/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=c3b796843e72f81e20dd46da59c1a80900d1384acc0dba1a94bdee27728718cd&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d6be69a9-4070-4c2a-8814-dc26b422cfc5/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=0ec2b683b709500c4a90c585941fb23c22f58eaf98cb8b26198012071577f3d7&X-Amz-SignedHeaders=host&x-id=GetObject)
+
 
 Get into the bus at 1st St. then
 
+
 ### $group
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/71d2fa58-ee01-4025-8c81-87c13934911d/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=0eff4733636a8778f8ebb00f227ad77403697b1c0c55eba0f40346bc65546ee4&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/71d2fa58-ee01-4025-8c81-87c13934911d/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=310e8e378d47d0996de0e7a58017637fbe7f38d7e9b240a490e371d3eda930b3&X-Amz-SignedHeaders=host&x-id=GetObject)
+
 
 Recap:
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1051b40e-354f-467b-9060-49126727f481/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=d5bc1d99a7d1ab1c8270be63652e35bf4a33a5ecf5ded02343a2a015323e1fee&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1051b40e-354f-467b-9060-49126727f481/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=355446966b49fa5711201e42d22afb8b8293d87cba70469eb689f67783e4184f&X-Amz-SignedHeaders=host&x-id=GetObject)
+
 
 ### sort() and limit()
 
+
 `sort` and `limit` are cursor methods. 
+
 
 A cursor method is not applied to the data in the database, instead applied to the results in the cursor after `find` command. 
 
+
 You can sort in increasing or decreasing order:
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6b4c9f31-1260-4ffc-9950-ed8efc22c77f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=bf44416bafeb4d1bd3df93dedb0377caf0d8b2cb5d5a68df8bbdfa3717a75e0b&X-Amz-SignedHeaders=host&x-id=GetObject)
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/92f82404-ada7-4ebc-80e1-a7298b9d9dc0/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=46fc2e4b86297f14070044c9326c96002e2880e8d9ac40a05a82f4d956ec99ad&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/6b4c9f31-1260-4ffc-9950-ed8efc22c77f/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=eeb54abb75f21cd0e81cfb0807ee2df34ce7fc1e08ec3c2b9f12fde66273ce55&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/92f82404-ada7-4ebc-80e1-a7298b9d9dc0/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=68538fa7bdaabb323cb5db28aca7c3183de97dd9343d5afc7ff194a6a9a136dd&X-Amz-SignedHeaders=host&x-id=GetObject)
+
 
 ### Introduction to Indexes
 
+
 ### Introduction to Data Modeling
+
 
 _Data modeling_ - a way to organize fields in a document to support your application performance and querying capabilities.
 
+
 To learn more about data modeling with MongoDB, take our [Data Modeling Course](https://university.mongodb.com/courses/M320/about)! Check out our [documentation](https://docs.mongodb.com/manual/core/data-modeling-introduction/) and [blog](https://www.mongodb.com/blog/post/building-with-patterns-a-summary).
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4f9ed074-d03b-4c57-95d0-05b16e8b1d8e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=15614905dfb58bcb7ba7c921b6bf6f08a4cd6a018e6bbe9082cd9f482a3948b2&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4f9ed074-d03b-4c57-95d0-05b16e8b1d8e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=f64103760f985df9f6ed5ce64f14b9436ce26fc9655a7e132ba08a535df86e80&X-Amz-SignedHeaders=host&x-id=GetObject)
+
 
 ### Upsert - Update or Insert?
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/01fbc0d6-4986-4891-9f51-e3ddbf48bb21/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=dd9636ae5db1a6614161f31b7cee341f7e99d5e15f9966d8a5986040ff4057ac&X-Amz-SignedHeaders=host&x-id=GetObject)
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/57756f8c-2f8c-4151-b56d-b09898754855/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=76a06fdf74af971c09c85cb4f8d8b5cf50b4069852111e73ed53141a07e8d705&X-Amz-SignedHeaders=host&x-id=GetObject)
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/01fbc0d6-4986-4891-9f51-e3ddbf48bb21/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=0f4970d2fd28b833f5ab505317eb21a98ba5be91e9707967b9d019435656c244&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/57756f8c-2f8c-4151-b56d-b09898754855/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=586df8f70e32ff9f43270e72b9442da7c8007b4898af6e086e8f4394df23e288&X-Amz-SignedHeaders=host&x-id=GetObject)
+
 
 ```bash
 Aggregation Framework
@@ -466,35 +585,43 @@ db.trips.find({"birth year": 1989})
 db.trips.find({"start station id": 476}).sort("birth year": 1)
 ```
 
-![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/89c61be0-e1e2-44c2-8f6b-43cad666ab2d/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T035458Z&X-Amz-Expires=3600&X-Amz-Signature=fa01bbf665f3f303c555edf3d2c8e11e64fd4d4d8c9c8a2cd90fdad924c4c878&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/89c61be0-e1e2-44c2-8f6b-43cad666ab2d/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220725%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220725T051609Z&X-Amz-Expires=3600&X-Amz-Signature=003c0707d95d54618f8ca8c4b9e75fd33510f81aa1d147a427a4cfa138b3b51c&X-Amz-SignedHeaders=host&x-id=GetObject)
+
 
 [Documentation about the Validation tab in Compass](https://docs.mongodb.com/compass/current/validation/).
 
+
 [Schema Validation with MongoDB](https://docs.mongodb.com/manual/core/schema-validation/) Documentation.
+
 
 [JSON Schema Validation - Locking down your model the smart way](https://www.mongodb.com/blog/post/json-schema-validation--locking-down-your-model-the-smart-way).
 
+
 [JSON Schema Validation - Checking Your Arrays](https://www.mongodb.com/blog/post/json-schema-validation--checking-your-arrays)
+
 
 # Why MongoDB? (optional)
 
+
 At this point you have learned enough to start having a meaningful conversation about why developers, DBAs, and companies choose MongoDB as their database.
+
 
 This can also help you decide whether MongoDB is the right choice for you.
 
+
 To help you learn more about specific use cases, we put together case studies and articles about some of our customers and community members.
 
+
 We also added a link to the MongoDB Developer Hub and Community Forums where you can ask questions, learn new things, and connect with others who are diving into MongoDB content and products.
+
 
 Take a look and feel free to browse for more information.
 
 - [MongoDB Developer Hub](https://developer.mongodb.com/)
-
 - [MongoDB Community Forums](https://developer.mongodb.com/community/forums/)
-
 - [Case study: Bosch Leads Charge into Internet of Things](https://www.mongodb.com/customers/bosch)
-
 - [Case study: Forbes](https://www.mongodb.com/blog/post/forbes-cloud-migration-helps-worlds-biggest-media-brand-continue-standard-digital-innovation)
-
 - [Case study: SEGA](https://www.mongodb.com/blog/post/sega-hardlight-migrates-to-mongodb-atlas-simplify-ops-improve-experience-mobile-gamers)
+- [How the Financial Sector Uses MongoDB](https://www.mongodb.com/industries/financial-services)
 

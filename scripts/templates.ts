@@ -1,4 +1,4 @@
-const markdownHeaderTemplate = `---
+export const markdownHeaderTemplate = `---
 model: post
 title: {{ title }}
 description: {{ description }}
@@ -18,5 +18,3 @@ tags:
 ---
 {{{ content }}}
 `
-
-module.exports.markdownHeaderTemplate = markdownHeaderTemplate

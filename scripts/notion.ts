@@ -1,13 +1,15 @@
-require('dotenv').config({
+import dotenv from 'dotenv'
+
+dotenv.config({
   path: `${process.cwd()}/.env.development`,
 })
 
-const _ = require('lodash')
-const { Client } = require('@notionhq/client')
-const Mustache = require('mustache')
-const { NotionToMarkdown } = require('@dantehemerson2/notion-to-md')
-const fs = require('fs')
-const { markdownHeaderTemplate } = require('./templates')
+import _ from 'lodash'
+import { Client } from '@notionhq/client'
+import Mustache from 'mustache'
+import { NotionToMarkdown } from '@dantehemerson/notion-to-md'
+import fs from 'fs'
+import { markdownHeaderTemplate } from './templates'
 
 const { NOTION_SECRET } = process.env
 
@@ -17,18 +19,21 @@ const notion = new Client({
   auth: NOTION_SECRET,
 })
 
+// function image
+
 const n2m = new NotionToMarkdown({ notionClient: notion })
 
 ;(async () => {
   const pageId = process.argv[2]
-  const pageData = await notion.pages.retrieve({
+  const pageData: any = await notion.pages.retrieve({
     page_id: pageId,
   })
-  console.log('🤫 Dante ➤ ; ➤ pageData', pageData)
+  console.log('🤫 Dante ➤ ; ➤ pageData')
 
-  const pageInfo = {}
+  const pageInfo: any = {}
 
   const mdblocks = await n2m.pageToMarkdown(pageId, 100)
+  console.log('🤫 Dante ➤ ; ➤ mdblocks', mdblocks)
   pageInfo.content = n2m.toMarkdownString(mdblocks)
 
   pageInfo.createdAtDate = pageData.created_time.slice(0, 10)

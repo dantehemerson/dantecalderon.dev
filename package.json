@@ -12,7 +12,7 @@
     "start": "gatsby develop",
     "start:dev": "npm run start",
     "create": "node ./scripts/cms.js --interactive",
-    "notion": "node ./scripts/notion.js",
+    "notion": "ts-node --project tsconfig.node.json ./scripts/notion.ts",
     "gatsby": "gatsby",
     "format": "prettier --config .prettierrc --write 'src/**/*.{ts,tsx}'",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -80,7 +80,7 @@
     "typography": "^0.16.21"
   },
   "devDependencies": {
-    "@dantehemerson2/notion-to-md": "^2.2.2",
+    "@dantehemerson/notion-to-md": "^2.5.3",
     "@notionhq/client": "^0.4.13",
     "@types/node": "^16.11.45",
     "@types/react": "^18.0.15",
@@ -90,6 +90,7 @@
     "mustache": "^4.2.0",
     "prettier": "^2.7.1",
     "slugify": "^1.6.5",
+    "ts-node": "^10.9.1",
     "typescript": "^4.7.4"
   }
 }

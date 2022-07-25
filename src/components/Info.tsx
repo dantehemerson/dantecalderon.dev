@@ -15,11 +15,11 @@ export function Info() {
       try {
         const newInfo = await getMyGithubInfo()
         console.log('🤫 Dante ➤ loadGithubInfo ➤ newInfo', newInfo)
-        setInfo(prevInfo =>
+        setInfo(prevInfo => {
           mergeAdvanced(prevInfo, newInfo, {
             mergeBoolsUsingOrNotAnd: newInfo?.listening?.playing ?? false,
           })
-        )
+        })
       } catch (error) {
         console.error('Error loading info', error)
       }

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
+import { useIsClient } from '../hooks/useClient'
 
 type InfoItem = {
   title: string
@@ -16,13 +17,15 @@ const InfoItem: React.FC<InfoItem> = ({
   isLoading,
   children,
 }) => {
+  const { isClient, key } = useIsClient()
+
   return (
-    <Container>
+    <Container key={key}>
       <p className="title3">{title + ':'}</p>
-      {isLoading ? (
-        <Skeleton key={new Date().getTime()} />
+      {isLoading || !isClient ? (
+        <Skeleton key={key} />
       ) : (
-        <div key={title}>
+        <div key={key}>
           <div
             style={{
               animation: 'none',

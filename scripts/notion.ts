@@ -34,9 +34,12 @@ async function imageParser(block) {
     imageUrl = blockContent.file.url
   }
 
-  console.log('🤫 Dante ➤ imageParser ➤ image_url', getNotionImageData(imageUrl))
+  const imageData = getNotionImageData(imageUrl)
+  // console.log('🤫 Dante ➤ imageParser ➤ imageData', imageData)
 
-  return md.image(image_caption_plain, imageUrl)
+  await downloadImageAndGetPath(imageData)
+
+  return md.image(image_caption_plain, imageData.filePathFromBlog)
 }
 
 const n2m = new NotionToMarkdown({ notionClient: notion })

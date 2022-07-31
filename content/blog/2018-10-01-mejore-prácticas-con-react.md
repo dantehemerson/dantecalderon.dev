@@ -169,7 +169,15 @@ Por ejemplo:
 quedaría mejor como:
 
 ```jsx
-<input name='name' value={name} className='ContactForm__input' placeholder='Nombre' type='text' required onChange={this.handleChange} />
+<input 
+  name='name' 
+  value={name} 
+  className='ContactForm__input' 
+  placeholder='Nombre' 
+  type='text' 
+  required 
+  onChange={this.handleChange} 
+  />
 ```
 
 ### 4.- Javascript dentro de JSX

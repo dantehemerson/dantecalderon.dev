@@ -221,7 +221,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .gatsby-highlight-code-line {
-    background-color: #474747;
+    background-color: #ededed;
     display: block;
     z-index: 4;
     position: relative;
@@ -251,10 +251,11 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 12px;
   }
   .gatsby-highlight {
-    background: #2e2e2e;
+    background: #fafafa;
+    border: 1px solid #cbcbcb;
     border-radius: 0px;
     ${media.md`
-        border-radius: 5px;
+        border-radius: 4px;
       `}
     padding: 0.6em 0.7em;
     overflow: auto;
@@ -272,7 +273,7 @@ export const GlobalStyles = createGlobalStyle`
     background: #f2a29d;
   }
   .gatsby-highlight::-webkit-scrollbar-track {
-    background: #717171;
+    background: #d9d9d9a8;
   }
 
   .icon_svg {

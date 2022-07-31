@@ -1,0 +1,32 @@
+---
+model: post
+title: How to avoid errors using window on React.js SSR
+description: How to avoid
+author: Dante Calderón
+pathPrefix: blog
+slug: how-to-avoid-errors-using-windows-on-react-ssr
+image: ../images/bec050c11cb94c83a8117c3f6b54ceb7/a6eb4661-14ef-42f3-9ccc-58cc9432da77-Screenshot-20220730192845-1897x1033-45a4c04f.png
+date: '2022-07-31T00:01:00.000Z'
+published: false
+tags:
+  - reactjs
+  - how-to
+---
+
+Sometimes when you are developing your client components on SSR components you are developing you get an error similar to this:
+
+
+```basic
+ReferenceError: window is not defined
+```
+
+
+This is a typical error when you try to use the `window` global variable on SSR code, that is because `window` only exist on the **browser**, not in the server. 
+
+
+### Solution:
+
+
+The solution is very simple.
+
+

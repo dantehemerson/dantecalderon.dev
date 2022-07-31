@@ -59,12 +59,12 @@ const notion = new Client({
 
   pageInfo.createdAtDate = pageData.created_time.slice(0, 10)
   pageInfo.createdAt = pageData.created_time
-  pageInfo.slug = pageData.properties.slug.rich_text[0].text.content
-  pageInfo.tags = pageData.properties.tags.multi_select.map(tag => tag.name)
-  pageInfo.published = Boolean(pageData.properties.published.checkbox)
-  pageInfo.description = pageData.properties.description.rich_text[0].text.content
-  pageInfo.pathPrefix = pageData.properties.pathPrefix.select.name || 'blog'
-  pageInfo.title = pageData.properties.name.title[0].text.content
+  pageInfo.slug = pageData.properties.slug?.rich_text?.[0]?.text?.content
+  pageInfo.tags = pageData.properties.tags?.multi_select?.map(tag => tag?.name) || []
+  pageInfo.published = Boolean(pageData.properties?.published?.checkbox)
+  pageInfo.description = pageData.properties.description?.rich_text?.[0]?.text?.content
+  pageInfo.pathPrefix = pageData.properties.pathPrefix?.select?.name || 'blog'
+  pageInfo.title = pageData.properties.name?.title?.[0]?.text?.content
   pageInfo.filePath = `./content/blog/${pageInfo.createdAtDate}-${pageInfo.slug}.mdx`
   const coverImage = _.get(pageData.cover, 'external.url') || _.get(pageData.cover, 'file.url')
 

@@ -63,8 +63,8 @@ export function Info() {
           isLoading={isLoading}
           postfix={secureTimeAgo(info?.latestCommit?.createdAt)}
         >
-          <a href="${info?.latestCommit?.url}" target="_blank">
-            ${info?.latestCommit?.message}
+          <a href={info?.latestCommit?.url} target="_blank">
+            {info?.latestCommit?.message}
           </a>
         </InfoItem>
         <InfoItem
@@ -73,13 +73,13 @@ export function Info() {
           showPostfixImage={info?.listening?.playing}
           postfix={secureTimeAgo(info?.listening?.lastPlayingDate)}
         >
-          <a href="${info?.listening?.url}" target="_blank">
-            ${info?.listening?.name}
+          <a href={info?.listening?.url} target="_blank">
+            {info?.listening?.name}
           </a>
         </InfoItem>
         <InfoItem title={'📚 Reading'} isLoading={isLoading}>
-          <a href="${info?.reading?.profileUrl}" target="_blank">
-            ${info?.reading?.title}
+          <a href={info?.reading?.profileUrl} target="_blank">
+            {info?.reading?.title}
           </a>
         </InfoItem>
       </Container>

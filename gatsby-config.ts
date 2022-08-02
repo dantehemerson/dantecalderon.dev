@@ -181,18 +181,19 @@ const config: GatsbyConfig = {
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
         gtagConfig: {
-          // anonymize_ip: true,
-          cookie_domain: 'dantecalderon.dev',
-          cookie_name: 'gaDanteCalderon',
-          cookie_expires: 86400,
-          sample_rate: 5,
+          // cookie_domain: 'dantecalderon.dev',
+          // cookie_name: 'gaDanteCalderon',
+          cookie_expires: 0,
+          // sample_rate: 5,
           anonymize_ip: true,
-          site_speed_sample_rate: 10,
+          send_page_view: true, // default appears to be false.
+
+          // site_speed_sample_rate: 10,
         },
         // This object is used for configuration specific to this plugin
         pluginConfig: {
           // Puts tracking script in the head instead of the body
-          head: true,
+          head: false,
           // Setting this parameter is also optional
           respectDNT: true,
           // anonymize_ip: true,

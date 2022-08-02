@@ -186,7 +186,8 @@ const config: GatsbyConfig = {
           cookie_name: 'gaDanteCalderon',
           cookie_expires: 86400,
           sample_rate: 5,
-          siteSpeed_sample_rate: 10,
+          anonymize_ip: true,
+          site_speed_sample_rate: 10,
         },
         // This object is used for configuration specific to this plugin
         pluginConfig: {
@@ -194,6 +195,7 @@ const config: GatsbyConfig = {
           head: true,
           // Setting this parameter is also optional
           respectDNT: true,
+          // anonymize_ip: true,
           // Defaults to https://www.googletagmanager.com
           // origin: "YOUR_SELF_HOSTED_ORIGIN",
         },

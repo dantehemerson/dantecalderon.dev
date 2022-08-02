@@ -172,15 +172,31 @@ const config: GatsbyConfig = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: 'UA-121858272-1',
-        head: true,
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
-        cookieDomain: 'dantecalderon.dev',
-        cookieName: 'gaDanteCalderon',
-        cookieExpires: 86400,
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          'UA-121858272-1', // Google Analytics / GA
+        ],
+        // This object gets passed directly to the gtag config command
+        // This config will be shared across all trackingIds
+        gtagConfig: {
+          // anonymize_ip: true,
+          cookie_domain: 'dantecalderon.dev',
+          cookie_name: 'gaDanteCalderon',
+          cookie_expires: 86400,
+          sample_rate: 5,
+          siteSpeed_sample_rate: 10,
+        },
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+          // Setting this parameter is also optional
+          respectDNT: true,
+          // Defaults to https://www.googletagmanager.com
+          // origin: "YOUR_SELF_HOSTED_ORIGIN",
+        },
       },
     },
     {

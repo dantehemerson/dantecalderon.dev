@@ -175,7 +175,7 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-121858272-1',
-        head: false,
+        head: true,
         sampleRate: 5,
         siteSpeedSampleRate: 10,
         cookieDomain: 'dantecalderon.dev',

@@ -13,7 +13,7 @@ const PostsWrapper = styled.div`
   margin: 0 auto 35px;
 `
 
-const BlogWithTags = ({ data }) => {
+const BlogWithTags = ({ data, location }) => {
   const tag = data.tag
   const tags = data.allTag.nodes || []
   const title = `${tag.title} - Blog`

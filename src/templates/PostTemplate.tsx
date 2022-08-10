@@ -5,7 +5,6 @@ import Markdown from '../components/Markdown'
 import PostHeader from '../components/PostHeader'
 import { Share } from '../components/Share'
 import { TagsSection } from '../components/TagsSection'
-import { generateTagInfo } from '../helpers/tags.helpers'
 import Layout from './TemplateLayout'
 
 export const PostContent = ({ title, image, externalImage, date, timeToRead, avatar, content }) => (
@@ -26,8 +25,8 @@ const PostTemplate = props => {
   const {
     timeToRead,
     body,
-    fields: { slug },
-    frontmatter: { title, image, externalImage, date, description, tags },
+    fields: { slug, tags },
+    frontmatter: { title, image, externalImage, date, description },
   } = props.data.mdx
 
   return (
@@ -48,7 +47,7 @@ const PostTemplate = props => {
         avatar={props.data.avatar.gatsbyImageData}
         content={body}
       />
-      <TagsSection tags={tags.map(tag => ({ node: generateTagInfo(tag) }))} />
+      <TagsSection tags={tags} />
       <Share title={title} path={slug} />
       {/* <SubscribeForm /> */}
     </Layout>
@@ -66,6 +65,7 @@ export const pageQuery = graphql`
         siteUrl
       }
     }
+
     mdx(fields: { slug: { eq: $slug } }) {
       id
       body
@@ -83,10 +83,17 @@ export const pageQuery = graphql`
         }
         model
         style
-        tags
       }
       fields {
         slug
+        tags {
+          id
+          slug
+          title
+          color
+          textColor
+          postCount
+        }
       }
     }
   }

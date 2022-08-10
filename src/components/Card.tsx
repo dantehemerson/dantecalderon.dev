@@ -72,23 +72,37 @@ const Summary = styled.p`
   `};
 `
 
-export function Card(props) {
+export type CardProps = {
+  data: {
+    path: string
+    title: string
+    date: string
+    thumbnail: any
+    externalThumbnail: string
+    excerpt: string
+    image: any
+    tags: any
+    slug: string
+  }
+}
+
+export function Card({ data }: CardProps) {
   return (
-    <Container to={props.data.path}>
+    <Container to={data.path}>
       <>
         <ImageWrapper>
-          {props.data.thumbnail ? (
-            <GatsbyImage alt={`${props.data.title} image`} image={props.data.thumbnail} />
+          {data.thumbnail ? (
+            <GatsbyImage alt={`${data.title} image`} image={data.thumbnail} />
           ) : (
-            <img src={props.data.externalThumbnail} />
+            <img src={data.externalThumbnail} />
           )}
         </ImageWrapper>
         <Info>
-          <Title>{props.data.title}</Title>
-          <Tags items={props.data.tags} />
-          <Summary>{props.data.excerpt}</Summary>
+          <Title>{data.title}</Title>
+          <Tags tags={data.tags} />
+          <Summary>{data.excerpt}</Summary>
           <Time>
-            <time dateTime={props.data.date}>{props.data.date}</time>
+            <time dateTime={data.date}>{data.date}</time>
           </Time>
         </Info>
       </>

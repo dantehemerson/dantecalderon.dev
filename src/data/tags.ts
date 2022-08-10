@@ -1,6 +1,7 @@
 import tagsJSON from '../../content/tags.json'
 
 export interface ITag {
+  id?: string
   title: string
   slug: string
   color?: string

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { generateTagInfo } from '../helpers/tags.helpers'
 import { navigate } from 'gatsby'
+import { ITag } from '../data/tags'
 
 const Container = styled('div')`
   width: 100%;
@@ -44,7 +44,11 @@ const Item = styled('li')`
   }
 `
 
-export function Tags({ items = [] }: { items: string[] }) {
+export type TagsProps = {
+  tags: ITag[]
+}
+
+export function Tags({ tags = [] }: TagsProps) {
   const handleClickTag = (event, to: string) => {
     event.preventDefault()
     navigate(to)
@@ -53,19 +57,18 @@ export function Tags({ items = [] }: { items: string[] }) {
   return (
     <Container>
       <List>
-        {items.map(item => {
-          const tagData = generateTagInfo(item)
+        {tags.map(tag => {
           return (
-            <Item key={tagData.slug}>
+            <Item key={tag.id || tag.slug}>
               <p
                 className="tagLink"
-                onClick={event => handleClickTag(event, `/blog/tags/${tagData.slug}`)}
+                onClick={event => handleClickTag(event, `/blog/tags/${tag.slug}`)}
                 style={{
-                  backgroundColor: tagData.color,
-                  color: tagData.textColor,
+                  backgroundColor: tag.color,
+                  color: tag.textColor,
                 }}
               >
-                {tagData.title}
+                {tag.title}
               </p>
             </Item>
           )

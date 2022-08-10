@@ -4,9 +4,10 @@ import { Link } from 'gatsby'
 import { media } from '../styles'
 import { Wrapper } from './Wrapper'
 import { getTagInfoSelected } from '../helpers/tags.helpers'
+import { ITag } from '../data/tags'
 
 export type TagsSectionProps = {
-  tags: any[]
+  tags: ITag[]
   title?: string
   selectedSlug?: string
 }
@@ -20,11 +21,10 @@ export function TagsSection({ tags, title = 'TAGS: ', selectedSlug }: TagsSectio
       {tags.map(tag => {
         return (
           <Tag
-            // TODO: Use id instead of slug
-            key={tag.node.slug}
-            to={`/blog/tags/${tag.node.slug}`}
+            key={tag.slug}
+            to={`/blog/tags/${tag.slug}`}
             style={
-              selectedSlug === tag.node.slug
+              selectedSlug === tag.slug
                 ? {
                     backgroundColor: selectedInfo.color,
                     color: selectedInfo.textColor,
@@ -33,12 +33,11 @@ export function TagsSection({ tags, title = 'TAGS: ', selectedSlug }: TagsSectio
                 : {}
             }
           >
-            {tag.node.title}
-            {tag.node.postCount ? ` (${tag.node.postCount})` : ''}
+            {tag.title}
+            {tag.postCount ? ` (${tag.postCount})` : ''}
           </Tag>
         )
       })}
-
       <hr
         style={{
           marginTop: '23px',

@@ -15,8 +15,8 @@ const PostsWrapper = styled.div`
 `
 
 function Blog(props) {
-  const posts = props.data.allMdx.edges || []
-  const tags = props.data.allTag.edges || []
+  const tags = props.data.allTag.nodes
+  const posts = props.data.allMdx.nodes
   const siteUrl = props.data.site.siteMetadata.siteUrl
 
   const { currentPage, numPages, hasNextPage, hasPrevPage } = props.pageContext
@@ -25,20 +25,22 @@ function Blog(props) {
     <Layout location={props.location} active={pages.blog}>
       <div className="Blog" style={{ marginTop: 90 }}>
         <SEO title="Blog" url={`${siteUrl}/blog`} />
-        <TagsSection tags={tags} title="Popular Tags:" />
+        <TagsSection tags={tags} title="Tags:" />
         <PostsWrapper>
-          {posts.map(({ node }, index) => {
+          {posts.map((node, index) => {
             return (
               <Card
-                data={{
-                  title: node.frontmatter.title,
-                  thumbnail: node.frontmatter.image?.childImageSharp?.gatsbyImageData,
-                  externalThumbnail: node.frontmatter.externalImage,
-                  excerpt: node.frontmatter.description || node.excerpt,
-                  date: node.frontmatter.date,
-                  tags: node.frontmatter.tags?.slice(0, 4),
-                  path: `/${node.fields.slug}`,
-                }}
+                data={
+                  {
+                    title: node.frontmatter.title,
+                    thumbnail: node.frontmatter.image?.childImageSharp?.gatsbyImageData,
+                    externalThumbnail: node.frontmatter.externalImage,
+                    excerpt: node.frontmatter.description || node.excerpt,
+                    date: node.frontmatter.date,
+                    tags: node.fields.tags?.slice(0, 4),
+                    path: `/${node.fields.slug}`,
+                  } as any
+                }
                 key={index}
               />
             )
@@ -63,40 +65,45 @@ export const queryBlog = graphql`
         siteUrl
       }
     }
+
     allTag(limit: 10, sort: { fields: [postCount], order: DESC }) {
-      edges {
-        node {
-          textColor
-          slug
-          title
-          postCount
-        }
+      nodes {
+        textColor
+        slug
+        title
+        postCount
       }
     }
+
     allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { model: { eq: "post" }, published: { eq: true } } }
       limit: $limit
       skip: $skip
     ) {
-      edges {
-        node {
-          excerpt(pruneLength: 240)
-          fields {
+      nodes {
+        excerpt(pruneLength: 240)
+        fields {
+          slug
+          tags {
+            id
             slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
-            description
-            slug
-            externalImage
-            published
-            tags
-            image {
-              childImageSharp {
-                gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
-              }
+            color
+            textColor
+            postCount
+          }
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
+          slug
+          externalImage
+          published
+          image {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
             }
           }
         }

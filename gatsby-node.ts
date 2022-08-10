@@ -1,23 +1,15 @@
 const _ = require('lodash')
-import { generateTagInfo, makeSlugForTag } from './src/helpers/tags.helpers'
+import { GatsbyNode } from 'gatsby'
+import { generateTagInfo } from './src/helpers/tags.helpers'
 const path = require('path')
+
+const TAG_NODE_TYPE = `Tag`
 
 function getFullPath(frontmatter): string {
   const pathPrefix = frontmatter.pathPrefix ?? ''
   const slug = frontmatter.slug ?? ''
 
   return path.join(pathPrefix, slug)
-}
-
-const getAllTagsInPages = (markdownPages = []) => {
-  const items = _(markdownPages)
-    .map(post => _.get(post, 'node.frontmatter.tags'))
-    .flatten()
-    .uniq()
-
-  const groupedTags = items.groupBy(makeSlugForTag)
-
-  return groupedTags
 }
 
 export const createPages = async ({ graphql, actions }) => {
@@ -29,7 +21,7 @@ export const createPages = async ({ graphql, actions }) => {
   const tagsBlogListTemplate = path.resolve('./src/templates/TagsBlogListTemplate.tsx')
 
   const {
-    data: { allProjects, allPosts },
+    data: { allPosts, allTags },
   } = await graphql(`
     {
       allPosts: allMdx(
@@ -52,25 +44,32 @@ export const createPages = async ({ graphql, actions }) => {
         }
       }
 
-      allProjects: allMdx(
-        sort: { fields: [frontmatter___date], order: DESC }
-        limit: 100
-        filter: {
-          fileAbsolutePath: { ne: null }
-          frontmatter: { published: { eq: true }, model: { eq: "project" } }
-        }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              model
-              slug
-              pathPrefix
-              tags
-            }
-          }
+      allTags: allTag {
+        nodes {
+          id
+          slug
         }
       }
+
+      # allProjects: allMdx(
+      #   sort: { fields: [frontmatter___date], order: DESC }
+      #   limit: 100
+      #   filter: {
+      #     fileAbsolutePath: { ne: null }
+      #     frontmatter: { published: { eq: true }, model: { eq: "project" } }
+      #   }
+      # ) {
+      #   edges {
+      #     node {
+      #       frontmatter {
+      #         model
+      #         slug
+      #         pathPrefix
+      #         tags
+      #       }
+      #     }
+      #   }
+      # }
     }
   `)
 
@@ -92,15 +91,12 @@ export const createPages = async ({ graphql, actions }) => {
     })
   })
 
-  const groupedTags = getAllTagsInPages(allPosts.edges)
-
-  groupedTags.forEach((tags, tagSlug) => {
+  allTags.nodes.map(tag => {
     createPage({
-      path: `/blog/tags/${tagSlug}`,
+      path: `/blog/tags/${tag.slug}`,
       component: tagsBlogListTemplate,
       context: {
-        tags,
-        tagSlug,
+        tagId: tag.id,
       },
     })
   })
@@ -131,14 +127,18 @@ export const createPages = async ({ graphql, actions }) => {
 }
 
 const counter = {}
-export const onCreateNode = ({ node, actions, createNodeId, createContentDigest }) => {
+export const onCreateNode: GatsbyNode['onCreateNode'] = ({
+  node,
+  actions,
+  createNodeId,
+  createContentDigest,
+}) => {
   const { createNodeField, createNode } = actions
-  const { frontmatter } = node
-
-  const TAG_NODE_TYPE = `Tag`
+  const frontmatter = node.frontmatter as any
 
   if (['MarkdownRemark', 'Mdx'].includes(node.internal.type) && frontmatter) {
     const fullPath = getFullPath(frontmatter)
+
     createNodeField({
       node,
       name: 'slug',
@@ -146,19 +146,22 @@ export const onCreateNode = ({ node, actions, createNodeId, createContentDigest 
     })
 
     if (frontmatter.tags && frontmatter.published && frontmatter.model === 'post') {
-      frontmatter.tags.forEach(tag => {
+      const tagIdsForPost = frontmatter.tags.map(tag => {
         const tagInfo = generateTagInfo(tag)
 
         if (counter[tagInfo.slug] === undefined) {
           counter[tagInfo.slug] = 1
+          tag
         } else {
           counter[tagInfo.slug]++
         }
+
         tagInfo.postCount = counter[tagInfo.slug]
+        tagInfo.id = createNodeId(`${TAG_NODE_TYPE}-${tagInfo.slug}`)
 
         createNode({
           ...tagInfo,
-          id: createNodeId(`${TAG_NODE_TYPE}-${tagInfo.slug}`),
+          id: tagInfo.id,
           parent: null,
           children: [],
           internal: {
@@ -167,7 +170,25 @@ export const onCreateNode = ({ node, actions, createNodeId, createContentDigest 
             contentDigest: createContentDigest(tagInfo),
           },
         })
+
+        return tagInfo.id
+      })
+
+      createNodeField({
+        node,
+        name: 'tags',
+        value: tagIdsForPost,
       })
     }
   }
+}
+
+export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({ actions }) => {
+  const typesDefs = `
+  type MdxFields {
+    slug: String!
+    tags: [${TAG_NODE_TYPE}] @link
+  }
+`
+  actions.createTypes(typesDefs)
 }

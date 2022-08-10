@@ -112,5 +112,11 @@
     "slug": "apps",
     "color": "#43748b",
     "textColor": "white"
+  },
+  "how-to": {
+    "title": "🤔 How To",
+    "slug": "how-to",
+    "color": "#43748b",
+    "textColor": "white"
   }
 }

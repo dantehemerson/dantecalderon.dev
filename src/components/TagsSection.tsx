@@ -9,10 +9,16 @@ import { ITag } from '../data/tags'
 export type TagsSectionProps = {
   tags: ITag[]
   title?: string
+  showCount?: boolean
   selectedSlug?: string
 }
 
-export function TagsSection({ tags, title = 'TAGS: ', selectedSlug }: TagsSectionProps) {
+export function TagsSection({
+  tags,
+  title = 'TAGS: ',
+  selectedSlug,
+  showCount = false,
+}: TagsSectionProps) {
   const selectedInfo = getTagInfoSelected(selectedSlug)
   return (
     <Wrapper id="post_tags" maxWidth={824} display="auto" paddingLeft={12} paddingRight={12}>
@@ -34,7 +40,7 @@ export function TagsSection({ tags, title = 'TAGS: ', selectedSlug }: TagsSectio
             }
           >
             {tag.title}
-            {tag.postCount ? ` (${tag.postCount})` : ''}
+            {showCount && tag.postCount ? ` (${tag.postCount})` : ''}
           </Tag>
         )
       })}

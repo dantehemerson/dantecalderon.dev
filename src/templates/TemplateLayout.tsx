@@ -40,6 +40,7 @@ const Template = props => {
         isPost={isPost}
       />
       {props.children}
+
       <AuthorPostFooter avatar={props.data.avatar.gatsbyImageData} make={!isPost} />
       <Disqus title={title} path={path} />
       {isPost && true /* Show sharer*/}

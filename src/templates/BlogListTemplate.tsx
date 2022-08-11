@@ -8,13 +8,8 @@ import SEO from '../components/SEO'
 import { TagsSection } from '../components/TagsSection'
 import { pages } from '../helpers'
 
-const PostsWrapper = styled.div`
-  padding: 0 15px;
-  max-width: 800px;
-  margin: 0 auto 35px;
-`
-
 function Blog(props) {
+  console.log('🤫 Dante ➤ Blog ➤ props', props)
   const tags = props.data.allTag.nodes
   const posts = props.data.allMdx.nodes
   const siteUrl = props.data.site.siteMetadata.siteUrl
@@ -22,12 +17,12 @@ function Blog(props) {
   const { currentPage, numPages, hasNextPage, hasPrevPage } = props.pageContext
 
   return (
-    <Layout location={props.location} active={pages.blog}>
+    <Layout active={pages.blog}>
       <div className="Blog" style={{ marginTop: 90 }}>
         <SEO title="Blog" url={`${siteUrl}/blog`} />
-        <TagsSection tags={tags} title="Tags:" />
+        <TagsSection tags={tags} showCount={true} />
         <PostsWrapper>
-          {posts.map((node, index) => {
+          {posts.map(node => {
             return (
               <Card
                 data={
@@ -41,7 +36,7 @@ function Blog(props) {
                     path: `/${node.fields.slug}`,
                   } as any
                 }
-                key={index}
+                key={node.id}
               />
             )
           })}
@@ -56,6 +51,12 @@ function Blog(props) {
     </Layout>
   )
 }
+
+const PostsWrapper = styled.div`
+  padding: 0 15px;
+  max-width: 800px;
+  margin: 0 auto 35px;
+`
 
 export const queryBlog = graphql`
   query QueryTagBlogList($skip: Int!, $limit: Int!) {
@@ -82,6 +83,7 @@ export const queryBlog = graphql`
       skip: $skip
     ) {
       nodes {
+        id
         excerpt(pruneLength: 240)
         fields {
           slug
@@ -91,7 +93,6 @@ export const queryBlog = graphql`
             title
             color
             textColor
-            postCount
           }
         }
         frontmatter {
@@ -100,7 +101,6 @@ export const queryBlog = graphql`
           description
           slug
           externalImage
-          published
           image {
             childImageSharp {
               gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)

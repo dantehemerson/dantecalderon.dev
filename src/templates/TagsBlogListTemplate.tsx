@@ -16,15 +16,14 @@ const PostsWrapper = styled.div`
 const BlogWithTags = ({ data, location }) => {
   const tag = data.tag
   const tags = data.allTag.nodes || []
-  const title = `${tag.title} - Blog`
   const posts = data.allMdx.nodes || []
   const siteUrl = data.site.siteMetadata.siteUrl
 
   return (
-    <Layout location={location} active={pages.blog}>
+    <Layout active={pages.blog}>
       <div className="Blog" style={{ marginTop: 90 }}>
-        <SEO title={title} url={`${siteUrl}/blog/tags/${tag.slug}`} />
-        <TagsSection tags={tags} title="Tags:" selectedSlug={tag.slug} />
+        <SEO title={`${tag.title} - Blog`} url={`${siteUrl}/blog/tags/${tag.slug}`} />
+        <TagsSection tags={tags} showCount={true} selectedSlug={tag.slug} />
         <PostsWrapper>
           {posts.map(node => {
             return (

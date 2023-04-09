@@ -52,7 +52,7 @@ module.exports = {
         title: 'Newsletter',
         id: 'newsletter',
         newtab: true,
-        to: 'https://newsletter.dantecalderon.dev',
+        to: 'https://dantecalderon.substack.com/',
         icon: 'newsletter',
       },
       {

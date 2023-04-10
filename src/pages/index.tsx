@@ -15,7 +15,7 @@ const Index: FC<PageRendererProps> = props => {
 
   return (
     <Layout location={props.location} active={pages.home}>
-      <SEO title="" url={siteUrl} />
+      <SEO title="Dante Calderon" url={siteUrl} />
       <Header />
       <Markdown content={aboutContent.body} />
     </Layout>

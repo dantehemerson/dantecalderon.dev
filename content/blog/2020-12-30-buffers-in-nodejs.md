@@ -21,7 +21,7 @@ A buffer is a region of memory that stores temporary data in memory, tipically t
 
 * Read/Write files.
 * When you write commands all of them are using buffers to transport data
-* etc
+* etc.
 
 **Network**
 

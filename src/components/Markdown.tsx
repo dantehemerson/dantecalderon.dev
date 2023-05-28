@@ -101,13 +101,15 @@ const StyledContent = styled.div`
   }
 
   p.md-p,
-  ul {
+  ul,
+  ol {
     font-family: 'Gentium Book Basic', 'Times New Roman', Times, serif;
   }
 
   p.md-p,
   .gatsby-highlight,
-  ul {
+  ul,
+  ol {
     font-size: 17px;
   }
 
@@ -161,7 +163,7 @@ const StyledContent = styled.div`
   }
 
   ${media.sm`
-    p.md-p, .gatsby-highlight, ul {
+    p.md-p, .gatsby-highlight, ul, ol {
     font-size: 18px;
     }
     h3.md-h,
@@ -175,7 +177,7 @@ const StyledContent = styled.div`
   `}
 
   ${media.md`
-    p.md-p, .gatsby-highlight, ul {
+    p.md-p, .gatsby-highlight, ul, ol {
       font-size: 19px;
     }
     h3.md-h3,

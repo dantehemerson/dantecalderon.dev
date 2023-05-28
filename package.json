@@ -10,7 +10,7 @@
   "scripts": {
     "build": "gatsby build",
     "start": "gatsby develop",
-    "start:dev": "npm run start",
+    "start:dev": "npm run gatsby -- clean && npm run start",
     "create": "node ./scripts/cms.js --interactive",
     "notion": "ts-node --project tsconfig.node.json ./scripts/notion.ts",
     "gatsby": "gatsby",

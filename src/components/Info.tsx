@@ -25,7 +25,7 @@ export function Info() {
     }
 
     loadGithubInfo()
-    const intervalId = setInterval(() => loadGithubInfo(), 10000)
+    const intervalId = setInterval(() => loadGithubInfo(), 3_000)
 
     return () => {
       console.log('Clearing interval')

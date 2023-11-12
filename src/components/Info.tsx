@@ -50,9 +50,12 @@ export function Info() {
         >
           {info?.githubStatus?.status}
         </InfoItem>
-        <InfoItem title="👨‍💻 Working on" isLoading={isLoading}>
-          {info?.githubStatus?.company}
-        </InfoItem>
+        {
+          info?.githubStatus?.company &&
+          (<InfoItem title="👨‍💻 Working on" isLoading={isLoading}>
+            {info?.githubStatus?.company}
+          </InfoItem>)
+        }
         <InfoItem title="🚀 Contributions" isLoading={isLoading}>
           <>
             <b className="code">{info?.githubStatus?.contributions ?? 0}</b>&nbsp;in the last year
@@ -65,16 +68,6 @@ export function Info() {
         >
           <a href={info?.latestCommit?.url} target="_blank">
             {info?.latestCommit?.message}
-          </a>
-        </InfoItem>
-        <InfoItem
-          title="🎶 Listening"
-          isLoading={isLoading}
-          showPostfixImage={info?.listening?.playing}
-          postfix={secureTimeAgo(info?.listening?.lastPlayingDate)}
-        >
-          <a href={info?.listening?.url} target="_blank">
-            {info?.listening?.name}
           </a>
         </InfoItem>
         <InfoItem title={'📚 Reading'} isLoading={isLoading}>

@@ -8,7 +8,7 @@ Code of my personal static website were I write about Node, JS/Typescript, Backe
 
 ![Screenshot](./content/images/Screenshot-20210101221653-2169x1171.png)
 
-Deployed at: https://dantecalderon.dev
+Deployed at: https://dantecalderon.com
 
 
 ## Commands

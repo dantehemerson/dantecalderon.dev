@@ -181,7 +181,7 @@ const config: GatsbyConfig = {
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
         gtagConfig: {
-          // cookie_domain: 'dantecalderon.dev',
+          // cookie_domain: 'dantecalderon.com',
           // cookie_name: 'gaDanteCalderon',
           cookie_expires: 0,
           // sample_rate: 5,

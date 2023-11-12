@@ -14,8 +14,8 @@ export default class SEO extends PureComponent {
 
   static defaultProps = {
     title: 'Dante Calderon',
-    image: `https://dantecalderon.dev${avatar}`,
-    url: 'https://dantecalderon.dev/',
+    image: `https://dantecalderon.com${avatar}`,
+    url: 'https://dantecalderon.com/',
     description: 'Dante Calderon - Backend Node.js Developer',
     isPost: false,
   }

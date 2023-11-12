@@ -5,7 +5,7 @@
   "author": "Dante Calderón <mail@dantecalderon.dev>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dantehemerson/dantecalderon.dev"
+    "url": "https://github.com/dantehemerson/dantecalderon.com"
   },
   "scripts": {
     "build": "gatsby build",

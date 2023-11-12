@@ -3,7 +3,7 @@ module.exports = {
     title: 'Dante Calderón',
     subtitle: 'TypeScript / Node.js Developer',
     description: `Hi, I'm Dante Calderon, I am passionate about Nodejs.`,
-    siteUrl: 'https://dantecalderon.dev',
+    siteUrl: 'https://dantecalderon.com',
     disqusShortname: 'dantecalderon',
     githubUser: 'dantehemerson',
     social: [
@@ -59,7 +59,7 @@ module.exports = {
         title: 'Highlights',
         id: 'highlights',
         newtab: true,
-        to: 'https://highlights.dantecalderon.dev/',
+        to: 'https://highlights.dantecalderon.com/',
         icon: 'highlighter',
       },
       // { title: 'Portfolio', id: 'Portfolio', to: '/portfolio', icon: 'home' },

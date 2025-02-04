@@ -1,7 +1,6 @@
 import { graphql, StaticQuery } from 'gatsby'
 import React, { useState, useEffect } from 'react'
 import AuthorPostFooter from '../components/AuthorPostFooter'
-import Disqus from '../components/Disqus'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import { pages } from '../helpers'
@@ -42,7 +41,6 @@ const Template = props => {
       {props.children}
 
       <AuthorPostFooter avatar={props.data.avatar.gatsbyImageData} make={!isPost} />
-      <Disqus title={title} path={path} />
       {isPost && true /* Show sharer*/}
     </Layout>
   )

@@ -130,12 +130,6 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-
-  #disqus_thread a { // Theme color disqus.
-      color: #1976d2;
-  }
-
-
 	textarea{
       resize: vertical;
   }

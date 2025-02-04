@@ -68,7 +68,6 @@
     "object-merge-advanced": "^13.1.3",
     "prismjs": "^1.28.0",
     "react": "^16.14.0",
-    "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",
     "react-slick": "^0.28.1",

@@ -35,7 +35,6 @@ See complete stack in [StackShare](https://stackshare.io/dantehemerson/dantecald
 * Share Post buttons
 * TypeScript support
 * [Page for ech Tag](https://dantecalderon.dev/blog/tags/backend)
-* Comments supported by [Disqus](https://disqus.com/)
 
 ## 🚀 Run
 

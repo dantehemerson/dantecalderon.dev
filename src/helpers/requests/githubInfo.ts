@@ -1,6 +1,6 @@
 export const getMyGithubInfo = async () => {
   try {
-    const res = await fetch('https://busy-gold-chicken-vest.cyclic.app/graphql', {
+    const res = await fetch('https://api.dantecalderon.com/graphql', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
